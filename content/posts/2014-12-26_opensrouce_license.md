@@ -1,0 +1,61 @@
+---
+title: "关于一些开源许可和名词"
+categories: [ "代码人生" ]
+tags: [ "opensource","copyleft","license" ]
+draft: false
+slug: "opensrouce_license"
+date: "2014-12-26 02:17:00"
+url: "opensrouce_license.html"
+---
+
+以下内容转自：http://my.oschina.net/crooner/blog/101456
+
+
+在翻译你应该选择什么开源软件许可证 Which Open Source Software License Should I Use?
+
+关于一些开源许可和名词
+
+(1)New BSD License(Modified BSD License):
+
+ 1)可以用于任何作为版权声明和保证许可的免责声明的目的，可以通过无限长的再分发来得以维持。 
+ 2)如果再发布的产品中包含源代码，则在源代码中必须带有原来代码中的BSD协议。 
+ 3)特殊限制条款，不可以用开源代码的作者/机构名字和原来产品的名字做市场推广。 
+  
+(2)Simplified BSD License(FreeBSD License): 
+ 1)与New BSD License(Modified BSD License)一致，但是少了第3条的特殊限制条款。 
+  
+(3) MIT License 
+MIT是和BSD一样宽松的许可协议,作者只想保留版权,而无任何其他了限制.也就是说,你必须在你的发行版里包含原许可协议的声明,无论你是以二 进制发布的还是以源代码发布的。 
+ 1)复制和修改软件。 
+ 2)免费使用软件或出售。 
+ 3)唯一的限制是，它是必须附有MIT授权协议。 
+  
+(4)Apache Licence 
+Apache  Licence是著名的非盈利开源组织Apache采用的协议。Apache Licence也是对商业应用友好的许可。使用者也可以在需要的时候修改代码来满足需要并作为开源或商业产品发布/销售。该协议和BSD类似，同样鼓励代码共享和尊重原作者的著作权，同样允许代码修改，再发布(作为开源或商业软件)。需要满足的条件： 
+ 1)需要给代码的用户一份Apache License。 
+ 2)如果你修改了代码，需要在被修改的文件中说明。 
+ 3)在延伸的代码中（修改和有源代码衍生的代码中）需要带有原来代码中的协议，商标，专利声明和其他原来作者规定需要包含的说明。 
+ 4)如果再发布的产品中包含一个Notice文件，则在Notice文件中需要带有Apache License。你可以在Notice中增加自己的许可，但不可以表现为对Apache License构成更改。 
+  
+(5)Microsoft Permissive License 
+详见( http://msdn.microsoft.com/zh-cn/aa721778)说明。 
+
+
+(6)著佐权(copyleft)
+
+Copyleft是一由自由软件运动所发展的概念，是一种利用现有著作权体制来挑战该体制的授权方式，在自由软件许可证方式中增加copyleft条款之后，该自由软件除了允许用户自由使用、散布、改作之外，copyleft条款更要求用户改作后的派生作品必须要以同等的授权方式发布以回馈社区。
+有人将其译为“著佐权”[1]，以彰显Copyleft是补足著作权（Copyright，版权）不足的意义。另有译为“反版权”、“版权属左”、“脱离版权”、“版权所无”、“版权左派”、“公共版权”或“版责”，但这些译名的其中几个在意义上有所偏差。Copyleft授权方式虽然与常见的著作权授权模式不同：选择copyleft授权方式并不代表作者放弃著作权，反而是贯彻始终，强制被授权者使用同样授权发布派生作品，copyleft许可协议不反对著作权的基本体制，却是通过利用著作权法来进一步地促进创作自由。
+Copyleft是将一个程序变为自由软件的通用方法，同时也使得这个程序的修改和扩充版本成为自由软件。提出并使用Copyleft观念的是GNU计划，具体的发布条款包含在GNU通用公共许可协议、GNU宽通用公共许可证和GNU自由文档许可协议里。
+
+详见(http://zh.wikipedia.org/wiki/%E8%91%97%E4%BD%90%E6%AC%8A)说明
+
+最后盗一张来自阮一峰博客的图：
+
+![如何选择开源协议][1]
+
+
+
+((1),(2),(3),(4)源于 http://zoomquiet.org/res/scrapbook/ZqFLOSS/data/20101030104700/的整理) 
+
+
+  [1]: https://static.oschina.net/uploads/img/201607/07112930_4iFX.png
