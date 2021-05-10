@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>abc on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/abc/</link>
+    <description>Recent content in abc on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Jul 2014 07:51:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/abc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正则表达式教程</title>
+      <link>https://phpgao.github.io/regex_abc.html</link>
+      <pubDate>Tue, 22 Jul 2014 07:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/regex_abc.html</guid>
+      <description>&lt;h1 id=&#34;正则表达式入门&#34;&gt;正则表达式入门&lt;/h1&gt;
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;支持&#34;&gt;支持&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上内容引自百度百科&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

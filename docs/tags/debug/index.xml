@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>debug on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/debug/</link>
+    <description>Recent content in debug on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Oct 2014 13:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用debug_backtrace()做PHP调试</title>
+      <link>https://phpgao.github.io/debug_with_backtrace.html</link>
+      <pubDate>Tue, 11 Mar 2014 15:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/debug_with_backtrace.html</guid>
+      <description>问题？ 今天迁站的时候PHP突然报错：  is_readable() [function.is-readable]: open_basedir restriction in effect. File(D:\phpnow\vhosts\wordpress.com/wp-content/plugins/D:\phpnow\vhosts\wordpress.com\wp-content\plugins\crayon-syntax-highlighter/trans/crayon-syntax-highlighter-zh_CN.mo) is not within the allowed path(s): (D:\phpnow\vhosts\wordpress.com;C:\Windows\Temp;) in D:\phpnow\vhosts\wordpress.com\wp-includes\l10n.php on line 339 好吧，看来是crayon-syntax-highlighter插件出错了，下面我们就一起找找出错的地方吧。
+ 如何解决 确定出错地点 根据出错提示我们找到了 D:\phpnow\vhosts\wordpress.com\wp-includes\l10n.php的第339行，代码如下：
+if ( !is_readable( $mofile ) ) return false; 这个$mofile哪里来的呢?把整个函数贴出来找找看！
+function load_textdomain( $domain, $mofile ) {global $l10n;$plugin_override = apply_filters( &#39;override_load_textdomain&#39;, false, $domain, $mofile );if ( true == $plugin_override ) {return true;}do_action( &#39;load_textdomain&#39;, $domain, $mofile );$mofile = apply_filters( &#39;load_textdomain_mofile&#39;, $mofile, $domain );if ( !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>favicon on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/favicon/</link>
+    <description>Recent content in favicon on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 14 Feb 2014 07:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/favicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>favicon优化</title>
+      <link>https://phpgao.github.io/favicon.html</link>
+      <pubDate>Fri, 14 Feb 2014 07:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/favicon.html</guid>
+      <description>现代浏览器会自动识别favicon，只要放到网站根目录就OK，但是完美一点的话就参考以下代码：
+&amp;lt;link href=&amp;#34;/favicon.ico&amp;#34; mce_href=&amp;#34;/favicon.ico&amp;#34; rel=&amp;#34;shortcut icon&amp;#34; type=&amp;#34;image/x-icon&amp;#34; /&amp;gt; &amp;lt;link href=&amp;#34;/favicon.ico&amp;#34; mce_href=&amp;#34;/favicon.ico&amp;#34; rel=&amp;#34;bookmark&amp;#34; type=&amp;#34;image/x-icon&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;apple-touch-icon&amp;#34; href=&amp;#34;https://blog.phpgao.com/usr/themes/default/img/apple-touch-icon-57x57.png&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;apple-touch-icon&amp;#34; sizes=&amp;#34;72x72&amp;#34; href=&amp;#34;https://blog.phpgao.com/usr/themes/default/img/apple-touch-icon-72x72.png&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;apple-touch-icon&amp;#34; sizes=&amp;#34;114x114&amp;#34; href=&amp;#34;https://blog.phpgao.com/usr/themes/default/img/apple-touch-icon-114x114.png&amp;#34; /&amp;gt;&amp;lt;link rel=&amp;#34;apple-touch-icon&amp;#34; sizes=&amp;#34;120x120&amp;#34; href=&amp;#34;https://blog.phpgao.com/usr/themes/default/img/apple-touch-icon-120x120.png&amp;#34; /&amp;gt; &amp;lt;link rel=&amp;#34;apple-touch-icon&amp;#34; sizes=&amp;#34;152x152&amp;#34; href=&amp;#34;https://blog.phpgao.com/usr/themes/default/img/apple-touch-icon-152x152.png&amp;#34; /&amp;gt; 很简单吧，根据rel属性就能判断出来，shortcut icon为默认的图标，bookmark就是加入收藏栏的图标，最后一个就是在IOS系统上使用的图标啦</description>
+    </item>
+    
+  </channel>
+</rss>

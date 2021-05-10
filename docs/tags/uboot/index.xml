@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>uboot on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/uboot/</link>
+    <description>Recent content in uboot on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 08 Mar 2015 01:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/uboot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米路由器mini折腾之刷不死uboot篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_uboot.html</link>
+      <pubDate>Sun, 08 Mar 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_uboot.html</guid>
+      <description>&lt;p&gt;u-boot是一种普遍用于嵌入式系统中的Bootloader,Bootloader是在操作系统运行之前执行的一小段程序。他可以用来恢复小米路由器的固件，可以说只要刷了uboot，你的路由器基本上刷不死了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以下操作都是在你获取了root信息后才可以实现。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

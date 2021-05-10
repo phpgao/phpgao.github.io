@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sql on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sql/</link>
+    <description>Recent content in sql on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Jun 2018 13:01:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用pgbench测试你的数据库性能</title>
+      <link>https://phpgao.github.io/how_to_use_pgbench.html</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_use_pgbench.html</guid>
+      <description>&lt;p&gt;老高最近遇到了一些性能问题，排查起来很麻烦，其中一个步骤就是需要确定当前DB的抗压能力，Google后收获很大，所以赶紧和老高一起学习研究如果使用pgbench测试你的数据库性能吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>数据库的优化</title>
+      <link>https://phpgao.github.io/fuck_db.html</link>
+      <pubDate>Thu, 18 Jan 2018 02:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/fuck_db.html</guid>
+      <description>&lt;p&gt;在实际工作中，通常会遇到某个进程或者请求运行的十分缓慢，其中大部分的时间都花在了数据库的查询和写入上，每次遇到这个问题就十分头痛。首先，鉴于我们是很底层的程序员，没法花钱给企业加硬件，那我们能完成的事情就是用头脑取分析并优化每一条查询，来获得查询效率的提升。&lt;/p&gt;
+&lt;p&gt;老高总结了一下工作中遇到的问题，以后再遇到相同的问题后可以快速排查。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在windows和linux下合并sql文件</title>
+      <link>https://phpgao.github.io/merge_sqlfiles.html</link>
+      <pubDate>Mon, 09 Feb 2015 08:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/merge_sqlfiles.html</guid>
+      <description>合并多个sql文件
+win:
+copy *.sql merged.sql # \b 指二进制合并，可用于图片等二进制文件 # \a 指ASCII合并 copy \b *.sql merged.sql # 小技巧，可实现文本隐藏 copy 1.jpg/b + 2.txt/a 3.jpg linux:
+# 合并所有扩展名为.sql的文件 cat *.sql&amp;gt;&amp;gt;merged.sql </description>
+    </item>
+    
+    <item>
+      <title>mysql开发常用SQL</title>
+      <link>https://phpgao.github.io/mysql_sql.html</link>
+      <pubDate>Tue, 09 Dec 2014 02:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_sql.html</guid>
+      <description>主键 -- 为当前表添加主键 ALTER TABLE `tablename` ADD COLUMN id TINYINT UNSIGNED NOT NULL AUTO_INCREMENT, ADD PRIMARY KEY (id); -- 删除主键  ALTER TABLE `tablename` DROP PRIMARY KEY; 创建数据库 # utf8mb4_unicode_ci更准 CREATE DATABASE IF NOT EXISTS typecho DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci; # utf8mb4_general_ci更快 CREATE DATABASE IF NOT EXISTS typecho DEFAULT CHARSET utf8mb4 COLLATE utf8mb4_general_ci; CREATE DATABASE typecho DEFAULT CHARACTER SET gbk COLLATE gbk_chinese_ci; 创建用户并提供相应权限 # 只是创建用户 CREATE USER phpergao@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;yourpasswd&amp;#39;; # 赋予权限 GRANT select,update on phpergao.</description>
+    </item>
+    
+    <item>
+      <title>修复typecho删除分类后统计文章数的错误</title>
+      <link>https://phpgao.github.io/typecho_delete_category_mistake.html</link>
+      <pubDate>Thu, 11 Sep 2014 15:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_delete_category_mistake.html</guid>
+      <description>博客的文章渐渐多了起来，之前随意的分类就需要好好想整理一下。
+为了图方便，直接在数据库里做了替换查询，不料typecho和WP一样，都会在metas表里存着分类和tag的统计信息，统计了这个分类下有多少篇文章，这个统计信息显示在分类和TAG管理页面。
+也就是说，如果正常再文章编辑里修改分类并保存，统计信息会走一加一减这个过程，而暴力数据库修改不会触发。
+而这种混乱导致老高的瞬间变身不搞不舒服斯基，下面我们一步一步来修复这个统计信息。
+首先，找到所有分类（标签同理）
+SELECT mid FROM typecho_metas AS m WHERE m.type = &#39;category&#39;; 然后，找到分类关系表，统计文章数
+SELECT r.mid,count(cid)FROM typecho_relationships as rWHERE r.mid IN(SELECT midFROM typecho_metas AS mWHERE m.type=&#39;category&#39;)GROUP BY r.mid; 再次，我们提取出分类名称
+SELECT r.mid,m.name,count(cid)FROM typecho_relationships as rLEFT JOIN typecho_metas as m ON m.mid=r.midWHERE r.mid IN(SELECT midFROM typecho_metas AS mWHERE m.type=&#39;category&#39;)GROUP BY r.mid; 最后，以上一个查询为基础修改原始表metas</description>
+    </item>
+    
+    <item>
+      <title>dede-常用SQL总结</title>
+      <link>https://phpgao.github.io/dede_sql.html</link>
+      <pubDate>Fri, 09 May 2014 15:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dede_sql.html</guid>
+      <description>织梦cms不知大家用过没有，功能比较强大，但是对于我还是有一些不够，所以我总结了一些经常会使用的SQL，比如批量修改文章发布人、替换栏目字符串、批量修改文章点击数、批量修改文章命名规则等，这些SQL使用dedecmsv5.7测试，其他版本不保证。
+老高温馨提醒：使用此SQL务必备份数据库清空所有文章 TRUNCATE TABLE dede_addonarticle; TRUNCATE TABLE dede_archives; TRUNCATE TABLE dede_arctiny; 批量修改文章发布人 UPDATE dede_arctiny AS aSET a.mid=2;UPDATE dede_archives AS aSET a.mid=2;/*mid为管理员ID*/ 替换栏目字符串 UPDATE dede_arctype as aSET a.typename=REPLACE(a.typename,&#39;AAA&#39;,&#39;BBB&#39;)#AAA替换为BBB 修改文章点击数 /*随机数为300-1300*/UPDATE dede_archives AS aSET a.click=FLOOR(300 + (RAND() * 1001)); 批量修改文章命名规则 UPDATEdede_arctype AS aSETa.namerule=&#39;{typedir}/{aid}.html&#39; 查看栏目表 SELECT dede_arctype.typename,dede_arctype.description,dede_arctype.keywords,dede_arctype.seotitle,dede_arctype.namerule,dede_arctype.namerule2FROM dede_arctypeORDER BY typename; 所有文章都改为动态 #ismake的值为1时为静态，-1 时表示动态update dede_archives set ismake=-1;#将所有栏目设置为“使用静态页”，update dede_arctype set isdefault=1  </description>
+    </item>
+    
+    <item>
+      <title>WP常用SQL总结</title>
+      <link>https://phpgao.github.io/wordpress_sql.html</link>
+      <pubDate>Wed, 02 Apr 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/wordpress_sql.html</guid>
+      <description>运行SQL一定要备份，以防万一！先来看看每个表的功能吧 wp_commentmeta：存储评论的元数据 wp_comments：存储评论 wp_links：存储友情链接（Blogroll） wp_options：存储WordPress系统选项和插件、主题配置 wp_postmeta：存储文章（包括页面、上传文件、修订）的元数据 wp_posts：存储文章（包括页面、上传文件、修订） wp_terms：存储每个目录、标签 wp_term_relationships：存储每个文章、链接和对应分类的关系 wp_term_taxonomy：存储每个目录、标签所对应的分类 wp_usermeta：存储用户的元数据 wp_users：存储用户信息 删除残留垃圾数据 使用WordPress经常换主题删主题，装插件删插件很正常，但是简单的删除并不彻底，数据库会有残留，多余的数据保留在post_meta表格里，久而久之就成了一堆可观的垃圾。可使用下面的SQL语句来清除不需要的postmeta值。有益于加快数据库运行速度，减小数据。 执行SQL语句
+DELETE FROM wp_postmeta WHERE meta_key = &#39;_edit_lock&#39;;DELETE FROM wp_postmeta WHERE meta_key = &#39;_edit_last&#39;; 删除草稿修订版本 在WordPress后台中编辑文章时，系统会自动保存许多修订的副本。过多的修订记录会加重数据库的负担并造成了资源的浪费。数据库越来越庞大，增加了数据检索影响页面的加载时间。 执行SQL语句
+DELETE a,b,c FROM wp_posts aLEFT JOIN wp_term_relationships b ON (a.ID = b.object_id)LEFT JOIN wp_postmeta c ON (a.ID = c.post_id)WHERE a.post_type = &#39;revision&#39; 注意：此方法将删除所有的文章的所有修订版，包括相关的meta数据。
+处理未使用的标签 在WordPress数据库中，如果你使用一个查询语句手动来删除旧的文章，旧的标签却仍然会保留并在你的标签云/列表中出现。你可以使用下面的方法识别未使用的标签并将它删除。 执行SQL语句
+SELECT * FROM wp_terms wtINNER JOIN wp_term_taxonomy wtt ON wt.</description>
+    </item>
+    
+  </channel>
+</rss>

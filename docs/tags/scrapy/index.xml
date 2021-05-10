@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>scrapy on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/scrapy/</link>
+    <description>Recent content in scrapy on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jul 2019 02:46:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/scrapy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>炉石传说有多少张卡牌</title>
+      <link>https://phpgao.github.io/scrapy_hearthstone.html</link>
+      <pubDate>Fri, 05 Jul 2019 02:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/scrapy_hearthstone.html</guid>
+      <description>&lt;p&gt;炉石传说从老高入坑倒退坑，已经过了好几个年头，玩了这么久，你知道炉石传说有多少张卡牌吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;答案是标准目前914多张，至于狂野模式是多少，点进来我告诉你。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记VII----Scrapy</title>
+      <link>https://phpgao.github.io/docker_install_scrapy.html</link>
+      <pubDate>Tue, 15 Nov 2016 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_install_scrapy.html</guid>
+      <description>&lt;p&gt;最近在研究Scrapy的安装，发现在centos上安装还是挺麻烦的，于是总结出来所有的依赖和加速的问题，终于能用了！&lt;/p&gt;
+&lt;p&gt;下面看看老高是怎么在Centos下安装Scrapy！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/11/95790073.png&#34; alt=&#34;sc.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

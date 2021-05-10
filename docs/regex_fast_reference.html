@@ -1,0 +1,146 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>常用正则表达式速查 | 老高的技术博客</title><meta name=keywords content="regular,expression"><meta name=description content="“^\d+$”　//非负整数（正整数 + 0）“^[0-9]*[1-9][0-9]*$”　//正整数“^((-\d+)|(0+))$”　//非正整数（负整数 + 0）“^-[0-9]*[1-9][0-9]*$”　//负整数“^-?\d+$”　//整数“^\d+(\.\d+)?$”　//非负浮点数（正浮点数 + 0）“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　//非正浮点数（负浮点数 + 0）“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数“^(-?\d+)(\.\d+)?$”　//浮点数“^[A-Za-z]+$”　//由26个英文字母组成的字符串“^[A-Z]+$”　//由26个英文字母的大写组成的字符串“^[a-z]+$”　//由26个英文字母的小写组成的字符串“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串“^\w+$”　//由数字、26个英文字母或者下划线组成的字符串“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　//email地址“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　//url/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址 匹配中文字符的正则表达式： [\u4e00-\u9fa5] 匹配双字节字符(包括汉字在内)：[^\x00-\xff] 匹配空行的正则表达式：\n[\s| ]*\r 匹配HTML标记的正则表达式：/<(.*)>.*<\/\1>|<(.*) \/>/ 匹配首尾空格的正则表达式：(^\s*)|(\s*$) 匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+匹配网址URL的正则表达式：^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\d{3}-|\d{4}-)?(\d{8}|\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$
+元字符及其在正则表达式上下文中的行为：
+\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。* 匹配前面的子表达式零次或多次。+ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。?"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/regex_fast_reference.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="常用正则表达式速查"><meta property="og:description" content="“^\d+$”　//非负整数（正整数 + 0）“^[0-9]*[1-9][0-9]*$”　//正整数“^((-\d+)|(0+))$”　//非正整数（负整数 + 0）“^-[0-9]*[1-9][0-9]*$”　//负整数“^-?\d+$”　//整数“^\d+(\.\d+)?$”　//非负浮点数（正浮点数 + 0）“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　//非正浮点数（负浮点数 + 0）“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数“^(-?\d+)(\.\d+)?$”　//浮点数“^[A-Za-z]+$”　//由26个英文字母组成的字符串“^[A-Z]+$”　//由26个英文字母的大写组成的字符串“^[a-z]+$”　//由26个英文字母的小写组成的字符串“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串“^\w+$”　//由数字、26个英文字母或者下划线组成的字符串“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　//email地址“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　//url/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址 匹配中文字符的正则表达式： [\u4e00-\u9fa5] 匹配双字节字符(包括汉字在内)：[^\x00-\xff] 匹配空行的正则表达式：\n[\s| ]*\r 匹配HTML标记的正则表达式：/<(.*)>.*<\/\1>|<(.*) \/>/ 匹配首尾空格的正则表达式：(^\s*)|(\s*$) 匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+匹配网址URL的正则表达式：^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\d{3}-|\d{4}-)?(\d{8}|\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$
+元字符及其在正则表达式上下文中的行为：
+\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。* 匹配前面的子表达式零次或多次。+ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。?"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/regex_fast_reference.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-04-28T15:46:00+00:00"><meta property="article:modified_time" content="2014-04-28T15:46:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="常用正则表达式速查"><meta name=twitter:description content="“^\d+$”　//非负整数（正整数 + 0）“^[0-9]*[1-9][0-9]*$”　//正整数“^((-\d+)|(0+))$”　//非正整数（负整数 + 0）“^-[0-9]*[1-9][0-9]*$”　//负整数“^-?\d+$”　//整数“^\d+(\.\d+)?$”　//非负浮点数（正浮点数 + 0）“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　//非正浮点数（负浮点数 + 0）“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数“^(-?\d+)(\.\d+)?$”　//浮点数“^[A-Za-z]+$”　//由26个英文字母组成的字符串“^[A-Z]+$”　//由26个英文字母的大写组成的字符串“^[a-z]+$”　//由26个英文字母的小写组成的字符串“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串“^\w+$”　//由数字、26个英文字母或者下划线组成的字符串“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　//email地址“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　//url/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址 匹配中文字符的正则表达式： [\u4e00-\u9fa5] 匹配双字节字符(包括汉字在内)：[^\x00-\xff] 匹配空行的正则表达式：\n[\s| ]*\r 匹配HTML标记的正则表达式：/<(.*)>.*<\/\1>|<(.*) \/>/ 匹配首尾空格的正则表达式：(^\s*)|(\s*$) 匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+匹配网址URL的正则表达式：^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\d{3}-|\d{4}-)?(\d{8}|\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$
+元字符及其在正则表达式上下文中的行为：
+\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。* 匹配前面的子表达式零次或多次。+ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。?"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"常用正则表达式速查","item":"https://phpgao.github.io/regex_fast_reference.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"常用正则表达式速查","name":"常用正则表达式速查","description":"“^\\d+$”　//非负整数（正整数 + 0）\r“^[0-9]*[1-9][0-9]*$”　//正整数\r“^((-\\d+)|(0+))$”　//非正整数（负整数 + 0）\r“^-[0-9]*[1-9][0-9]*$”　//负整数\r“^-?\\d+$”　//整数\r“^\\d+(\\.\\d+)?$”　//非负浮点数（正浮点数 + 0）\r“^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数\r“^((-\\d+(\\.\\d+)?)|(0+(\\.0+)?))$”　//非正浮点数（负浮点数 + 0）\r“^(-(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数\r“^(-?\\d+)(\\.\\d+)?$”　//浮点数\r“^[A-Za-z]+$”　//由26个英文字母组成的字符串\r“^[A-Z]+$”　//由26个英文字母的大写组成的字符串\r“^[a-z]+$”　//由26个英文字母的小写组成的字符串\r“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串\r“^\\w+$”　//由数字、26个英文字母或者下划线组成的字符串\r“^[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+$”　//email地址\r“^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$”　//url\r/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日\r/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年\r“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil\r/^((\\+?[0-9]{2,4}\\-[0-9]{3,4}\\-)|([0-9]{3,4}\\-))?([0-9]{7,8})(\\-[0-9]+)?$/ //电话号码\r“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址\r 匹配中文字符的正则表达式： [\\u4e00-\\u9fa5] 匹配双字节字符(包括汉字在内)：[^\\x00-\\xff] 匹配空行的正则表达式：\\n[\\s| ]*\\r 匹配HTML标记的正则表达式：/\u0026lt;(.*)\u0026gt;.*\u0026lt;\\/\\1\u0026gt;|\u0026lt;(.*) \\/\u0026gt;/ 匹配首尾空格的正则表达式：(^\\s*)|(\\s*$) 匹配Email地址的正则表达式：\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*\n匹配网址URL的正则表达式：^[a-zA-z]+://(\\\\w+(-\\\\w+)*)(\\\\.(\\\\w+(-\\\\w+)*))*(\\\\?\\\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\\d{3}-|\\d{4}-)?(\\d{8}|\\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$\n元字符及其在正则表达式上下文中的行为：\n\\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。\r^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\\n’ 或 ’\\r’ 之后的位置。\r$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\\n’ 或 ’\\r’ 之前的位置。\r* 匹配前面的子表达式零次或多次。\r+ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。\r?","keywords":["regular","expression"],"articleBody":"“^\\d+$”　//非负整数（正整数 + 0）\r“^[0-9]*[1-9][0-9]*$”　//正整数\r“^((-\\d+)|(0+))$”　//非正整数（负整数 + 0）\r“^-[0-9]*[1-9][0-9]*$”　//负整数\r“^-?\\d+$”　//整数\r“^\\d+(\\.\\d+)?$”　//非负浮点数（正浮点数 + 0）\r“^(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数\r“^((-\\d+(\\.\\d+)?)|(0+(\\.0+)?))$”　//非正浮点数（负浮点数 + 0）\r“^(-(([0-9]+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数\r“^(-?\\d+)(\\.\\d+)?$”　//浮点数\r“^[A-Za-z]+$”　//由26个英文字母组成的字符串\r“^[A-Z]+$”　//由26个英文字母的大写组成的字符串\r“^[a-z]+$”　//由26个英文字母的小写组成的字符串\r“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串\r“^\\w+$”　//由数字、26个英文字母或者下划线组成的字符串\r“^[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+$”　//email地址\r“^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$”　//url\r/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日\r/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年\r“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil\r/^((\\+?[0-9]{2,4}\\-[0-9]{3,4}\\-)|([0-9]{3,4}\\-))?([0-9]{7,8})(\\-[0-9]+)?$/ //电话号码\r“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址\r 匹配中文字符的正则表达式： [\\u4e00-\\u9fa5] 匹配双字节字符(包括汉字在内)：[^\\x00-\\xff] 匹配空行的正则表达式：\\n[\\s| ]*\\r 匹配HTML标记的正则表达式：/.*|/ 匹配首尾空格的正则表达式：(^\\s*)|(\\s*$) 匹配Email地址的正则表达式：\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*\n匹配网址URL的正则表达式：^[a-zA-z]+://(\\\\w+(-\\\\w+)*)(\\\\.(\\\\w+(-\\\\w+)*))*(\\\\?\\\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\\d{3}-|\\d{4}-)?(\\d{8}|\\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$\n元字符及其在正则表达式上下文中的行为：\n\\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。\r^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\\n’ 或 ’\\r’ 之后的位置。\r$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\\n’ 或 ’\\r’ 之前的位置。\r* 匹配前面的子表达式零次或多次。\r+ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。\r? 匹配前面的子表达式零次或一次。? 等价于 {0,1}。\r{n} n 是一个非负整数，匹配确定的n 次。\r{n,} n 是一个非负整数，至少匹配n 次。\r{n,m} m 和 n 均为非负整数，其中n  匹配中文字符的正则表达式： [u4e00-u9fa5] 匹配双字节字符(包括汉字在内)：[^x00-xff] 匹配空行的正则表达式：n[s| ]*r 匹配HTML标记的正则表达式：/.*|/ 匹配首尾空格的正则表达式：(^s*)|(s*$) 匹配Email地址的正则表达式：w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)* 匹配网址URL的正则表达式：http://([w-]+.)+[w-]+(/[w- ./?%\u0026=]*)? 利用正则表达式限制网页表单里的文本框输入内容： 用 正则表达式限制只能输入中文：onkeyup=”value=value.replace(/[^u4E00-u9FA5]/g,”)” onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^u4E00-u9FA5]/g,”))” 用 正则表达式限制只能输入全角字符： onkeyup=”value=value.replace(/[^uFF00-uFFFF]/g,”)” onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^uFF00-uFFFF]/g,”))” 用 正则表达式限制只能输入数字：onkeyup=”value=value.replace(/[^d]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^d]/g,”))” 用 正则表达式限制只能输入数字和英文：onkeyup=”value=value.replace(/[W]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^d]/g,”))” =========常用正则式 匹配中文字符的正则表达式： [\\u4e00-\\u9fa5] 匹配双字节字符(包括汉字在内)：[^\\x00-\\xff] 匹配空行的正则表达式：\\n[\\s| ]*\\r 匹配HTML标记的正则表达式：/.*|/ 匹配首尾空格的正则表达式：(^\\s*)|(\\s*$) 匹配IP地址的正则表达式：/(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+)/g // 匹配Email地址的正则表达式：\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)* 匹配网址URL的正则表达式：http://(/[\\w-]+\\.)+[\\w-]+(/[\\w- ./?%\u0026=]*)? sql语句：^(select|drop|delete|create|update|insert).*$ 1、非负整数：^\\d+$ 2、正整数：^[0-9]*[1-9][0-9]*$ 3、非正整数：^((-\\d+)|(0+))$ 4、负整数：^-[0-9]*[1-9][0-9]*$ 5、整数：^-?\\d+$ 6、非负浮点数：^\\d+(\\.\\d+)?$ 7、正浮点数：^((0-9)+\\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\\.[0-9]+)|([0-9]*[1-9][0-9]*))$ 8、非正浮点数：^((-\\d+\\.\\d+)?)|(0+(\\.0+)?))$ 9、负浮点数：^(-((正浮点数正则式)))$ 10、英文字符串：^[A-Za-z]+$ 11、英文大写串：^[A-Z]+$ 12、英文小写串：^[a-z]+$ 13、英文字符数字串：^[A-Za-z0-9]+$ 14、英数字加下划线串：^\\w+$ 15、E-mail地址：^[\\w-]+(\\.[\\w-]+)*@[\\w-]+(\\.[\\w-]+)+$ 16、URL：^[a-zA-Z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\s*)?$ 17、邮政编码：^[1-9]\\d{5}$ 18、中文：^[\\u0391-\\uFFE5]+$ 19、电话号码：^((\\(\\d{2,3}\\))|(\\d{3}\\-))?(\\(0\\d{2,3}\\)|0\\d{2,3}-)?[1-9]\\d{6,7}(\\-\\d{1,4})?$ 20、手机号码：^((\\(\\d{2,3}\\))|(\\d{3}\\-))?13\\d{9}$ 21、双字节字符(包括汉字在内)：^\\x00-\\xff 22、匹配首尾空格：(^\\s*)|(\\s*$)（像vbscript那样的trim函数） 23、匹配HTML标记：.*| 24、匹配空行：\\n[\\s| ]*\\r 25、提取信息中的网络链接：(h|H)(r|R)(e|E)(f|F) *= *(‘|”)?(\\w|\\\\|\\/|\\.)+(‘|”| *|)? 26、提取信息中的邮件地址：\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)* 27、提取信息中的图片链接：(s|S)(r|R)(c|C) *= *(‘|”)?(\\w|\\\\|\\/|\\.)+(‘|”| *|)? 28、提取信息中的IP地址：(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+) 29、提取信息中的中国手机号码：(86)*0*13\\d{9} 30、提取信息中的中国固定电话号码：(\\(\\d{3,4}\\)|\\d{3,4}-|\\s)?\\d{8} 31、提取信息中的中国电话号码（包括移动和固定电话）：(\\(\\d{3,4}\\)|\\d{3,4}-|\\s)?\\d{7,14} 32、提取信息中的中国邮政编码：[1-9]{1}(\\d+){5} 33、提取信息中的浮点数（即小数）：(-?\\d*)\\.?\\d+ 34、提取信息中的任何数字：(-?\\d*)(\\.\\d+)? 35、IP：(\\d+)\\.(\\d+)\\.(\\d+)\\.(\\d+) 36、电话区号：/^0\\d{2,3}$/ 37、腾讯QQ号：^[1-9]*[1-9][0-9]*$ 38、帐号(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 39、中文、英文、数字及下划线：^[\\u4e00-\\u9fa5_a-zA-Z0-9]+$\n","wordCount":"362","inLanguage":"en","datePublished":"2014-04-28T15:46:00Z","dateModified":"2014-04-28T15:46:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/regex_fast_reference.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>常用正则表达式速查</h1><div class=post-meta>April 28, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-04-28_regex_fast_reference.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><pre><code>“^\d+$”　　//非负整数（正整数 + 0）
+“^[0-9]*[1-9][0-9]*$”　　//正整数
+“^((-\d+)|(0+))$”　　//非正整数（负整数 + 0）
+“^-[0-9]*[1-9][0-9]*$”　　//负整数
+“^-?\d+$”　　　　//整数
+“^\d+(\.\d+)?$”　　//非负浮点数（正浮点数 + 0）
+“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　　//正浮点数
+“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　　//非正浮点数（负浮点数 + 0）
+“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　　//负浮点数
+“^(-?\d+)(\.\d+)?$”　　//浮点数
+“^[A-Za-z]+$”　　//由26个英文字母组成的字符串
+“^[A-Z]+$”　　//由26个英文字母的大写组成的字符串
+“^[a-z]+$”　　//由26个英文字母的小写组成的字符串
+“^[A-Za-z0-9]+$”　　//由数字和26个英文字母组成的字符串
+“^\w+$”　　//由数字、26个英文字母或者下划线组成的字符串
+“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　　　　//email地址
+“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　　//url
+/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日
+/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年
+“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil
+/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码
+“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址
+</code></pre><p>匹配中文字符的正则表达式：<code> [\u4e00-\u9fa5]</code>
+匹配双字节字符(包括汉字在内)：<code>[^\x00-\xff]</code>
+匹配空行的正则表达式：<code>\n[\s| ]*\r</code>
+匹配HTML标记的正则表达式：<code>/&lt;(.*)>.*&lt;\/\1>|&lt;(.*) \/>/</code>
+匹配首尾空格的正则表达式：<code>(^\s*)|(\s*$)</code>
+匹配Email地址的正则表达式：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code></p><p>匹配网址URL的正则表达式：<code>^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$</code>
+匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code>
+匹配国内电话号码：<code>(\d{3}-|\d{4}-)?(\d{8}|\d{7})?</code>
+匹配腾讯QQ号：<code>^[1-9]*[1-9][0-9]*$</code></p><p>元字符及其在正则表达式上下文中的行为：</p><pre><code>\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。
+^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。
+$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。
+* 匹配前面的子表达式零次或多次。
++ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。
+? 匹配前面的子表达式零次或一次。? 等价于 {0,1}。
+{n} n 是一个非负整数，匹配确定的n 次。
+{n,} n 是一个非负整数，至少匹配n 次。
+{n,m} m 和 n 均为非负整数，其中n &lt;= m。最少匹配 n 次且最多匹配 m 次。在逗号和两个数之间不能有空格。
+? 当该字符紧跟在任何一个其他限制符 (*, +, ?, {n}, {n,}, {n,m}) 后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。
+. 匹配除 “\n” 之外的任何单个字符。要匹配包括 ’\n’ 在内的任何字符，请使用象 ’[.\n]’ 的模式。
+(pattern) 匹配pattern 并获取这一匹配。
+(?:pattern) 匹配pattern 但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。
+(?=pattern) 正向预查，在任何匹配 pattern 的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。
+(?!pattern) 负向预查，与(?=pattern)作用相反
+x|y 匹配 x 或 y。
+[xyz] 字符集合。
+[^xyz] 负值字符集合。
+[a-z] 字符范围，匹配指定范围内的任意字符。
+[^a-z] 负值字符范围，匹配任何不在指定范围内的任意字符。
+\b 匹配一个单词边界，也就是指单词和空格间的位置。
+\B 匹配非单词边界。
+\cx 匹配由x指明的控制字符。
+\d 匹配一个数字字符。等价于 [0-9]。
+\D 匹配一个非数字字符。等价于 [^0-9]。
+\f 匹配一个换页符。等价于 \x0c 和 \cL。
+\n 匹配一个换行符。等价于 \x0a 和 \cJ。
+\r 匹配一个回车符。等价于 \x0d 和 \cM。
+\s 匹配任何空白字符，包括空格、制表符、换页符等等。等价于[ \f\n\r\t\v]。
+\S 匹配任何非空白字符。等价于 [^ \f\n\r\t\v]。
+\t 匹配一个制表符。等价于 \x09 和 \cI。
+\v 匹配一个垂直制表符。等价于 \x0b 和 \cK。
+\w 匹配包括下划线的任何单词字符。等价于’[A-Za-z0-9_]’。
+\W 匹配任何非单词字符。等价于 ’[^A-Za-z0-9_]’。
+\xn 匹配 n，其中 n 为十六进制转义值。十六进制转义值必须为确定的两个数字长。
+\num 匹配 num，其中num是一个正整数。对所获取的匹配的引用。
+\n 标识一个八进制转义值或一个后向引用。如果 \n 之前至少 n 个获取的子表达式，则 n 为后向引用。否则，如果 n 为八进制数字 (0-7)，则 n 为一个八进制转义值。
+\nm 标识一个八进制转义值或一个后向引用。如果 \nm 之前至少有is preceded by at least nm 个获取得子表达式，则 nm 为后向引用。如果 \nm 之前至少有 n 个获取，则 n 为一个后跟文字 m 的后向引用。如果前面的条件都不满足，若 n 和 m 均为八进制数字 (0-7)，则 \nm 将匹配八进制转义值 nm。
+\nml 如果 n 为八进制数字 (0-3)，且 m 和 l 均为八进制数字 (0-7)，则匹配八进制转义值 nml。
+\un 匹配 n，其中 n 是一个用四个十六进制数字表示的Unicode字符。
+</code></pre><p>匹配中文字符的正则表达式：<code> [u4e00-u9fa5]</code>
+匹配双字节字符(包括汉字在内)：<code>[^x00-xff]</code>
+匹配空行的正则表达式：<code>n[s| ]*r</code>
+匹配HTML标记的正则表达式：<code>/&lt;(.*)>.*&lt;/1>|&lt;(.*) />/</code>
+匹配首尾空格的正则表达式：<code>(^s*)|(s*$)</code>
+匹配Email地址的正则表达式：<code>w+([-+.]w+)*@w+([-.]w+)*.w+([-.]w+)*</code>
+匹配网址URL的正则表达式：<code>http://([w-]+.)+[w-]+(/[w- ./?%&=]*)?</code>
+利用正则表达式限制网页表单里的文本框输入内容：
+用 正则表达式限制只能输入中文：<code>onkeyup=”value=value.replace(/[^u4E00-u9FA5]/g,”)” onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^u4E00-u9FA5]/g,”))”</code>
+用 正则表达式限制只能输入全角字符： <code>onkeyup=”value=value.replace(/[^uFF00-uFFFF]/g,”)” onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^uFF00-uFFFF]/g,”))”</code>
+用 正则表达式限制只能输入数字：<code>onkeyup=”value=value.replace(/[^d]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^d]/g,”))”</code>
+用 正则表达式限制只能输入数字和英文：<code>onkeyup=”value=value.replace(/[W]/g,”) “onbeforepaste=”clipboardData.setData(‘text’,clipboardData.getData(‘text’).replace(/[^d]/g,”))”</code>
+=========常用正则式
+匹配中文字符的正则表达式：<code> [\u4e00-\u9fa5]</code>
+匹配双字节字符(包括汉字在内)：<code>[^\x00-\xff]</code>
+匹配空行的正则表达式：<code>\n[\s| ]*\r</code>
+匹配HTML标记的正则表达式：<code>/&lt;(.*)>.*&lt;\/\1>|&lt;(.*) \/>/</code>
+匹配首尾空格的正则表达式：<code>(^\s*)|(\s*$)</code>
+匹配IP地址的正则表达式：<code>/(\d+)\.(\d+)\.(\d+)\.(\d+)/g //</code>
+匹配Email地址的正则表达式：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code>
+匹配网址URL的正则表达式：<code>http://(/[\w-]+\.)+[\w-]+(/[\w- ./?%&=]*)?</code>
+sql语句：<code>^(select|drop|delete|create|update|insert).*$</code>
+1、非负整数：<code>^\d+$</code>
+2、正整数：<code>^[0-9]*[1-9][0-9]*$</code>
+3、非正整数：<code>^((-\d+)|(0+))$</code>
+4、负整数：<code>^-[0-9]*[1-9][0-9]*$</code>
+5、整数：<code>^-?\d+$</code>
+6、非负浮点数：<code>^\d+(\.\d+)?$</code>
+7、正浮点数：<code>^((0-9)+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$</code>
+8、非正浮点数：<code>^((-\d+\.\d+)?)|(0+(\.0+)?))$</code>
+9、负浮点数：<code>^(-((正浮点数正则式)))$</code>
+10、英文字符串：<code>^[A-Za-z]+$</code>
+11、英文大写串：<code>^[A-Z]+$</code>
+12、英文小写串：<code>^[a-z]+$</code>
+13、英文字符数字串：<code>^[A-Za-z0-9]+$</code>
+14、英数字加下划线串：<code>^\w+$</code>
+15、E-mail地址：<code>^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$</code>
+16、URL：<code>^[a-zA-Z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\s*)?$</code>
+17、邮政编码：<code>^[1-9]\d{5}$</code>
+18、中文：<code>^[\u0391-\uFFE5]+$</code>
+19、电话号码：<code>^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{6,7}(\-\d{1,4})?$</code>
+20、手机号码：<code>^((\(\d{2,3}\))|(\d{3}\-))?13\d{9}$</code>
+21、双字节字符(包括汉字在内)：<code>^\x00-\xff</code>
+22、匹配首尾空格：<code>(^\s*)|(\s*$)（像vbscript那样的trim函数）</code>
+23、匹配HTML标记：<code>&lt;(.*)>.*&lt;\/\1>|&lt;(.*) \/></code>
+24、匹配空行：<code>\n[\s| ]*\r</code>
+25、提取信息中的网络链接：<code>(h|H)(r|R)(e|E)(f|F) *= *(‘|”)?(\w|\\|\/|\.)+(‘|”| *|>)?</code>
+26、提取信息中的邮件地址：<code>\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*</code>
+27、提取信息中的图片链接：<code>(s|S)(r|R)(c|C) *= *(‘|”)?(\w|\\|\/|\.)+(‘|”| *|>)?</code>
+28、提取信息中的IP地址：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code>
+29、提取信息中的中国手机号码：<code>(86)*0*13\d{9}</code>
+30、提取信息中的中国固定电话号码：<code>(\(\d{3,4}\)|\d{3,4}-|\s)?\d{8}</code>
+31、提取信息中的中国电话号码（包括移动和固定电话）：<code>(\(\d{3,4}\)|\d{3,4}-|\s)?\d{7,14}</code>
+32、提取信息中的中国邮政编码：<code>[1-9]{1}(\d+){5}</code>
+33、提取信息中的浮点数（即小数）：<code>(-?\d*)\.?\d+</code>
+34、提取信息中的任何数字：<code>(-?\d*)(\.\d+)?</code>
+35、IP：<code>(\d+)\.(\d+)\.(\d+)\.(\d+)</code>
+36、电话区号：<code>/^0\d{2,3}$/</code>
+37、腾讯QQ号：<code>^[1-9]*[1-9][0-9]*$</code>
+38、帐号(字母开头，允许5-16字节，允许字母数字下划线)：<code>^[a-zA-Z][a-zA-Z0-9_]{4,15}$</code>
+39、中文、英文、数字及下划线：<code>^[\u4e00-\u9fa5_a-zA-Z0-9]+$</code></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/regular/>regular</a></li><li><a href=https://phpgao.github.io/tags/expression/>expression</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/matrix.html><span class=title>« Prev Page</span><br><span>黑客帝国动画版影评</span></a>
+<a class=next href=https://phpgao.github.io/faster_apache.html><span class=title>Next Page »</span><br><span>让使用Apache的网站速度更快</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

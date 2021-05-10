@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>optimize on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/optimize/</link>
+    <description>Recent content in optimize on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 01 Apr 2016 03:50:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/optimize/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker打包优化</title>
+      <link>https://phpgao.github.io/docker_build_optimize.html</link>
+      <pubDate>Fri, 01 Apr 2016 03:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_build_optimize.html</guid>
+      <description>&lt;p&gt;老高最近快被工作掩埋了，各种赶上线，各种修BUG，真凄惨！
+今天来说说Docker打包的优化问题。为什么要说这个问题呢？请听我慢慢道来。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/1459029166.png&#34; alt=&#34;Docker&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>大流量网站怎么优化</title>
+      <link>https://phpgao.github.io/large_scale_web_site_optimize.html</link>
+      <pubDate>Mon, 24 Aug 2015 10:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/large_scale_web_site_optimize.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1782607352.png&#34; alt=&#34;流量！&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;最近面试总是多多少少会出现这个问题，虽然老高的网站流量不大，但是如果解决这个问题，但是在理论上还是能回答的。&lt;/p&gt;
+&lt;p&gt;首先能够明确的是，一般问这个问题的人应该没听过&lt;strong&gt;C10K&lt;/strong&gt;这个问题吧，注意修饰词&lt;strong&gt;一般&lt;/strong&gt;。所以你有挺高的概率&lt;strong&gt;不需要&lt;/strong&gt;从更底层的回答这个问题，比如多线程和多进程的取舍，或者使用异步和非阻塞等等。。。不过老高还是建议你去了解一下&lt;strong&gt;C10K&lt;/strong&gt;这个概念！这个地方有原文&lt;a href=&#34;http://www.kegel.com/c10k.html&#34;&gt;点我&lt;/a&gt;，这个地方有翻译&lt;a href=&#34;http://www.cnblogs.com/fll/archive/2008/05/17/1201540.html&#34;&gt;点我&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这个问题回答的方式，出发点很多。老高认为这样回答比较好：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx的优化配置</title>
+      <link>https://phpgao.github.io/nginx_optimization.html</link>
+      <pubDate>Tue, 19 May 2015 01:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_optimization.html</guid>
+      <description>&lt;p&gt;老高的服务器最近表示亚历山大，先祭出此篇缓解前端压力，之后再从代码中优化一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用net_speeder加速你的VPS</title>
+      <link>https://phpgao.github.io/vps_net_speeder.html</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_net_speeder.html</guid>
+      <description>&lt;p&gt;转自:http://www.im1987.com/post/853.html&lt;/p&gt;
+&lt;p&gt;老高安装了以后480P是不卡了，720P还是有点力不从心啊~&lt;/p&gt;
+&lt;p&gt;另外推荐一下锐速，应该还是会有一点效果的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CentOS精简命令</title>
+      <link>https://phpgao.github.io/centos_lite.html</link>
+      <pubDate>Fri, 19 Sep 2014 05:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_lite.html</guid>
+      <description>删除自带web、数据库、php
+yum remove httpd* php* mysql-server mysql* php-mysql -y 删除不需要的程序
+yum remove Deployment_Guide-en-US finger cups-libs cups ypbind bluez-libs desktop-file-utils ppp rp-pppoe wireless-tools irda-utils sendmail* samba* talk-server finger-server bind* xinetd nfs-utils nfs-utils-lib rdate fetchmail eject ksh mkbootdisk mtools syslinux tcsh startup-notification talk apmd rmt dump setserial portmap yp-tools -yyum groupremove &amp;quot;Mail Server&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;X Window System&amp;quot; &amp;quot;X Software Development&amp;quot; &amp;quot;Development Libraries&amp;quot; &amp;quot;Dialup Networking Support&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;Sound and Video&amp;quot; &amp;quot;Graphics&amp;quot; &amp;quot;Editors&amp;quot; &amp;quot;Text-based Internet&amp;quot; &amp;quot;GNOME Desktop Environment&amp;quot; &amp;quot;GNOME Software Development&amp;quot; -yyum -y groupremove &amp;quot;FTP Server&amp;quot; &amp;quot;PostgreSQL Database client&amp;quot; &amp;quot;PostgreSQL Database server&amp;quot; &amp;quot;MySQL Database server&amp;quot; &amp;quot;MySQL Database client&amp;quot; &amp;quot;Web Server&amp;quot; &amp;quot;Office Suite and Productivity&amp;quot; &amp;quot;E-mail server&amp;quot; &amp;quot;Ruby Support&amp;quot; &amp;quot;Printing client&amp;quot; 关闭selinux</description>
+    </item>
+    
+    <item>
+      <title>centos6-优化脚本与安全脚本</title>
+      <link>https://phpgao.github.io/centos_optimize.html</link>
+      <pubDate>Tue, 13 May 2014 01:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_optimize.html</guid>
+      <description>新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &amp;#34;x86_64&amp;#34; ];then echo &amp;#34;this script is only for 64bit Operating System !&amp;#34; exit 1 fi echo &amp;#34;the platform is ok&amp;#34; version=`lsb_release -r |awk &amp;#39;{print substr($2,1,1)}&amp;#39;` if [ $version != 6 ];then echo &amp;#34;this script is only for CentOS 6 !</description>
+    </item>
+    
+  </channel>
+</rss>

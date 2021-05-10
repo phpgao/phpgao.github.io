@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>fun on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/fun/</link>
+    <description>Recent content in fun on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 20 Feb 2017 08:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/fun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一些神代码注释</title>
+      <link>https://phpgao.github.io/no_comments.html</link>
+      <pubDate>Mon, 20 Feb 2017 08:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/no_comments.html</guid>
+      <description>&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>程序员的几种状态</title>
+      <link>https://phpgao.github.io/programmers_tragedy.html</link>
+      <pubDate>Tue, 18 Mar 2014 15:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/programmers_tragedy.html</guid>
+      <description>程序员在找Bug 中！
+程序员找到Bug了！！
+最后，程序员修好了这个Bug 以为可以下班去吃饭了的时候~~~
+终于，程序员收到了加班通知</description>
+    </item>
+    
+  </channel>
+</rss>

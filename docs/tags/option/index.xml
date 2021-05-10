@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>option on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/option/</link>
+    <description>Recent content in option on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Jan 2015 05:44:54 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/option/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python接受命令选项-h</title>
+      <link>https://phpgao.github.io/python_cli_options.html</link>
+      <pubDate>Mon, 05 Jan 2015 05:44:54 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_cli_options.html</guid>
+      <description>python在用命令行的时候能够接受很多参数，到底是如何接受那些参数和选项呢？
+import sys, getopt opts, args = getopt.getopt(sys.argv[1:], &amp;#34;hi:o:&amp;#34;) input_file=&amp;#34;&amp;#34; output_file=&amp;#34;&amp;#34; for op, value in opts: if op == &amp;#34;-i&amp;#34;: input_file = value elif op == &amp;#34;-o&amp;#34;: output_file = value elif op == &amp;#34;-h&amp;#34;: usage() sys.exit() </description>
+    </item>
+    
+  </channel>
+</rss>

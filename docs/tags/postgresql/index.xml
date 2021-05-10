@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>postgresql on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/postgresql/</link>
+    <description>Recent content in postgresql on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Jun 2018 13:01:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用pgbench测试你的数据库性能</title>
+      <link>https://phpgao.github.io/how_to_use_pgbench.html</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_use_pgbench.html</guid>
+      <description>&lt;p&gt;老高最近遇到了一些性能问题，排查起来很麻烦，其中一个步骤就是需要确定当前DB的抗压能力，Google后收获很大，所以赶紧和老高一起学习研究如果使用pgbench测试你的数据库性能吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何备份MySQL-PG数据库并恢复</title>
+      <link>https://phpgao.github.io/how_to_backup_and_restore_database.html</link>
+      <pubDate>Mon, 04 Jun 2018 04:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_backup_and_restore_database.html</guid>
+      <description>&lt;p&gt;老高最近又迁移了一次数据库，期间遇到了很多问题，本文主要记录了如果备份数据库并恢复到新的数据库中！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. 由于老高工作用的是PG数据库，而博客用的是MySQL，于是本篇就把二者的用法都写出来吧！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

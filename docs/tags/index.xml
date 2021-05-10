@@ -1,0 +1,4933 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/</link>
+    <description>Recent content in Tags on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 26 Oct 2020 08:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>qq</title>
+      <link>https://phpgao.github.io/tags/qq/</link>
+      <pubDate>Mon, 26 Oct 2020 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/qq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brew</title>
+      <link>https://phpgao.github.io/tags/brew/</link>
+      <pubDate>Fri, 20 Dec 2019 07:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/brew/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://phpgao.github.io/tags/ssh/</link>
+      <pubDate>Fri, 20 Dec 2019 07:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://phpgao.github.io/tags/git/</link>
+      <pubDate>Fri, 13 Dec 2019 02:12:21 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag</title>
+      <link>https://phpgao.github.io/tags/tag/</link>
+      <pubDate>Fri, 13 Dec 2019 02:12:21 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://phpgao.github.io/tags/docker/</link>
+      <pubDate>Tue, 10 Dec 2019 02:23:53 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>centos</title>
+      <link>https://phpgao.github.io/tags/centos/</link>
+      <pubDate>Tue, 26 Nov 2019 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/centos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://phpgao.github.io/tags/golang/</link>
+      <pubDate>Tue, 26 Nov 2019 05:13:26 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>module</title>
+      <link>https://phpgao.github.io/tags/module/</link>
+      <pubDate>Tue, 26 Nov 2019 05:13:26 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/module/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>danga</title>
+      <link>https://phpgao.github.io/tags/danga/</link>
+      <pubDate>Wed, 20 Nov 2019 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/danga/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flag</title>
+      <link>https://phpgao.github.io/tags/flag/</link>
+      <pubDate>Wed, 20 Nov 2019 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/flag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>memcache</title>
+      <link>https://phpgao.github.io/tags/memcache/</link>
+      <pubDate>Wed, 20 Nov 2019 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/memcache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QNAP</title>
+      <link>https://phpgao.github.io/tags/qnap/</link>
+      <pubDate>Sat, 07 Sep 2019 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/qnap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TS-453Bmini</title>
+      <link>https://phpgao.github.io/tags/ts-453bmini/</link>
+      <pubDate>Sat, 07 Sep 2019 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ts-453bmini/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TS-551</title>
+      <link>https://phpgao.github.io/tags/ts-551/</link>
+      <pubDate>Sat, 07 Sep 2019 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ts-551/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quicklook</title>
+      <link>https://phpgao.github.io/tags/quicklook/</link>
+      <pubDate>Sat, 07 Sep 2019 03:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/quicklook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tinyproxy</title>
+      <link>https://phpgao.github.io/tags/tinyproxy/</link>
+      <pubDate>Sat, 31 Aug 2019 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tinyproxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>frp</title>
+      <link>https://phpgao.github.io/tags/frp/</link>
+      <pubDate>Fri, 30 Aug 2019 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/frp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kcp</title>
+      <link>https://phpgao.github.io/tags/kcp/</link>
+      <pubDate>Fri, 30 Aug 2019 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcp</title>
+      <link>https://phpgao.github.io/tags/tcp/</link>
+      <pubDate>Fri, 30 Aug 2019 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puppeteer</title>
+      <link>https://phpgao.github.io/tags/puppeteer/</link>
+      <pubDate>Mon, 19 Aug 2019 11:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/puppeteer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>server</title>
+      <link>https://phpgao.github.io/tags/server/</link>
+      <pubDate>Sat, 10 Aug 2019 14:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chrome</title>
+      <link>https://phpgao.github.io/tags/chrome/</link>
+      <pubDate>Sat, 10 Aug 2019 09:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wow</title>
+      <link>https://phpgao.github.io/tags/wow/</link>
+      <pubDate>Sat, 27 Jul 2019 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>charles</title>
+      <link>https://phpgao.github.io/tags/charles/</link>
+      <pubDate>Mon, 08 Jul 2019 02:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/charles/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scrapy</title>
+      <link>https://phpgao.github.io/tags/scrapy/</link>
+      <pubDate>Fri, 05 Jul 2019 02:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/scrapy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github</title>
+      <link>https://phpgao.github.io/tags/github/</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gog&#39;s</title>
+      <link>https://phpgao.github.io/tags/gogs/</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gogs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>https</title>
+      <link>https://phpgao.github.io/tags/https/</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spider</title>
+      <link>https://phpgao.github.io/tags/spider/</link>
+      <pubDate>Tue, 25 Jun 2019 07:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/spider/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysql</title>
+      <link>https://phpgao.github.io/tags/mysql/</link>
+      <pubDate>Sun, 05 May 2019 15:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker-compose</title>
+      <link>https://phpgao.github.io/tags/docker-compose/</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/docker-compose/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>note</title>
+      <link>https://phpgao.github.io/tags/note/</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/note/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ldap</title>
+      <link>https://phpgao.github.io/tags/ldap/</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ldap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://phpgao.github.io/tags/linux/</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nginx</title>
+      <link>https://phpgao.github.io/tags/nginx/</link>
+      <pubDate>Tue, 04 Dec 2018 04:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>面试</title>
+      <link>https://phpgao.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Thu, 29 Nov 2018 14:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E9%9D%A2%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>acme</title>
+      <link>https://phpgao.github.io/tags/acme/</link>
+      <pubDate>Thu, 16 Aug 2018 11:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/acme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encrypt</title>
+      <link>https://phpgao.github.io/tags/encrypt/</link>
+      <pubDate>Thu, 16 Aug 2018 11:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/encrypt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://phpgao.github.io/tags/algorithm/</link>
+      <pubDate>Mon, 13 Aug 2018 15:41:35 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>heap</title>
+      <link>https://phpgao.github.io/tags/heap/</link>
+      <pubDate>Mon, 13 Aug 2018 15:41:35 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/heap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kmp</title>
+      <link>https://phpgao.github.io/tags/kmp/</link>
+      <pubDate>Sun, 05 Aug 2018 16:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://phpgao.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Sun, 05 Aug 2018 16:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>youtube</title>
+      <link>https://phpgao.github.io/tags/youtube/</link>
+      <pubDate>Mon, 30 Jul 2018 03:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/youtube/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>macos</title>
+      <link>https://phpgao.github.io/tags/macos/</link>
+      <pubDate>Fri, 27 Jul 2018 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/macos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tonymacx86</title>
+      <link>https://phpgao.github.io/tags/tonymacx86/</link>
+      <pubDate>Fri, 27 Jul 2018 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tonymacx86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>黑苹果</title>
+      <link>https://phpgao.github.io/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/</link>
+      <pubDate>Fri, 27 Jul 2018 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://phpgao.github.io/tags/windows/</link>
+      <pubDate>Thu, 21 Jun 2018 07:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pgbench</title>
+      <link>https://phpgao.github.io/tags/pgbench/</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pgbench/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgresql</title>
+      <link>https://phpgao.github.io/tags/postgresql/</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql</title>
+      <link>https://phpgao.github.io/tags/sql/</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shadowsocks</title>
+      <link>https://phpgao.github.io/tags/shadowsocks/</link>
+      <pubDate>Thu, 07 Jun 2018 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://phpgao.github.io/tags/database/</link>
+      <pubDate>Mon, 04 Jun 2018 04:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>api</title>
+      <link>https://phpgao.github.io/tags/api/</link>
+      <pubDate>Wed, 09 May 2018 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://phpgao.github.io/tags/markdown/</link>
+      <pubDate>Wed, 09 May 2018 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>miui</title>
+      <link>https://phpgao.github.io/tags/miui/</link>
+      <pubDate>Fri, 13 Apr 2018 08:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/miui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hangzhou</title>
+      <link>https://phpgao.github.io/tags/hangzhou/</link>
+      <pubDate>Sun, 08 Apr 2018 03:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/hangzhou/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>https://phpgao.github.io/tags/travel/</link>
+      <pubDate>Sun, 08 Apr 2018 03:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>os</title>
+      <link>https://phpgao.github.io/tags/os/</link>
+      <pubDate>Sun, 08 Apr 2018 03:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>launchrocket</title>
+      <link>https://phpgao.github.io/tags/launchrocket/</link>
+      <pubDate>Tue, 03 Apr 2018 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/launchrocket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://phpgao.github.io/tags/mac/</link>
+      <pubDate>Tue, 03 Apr 2018 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://phpgao.github.io/tags/php/</link>
+      <pubDate>Tue, 27 Mar 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://phpgao.github.io/tags/ubuntu/</link>
+      <pubDate>Wed, 14 Mar 2018 07:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>app</title>
+      <link>https://phpgao.github.io/tags/app/</link>
+      <pubDate>Tue, 13 Mar 2018 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ASN</title>
+      <link>https://phpgao.github.io/tags/asn/</link>
+      <pubDate>Fri, 09 Mar 2018 03:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/asn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telegram</title>
+      <link>https://phpgao.github.io/tags/telegram/</link>
+      <pubDate>Fri, 09 Mar 2018 03:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/telegram/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dig</title>
+      <link>https://phpgao.github.io/tags/dig/</link>
+      <pubDate>Fri, 02 Feb 2018 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>360</title>
+      <link>https://phpgao.github.io/tags/360/</link>
+      <pubDate>Tue, 23 Jan 2018 06:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/360/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ip</title>
+      <link>https://phpgao.github.io/tags/ip/</link>
+      <pubDate>Tue, 23 Jan 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>https://phpgao.github.io/tags/regex/</link>
+      <pubDate>Tue, 23 Jan 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k2p</title>
+      <link>https://phpgao.github.io/tags/k2p/</link>
+      <pubDate>Tue, 23 Jan 2018 05:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/k2p/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>padavan</title>
+      <link>https://phpgao.github.io/tags/padavan/</link>
+      <pubDate>Tue, 23 Jan 2018 05:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/padavan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>btc</title>
+      <link>https://phpgao.github.io/tags/btc/</link>
+      <pubDate>Tue, 09 Jan 2018 06:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/btc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coin</title>
+      <link>https://phpgao.github.io/tags/coin/</link>
+      <pubDate>Tue, 09 Jan 2018 06:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/coin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kvm</title>
+      <link>https://phpgao.github.io/tags/kvm/</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vps</title>
+      <link>https://phpgao.github.io/tags/vps/</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WootHosting</title>
+      <link>https://phpgao.github.io/tags/woothosting/</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/woothosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ntfs</title>
+      <link>https://phpgao.github.io/tags/ntfs/</link>
+      <pubDate>Wed, 27 Dec 2017 04:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ntfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tampermonkey</title>
+      <link>https://phpgao.github.io/tags/tampermonkey/</link>
+      <pubDate>Wed, 13 Dec 2017 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tampermonkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>router</title>
+      <link>https://phpgao.github.io/tags/router/</link>
+      <pubDate>Wed, 13 Dec 2017 03:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/router/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ios</title>
+      <link>https://phpgao.github.io/tags/ios/</link>
+      <pubDate>Wed, 13 Dec 2017 03:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kernel</title>
+      <link>https://phpgao.github.io/tags/kernel/</link>
+      <pubDate>Thu, 30 Nov 2017 05:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>browser</title>
+      <link>https://phpgao.github.io/tags/browser/</link>
+      <pubDate>Thu, 09 Nov 2017 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/browser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>https://phpgao.github.io/tags/virtualbox/</link>
+      <pubDate>Sat, 14 Oct 2017 16:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logrotate</title>
+      <link>https://phpgao.github.io/tags/logrotate/</link>
+      <pubDate>Sat, 14 Oct 2017 15:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/logrotate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>re</title>
+      <link>https://phpgao.github.io/tags/re/</link>
+      <pubDate>Fri, 13 Oct 2017 11:02:51 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/re/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://phpgao.github.io/tags/shell/</link>
+      <pubDate>Fri, 13 Oct 2017 11:02:51 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>backup</title>
+      <link>https://phpgao.github.io/tags/backup/</link>
+      <pubDate>Fri, 13 Oct 2017 08:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dropbox</title>
+      <link>https://phpgao.github.io/tags/dropbox/</link>
+      <pubDate>Fri, 13 Oct 2017 08:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dropbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ide</title>
+      <link>https://phpgao.github.io/tags/ide/</link>
+      <pubDate>Wed, 11 Oct 2017 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpstorm</title>
+      <link>https://phpgao.github.io/tags/phpstorm/</link>
+      <pubDate>Wed, 11 Oct 2017 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpstorm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cabextract</title>
+      <link>https://phpgao.github.io/tags/cabextract/</link>
+      <pubDate>Mon, 07 Aug 2017 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cabextract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lcab</title>
+      <link>https://phpgao.github.io/tags/lcab/</link>
+      <pubDate>Mon, 07 Aug 2017 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/lcab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://phpgao.github.io/tags/tools/</link>
+      <pubDate>Mon, 10 Jul 2017 08:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>garageband</title>
+      <link>https://phpgao.github.io/tags/garageband/</link>
+      <pubDate>Thu, 18 May 2017 03:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/garageband/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guitar</title>
+      <link>https://phpgao.github.io/tags/guitar/</link>
+      <pubDate>Thu, 18 May 2017 03:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/guitar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crontab</title>
+      <link>https://phpgao.github.io/tags/crontab/</link>
+      <pubDate>Fri, 17 Mar 2017 08:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/crontab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberry</title>
+      <link>https://phpgao.github.io/tags/raspberry/</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/raspberry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>samba</title>
+      <link>https://phpgao.github.io/tags/samba/</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/samba/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xware</title>
+      <link>https://phpgao.github.io/tags/xware/</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>container</title>
+      <link>https://phpgao.github.io/tags/container/</link>
+      <pubDate>Tue, 14 Mar 2017 16:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>laravel</title>
+      <link>https://phpgao.github.io/tags/laravel/</link>
+      <pubDate>Tue, 14 Mar 2017 16:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/laravel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alpine</title>
+      <link>https://phpgao.github.io/tags/alpine/</link>
+      <pubDate>Fri, 10 Mar 2017 05:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/alpine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>code</title>
+      <link>https://phpgao.github.io/tags/code/</link>
+      <pubDate>Thu, 09 Mar 2017 09:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snippet</title>
+      <link>https://phpgao.github.io/tags/snippet/</link>
+      <pubDate>Thu, 09 Mar 2017 09:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/snippet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deploynode</title>
+      <link>https://phpgao.github.io/tags/deploynode/</link>
+      <pubDate>Thu, 09 Mar 2017 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/deploynode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redmine</title>
+      <link>https://phpgao.github.io/tags/redmine/</link>
+      <pubDate>Wed, 08 Mar 2017 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/redmine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://phpgao.github.io/tags/ruby/</link>
+      <pubDate>Wed, 08 Mar 2017 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sakura</title>
+      <link>https://phpgao.github.io/tags/sakura/</link>
+      <pubDate>Thu, 02 Mar 2017 02:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sakura/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mariaDB</title>
+      <link>https://phpgao.github.io/tags/mariadb/</link>
+      <pubDate>Fri, 24 Feb 2017 06:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mariadb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logging</title>
+      <link>https://phpgao.github.io/tags/logging/</link>
+      <pubDate>Wed, 22 Feb 2017 15:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/logging/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://phpgao.github.io/tags/python/</link>
+      <pubDate>Wed, 22 Feb 2017 15:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>comment</title>
+      <link>https://phpgao.github.io/tags/comment/</link>
+      <pubDate>Mon, 20 Feb 2017 08:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/comment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fun</title>
+      <link>https://phpgao.github.io/tags/fun/</link>
+      <pubDate>Mon, 20 Feb 2017 08:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://phpgao.github.io/tags/kubernetes/</link>
+      <pubDate>Sat, 18 Feb 2017 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vmware</title>
+      <link>https://phpgao.github.io/tags/vmware/</link>
+      <pubDate>Sat, 18 Feb 2017 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vmware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openwrrt</title>
+      <link>https://phpgao.github.io/tags/openwrrt/</link>
+      <pubDate>Mon, 16 Jan 2017 13:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/openwrrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>K2</title>
+      <link>https://phpgao.github.io/tags/k2/</link>
+      <pubDate>Fri, 06 Jan 2017 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/k2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pandorabox</title>
+      <link>https://phpgao.github.io/tags/pandorabox/</link>
+      <pubDate>Fri, 06 Jan 2017 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pandorabox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BT</title>
+      <link>https://phpgao.github.io/tags/bt/</link>
+      <pubDate>Wed, 21 Dec 2016 05:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ed2k</title>
+      <link>https://phpgao.github.io/tags/ed2k/</link>
+      <pubDate>Wed, 21 Dec 2016 05:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ed2k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxy</title>
+      <link>https://phpgao.github.io/tags/proxy/</link>
+      <pubDate>Mon, 19 Dec 2016 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/proxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bandwagonhost</title>
+      <link>https://phpgao.github.io/tags/bandwagonhost/</link>
+      <pubDate>Fri, 09 Dec 2016 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bandwagonhost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virmach</title>
+      <link>https://phpgao.github.io/tags/virmach/</link>
+      <pubDate>Fri, 09 Dec 2016 02:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/virmach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>arukas</title>
+      <link>https://phpgao.github.io/tags/arukas/</link>
+      <pubDate>Wed, 07 Dec 2016 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/arukas/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>utf8</title>
+      <link>https://phpgao.github.io/tags/utf8/</link>
+      <pubDate>Wed, 07 Dec 2016 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/utf8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>utf8mb4</title>
+      <link>https://phpgao.github.io/tags/utf8mb4/</link>
+      <pubDate>Wed, 07 Dec 2016 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/utf8mb4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kcptun</title>
+      <link>https://phpgao.github.io/tags/kcptun/</link>
+      <pubDate>Wed, 07 Dec 2016 03:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kcptun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>certbot</title>
+      <link>https://phpgao.github.io/tags/certbot/</link>
+      <pubDate>Thu, 01 Dec 2016 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/certbot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://phpgao.github.io/tags/ssl/</link>
+      <pubDate>Thu, 01 Dec 2016 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>adduser</title>
+      <link>https://phpgao.github.io/tags/adduser/</link>
+      <pubDate>Fri, 21 Oct 2016 07:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/adduser/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setuptools</title>
+      <link>https://phpgao.github.io/tags/setuptools/</link>
+      <pubDate>Wed, 12 Oct 2016 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/setuptools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vs</title>
+      <link>https://phpgao.github.io/tags/vs/</link>
+      <pubDate>Fri, 19 Aug 2016 06:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>passwd</title>
+      <link>https://phpgao.github.io/tags/passwd/</link>
+      <pubDate>Thu, 14 Jul 2016 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/passwd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>date</title>
+      <link>https://phpgao.github.io/tags/date/</link>
+      <pubDate>Thu, 14 Jul 2016 05:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/date/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time</title>
+      <link>https://phpgao.github.io/tags/time/</link>
+      <pubDate>Thu, 14 Jul 2016 05:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/time/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unicode</title>
+      <link>https://phpgao.github.io/tags/unicode/</link>
+      <pubDate>Thu, 14 Jul 2016 05:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/unicode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ftp</title>
+      <link>https://phpgao.github.io/tags/ftp/</link>
+      <pubDate>Thu, 30 Jun 2016 08:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngrok</title>
+      <link>https://phpgao.github.io/tags/ngrok/</link>
+      <pubDate>Tue, 14 Jun 2016 11:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ngrok/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ca</title>
+      <link>https://phpgao.github.io/tags/ca/</link>
+      <pubDate>Fri, 03 Jun 2016 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ca/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rsa</title>
+      <link>https://phpgao.github.io/tags/rsa/</link>
+      <pubDate>Fri, 03 Jun 2016 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/rsa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>md5</title>
+      <link>https://phpgao.github.io/tags/md5/</link>
+      <pubDate>Wed, 01 Jun 2016 03:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/md5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sha1</title>
+      <link>https://phpgao.github.io/tags/sha1/</link>
+      <pubDate>Wed, 01 Jun 2016 03:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sha1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>squid</title>
+      <link>https://phpgao.github.io/tags/squid/</link>
+      <pubDate>Tue, 24 May 2016 03:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/squid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nexus6</title>
+      <link>https://phpgao.github.io/tags/nexus6/</link>
+      <pubDate>Thu, 12 May 2016 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nexus6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ROM</title>
+      <link>https://phpgao.github.io/tags/rom/</link>
+      <pubDate>Thu, 12 May 2016 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/rom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>daemon</title>
+      <link>https://phpgao.github.io/tags/daemon/</link>
+      <pubDate>Wed, 11 May 2016 10:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/daemon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>osx</title>
+      <link>https://phpgao.github.io/tags/osx/</link>
+      <pubDate>Thu, 05 May 2016 11:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lesson</title>
+      <link>https://phpgao.github.io/tags/lesson/</link>
+      <pubDate>Fri, 22 Apr 2016 11:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/lesson/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command</title>
+      <link>https://phpgao.github.io/tags/command/</link>
+      <pubDate>Thu, 21 Apr 2016 08:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/command/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>download</title>
+      <link>https://phpgao.github.io/tags/download/</link>
+      <pubDate>Tue, 19 Apr 2016 14:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/download/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>orc</title>
+      <link>https://phpgao.github.io/tags/orc/</link>
+      <pubDate>Mon, 18 Apr 2016 13:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/orc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cisco</title>
+      <link>https://phpgao.github.io/tags/cisco/</link>
+      <pubDate>Mon, 18 Apr 2016 05:35:41 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cisco/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmder</title>
+      <link>https://phpgao.github.io/tags/cmder/</link>
+      <pubDate>Tue, 05 Apr 2016 01:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cmder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>headless</title>
+      <link>https://phpgao.github.io/tags/headless/</link>
+      <pubDate>Tue, 05 Apr 2016 01:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/headless/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optimize</title>
+      <link>https://phpgao.github.io/tags/optimize/</link>
+      <pubDate>Fri, 01 Apr 2016 03:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/optimize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multiconfig</title>
+      <link>https://phpgao.github.io/tags/multiconfig/</link>
+      <pubDate>Fri, 18 Mar 2016 06:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/multiconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xunlei</title>
+      <link>https://phpgao.github.io/tags/xunlei/</link>
+      <pubDate>Sun, 31 Jan 2016 09:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xunlei/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转运中国</title>
+      <link>https://phpgao.github.io/tags/%E8%BD%AC%E8%BF%90%E4%B8%AD%E5%9B%BD/</link>
+      <pubDate>Thu, 21 Jan 2016 02:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E8%BD%AC%E8%BF%90%E4%B8%AD%E5%9B%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>none</title>
+      <link>https://phpgao.github.io/tags/none/</link>
+      <pubDate>Wed, 20 Jan 2016 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/none/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>403</title>
+      <link>https://phpgao.github.io/tags/403/</link>
+      <pubDate>Mon, 18 Jan 2016 03:38:23 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/403/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>upupw</title>
+      <link>https://phpgao.github.io/tags/upupw/</link>
+      <pubDate>Mon, 18 Jan 2016 03:38:23 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/upupw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mount</title>
+      <link>https://phpgao.github.io/tags/mount/</link>
+      <pubDate>Sat, 09 Jan 2016 07:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mount/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>merlin</title>
+      <link>https://phpgao.github.io/tags/merlin/</link>
+      <pubDate>Sat, 26 Dec 2015 14:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/merlin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>week</title>
+      <link>https://phpgao.github.io/tags/week/</link>
+      <pubDate>Sun, 20 Dec 2015 08:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/week/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bug</title>
+      <link>https://phpgao.github.io/tags/bug/</link>
+      <pubDate>Tue, 15 Dec 2015 12:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>disqus</title>
+      <link>https://phpgao.github.io/tags/disqus/</link>
+      <pubDate>Sun, 13 Dec 2015 12:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/disqus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http</title>
+      <link>https://phpgao.github.io/tags/http/</link>
+      <pubDate>Fri, 11 Dec 2015 15:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nc</title>
+      <link>https://phpgao.github.io/tags/nc/</link>
+      <pubDate>Fri, 11 Dec 2015 15:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buybuybuy</title>
+      <link>https://phpgao.github.io/tags/buybuybuy/</link>
+      <pubDate>Sat, 05 Dec 2015 12:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/buybuybuy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>config</title>
+      <link>https://phpgao.github.io/tags/config/</link>
+      <pubDate>Thu, 03 Dec 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/config/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plugin</title>
+      <link>https://phpgao.github.io/tags/plugin/</link>
+      <pubDate>Thu, 03 Dec 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/plugin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sublime</title>
+      <link>https://phpgao.github.io/tags/sublime/</link>
+      <pubDate>Thu, 03 Dec 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sublime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://phpgao.github.io/tags/theme/</link>
+      <pubDate>Thu, 03 Dec 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/theme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zsh</title>
+      <link>https://phpgao.github.io/tags/zsh/</link>
+      <pubDate>Thu, 26 Nov 2015 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RamNode</title>
+      <link>https://phpgao.github.io/tags/ramnode/</link>
+      <pubDate>Tue, 24 Nov 2015 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ramnode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>finder</title>
+      <link>https://phpgao.github.io/tags/finder/</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/finder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>path</title>
+      <link>https://phpgao.github.io/tags/path/</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/path/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>extension</title>
+      <link>https://phpgao.github.io/tags/extension/</link>
+      <pubDate>Mon, 23 Nov 2015 05:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/extension/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hk</title>
+      <link>https://phpgao.github.io/tags/hk/</link>
+      <pubDate>Tue, 17 Nov 2015 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/hk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trip</title>
+      <link>https://phpgao.github.io/tags/trip/</link>
+      <pubDate>Tue, 17 Nov 2015 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/trip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>旅游</title>
+      <link>https://phpgao.github.io/tags/%E6%97%85%E6%B8%B8/</link>
+      <pubDate>Fri, 13 Nov 2015 11:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E6%97%85%E6%B8%B8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>snow</title>
+      <link>https://phpgao.github.io/tags/snow/</link>
+      <pubDate>Fri, 06 Nov 2015 13:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/snow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>北京</title>
+      <link>https://phpgao.github.io/tags/%E5%8C%97%E4%BA%AC/</link>
+      <pubDate>Fri, 06 Nov 2015 13:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E5%8C%97%E4%BA%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>openwrt</title>
+      <link>https://phpgao.github.io/tags/openwrt/</link>
+      <pubDate>Thu, 05 Nov 2015 12:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/openwrt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>r6300</title>
+      <link>https://phpgao.github.io/tags/r6300/</link>
+      <pubDate>Thu, 05 Nov 2015 12:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/r6300/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chm</title>
+      <link>https://phpgao.github.io/tags/chm/</link>
+      <pubDate>Tue, 03 Nov 2015 03:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/chm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>manual</title>
+      <link>https://phpgao.github.io/tags/manual/</link>
+      <pubDate>Tue, 03 Nov 2015 03:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/manual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>proxychains</title>
+      <link>https://phpgao.github.io/tags/proxychains/</link>
+      <pubDate>Sun, 25 Oct 2015 14:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/proxychains/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yum</title>
+      <link>https://phpgao.github.io/tags/yum/</link>
+      <pubDate>Mon, 12 Oct 2015 08:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/yum/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go2shell</title>
+      <link>https://phpgao.github.io/tags/go2shell/</link>
+      <pubDate>Mon, 12 Oct 2015 06:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/go2shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iterm2</title>
+      <link>https://phpgao.github.io/tags/iterm2/</link>
+      <pubDate>Mon, 12 Oct 2015 06:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/iterm2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tunnel</title>
+      <link>https://phpgao.github.io/tags/tunnel/</link>
+      <pubDate>Fri, 02 Oct 2015 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tunnel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mrapidhost</title>
+      <link>https://phpgao.github.io/tags/mrapidhost/</link>
+      <pubDate>Tue, 22 Sep 2015 02:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mrapidhost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>time4vps</title>
+      <link>https://phpgao.github.io/tags/time4vps/</link>
+      <pubDate>Sat, 19 Sep 2015 05:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/time4vps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pip</title>
+      <link>https://phpgao.github.io/tags/pip/</link>
+      <pubDate>Wed, 09 Sep 2015 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Figurine</title>
+      <link>https://phpgao.github.io/tags/figurine/</link>
+      <pubDate>Wed, 09 Sep 2015 02:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/figurine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Octocat</title>
+      <link>https://phpgao.github.io/tags/octocat/</link>
+      <pubDate>Wed, 09 Sep 2015 02:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/octocat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shanghai</title>
+      <link>https://phpgao.github.io/tags/shanghai/</link>
+      <pubDate>Sat, 22 Aug 2015 11:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/shanghai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sftp</title>
+      <link>https://phpgao.github.io/tags/sftp/</link>
+      <pubDate>Fri, 24 Jul 2015 09:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>movie</title>
+      <link>https://phpgao.github.io/tags/movie/</link>
+      <pubDate>Wed, 08 Jul 2015 12:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>easy_install</title>
+      <link>https://phpgao.github.io/tags/easy_install/</link>
+      <pubDate>Tue, 30 Jun 2015 05:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/easy_install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yunfile</title>
+      <link>https://phpgao.github.io/tags/yunfile/</link>
+      <pubDate>Mon, 29 Jun 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/yunfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socket</title>
+      <link>https://phpgao.github.io/tags/socket/</link>
+      <pubDate>Sat, 27 Jun 2015 14:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/socket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gunicorn</title>
+      <link>https://phpgao.github.io/tags/gunicorn/</link>
+      <pubDate>Sat, 27 Jun 2015 11:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gunicorn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>httpbin</title>
+      <link>https://phpgao.github.io/tags/httpbin/</link>
+      <pubDate>Sat, 27 Jun 2015 11:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/httpbin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>restful</title>
+      <link>https://phpgao.github.io/tags/restful/</link>
+      <pubDate>Sat, 27 Jun 2015 11:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/restful/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>install</title>
+      <link>https://phpgao.github.io/tags/install/</link>
+      <pubDate>Fri, 26 Jun 2015 05:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>framework</title>
+      <link>https://phpgao.github.io/tags/framework/</link>
+      <pubDate>Thu, 25 Jun 2015 04:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slim</title>
+      <link>https://phpgao.github.io/tags/slim/</link>
+      <pubDate>Thu, 25 Jun 2015 04:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/slim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aquarium</title>
+      <link>https://phpgao.github.io/tags/aquarium/</link>
+      <pubDate>Wed, 24 Jun 2015 15:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/aquarium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socks</title>
+      <link>https://phpgao.github.io/tags/socks/</link>
+      <pubDate>Tue, 23 Jun 2015 09:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/socks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cookie</title>
+      <link>https://phpgao.github.io/tags/cookie/</link>
+      <pubDate>Sun, 21 Jun 2015 11:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cookie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cookielib</title>
+      <link>https://phpgao.github.io/tags/cookielib/</link>
+      <pubDate>Sun, 21 Jun 2015 11:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cookielib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>爬虫</title>
+      <link>https://phpgao.github.io/tags/%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Sun, 21 Jun 2015 11:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privoxy</title>
+      <link>https://phpgao.github.io/tags/privoxy/</link>
+      <pubDate>Fri, 19 Jun 2015 02:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/privoxy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>socks5</title>
+      <link>https://phpgao.github.io/tags/socks5/</link>
+      <pubDate>Fri, 19 Jun 2015 02:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/socks5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bootstrap</title>
+      <link>https://phpgao.github.io/tags/bootstrap/</link>
+      <pubDate>Fri, 19 Jun 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>typecho</title>
+      <link>https://phpgao.github.io/tags/typecho/</link>
+      <pubDate>Fri, 19 Jun 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/typecho/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>7niu</title>
+      <link>https://phpgao.github.io/tags/7niu/</link>
+      <pubDate>Mon, 15 Jun 2015 04:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/7niu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cdn</title>
+      <link>https://phpgao.github.io/tags/cdn/</link>
+      <pubDate>Mon, 15 Jun 2015 04:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cdn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://phpgao.github.io/tags/sort/</link>
+      <pubDate>Tue, 09 Jun 2015 15:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>composer</title>
+      <link>https://phpgao.github.io/tags/composer/</link>
+      <pubDate>Tue, 09 Jun 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/composer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iptables</title>
+      <link>https://phpgao.github.io/tags/iptables/</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/iptables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>safe</title>
+      <link>https://phpgao.github.io/tags/safe/</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/safe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>climb</title>
+      <link>https://phpgao.github.io/tags/climb/</link>
+      <pubDate>Fri, 05 Jun 2015 09:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/climb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bai</title>
+      <link>https://phpgao.github.io/tags/bai/</link>
+      <pubDate>Fri, 05 Jun 2015 02:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ad</title>
+      <link>https://phpgao.github.io/tags/ad/</link>
+      <pubDate>Thu, 04 Jun 2015 12:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>network</title>
+      <link>https://phpgao.github.io/tags/network/</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tcpdump</title>
+      <link>https://phpgao.github.io/tags/tcpdump/</link>
+      <pubDate>Tue, 02 Jun 2015 06:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tcpdump/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>udp</title>
+      <link>https://phpgao.github.io/tags/udp/</link>
+      <pubDate>Tue, 02 Jun 2015 06:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/udp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://phpgao.github.io/tags/tutorial/</link>
+      <pubDate>Tue, 02 Jun 2015 03:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://phpgao.github.io/tags/bash/</link>
+      <pubDate>Thu, 28 May 2015 17:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trash</title>
+      <link>https://phpgao.github.io/tags/trash/</link>
+      <pubDate>Thu, 28 May 2015 11:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/trash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>trash-cli</title>
+      <link>https://phpgao.github.io/tags/trash-cli/</link>
+      <pubDate>Thu, 28 May 2015 11:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/trash-cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>epel</title>
+      <link>https://phpgao.github.io/tags/epel/</link>
+      <pubDate>Wed, 27 May 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/epel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>munin</title>
+      <link>https://phpgao.github.io/tags/munin/</link>
+      <pubDate>Wed, 27 May 2015 13:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/munin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>munin-node</title>
+      <link>https://phpgao.github.io/tags/munin-node/</link>
+      <pubDate>Wed, 27 May 2015 13:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/munin-node/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redis</title>
+      <link>https://phpgao.github.io/tags/redis/</link>
+      <pubDate>Mon, 25 May 2015 13:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sleep</title>
+      <link>https://phpgao.github.io/tags/sleep/</link>
+      <pubDate>Mon, 25 May 2015 12:19:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sleep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lua</title>
+      <link>https://phpgao.github.io/tags/lua/</link>
+      <pubDate>Mon, 25 May 2015 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>duoshuo</title>
+      <link>https://phpgao.github.io/tags/duoshuo/</link>
+      <pubDate>Mon, 25 May 2015 04:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/duoshuo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ua</title>
+      <link>https://phpgao.github.io/tags/ua/</link>
+      <pubDate>Mon, 25 May 2015 04:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cache</title>
+      <link>https://phpgao.github.io/tags/cache/</link>
+      <pubDate>Sun, 24 May 2015 13:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compile</title>
+      <link>https://phpgao.github.io/tags/compile/</link>
+      <pubDate>Sun, 24 May 2015 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/compile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opcache</title>
+      <link>https://phpgao.github.io/tags/opcache/</link>
+      <pubDate>Sun, 24 May 2015 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/opcache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>php-fpm</title>
+      <link>https://phpgao.github.io/tags/php-fpm/</link>
+      <pubDate>Sun, 24 May 2015 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/php-fpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imap</title>
+      <link>https://phpgao.github.io/tags/imap/</link>
+      <pubDate>Sat, 23 May 2015 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/imap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>libc-client</title>
+      <link>https://phpgao.github.io/tags/libc-client/</link>
+      <pubDate>Sat, 23 May 2015 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/libc-client/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domain</title>
+      <link>https://phpgao.github.io/tags/domain/</link>
+      <pubDate>Fri, 22 May 2015 02:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/domain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grep</title>
+      <link>https://phpgao.github.io/tags/grep/</link>
+      <pubDate>Wed, 20 May 2015 05:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/grep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>luajit</title>
+      <link>https://phpgao.github.io/tags/luajit/</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/luajit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngx_lua</title>
+      <link>https://phpgao.github.io/tags/ngx_lua/</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ngx_lua/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ngx_lua_waf</title>
+      <link>https://phpgao.github.io/tags/ngx_lua_waf/</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ngx_lua_waf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>safety</title>
+      <link>https://phpgao.github.io/tags/safety/</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/safety/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>concat</title>
+      <link>https://phpgao.github.io/tags/concat/</link>
+      <pubDate>Tue, 19 May 2015 01:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/concat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gzip</title>
+      <link>https://phpgao.github.io/tags/gzip/</link>
+      <pubDate>Tue, 19 May 2015 01:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gzip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ss-panel</title>
+      <link>https://phpgao.github.io/tags/ss-panel/</link>
+      <pubDate>Mon, 18 May 2015 14:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ss-panel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simple_html_dom</title>
+      <link>https://phpgao.github.io/tags/simple_html_dom/</link>
+      <pubDate>Mon, 18 May 2015 12:10:37 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/simple_html_dom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>login</title>
+      <link>https://phpgao.github.io/tags/login/</link>
+      <pubDate>Sun, 17 May 2015 13:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/login/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ldd</title>
+      <link>https://phpgao.github.io/tags/ldd/</link>
+      <pubDate>Sun, 17 May 2015 10:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ldd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redsocks</title>
+      <link>https://phpgao.github.io/tags/redsocks/</link>
+      <pubDate>Sun, 17 May 2015 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/redsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xiaomi</title>
+      <link>https://phpgao.github.io/tags/xiaomi/</link>
+      <pubDate>Sun, 17 May 2015 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xiaomi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cpu</title>
+      <link>https://phpgao.github.io/tags/cpu/</link>
+      <pubDate>Fri, 15 May 2015 10:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cpu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strace</title>
+      <link>https://phpgao.github.io/tags/strace/</link>
+      <pubDate>Fri, 15 May 2015 10:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/strace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>configure</title>
+      <link>https://phpgao.github.io/tags/configure/</link>
+      <pubDate>Thu, 14 May 2015 11:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/configure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>log</title>
+      <link>https://phpgao.github.io/tags/log/</link>
+      <pubDate>Thu, 14 May 2015 11:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/log/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>script</title>
+      <link>https://phpgao.github.io/tags/script/</link>
+      <pubDate>Thu, 14 May 2015 10:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/script/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toc</title>
+      <link>https://phpgao.github.io/tags/toc/</link>
+      <pubDate>Wed, 13 May 2015 14:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/toc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sourcetree</title>
+      <link>https://phpgao.github.io/tags/sourcetree/</link>
+      <pubDate>Tue, 12 May 2015 16:41:06 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sourcetree/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>submodule</title>
+      <link>https://phpgao.github.io/tags/submodule/</link>
+      <pubDate>Tue, 12 May 2015 06:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/submodule/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>boot2docker</title>
+      <link>https://phpgao.github.io/tags/boot2docker/</link>
+      <pubDate>Thu, 30 Apr 2015 10:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/boot2docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>qrcode</title>
+      <link>https://phpgao.github.io/tags/qrcode/</link>
+      <pubDate>Wed, 29 Apr 2015 03:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/qrcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chacha20</title>
+      <link>https://phpgao.github.io/tags/chacha20/</link>
+      <pubDate>Mon, 27 Apr 2015 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/chacha20/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flask</title>
+      <link>https://phpgao.github.io/tags/flask/</link>
+      <pubDate>Mon, 27 Apr 2015 11:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uswgi</title>
+      <link>https://phpgao.github.io/tags/uswgi/</link>
+      <pubDate>Mon, 27 Apr 2015 11:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/uswgi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualenv</title>
+      <link>https://phpgao.github.io/tags/virtualenv/</link>
+      <pubDate>Mon, 27 Apr 2015 11:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/virtualenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gcc</title>
+      <link>https://phpgao.github.io/tags/gcc/</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gcc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>initial</title>
+      <link>https://phpgao.github.io/tags/initial/</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/initial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://phpgao.github.io/tags/nodejs/</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpsmate</title>
+      <link>https://phpgao.github.io/tags/vpsmate/</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vpsmate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pillow</title>
+      <link>https://phpgao.github.io/tags/pillow/</link>
+      <pubDate>Mon, 27 Apr 2015 03:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pillow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dns</title>
+      <link>https://phpgao.github.io/tags/dns/</link>
+      <pubDate>Mon, 27 Apr 2015 02:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://phpgao.github.io/tags/vim/</link>
+      <pubDate>Fri, 24 Apr 2015 16:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>namesilo</title>
+      <link>https://phpgao.github.io/tags/namesilo/</link>
+      <pubDate>Fri, 17 Apr 2015 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/namesilo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chinadns</title>
+      <link>https://phpgao.github.io/tags/chinadns/</link>
+      <pubDate>Tue, 14 Apr 2015 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/chinadns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redsocks2</title>
+      <link>https://phpgao.github.io/tags/redsocks2/</link>
+      <pubDate>Tue, 14 Apr 2015 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/redsocks2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google</title>
+      <link>https://phpgao.github.io/tags/google/</link>
+      <pubDate>Sun, 12 Apr 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opkg</title>
+      <link>https://phpgao.github.io/tags/opkg/</link>
+      <pubDate>Sun, 12 Apr 2015 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/opkg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>usb</title>
+      <link>https://phpgao.github.io/tags/usb/</link>
+      <pubDate>Sun, 05 Apr 2015 12:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/usb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yosemite</title>
+      <link>https://phpgao.github.io/tags/yosemite/</link>
+      <pubDate>Sun, 05 Apr 2015 12:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/yosemite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sourceforge</title>
+      <link>https://phpgao.github.io/tags/sourceforge/</link>
+      <pubDate>Sat, 28 Mar 2015 03:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sourceforge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>recommend</title>
+      <link>https://phpgao.github.io/tags/recommend/</link>
+      <pubDate>Fri, 27 Mar 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/recommend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://phpgao.github.io/tags/website/</link>
+      <pubDate>Fri, 27 Mar 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>city</title>
+      <link>https://phpgao.github.io/tags/city/</link>
+      <pubDate>Wed, 25 Mar 2015 14:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/city/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wether</title>
+      <link>https://phpgao.github.io/tags/wether/</link>
+      <pubDate>Wed, 25 Mar 2015 14:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wether/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://phpgao.github.io/tags/life/</link>
+      <pubDate>Wed, 25 Mar 2015 01:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plan</title>
+      <link>https://phpgao.github.io/tags/plan/</link>
+      <pubDate>Wed, 25 Mar 2015 01:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/plan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>3322</title>
+      <link>https://phpgao.github.io/tags/3322/</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/3322/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ddns</title>
+      <link>https://phpgao.github.io/tags/ddns/</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ddns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>myddns</title>
+      <link>https://phpgao.github.io/tags/myddns/</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/myddns/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>花生壳</title>
+      <link>https://phpgao.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E8%8A%B1%E7%94%9F%E5%A3%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>airdroid</title>
+      <link>https://phpgao.github.io/tags/airdroid/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/airdroid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cygwin</title>
+      <link>https://phpgao.github.io/tags/cygwin/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cygwin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>everedit</title>
+      <link>https://phpgao.github.io/tags/everedit/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/everedit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fiddler</title>
+      <link>https://phpgao.github.io/tags/fiddler/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fiddler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flux</title>
+      <link>https://phpgao.github.io/tags/flux/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/flux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keepass</title>
+      <link>https://phpgao.github.io/tags/keepass/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/keepass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mactype</title>
+      <link>https://phpgao.github.io/tags/mactype/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mactype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>navicat</title>
+      <link>https://phpgao.github.io/tags/navicat/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/navicat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpnow</title>
+      <link>https://phpgao.github.io/tags/phpnow/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpnow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpstrom</title>
+      <link>https://phpgao.github.io/tags/phpstrom/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpstrom/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postman</title>
+      <link>https://phpgao.github.io/tags/postman/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/postman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>putty</title>
+      <link>https://phpgao.github.io/tags/putty/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/putty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pycharm</title>
+      <link>https://phpgao.github.io/tags/pycharm/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pycharm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>subversion</title>
+      <link>https://phpgao.github.io/tags/subversion/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/subversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vi</title>
+      <link>https://phpgao.github.io/tags/vi/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>winscp</title>
+      <link>https://phpgao.github.io/tags/winscp/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/winscp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wireshark</title>
+      <link>https://phpgao.github.io/tags/wireshark/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wireshark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xenu</title>
+      <link>https://phpgao.github.io/tags/xenu/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xenu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yahei_mono</title>
+      <link>https://phpgao.github.io/tags/yahei_mono/</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/yahei_mono/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>supervisor</title>
+      <link>https://phpgao.github.io/tags/supervisor/</link>
+      <pubDate>Tue, 10 Mar 2015 06:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/supervisor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://phpgao.github.io/tags/css/</link>
+      <pubDate>Sun, 08 Mar 2015 15:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apple</title>
+      <link>https://phpgao.github.io/tags/apple/</link>
+      <pubDate>Sun, 08 Mar 2015 04:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/apple/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://phpgao.github.io/tags/security/</link>
+      <pubDate>Sun, 08 Mar 2015 04:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>uboot</title>
+      <link>https://phpgao.github.io/tags/uboot/</link>
+      <pubDate>Sun, 08 Mar 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/uboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>grub</title>
+      <link>https://phpgao.github.io/tags/grub/</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/grub/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mbr</title>
+      <link>https://phpgao.github.io/tags/mbr/</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mbr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>data</title>
+      <link>https://phpgao.github.io/tags/data/</link>
+      <pubDate>Fri, 13 Feb 2015 01:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sensitive</title>
+      <link>https://phpgao.github.io/tags/sensitive/</link>
+      <pubDate>Fri, 13 Feb 2015 01:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sensitive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>remote</title>
+      <link>https://phpgao.github.io/tags/remote/</link>
+      <pubDate>Thu, 12 Feb 2015 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/remote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://phpgao.github.io/tags/android/</link>
+      <pubDate>Tue, 10 Feb 2015 01:52:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>NEXUS5</title>
+      <link>https://phpgao.github.io/tags/nexus5/</link>
+      <pubDate>Tue, 10 Feb 2015 01:52:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nexus5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>merge</title>
+      <link>https://phpgao.github.io/tags/merge/</link>
+      <pubDate>Mon, 09 Feb 2015 08:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/merge/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fetion</title>
+      <link>https://phpgao.github.io/tags/fetion/</link>
+      <pubDate>Sat, 31 Jan 2015 14:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fetion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://phpgao.github.io/tags/aws/</link>
+      <pubDate>Fri, 30 Jan 2015 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>awstats</title>
+      <link>https://phpgao.github.io/tags/awstats/</link>
+      <pubDate>Fri, 30 Jan 2015 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/awstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cli</title>
+      <link>https://phpgao.github.io/tags/cli/</link>
+      <pubDate>Thu, 29 Jan 2015 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>svn</title>
+      <link>https://phpgao.github.io/tags/svn/</link>
+      <pubDate>Thu, 29 Jan 2015 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/svn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>https://phpgao.github.io/tags/firefox/</link>
+      <pubDate>Thu, 29 Jan 2015 03:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opera</title>
+      <link>https://phpgao.github.io/tags/opera/</link>
+      <pubDate>Thu, 29 Jan 2015 03:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/opera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>safari</title>
+      <link>https://phpgao.github.io/tags/safari/</link>
+      <pubDate>Thu, 29 Jan 2015 03:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/safari/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unzip</title>
+      <link>https://phpgao.github.io/tags/unzip/</link>
+      <pubDate>Wed, 28 Jan 2015 13:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/unzip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flash</title>
+      <link>https://phpgao.github.io/tags/flash/</link>
+      <pubDate>Sat, 24 Jan 2015 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/flash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html5</title>
+      <link>https://phpgao.github.io/tags/html5/</link>
+      <pubDate>Sat, 24 Jan 2015 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/html5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>decode</title>
+      <link>https://phpgao.github.io/tags/decode/</link>
+      <pubDate>Fri, 23 Jan 2015 02:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/decode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>encode</title>
+      <link>https://phpgao.github.io/tags/encode/</link>
+      <pubDate>Fri, 23 Jan 2015 02:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/encode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sogou</title>
+      <link>https://phpgao.github.io/tags/sogou/</link>
+      <pubDate>Thu, 22 Jan 2015 08:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sogou/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wechat</title>
+      <link>https://phpgao.github.io/tags/wechat/</link>
+      <pubDate>Thu, 22 Jan 2015 08:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wechat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dump</title>
+      <link>https://phpgao.github.io/tags/dump/</link>
+      <pubDate>Thu, 22 Jan 2015 02:36:04 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dump/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>format</title>
+      <link>https://phpgao.github.io/tags/format/</link>
+      <pubDate>Thu, 22 Jan 2015 02:36:04 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/format/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>print</title>
+      <link>https://phpgao.github.io/tags/print/</link>
+      <pubDate>Thu, 22 Jan 2015 02:36:04 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/print/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>localhost</title>
+      <link>https://phpgao.github.io/tags/localhost/</link>
+      <pubDate>Mon, 19 Jan 2015 05:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/localhost/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pipes</title>
+      <link>https://phpgao.github.io/tags/pipes/</link>
+      <pubDate>Mon, 19 Jan 2015 05:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pipes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wget</title>
+      <link>https://phpgao.github.io/tags/wget/</link>
+      <pubDate>Thu, 15 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wget/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>路由器</title>
+      <link>https://phpgao.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/</link>
+      <pubDate>Thu, 15 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>魔兽世界</title>
+      <link>https://phpgao.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</link>
+      <pubDate>Thu, 15 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E9%AD%94%E5%85%BD%E4%B8%96%E7%95%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kangle</title>
+      <link>https://phpgao.github.io/tags/kangle/</link>
+      <pubDate>Wed, 14 Jan 2015 08:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/kangle/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>font</title>
+      <link>https://phpgao.github.io/tags/font/</link>
+      <pubDate>Tue, 06 Jan 2015 14:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/font/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>m&#43;</title>
+      <link>https://phpgao.github.io/tags/m&#43;/</link>
+      <pubDate>Tue, 06 Jan 2015 14:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/m&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tar</title>
+      <link>https://phpgao.github.io/tags/tar/</link>
+      <pubDate>Tue, 06 Jan 2015 14:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xz</title>
+      <link>https://phpgao.github.io/tags/xz/</link>
+      <pubDate>Tue, 06 Jan 2015 14:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>10010</title>
+      <link>https://phpgao.github.io/tags/10010/</link>
+      <pubDate>Tue, 06 Jan 2015 06:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/10010/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>net_speeder</title>
+      <link>https://phpgao.github.io/tags/net_speeder/</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/net_speeder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>speedup</title>
+      <link>https://phpgao.github.io/tags/speedup/</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/speedup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>option</title>
+      <link>https://phpgao.github.io/tags/option/</link>
+      <pubDate>Mon, 05 Jan 2015 05:44:54 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/option/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>root</title>
+      <link>https://phpgao.github.io/tags/root/</link>
+      <pubDate>Mon, 29 Dec 2014 02:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/root/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>panel</title>
+      <link>https://phpgao.github.io/tags/panel/</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/panel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reboot</title>
+      <link>https://phpgao.github.io/tags/reboot/</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/reboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>upgrade</title>
+      <link>https://phpgao.github.io/tags/upgrade/</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/upgrade/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terminal</title>
+      <link>https://phpgao.github.io/tags/terminal/</link>
+      <pubDate>Sat, 27 Dec 2014 11:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netspeed</title>
+      <link>https://phpgao.github.io/tags/netspeed/</link>
+      <pubDate>Sat, 27 Dec 2014 04:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/netspeed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nload</title>
+      <link>https://phpgao.github.io/tags/nload/</link>
+      <pubDate>Sat, 27 Dec 2014 04:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/nload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copyleft</title>
+      <link>https://phpgao.github.io/tags/copyleft/</link>
+      <pubDate>Fri, 26 Dec 2014 02:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/copyleft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>license</title>
+      <link>https://phpgao.github.io/tags/license/</link>
+      <pubDate>Fri, 26 Dec 2014 02:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/license/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>opensource</title>
+      <link>https://phpgao.github.io/tags/opensource/</link>
+      <pubDate>Fri, 26 Dec 2014 02:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/opensource/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>attack</title>
+      <link>https://phpgao.github.io/tags/attack/</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/attack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>renew</title>
+      <link>https://phpgao.github.io/tags/renew/</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/renew/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>useradd</title>
+      <link>https://phpgao.github.io/tags/useradd/</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/useradd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://phpgao.github.io/tags/template/</link>
+      <pubDate>Tue, 23 Dec 2014 09:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deal</title>
+      <link>https://phpgao.github.io/tags/deal/</link>
+      <pubDate>Tue, 23 Dec 2014 07:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/deal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chinese</title>
+      <link>https://phpgao.github.io/tags/chinese/</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/chinese/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>i18n</title>
+      <link>https://phpgao.github.io/tags/i18n/</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/i18n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysconfig</title>
+      <link>https://phpgao.github.io/tags/sysconfig/</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sysconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>installation</title>
+      <link>https://phpgao.github.io/tags/installation/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/installation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rewrite</title>
+      <link>https://phpgao.github.io/tags/rewrite/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/rewrite/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>service</title>
+      <link>https://phpgao.github.io/tags/service/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/service/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>version</title>
+      <link>https://phpgao.github.io/tags/version/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/version/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zlib</title>
+      <link>https://phpgao.github.io/tags/zlib/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/zlib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编译</title>
+      <link>https://phpgao.github.io/tags/%E7%BC%96%E8%AF%91/</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E7%BC%96%E8%AF%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>driver</title>
+      <link>https://phpgao.github.io/tags/driver/</link>
+      <pubDate>Sun, 21 Dec 2014 05:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/driver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://phpgao.github.io/tags/selenium/</link>
+      <pubDate>Sun, 21 Dec 2014 05:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cmd</title>
+      <link>https://phpgao.github.io/tags/cmd/</link>
+      <pubDate>Wed, 17 Dec 2014 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cmd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fetch</title>
+      <link>https://phpgao.github.io/tags/fetch/</link>
+      <pubDate>Thu, 11 Dec 2014 01:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fetch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pull</title>
+      <link>https://phpgao.github.io/tags/pull/</link>
+      <pubDate>Thu, 11 Dec 2014 01:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pull/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>push</title>
+      <link>https://phpgao.github.io/tags/push/</link>
+      <pubDate>Thu, 11 Dec 2014 01:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/push/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>developers</title>
+      <link>https://phpgao.github.io/tags/developers/</link>
+      <pubDate>Tue, 09 Dec 2014 02:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/developers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tmout</title>
+      <link>https://phpgao.github.io/tags/tmout/</link>
+      <pubDate>Fri, 05 Dec 2014 08:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/tmout/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>master</title>
+      <link>https://phpgao.github.io/tags/master/</link>
+      <pubDate>Thu, 04 Dec 2014 01:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/master/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slave</title>
+      <link>https://phpgao.github.io/tags/slave/</link>
+      <pubDate>Thu, 04 Dec 2014 01:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/slave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>filesystem</title>
+      <link>https://phpgao.github.io/tags/filesystem/</link>
+      <pubDate>Wed, 03 Dec 2014 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/filesystem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解决办法</title>
+      <link>https://phpgao.github.io/tags/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</link>
+      <pubDate>Wed, 03 Dec 2014 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hook</title>
+      <link>https://phpgao.github.io/tags/hook/</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/hook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pre_commit</title>
+      <link>https://phpgao.github.io/tags/pre_commit/</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pre_commit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clone</title>
+      <link>https://phpgao.github.io/tags/clone/</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/clone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deepcopy</title>
+      <link>https://phpgao.github.io/tags/deepcopy/</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/deepcopy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shallowcopy</title>
+      <link>https://phpgao.github.io/tags/shallowcopy/</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/shallowcopy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpcms</title>
+      <link>https://phpgao.github.io/tags/phpcms/</link>
+      <pubDate>Wed, 05 Nov 2014 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpcms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpsso</title>
+      <link>https://phpgao.github.io/tags/phpsso/</link>
+      <pubDate>Wed, 05 Nov 2014 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpsso/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hotkey</title>
+      <link>https://phpgao.github.io/tags/hotkey/</link>
+      <pubDate>Fri, 24 Oct 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/hotkey/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ddos</title>
+      <link>https://phpgao.github.io/tags/ddos/</link>
+      <pubDate>Thu, 16 Oct 2014 02:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ddos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>deflate</title>
+      <link>https://phpgao.github.io/tags/deflate/</link>
+      <pubDate>Thu, 16 Oct 2014 02:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/deflate/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>debug</title>
+      <link>https://phpgao.github.io/tags/debug/</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/debug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>port</title>
+      <link>https://phpgao.github.io/tags/port/</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/port/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xdebug</title>
+      <link>https://phpgao.github.io/tags/xdebug/</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/xdebug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>source code</title>
+      <link>https://phpgao.github.io/tags/source-code/</link>
+      <pubDate>Tue, 14 Oct 2014 13:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/source-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dispatch</title>
+      <link>https://phpgao.github.io/tags/dispatch/</link>
+      <pubDate>Sun, 12 Oct 2014 01:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dispatch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>autoload</title>
+      <link>https://phpgao.github.io/tags/autoload/</link>
+      <pubDate>Sat, 11 Oct 2014 07:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/autoload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>handler</title>
+      <link>https://phpgao.github.io/tags/handler/</link>
+      <pubDate>Sat, 11 Oct 2014 07:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/handler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virual</title>
+      <link>https://phpgao.github.io/tags/virual/</link>
+      <pubDate>Sat, 11 Oct 2014 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/virual/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>scp</title>
+      <link>https://phpgao.github.io/tags/scp/</link>
+      <pubDate>Thu, 09 Oct 2014 13:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/scp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vsftp</title>
+      <link>https://phpgao.github.io/tags/vsftp/</link>
+      <pubDate>Wed, 08 Oct 2014 08:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/vsftp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>songs</title>
+      <link>https://phpgao.github.io/tags/songs/</link>
+      <pubDate>Tue, 07 Oct 2014 02:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/songs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>privilege</title>
+      <link>https://phpgao.github.io/tags/privilege/</link>
+      <pubDate>Sat, 04 Oct 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/privilege/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>freetype</title>
+      <link>https://phpgao.github.io/tags/freetype/</link>
+      <pubDate>Fri, 03 Oct 2014 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/freetype/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>imagettftext</title>
+      <link>https://phpgao.github.io/tags/imagettftext/</link>
+      <pubDate>Fri, 03 Oct 2014 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/imagettftext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thinkphp</title>
+      <link>https://phpgao.github.io/tags/thinkphp/</link>
+      <pubDate>Mon, 29 Sep 2014 02:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/thinkphp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>框架</title>
+      <link>https://phpgao.github.io/tags/%E6%A1%86%E6%9E%B6/</link>
+      <pubDate>Thu, 25 Sep 2014 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E6%A1%86%E6%9E%B6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dictionary</title>
+      <link>https://phpgao.github.io/tags/dictionary/</link>
+      <pubDate>Tue, 23 Sep 2014 03:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dictionary/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iostat</title>
+      <link>https://phpgao.github.io/tags/iostat/</link>
+      <pubDate>Thu, 18 Sep 2014 07:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/iostat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysstat</title>
+      <link>https://phpgao.github.io/tags/sysstat/</link>
+      <pubDate>Thu, 18 Sep 2014 07:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sysstat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fpm</title>
+      <link>https://phpgao.github.io/tags/fpm/</link>
+      <pubDate>Thu, 18 Sep 2014 06:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fpm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>language</title>
+      <link>https://phpgao.github.io/tags/language/</link>
+      <pubDate>Thu, 18 Sep 2014 05:42:38 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conf</title>
+      <link>https://phpgao.github.io/tags/conf/</link>
+      <pubDate>Wed, 17 Sep 2014 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/conf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>coding</title>
+      <link>https://phpgao.github.io/tags/coding/</link>
+      <pubDate>Wed, 10 Sep 2014 03:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>style</title>
+      <link>https://phpgao.github.io/tags/style/</link>
+      <pubDate>Wed, 10 Sep 2014 03:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/style/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtm</title>
+      <link>https://phpgao.github.io/tags/gtm/</link>
+      <pubDate>Mon, 08 Sep 2014 16:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gtm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mktime</title>
+      <link>https://phpgao.github.io/tags/mktime/</link>
+      <pubDate>Mon, 08 Sep 2014 16:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mktime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>strtotime</title>
+      <link>https://phpgao.github.io/tags/strtotime/</link>
+      <pubDate>Mon, 08 Sep 2014 16:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/strtotime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>adb</title>
+      <link>https://phpgao.github.io/tags/adb/</link>
+      <pubDate>Mon, 08 Sep 2014 00:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/adb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fastboot</title>
+      <link>https://phpgao.github.io/tags/fastboot/</link>
+      <pubDate>Mon, 08 Sep 2014 00:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fastboot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>刷机</title>
+      <link>https://phpgao.github.io/tags/%E5%88%B7%E6%9C%BA/</link>
+      <pubDate>Mon, 08 Sep 2014 00:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E5%88%B7%E6%9C%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>error</title>
+      <link>https://phpgao.github.io/tags/error/</link>
+      <pubDate>Sun, 07 Sep 2014 12:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ifconfig</title>
+      <link>https://phpgao.github.io/tags/ifconfig/</link>
+      <pubDate>Sun, 07 Sep 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ifconfig/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cx_freeze</title>
+      <link>https://phpgao.github.io/tags/cx_freeze/</link>
+      <pubDate>Mon, 18 Aug 2014 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cx_freeze/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>py2exe</title>
+      <link>https://phpgao.github.io/tags/py2exe/</link>
+      <pubDate>Mon, 18 Aug 2014 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/py2exe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pyinstaller</title>
+      <link>https://phpgao.github.io/tags/pyinstaller/</link>
+      <pubDate>Mon, 18 Aug 2014 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pyinstaller/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>basic</title>
+      <link>https://phpgao.github.io/tags/basic/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/basic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bug fixing</title>
+      <link>https://phpgao.github.io/tags/bug-fixing/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bug-fixing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>performance</title>
+      <link>https://phpgao.github.io/tags/performance/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SEO</title>
+      <link>https://phpgao.github.io/tags/seo/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/seo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technology</title>
+      <link>https://phpgao.github.io/tags/technology/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web</title>
+      <link>https://phpgao.github.io/tags/web/</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mysqldb</title>
+      <link>https://phpgao.github.io/tags/mysqldb/</link>
+      <pubDate>Fri, 15 Aug 2014 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mysqldb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>substitution</title>
+      <link>https://phpgao.github.io/tags/substitution/</link>
+      <pubDate>Wed, 13 Aug 2014 08:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/substitution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variables</title>
+      <link>https://phpgao.github.io/tags/variables/</link>
+      <pubDate>Wed, 13 Aug 2014 08:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/variables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>repo</title>
+      <link>https://phpgao.github.io/tags/repo/</link>
+      <pubDate>Mon, 11 Aug 2014 03:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/repo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>https://phpgao.github.io/tags/sync/</link>
+      <pubDate>Tue, 29 Jul 2014 08:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>paypal</title>
+      <link>https://phpgao.github.io/tags/paypal/</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/paypal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bypy</title>
+      <link>https://phpgao.github.io/tags/bypy/</link>
+      <pubDate>Mon, 28 Jul 2014 07:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bypy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>百度网盘</title>
+      <link>https://phpgao.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</link>
+      <pubDate>Mon, 28 Jul 2014 07:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>代理</title>
+      <link>https://phpgao.github.io/tags/%E4%BB%A3%E7%90%86/</link>
+      <pubDate>Sun, 27 Jul 2014 10:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E4%BB%A3%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fq</title>
+      <link>https://phpgao.github.io/tags/fq/</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/fq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>free</title>
+      <link>https://phpgao.github.io/tags/free/</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/free/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ctorrent</title>
+      <link>https://phpgao.github.io/tags/ctorrent/</link>
+      <pubDate>Sun, 27 Jul 2014 02:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ctorrent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>torrent</title>
+      <link>https://phpgao.github.io/tags/torrent/</link>
+      <pubDate>Sun, 27 Jul 2014 02:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/torrent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jekyll</title>
+      <link>https://phpgao.github.io/tags/jekyll/</link>
+      <pubDate>Sat, 26 Jul 2014 04:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/jekyll/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>modifiers</title>
+      <link>https://phpgao.github.io/tags/modifiers/</link>
+      <pubDate>Fri, 25 Jul 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/modifiers/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pattern</title>
+      <link>https://phpgao.github.io/tags/pattern/</link>
+      <pubDate>Fri, 25 Jul 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/pattern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>base64</title>
+      <link>https://phpgao.github.io/tags/base64/</link>
+      <pubDate>Fri, 25 Jul 2014 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/base64/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>compress</title>
+      <link>https://phpgao.github.io/tags/compress/</link>
+      <pubDate>Fri, 25 Jul 2014 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/compress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quote</title>
+      <link>https://phpgao.github.io/tags/quote/</link>
+      <pubDate>Tue, 22 Jul 2014 08:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/quote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>abc</title>
+      <link>https://phpgao.github.io/tags/abc/</link>
+      <pubDate>Tue, 22 Jul 2014 07:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/abc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>expression</title>
+      <link>https://phpgao.github.io/tags/expression/</link>
+      <pubDate>Tue, 22 Jul 2014 07:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/expression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regular</title>
+      <link>https://phpgao.github.io/tags/regular/</link>
+      <pubDate>Tue, 22 Jul 2014 07:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/regular/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cydia</title>
+      <link>https://phpgao.github.io/tags/cydia/</link>
+      <pubDate>Sat, 19 Jul 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/cydia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>netbeans</title>
+      <link>https://phpgao.github.io/tags/netbeans/</link>
+      <pubDate>Fri, 18 Jul 2014 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/netbeans/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webkit</title>
+      <link>https://phpgao.github.io/tags/webkit/</link>
+      <pubDate>Tue, 15 Jul 2014 06:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/webkit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>function</title>
+      <link>https://phpgao.github.io/tags/function/</link>
+      <pubDate>Tue, 15 Jul 2014 01:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/function/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>md</title>
+      <link>https://phpgao.github.io/tags/md/</link>
+      <pubDate>Thu, 10 Jul 2014 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/md/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>verify</title>
+      <link>https://phpgao.github.io/tags/verify/</link>
+      <pubDate>Thu, 10 Jul 2014 09:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/verify/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>abstract</title>
+      <link>https://phpgao.github.io/tags/abstract/</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/abstract/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interface</title>
+      <link>https://phpgao.github.io/tags/interface/</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/interface/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>object</title>
+      <link>https://phpgao.github.io/tags/object/</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/object/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oriented</title>
+      <link>https://phpgao.github.io/tags/oriented/</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/oriented/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sideload</title>
+      <link>https://phpgao.github.io/tags/sideload/</link>
+      <pubDate>Thu, 03 Jul 2014 01:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/sideload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crx</title>
+      <link>https://phpgao.github.io/tags/crx/</link>
+      <pubDate>Sun, 29 Jun 2014 11:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/crx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>url</title>
+      <link>https://phpgao.github.io/tags/url/</link>
+      <pubDate>Thu, 26 Jun 2014 03:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/url/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>callrecorder</title>
+      <link>https://phpgao.github.io/tags/callrecorder/</link>
+      <pubDate>Mon, 23 Jun 2014 01:46:24 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/callrecorder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bbscache</title>
+      <link>https://phpgao.github.io/tags/bbscache/</link>
+      <pubDate>Sun, 22 Jun 2014 05:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bbscache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>baidu</title>
+      <link>https://phpgao.github.io/tags/baidu/</link>
+      <pubDate>Wed, 18 Jun 2014 03:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/baidu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>forbid</title>
+      <link>https://phpgao.github.io/tags/forbid/</link>
+      <pubDate>Wed, 18 Jun 2014 03:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/forbid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>siteapp</title>
+      <link>https://phpgao.github.io/tags/siteapp/</link>
+      <pubDate>Wed, 18 Jun 2014 03:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/siteapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>https://phpgao.github.io/tags/interview/</link>
+      <pubDate>Wed, 18 Jun 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>weibo</title>
+      <link>https://phpgao.github.io/tags/weibo/</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/weibo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>加密</title>
+      <link>https://phpgao.github.io/tags/%E5%8A%A0%E5%AF%86/</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E5%8A%A0%E5%AF%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>登录</title>
+      <link>https://phpgao.github.io/tags/%E7%99%BB%E5%BD%95/</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/%E7%99%BB%E5%BD%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gfw</title>
+      <link>https://phpgao.github.io/tags/gfw/</link>
+      <pubDate>Fri, 13 Jun 2014 08:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gfw/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ffmpeg</title>
+      <link>https://phpgao.github.io/tags/ffmpeg/</link>
+      <pubDate>Fri, 13 Jun 2014 02:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ffmpeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>goagent</title>
+      <link>https://phpgao.github.io/tags/goagent/</link>
+      <pubDate>Tue, 10 Jun 2014 06:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/goagent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mstsc</title>
+      <link>https://phpgao.github.io/tags/mstsc/</link>
+      <pubDate>Mon, 09 Jun 2014 08:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/mstsc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>urllib</title>
+      <link>https://phpgao.github.io/tags/urllib/</link>
+      <pubDate>Thu, 05 Jun 2014 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/urllib/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>urllib2</title>
+      <link>https://phpgao.github.io/tags/urllib2/</link>
+      <pubDate>Thu, 05 Jun 2014 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/urllib2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>curl</title>
+      <link>https://phpgao.github.io/tags/curl/</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/curl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>get</title>
+      <link>https://phpgao.github.io/tags/get/</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/get/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http_build_query</title>
+      <link>https://phpgao.github.io/tags/http_build_query/</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/http_build_query/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>post</title>
+      <link>https://phpgao.github.io/tags/post/</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>buffer</title>
+      <link>https://phpgao.github.io/tags/buffer/</link>
+      <pubDate>Wed, 21 May 2014 08:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/buffer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flush</title>
+      <link>https://phpgao.github.io/tags/flush/</link>
+      <pubDate>Wed, 21 May 2014 08:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/flush/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ob_start</title>
+      <link>https://phpgao.github.io/tags/ob_start/</link>
+      <pubDate>Wed, 21 May 2014 08:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ob_start/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>session</title>
+      <link>https://phpgao.github.io/tags/session/</link>
+      <pubDate>Mon, 19 May 2014 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/session/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clear</title>
+      <link>https://phpgao.github.io/tags/clear/</link>
+      <pubDate>Sun, 18 May 2014 10:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/clear/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://phpgao.github.io/tags/html/</link>
+      <pubDate>Sun, 18 May 2014 10:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>token</title>
+      <link>https://phpgao.github.io/tags/token/</link>
+      <pubDate>Thu, 15 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/token/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>update</title>
+      <link>https://phpgao.github.io/tags/update/</link>
+      <pubDate>Tue, 13 May 2014 01:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/update/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wordpress</title>
+      <link>https://phpgao.github.io/tags/wordpress/</link>
+      <pubDate>Tue, 13 May 2014 01:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>apache</title>
+      <link>https://phpgao.github.io/tags/apache/</link>
+      <pubDate>Sun, 11 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IIS</title>
+      <link>https://phpgao.github.io/tags/iis/</link>
+      <pubDate>Sun, 11 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/iis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RewriteRule</title>
+      <link>https://phpgao.github.io/tags/rewriterule/</link>
+      <pubDate>Sun, 11 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/rewriterule/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>index</title>
+      <link>https://phpgao.github.io/tags/index/</link>
+      <pubDate>Sat, 10 May 2014 03:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bulid</title>
+      <link>https://phpgao.github.io/tags/bulid/</link>
+      <pubDate>Sat, 10 May 2014 01:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/bulid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>password</title>
+      <link>https://phpgao.github.io/tags/password/</link>
+      <pubDate>Sat, 10 May 2014 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/password/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redirect</title>
+      <link>https://phpgao.github.io/tags/redirect/</link>
+      <pubDate>Sat, 10 May 2014 01:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/redirect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gb2312</title>
+      <link>https://phpgao.github.io/tags/gb2312/</link>
+      <pubDate>Fri, 09 May 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gb2312/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gbk</title>
+      <link>https://phpgao.github.io/tags/gbk/</link>
+      <pubDate>Fri, 09 May 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/gbk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dede</title>
+      <link>https://phpgao.github.io/tags/dede/</link>
+      <pubDate>Fri, 09 May 2014 15:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dede/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>matrix</title>
+      <link>https://phpgao.github.io/tags/matrix/</link>
+      <pubDate>Fri, 09 May 2014 15:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/matrix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>404</title>
+      <link>https://phpgao.github.io/tags/404/</link>
+      <pubDate>Wed, 19 Mar 2014 15:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>content</title>
+      <link>https://phpgao.github.io/tags/content/</link>
+      <pubDate>Sun, 16 Mar 2014 15:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/content/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>301</title>
+      <link>https://phpgao.github.io/tags/301/</link>
+      <pubDate>Fri, 14 Mar 2014 15:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/301/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>glob</title>
+      <link>https://phpgao.github.io/tags/glob/</link>
+      <pubDate>Mon, 10 Mar 2014 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/glob/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>labtop</title>
+      <link>https://phpgao.github.io/tags/labtop/</link>
+      <pubDate>Sun, 09 Mar 2014 15:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/labtop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>copy</title>
+      <link>https://phpgao.github.io/tags/copy/</link>
+      <pubDate>Fri, 07 Mar 2014 14:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/copy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>enable_click</title>
+      <link>https://phpgao.github.io/tags/enable_click/</link>
+      <pubDate>Fri, 07 Mar 2014 14:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/enable_click/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>phpmyadmin</title>
+      <link>https://phpgao.github.io/tags/phpmyadmin/</link>
+      <pubDate>Wed, 05 Mar 2014 14:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/phpmyadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dos</title>
+      <link>https://phpgao.github.io/tags/dos/</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/dos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://phpgao.github.io/tags/js/</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jQuery</title>
+      <link>https://phpgao.github.io/tags/jquery/</link>
+      <pubDate>Sat, 01 Mar 2014 14:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slide</title>
+      <link>https://phpgao.github.io/tags/slide/</link>
+      <pubDate>Sat, 01 Mar 2014 14:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/slide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>IE</title>
+      <link>https://phpgao.github.io/tags/ie/</link>
+      <pubDate>Fri, 28 Feb 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/ie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>placeholder</title>
+      <link>https://phpgao.github.io/tags/placeholder/</link>
+      <pubDate>Fri, 28 Feb 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/placeholder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>list</title>
+      <link>https://phpgao.github.io/tags/list/</link>
+      <pubDate>Fri, 28 Feb 2014 07:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>favicon</title>
+      <link>https://phpgao.github.io/tags/favicon/</link>
+      <pubDate>Fri, 14 Feb 2014 07:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/favicon/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>newhand</title>
+      <link>https://phpgao.github.io/tags/newhand/</link>
+      <pubDate>Thu, 13 Feb 2014 07:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/newhand/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>replace</title>
+      <link>https://phpgao.github.io/tags/replace/</link>
+      <pubDate>Wed, 12 Feb 2014 15:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/replace/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serach</title>
+      <link>https://phpgao.github.io/tags/serach/</link>
+      <pubDate>Wed, 12 Feb 2014 15:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/serach/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>world</title>
+      <link>https://phpgao.github.io/tags/world/</link>
+      <pubDate>Tue, 04 Feb 2014 02:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tags/world/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

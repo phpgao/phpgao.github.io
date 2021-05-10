@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>baidu on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/baidu/</link>
+    <description>Recent content in baidu on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Jun 2014 03:40:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/baidu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何防止你的网站被百度转码</title>
+      <link>https://phpgao.github.io/baidu_siteapp_forbid.html</link>
+      <pubDate>Wed, 18 Jun 2014 03:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/baidu_siteapp_forbid.html</guid>
+      <description>&lt;p&gt;现在只要新一点的HTML页面都会支持响应式，但是在移动端百度会把本来整齐的页面强行转码成他所需要的格式来呈现，简直是丑爆了！而且URL也会变的很长，简直对不起我的伪静态！！最近UC（也可以说是阿里，更可以说是马大帅）也开始搞这个事儿了  &lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

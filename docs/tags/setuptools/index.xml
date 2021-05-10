@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>setuptools on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/setuptools/</link>
+    <description>Recent content in setuptools on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Oct 2016 11:00:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/setuptools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>离线安装setuptools</title>
+      <link>https://phpgao.github.io/install_setuptools_offline.html</link>
+      <pubDate>Wed, 12 Oct 2016 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_setuptools_offline.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/10/1048756566.png&#34; alt=&#34;setuptools.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;由于某些原因，没法在线安装setuptools，研究了一下官方提供的安装脚本，发现原来想要离线安装setuptools很简单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>升级python2.7和安装pip,easy_install和setuptool</title>
+      <link>https://phpgao.github.io/pip-easy_install-setuptool.html</link>
+      <pubDate>Wed, 30 Jul 2014 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip-easy_install-setuptool.html</guid>
+      <description>&lt;h1 id=&#34;升级python和安装pipeasy_install和setuptool&#34;&gt;升级python和安装pip,easy_install和setuptool&lt;/h1&gt;
+&lt;p&gt;新机子装环境什么的最麻烦了，在此记录一下python的升级和包(模块)管理软件&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

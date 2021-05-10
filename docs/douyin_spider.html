@@ -1,0 +1,109 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>抖音的学习研究 | 老高的技术博客</title><meta name=keywords content="spider"><meta name=description content="老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。
+
+重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！
+"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/douyin_spider.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="抖音的学习研究"><meta property="og:description" content="老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。
+
+重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！
+"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/douyin_spider.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-06-25T07:18:00+00:00"><meta property="article:modified_time" content="2019-06-25T07:18:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="抖音的学习研究"><meta name=twitter:description content="老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。
+
+重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"抖音的学习研究","item":"https://phpgao.github.io/douyin_spider.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"抖音的学习研究","name":"抖音的学习研究","description":"老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。\n 重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！\n","keywords":["spider"],"articleBody":"老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。\n 重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！\n 分析 抖音不像其他视频app，评论等数据都没有直接开放在H5端，所以就需要各种办法把抖音APP中的数据偷出来，然后与H5端能爬到的数据结合起来，数据就差不多了。\nH5端 H5端主要有2个比较有用的地址\n视频列表页  https://www.iesdouyin.com/share/user/96454853869 https://www.iesdouyin.com/share/user/111519505621  只要知道了抖音的用户id，就可以通过访问https://www.iesdouyin.com/share/user/%id得到用户的一些信息，以及所有的视频列表。\n视频列表的接口：\nhttps://www.iesdouyin.com/web/api/v2/aweme/post/?user_id=96454853869\u0026count=21\u0026max_cursor=0\u0026aid=1128\u0026_signature=ycRB9hAYlOA8ozERGA-RrMnEQO\u0026dytk=461d02904aff073ed0f5c745f20345c5 user_id: 96454853869 count: 21 max_cursor: 0 aid: 1128 _signature: ycRB9hAYlOA8ozERGA-RrMnEQO dytk: 461d02904aff073ed0f5c745f20345c5 max_cursor为游标，是上一次访问的接口返回给我们的值 aid=1128不变，但是我们可以从js中获取 _signature需要破解 user_id，dytk可以从源码中用正则提取\n返回数据格式：\n{ \"status_code\":0, \"aweme_list\":[ { \"aweme_id\":\"6697580929038191883\", \"desc\":\"六一这天下雨了，给娃做了仙豆糕，一家人坐在家里吃着面条，总感觉幸福满满……\", \"cha_list\":null, \"video\":{ \"play_addr\":{ \"uri\":\"v0300f8a0000bjpp0dd57hrqvjfjke1g\", \"url_list\":[ \"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g\u0026line=0\u0026ratio=540p\u0026media_type=4\u0026vr_type=0\u0026improve_bitrate=0\", \"https://api.amemv.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g\u0026line=1\u0026ratio=540p\u0026media_type=4\u0026vr_type=0\u0026improve_bitrate=0\" ] }, \"cover\":{ \"uri\":\"17abf00187505e16fe845\", \"url_list\":[ \"https://p9-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg\", \"https://p1-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg\", \"https://p3-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg\" ] }, \"height\":960, \"width\":540, \"dynamic_cover\":{ \"uri\":\"26bad000a23ba6f5a67d1\", \"url_list\":[ \"https://p9-dy.byteimg.com/obj/26bad000a23ba6f5a67d1\", \"https://p1-dy.byteimg.com/obj/26bad000a23ba6f5a67d1\", \"https://p3-dy.byteimg.com/obj/26bad000a23ba6f5a67d1\" ] }, \"origin_cover\":{ \"uri\":\"large/26bb70005da2e69075bef\", \"url_list\":[ \"http://p9-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg\", \"http://p1-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg\", \"http://p3-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg\" ] }, \"ratio\":\"540p\", \"download_addr\":{ \"uri\":\"v0300f8a0000bjpp0dd57hrqvjfjke1g\", \"url_list\":[ \"https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g\u0026line=0\u0026ratio=540p\u0026watermark=1\u0026media_type=4\u0026vr_type=0\u0026improve_bitrate=0\u0026logo_name=aweme\", \"https://api.amemv.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g\u0026line=1\u0026ratio=540p\u0026watermark=1\u0026media_type=4\u0026vr_type=0\u0026improve_bitrate=0\u0026logo_name=aweme\" ] }, \"has_watermark\":true, \"bit_rate\":null, \"duration\":32033 }, \"statistics\":{ \"aweme_id\":\"6697580929038191883\", \"comment_count\":2014, \"digg_count\":112000, \"play_count\":0, \"share_count\":424, \"forward_count\":15 }, \"text_extra\":[ ], \"video_labels\":null, \"aweme_type\":4, \"image_infos\":null, \"position\":null, \"uniqid_position\":null, \"comment_list\":null, \"geofencing\":null, \"video_text\":null, \"label_top_text\":null, \"promotions\":null, \"long_video\":null } ], \"max_cursor\":1557455743000, \"min_cursor\":1559466150000, \"has_more\":true } 此处我们需要写两个爬虫，一种是通过接口，一种通过模拟浏览器(备用方案)。\n反爬点 字体反爬\n视频详情页  https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN\u0026mid=6681424173102795533\u0026u_code=jheb4e7h\u0026titleType=title https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN\u0026mid=6681424173102795533  知道了视频的唯一id(aweme_id)后，还需要获取一个mid才能到达此页面，目前还在研究。\n待更新。。。\n","wordCount":"117","inLanguage":"en","datePublished":"2019-06-25T07:18:00Z","dateModified":"2019-06-25T07:18:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/douyin_spider.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>抖音的学习研究</h1><div class=post-meta>June 25, 2019&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2019-06-25_douyin_spider.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>老高由于一些目的，需要研究学习一下抖音视频。记录一下过程，以作备忘。</p><blockquote><p>重要声明，本教程仅供参考，请勿直接通过本教程的代码或思路爬取抖音视频，否则后果自负！</p></blockquote><h2 id=分析>分析<a hidden class=anchor aria-hidden=true href=#分析>#</a></h2><p>抖音不像其他视频app，评论等数据都没有直接开放在H5端，所以就需要各种办法把抖音APP中的数据偷出来，然后与H5端能爬到的数据结合起来，数据就差不多了。</p><h3 id=h5端>H5端<a hidden class=anchor aria-hidden=true href=#h5端>#</a></h3><p>H5端主要有2个比较有用的地址</p><h4 id=视频列表页>视频列表页<a hidden class=anchor aria-hidden=true href=#视频列表页>#</a></h4><ul><li><a href=https://www.iesdouyin.com/share/user/96454853869>https://www.iesdouyin.com/share/user/96454853869</a></li><li><a href=https://www.iesdouyin.com/share/user/111519505621>https://www.iesdouyin.com/share/user/111519505621</a></li></ul><p>只要知道了抖音的用户id，就可以通过访问<code>https://www.iesdouyin.com/share/user/%id</code>得到用户的一些信息，以及所有的视频列表。</p><p>视频列表的接口：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>https://www.iesdouyin.com/web/api/v2/aweme/post/?user_id=96454853869&amp;count=21&amp;max_cursor=0&amp;aid=1128&amp;_signature=ycRB9hAYlOA8ozERGA-RrMnEQO&amp;dytk=461d02904aff073ed0f5c745f20345c5
+
+
+user_id: 96454853869
+count: 21
+max_cursor: 0
+aid: 1128
+_signature: ycRB9hAYlOA8ozERGA-RrMnEQO
+dytk: 461d02904aff073ed0f5c745f20345c5
+</code></pre></div><p>max_cursor为游标，是上一次访问的接口返回给我们的值
+aid=1128不变，但是我们可以从js中获取
+_signature需要破解
+user_id，dytk可以从源码中用正则提取</p><p>返回数据格式：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>{
+    &#34;status_code&#34;:0,
+    &#34;aweme_list&#34;:[
+        {
+            &#34;aweme_id&#34;:&#34;6697580929038191883&#34;,
+            &#34;desc&#34;:&#34;六一这天下雨了，给娃做了仙豆糕，一家人坐在家里吃着面条，总感觉幸福满满……&#34;,
+            &#34;cha_list&#34;:null,
+            &#34;video&#34;:{
+                &#34;play_addr&#34;:{
+                    &#34;uri&#34;:&#34;v0300f8a0000bjpp0dd57hrqvjfjke1g&#34;,
+                    &#34;url_list&#34;:[
+                        &#34;https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g&amp;line=0&amp;ratio=540p&amp;media_type=4&amp;vr_type=0&amp;improve_bitrate=0&#34;,
+                        &#34;https://api.amemv.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g&amp;line=1&amp;ratio=540p&amp;media_type=4&amp;vr_type=0&amp;improve_bitrate=0&#34;
+                    ]
+                },
+                &#34;cover&#34;:{
+                    &#34;uri&#34;:&#34;17abf00187505e16fe845&#34;,
+                    &#34;url_list&#34;:[
+                        &#34;https://p9-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg&#34;,
+                        &#34;https://p1-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg&#34;,
+                        &#34;https://p3-dy.byteimg.com/aweme/300x400/17abf00187505e16fe845.jpeg&#34;
+                    ]
+                },
+                &#34;height&#34;:960,
+                &#34;width&#34;:540,
+                &#34;dynamic_cover&#34;:{
+                    &#34;uri&#34;:&#34;26bad000a23ba6f5a67d1&#34;,
+                    &#34;url_list&#34;:[
+                        &#34;https://p9-dy.byteimg.com/obj/26bad000a23ba6f5a67d1&#34;,
+                        &#34;https://p1-dy.byteimg.com/obj/26bad000a23ba6f5a67d1&#34;,
+                        &#34;https://p3-dy.byteimg.com/obj/26bad000a23ba6f5a67d1&#34;
+                    ]
+                },
+                &#34;origin_cover&#34;:{
+                    &#34;uri&#34;:&#34;large/26bb70005da2e69075bef&#34;,
+                    &#34;url_list&#34;:[
+                        &#34;http://p9-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg&#34;,
+                        &#34;http://p1-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg&#34;,
+                        &#34;http://p3-dy.byteimg.com/large/26bb70005da2e69075bef.jpeg&#34;
+                    ]
+                },
+                &#34;ratio&#34;:&#34;540p&#34;,
+                &#34;download_addr&#34;:{
+                    &#34;uri&#34;:&#34;v0300f8a0000bjpp0dd57hrqvjfjke1g&#34;,
+                    &#34;url_list&#34;:[
+                        &#34;https://aweme.snssdk.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g&amp;line=0&amp;ratio=540p&amp;watermark=1&amp;media_type=4&amp;vr_type=0&amp;improve_bitrate=0&amp;logo_name=aweme&#34;,
+                        &#34;https://api.amemv.com/aweme/v1/play/?video_id=v0300f8a0000bjpp0dd57hrqvjfjke1g&amp;line=1&amp;ratio=540p&amp;watermark=1&amp;media_type=4&amp;vr_type=0&amp;improve_bitrate=0&amp;logo_name=aweme&#34;
+                    ]
+                },
+                &#34;has_watermark&#34;:true,
+                &#34;bit_rate&#34;:null,
+                &#34;duration&#34;:32033
+            },
+            &#34;statistics&#34;:{
+                &#34;aweme_id&#34;:&#34;6697580929038191883&#34;,
+                &#34;comment_count&#34;:2014,
+                &#34;digg_count&#34;:112000,
+                &#34;play_count&#34;:0,
+                &#34;share_count&#34;:424,
+                &#34;forward_count&#34;:15
+            },
+            &#34;text_extra&#34;:[
+
+            ],
+            &#34;video_labels&#34;:null,
+            &#34;aweme_type&#34;:4,
+            &#34;image_infos&#34;:null,
+            &#34;position&#34;:null,
+            &#34;uniqid_position&#34;:null,
+            &#34;comment_list&#34;:null,
+            &#34;geofencing&#34;:null,
+            &#34;video_text&#34;:null,
+            &#34;label_top_text&#34;:null,
+            &#34;promotions&#34;:null,
+            &#34;long_video&#34;:null
+        }
+    ],
+    &#34;max_cursor&#34;:1557455743000,
+    &#34;min_cursor&#34;:1559466150000,
+    &#34;has_more&#34;:true
+}
+</code></pre></div><p>此处我们需要写两个爬虫，一种是通过接口，一种通过模拟浏览器(备用方案)。</p><h5 id=反爬点>反爬点<a hidden class=anchor aria-hidden=true href=#反爬点>#</a></h5><p>字体反爬</p><h4 id=视频详情页>视频详情页<a hidden class=anchor aria-hidden=true href=#视频详情页>#</a></h4><ul><li><a href="https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN&mid=6681424173102795533&u_code=jheb4e7h&titleType=title">https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN&mid=6681424173102795533&u_code=jheb4e7h&titleType=title</a></li><li><a href="https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN&mid=6681424173102795533">https://www.iesdouyin.com/share/video/6706027802904366339/?region=CN&mid=6681424173102795533</a></li></ul><p>知道了视频的唯一id(aweme_id)后，还需要获取一个mid才能到达此页面，目前还在研究。</p><p>待更新。。。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/spider/>spider</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/gogs.html><span class=title>« Prev Page</span><br><span>使用docker搭建私有git服务(gogs+https)</span></a>
+<a class=next href=https://phpgao.github.io/f_ziroom_k.html><span class=title>Next Page »</span><br><span>迫于自如甲醛超标，我也来直播一下处理流程</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

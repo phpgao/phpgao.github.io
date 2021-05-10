@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>time on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/time/</link>
+    <description>Recent content in time on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Jul 2016 05:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/time/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>unicode标准日期格式</title>
+      <link>https://phpgao.github.io/date_format_patterns.html</link>
+      <pubDate>Thu, 14 Jul 2016 05:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/date_format_patterns.html</guid>
+      <description>丢个链接闪人 → → → Appendix F: Date Format Patterns
+顺便加上python的日期格式化 → → → strftime-strptime-behavior</description>
+    </item>
+    
+    <item>
+      <title>PHP时间函数总结</title>
+      <link>https://phpgao.github.io/php_time.html</link>
+      <pubDate>Mon, 08 Sep 2014 16:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_time.html</guid>
+      <description>&lt;p&gt;PHP关于时间的函数可以参考&lt;a href=&#34;http://cn2.php.net/manual/zh/ref.datetime.php&#34;&gt;这里&lt;/a&gt;，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！&lt;/p&gt;
+&lt;p&gt;ps.关于时间戳与日期的转换工具，博主推荐这个&lt;a href=&#34;http://shijianchuo.911cha.com&#34;&gt;时间戳转换工具&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python时间函数整理</title>
+      <link>https://phpgao.github.io/python_time.html</link>
+      <pubDate>Mon, 09 Jun 2014 02:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_time.html</guid>
+      <description>有一些是拷的，自己加了一点，大家凑活看吧
+#-*- coding:utf-8 -*-import timeimport datetime#in python is float while in php is intcurrenttime = 1402244512.48print time.time()print time.ctime()print time.ctime(currenttime)print time.localtime()print type(time.localtime())print time.strftime(&#39;%Y-%m-%d&#39;,time.localtime(time.time()-3600*24))print time.strftime(&#39;%Y-%m-%d %H:%I:%S&#39;,time.localtime(time.time()))print time.strftime(&#39;%Y-%m-%d %H:%I:%S&#39;,time.gmtime(time.time()))currentstr = &#39;2013-08-21 17:05:01&#39;print time.strptime(currentstr,&#39;%Y-%m-%d %H:%I:%S&#39;)&#39;&#39;&#39;python中时间日期格式化符号：%y 两位数的年份表示（00-99）%Y 四位数的年份表示（000-9999）%m 月份（01-12）%d 月内中的一天（0-31）%H 24小时制小时数（0-23）%I 12小时制小时数（01-12）%M 分钟数（00=59）%S 秒（00-59）%a 本地简化星期名称%A 本地完整星期名称%b 本地简化的月份名称%B 本地完整的月份名称%c 本地相应的日期表示和时间表示%j 年内的一天（001-366）%p 本地A.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>get on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/get/</link>
+    <description>Recent content in get on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 May 2014 09:30:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/get/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>http_build_query妙用</title>
+      <link>https://phpgao.github.io/http_build_query.html</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/http_build_query.html</guid>
+      <description>http_build_query这个函数可以很方便的构造一个请求所需要的参数。(不分GET,POST)
+这个函数可以把一个数组转化为一串字符
+栗子1：
+&amp;lt;?php$data = array(&#39;foo&#39;=&amp;gt;&#39;bar&#39;,&#39;baz&#39;=&amp;gt;&#39;boom&#39;,&#39;cow&#39;=&amp;gt;&#39;milk&#39;,&#39;php&#39;=&amp;gt;&#39;hypertext processor&#39;);//第二个参数是分割使用的符号echo http_build_query($data) . &amp;quot;\n&amp;quot;;echo http_build_query($data, &#39;&#39;, &#39;&amp;amp;amp;&#39;);# foo=bar&amp;amp;baz=boom&amp;amp;cow=milk&amp;amp;php=hypertext+processor# foo=bar&amp;amp;amp;baz=boom&amp;amp;amp;cow=milk&amp;amp;amp;php=hypertext+processor?&amp;gt; 栗子二：
+&amp;lt;?php$data = array(&#39;user&#39;=&amp;gt;array(&#39;name&#39;=&amp;gt;&#39;Bob Smith&#39;,&#39;age&#39;=&amp;gt;47,&#39;sex&#39;=&amp;gt;&#39;M&#39;,&#39;dob&#39;=&amp;gt;&#39;5/12/1956&#39;),&#39;pastimes&#39;=&amp;gt;array(&#39;golf&#39;, &#39;opera&#39;, &#39;poker&#39;, &#39;rap&#39;),&#39;children&#39;=&amp;gt;array(&#39;bobby&#39;=&amp;gt;array(&#39;age&#39;=&amp;gt;12,&#39;sex&#39;=&amp;gt;&#39;M&#39;),&#39;sally&#39;=&amp;gt;array(&#39;age&#39;=&amp;gt;8,&#39;sex&#39;=&amp;gt;&#39;F&#39;)),&#39;CEO&#39;);//第二个参数，如果数组没有键值，则自动添加键值echo http_build_query($data, &#39;flags_&#39;);?&amp;gt; 输出：
+ user%5Bname%5D=Bob+Smith&amp;amp;user%5Bage%5D=47&amp;amp;user%5Bsex%5D=M&amp;amp;user%5Bdob%5D=5%2F12%2F1956&amp;amp;pastimes%5B0%5D=golf&amp;amp;pastimes%5B1%5D=opera&amp;amp;pastimes%5B2%5D=poker&amp;amp;pastimes%5B3%5D=rap&amp;amp;children%5Bbobby%5D%5Bage%5D=12&amp;amp;children%5Bbobby%5D%5Bsex%5D=M&amp;amp;children%5Bsally%5D%5Bage%5D=8&amp;amp;children%5Bsally%5D%5Bsex%5D=F&amp;amp;flags_0=CEO
+ 把上面的请求传给一个PHP文件处理，打印传递来的参数，会得到以下结果：
+Array([_GET] =&amp;gt; Array([user] =&amp;gt; Array([name] =&amp;gt; Bob Smith[age] =&amp;gt; 47[sex] =&amp;gt; M[dob] =&amp;gt; 5/12/1956)[pastimes] =&amp;gt; Array([0] =&amp;gt; golf[1] =&amp;gt; opera[2] =&amp;gt; poker[3] =&amp;gt; rap)[children] =&amp;gt; Array([bobby] =&amp;gt; Array([age] =&amp;gt; 12[sex] =&amp;gt; M)[sally] =&amp;gt; Array([age] =&amp;gt; 8[sex] =&amp;gt; F))[flags_0] =&amp;gt; CEO)[_POST] =&amp;gt; Array()[_COOKIE] =&amp;gt; Array([PHPSESSID] =&amp;gt; 5u7l53inhrl5j1ojmn65ok4k44)[_FILES] =&amp;gt; Array()[GLOBALS] =&amp;gt; Array*RECURSION*) 很神奇吧！</description>
+    </item>
+    
+  </channel>
+</rss>

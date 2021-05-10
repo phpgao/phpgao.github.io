@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>passwd on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/passwd/</link>
+    <description>Recent content in passwd on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 Jul 2016 08:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/passwd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一行代码更改密码</title>
+      <link>https://phpgao.github.io/change_passwd_in_one_line.html</link>
+      <pubDate>Thu, 14 Jul 2016 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/change_passwd_in_one_line.html</guid>
+      <description>&lt;p&gt;修改密码的时候，大家是不是都有输入两次密码的经历，这种交互适合终端操作，而不是用于脚本操作，对于老高这种一言不合就写Dockerfile的猿，真是很不友好。&lt;/p&gt;
+&lt;p&gt;下面老高就教你怎么使用一行代码更改密码。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

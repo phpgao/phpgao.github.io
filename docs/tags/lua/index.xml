@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>lua on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/lua/</link>
+    <description>Recent content in lua on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 May 2015 05:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/lua/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决ngx_lua_waf总是提示参数错误的问题</title>
+      <link>https://phpgao.github.io/ngx_lua_waf_error_500.html</link>
+      <pubDate>Mon, 25 May 2015 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ngx_lua_waf_error_500.html</guid>
+      <description>&lt;p&gt;最近服务上了ngx_lua_waf以防御攻击，但是ngx_lua_waf的参数确实有些严格，导致自己写文章都被BAN，于是看了看源码，发现可以添加url白名单功能，这不就搞定了！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ad on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ad/</link>
+    <description>Recent content in ad on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Jun 2015 12:26:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一则广告---梦想依在，人生正当年！</title>
+      <link>https://phpgao.github.io/do-not-lose-your-passion.html</link>
+      <pubDate>Thu, 04 Jun 2015 12:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/do-not-lose-your-passion.html</guid>
+      <description>同志们不要忘记了自己的梦想啊！</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之去adbyby广告篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_noad.html</link>
+      <pubDate>Sat, 07 Mar 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_noad.html</guid>
+      <description>&lt;p&gt;为了去广告，普通用户可在扩展插件中找到非官方插件-网页广告拦截，安装即可！&lt;/p&gt;
+&lt;p&gt;但是这种方法的缺点也很明显，无法自由控制去广告功能，而adbyby官方为我们提供了MT7620A平台的编译版本，我们只需要下载运行即可！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

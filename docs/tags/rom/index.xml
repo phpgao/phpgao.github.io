@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ROM on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/rom/</link>
+    <description>Recent content in ROM on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 May 2016 04:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/rom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nexus6刷机笔记</title>
+      <link>https://phpgao.github.io/nexus_flash_rom.html</link>
+      <pubDate>Thu, 12 May 2016 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nexus_flash_rom.html</guid>
+      <description>&lt;p&gt;记录一下刷机的命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nexus5的ROM下载地址</title>
+      <link>https://phpgao.github.io/nexus5_rom.html</link>
+      <pubDate>Mon, 24 Feb 2014 07:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nexus5_rom.html</guid>
+      <description>转自啥论坛忘了：
+看到很多同学问ROM哪儿下，还说ROM少， 殊不知谷歌亲儿子最不缺的就是ROM？ 这里给大家稍稍整理了一些名气比较大的，名气小的自己去goo.im下吧。 记住我们手中 Nexus 5 的名字 hammerhead （中文翻译是锤头的意思，这么好的名字smartisan居然不支持，鄙视一个） 进入正题：
+CyanogenMod （简称CM） 入口地址： http://download.cyanogenmod.org/?device=hammerhead
+SlimKait （简称Slim，这个&amp;hellip;我被GFW墙了，懒得翻出去找，能进去的尽量搬运下吧，这个ROM不错） 入口地址： http://www.slimroms.net/index.php/downloads
+Paranoid（简称PA） 入口地址： http://download.paranoidandroid.co/roms/hammerhead/
+OmniRom （简称Omni） 入口地址： http://dl.omnirom.org/hammerhead/
+mokee （魔趣） 入口地址： http://download.mfunz.com/?device=hammerhead
+AOKP 入口地址： http://aokp.co/devices/hammerhead
+ChameleonOS （简称ChaOS） 入口地址： http://roms.chameleonos.org/index.php?device=hammerhead
+carbon 入口地址： http://carbon-rom.com/downloads/?device=hammerhead
+mahdi 入口地址： http://mahdi-rom.androidfilesharing.com/Nexus%205/
+clockworkmod （简称CWM，大家进去找Nexus 5，里边有很多大家需要的东西，比如CWM recovery，Gapps等） 入口地址： http://www.clockworkmod.com/rommanager
+在goo.im中搜索hammerhead就可以找到很多ROM了，大家可以去看看，这是我搜索好的： http://goo.im/devs
+附：Nexus 5 XDA论坛入口地址，这里才是金库： http://forum.xda-developers.com/google-nexus-5
+整理的不全面，但是足够用了，这些都是有官网的ROM团队，还有些没有的ROM团队做的也很好，大多都发在goo.im中，建议大家去看看。</description>
+    </item>
+    
+  </channel>
+</rss>

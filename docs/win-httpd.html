@@ -1,0 +1,364 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Windows下Apache的配置文件httpd.conf | 老高的技术博客</title><meta name=keywords content="apache"><meta name=description content="apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：
+Section 1:Global Environment 
+Section 2:&lsquo;Main&rsquo; server configuration 
+Section 3:Virtual Hosts
+以后修改配置的时候一定要注意，不要写错了地方"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/win-httpd.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Windows下Apache的配置文件httpd.conf"><meta property="og:description" content="apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：
+Section 1:Global Environment 
+Section 2:&lsquo;Main&rsquo; server configuration 
+Section 3:Virtual Hosts
+以后修改配置的时候一定要注意，不要写错了地方"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/win-httpd.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-05-10T01:42:00+00:00"><meta property="article:modified_time" content="2014-05-10T01:42:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Windows下Apache的配置文件httpd.conf"><meta name=twitter:description content="apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：
+Section 1:Global Environment 
+Section 2:&lsquo;Main&rsquo; server configuration 
+Section 3:Virtual Hosts
+以后修改配置的时候一定要注意，不要写错了地方"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Windows下Apache的配置文件httpd.conf","item":"https://phpgao.github.io/win-httpd.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Windows下Apache的配置文件httpd.conf","name":"Windows下Apache的配置文件httpd.conf","description":"apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：\nSection 1:Global Environment Section 2:\u0026lsquo;Main\u0026rsquo; server configuration Section 3:Virtual Hosts\n以后修改配置的时候一定要注意，不要写错了地方\n","keywords":["apache"],"articleBody":"apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：\nSection 1:Global Environment Section 2:‘Main’ server configuration Section 3:Virtual Hosts\n以后修改配置的时候一定要注意，不要写错了地方\n#首先需要注意的地方： #路径的结尾不要添加斜线 #路径不要使用\\ 换成/ #\".“代表当前运行程序的目录,”..“代表上级目录，也可以写成绝对路径 #如果文件名不是以”/“开始的，预先考虑服务器根目录\n#Apache主目录\rServerRoot \".\"\rServerRoot \"D:/phpnow/Apache-22\"\r#默认监听80端口\rListen 80\rListen 12.34.56.78:80\r#动态共享对象支持\r#为了能够使用基于DSO（动态共享对象）的模块的功能，您必须把相应的`LoadModule'行放到\r#这里以便在使用它们之前，它们所包含的指令能够被很好的使用。静态编译的模块（通过\r#`httpd -l'列出的那些）并不需要被加载到这里来。\r#确保httpd运行在合适的权限和用户组中\r此选项只在非NetWare平台和win平台上起作用\rUser daemon\rGroup daemon\r\r\r#‘主’服务器配置\r# 本节中的指令用来设置‘主’服务器的相关配置，它针对那些被虚拟主机以外的请求作出响\r# 应。它也包含一些虚拟主机默认的一些参数，一会您可以会在文件中定义它们。\r# 所有的这些指令也可能会在虚拟主机的配置容器里出现，而虚拟主机里的定义将会覆盖这些\r# 默认设置。即\r#\r#ServerName给出了服务器用来识别自己的名字和端口号。它往往被自动确定，但是我们建议\r#您明确地指出它，防止启动过程中出现问题。\r#如果您的主机没有一个已经在DNS上注册的域名，请在这里输入您的主机的IP地址\r#\rServerName www.phpgao.com:80\r#\r#DocumentRoot:您的所有网站文件都置于该目录下。默认情况下，所有的请求都会指向该目录\r#，但是动态链接和别名可以被用来指向其他位置。\r#\rDocumentRoot \"C:/Apache2.2/htdocs\"\r#\r# Apache可以存取的每个目录都可以配置存取权限（包括它的子目录）。 # # 首先，我们创建一个默认的配置，最好比较严格。 # 这将禁止访问文件系统所在的目录，并添加你希望允许访问的目录块。 # 如下所示 Options FollowSymLinks\rAllowOverride None\rOrder deny,allow\rDeny from all\r\r# # 注意从这里开始你一定要明确地允许哪些特别的特征能够被使用。 # - 所以，如果Apache没有象你所期待的那样工作的话, # 请检查你是否在下面明确的指定它可用。 # PHPER@老高注释：下面的目录继承中定义的权限\r# 你但是你可以在单个的目录中修改某些配置以适应你的功能需求\r# 你修改的东西将会覆盖默认的配置\r# Options：这个指令的值可以是“None”，“All”，或者下列选项的任意组合： # Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews # # 注意，“MultiViews”必须被显式的指定，“Options All”不能为你提供这个特性。 # # 这个指令既复杂又重要，请参见 #“http://httpd.apache.org/docs-2.0/mod/core.html#optioins”以取得更多的信息。 #\r# AllowOverride 控制着那些被放置在 .htaccess 文件里的指令。（Apache服务器\r# 的.htaccess是一个非常强大的分布式配置文件，学会使用.htaccess，对虚拟主机用\r# 来说，可以实现众多的功能。）\r# 它可以是 \"All\", \"None\", 或者任意以下关键字的组合:\r# Options FileInfo AuthConfig Limit\r#\rAllowOverride None\r#\r# 控制谁可以从该服务器获得资源.\r#\rOrder allow,deny\rAllow from all\r\r# # UserDir:指定在得到一个~user请求时将会添加到用户home目录后的目录名。 # UserDir public_html # 为防止在UserDir指令上的漏洞，对root用户设置 # 象“./”这样的UserDir是非常有用的。 # 如果你使用Apache 1.3或以上版本，我们强烈建议你 # 在你的服务器配置文件中包含下面的行 UserDir disabled root #\r# DirectoryIndex: 如果一个目录被请求，该指令用于设置Apache服务器将要服务的文件\r# 解释如下，就是设置网站的默认被访问文件。\r#\rDirectoryIndex index.html\r\r#\r# 以下语句用来防止 .htaccess 和.htpasswd 文件被web客户端访问。\r# Order allow,deny\rDeny from all\rSatisfy All\r\r#\r# ErrorLog: 错误日志文件所在的位置。\r# 如果你不在虚拟主义配置容器里指定ErrorLog 指令的话\r# 关于虚拟主机的错误信息将会被放置在这里\r# 如果你确实在虚拟主机配置容器里定义了错误文件，那么虚拟主机的错误日志文件将\r# 在你配置的地方而不是这里。\r#\rErrorLog logs/error.log\r#\r# LogLevel: 控制记录在错误日志文件里的信息的条数.\r# 可能的值包括: debug, info, notice, warn, error, crit,\r# alert, emerg.\r#\rLogLevel warn\r#如果载入了log_config_module模块\r# 下面的指令定义了一些日志格式昵称来配合\r# CustomLog 指令使用 (如下).\r#\rLogFormat \"%h %l %u %t \\\"%r\\\" %s %b \\\"%{Referer}i\\\" \\\"%{User-Agent}i\\\"\" combined\rLogFormat \"%h %l %u %t \\\"%r\\\" %s %b\" common# 你需要打开 mod_logio.c 的可用性以便使用 %I and %O\rLogFormat \"%h %l %u %t \\\"%r\\\" %s %b \\\"%{Referer}i\\\" \\\"%{User-Agent}i\\\" %I %O\" combinedio\r\r#\r# 访问日志文件的位置和格式 (Common Logfile Format普遍的日志文件格式).\r# 如果你没有在虚拟主机配置容器里定义任何相关内容，它们就在这里被记录。\r# 反之, 如果你确实在每个虚拟主机里定义了access logfiles\r# , 它们将被记录在你配置的地方而不是在这里。\r# #\rCustomLog logs/access.log common\r#\r# 如果你想要记录agent和referer信息，可以使用下面的指令 # # CustomLog logs/referer_log referer # CustomLog logs/agent_log agent # #\r# 如果您希望日志文件里包含访问，代理，引用信息\r# 你可以如下定义这个指令： # # CustomLog logs/access_log combined # # ServerTokens # 这个指令定义包含在HTTP回应头中的信息类型。默认为“Full”， # 这表示在回应头中将包含模块中的操作系统类型和编译信息。 # 可以设为列各值中的一个： # Full | OS | Minor | Minimal | Major | Prod # Full传达的信息最多，而Prod最少。 # ServerTokens Full \r#\r# \"C:/Apache2.2/cgi-bin\" 应该是你的 ScriptAliased\r# CGI 所在的地方（如果你已经配置了的话）。\r#\rAllowOverride None\rOptions None\rOrder allow,deny\rAllow from all\r\r# # Apache 默认把所有的CGI（公共网关接口，一种HTTP服务器与你的或其它机器上的程序进行\r#“交谈”的一种工具，其程序须运行在网络服务器上。 如PHP）脚本解析成命令行。\r# 下面这个例子就是一个执行perl.exe的命令行，#!作为脚本的起始标志。\r#!c:/program files/perl/perl\r# 注意您不该缩进实际的命令行, 并且它必须成为文件的第一行\r# 当然，运行中的CGI进程需要适当的 ScriptAlias或者Options ExecCGI指令集。\r# #\r# 然而, Windows上的Apache 或者允许UNIX的上述行为, 或者可以使用注册表扩展来匹配文件\r# 。执行该类型文件的命令检索自注册表，这种方式和Windows资源管理器在用户双击文件\r# 时使用的方式一样。\r# 这些脚本行为可以通过Windows资源管理器视图菜单配置, # '文件夹选项', 并且审查‘文件类型’标签. 点击编辑按钮允许您修改行为\r# , Apache 1.3 企图扮演‘打开’动作，失败的话它将尝试命令行\r# 这个行为在Apache release 2.0中被改变了.\r#\r# 任何机制都有它特定的安全弱点, 通过这种方式来运行一个工程您别指望站长会乐意\r# 最好的方法是个有争议的问题。\r#\r# 为了使windows的特定行为工作 (因此使等效的UNIX行为失效\r# , 注释以下指令:\r#\r#ScriptInterpreterSource registry\r#\r# 以上指令可以被放在个人目录块或者\r# .htaccess 文件, 或通过注册表(Windows behavior)或通过 'script' # (Unix behavior) option, 这将会重写这个服务的默认选项.\r#\r#\r# DefaultType: 服务器为文件指定的默认的MIME类型。如果你的服务器大多包含文本和\r# HTML文件， \"text/plain\"是个合适的值。\r# 如果你的文件是二进制文件，例如应用程序或者图片，你\r# 应该使用\"application/octet-stream\" 来让浏览器试图显示二进制文件虽然他们看起来\r# 是文本\r#\rDefaultType text/plain\r#\r# TypesConfig 指出了这样一个文件：它包含了从文件扩展到MIME-类型的映射的列表\r#\rTypesConfig conf/mime.types\r#\r# AddType 允许你在TypesConfig指定的MIME配置文件里指定或者重写具体的文件类型。\r#\r#AddType application/x-gzip .tgz\r#\r# AddEncoding 允许某些浏览器即时解压。\r# 注意：不是所有浏览器都支持这个功能。\r#\r#AddEncoding x-compress .Z\r#AddEncoding x-gzip .gz .tgz\r#\r# 如果上面的AddEncoding 指令被注释掉了, 你可能应该定义\r# 这些扩展来表明媒体类型:\r#\rAddType application/x-compress .Z\rAddType application/x-gzip .gz .tgz\r#\r# AddHandler 允许你映射某些文件扩展来 \"处理程序\":\r# 与文件类型无关的动作。 这些既可以建立在服务器，又可以通过动作指令添加。（\r# 如下）\r#\r# 使用ScriptAliased指令集外部的 CGI 脚本\r# (你同样需要添加 \"ExecCGI\" 给 \"Options\" 指令.)\r#\r#AddHandler cgi-script .cgi\r# 类型映射 (谈判资源):\r#AddHandler type-map var\r#\r# 过滤器可以让您先处理内容，再把他们发送到客户端.\r#\r# 为了解析作为服务器端嵌入（SSI（Server Side Include)，通常称为服务器端嵌入，\r# 是一种类似于ASP的基于服务器的网页制作技术。）的 .shtml 文件:\r# (您同样需要添加\"Includes\" 到 \"Options\" 指令。)\r#\r#AddType text/html .shtml\r#AddOutputFilter INCLUDES .shtml\r\r#\r# 可定制的错误通过3种方式响应:\r# 1) plain text（文本解释） 2) local redirects （本地重定向）3) external redirects\r# （外部重定向）\r#\r# 一些例子:\r#ErrorDocument 500 \"The server made a boo boo.\"\rErrorDocument 404 /missing.html\r#ErrorDocument 404 \"/cgi-bin/missing_handler.pl\"\r#ErrorDocument 402 http://bincheng.swhss.cn/subscription_info.html\r#\r# 补充配置\r#\r# 位于 conf/extra/ directory 的补充配置文件可以被加入进来以便添加额外的功能\r# 或者修改服务器默认的配置,或者你必要时可以简单地复制它们的内容到这里。\r# Server-pool management (MPM specific) 服务池管理\r#Include conf/extra/httpd-mpm.conf\r# Multi-language error messages 多语言错误信息\r#Include conf/extra/httpd-multilang-errordoc.conf\r# Fancy directory listings （花式）目录列表\r#Include conf/extra/httpd-autoindex.conf\r# Language settings 语言设置\r#Include conf/extra/httpd-languages.conf\r# User home directories 用户主目录\r#Include conf/extra/httpd-userdir.conf\r# Real-time info on requests and configuration 请求和配置的实时信息\r#Include conf/extra/httpd-info.conf\r# Virtual hosts 虚拟主机\r#Include conf/extra/httpd-vhosts.conf\r# Local access to the Apache HTTP Server Manual 本地访问Apache HTTP服务器手册\r#Include conf/extra/httpd-manual.conf\r# Distributed authoring and versioning (WebDAV) 一种基于 HTTP 1.1协议的通信协议.它\r# 扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使用\r# 程序可直接对Web Server直接读写，并支持写文件锁定(Locking)及解锁(Unlock)，还可支\r# 持文件的版本控制。 #Include conf/extra/httpd-dav.conf\r# Various default settings 各种默认设置\r#Include conf/extra/httpd-default.conf\r# Secure (SSL/TLS) connections 安全连接\r#Include conf/extra/httpd-ssl.conf\r#\r# Note: The following must must be present to support\r# starting without SSL on platforms with no /dev/random equivalent\r# but a statically compiled-in mod_ssl.\r#注意：以下信息用于支持等效的无SSL但是有静态编译的mod_ssl的等效的平台启动。\rSSLRandomSeed startup builtin\rSSLRandomSeed connect builtin\r\r#php安装程序编辑——删除即可卸载\rLoadModule php5_module \"../php-5.4/php5apache2_2.dll\"\rPHPINIDir \"../php-5.4/\"\rAddType application/x-httpd-php .php\rAddType application/x-httpd-php-source .phps\r\r# End PHP Configure of PHPnow","wordCount":"775","inLanguage":"en","datePublished":"2014-05-10T01:42:00Z","dateModified":"2014-05-10T01:42:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/win-httpd.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>Windows下Apache的配置文件httpd.conf</h1><div class=post-meta>May 10, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-05-10_win-httpd.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：</p><p>Section 1:Global Environment
+Section 2:&lsquo;Main&rsquo; server configuration
+Section 3:Virtual Hosts</p><p>以后修改配置的时候一定要注意，不要写错了地方</p><p>#首先需要注意的地方：
+#路径的结尾不要添加斜线
+#路径不要使用\ 换成/
+#".&ldquo;代表当前运行程序的目录,&rdquo;..&ldquo;代表上级目录，也可以写成绝对路径
+#如果文件名不是以&rdquo;/&ldquo;开始的，预先考虑服务器根目录</p><pre><code>#Apache主目录
+ServerRoot &quot;.&quot;
+ServerRoot &quot;D:/phpnow/Apache-22&quot;
+
+#默认监听80端口
+Listen 80
+Listen 12.34.56.78:80
+
+#动态共享对象支持
+#为了能够使用基于DSO（动态共享对象）的模块的功能，您必须把相应的`LoadModule'行放到
+#这里以便在使用它们之前，它们所包含的指令能够被很好的使用。静态编译的模块（通过
+#`httpd -l'列出的那些）并不需要被加载到这里来。
+
+#确保httpd运行在合适的权限和用户组中
+此选项只在非NetWare平台和win平台上起作用
+&lt;IfModule !mpm_netware_module&gt;
+&lt;IfModule !mpm_winnt_module&gt;
+User daemon
+Group daemon
+&lt;/IfModule&gt;
+&lt;/IfModule&gt;
+
+#‘主’服务器配置
+# 本节中的指令用来设置‘主’服务器的相关配置，它针对那些被虚拟主机以外的请求作出响
+# 应。它也包含一些虚拟主机默认的一些参数，一会您可以会在文件中定义它们。
+# 所有的这些指令也可能会在虚拟主机的配置容器里出现，而虚拟主机里的定义将会覆盖这些
+# 默认设置。即&lt;VirtualHost&gt;
+
+#
+#ServerName给出了服务器用来识别自己的名字和端口号。它往往被自动确定，但是我们建议
+#您明确地指出它，防止启动过程中出现问题。
+#如果您的主机没有一个已经在DNS上注册的域名，请在这里输入您的主机的IP地址
+#
+ServerName www.phpgao.com:80
+
+#
+#DocumentRoot:您的所有网站文件都置于该目录下。默认情况下，所有的请求都会指向该目录
+#，但是动态链接和别名可以被用来指向其他位置。
+#
+DocumentRoot &quot;C:/Apache2.2/htdocs&quot;
+
+#
+# Apache可以存取的每个目录都可以配置存取权限（包括它的子目录）。 
+# 
+# 首先，我们创建一个默认的配置，最好比较严格。 
+# 这将禁止访问文件系统所在的目录，并添加你希望允许访问的目录块。 
+# 如下所示 
+&lt;Directory /&gt;
+    Options FollowSymLinks
+    AllowOverride None
+    Order deny,allow
+    Deny from all
+&lt;/Directory&gt;
+
+# 
+# 注意从这里开始你一定要明确地允许哪些特别的特征能够被使用。 
+# - 所以，如果Apache没有象你所期待的那样工作的话, 
+# 请检查你是否在下面明确的指定它可用。 
+# PHPER@老高注释：下面的目录继承&lt;Directory /&gt;中定义的权限
+# 你但是你可以在单个的目录中修改某些配置以适应你的功能需求
+# 你修改的东西将会覆盖默认的配置
+
+&lt;Directory &quot;../htdocs&quot;&gt;
+# Options：这个指令的值可以是“None”，“All”，或者下列选项的任意组合： 
+# Indexes Includes FollowSymLinks SymLinksifOwnerMatch ExecCGI MultiViews 
+# 
+# 注意，“MultiViews”必须被显式的指定，“Options All”不能为你提供这个特性。 
+# 
+# 这个指令既复杂又重要，请参见 
+#“http://httpd.apache.org/docs-2.0/mod/core.html#optioins”以取得更多的信息。 
+#
+# AllowOverride 控制着那些被放置在 .htaccess 文件里的指令。（Apache服务器
+# 的.htaccess是一个非常强大的分布式配置文件，学会使用.htaccess，对虚拟主机用
+# 来说，可以实现众多的功能。）
+# 它可以是 &quot;All&quot;, &quot;None&quot;, 或者任意以下关键字的组合:
+#   Options FileInfo AuthConfig Limit
+#
+AllowOverride None
+
+#
+# 控制谁可以从该服务器获得资源.
+#
+Order allow,deny
+Allow from all
+
+&lt;/Directory&gt;
+
+# 
+# UserDir:指定在得到一个~user请求时将会添加到用户home目录后的目录名。 
+# 
+UserDir public_html 
+# 为防止在UserDir指令上的漏洞，对root用户设置 
+# 象“./”这样的UserDir是非常有用的。 
+# 如果你使用Apache 1.3或以上版本，我们强烈建议你 
+# 在你的服务器配置文件中包含下面的行 
+UserDir disabled root 
+
+#
+# DirectoryIndex: 如果一个目录被请求，该指令用于设置Apache服务器将要服务的文件
+# 解释如下，就是设置网站的默认被访问文件。
+#
+&lt;IfModule dir_module&gt;
+DirectoryIndex index.html
+&lt;/IfModule&gt;
+
+#
+# 以下语句用来防止 .htaccess 和.htpasswd 文件被web客户端访问。
+# 
+&lt;FilesMatch &quot;^\.ht&quot;&gt;
+    Order allow,deny
+    Deny from all
+    Satisfy All
+&lt;/FilesMatch&gt;
+
+#
+# ErrorLog: 错误日志文件所在的位置。
+# 如果你不在虚拟主义配置容器里指定ErrorLog 指令的话
+# 关于虚拟主机的错误信息将会被放置在这里
+#   如果你确实在虚拟主机配置容器里定义了错误文件，那么虚拟主机的错误日志文件将
+# 在你配置的地方而不是这里。
+#
+ErrorLog logs/error.log
+
+#
+# LogLevel: 控制记录在错误日志文件里的信息的条数.
+# 可能的值包括: debug, info, notice, warn, error, crit,
+# alert, emerg.
+#
+LogLevel warn
+
+&lt;IfModule log_config_module&gt;
+#如果载入了log_config_module模块
+# 下面的指令定义了一些日志格式昵称来配合
+# CustomLog 指令使用 (如下).
+#
+　　LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b \&quot;%{Referer}i\&quot; \&quot;%{User-Agent}i\&quot;&quot; combined
+　　LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b&quot; common&lt;IfModule logio_module&gt;
+# 你需要打开 mod_logio.c 的可用性以便使用 %I and %O
+　　LogFormat &quot;%h %l %u %t \&quot;%r\&quot; %&gt;s %b \&quot;%{Referer}i\&quot; \&quot;%{User-Agent}i\&quot; %I %O&quot; combinedio
+　　&lt;/IfModule&gt;
+#
+# 访问日志文件的位置和格式 (Common Logfile Format普遍的日志文件格式).
+# 如果你没有在虚拟主机配置容器里定义任何相关内容，它们就在这里被记录。
+#   反之, 如果你确实在每个虚拟主机里定义了access logfiles
+# , 它们将被记录在你配置的地方而不是在这里。
+# 
+#
+CustomLog logs/access.log common
+#
+# 如果你想要记录agent和referer信息，可以使用下面的指令 
+# 
+# CustomLog logs/referer_log referer 
+# CustomLog logs/agent_log agent 
+# 
+#
+# 如果您希望日志文件里包含访问，代理，引用信息
+# 你可以如下定义这个指令： 
+# 
+# CustomLog logs/access_log combined 
+# 
+# ServerTokens 
+# 这个指令定义包含在HTTP回应头中的信息类型。默认为“Full”， 
+# 这表示在回应头中将包含模块中的操作系统类型和编译信息。 
+# 可以设为列各值中的一个： 
+# Full | OS | Minor | Minimal | Major | Prod 
+# Full传达的信息最多，而Prod最少。 
+# 
+ServerTokens Full 
+&lt;/IfModule&gt;
+
+#
+# &quot;C:/Apache2.2/cgi-bin&quot; 应该是你的 ScriptAliased
+# CGI  所在的地方（如果你已经配置了的话）。
+#
+&lt;Directory &quot;C:/Apache2.2/cgi-bin&quot;&gt;
+AllowOverride None
+Options None
+Order allow,deny
+Allow from all
+&lt;/Directory&gt;
+
+# 
+# Apache 默认把所有的CGI（公共网关接口，一种HTTP服务器与你的或其它机器上的程序进行
+#“交谈”的一种工具，其程序须运行在网络服务器上。 如PHP）脚本解析成命令行。
+# 下面这个例子就是一个执行perl.exe的命令行，#!作为脚本的起始标志。
+
+#!c:/program files/perl/perl
+
+# 注意您不该缩进实际的命令行, 并且它必须成为文件的第一行
+#   当然，运行中的CGI进程需要适当的 ScriptAlias或者Options ExecCGI指令集。
+# 
+#
+# 然而, Windows上的Apache 或者允许UNIX的上述行为, 或者可以使用注册表扩展来匹配文件
+# 。执行该类型文件的命令检索自注册表，这种方式和Windows资源管理器在用户双击文件
+# 时使用的方式一样。
+# 这些脚本行为可以通过Windows资源管理器视图菜单配置, 
+# '文件夹选项', 并且审查‘文件类型’标签.  点击编辑按钮允许您修改行为
+# , Apache 1.3 企图扮演‘打开’动作，失败的话它将尝试命令行
+# 这个行为在Apache release 2.0中被改变了.
+#
+# 任何机制都有它特定的安全弱点, 通过这种方式来运行一个工程您别指望站长会乐意
+# 最好的方法是个有争议的问题。
+#
+# 为了使windows的特定行为工作 (因此使等效的UNIX行为失效
+# , 注释以下指令:
+#
+#ScriptInterpreterSource registry
+#
+# 以上指令可以被放在个人目录块或者
+# .htaccess 文件, 或通过注册表(Windows behavior)或通过 'script' 
+# (Unix behavior) option, 这将会重写这个服务的默认选项.
+#
+
+#
+# DefaultType: 服务器为文件指定的默认的MIME类型。如果你的服务器大多包含文本和
+# HTML文件， &quot;text/plain&quot;是个合适的值。
+# 如果你的文件是二进制文件，例如应用程序或者图片，你
+# 应该使用&quot;application/octet-stream&quot; 来让浏览器试图显示二进制文件虽然他们看起来
+# 是文本
+#
+DefaultType text/plain
+
+&lt;IfModule mime_module&gt;
+#
+# TypesConfig 指出了这样一个文件：它包含了从文件扩展到MIME-类型的映射的列表
+#
+TypesConfig conf/mime.types
+
+#
+# AddType 允许你在TypesConfig指定的MIME配置文件里指定或者重写具体的文件类型。
+#
+#AddType application/x-gzip .tgz
+#
+# AddEncoding 允许某些浏览器即时解压。
+# 注意：不是所有浏览器都支持这个功能。
+#
+#AddEncoding x-compress .Z
+#AddEncoding x-gzip .gz .tgz
+#
+# 如果上面的AddEncoding 指令被注释掉了, 你可能应该定义
+# 这些扩展来表明媒体类型:
+#
+AddType application/x-compress .Z
+AddType application/x-gzip .gz .tgz
+
+#
+# AddHandler 允许你映射某些文件扩展来 &quot;处理程序&quot;:
+# 与文件类型无关的动作。 这些既可以建立在服务器，又可以通过动作指令添加。（
+# 如下）
+#
+# 使用ScriptAliased指令集外部的 CGI 脚本
+# (你同样需要添加 &quot;ExecCGI&quot; 给 &quot;Options&quot; 指令.)
+#
+#AddHandler cgi-script .cgi
+
+# 类型映射 (谈判资源):
+#AddHandler type-map var
+
+#
+# 过滤器可以让您先处理内容，再把他们发送到客户端.
+#
+# 为了解析作为服务器端嵌入（SSI（Server Side Include)，通常称为服务器端嵌入，
+# 是一种类似于ASP的基于服务器的网页制作技术。）的 .shtml 文件:
+# (您同样需要添加&quot;Includes&quot; 到 &quot;Options&quot; 指令。)
+#
+#AddType text/html .shtml
+#AddOutputFilter INCLUDES .shtml
+&lt;/IfModule&gt;
+
+#
+# 可定制的错误通过3种方式响应:
+# 1) plain text（文本解释） 2) local redirects （本地重定向）3) external redirects
+# （外部重定向）
+#
+# 一些例子:
+#ErrorDocument 500 &quot;The server made a boo boo.&quot;
+ErrorDocument 404 /missing.html
+#ErrorDocument 404 &quot;/cgi-bin/missing_handler.pl&quot;
+#ErrorDocument 402 http://bincheng.swhss.cn/subscription_info.html
+#
+
+# 补充配置
+#
+# 位于 conf/extra/ directory 的补充配置文件可以被加入进来以便添加额外的功能
+# 或者修改服务器默认的配置,或者你必要时可以简单地复制它们的内容到这里。
+
+# Server-pool management (MPM specific)  服务池管理
+#Include conf/extra/httpd-mpm.conf
+
+# Multi-language error messages  多语言错误信息
+#Include conf/extra/httpd-multilang-errordoc.conf
+
+# Fancy directory listings  （花式）目录列表
+#Include conf/extra/httpd-autoindex.conf
+
+# Language settings  语言设置
+#Include conf/extra/httpd-languages.conf
+
+# User home directories  用户主目录
+#Include conf/extra/httpd-userdir.conf
+
+# Real-time info on requests and configuration  请求和配置的实时信息
+#Include conf/extra/httpd-info.conf
+
+# Virtual hosts  虚拟主机
+#Include conf/extra/httpd-vhosts.conf
+
+# Local access to the Apache HTTP Server Manual  本地访问Apache HTTP服务器手册
+#Include conf/extra/httpd-manual.conf
+
+# Distributed authoring and versioning (WebDAV) 一种基于 HTTP 1.1协议的通信协议.它
+
+# 扩展了HTTP 1.1，在GET、POST、HEAD等几个HTTP标准方法以外添加了一些新的方法，使用
+# 程序可直接对Web Server直接读写，并支持写文件锁定(Locking)及解锁(Unlock)，还可支
+# 持文件的版本控制。 
+#Include conf/extra/httpd-dav.conf
+
+# Various default settings  各种默认设置
+#Include conf/extra/httpd-default.conf
+
+# Secure (SSL/TLS) connections  安全连接
+#Include conf/extra/httpd-ssl.conf
+#
+# Note: The following must must be present to support
+#       starting without SSL on platforms with no /dev/random equivalent
+#       but a statically compiled-in mod_ssl.
+#注意：以下信息用于支持等效的无SSL但是有静态编译的mod_ssl的等效的平台启动。
+&lt;IfModule ssl_module&gt;
+SSLRandomSeed startup builtin
+SSLRandomSeed connect builtin
+&lt;/IfModule&gt;
+
+#php安装程序编辑——删除即可卸载
+LoadModule php5_module &quot;../php-5.4/php5apache2_2.dll&quot;
+&lt;IfModule mod_php5.c&gt;
+  PHPINIDir &quot;../php-5.4/&quot;
+  AddType application/x-httpd-php .php
+  AddType application/x-httpd-php-source .phps
+&lt;/IfModule&gt;
+# End PHP Configure of PHPnow</code></pre></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/apache/>apache</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/wordpress_excerpt.html><span class=title>« Prev Page</span><br><span>WordPress首页文章不显示全文的方法</span></a>
+<a class=next href=https://phpgao.github.io/build_notes.html><span class=title>Next Page »</span><br><span>网站搭建手记</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

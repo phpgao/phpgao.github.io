@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ide on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ide/</link>
+    <description>Recent content in ide on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Oct 2017 08:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PhpStorm-一些配置</title>
+      <link>https://phpgao.github.io/phpstorm_config.html</link>
+      <pubDate>Wed, 11 Oct 2017 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_config.html</guid>
+      <description>&lt;p&gt;代码写时间长了难免有重装的时候，然后之前一些自定义的东西就没了，主要是一些格式化，模板等一些规范化的东西，之前看好像有配置导出功能，但是用了一次，貌似没什么卵用，所以还是记下来吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pycharm创建文件模板</title>
+      <link>https://phpgao.github.io/pycharm_template.html</link>
+      <pubDate>Tue, 23 Dec 2014 09:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pycharm_template.html</guid>
+      <description>进入File-&amp;gt;settings-&amp;gt;Editor-&amp;gt;File and Code Templates-&amp;gt;Python Script
+添加以下内容：
+#!/usr/bin/env python # encoding: utf-8 #set( $SITE = &amp;#34;http://www.phpgao.com&amp;#34; ) &amp;#34;&amp;#34;&amp;#34; @version: ?? @author: phpergao @license: Apache Licence @contact: endoffight@gmail.com @site: ${SITE} @software: ${PRODUCT_NAME} @file: ${NAME}.py @time: ${DATE} ${TIME} &amp;#34;&amp;#34;&amp;#34; def func(): pass class Main(): def __init__(self): pass if __name__ == &amp;#39;__main__&amp;#39;: pass 脚本中还可以添加自定义变量！
+参考链接：
+http://wiki.woodpecker.org.cn/moin/CodeCommentingRule http://www.cnblogs.com/ziyouchutuwenwu/archive/2013/12/18/3480035.html https://github.com/phpgao/PyCharm-Python-Templates https://www.jetbrains.com/pycharm/webhelp/creating-and-editing-file-templates.html http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html</description>
+    </item>
+    
+  </channel>
+</rss>

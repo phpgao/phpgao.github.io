@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>toc on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/toc/</link>
+    <description>Recent content in toc on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 May 2015 14:10:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/toc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>文章目录-Table-Of-Contents-for-Typecho</title>
+      <link>https://phpgao.github.io/table_of_contents_for_typecho.html</link>
+      <pubDate>Wed, 13 May 2015 14:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/table_of_contents_for_typecho.html</guid>
+      <description>&lt;p&gt;Table Of Contents大家都懂得，效果可以看老高的博客。&lt;/p&gt;
+&lt;p&gt;欢迎使用！欢迎FORK！欢迎star！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/3482950149.png&#34; alt=&#34;Table Of Contents&#34;  title=&#34;Table Of Contents 截图&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>让typecho支持table-of-contents</title>
+      <link>https://phpgao.github.io/typecho_toc.html</link>
+      <pubDate>Thu, 24 Jul 2014 08:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_toc.html</guid>
+      <description>什么是toc? [toc]
+ table of contents 即文章目录
+ toc有什么用  废话，你说目录有啥用，方便查找呗
+ 使用typecho的TX，一定会一点markdown吧，在文章中如果出现##this&#39;s h2 tag##，会被程序转换为
+&amp;lt;h2&amp;gt;this&#39;s h2 tag&amp;lt;/h2&amp;gt; 一个h标签就好比一本书的各个章节，如果我们能把他们清点一下，组成一个目录输出，岂不是妙哉！
+TOC如何使用 简单到不能再简单，在你想插入目录的地方放一个[toc]或[TOC]即可(推荐大写)！
+ [TOC]必须处于顶格
+ typecho中的markdown typecho的源代码中已经使用了激进的MarkdownExtraExtended类来转化md文件，为什么说他很激进呢？因为他扩展了标准的markdown，添加了很多个性化的语法，如直接给元素添加id或者class，还有脚注、缩写词等，用起来确实很爽！但需要注意的是：太多的非标准语法可能会带来移植性差的问题
+具体的语法参考请看这里php Markdown Extra
+如何使typecho支持toc 要使typecho支持toc需要替换位于源程序中的/wwwroot/var/文件夹下的MarkdownExtraExtended.php 为 MarkdownExtraExtended.php
+原理 这个文件的作用就是为typecho提供md2html的作用，我修改了MarkdownExtraExtended类的__construct方法，为block_gamut数组添加了 doToc 处理模块，并把优先级降到最低。
+转换细节位于doToc与_doToc_callback中，在此不作赘述。
+不完美的地方  要是能加入一个锚点之间平滑滚动的效果就更完美了，改天写个插件弄一弄 在首页也能看到目录，改天看看源代码研究一下，看能不能解决 希望后台加一个选项，自动生成目录，这个比较麻烦，以后看情况解决  </description>
+    </item>
+    
+  </channel>
+</rss>

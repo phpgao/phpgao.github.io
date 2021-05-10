@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>openwrrt on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/openwrrt/</link>
+    <description>Recent content in openwrrt on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Jan 2017 13:39:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/openwrrt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openwrt的免密登录</title>
+      <link>https://phpgao.github.io/openwrt_ssh_without_passwd.html</link>
+      <pubDate>Mon, 16 Jan 2017 13:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt_ssh_without_passwd.html</guid>
+      <description>&lt;p&gt;openwrt的ssh和标准ssh所需要的秘钥格式不同(ssh-kengen产生的是PEM格式)，想要生成能够正常工作的秘钥，使用下面的命令。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

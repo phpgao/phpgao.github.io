@@ -1,0 +1,109 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>centos7.0-的最小化安装 | 老高的技术博客</title><meta name=keywords content="centos,ifconfig"><meta name=description content="放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。ifconfig竟然都被废了，以后看IP就要用ip addr了。
+下面记录一下需要注意的地方。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/centos7.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="centos7.0-的最小化安装"><meta property="og:description" content="放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。ifconfig竟然都被废了，以后看IP就要用ip addr了。
+下面记录一下需要注意的地方。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/centos7.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-09-07T09:47:00+00:00"><meta property="article:modified_time" content="2014-09-07T09:47:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="centos7.0-的最小化安装"><meta name=twitter:description content="放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。ifconfig竟然都被废了，以后看IP就要用ip addr了。
+下面记录一下需要注意的地方。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"centos7.0-的最小化安装","item":"https://phpgao.github.io/centos7.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"centos7.0-的最小化安装","name":"centos7.0-的最小化安装","description":"放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。ifconfig竟然都被废了，以后看IP就要用ip addr了。\n下面记录一下需要注意的地方。\n","keywords":["centos","ifconfig"],"articleBody":"放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。ifconfig竟然都被废了，以后看IP就要用ip addr了。\n下面记录一下需要注意的地方。\n语言选择 老高在此建议不要使用中文，默认英文最好，否则后期可能会出现一些由于语言不兼容的错误，更不要担心设了英文以后就不支持中文了。\n网络设置 ifconfig ifconfig被整合到了net-tools，nslookup、dig在bind-utils中。\n网络配置 网卡配置文件的位置不变，但文件名好像变了：/etc/sysconfig/network-scripts/ifcfg-en******\n让我们cat一下，以下是配置（博主用的dhcp+桥接模式）\nTYPE=Ethernet\rBOOTPROTO=dhcp\rDEFROUTE=yes\rIPV4_FAILURE_FATAL=no\rIPV6INIT=yes\rIPV6_AUTOCONF=yes\rIPV6_DEFROUTE=yes\rIPV6_FAILURE_FATAL=no\rNAME=enp0s3\rUUID=c686ed3b-b3e2-499c-9196-d51bdb8ab9c4\rONBOOT=yes\rHWADDR=08:00:27:FB:3E:5C\rPEERDNS=yes\rPEERROUTES=yes\rIPV6_PEERDNS=yes\rIPV6_PEERROUTES=yes\r 如果IP为静态分配，那么应该是这样配置的：\nTYPE=Ethernet\rBOOTPROTO=static\rDEFROUTE=yes\rIPV4_FAILURE_FATAL=no\rIPV6INIT=yes\rIPV6_AUTOCONF=yes\rIPV6_DEFROUTE=yes\rIPV6_FAILURE_FATAL=no\rNAME=enp0s3\rUUID=c686ed3b-b3e2-499c-9196-d51bdb8ab9c4\rONBOOT=yes\rHWADDR=08:00:27:FB:3E:5C\rPEERDNS=yes\rPEERROUTES=yes\rIPV6_PEERDNS=yes\rIPV6_PEERROUTES=yes\rIPADDR0=192.168.1.128 #设置IP地址\rPREFIXO0=24 #设置子网掩码\rGATEWAY0=192.168.21.2 #设置网关\rDNS1=114.114.114.114 #设置备DNS\rDNS2=8.8.8.8 #设置备DNS\r systemctl的使用 这个命令估计以后大家会经常接触，他整合了service和chkconfig命令，使用帮助命令systemctl -h或者参考下图\n升级系统 这个就不多说了yum -y update\nVIM安装 安装 yum -y install vim-enhanced  把 vi 替换为 vim vi /etc/profile\r# 最后一行\ralias vi='vim'\r netstat哪儿去了 yum install net-tools -y\r 安装http服务器 这里我们选用Apache，安装命令：\nyum install httpd -y\r# 服务设置\rsystemctl start httpd.service #启动apache\rsystemctl stop httpd.service #停止apache\rsystemctl restart httpd.service #重启apache\rsystemctl enable httpd.service #设置apache开机启动\r# 看看是否监听80端口\rnetstat -nplt\r 默认的web根目录再/var/www/html下，一会儿会用到。\n现在在浏览器使用IP地址访问默认页面试试，如果还是不行，那估计是防火墙没有配置好。\n防火墙设置 centos7默认使用的是firewall，所以安装web服务器的时候需要打开80端口，使用下面的命令打开80和443端口。\nfirewall-cmd --permanent --zone=public --add-service=http firewall-cmd --permanent --zone=public --add-service=https\rfirewall-cmd --reload\r 如果是在测试机中，防火墙不是那么必要，就可以先关闭防火墙：\nsystemctl stop firewalls\rsystemctl disable firewalld\r 如果你觉得iptables用的更顺手，可以使用yum install iptables-services安装。\n关闭selinux vi /etc/selinux/config\r#找到SELINUX=enforcing改为：\rSELINUX=disabled\r mariadb mariadb是mysql的一个分支，使用它是因为mysql被sun收购后有闭源的风险。\n安装：\nyum -y install mariadb-server\rvi /etc/my.cnf.d/server.cnf\r#在13行添加\r[mysqld]\rcharacter-set-server=utf8\r#开启mysql\rsystemctl start mariadb\r#开机自运行\rsystemctl enable mariadb\r 初始化工具：\nmysql_secure_installation\r 登录：\nmysql -u root -p\r PHP 这个是重头戏哦!\n安装 yum install -y php\r 配置PHP vi /etc/php.ini\r 找到：\ndisable_functions =\r 修改为：\ndisable_functions = passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,escapeshellcmd,dll,popen,disk_free_space,checkdnsrr,checkdnsrr,getservbyname,getservbyport,disk_total_space,posix_ctermid,posix_get_last_error,posix_getcwd, posix_getegid,posix_geteuid,posix_getgid, posix_getgrgid,posix_getgrnam,posix_getgroups,posix_getlogin,posix_getpgid,posix_getpgrp,posix_getpid, posix_getppid,posix_getpwnam,posix_getpwuid, posix_getrlimit, posix_getsid,posix_getuid,posix_isatty, posix_kill,posix_mkfifo,posix_setegid,posix_seteuid,posix_setgid, posix_setpgid,posix_setsid,posix_setuid,posix_strerror,posix_times,posix_ttyname,posix_uname\r 找到：\n;date.timezone =\r 修改为：\ndate.timezone = PRC #设置时区\r 找到：\nexpose_php = On\r 修改为：\nexpose_php = Off #禁止显示php版本的信息\r 找到：\nshort_open_tag = Off\r 修改为：\nshort_open_tag = ON #支持php短标签\r 找到\nopcache.enable=0\r 修改为\nopcache.enable=1 #php支持opcode缓存\r 找到：\nopcache.enable_cli=1 #php支持opcode缓存\r 修改为：\nopcache.enable_cli=0\r 在最后一行添加\nzend_extension=opcache.so #开启opcode缓存功能\r 重启服务器 systemctl restart httpd\r 测试phpinfo() vi /var/www/html/phpinfo.php\r#写入以下信息：\r 访问你的http://your_IP/phpinfo.php，看是否出现以下页面\n安装扩展库 这时的PHP只有最基础的功能，需要我们手动加上各种库以增强PHP功能\nyum -y install php-mysql yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel # 接着重启服务器 systemctl restart httpd 其他 yum install lsof nmap\n通过这次安装，能够发现centos7.0的这次更新略显激进，但是同时也反映出centos也受到足够的重视，所谓开发者和运维人员，需要不断的学习以适应不断变化的环境。同时，新技术的不断涌现也给我们带来了更多的安全隐患，这一点上也我们不能放松警惕！\n部分参考：\nhttp://www.jb51.net/os/188489.html\nhttp://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp\nhttp://www.server-world.info/en/note?os=CentOS_7\n","wordCount":"277","inLanguage":"en","datePublished":"2014-09-07T09:47:00Z","dateModified":"2014-09-07T09:47:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/centos7.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>centos7.0-的最小化安装</h1><div class=post-meta>September 7, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-09-07_centos7.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。<code>ifconfig</code>竟然都被废了，以后看IP就要用<code>ip addr</code>了。</p><p>下面记录一下需要注意的地方。</p><h2 id=语言选择>语言选择<a hidden class=anchor aria-hidden=true href=#语言选择>#</a></h2><p>老高在此建议不要使用中文，默认英文最好，否则后期可能会出现一些由于语言不兼容的错误，更不要担心设了英文以后就不支持中文了。</p><h2 id=网络设置>网络设置<a hidden class=anchor aria-hidden=true href=#网络设置>#</a></h2><h3 id=ifconfig>ifconfig<a hidden class=anchor aria-hidden=true href=#ifconfig>#</a></h3><p>ifconfig被整合到了net-tools，nslookup、dig在bind-utils中。</p><h3 id=网络配置>网络配置<a hidden class=anchor aria-hidden=true href=#网络配置>#</a></h3><p>网卡配置文件的位置不变，但文件名好像变了：<code>/etc/sysconfig/network-scripts/ifcfg-en******</code></p><p>让我们cat一下，以下是配置（博主用的dhcp+桥接模式）</p><pre><code>TYPE=Ethernet
+BOOTPROTO=dhcp
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+NAME=enp0s3
+UUID=c686ed3b-b3e2-499c-9196-d51bdb8ab9c4
+ONBOOT=yes
+HWADDR=08:00:27:FB:3E:5C
+PEERDNS=yes
+PEERROUTES=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+</code></pre><p>如果IP为静态分配，那么应该是这样配置的：</p><pre><code>TYPE=Ethernet
+BOOTPROTO=static
+DEFROUTE=yes
+IPV4_FAILURE_FATAL=no
+IPV6INIT=yes
+IPV6_AUTOCONF=yes
+IPV6_DEFROUTE=yes
+IPV6_FAILURE_FATAL=no
+NAME=enp0s3
+UUID=c686ed3b-b3e2-499c-9196-d51bdb8ab9c4
+ONBOOT=yes
+HWADDR=08:00:27:FB:3E:5C
+PEERDNS=yes
+PEERROUTES=yes
+IPV6_PEERDNS=yes
+IPV6_PEERROUTES=yes
+IPADDR0=192.168.1.128  #设置IP地址
+PREFIXO0=24  #设置子网掩码
+GATEWAY0=192.168.21.2  #设置网关
+DNS1=114.114.114.114 #设置备DNS
+DNS2=8.8.8.8  #设置备DNS
+</code></pre><h2 id=systemctl的使用>systemctl的使用<a hidden class=anchor aria-hidden=true href=#systemctl的使用>#</a></h2><p>这个命令估计以后大家会经常接触，他整合了service和chkconfig命令，使用帮助命令<code>systemctl -h</code>或者参考下图</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2014/09/2669302525.png alt=dsfsdgfg6.png></p><h2 id=升级系统>升级系统<a hidden class=anchor aria-hidden=true href=#升级系统>#</a></h2><p>这个就不多说了<code>yum -y update</code></p><h2 id=vim安装>VIM安装<a hidden class=anchor aria-hidden=true href=#vim安装>#</a></h2><h3 id=安装>安装<a hidden class=anchor aria-hidden=true href=#安装>#</a></h3><pre><code>yum -y install vim-enhanced 
+</code></pre><h3 id=把-vi-替换为-vim>把 <code>vi</code> 替换为 <code>vim</code><a hidden class=anchor aria-hidden=true href=#把-vi-替换为-vim>#</a></h3><pre><code>vi /etc/profile
+# 最后一行
+alias vi='vim'
+</code></pre><h2 id=netstat哪儿去了>netstat哪儿去了<a hidden class=anchor aria-hidden=true href=#netstat哪儿去了>#</a></h2><pre><code>yum install net-tools -y
+</code></pre><h2 id=安装http服务器>安装http服务器<a hidden class=anchor aria-hidden=true href=#安装http服务器>#</a></h2><p>这里我们选用Apache，安装命令：</p><pre><code>yum install httpd -y
+# 服务设置
+systemctl start httpd.service #启动apache
+systemctl stop httpd.service #停止apache
+systemctl restart httpd.service #重启apache
+systemctl enable httpd.service #设置apache开机启动
+
+# 看看是否监听80端口
+netstat -nplt
+</code></pre><p>默认的web根目录再/var/www/html下，一会儿会用到。</p><p>现在在浏览器使用IP地址访问默认页面试试，如果还是不行，那估计是防火墙没有配置好。</p><h2 id=防火墙设置>防火墙设置<a hidden class=anchor aria-hidden=true href=#防火墙设置>#</a></h2><p>centos7默认使用的是<code>firewall</code>，所以安装web服务器的时候需要打开80端口，使用下面的命令打开80和443端口。</p><pre><code>firewall-cmd --permanent --zone=public --add-service=http 
+firewall-cmd --permanent --zone=public --add-service=https
+firewall-cmd --reload
+</code></pre><p>如果是在测试机中，防火墙不是那么必要，就可以先关闭防火墙：</p><pre><code>systemctl stop firewalls
+systemctl disable firewalld
+</code></pre><p>如果你觉得<code>iptables</code>用的更顺手，可以使用<code>yum install iptables-services</code>安装。</p><h2 id=关闭selinux>关闭selinux<a hidden class=anchor aria-hidden=true href=#关闭selinux>#</a></h2><pre><code>vi /etc/selinux/config
+#找到SELINUX=enforcing改为：
+SELINUX=disabled
+</code></pre><h2 id=mariadb>mariadb<a hidden class=anchor aria-hidden=true href=#mariadb>#</a></h2><p>mariadb是mysql的一个分支，使用它是因为mysql被sun收购后有闭源的风险。</p><p>安装：</p><pre><code>yum -y install mariadb-server
+vi /etc/my.cnf.d/server.cnf
+
+#在13行添加
+[mysqld]
+character-set-server=utf8
+
+#开启mysql
+systemctl start mariadb
+#开机自运行
+systemctl enable mariadb
+</code></pre><p>初始化工具：</p><pre><code>mysql_secure_installation
+</code></pre><p>登录：</p><pre><code>mysql -u root -p
+</code></pre><h2 id=php>PHP<a hidden class=anchor aria-hidden=true href=#php>#</a></h2><p>这个是重头戏哦!</p><h3 id=安装-1>安装<a hidden class=anchor aria-hidden=true href=#安装-1>#</a></h3><pre><code>yum install -y php
+</code></pre><h3 id=配置php>配置PHP<a hidden class=anchor aria-hidden=true href=#配置php>#</a></h3><pre><code>vi /etc/php.ini
+</code></pre><p>找到：</p><pre><code>disable_functions =
+</code></pre><p>修改为：</p><pre><code>disable_functions = passthru,exec,system,chroot,scandir,chgrp,chown,shell_exec,proc_open,proc_get_status,ini_alter,ini_alter,ini_restore,dl,openlog,syslog,readlink,symlink,popepassthru,stream_socket_server,escapeshellcmd,dll,popen,disk_free_space,checkdnsrr,checkdnsrr,getservbyname,getservbyport,disk_total_space,posix_ctermid,posix_get_last_error,posix_getcwd, posix_getegid,posix_geteuid,posix_getgid, posix_getgrgid,posix_getgrnam,posix_getgroups,posix_getlogin,posix_getpgid,posix_getpgrp,posix_getpid, posix_getppid,posix_getpwnam,posix_getpwuid, posix_getrlimit, posix_getsid,posix_getuid,posix_isatty, posix_kill,posix_mkfifo,posix_setegid,posix_seteuid,posix_setgid, posix_setpgid,posix_setsid,posix_setuid,posix_strerror,posix_times,posix_ttyname,posix_uname
+</code></pre><p>找到：</p><pre><code>;date.timezone =
+</code></pre><p>修改为：</p><pre><code>date.timezone = PRC #设置时区
+</code></pre><p>找到：</p><pre><code>expose_php = On
+</code></pre><p>修改为：</p><pre><code>expose_php = Off #禁止显示php版本的信息
+</code></pre><p>找到：</p><pre><code>short_open_tag = Off
+</code></pre><p>修改为：</p><pre><code>short_open_tag = ON #支持php短标签
+</code></pre><p>找到</p><pre><code>opcache.enable=0
+</code></pre><p>修改为</p><pre><code>opcache.enable=1 #php支持opcode缓存
+</code></pre><p>找到：</p><pre><code>opcache.enable_cli=1 #php支持opcode缓存
+</code></pre><p>修改为：</p><pre><code>opcache.enable_cli=0
+</code></pre><p>在最后一行添加</p><pre><code>zend_extension=opcache.so #开启opcode缓存功能
+</code></pre><h3 id=重启服务器>重启服务器<a hidden class=anchor aria-hidden=true href=#重启服务器>#</a></h3><pre><code>systemctl restart httpd
+</code></pre><h3 id=测试phpinfo>测试phpinfo()<a hidden class=anchor aria-hidden=true href=#测试phpinfo>#</a></h3><pre><code>vi /var/www/html/phpinfo.php
+#写入以下信息：
+
+
+&lt;?php
+    phpinfo();
+?&gt;
+</code></pre><p>访问你的<code>http://your_IP/phpinfo.php</code>，看是否出现以下页面</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2014/09/1110508020.png alt=asd.png></p><h3 id=安装扩展库>安装扩展库<a hidden class=anchor aria-hidden=true href=#安装扩展库>#</a></h3><p>这时的PHP只有最基础的功能，需要我们手动加上各种库以增强PHP功能</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>yum -y install php-mysql
+yum -y install php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring php-snmp php-soap curl curl-devel
+<span style=color:#75715e># 接着重启服务器</span>
+systemctl restart httpd
+</code></pre></div><h2 id=其他>其他<a hidden class=anchor aria-hidden=true href=#其他>#</a></h2><p>yum install lsof nmap</p><p>通过这次安装，能够发现centos7.0的这次更新略显激进，但是同时也反映出centos也受到足够的重视，所谓开发者和运维人员，需要不断的学习以适应不断变化的环境。同时，新技术的不断涌现也给我们带来了更多的安全隐患，这一点上也我们不能放松警惕！</p><p>部分参考：</p><p><a href=http://www.jb51.net/os/188489.html>http://www.jb51.net/os/188489.html</a></p><p><a href=http://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp>http://www.howtoforge.com/apache_php_mysql_on_centos_7_lamp</a></p><p><a href="http://www.server-world.info/en/note?os=CentOS_7">http://www.server-world.info/en/note?os=CentOS_7</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/centos/>centos</a></li><li><a href=https://phpgao.github.io/tags/ifconfig/>ifconfig</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/php_configuration_error.html><span class=title>« Prev Page</span><br><span>PHP编译错误的解决办法</span></a>
+<a class=next href=https://phpgao.github.io/py2exe.html><span class=title>Next Page »</span><br><span>把python脚本编译成exe</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

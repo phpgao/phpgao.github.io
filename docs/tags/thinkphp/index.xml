@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>thinkphp on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/thinkphp/</link>
+    <description>Recent content in thinkphp on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 29 Sep 2014 02:22:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/thinkphp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>thinkphp钩子的实现</title>
+      <link>https://phpgao.github.io/thinkphp_hook.html</link>
+      <pubDate>Mon, 29 Sep 2014 02:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_hook.html</guid>
+      <description>&lt;p&gt;钩子概念对初学者来说可能比较抽象难懂，但是只要掌握了他的工作方式，那么自己动手写一个钩子机制也不难。&lt;/p&gt;
+&lt;p&gt;Hook这个词很有意思，以下引用自某网络词典：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hook用作名词时意思是“钩”,转化为动词时可表示把某物弯成钩形,也可表示用弯曲的东西把某物体钩住,引申可表示为“吊”“挂”等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作为一个程序猿，老高对钩子的解释是，他就是一个触发机制，把你的软件功能想象成一个陷阱，放到##系统流程##可能经过的路上，如果陷阱被系统踩到，就会执行你的程序，当你挂载的钩子执行完后，系统会根据你的程序的结果继续运行。&lt;/p&gt;
+&lt;p&gt;老高最早接触Hook的编程思想是源于windows，当时打dota很入迷，突然想研究一下改键的原理，于是发现了系统钩子这一说法。&lt;/p&gt;
+&lt;p&gt;改键的原理，简单地说来就是拦截系统按下键盘时的默认动作，如果需要把小键盘的7映射到Q上，就在拦截时做一个判断，如果的键码是小键盘7，就改为Q的键码，最后发送给系统修改后的键码，即完成了改键操作。&lt;/p&gt;
+&lt;p&gt;钩子机制的使用在很多系统上都有体现，如windows、wordpress、thinkphp等，由钩子实现的功能在wordpress中叫做插件，在TP中叫做行为。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>thinkphp框架解析0----起源</title>
+      <link>https://phpgao.github.io/thinkphp_init.html</link>
+      <pubDate>Thu, 25 Sep 2014 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_init.html</guid>
+      <description>&lt;p&gt;THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>thinkphp验证码不显示</title>
+      <link>https://phpgao.github.io/thinkphp_verify.html</link>
+      <pubDate>Thu, 10 Jul 2014 09:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_verify.html</guid>
+      <description>&lt;p&gt;今天解决了一个验证码不显示的问题，值得大家注意&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在thinphp的模板中使用U方法传递参数</title>
+      <link>https://phpgao.github.io/thinkphp_u_function.html</link>
+      <pubDate>Thu, 26 Jun 2014 03:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_u_function.html</guid>
+      <description>在模板里生成URL如果需要用到模板里的参数时，使用下面代码即可
+{:U(&#39;Index/getInfo&#39;,array(&#39;userid&#39;=&amp;gt;$userid))} 如果变量有嵌套，那就要用&amp;quot;[]&amp;ldquo;代替模板中的&amp;rdquo;.&amp;quot;
+{:U(&#39;Index/getInfo&#39;,array(&#39;userid&#39;=&amp;gt;$user[&#39;id&#39;]))}  </description>
+    </item>
+    
+    <item>
+      <title>开发中经常用到的代码</title>
+      <link>https://phpgao.github.io/frequently-used-code.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/frequently-used-code.html</guid>
+      <description>[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 &amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; PHP //申明页面编码开启session并设置时区session_start();header(&amp;quot;Content-Type: text/html; charset=UTF-8&amp;quot;);ini_set(&#39;date.timezone&#39;,&#39;Asia/Shanghai&#39;);////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval(&#39;adasdasd&#39;);//heredoc==双引号$name=MyName;echo &amp;lt;&amp;lt;&amp;lt;EOTMy name is &amp;quot;$name&amp;quot;. I am printing some $foo-&amp;gt;foo.Now, I am printing some {$foo-&amp;gt;bar[1]}.This should print a capital &#39;A&#39;: \x41EOT;/*以上例程会输出：My name is &amp;quot;MyName&amp;quot;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital &#39;A&#39;: A*///Nowdoc==单引号echo &amp;lt;&amp;lt;&amp;lt;&#39;EOT&#39;My name is &amp;quot;$name&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

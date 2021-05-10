@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>miui on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/miui/</link>
+    <description>Recent content in miui on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Apr 2018 08:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/miui/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米系统MIUI的证书管理(删除和导入)</title>
+      <link>https://phpgao.github.io/miui_cert.html</link>
+      <pubDate>Fri, 13 Apr 2018 08:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/miui_cert.html</guid>
+      <description>找了好久，直接在设置里搜索凭据二次即可！
+or
+设置\更多设置\系统安全\加密与凭据\信任的凭据 设置\更多设置\系统安全\加密与凭据\从储存设备安装 如果上面的地方找不到，说明你是最新的MIUI系统，证书和凭据的位置搬家了！
+设置 -&amp;gt; 密码、隐私与安全 -&amp;gt; 系统安全 -&amp;gt; 加密与凭据 英文系统
+Setting -&amp;gt; Password &amp;amp; security -&amp;gt; Privacy -&amp;gt; Encryption &amp;amp; credentials  吐槽一下，为啥MIUI不能直接用证书跳转到这个配置页面。
+ </description>
+    </item>
+    
+  </channel>
+</rss>

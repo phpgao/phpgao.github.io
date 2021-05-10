@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tonymacx86 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/tonymacx86/</link>
+    <description>Recent content in tonymacx86 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 27 Jul 2018 01:27:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/tonymacx86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次黑苹果的安装</title>
+      <link>https://phpgao.github.io/first_tonymacx86.html</link>
+      <pubDate>Fri, 27 Jul 2018 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/first_tonymacx86.html</guid>
+      <description>&lt;p&gt;最近老高的MBP和MACmini卡的不行，想换硬件吧，硬件直接焊死，简直&lt;em&gt;良心苹果&lt;/em&gt;，参考了很多黑苹果的安装贴后果断决定在我的台式机上安装最新版的macOS-High-Sierra-10.13.6，系统选择的是&lt;a href=&#34;https://blog.daliansky.net/macOS-High-Sierra-10.13.6-17G65-Release-Version-with-Clover-4596-original-mirror.html&#34;&gt;【黑果小兵】&lt;/a&gt;，确实好用，老高十分推荐！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2018/07/2089683343.png&#34; alt=&#34;blackapple&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;先来贴一波老高的渣渣台式机配置吧：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;CPU: i56500
+主板: GA b150m power2 小板
+内存: 16G 海盗船8*2套装
+硬盘: 850evo 750evo(MacOS) SM951(win10) 西数4T红盘你懂的
+WIFI: BCM943602CS (黑苹果免驱，win10需要安装驱动)
+显卡: 七彩虹 烈焰战神 1066 特供版(穷)
+显示器: DELL UP2516D 2k分辨率(开启HiDPI后凑活能看)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;总结一下：&lt;/p&gt;
+&lt;p&gt;安装黑苹果需要你对U盘装系统、BIOS、EFI有一个大致的了解，否则还是先补课再来吧，除非你不怕把数据弄丢，或者不管弄成啥样你都有办法重新装Windows系统，那就OK，请瞎折腾吧！！&lt;/p&gt;
+&lt;p&gt;还有一点，如果新装机的同学有安装黑苹果的打算，请务必挑选技嘉的板子，老高用这个板子安装黑苹果确实没有遇到什么神坑，过程还算比较顺利，目前老高的黑苹果系统运行流程稳定，睡眠唤醒都很正常，估计也是托了技嘉的福?。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

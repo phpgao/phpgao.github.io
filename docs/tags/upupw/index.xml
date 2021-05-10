@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>upupw on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/upupw/</link>
+    <description>Recent content in upupw on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Jan 2016 03:38:23 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/upupw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一个很无力的403错误</title>
+      <link>https://phpgao.github.io/mess_with_error_403.html</link>
+      <pubDate>Mon, 18 Jan 2016 03:38:23 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mess_with_error_403.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/01/875541267.png&#34; alt=&#34;403错误&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高为了省时省力，在window平台下的开发环境使用了&lt;a href=&#34;http://www.upupw.net/&#34;&gt;UPUPW&lt;/a&gt;，这个环境使得老高可以在5min内搭建出一个完整的(nginx/apache) + PHP + my*开发环境。&lt;/p&gt;
+&lt;p&gt;但是最近在调试接口的时候，偶尔会有几个接口直接报错403，于是开始了无尽的403折磨之路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

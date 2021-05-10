@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>android on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/android/</link>
+    <description>Recent content in android on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Feb 2015 01:52:28 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>终于删除android5.0的感叹号了</title>
+      <link>https://phpgao.github.io/remove_exclamation_mark.html</link>
+      <pubDate>Tue, 10 Feb 2015 01:52:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/remove_exclamation_mark.html</guid>
+      <description>原理是修改用于验证的网址，使用的工具名字叫Portal Server修改器。</description>
+    </item>
+    
+    <item>
+      <title>使用Android-Studio可能会遇到的问题</title>
+      <link>https://phpgao.github.io/android_studio_faq.html</link>
+      <pubDate>Sun, 26 Oct 2014 13:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/android_studio_faq.html</guid>
+      <description>Error:Execution failed for task &amp;lsquo;:app:processDebugManifest&amp;rsquo;. &amp;gt; Manifest merger failed : uses-sdk:minSdkVersion 8 cannot be smaller than version L declared in library com.android.support:support-v4:21.0.0-rc1
+ 解决方式： 1、Change compile &amp;lsquo;com.android.support:support-v4:+&amp;rsquo; to compile &amp;lsquo;com.android.support:support-v4:20.+&amp;rsquo; in build.gradle. This will prevent gradle from using v4:21.0.0 that requires version L. 2、Remove/Comment 21.0.0-rc1 in your file /extras/android/m2repository/com/android/support-v4/maven-metadata.xml
+ Failed to import Gradle project: Could not fetch model of type &amp;lsquo;IdeaProject&amp;rsquo; using Gradle distribution &amp;lsquo;http://services.gradle.org/distributions/gradle-1.6-bin.zip&#39;.
+ 解决方法：先从网页上将其下载下来，然后将其解压到任何位置，在环境变量path下配置路径（到gradle的bin目录），可通过cmd命令 gradle -v验证是否成功。</description>
+    </item>
+    
+    <item>
+      <title>adb,fastboot常用命令及刷机技巧</title>
+      <link>https://phpgao.github.io/adb.html</link>
+      <pubDate>Thu, 03 Jul 2014 01:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adb.html</guid>
+      <description>&lt;p&gt;Google最近发布了Android L，我也按捺不住动手尝尝鲜，不过刷机工具我不是很喜欢，还是自己动手吧！&lt;/p&gt;
+&lt;p&gt;Nexus5最近火了，先是MIUI，又是FLYME，CM,OMNI也很给力，现在又是Android L，大家都在抢夺4.4.*的制高点， 而五太子的开源特性正好可以为ROM的移植打好基础，所以各大ROM商都加入了此行列。 此篇讲的内容是Android Debug Bridge（简称adb）的使用方法，学会它可以让你的刷机工作事半功倍！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

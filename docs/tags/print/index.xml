@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>print on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/print/</link>
+    <description>Recent content in print on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 Jan 2015 02:36:04 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/print/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python格式化输出dict等集合对象</title>
+      <link>https://phpgao.github.io/python_print_formatted.html</link>
+      <pubDate>Thu, 22 Jan 2015 02:36:04 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_print_formatted.html</guid>
+      <description>调试程序的时候，如果需要打印出变量的信息，在python中很容易，一句print即可，他几乎可以打印任何类型的对象，不像PHP中，有一堆echo(),print(),print_r(),var_dump()，让人头疼！
+但是PHP的打印函数有个好处，就是打印格式良好，而Python的打印信息就不是很友好了，如
+# 模拟一个很大的键值对 dic = {} for i in xrange(201): dic[i] = &amp;#34;value for %d&amp;#34; % i print dic 其结果我就不打印了，总之很难看！
+如何让python那冗长而且没有格式的打印变得更直观，方法有两种。
+自定义dump 此方法来自stackoverflow
+# 以后需要有格式的打印一个集合对象，直接使用dump(xxx)即可！ # 不要忘了import sys import sys def dump(obj, nested_level=0, output=sys.stdout): spacing = &amp;#39; &amp;#39; if type(obj) == dict: print &amp;gt;&amp;gt; output, &amp;#39;%s{&amp;#39; % ((nested_level) * spacing) for k, v in obj.items(): if hasattr(v, &amp;#39;__iter__&amp;#39;): print &amp;gt;&amp;gt; output, &amp;#39;%s%s:&amp;#39; % ((nested_level + 1) * spacing, k) dump(v, nested_level + 1, output) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s: %s&amp;#39; % ((nested_level + 1) * spacing, k, v) print &amp;gt;&amp;gt; output, &amp;#39;%s}&amp;#39; % (nested_level * spacing) elif type(obj) == list: print &amp;gt;&amp;gt; output, &amp;#39;%s[&amp;#39; % ((nested_level) * spacing) for v in obj: if hasattr(v, &amp;#39;__iter__&amp;#39;): dump(v, nested_level + 1, output) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s&amp;#39; % ((nested_level + 1) * spacing, v) print &amp;gt;&amp;gt; output, &amp;#39;%s]&amp;#39; % ((nested_level) * spacing) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s&amp;#39; % (nested_level * spacing, obj) pprint 此方法来自官方，可以自定义缩进，宽度等信息。</description>
+    </item>
+    
+  </channel>
+</rss>

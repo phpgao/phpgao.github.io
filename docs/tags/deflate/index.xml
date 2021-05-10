@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>deflate on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/deflate/</link>
+    <description>Recent content in deflate on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Oct 2014 02:39:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/deflate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用DDoS-Deflate</title>
+      <link>https://phpgao.github.io/dos_deflate.html</link>
+      <pubDate>Thu, 16 Oct 2014 02:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dos_deflate.html</guid>
+      <description>昨天老高的博客受攻击了，本想着没啥流量就不用太在意，哎，防人之心不可无啊！
+先装个DoS-Deflate试试看效果吧！
+下载 wget http://www.inetbase.com/scripts/ddos/install.shsh install.sh 配置 vi /usr/local/ddos/ddos.conf# show##### Paths of the script and other filesPROGDIR=&amp;quot;/usr/local/ddos&amp;quot;PROG=&amp;quot;/usr/local/ddos/ddos.sh&amp;quot;IGNORE_IP_LIST=&amp;quot;/usr/local/ddos/ignore.ip.list&amp;quot;CRON=&amp;quot;/etc/cron.d/ddos.cron&amp;quot;APF=&amp;quot;/etc/apf/apf&amp;quot;IPT=&amp;quot;/sbin/iptables&amp;quot;##### frequency in minutes for running the script##### Caution: Every time this setting is changed, run the script with --cron##### option so that the new frequency takes effectFREQ=1##### How many connections define a bad IP? Indicate that below.NO_OF_CONNECTIONS=150##### APF_BAN=1 (Make sure your APF version is atleast 0.</description>
+    </item>
+    
+  </channel>
+</rss>

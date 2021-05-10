@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>padavan on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/padavan/</link>
+    <description>Recent content in padavan on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jan 2018 05:17:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/padavan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>K2P刷padavan教程</title>
+      <link>https://phpgao.github.io/padavan_for_k2p.html</link>
+      <pubDate>Tue, 23 Jan 2018 05:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/padavan_for_k2p.html</guid>
+      <description>&lt;p&gt;快上车吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;padavan原生支持802.1X认证，虽然K2也行，但是百兆的性能确实跟不上时代了，所以入了K2P愉快的刷起！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

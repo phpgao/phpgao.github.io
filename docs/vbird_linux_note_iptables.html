@@ -1,0 +1,149 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>鸟哥的私房菜学习笔记----iptables防火墙设置 | 老高的技术博客</title><meta name=keywords content="iptables,Linux,note"><meta name=description content="多图杀猫，流量党渗入
+以下内容总结自鸟哥的 Linux 私房菜 &ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。
+关于VPS的更多安全设置可以参考 VPS安全设置 & VPS安全之防火墙设置"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/vbird_linux_note_iptables.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="鸟哥的私房菜学习笔记----iptables防火墙设置"><meta property="og:description" content="多图杀猫，流量党渗入
+以下内容总结自鸟哥的 Linux 私房菜 &ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。
+关于VPS的更多安全设置可以参考 VPS安全设置 & VPS安全之防火墙设置"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/vbird_linux_note_iptables.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-05-31T08:22:00+00:00"><meta property="article:modified_time" content="2015-05-31T08:22:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="鸟哥的私房菜学习笔记----iptables防火墙设置"><meta name=twitter:description content="多图杀猫，流量党渗入
+以下内容总结自鸟哥的 Linux 私房菜 &ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。
+关于VPS的更多安全设置可以参考 VPS安全设置 & VPS安全之防火墙设置"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"鸟哥的私房菜学习笔记----iptables防火墙设置","item":"https://phpgao.github.io/vbird_linux_note_iptables.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"鸟哥的私房菜学习笔记----iptables防火墙设置","name":"鸟哥的私房菜学习笔记----iptables防火墙设置","description":"多图杀猫，流量党渗入\n以下内容总结自鸟哥的 Linux 私房菜 \u0026ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。\n关于VPS的更多安全设置可以参考 VPS安全设置 \u0026amp; VPS安全之防火墙设置\n","keywords":["iptables","Linux","note"],"articleBody":"多图杀猫，流量党渗入\n以下内容总结自鸟哥的 Linux 私房菜 – 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。\n关于VPS的更多安全设置可以参考 VPS安全设置 \u0026 VPS安全之防火墙设置\nFor Linux Kernel 2.6+\n图解防火墙 三表五链\n上面的图示很复杂喔！不过基本上你依旧可以看出来，我们的 iptables 可以控制三种封包的流向：\n  封包进入 Linux 主机使用资源 (路径 A)： 在路由判断后确定是向 Linux 主机要求数据的封包，主要就会透过 filter 的 INPUT 链来进行控管；\n  封包经由 Linux 主机的转递，没有使用主机资源，而是向后端主机流动 (路径 B)： 在路由判断之前进行封包表头的修订作业后，发现到封包主要是要透过防火墙而去后端，此时封包就会透过路径 B 来跑动。 也就是说，该封包的目标并非我们的 Linux 本机。主要经过的链是 filter 的 FORWARD 以及 nat 的 POSTROUTING, PREROUTING。 这路径 B 的封包流向使用情况，我们会在本章的 9.5 小节来跟大家作个简单的介绍。\n  封包由 Linux 本机发送出去 (路径 C)： 例如响应客户端的要求，或者是 Linux 本机主动送出的封包，都是透过路径 C 来跑的。先是透过路由判断， 决定了输出的路径后，再透过 filter 的 OUTPUT 链来传送的！当然，最终还是会经过 nat 的 POSTROUTING 链。\n  图解防火墙(隐藏不常用的mangle) 防火墙操作 防火墙实例1 [root@www ~]# vim bin/firewall.sh #!/bin/bash PATH=/sbin:/bin:/usr/sbin:/usr/bin; export PATH # 1. 清除规则 iptables -F iptables -X iptables -Z # 2. 设定政策 iptables -P INPUT DROP iptables -P OUTPUT ACCEPT iptables -P FORWARD ACCEPT # 3~5. 制订各项规则 iptables -A INPUT -i lo -j ACCEPT iptables -A INPUT -i eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT #iptables -A INPUT -i eth0 -s 192.168.1.0/24 -j ACCEPT # 6. 写入防火墙规则配置文件 /etc/init.d/iptables save [root@www ~]# sh bin/firewall.sh iptables: Saving firewall rules to /etc/sysconfig/iptables:[ OK ] 防火墙实例2 [root@www ~]# mkdir -p /usr/local/virus/iptables [root@www ~]# cd /usr/local/virus/iptables [root@www iptables]# vim iptables.rule #!/bin/bash # 请先输入您的相关参数，不要输入错误了！ EXTIF=\"eth0\" # 这个是可以连上 Public IP 的网络接口 INIF=\"eth1\" # 内部 LAN 的连接接口；若无则写成 INIF=\"\" INNET=\"192.168.100.0/24\" # 若无内部网域接口，请填写成 INNET=\"\" export EXTIF INIF INNET # 第一部份，针对本机的防火墙设定！########################################## # 1. 先设定好核心的网络功能： echo \"1\"  /proc/sys/net/ipv4/tcp_syncookies echo \"1\"  /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts for i in /proc/sys/net/ipv4/conf/*/{rp_filter,log_martians}; do echo \"1\"  $i done for i in /proc/sys/net/ipv4/conf/*/{accept_source_route,accept_redirects,\\ send_redirects}; do echo \"0\"  $i done # 2. 清除规则、设定默认政策及开放 lo 与相关的设定值 PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin; export PATH iptables -F iptables -X iptables -Z iptables -P INPUT DROP iptables -P OUTPUT ACCEPT iptables -P FORWARD ACCEPT iptables -A INPUT -i lo -j ACCEPT iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT # 3. 启动额外的防火墙 script 模块 if [ -f /usr/local/virus/iptables/iptables.deny ]; then sh /usr/local/virus/iptables/iptables.deny fi if [ -f /usr/local/virus/iptables/iptables.allow ]; then sh /usr/local/virus/iptables/iptables.allow fi if [ -f /usr/local/virus/httpd-err/iptables.http ]; then sh /usr/local/virus/httpd-err/iptables.http fi # 4. 允许某些类型的 ICMP 封包进入 AICMP=\"0 3 3/4 4 11 12 14 16 18\" for tyicmp in $AICMP do iptables -A INPUT -i $EXTIF -p icmp --icmp-type $tyicmp -j ACCEPT done # 5. 允许某些服务的进入，请依照你自己的环境开启 # iptables -A INPUT -p TCP -i $EXTIF --dport 21 --sport 1024:65534 -j ACCEPT # FTP # iptables -A INPUT -p TCP -i $EXTIF --dport 22 --sport 1024:65534 -j ACCEPT # SSH # iptables -A INPUT -p TCP -i $EXTIF --dport 25 --sport 1024:65534 -j ACCEPT # SMTP # iptables -A INPUT -p UDP -i $EXTIF --dport 53 --sport 1024:65534 -j ACCEPT # DNS # iptables -A INPUT -p TCP -i $EXTIF --dport 53 --sport 1024:65534 -j ACCEPT # DNS # iptables -A INPUT -p TCP -i $EXTIF --dport 80 --sport 1024:65534 -j ACCEPT # WWW # iptables -A INPUT -p TCP -i $EXTIF --dport 110 --sport 1024:65534 -j ACCEPT # POP3 # iptables -A INPUT -p TCP -i $EXTIF --dport 443 --sport 1024:65534 -j ACCEPT # HTTPS # 第二部份，针对后端主机的防火墙设定！############################### # 1. 先加载一些有用的模块 modules=\"ip_tables iptable_nat ip_nat_ftp ip_nat_irc ip_conntrack ip_conntrack_ftp ip_conntrack_irc\" for mod in $modules do testmod=`lsmod | grep \"^${mod}\" | awk '{print $1}'` if [ \"$testmod\" == \"\" ]; then modprobe $mod fi done # 2. 清除 NAT table 的规则吧！ iptables -F -t nat iptables -X -t nat iptables -Z -t nat iptables -t nat -P PREROUTING ACCEPT iptables -t nat -P POSTROUTING ACCEPT iptables -t nat -P OUTPUT ACCEPT # 3. 若有内部接口的存在 (双网卡) 开放成为路由器，且为 IP 分享器！ if [ \"$INIF\" != \"\" ]; then iptables -A INPUT -i $INIF -j ACCEPT echo \"1\"  /proc/sys/net/ipv4/ip_forward if [ \"$INNET\" != \"\" ]; then for innet in $INNET do iptables -t nat -A POSTROUTING -s $innet -o $EXTIF -j MASQUERADE done fi fi # 如果你的 MSN 一直无法联机，或者是某些网站 OK 某些网站不 OK， # 可能是 MTU 的问题，那你可以将底下这一行给他取消批注来启动 MTU 限制范围 # iptables -A FORWARD -p tcp -m tcp --tcp-flags SYN,RST SYN -m tcpmss \\ # --mss 1400:1536 -j TCPMSS --clamp-mss-to-pmtu # 4. NAT 服务器后端的 LAN 内对外之服务器设定 # iptables -t nat -A PREROUTING -p tcp -i $EXTIF --dport 80 \\ # -j DNAT --to-destination 192.168.1.210:80 # WWW # 5. 特殊的功能，包括 Windows 远程桌面所产生的规则，假设桌面主机为 1.2.3.4 # iptables -t nat -A PREROUTING -p tcp -s 1.2.3.4 --dport 6000 \\ # -j DNAT --to-destination 192.168.100.10 # iptables -t nat -A PREROUTING -p tcp -s 1.2.3.4 --sport 3389 \\ # -j DNAT --to-destination 192.168.100.20 # 6. 最终将这些功能储存下来吧！ /etc/init.d/iptables save ","wordCount":"692","inLanguage":"en","datePublished":"2015-05-31T08:22:00Z","dateModified":"2015-05-31T08:22:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/vbird_linux_note_iptables.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>鸟哥的私房菜学习笔记----iptables防火墙设置</h1><div class=post-meta>May 31, 2015&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-05-31_vbird_linux_note_iptables.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>多图杀猫，流量党渗入</p><p>以下内容总结自鸟哥的 Linux 私房菜 &ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。</p><p>关于VPS的更多安全设置可以参考 <a href=https://blog.phpgao.com/vps_safty.html>VPS安全设置</a> & <a href=https://blog.phpgao.com/vps_iptables.html>VPS安全之防火墙设置</a></p><p>For Linux Kernel 2.6+</p><h2 id=图解防火墙>图解防火墙<a hidden class=anchor aria-hidden=true href=#图解防火墙>#</a></h2><p>三表五链</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/05/1888702419.gif alt=图解防火墙></p><p>上面的图示很复杂喔！不过基本上你依旧可以看出来，我们的 iptables 可以控制三种封包的流向：</p><ul><li><p>封包进入 Linux 主机使用资源 (路径 A)： 在路由判断后确定是向 Linux 主机要求数据的封包，主要就会透过 filter 的 INPUT 链来进行控管；</p></li><li><p>封包经由 Linux 主机的转递，没有使用主机资源，而是向后端主机流动 (路径 B)： 在路由判断之前进行封包表头的修订作业后，发现到封包主要是要透过防火墙而去后端，此时封包就会透过路径 B 来跑动。 也就是说，该封包的目标并非我们的 Linux 本机。主要经过的链是 filter 的 FORWARD 以及 nat 的 POSTROUTING, PREROUTING。 这路径 B 的封包流向使用情况，我们会在本章的 9.5 小节来跟大家作个简单的介绍。</p></li><li><p>封包由 Linux 本机发送出去 (路径 C)： 例如响应客户端的要求，或者是 Linux 本机主动送出的封包，都是透过路径 C 来跑的。先是透过路由判断， 决定了输出的路径后，再透过 filter 的 OUTPUT 链来传送的！当然，最终还是会经过 nat 的 POSTROUTING 链。</p></li></ul><h2 id=图解防火墙隐藏不常用的mangle>图解防火墙(隐藏不常用的mangle)<a hidden class=anchor aria-hidden=true href=#图解防火墙隐藏不常用的mangle>#</a></h2><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/05/649290281.gif alt=图解防火墙(隐藏不常用的mangle)></p><h2 id=防火墙操作>防火墙操作<a hidden class=anchor aria-hidden=true href=#防火墙操作>#</a></h2><h2 id=防火墙实例1>防火墙实例1<a hidden class=anchor aria-hidden=true href=#防火墙实例1>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#f92672>[</span>root@www ~<span style=color:#f92672>]</span><span style=color:#75715e># vim bin/firewall.sh</span>
+<span style=color:#75715e>#!/bin/bash</span>
+PATH<span style=color:#f92672>=</span>/sbin:/bin:/usr/sbin:/usr/bin; export PATH
+
+<span style=color:#75715e># 1. 清除规则</span>
+iptables -F
+iptables -X
+iptables -Z
+
+<span style=color:#75715e># 2. 设定政策</span>
+iptables -P   INPUT DROP
+iptables -P  OUTPUT ACCEPT
+iptables -P FORWARD ACCEPT
+
+<span style=color:#75715e># 3~5. 制订各项规则</span>
+iptables -A INPUT -i lo -j ACCEPT
+iptables -A INPUT -i eth0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+<span style=color:#75715e>#iptables -A INPUT -i eth0 -s 192.168.1.0/24 -j ACCEPT</span>
+
+<span style=color:#75715e># 6. 写入防火墙规则配置文件</span>
+/etc/init.d/iptables save
+
+<span style=color:#f92672>[</span>root@www ~<span style=color:#f92672>]</span><span style=color:#75715e># sh bin/firewall.sh</span>
+iptables: Saving firewall rules to /etc/sysconfig/iptables:<span style=color:#f92672>[</span>  OK  <span style=color:#f92672>]</span>
+</code></pre></div><h2 id=防火墙实例2>防火墙实例2<a hidden class=anchor aria-hidden=true href=#防火墙实例2>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
+<span style=color:#f92672>[</span>root@www ~<span style=color:#f92672>]</span><span style=color:#75715e># mkdir -p /usr/local/virus/iptables</span>
+<span style=color:#f92672>[</span>root@www ~<span style=color:#f92672>]</span><span style=color:#75715e># cd /usr/local/virus/iptables</span>
+<span style=color:#f92672>[</span>root@www iptables<span style=color:#f92672>]</span><span style=color:#75715e># vim iptables.rule</span>
+<span style=color:#75715e>#!/bin/bash</span>
+
+<span style=color:#75715e># 请先输入您的相关参数，不要输入错误了！</span>
+  EXTIF<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;eth0&#34;</span>             <span style=color:#75715e># 这个是可以连上 Public IP 的网络接口</span>
+  INIF<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;eth1&#34;</span>              <span style=color:#75715e># 内部 LAN 的连接接口；若无则写成 INIF=&#34;&#34;</span>
+  INNET<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;192.168.100.0/24&#34;</span> <span style=color:#75715e># 若无内部网域接口，请填写成 INNET=&#34;&#34;</span>
+  export EXTIF INIF INNET
+
+<span style=color:#75715e># 第一部份，针对本机的防火墙设定！##########################################</span>
+<span style=color:#75715e># 1. 先设定好核心的网络功能：</span>
+  echo <span style=color:#e6db74>&#34;1&#34;</span> &gt; /proc/sys/net/ipv4/tcp_syncookies
+  echo <span style=color:#e6db74>&#34;1&#34;</span> &gt; /proc/sys/net/ipv4/icmp_echo_ignore_broadcasts
+  <span style=color:#66d9ef>for</span> i in /proc/sys/net/ipv4/conf/*/<span style=color:#f92672>{</span>rp_filter,log_martians<span style=color:#f92672>}</span>; <span style=color:#66d9ef>do</span>
+        echo <span style=color:#e6db74>&#34;1&#34;</span> &gt; $i
+  <span style=color:#66d9ef>done</span>
+  <span style=color:#66d9ef>for</span> i in /proc/sys/net/ipv4/conf/*/<span style=color:#f92672>{</span>accept_source_route,accept_redirects,<span style=color:#ae81ff>\
+</span><span style=color:#ae81ff></span>send_redirects<span style=color:#f92672>}</span>; <span style=color:#66d9ef>do</span>
+        echo <span style=color:#e6db74>&#34;0&#34;</span> &gt; $i
+  <span style=color:#66d9ef>done</span>
+
+<span style=color:#75715e># 2. 清除规则、设定默认政策及开放 lo 与相关的设定值</span>
+  PATH<span style=color:#f92672>=</span>/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/sbin:/usr/local/bin; export PATH
+  iptables -F
+  iptables -X
+  iptables -Z
+  iptables -P INPUT   DROP
+  iptables -P OUTPUT  ACCEPT
+  iptables -P FORWARD ACCEPT
+  iptables -A INPUT -i lo -j ACCEPT
+  iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+<span style=color:#75715e># 3. 启动额外的防火墙 script 模块</span>
+  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -f /usr/local/virus/iptables/iptables.deny <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+        sh /usr/local/virus/iptables/iptables.deny
+  <span style=color:#66d9ef>fi</span>
+  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -f /usr/local/virus/iptables/iptables.allow <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+        sh /usr/local/virus/iptables/iptables.allow
+  <span style=color:#66d9ef>fi</span>
+  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> -f /usr/local/virus/httpd-err/iptables.http <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+        sh /usr/local/virus/httpd-err/iptables.http
+  <span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e># 4. 允许某些类型的 ICMP 封包进入</span>
+  AICMP<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;0 3 3/4 4 11 12 14 16 18&#34;</span>
+  <span style=color:#66d9ef>for</span> tyicmp in $AICMP
+  <span style=color:#66d9ef>do</span>
+    iptables -A INPUT -i $EXTIF -p icmp --icmp-type $tyicmp -j ACCEPT
+  <span style=color:#66d9ef>done</span>
+
+<span style=color:#75715e># 5. 允许某些服务的进入，请依照你自己的环境开启</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport  21 --sport 1024:65534 -j ACCEPT # FTP</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport  22 --sport 1024:65534 -j ACCEPT # SSH</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport  25 --sport 1024:65534 -j ACCEPT # SMTP</span>
+<span style=color:#75715e># iptables -A INPUT -p UDP -i $EXTIF --dport  53 --sport 1024:65534 -j ACCEPT # DNS</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport  53 --sport 1024:65534 -j ACCEPT # DNS</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport  80 --sport 1024:65534 -j ACCEPT # WWW</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport 110 --sport 1024:65534 -j ACCEPT # POP3</span>
+<span style=color:#75715e># iptables -A INPUT -p TCP -i $EXTIF --dport 443 --sport 1024:65534 -j ACCEPT # HTTPS</span>
+
+
+<span style=color:#75715e># 第二部份，针对后端主机的防火墙设定！###############################</span>
+<span style=color:#75715e># 1. 先加载一些有用的模块</span>
+  modules<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;ip_tables iptable_nat ip_nat_ftp ip_nat_irc ip_conntrack 
+</span><span style=color:#e6db74>ip_conntrack_ftp ip_conntrack_irc&#34;</span>
+  <span style=color:#66d9ef>for</span> mod in $modules
+  <span style=color:#66d9ef>do</span>
+      testmod<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>lsmod | grep <span style=color:#e6db74>&#34;^</span><span style=color:#e6db74>${</span>mod<span style=color:#e6db74>}</span><span style=color:#e6db74> &#34;</span> | awk <span style=color:#e6db74>&#39;{print $1}&#39;</span><span style=color:#e6db74>`</span>
+      <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$testmod<span style=color:#e6db74>&#34;</span> <span style=color:#f92672>==</span> <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+            modprobe $mod
+      <span style=color:#66d9ef>fi</span>
+  <span style=color:#66d9ef>done</span>
+
+<span style=color:#75715e># 2. 清除 NAT table 的规则吧！</span>
+  iptables -F -t nat
+  iptables -X -t nat
+  iptables -Z -t nat
+  iptables -t nat -P PREROUTING  ACCEPT
+  iptables -t nat -P POSTROUTING ACCEPT
+  iptables -t nat -P OUTPUT      ACCEPT
+
+<span style=color:#75715e># 3. 若有内部接口的存在 (双网卡) 开放成为路由器，且为 IP 分享器！</span>
+  <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$INIF<span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+    iptables -A INPUT -i $INIF -j ACCEPT
+    echo <span style=color:#e6db74>&#34;1&#34;</span> &gt; /proc/sys/net/ipv4/ip_forward
+    <span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> <span style=color:#e6db74>&#34;</span>$INNET<span style=color:#e6db74>&#34;</span> !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;&#34;</span> <span style=color:#f92672>]</span>; <span style=color:#66d9ef>then</span>
+        <span style=color:#66d9ef>for</span> innet in $INNET
+        <span style=color:#66d9ef>do</span>
+            iptables -t nat -A POSTROUTING -s $innet -o $EXTIF -j MASQUERADE
+        <span style=color:#66d9ef>done</span>
+    <span style=color:#66d9ef>fi</span>
+  <span style=color:#66d9ef>fi</span>
+  <span style=color:#75715e># 如果你的 MSN 一直无法联机，或者是某些网站 OK 某些网站不 OK，</span>
+  <span style=color:#75715e># 可能是 MTU 的问题，那你可以将底下这一行给他取消批注来启动 MTU 限制范围</span>
+  <span style=color:#75715e># iptables -A FORWARD -p tcp -m tcp --tcp-flags SYN,RST SYN -m tcpmss \</span>
+  <span style=color:#75715e>#          --mss 1400:1536 -j TCPMSS --clamp-mss-to-pmtu</span>
+
+<span style=color:#75715e># 4. NAT 服务器后端的 LAN 内对外之服务器设定</span>
+<span style=color:#75715e># iptables -t nat -A PREROUTING -p tcp -i $EXTIF --dport 80 \</span>
+<span style=color:#75715e>#          -j DNAT --to-destination 192.168.1.210:80 # WWW</span>
+
+<span style=color:#75715e># 5. 特殊的功能，包括 Windows 远程桌面所产生的规则，假设桌面主机为 1.2.3.4</span>
+<span style=color:#75715e># iptables -t nat -A PREROUTING -p tcp -s 1.2.3.4  --dport 6000 \</span>
+<span style=color:#75715e>#          -j DNAT --to-destination 192.168.100.10</span>
+<span style=color:#75715e># iptables -t nat -A PREROUTING -p tcp -s 1.2.3.4  --sport 3389 \</span>
+<span style=color:#75715e>#          -j DNAT --to-destination 192.168.100.20</span>
+
+<span style=color:#75715e># 6. 最终将这些功能储存下来吧！</span>
+  /etc/init.d/iptables save
+</code></pre></div></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/iptables/>iptables</a></li><li><a href=https://phpgao.github.io/tags/linux/>Linux</a></li><li><a href=https://phpgao.github.io/tags/note/>note</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/typecho_plugin_tutorial-7.html><span class=title>« Prev Page</span><br><span>typecho插件编写教程7---Helper类</span></a>
+<a class=next href=https://phpgao.github.io/vbird_linux_note_network.html><span class=title>Next Page »</span><br><span>鸟哥的私房菜学习笔记----网络速查</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

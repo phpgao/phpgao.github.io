@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>apple on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/apple/</link>
+    <description>Recent content in apple on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 08 Mar 2015 04:58:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/apple/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mac关闭自动生成DS_store</title>
+      <link>https://phpgao.github.io/mac_ds_store.html</link>
+      <pubDate>Sun, 08 Mar 2015 04:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_ds_store.html</guid>
+      <description>&lt;p&gt;参考了&lt;a href=&#34;http://www.zhihu.com/question/20873070/answer/41405748?group_id=557848511253651456&#34;&gt;长短短d的回答 &amp;ndash; 程序员如何优雅地使用 Mac？&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac快速移动窗口至另一个桌面</title>
+      <link>https://phpgao.github.io/mac_move_window_to_other_desktop.html</link>
+      <pubDate>Sat, 11 Oct 2014 12:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_move_window_to_other_desktop.html</guid>
+      <description>Mac系统有一大优势，就是在一台电脑上面，可以设定出很多桌面空间使用，这样我们的桌面就不会很凌乱，像MacGG一般都会用到4个桌面空间。在使用桌面空间的时候，大家可能都会用到一个功能，就是我要移动一个窗口到另一个桌面空间，都会把窗口拖到屏幕右边停留几秒，就回自动的切换到下一个桌面空间。今天MacGG给大家介绍一个方法，可以秒切哈。
+什么是秒切，就是你拖动窗口到屏幕边缘，无需停留，就自动切到下一桌面空间。
+首先打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+ defaults write com.apple.dock workspaces-edge-delay -float 0;killall Dock 现在大家试一下秒切吧。哈哈。。很爽不。是不是太快了，如果觉得太快，我们还可以在改改设定，我就设定在屏幕边缘停留半秒切换吧。 再次打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+defaults write com.apple.dock workspaces-edge-delay -float 0.15;killall Dock 如果你想还原成原样，也很简单，再次打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+defaults delete com.apple.dock workspaces-edge-delay;killall Dock 转自：http://www.macgg.com/archives/6429.html</description>
+    </item>
+    
+    <item>
+      <title>mac下ssh总是失去响应</title>
+      <link>https://phpgao.github.io/ssh_on_mac.html</link>
+      <pubDate>Thu, 09 Oct 2014 14:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh_on_mac.html</guid>
+      <description>自从使用mac以后，ssh连接总是超时成了老高的一个心病啊，只要一小会儿不动电脑，远程就失去相应，或者干脆直接提示broken pipe，然后断掉。现在终于有了算是能接受的解决办法。
+方法一：直截了当砍掉法 ~.，是的，你没有看错！这个组合命令就是主动断开ssh的命令，不行自己问问man。
+方法二：修改配置文件 服务器和客户端每隔一定的时间会发一个KeepAlive请求，避免因为路由器或线路的限制而断线，例子中的60s可以因具体的环境改变。
+针对服务器端 修改/etc/ssh/sshd_config，修改ServerAliveInterval一项，而ServerAliveCountMax表示如果失败重试的次数
+ServerAliveInterval 60ServerAliveCountMax 3 针对客户端 vi /etc/ssh_configClientAliveInterval 60ClientAliveCountMax 3 完</description>
+    </item>
+    
+  </channel>
+</rss>

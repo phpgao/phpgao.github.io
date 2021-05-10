@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>daemon on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/daemon/</link>
+    <description>Recent content in daemon on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 May 2016 10:16:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/daemon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python守护进程---python-daemon</title>
+      <link>https://phpgao.github.io/python-daemon.html</link>
+      <pubDate>Wed, 11 May 2016 10:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python-daemon.html</guid>
+      <description>&lt;p&gt;python的守护进程模块，遵循&lt;a href=&#34;https://www.python.org/dev/peps/pep-3143&#34;&gt;PEP 3143&lt;/a&gt;，很好很强大！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python守护进程demo</title>
+      <link>https://phpgao.github.io/pythond.html</link>
+      <pubDate>Tue, 23 Feb 2016 04:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pythond.html</guid>
+      <description>&lt;p&gt;代码网上copy的，原理基本一致。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

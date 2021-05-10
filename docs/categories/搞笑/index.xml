@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>搞笑 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/categories/%E6%90%9E%E7%AC%91/</link>
+    <description>Recent content in 搞笑 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 08 Apr 2018 03:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/categories/%E6%90%9E%E7%AC%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>操作系统的鄙视链</title>
+      <link>https://phpgao.github.io/os_disdain_chain.html</link>
+      <pubDate>Sun, 08 Apr 2018 03:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/os_disdain_chain.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>不常见的字符</title>
+      <link>https://phpgao.github.io/funny_char.html</link>
+      <pubDate>Mon, 12 May 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/funny_char.html</guid>
+      <description>Ø ⊙ ╰_╯ ● § ㄥ ★ ☆ ▽ ° ◎ 〤ι〤 ≡ ˋ_ˊ ← → ↖ ↗ ↘ ↙ ↑ ↓ ﹏ ε ☭ ξ ็ ä └(^o^)┘ ﹌○﹋ ~^o^~
+ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็&amp;gt; ฌูููููู</description>
+    </item>
+    
+    <item>
+      <title>程序员的几种状态</title>
+      <link>https://phpgao.github.io/programmers_tragedy.html</link>
+      <pubDate>Tue, 18 Mar 2014 15:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/programmers_tragedy.html</guid>
+      <description>程序员在找Bug 中！
+程序员找到Bug了！！
+最后，程序员修好了这个Bug 以为可以下班去吃饭了的时候~~~
+终于，程序员收到了加班通知</description>
+    </item>
+    
+    <item>
+      <title>开发时遇见的小白用户</title>
+      <link>https://phpgao.github.io/little_white.html</link>
+      <pubDate>Thu, 13 Feb 2014 07:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/little_white.html</guid>
+      <description> 打电话过来说网站打不开，网址都输对了，也有显示，但是就是没有登陆的界面。 经过严格的浏览器兼容性测试和功能测试后发现 原来客户将网址输入到了百度的搜索栏中。。。。 打电话过来说网站打不开，网址都输对了，但无显示 经过严格的浏览器兼容性测试和功能测试后发现 原来客户将网址设为快捷方式在桌面上，可能不小心把浏览器窗口拖到了屏幕最下面(看不到界面)，导致双击网页快捷方式后网站打开了，但是看不到，依稀记得远程给客户解决问题时，他已经打开了* 个标签页。。。。 打电话过来说无法登陆，用户名密码都对，就是登不上去 结果发现用户拿错卡了！ 用高新XX的卡来激活华XX的卡。。。。 待续  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ngx_lua_waf on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ngx_lua_waf/</link>
+    <description>Recent content in ngx_lua_waf on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 19 May 2015 06:11:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ngx_lua_waf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx编译安装ngx_lua模块</title>
+      <link>https://phpgao.github.io/nginx_ngx_lua.html</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_ngx_lua.html</guid>
+      <description>&lt;p&gt;nginx lua模块淘宝开发的nginx第三方模块,它能将lua语言嵌入到nginx配置中,从而使用lua就极大增强了nginx的能力.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

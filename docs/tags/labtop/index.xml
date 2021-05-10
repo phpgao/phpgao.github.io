@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>labtop on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/labtop/</link>
+    <description>Recent content in labtop on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 09 Mar 2014 15:00:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/labtop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>怎样挑笔记本</title>
+      <link>https://phpgao.github.io/laptop.html</link>
+      <pubDate>Sun, 09 Mar 2014 15:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laptop.html</guid>
+      <description>老高的笔记本是08年大一时候在赛格电脑城买的，型号为三星R467-DSOC，该机型实属坑爹，最后发现三星也很坑爹，以后坚决抵制！ 废话不说，直接入正题！
+细数悲剧  三星的性价比不高，相比于华硕，Acer，美国的良心企业&amp;ndash;联想等牌子，因为三星的笔记本都是用的自家的配件，所以成本相对低一些，卖那么贵买了不值得。 R467的BIOS不支持WIN7的激活，貌似三星的很多型号也都不能激活，解决办法只有使用有中毒风险的动态SLIC加载方法或者刷BIOS，很麻烦，不过挺练手，我的R467好像是刷了03NM.WPH这个文件就能使用Windows Loader完美激活了。工具我还留着，需要的可以在我的微博@我。 Express Card 借口被砍。。。现在想扩展个USB3.0或者3G网卡都不行，泪奔~~ 三星笔记本的屏幕真的很一般。 机子不好拆，散热差。 最恶心的就是&amp;mdash;&amp;mdash;这款机子的无线网卡天线会影响到内置的麦克风，所以和老婆大人视频或语音的的时候总会发出很讨厌的电流声，尤其是看视频或者下载东西时。解决办法就是另买一个USB无线网卡，使用麦克风的时候将自带的网卡禁用了就OK，然后使用USB网卡即可(那个电流声太恶心了，滋滋滋滋滋滋滋滋！和蚊子一样) 触摸板设计太渣了，手感很差。 没有蓝牙功能，本来想自己动手加一个内置的蓝牙模块，结果拆机后主板几乎没有预留一个能扩展的地方。  以后买电脑注意事项  是否是新机子 //检查味道，USB口，硬盘使用时间 CPU的虚拟化支持 //牵扯到虚拟机的性能 usb3.0接口有几个 //越多越好 前端总线与内存频率与大小是否一致 //非必须 硬盘转速（最好7200转）与缓存（越大越好） //ssd更好 集显独显的选择 //女生推荐集显 最好不要带正版系统 //这个是不需要的成本 显示器品牌、可视角度、色域、对比度等 //主观性比较大 显示器有无坏点、亮点 显示器的旋转角度越大越好 //演示的时候很有用 有线网卡是否有信号灯 //网线排错有用，但是费电 功耗估算 106W //主要是看散热能不能够跟上 是否有蓝牙 //扩展方便,bluetooth3.0最好 拆机是否方便 //高手勿喷 摄像头是否清晰，麦克风是否有杂音 //其实无所谓 有木有MODEM接口和PCI-E扩展口 扬声器的音质 在这儿找找天梯图看看吧 eg. 笔记本处理器性能天梯图,笔记本显卡性能天梯图 检测工具：  撸大湿ps,这款机子其实还好，笔记本用了这么多年了没出啥大问题，现在除了有点烫其他都还好！到底在一起这么多年了啊~</description>
+    </item>
+    
+  </channel>
+</rss>

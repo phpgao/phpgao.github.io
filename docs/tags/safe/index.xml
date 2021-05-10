@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>safe on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/safe/</link>
+    <description>Recent content in safe on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Jun 2015 08:15:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/safe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SS公共服务器的基本安全措施</title>
+      <link>https://phpgao.github.io/ss-public-server.html</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-public-server.html</guid>
+      <description>&lt;p&gt;老高以前免费分享的ss服务器 &lt;a href=&#34;https://blog.phpgao.com/try_shadowsocks_via_qrcode.html&#34;&gt;免费shadowsocks&lt;/a&gt; ，被攻击了。。。后台检测到有大量的垃圾邮件，是我大意了，忘记了给做一些保护措施，赶紧补上。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

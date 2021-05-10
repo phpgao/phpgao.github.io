@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>token on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/token/</link>
+    <description>Recent content in token on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 May 2014 03:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/token/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP获取新浪微博token</title>
+      <link>https://phpgao.github.io/weibo_token.html</link>
+      <pubDate>Thu, 15 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/weibo_token.html</guid>
+      <description>最近在做采集微博的功能，由于要自动采集，所以必须获得最终的用户的token，获取了这个token以后就可以为所欲为啦！
+贴代码
+$s = new SaeTOAuthV2 ( WB_AKEY, WB_SKEY);//准备post数据$post [&#39;action&#39;] = &#39;login&#39;;//$post [&#39;display&#39;] = &#39;default&#39;;//$post [&#39;withOfficalFlag&#39;] = 0;//$post [&#39;quick_auth&#39;] = null;//$post [&#39;withOfficalAccount&#39;] = &#39;&#39;;//$post [&#39;scope&#39;] = &#39;&#39;;//$post [&#39;ticket&#39;] = &#39;&#39;;//$post [&#39;isLoginSina&#39;] = &#39;&#39;;//$post [&#39;isLoginSina&#39;] = &#39;code&#39;;//regCallback|appkey62需要预先请求一次拿到//$post [&#39;regCallback&#39;] = $match_regCallback[1];//这里不用urlencode,http_build_query会自动处理$post [&#39;redirect_uri&#39;] = WB_CALLBACK_URL;$post [&#39;client_id&#39;] = WB_AKEY;//$post [&#39;appkey62&#39;] = $match_appkey[1];//$post [&#39;state&#39;] = &#39;&#39;;//$post [&#39;verifyToken&#39;] = null;//$post [&#39;from&#39;] = &#39;&#39;;$post [&#39;userId&#39;] = &#39;*******&#39;;//测试用户名$post [&#39;passwd&#39;] = &#39;*******&#39;;//测试密码,不要有！@￥%……&amp;amp;*（）这些符号，最好全是字符或数字，否则验证会失败$post = http_build_query($post);//UA貌似没有也行，保险起见还是加上吧$UA = &#39;Mozilla/5.</description>
+    </item>
+    
+  </channel>
+</rss>

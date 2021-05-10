@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gb2312 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/gb2312/</link>
+    <description>Recent content in gb2312 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 May 2014 15:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/gb2312/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>各种编码字符长度</title>
+      <link>https://phpgao.github.io/characters_length.html</link>
+      <pubDate>Fri, 09 May 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/characters_length.html</guid>
+      <description>测试源码如下
+header(&amp;#34;Content-type: text/html; charset=utf-8&amp;#34;); echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo &amp;#34;ascii &amp;#34;, strlen(&amp;#39;hello&amp;#39;); //ascii echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; function strlentest($str) { echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo $str, &amp;#34;:&amp;#34;; echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo &amp;#34;utf8 &amp;#34;, strlen($str); //utf8 echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo &amp;#34;gbk &amp;#34;, strlen(iconv(&amp;#39;utf-8&amp;#39;, &amp;#39;GBK&amp;#39;, $str)); //gbk echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; echo &amp;#34;gb2312 &amp;#34;, strlen(iconv(&amp;#39;utf-8&amp;#39;, &amp;#39;gb2312&amp;#39;, $str)); //gb2312 echo &amp;#39;&amp;lt;br/&amp;gt;&amp;#39;; } $str = &amp;#34;中国人&amp;#34;; strlentest($str); $str = &amp;#34;A人1&amp;#34;; strlentest($str); $str = &amp;#34;AAA&amp;#34;; strlentest($str); $str = &amp;#34;111&amp;#34;; strlentest($str); 结论： 自己总结吧</description>
+    </item>
+    
+  </channel>
+</rss>

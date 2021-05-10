@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dede on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dede/</link>
+    <description>Recent content in dede on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 May 2014 15:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dede/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dede-常用SQL总结</title>
+      <link>https://phpgao.github.io/dede_sql.html</link>
+      <pubDate>Fri, 09 May 2014 15:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dede_sql.html</guid>
+      <description>织梦cms不知大家用过没有，功能比较强大，但是对于我还是有一些不够，所以我总结了一些经常会使用的SQL，比如批量修改文章发布人、替换栏目字符串、批量修改文章点击数、批量修改文章命名规则等，这些SQL使用dedecmsv5.7测试，其他版本不保证。
+老高温馨提醒：使用此SQL务必备份数据库清空所有文章 TRUNCATE TABLE dede_addonarticle; TRUNCATE TABLE dede_archives; TRUNCATE TABLE dede_arctiny; 批量修改文章发布人 UPDATE dede_arctiny AS aSET a.mid=2;UPDATE dede_archives AS aSET a.mid=2;/*mid为管理员ID*/ 替换栏目字符串 UPDATE dede_arctype as aSET a.typename=REPLACE(a.typename,&#39;AAA&#39;,&#39;BBB&#39;)#AAA替换为BBB 修改文章点击数 /*随机数为300-1300*/UPDATE dede_archives AS aSET a.click=FLOOR(300 + (RAND() * 1001)); 批量修改文章命名规则 UPDATEdede_arctype AS aSETa.namerule=&#39;{typedir}/{aid}.html&#39; 查看栏目表 SELECT dede_arctype.typename,dede_arctype.description,dede_arctype.keywords,dede_arctype.seotitle,dede_arctype.namerule,dede_arctype.namerule2FROM dede_arctypeORDER BY typename; 所有文章都改为动态 #ismake的值为1时为静态，-1 时表示动态update dede_archives set ismake=-1;#将所有栏目设置为“使用静态页”，update dede_arctype set isdefault=1  </description>
+    </item>
+    
+    <item>
+      <title>dede栏目路径自动生成</title>
+      <link>https://phpgao.github.io/dede_catalog.html</link>
+      <pubDate>Sat, 29 Mar 2014 15:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dede_catalog.html</guid>
+      <description>&lt;p&gt;抽空写了个这。。。虽然很头大，但是还是写完了。 下面由我来翻译下面这一大段话，首先，函数使用了PINYIN函数，将栏目名称转化成英文缩写，剩下的工作就是拼接和查询了，其实原理很简单。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

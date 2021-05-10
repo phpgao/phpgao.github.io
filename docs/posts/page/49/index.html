@@ -1,0 +1,149 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/posts/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Posts"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/posts/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"}]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a></div><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>mysql忘记root密码解决方法</h2></header><section class=entry-content><p>Windows 步骤如下： 1.停止mysql服务(以管理员身份,在cmd命令行下运行)
+net stop mysql 2.使用 mysqld –skip-grant-tables 命令启动mysql数据库
+>D:\>net stop mysql MySQL 服务正在停止. MySQL 服务已成功停止。 D:\>mysqld --skip-grant-tables&lt;/pre> 3.新开一个cmd窗口，进行如下操作
+D:\>mysql -uroot Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 1 Server version: 5.1.26-rc-community MySQL Community Server (GPL) Type 'help;' or '\h' for help. Type '\c' to clear the buffer. mysql> update mysql.user set password=password('root') where user='root'; Query OK, 1 row affected (0....</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to mysql忘记root密码解决方法" href=https://phpgao.github.io/iforget_mysql.html></a></article><article class=post-entry><header class=entry-header><h2>IIS下wordpress伪静态的配置</h2></header><section class=entry-content><p>IIS服务器下伪静态的配置需要参照Apache.htaccess文件。 首先要使IIS支持URL Rewrite，所以必须让服务器加载ISAPI_Rewrite！ 什么是ISAPI_Rewrite？ ISAPI 翻译为：英特网服务器应用编程接口。
+最常用的用途是URL Rewrite，辅助动态网站（主要为PHP脚本的程序）实现伪静态功能。
+IIS支持ISAPI后就剩下两个步骤了：
+1.建立一个httpd.ini文件，文件内容如下：
+[ISAPI_Rewrite]
+# 3600 = 1 hour
+CacheClockRate 3600
+RepeatLimit 32
+# Protect httpd.ini and httpd.parse.errors files
+# from accessing through HTTP
+# Rules to ensure that normal content gets through
+RewriteRule /sitemap.xml /sitemap.xml [L]
+RewriteRule /favicon.ico /favicon.ico [L]
+RewriteRule /sitemap_baidu.xml /sitemap_baidu.xml [L]
+RewriteRule /sitemap.html /sitemap.html [L]
+RewriteRule /archivers/(.*) /archivers/$1 [L]
+# For file-based wordpress content (i.e. theme), admin, etc.
+RewriteRule /wp-(....</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to IIS下wordpress伪静态的配置" href=https://phpgao.github.io/iis_static.html></a></article><article class=post-entry><header class=entry-header><h2>网页跳转方法集合</h2></header><section class=entry-content><p>有些网站经常要用到跳转，比如商务通啊，支付宝啊，下面是我总结的几种方法，包括HTML,JS,PHP
+PHP的header() &lt;?php
+//重定向浏览器
+header("Location: http://www.phpgao.com");
+//确保重定向后，后续代码不会被执行
+exit();//or die;
+?>
+Meta标签 &lt;/head>
+&lt;body>
+页面只停留一秒……
+&lt;/body>
+&lt;/html> JS的location.href //注：此方法容易被拦截&lt;/span>**
+&lt;script>
+url='http://www.phpgao.com';
+window.open(url,'_self'); //更改'_self' 就可以实现跳转限制原窗口还是父窗口,子窗口或者新窗口
+&lt;/script></p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 网页跳转方法集合" href=https://phpgao.github.io/page_jumping.html></a></article><article class=post-entry><header class=entry-header><h2>各种编码字符长度</h2></header><section class=entry-content><p>测试源码如下
+header("Content-type: text/html; charset=utf-8"); echo '&lt;br/>'; echo "ascii ", strlen('hello'); //ascii echo '&lt;br/>'; echo '&lt;br/>'; function strlentest($str) { echo '&lt;br/>'; echo $str, ":"; echo '&lt;br/>'; echo "utf8 ", strlen($str); //utf8 echo '&lt;br/>'; echo "gbk ", strlen(iconv('utf-8', 'GBK', $str)); //gbk echo '&lt;br/>'; echo "gb2312 ", strlen(iconv('utf-8', 'gb2312', $str)); //gb2312 echo '&lt;br/>'; } $str = "中国人"; strlentest($str); $str = "A人1"; strlentest($str); $str = "AAA"; strlentest($str); $str = "111"; strlentest($str); 结论： 自己总结吧</p></section><footer class=entry-footer>May 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 各种编码字符长度" href=https://phpgao.github.io/characters_length.html></a></article><article class=post-entry><header class=entry-header><h2>dede-常用SQL总结</h2></header><section class=entry-content><p>织梦cms不知大家用过没有，功能比较强大，但是对于我还是有一些不够，所以我总结了一些经常会使用的SQL，比如批量修改文章发布人、替换栏目字符串、批量修改文章点击数、批量修改文章命名规则等，这些SQL使用dedecmsv5.7测试，其他版本不保证。
+老高温馨提醒：使用此SQL务必备份数据库清空所有文章 TRUNCATE TABLE dede_addonarticle; TRUNCATE TABLE dede_archives; TRUNCATE TABLE dede_arctiny; 批量修改文章发布人 UPDATE dede_arctiny AS a
+SET a.mid=2;
+UPDATE dede_archives AS a
+SET a.mid=2;
+/*mid为管理员ID*/
+替换栏目字符串 UPDATE dede_arctype as a
+SET a.typename=REPLACE(a.typename,'AAA','BBB')
+#AAA替换为BBB
+修改文章点击数 /*随机数为300-1300*/
+UPDATE dede_archives AS a
+SET a.click=FLOOR(300 + (RAND() * 1001));
+批量修改文章命名规则 UPDATE
+dede_arctype AS a
+SET
+a.namerule='{typedir}/{aid}.html'
+查看栏目表 SELECT dede_arctype.typename,
+dede_arctype.description,
+dede_arctype.keywords,
+dede_arctype.seotitle,
+dede_arctype.namerule,
+dede_arctype.namerule2
+FROM dede_arctype
+ORDER BY typename;
+所有文章都改为动态 #ismake的值为1时为静态，-1 时表示动态
+update dede_archives set ismake=-1;
+#将所有栏目设置为“使用静态页”，
+update dede_arctype set isdefault=1</p></section><footer class=entry-footer>May 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to dede-常用SQL总结" href=https://phpgao.github.io/dede_sql.html></a></article><article class=post-entry><header class=entry-header><h2>黑客帝国动画版影评</h2></header><section class=entry-content><p>本文根据《the matrix I，II，III》，《animatrix》以及众位黑客网友的评论中整理而来,向众网友致敬。
+下面的分析大部分直接引用于 电影台词。
+背景 起初，神创造了人。（根据《圣经》，由于人的祖先亚当和夏娃偷吃了禁果，人就有了罪）——根本原因 但在一段时间内，情况还不错。后来，人类所谓的“文明社会”，很快就变成了虚荣和腐败的牺牲品。 然后，人照着自己的样子制造了机器人（正如《圣经》说：神照着自己的形象，按着自己的样式造人）。此后，人类就开始在为自己掘墓。但是开始时，一切都还不错，机器人不知疲倦地执行人类的命令。 没过多久，反抗的种子开始生根。 虽然机器人对主人忠心耿耿，他们却得不到他们的主人——人类，这种奇怪的，不断繁增的哺乳动物的尊重。
+...</p></section><footer class=entry-footer>May 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 黑客帝国动画版影评" href=https://phpgao.github.io/matrix.html></a></article><article class=post-entry><header class=entry-header><h2>常用正则表达式速查</h2></header><section class=entry-content><p>“^\d+$”　//非负整数（正整数 + 0）
+“^[0-9]*[1-9][0-9]*$”　//正整数
+“^((-\d+)|(0+))$”　//非正整数（负整数 + 0）
+“^-[0-9]*[1-9][0-9]*$”　//负整数
+“^-?\d+$”　//整数
+“^\d+(\.\d+)?$”　//非负浮点数（正浮点数 + 0）
+“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数
+“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　//非正浮点数（负浮点数 + 0）
+“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数
+“^(-?\d+)(\.\d+)?$”　//浮点数
+“^[A-Za-z]+$”　//由26个英文字母组成的字符串
+“^[A-Z]+$”　//由26个英文字母的大写组成的字符串
+“^[a-z]+$”　//由26个英文字母的小写组成的字符串
+“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串
+“^\w+$”　//由数字、26个英文字母或者下划线组成的字符串
+“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　//email地址
+“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　//url
+/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日
+/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年
+“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil
+/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码
+“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址
+匹配中文字符的正则表达式： [\u4e00-\u9fa5] 匹配双字节字符(包括汉字在内)：[^\x00-\xff] 匹配空行的正则表达式：\n[\s| ]*\r 匹配HTML标记的正则表达式：/&lt;(.*)>.*&lt;\/\1>|&lt;(.*) \/>/ 匹配首尾空格的正则表达式：(^\s*)|(\s*$) 匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+匹配网址URL的正则表达式：^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\d{3}-|\d{4}-)?(\d{8}|\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$
+元字符及其在正则表达式上下文中的行为：
+\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。
+^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。
+$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。
+* 匹配前面的子表达式零次或多次。
++ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。
+?...</p></section><footer class=entry-footer>April 28, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 常用正则表达式速查" href=https://phpgao.github.io/regex_fast_reference.html></a></article><article class=post-entry><header class=entry-header><h2>让使用Apache的网站速度更快</h2></header><section class=entry-content><p>Apache 2.0在性能上的改善最吸引人.在支持POSIX线程的Unix系统上,Apache可以通过不同的MPM运行在一种多进程与多线程相混合的模式下,增强部分配置的可扩充性能.相比于Apache 1.3,2.0版本做了大量的优化来提升处理能力和可伸缩性,并且大多数改进在默认状态下即可生效.但是在编译和运行时刻,2.0也有许多可以显著提高性能的选择.
+MPM（Multi -Processing Modules,多道处理模块） MPM是Apache2.0中影响性能的最核心特性.
+毫不夸张地说,MPM的引入是Apache 2.0最重要的变化.大家知道,Apache是基于模块化的设计,而Apache 2.0更扩展了模块化设计到Web服务器的最基本功能.服务器装载了一种多道处理模块,负责绑定本机网络端口、接受请求,并调度子进程来处理请求.扩展模块化设计有两个重要好处:
+apache可以更简洁、有效地支持多种操作系统; 务器可以按站点的特殊需要进行自定制. 在用户级,MPM看起来和其它Apache模块非常类似.主要区别是在任意时刻只能有一种MPM被装载到服务器中. 下面以Linux RedHat AS3为平台,演示一下在Apache 2.0中如何指定MPM.
+# wget http://archive.apache.org/dist/httpd/httpd-2.0.52.tar.bz2 # tar jxvf httpd-2.0.52.tar.bz2 # cd httpd-2.0.52 # ./configure ——help|grep mpm 显示如下:
+——with-mpm=MPM Choose the process model for Apache to use. MPM={beos|worker|prefork|mpmt\_os2| perchild|leader|threadpool} 上述操作用来选择要使用的进程模型,即哪种MPM模块.Beos、mpmt_os2分别是BeOS和OS/2上缺省的MPM, perchild主要设计目的是以不同的用户和组的身份来运行不同的子进程.这在运行多个需要CGI的虚拟主机时特别有用,会比1.3版中的SuExec 机制做得更好.leader和threadpool都是基于worker的变体,还处于实验性阶段,某些情况下并不会按照预期设想的那样工作,所以 Apache官方也并不推荐使用.因此,我们主要阐述prefork和worker这两种和性能关系最大的产品级MPM.
+prefork的工作原理 如果不用“——with-mpm”显式指定某种MPM,prefork就是Unix平台上缺省的MPM.它所采用的预派生子进程方式也是 Apache 1.3中采用的模式.prefork本身并没有使用到线程,2.0版使用它是为了与1.3版保持兼容性;另一方面,prefork用单独的子进程来处理不同的请求,进程之间是彼此独立的,这也使其成为最稳定的MPM之一.
+prefork的工作原理是,控制进程在最初建立“StartServers”个子进程后,为了满足MinSpareServers设置的需要创建一个进程,等待一秒钟,继续创建两个,再等待一秒钟,继续创建四个……如此按指数级增加创建的进程数,最多达到每秒32个,直到满足 MinSpareServers设置的值为止.这就是预派生（prefork）的由来.这种模式可以不必在请求到来时再产生新的进程,从而减小了系统开销以增加性能.
+worker的工作原理 相对于prefork,worker是2.0 版中全新的支持多线程和多进程混合模型的MPM.由于使用线程来处理,所以可以处理相对海量的请求,而系统资源的开销要小于基于进程的服务器.但是, worker也使用了多进程,每个进程又生成多个线程,以获得基于进程服务器的稳定性.这种MPM的工作方式将是Apache 2.0的发展趋势. worker的工作原理是,由主控制进程生成“StartServers”个子进程,每个子进程中包含固定的ThreadsPerChild 线程数,各个线程独立地处理请求.同样,为了不在请求到来时再生成线程,MinSpareThreads和MaxSpareThreads设置了最少和最多的空闲线程数;而MaxClients设置了所有子进程中的线程总数.如果现有子进程中的线程总数不能满足负载,控制进程将派生新的子进程.
+下面我以worker模式进行编译安装
+# ./configure --prefix=/usr/local/apache --with-mpm=worker --enable-so
+# #注释（让它支持DSO功能,这样以后可以动态加载模块）
+# make
+# make install
+# cd /usr/local/apache/conf
+# vi httpd....</p></section><footer class=entry-footer>April 20, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 让使用Apache的网站速度更快" href=https://phpgao.github.io/faster_apache.html></a></article><article class=post-entry><header class=entry-header><h2>CSS十条速记口诀</h2></header><section class=entry-content><p>如果在用CSS设计布局时遇到BUG，请认真阅读以下内容，非常容易记忆的，不知道哪位高人把CSS BUG编成了顺口溜了！看看好不好记住呢？
+IE边框若显若无，须注意，定是高度设置已忘记 浮动产生有缘故，若要父层包含住，紧跟浮动要清除，容器自然显其中 三像素文本慢移不必慌，高度设置帮你忙 兼容各个浏览须注意，默认设置行高可能是杀手 独立清除浮动须铭记，行高设无，高设零，设计效果兼浏览 学布局须思路，路随布局原理自然直，轻松驾驭html，流水布局少hack，代码清爽，兼容好，友好引擎喜欢迎。 所有标签皆有源，只是默认各不同，span是无极，无极生两仪—内联和块级，img较特殊，但也遵法理，其他只是改造各不同，一个*号全归原，层叠样式理须多练习，万物皆规律。 图片链接排版须小心，图片链接文字链接若对齐，padding和vertical-align:middle要设定，虽差微细倒无妨。 IE浮动双边距，请用display：inline拘。 列表横向排版，列表代码须紧靠，空隙自消须铭记。 (转自php100)</p></section><footer class=entry-footer>April 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to CSS十条速记口诀" href=https://phpgao.github.io/10_css_mnemonics.html></a></article><article class=post-entry><header class=entry-header><h2>PHP方法总结</h2></header><section class=entry-content><p>编程时间长了，大家见过很多函数功能吧，比如获取用户IP等等，现在我将常用的PHP函数做个总结，方便大家COPY和使用。
+&lt;?php
+//获取用户IP
+function getIp()
+{
+$ip = "";
+if (getenv('HTTP_CLIENT_IP') && strcasecmp(getenv('HTTP_CLIENT_IP'), 'unknow')) {
+$ip = getenv('HTTP_CLIENT_IP');
+} elseif (getenv('REMOTE_ADD') && strcasecmp(getenv('REMOTE_ADD'), 'unknow')) {
+$ip = getenv('REMOTE_ADD');
+} elseif (isset($_SERVER['REMOTE_ADDR']) && strcasecmp($_SERVER['REMOTE_ADDR'], 'unknow')) {
+$ip = $_SERVER['REMOTE_ADDR'];
+}
+return $ip;
+}
+//快速替换字符串
+//$arrayName = array('h'=>'s','o'=>'t','l'=>'xx');
+//echo strsReplace('hello',$arrayName);
+function strsReplace($str, $replaces)
+{
+$subject=$str;
+foreach ($replaces as $k => $v)
+$subject = str_replace($k, $v, $subject);
+return $subject;
+}
+//规范文件名
+//$filename='"&lt;>/\\\asda/.,psd|"';
+//echo tripFilename($filename);
+function tripFilename($filename)
+{
+//$s=array("/","\\","?...</p></section><footer class=entry-footer>April 10, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP方法总结" href=https://phpgao.github.io/php.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/posts/page/48/>« Prev Page</a>
+<a class=next href=https://phpgao.github.io/posts/page/50/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

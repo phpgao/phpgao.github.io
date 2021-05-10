@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dig on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dig/</link>
+    <description>Recent content in dig on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 02 Feb 2018 07:37:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常用dig命令</title>
+      <link>https://phpgao.github.io/dig.html</link>
+      <pubDate>Fri, 02 Feb 2018 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dig.html</guid>
+      <description>+noall表示隐藏所有内容 +answer 表示显示响应内容
++[no]question,+[no]answer,+[no]authority,+[no]stat,+short
+# 直接查询根DNS dig # 指定解析服务器为8.8.8.8 dig @8.8.8.8 phpgao.com # 查询DNS记录 dig -t NS phpgao.com +noall +answer # 查询MX记录 dig -t MX phpgao.com +noall +answer </description>
+    </item>
+    
+    <item>
+      <title>各个系统安装dig工具的教程</title>
+      <link>https://phpgao.github.io/how_to_install_dig.html</link>
+      <pubDate>Mon, 27 Apr 2015 02:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_install_dig.html</guid>
+      <description>&lt;p&gt;dig是一个很不错的工具，它比nslookup好用太多。&lt;/p&gt;
+&lt;p&gt;老高主要用dig判断DNS解析故障和DNS解析线路的问题。dig命令虽然好用，但是想要在各个系统中安装使用dig，安装方法还是要记录一下的。&lt;/p&gt;
+&lt;p&gt;那么如何安装呢？老高总结了linux服务器，openwrt，Windows等系统的安装dig的方法，希望能够帮助到你。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

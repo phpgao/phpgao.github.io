@@ -1,0 +1,139 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>正则表达式教程 | 老高的技术博客</title><meta name=keywords content="regular,expression,regex,abc"><meta name=description content="正则表达式入门
+概念
+
+字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。
+
+
+支持
+
+在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。
+
+以上内容引自百度百科
+"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/regex_abc.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="正则表达式教程"><meta property="og:description" content="正则表达式入门
+概念
+
+字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。
+
+
+支持
+
+在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。
+
+以上内容引自百度百科
+"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/regex_abc.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-22T07:51:00+00:00"><meta property="article:modified_time" content="2014-07-22T07:51:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="正则表达式教程"><meta name=twitter:description content="正则表达式入门
+概念
+
+字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。
+
+
+支持
+
+在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。
+
+以上内容引自百度百科
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"正则表达式教程","item":"https://phpgao.github.io/regex_abc.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"正则表达式教程","name":"正则表达式教程","description":"正则表达式入门 概念  字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。 正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。\n  支持  在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。\n 以上内容引自百度百科\n","keywords":["regular","expression","regex","abc"],"articleBody":"正则表达式入门 概念  字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。 正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。\n  支持  在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。\n 以上内容引自百度百科\n [TOC]\n测试工具 在线版 http://regex.larsolavtorvik.com/ http://tool.oschina.net/regex http://www.rubular.com/ http://zhengze.51240.com/ http://www.kingshang.com/ http://zhengze.51240.com/\n离线版 正则表达式测试器c#绿色版 正则表达式测试英文版 更多下载\n 规则 通配符 还记得*和？通配符吗?\n如果要找到所有pdf文件，就在文件管理器中输入*.pdf即可。一般的搜索通配符已经可以很好的对付了，但是如果需要搜索的条件突然变得很复杂：我需要在号码簿里筛选出来北京和陕西省所有的手机号和座机号，通配符就表示压力山大了！而这项任务对于正则表达式而言，简直是轻而一举。我相信你看完此文，一定能轻松写出对应的匹配语句！\n最基础 9527 10086 regex 这种最平常不过的字符所蕴含的意思就是他们本身\n字符组 字符组就是在[](方括号)中列举出所有的可能再去匹配\n直接匹配 [0-9] 匹配一个数字\n[aeiou] 匹配任何一个英文元音字母\n[.?!] 匹配标点符号(.或?或!)。\ngr[ae]y 匹配grey 或者 gray\n 方括号内的多个字符实际上只占一个坑，他无法匹配greay或graay，因为gr[ae]y只匹配四个字母，[ae]只占一个\n [Hh][123456] 匹配HTML里所有的h标签，这种写法考虑到了H标签的大小写\nPS.在w3c的规范里还是推荐所有html标签都必须是小写字母，所有属性都使用双引号包裹\r 排除型匹配 gr[^ae]y 匹配除了grey和gray以外的所有单词 h[^123] 匹配不是h1,h2,h3的标签\n元字符 元字符就是在正则语言中代表特殊意义的字符，如\n[0-9]代表的含意与\\d一样\n[a-z0-9A-Z_]也完全等同于\\w（如果只考虑英文的话）。\n^代表每一行的开始，$代表每一行的结束\n^$ 匹配空行\n^foot$ 匹配只有foot一个词的行\n 元字符的出现可以理解为方便书写\n 基础元字符表\n   代码 说明     . 匹配除换行符以外的任意字符   \\w 匹配字母或数字或下划线或汉字   \\W 匹配任意不是字母或数字或下划线或汉字的字符   \\s 匹配任意的空白符   \\S 匹配任意非空白符   \\d 匹配数字   \\D 匹配非数字   \\b 匹配单词的开始或结束   ^ 匹配字符串的开始   $ 匹配字符串的结束    转义 如果要匹配 C:\\\\WINDOWS，我们要如何描述\\反斜杠呢？ 这个时候就需要用到转义，在这种特殊标点前面加一个\\，他的意思就表示后面的标点是普通的标点，比如\\\\w匹配字符 \\w，这个时候\\w就不再表示一个字符了\n 字符组里面的内容不需要转义\n 重复 {n} n代表重复次数，前面一定是元字符或者分组 \\d{11} 匹配一个11位的数字，如果要匹配手机号码，需要一些改造\n   代码 说明     \\* 重复零次或更多次   \\+ 重复一次或更多次   \\? 重复零次或一次   {n} 重复 n 次   {n,} 重复 n 次或更多次   {n,m} 重复 n 到 m 次    小测试：如何模糊匹配IP地址\n 重复只对紧邻的上一个最小正则单元起作用，如123*不能匹配123123，可以匹配12333\n 贪婪 贪婪顾名思义就是尽力的匹配，这也是正则表达式中默认的匹配模式，与此对用的就是另一种模式叫最小匹配，即在能匹配更多的情况下选择放弃，总是返回最小的结果集。\n例子：我们现在想找到类似通配符下的a*c下字符，即a开头c结尾的字符串。\nabccccbcdda\r 我们这样写a\\w*c，和这样写a\\w*?c 得到的结果是不一样的\n   表达式 结果     a\\w*c abccccbc   a\\w*?c abc    在*重复的情况下，后面的?告诉重复符*不要匹配太多，所以当找到第一个c的时候就收手了，而默认情况下匹配到了最后一个c。\n所以在写*或{n,m}重复的时候一定要注意是否需要贪婪模式，否则匹配后的结果可能会略过很多可能你需要的信息。\n选择分支 在此我们引入一个符号|，他表示或，即程序语言里的or。\n以下引用自正则表达式30分钟入门教程\n\\d{5}-\\d{4}|\\d{5}这个表达式用于匹配美国的邮政编码。美国邮编的规则是5位数字，或者用连字号间隔的9位数字。之所以要给出这个例子是因为它能说明一个问题：使用分枝条件时，要注意各个条件的顺序。如果你把它改成\\d{5}|\\d{5}-\\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。原因是匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。\r 括号的作用 界定作用范围 还记得gr[ae]y吗？ gr(a|e)y 也可以实现这样的匹配，如果没有括号，gra|ey就成了毫无关系的两部分。\n分组和反向引用 正则表达式的匹配和捕获 正则表达式的匹配其实就是点到即止，只要符合表达式的规则即可，但是引入了分组以后，正则表达式就有了更大的发挥空间。\n分组使用括号标记出本次匹配需要提取的数据，并且将匹配成功的数据返回给程序供其使用。\n对于grey这个单词 gr[ae]y 和 gr(e|a)y 都可以将其匹配，但是对于前者，只能匹配grey，而后者将匹配的内容返回，即捕获了字母e。\nPS.分组往往伴随着分隔符出现，但是请不要把二者的真正含义搞混了。\r 分组所提取出来的值可能不止一组，正则会把他们自动编号，从0（0表示所有匹配）开始，group1是第一个分组，以此类推。分组可以被捕获，以BBCODE为例，下面是源代码\n正常文字\t正常文字\r我是 [b]粗体字[/b]\tCtrl+B\t我是粗体字\r我是[i]斜体字[/i]\tCtrl+I\t我是斜体字\r我是[u]下划线文字[/u]\tCtrl+U\t我是下划线文字\r我是[s]删除线文字[/s]\tCtrl+D\t我是删除线文字\r我是[mask]马赛克文字[/mask]\tCtrl+M\t我是马赛克文字\r我是\r[color=red]彩[/color][color=green]色[/color][color=blue]的[/color][color=orange]哟[/color]。\t我是\r彩色的哟。\r[size=10]不同[/size][size=14]大小的[/size][size=18]文字[/size]效果也可实现。\t不同大小的文字效果也可实现。\rBangumi 番组计划: [url]http://chii.in/[/url]\tCtrl+L\tBangumi 番组计划: http://chii.in/\r带文字说明的网站链接：\r[url=http://chii.in]Bangumi 番组计划[/url]\tCtrl+L\t带文字说明的网站链接：\rBangumi 番组计划\r存放于其他网络服务器的图片：\r[img]http://chii.in/img/ico/bgm88-31.gif[/img]\r 首先，我们用\\[([a-z]+)\\](.*?)\\[\\/\\1]匹配，最后的\\1意思是第一个分组，用来闭合标签，但是发现只能得到前面几个简单的标签，因为我们没有考虑到有些标签是有属性的。\n我们修改了刚才的表达式，再用\\[([a-z]+)=?(\\w*)\\](.*?)\\[\\/\\1]去匹配这句话，可以得到标签、属性和内容。\n下面我们来分析一下：([a-z]+)用于tag，注意等于号的出现次数，等号后面就是属性，(.*)提取到了标签里的内容，最后引用第一分组使标签闭合!\n分组别名 分组在创建时默认的命名为1,2,3，但是你可能为了方便想自己命名，这个功能正则早都考虑到了。只要在分组的前面或后面加入?，其中groupname就是你的组名，在后面引用的时候用\\k引用即可。\n所以刚才的表达式可以修改为：\n\\[(?[a-z]+)=?(\\w*)\\](.*?)\\[\\/\\k]\r 分组别名可以让正则表达式更容易理解，而且在coding的时候别名会成为键名返回给程序员，简化了很多操作！\n上面的正则放在PHP里运行，则会返回以下结果，自动保存了默认组名和别名。\n//以上省略\r[tag] = Array\r(\r[0] = b\r[1] = i\r[2] = u\r[3] = s\r[4] = mask\r[5] = color\r[6] = color\r[7] = color\r[8] = color\r[9] = size\r[10] = size\r[11] = size\r[12] = url\r[13] = img\r)\r[1] = Array\r(\r[0] = b\r[1] = i\r[2] = u\r[3] = s\r[4] = mask\r[5] = color\r[6] = color\r[7] = color\r[8] = color\r[9] = size\r[10] = size\r[11] = size\r[12] = url\r[13] = img\r)\r//以下省略\r 替换 正则表达式的匹配或者提取已经基本讲完了，下面\n 上面的程序先用正则表达式提取出三个分组，分别匹配了月份，日期和年份。 再看变量replacement里的$1、$3，他们就代表了第一分组和第三分组\n我们刚刚学习了分组命名，我们试试修改第二组的命名\n\\d+), (\\d+)/i';\r$replacement = '$1,16,$2,$3,$month';\recho preg_replace($pattern, $replacement, $string);\r//April,16,15,2003,$month\r?\r 结果好像不是我们想要的，看来分组命名在PHP的正则替换里没有作用，以后使用的时候一定要注意！\n断言 断言的意思就是预先判断匹配字符的位置，以达到更精确的匹配。源文本如下：\ntar rat head tail echo var_dump ma1ke\r 现在需要找出字母a前面是一个字母v或者r的词，我们使用(?现在需要找出字母a后面是一个字母d或者是数字的词，我们使用a(?=(\\d|d))，即可达到效果。即在原本的条件右边附加(?=expression)。\n 断言只是条件，帮你找到真正需要的字符串，本身并不会匹配！所以不用担心他会影响分组编号。\n 总结 正则表达式水很深，但的确很强大！简单一行规则就包含了十分复杂的逻辑和运算，确实快赶上一门程序语言了，如果你能够掌握他，那么他会极高的提高你的工作效率。\n但正则表达式不是一朝一夕就能掌握的，更多的在于理解正则表达式里的精神和情怀，去包容他，放纵他，打碎他，然后创造它！\n","wordCount":"371","inLanguage":"en","datePublished":"2014-07-22T07:51:00Z","dateModified":"2014-07-22T07:51:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/regex_abc.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>正则表达式教程</h1><div class=post-meta>July 22, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-07-22_regex_abc.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><h1 id=正则表达式入门>正则表达式入门<a hidden class=anchor aria-hidden=true href=#正则表达式入门>#</a></h1><h2 id=概念>概念<a hidden class=anchor aria-hidden=true href=#概念>#</a></h2><blockquote><p>字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。</p></blockquote><hr><h2 id=支持>支持<a hidden class=anchor aria-hidden=true href=#支持>#</a></h2><blockquote><p>在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。</p></blockquote><p>以上内容引自百度百科</p><hr><p>[TOC]</p><h2 id=测试工具>测试工具<a hidden class=anchor aria-hidden=true href=#测试工具>#</a></h2><h3 id=在线版>在线版<a hidden class=anchor aria-hidden=true href=#在线版>#</a></h3><p><a href=http://regex.larsolavtorvik.com/>http://regex.larsolavtorvik.com/</a>
+<a href=http://tool.oschina.net/regex>http://tool.oschina.net/regex</a>
+<a href=http://www.rubular.com/>http://www.rubular.com/</a>
+<a href=http://zhengze.51240.com/>http://zhengze.51240.com/</a>
+<a href=http://www.kingshang.com/>http://www.kingshang.com/</a>
+<a href=http://zhengze.51240.com/>http://zhengze.51240.com/</a></p><h3 id=离线版>离线版<a hidden class=anchor aria-hidden=true href=#离线版>#</a></h3><p><a href=http://pan.baidu.com/s/1qWkCdSK>正则表达式测试器c#绿色版</a>
+<a href=http://pan.baidu.com/s/1eQd4TYa>正则表达式测试英文版</a>
+<a href=http://pan.baidu.com/s/1nt2Zg9r>更多下载</a></p><hr><h2 id=规则>规则<a hidden class=anchor aria-hidden=true href=#规则>#</a></h2><h3 id=通配符>通配符<a hidden class=anchor aria-hidden=true href=#通配符>#</a></h3><p>还记得<code>*</code>和<code>？</code>通配符吗?</p><p>如果要找到所有pdf文件，就在文件管理器中输入*.pdf即可。一般的搜索通配符已经可以很好的对付了，但是如果需要搜索的条件突然变得很复杂：我需要在号码簿里筛选出来<code>北京和陕西省</code>所有的<code>手机号</code>和<code>座机号</code>，通配符就表示压力山大了！而这项任务对于正则表达式而言，简直是轻而一举。我相信你看完此文，一定能轻松写出对应的匹配语句！</p><h3 id=最基础>最基础<a hidden class=anchor aria-hidden=true href=#最基础>#</a></h3><p><code>9527</code> <code>10086</code> <code>regex</code>
+这种最平常不过的字符所蕴含的意思就是他们本身</p><h3 id=字符组>字符组<a hidden class=anchor aria-hidden=true href=#字符组>#</a></h3><p>字符组就是在<code>[]</code>(方括号)中列举出所有的可能再去匹配</p><h4 id=直接匹配>直接匹配<a hidden class=anchor aria-hidden=true href=#直接匹配>#</a></h4><p><code>[0-9]</code> 匹配一个数字</p><p><code>[aeiou]</code> 匹配任何一个英文元音字母</p><p><code>[.?!]</code> 匹配标点符号(.或?或!)。</p><p><code>gr[ae]y</code> 匹配grey 或者 gray</p><blockquote><p>方括号内的多个字符实际上只占一个坑，他无法匹配greay或graay，因为<code>gr[ae]y</code>只匹配四个字母，<code>[ae]</code>只占一个</p></blockquote><p><code>[Hh][123456]</code> 匹配HTML里所有的h标签，这种写法考虑到了H标签的大小写</p><pre><code>PS.在w3c的规范里还是推荐所有html标签都必须是小写字母，所有属性都使用双引号包裹
+</code></pre><h4 id=排除型匹配>排除型匹配<a hidden class=anchor aria-hidden=true href=#排除型匹配>#</a></h4><p><code>gr[^ae]y</code> 匹配除了grey和gray以外的所有单词
+<code>h[^123]</code> 匹配不是h1,h2,h3的标签</p><h3 id=元字符>元字符<a hidden class=anchor aria-hidden=true href=#元字符>#</a></h3><p>元字符就是在正则语言中代表特殊意义的字符，如</p><p><code>[0-9]</code>代表的含意与<code>\d</code>一样</p><p><code>[a-z0-9A-Z_]</code>也完全等同于<code>\w</code>（如果只考虑英文的话）。</p><p><code>^</code>代表每一行的开始，<code>$</code>代表每一行的结束</p><p><code>^$</code> 匹配空行</p><p>^foot$ 匹配只有foot一个词的行</p><blockquote><p>元字符的出现可以理解为方便书写</p></blockquote><p><strong>基础元字符表</strong></p><table><thead><tr><th style=text-align:center>代码</th><th style=text-align:left>说明</th></tr></thead><tbody><tr><td style=text-align:center><code>.</code></td><td style=text-align:left>匹配除换行符以外的任意字符</td></tr><tr><td style=text-align:center><code>\w</code></td><td style=text-align:left>匹配字母或数字或下划线或汉字</td></tr><tr><td style=text-align:center><code>\W</code></td><td style=text-align:left>匹配任意不是字母或数字或下划线或汉字的字符</td></tr><tr><td style=text-align:center><code>\s</code></td><td style=text-align:left>匹配任意的空白符</td></tr><tr><td style=text-align:center><code>\S</code></td><td style=text-align:left>匹配任意非空白符</td></tr><tr><td style=text-align:center><code>\d</code></td><td style=text-align:left>匹配数字</td></tr><tr><td style=text-align:center><code>\D</code></td><td style=text-align:left>匹配非数字</td></tr><tr><td style=text-align:center><code>\b</code></td><td style=text-align:left>匹配单词的开始或结束</td></tr><tr><td style=text-align:center><code>^</code></td><td style=text-align:left>匹配字符串的开始</td></tr><tr><td style=text-align:center><code>$</code></td><td style=text-align:left>匹配字符串的结束</td></tr></tbody></table><h3 id=转义>转义<a hidden class=anchor aria-hidden=true href=#转义>#</a></h3><p>如果要匹配 <code>C:\\WINDOWS</code>，我们要如何描述<code>\</code>反斜杠呢？
+这个时候就需要用到转义，在这种特殊标点前面加一个<code>\</code>，他的意思就表示后面的标点是普通的标点，比如<code>\\w</code>匹配字符 \w，这个时候\w就不再表示一个字符了</p><blockquote><p>字符组里面的内容不需要转义</p></blockquote><h3 id=重复>重复<a hidden class=anchor aria-hidden=true href=#重复>#</a></h3><p>{n} n代表重复次数，前面一定是元字符或者分组
+\d{11} 匹配一个11位的数字，如果要匹配手机号码，需要一些改造</p><table><thead><tr><th style=text-align:center>代码</th><th style=text-align:left>说明</th></tr></thead><tbody><tr><td style=text-align:center><code>\*</code></td><td style=text-align:left>重复零次或更多次</td></tr><tr><td style=text-align:center><code>\+</code></td><td style=text-align:left>重复一次或更多次</td></tr><tr><td style=text-align:center><code>\?</code></td><td style=text-align:left>重复零次或一次</td></tr><tr><td style=text-align:center><code>{n}</code></td><td style=text-align:left>重复 n 次</td></tr><tr><td style=text-align:center><code>{n,}</code></td><td style=text-align:left>重复 n 次或更多次</td></tr><tr><td style=text-align:center><code>{n,m}</code></td><td style=text-align:left>重复 n 到 m 次</td></tr></tbody></table><p>小测试：如何模糊匹配IP地址</p><blockquote><p>重复只对紧邻的上一个最小正则单元起作用，如123*不能匹配123123，可以匹配12333</p></blockquote><h3 id=贪婪>贪婪<a hidden class=anchor aria-hidden=true href=#贪婪>#</a></h3><p><strong>贪婪</strong>顾名思义就是尽力的匹配，这也是正则表达式中默认的匹配模式，与此对用的就是另一种模式叫<strong>最小匹配</strong>，即在能匹配更多的情况下选择放弃，总是返回最小的结果集。</p><p>例子：我们现在想找到类似通配符下的<code>a*c</code>下字符，即a开头c结尾的字符串。</p><pre><code>abccccbcdda
+</code></pre><p>我们这样写<code>a\w*c</code>，和这样写<code>a\w*?c</code> 得到的结果是不一样的</p><table><thead><tr><th>表达式</th><th>结果</th></tr></thead><tbody><tr><td><code>a\w*c</code></td><td>abccccbc</td></tr><tr><td><code>a\w*?c</code></td><td>abc</td></tr></tbody></table><p>在<code>*</code>重复的情况下，后面的<code>?</code>告诉重复符<code>*</code>不要匹配太多，所以当找到第一个c的时候就收手了，而默认情况下匹配到了最后一个c。</p><p>所以在写*或{n,m}重复的时候一定要注意是否需要贪婪模式，否则匹配后的结果可能会略过很多可能你需要的信息。</p><h3 id=选择分支>选择分支<a hidden class=anchor aria-hidden=true href=#选择分支>#</a></h3><p>在此我们引入一个符号<code>|</code>，他表示或，即程序语言里的<code>or</code>。</p><p>以下引用自<a href=http://www.jb51.net/tools/zhengze.html title=正则表达式30分钟入门教程>正则表达式30分钟入门教程</a></p><pre><code>\d{5}-\d{4}|\d{5}这个表达式用于匹配美国的邮政编码。美国邮编的规则是5位数字，或者用连字号间隔的9位数字。之所以要给出这个例子是因为它能说明一个问题：使用分枝条件时，要注意各个条件的顺序。如果你把它改成\d{5}|\d{5}-\d{4}的话，那么就只会匹配5位的邮编(以及9位邮编的前5位)。原因是匹配分枝条件时，将会从左到右地测试每个条件，如果满足了某个分枝的话，就不会去再管其它的条件了。
+</code></pre><h3 id=括号的作用>括号的作用<a hidden class=anchor aria-hidden=true href=#括号的作用>#</a></h3><h4 id=界定作用范围>界定作用范围<a hidden class=anchor aria-hidden=true href=#界定作用范围>#</a></h4><p>还记得gr[ae]y吗？ <code>gr(a|e)y</code> 也可以实现这样的匹配，如果没有括号，<code>gra|ey</code>就成了毫无关系的两部分。</p><h4 id=分组和反向引用>分组和反向引用<a hidden class=anchor aria-hidden=true href=#分组和反向引用>#</a></h4><h5 id=正则表达式的匹配和捕获>正则表达式的匹配和捕获<a hidden class=anchor aria-hidden=true href=#正则表达式的匹配和捕获>#</a></h5><p>正则表达式的匹配其实就是点到即止，只要符合表达式的规则即可，但是引入了分组以后，正则表达式就有了更大的发挥空间。</p><p>分组使用括号标记出本次匹配需要提取的数据，并且将匹配成功的数据返回给程序供其使用。</p><p>对于<strong>grey</strong>这个单词 <code>gr[ae]y</code> 和 <code>gr(e|a)y</code> 都可以将其匹配，但是对于前者，只能匹配grey，而后者将匹配的内容返回，即<strong>捕获</strong>了字母e。</p><pre><code>PS.分组往往伴随着分隔符出现，但是请不要把二者的真正含义搞混了。
+</code></pre><p>分组所提取出来的值可能不止一组，正则会把他们自动编号，从0（0表示所有匹配）开始，group1是第一个分组，以此类推。分组可以被捕获，以BBCODE为例，下面是源代码</p><pre><code>正常文字		
+正常文字
+我是 [b]粗体字[/b]	 Ctrl+B	
+我是粗体字
+我是[i]斜体字[/i]	 Ctrl+I	
+我是斜体字
+我是[u]下划线文字[/u]	 Ctrl+U	
+我是下划线文字
+我是[s]删除线文字[/s]	 Ctrl+D	
+我是删除线文字
+我是[mask]马赛克文字[/mask]	 Ctrl+M	
+我是马赛克文字
+我是
+[color=red]彩[/color][color=green]色[/color][color=blue]的[/color][color=orange]哟[/color]。		
+我是
+彩色的哟。
+[size=10]不同[/size][size=14]大小的[/size][size=18]文字[/size]效果也可实现。		
+不同大小的文字效果也可实现。
+Bangumi 番组计划: [url]http://chii.in/[/url]	 Ctrl+L	
+Bangumi 番组计划: http://chii.in/
+带文字说明的网站链接：
+[url=http://chii.in]Bangumi 番组计划[/url]	 Ctrl+L	
+带文字说明的网站链接：
+Bangumi 番组计划
+存放于其他网络服务器的图片：
+[img]http://chii.in/img/ico/bgm88-31.gif[/img]
+</code></pre><p>首先，我们用<code>\[([a-z]+)\](.*?)\[\/\1]</code>匹配，最后的<code>\1</code>意思是第一个分组，用来闭合标签，但是发现只能得到前面几个简单的标签，因为我们没有考虑到有些标签是有属性的。</p><p>我们修改了刚才的表达式，再用<code>\[([a-z]+)=?(\w*)\](.*?)\[\/\1]</code>去匹配这句话，可以得到标签、属性和内容。</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2014/07/813247642.jpg alt=使用工具测试正则表达式 title=使用工具测试正则表达式></p><p>下面我们来分析一下：([a-z]+)用于tag，注意等于号的出现次数，等号后面就是属性，<code>(.*)</code>提取到了标签里的内容，最后引用第一分组使标签闭合!</p><h4 id=分组别名>分组别名<a hidden class=anchor aria-hidden=true href=#分组别名>#</a></h4><p>分组在创建时默认的命名为1,2,3，但是你可能为了方便想自己命名，这个功能正则早都考虑到了。只要在分组的前面或后面加入<code>?&lt;groupname></code>，其中groupname就是你的组名，在后面引用的时候用<code>\k&lt;groupname></code>引用即可。</p><p>所以刚才的表达式可以修改为：</p><pre><code>\[(?&lt;tag&gt;[a-z]+)=?(\w*)\](.*?)\[\/\k&lt;tag&gt;]
+</code></pre><p>分组别名可以让正则表达式更容易理解，而且在coding的时候别名会成为键名返回给程序员，简化了很多操作！</p><p>上面的正则放在PHP里运行，则会返回以下结果，自动保存了默认组名和别名。</p><pre><code>//以上省略
+[tag] =&gt; Array
+    (
+        [0] =&gt; b
+        [1] =&gt; i
+        [2] =&gt; u
+        [3] =&gt; s
+        [4] =&gt; mask
+        [5] =&gt; color
+        [6] =&gt; color
+        [7] =&gt; color
+        [8] =&gt; color
+        [9] =&gt; size
+        [10] =&gt; size
+        [11] =&gt; size
+        [12] =&gt; url
+        [13] =&gt; img
+    )
+
+[1] =&gt; Array
+    (
+        [0] =&gt; b
+        [1] =&gt; i
+        [2] =&gt; u
+        [3] =&gt; s
+        [4] =&gt; mask
+        [5] =&gt; color
+        [6] =&gt; color
+        [7] =&gt; color
+        [8] =&gt; color
+        [9] =&gt; size
+        [10] =&gt; size
+        [11] =&gt; size
+        [12] =&gt; url
+        [13] =&gt; img
+    )
+//以下省略
+</code></pre><h3 id=替换>替换<a hidden class=anchor aria-hidden=true href=#替换>#</a></h3><p>正则表达式的匹配或者提取已经基本讲完了，下面</p><pre><code>&lt;?php
+    $string = 'April 15, 2003';
+    $pattern = '/(\w+) (\d+), (\d+)/i';
+    $replacement = '$1,16,$3';
+    echo preg_replace($pattern, $replacement, $string);
+    //April,16,2003
+?&gt;
+</code></pre><p>上面的程序先用正则表达式提取出三个分组，分别匹配了月份，日期和年份。
+再看变量replacement里的<code>$1</code>、<code>$3</code>，他们就代表了第一分组和第三分组</p><p>我们刚刚学习了分组命名，我们试试修改第二组的命名</p><pre><code>&lt;?php
+    $string = 'April 15, 2003';
+    $pattern = '/(\w+) (?&lt;month&gt;\d+), (\d+)/i';
+    $replacement = '$1,16,$2,$3,$month';
+    echo preg_replace($pattern, $replacement, $string);
+    //April,16,15,2003,$month
+?&gt;
+</code></pre><p>结果好像不是我们想要的，看来分组命名在PHP的正则替换里没有作用，以后使用的时候一定要注意！</p><h3 id=断言>断言<a hidden class=anchor aria-hidden=true href=#断言>#</a></h3><p>断言的意思就是预先判断匹配字符的位置，以达到更精确的匹配。源文本如下：</p><pre><code>tar rat head tail echo var_dump ma1ke
+</code></pre><p>现在需要找出字母a前面是一个字母v或者r的词，我们使用(?&lt;=[vr])a，即可达到效果。即在原本的条件左边附加(?&lt;=expression)。</p><p>现在需要找出字母a后面是一个字母d或者是数字的词，我们使用a(?=(\d|d))，即可达到效果。即在原本的条件右边附加(?=expression)。</p><blockquote><p>断言只是条件，帮你找到真正需要的字符串，本身并不会匹配！所以不用担心他会影响分组编号。</p></blockquote><h2 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h2><p>正则表达式水很深，但的确很强大！简单一行规则就包含了十分复杂的逻辑和运算，确实快赶上一门程序语言了，如果你能够掌握他，那么他会极高的提高你的工作效率。</p><p>但正则表达式不是一朝一夕就能掌握的，更多的在于理解正则表达式里的精神和情怀，去包容他，放纵他，打碎他，然后创造它！</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/regular/>regular</a></li><li><a href=https://phpgao.github.io/tags/expression/>expression</a></li><li><a href=https://phpgao.github.io/tags/regex/>regex</a></li><li><a href=https://phpgao.github.io/tags/abc/>abc</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/php_quotation_marks.html><span class=title>« Prev Page</span><br><span>单引号和双引号的区别及用法</span></a>
+<a class=next href=https://phpgao.github.io/check_running_python.html><span class=title>Next Page »</span><br><span>Python程序监控脚本</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

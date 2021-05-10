@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>alpine on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/alpine/</link>
+    <description>Recent content in alpine on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 10 Mar 2017 05:23:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/alpine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>体验Alpine-Linux-Docker-Image</title>
+      <link>https://phpgao.github.io/docker_alpine.html</link>
+      <pubDate>Fri, 10 Mar 2017 05:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_alpine.html</guid>
+      <description>&lt;p&gt;如果你已经研究过老高的&lt;a href=&#34;https://blog.phpgao.com/kcptun_on_sakura.html&#34;&gt;为樱花打造的KCPTUN&lt;/a&gt;，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3782981747.png&#34; alt=&#34;alpine_log&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

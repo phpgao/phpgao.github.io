@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sakura on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sakura/</link>
+    <description>Recent content in sakura on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 02 Mar 2017 02:51:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sakura/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为樱花打造的KCPTUN</title>
+      <link>https://phpgao.github.io/kcptun_on_sakura.html</link>
+      <pubDate>Thu, 02 Mar 2017 02:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun_on_sakura.html</guid>
+      <description>&lt;p&gt;老高课余时间研究了一下kcptun，然后维护了一个支持shadowsocks-libv + kcptun的镜像，希望能给大家点帮助。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

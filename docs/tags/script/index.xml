@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>script on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/script/</link>
+    <description>Recent content in script on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 May 2015 10:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/script/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>将-php-fpm-配置为服务</title>
+      <link>https://phpgao.github.io/php-fpm-service.html</link>
+      <pubDate>Thu, 14 May 2015 10:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-service.html</guid>
+      <description>&lt;p&gt;请将以下脚本适当修改后命名为&lt;strong&gt;php-fpm&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用Python写了个日志清理的脚本</title>
+      <link>https://phpgao.github.io/log_cleaner.html</link>
+      <pubDate>Tue, 10 Jun 2014 03:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/log_cleaner.html</guid>
+      <description>欢迎吐槽！
+#! /usr/bin/env python# -*- coding: utf-8 -*-import os,time,shutilpath = os.getcwd()target_dir = []cal = []target_dir.append(&#39;/var/lib/mysql/log/&#39;)target_dir.append(&#39;/newlogs/&#39;)target_dir.append(&#39;/oldlogs/&#39;)#初始化删除文件名del_ext = [&#39;frm&#39;,&#39;MYD&#39;,&#39;MYI&#39;]#你要保留几天days_before = 5#初始化删除日期for x in xrange(days_before+1,days_before+30):cal.append(time.strftime(&#39;%Y_%m_%d&#39;,time.localtime(time.time() - x*24*3600)))#初始化删除文件名，使用笛卡尔积！fl = map(&#39;.&#39;.join, [[x,y] for x in cal for y in del_ext])#以日期命名的文件夹cal = []for x in xrange(days_before+1,days_before+30):cal.append(time.strftime(&#39;%Y-%m-%d&#39;,time.localtime(time.time() - x*24*3600)))fl += cal#获取文件扩展名def get_ext(filename):return filename.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mstsc on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/mstsc/</link>
+    <description>Recent content in mstsc on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 Jun 2014 08:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/mstsc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows远程连接优化</title>
+      <link>https://phpgao.github.io/win7_mstsc.html</link>
+      <pubDate>Mon, 09 Jun 2014 08:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/win7_mstsc.html</guid>
+      <description>工作需要必须使用mstsc(Microsoft terminal services client)连接生产服务器，之前因为不知什么原因，mstsc开始很卡，所以用了teamviewer一段时间，感觉还是不如mstsc稳定
+但是win7的mstsc问题多多，一个一个说吧
+总是新建进程 每次使用保存好的密码登陆后总是和上一次显示的桌面环境不一样，就好像注销了一样，每次都要在任务管理器里切换一回，很是麻烦，原因是mstsc新建了一个进程，导致了操作环境的初始化，按照老高的方法试试：
+  运行mstsc时在后面加上 /admin，原理是直接接管控制台
+ mstsc /admin   在目标机器上设置一下 这是由于远程桌面允许一个用户可以有多个远程会话，如果不想有这个效果，可以在目标机器运行gpedit.msc，然后进入组策略-计算机设置-管理模板-终端服务，设置限制终端服务用户到一个远程会话为启用即可。
+  3.开始-管理工具-终端服务配制-设置
+ 连接 - RDP-TCP - 网卡 - 2个链接 服务器设置 - 限制用户使用一个会话 开始&amp;mdash;控制面板&amp;mdash;授权&amp;mdash;选择“每设备或每用户”&amp;mdash;否&amp;mdash;确定
+ 连接后操作很卡 原因在于从vista开始，微软在TCP/IP协议栈里新加了一个叫做Window Auto-Tuning的功能。这个功能本身的目的是为了让操作系统根据网络的实时性能（比如响应时间）来动态调整网络上传输的数据窗口的大小，从而达到实时优化网络性能的目的。但是，在某种情况下，这个功能反而会使远程桌面的响应变的非常的慢。解决办法如下：
+开始-运行-输入
+netsh interface tcp set global autotuninglevel=disabled 端口修改 端口3389表示亚历山大！换一个自己喜欢的数字吧，嫌麻烦的TX可以直接百度 mstsc端口修改工具
+ 打开“开始→运行”，输入&amp;quot;regedit&amp;quot;，打开注册表，进入以下路径：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\Wds\rdpwd\Tds\tcp, 修改PortNamber值3389为3390。 打开[HKEY_LOCAL_MACHINE\SYSTEM\CurrentContro1Set\Control\Tenninal Server\WinStations\RDP\Tcp, 将PortNumber值3389为3390。 修改完毕，重启以下服务(控制面板中的服务中)： Microsoft Remote Desktop Connection 和 Remote Desktop Services UserMode Port Redirector 登陆方式[IP:3390] 部分转自网络！  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>浏览器 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+    <description>Recent content in 浏览器 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Nov 2019 06:34:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos8-初体验</title>
+      <link>https://phpgao.github.io/centos8_experience.html</link>
+      <pubDate>Tue, 26 Nov 2019 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos8_experience.html</guid>
+      <description>&lt;p&gt;centos8已经发布有一段时间了，老高近期下载并安装了&lt;code&gt;CentOS-8-x86_64-1905-boot.iso&lt;/code&gt;版本，给大家当个小白鼠！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2019/11/3214508915.png&#34; alt=&#34;begin.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>puppeteer的使用教程2---更多设置</title>
+      <link>https://phpgao.github.io/puppeteer_basic_settings.html</link>
+      <pubDate>Mon, 19 Aug 2019 11:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/puppeteer_basic_settings.html</guid>
+      <description>&lt;p&gt;在第一篇，老高只是简单的介绍了puppeteer如何安装和简单的用法，在第二篇中，老高为大家带来chrome浏览器的一些基本设置，比如禁止gpu以提升性能等等！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>puppeteer的使用教程1---基本用法</title>
+      <link>https://phpgao.github.io/puppeteer.html</link>
+      <pubDate>Mon, 19 Aug 2019 10:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/puppeteer.html</guid>
+      <description>&lt;p&gt;说到爬虫，就不得不接触一些反爬的技术了。其中，针对一些无法绕过或者无法正常阅读的JS代码，我们的最终法宝就是无头浏览器了！&lt;/p&gt;
+&lt;p&gt;无头浏览器其实就是为我们提供了一个环境，这个环境让我们可以使用一些指令，这些指令基本能够包含人们能够用到的所有操作，所以特别适合用来做一些自动化测试(界面，接口或者漏洞)，或者爬虫。&lt;/p&gt;
+&lt;p&gt;在Puppeteer之前，还是有很多无头浏览器的，比如老牌的selenium，还有phantomJs，目前他们已经基本停止维护，所以我们今天的主角就是Puppeteer了！Puppeteer到底如何使用呢？使用的时候又有哪些坑呢？请听老高一一道来！&lt;/p&gt;
+&lt;p&gt;本篇是第一篇，主要让大家对Puppeteer有一个基本的概念！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Youtube开启或禁用HTML5播放器</title>
+      <link>https://phpgao.github.io/youtube_html5_player.html</link>
+      <pubDate>Sat, 24 Jan 2015 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/youtube_html5_player.html</guid>
+      <description>&lt;p&gt;用过MAC的TX都知道，如果没有FLASH想要播放YouTube的视频很麻烦。虽然用Chrome内置的FLASH很不错，但是动辄70+℃的CPU实在伤不起啊。H5播放器就没有这个弊端了，从此妈妈再也不用担心我的MAC了。&lt;/p&gt;
+&lt;p&gt;YouTube其实早就推出了H5的播放器，只是在PC端默认没有被开启而已。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>推荐几个chrome必装插件</title>
+      <link>https://phpgao.github.io/chrome-extentions.html</link>
+      <pubDate>Fri, 19 Sep 2014 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chrome-extentions.html</guid>
+      <description>普通用户篇 Adblock大家族 URL：
+Adblock Plus
+AdBlock
+Adblock Pro
+这几个货名气太大，赶紧安装，远离广告
+强制雅黑字体 URL：强制雅黑字体
+win7下还是用雅黑吧。。。。其他系统随意
+OneTab URL：OneTab
+标签神器，我就用这个导出当前所有标签的URL
+Proxy SwitchySharp URL：Proxy SwitchySharp
+这个就不多说了，翻{防屏蔽}墙神器
+Tampermonkey URL：Tampermonkey
+油猴脚本，允许你在网页中执行任何js
+微博是个好图床 URL：微博是个好图床
+图片外链神器么，趁着Sina还没有封，抓紧用吧
+微博急简 URL：微博急简
+新浪微博的官网实在恶心，要学会做减法
+慧慧购物助手 URL：慧慧购物助手
+购物必备，海淘也给力！
+妈妈再也不用担心我的macbook发烫了计划2.0Beta URL：妈妈再也不用担心我的macbook发烫了计划2.0Beta
+我承认这个插件在气势上已经赢了，优酷土豆去广告
+开发者篇 POSTMAN URL：POSTMAN
+chrome下测试接口神器
+User-Agent Switcher URL：User-Agent Switcher
+修改浏览器代理，调试app或者mobile页，还可以去广告。
+NoFollow URL：NoFollow
+seo专用，给网页中no follow的链接高亮出来
+SEO in China URL：SEO in China
+快捷查询网站的SEO信息</description>
+    </item>
+    
+    <item>
+      <title>webkit研究(1)</title>
+      <link>https://phpgao.github.io/webkit.html</link>
+      <pubDate>Tue, 15 Jul 2014 06:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/webkit.html</guid>
+      <description>&lt;h2 id=&#34;web-browser-diy&#34;&gt;Web Browser DIY&lt;/h2&gt;
+&lt;p&gt;此文是希望使用开源软件打造一个自己专属的webkit内核浏览器！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决老版世界之窗无法打开插件安装页面</title>
+      <link>https://phpgao.github.io/the_world3.html</link>
+      <pubDate>Tue, 04 Feb 2014 02:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/the_world3.html</guid>
+      <description>世界之窗很经典了，chrome没有流行之前这个绝对好用，简单概括一下就是：纯洁、活好，满足了我的几乎所有需求。
+ 最喜欢的功能(*为360极速也支持)：
+   特色 打分     自动填表注册必备 ★★   系统信息查看方便 ★★   直接搜索剪切板里的内容 ★★★   元素查看器 ★★★   alt键快速保存图片 ★★★   鼠标手势 ★★★★★   超级拖拽 ★★★★★    这个浏览器的前瞻性在当时秒掉一片。。。
+360在2011-03-15很有眼光的收购了世界之窗,然后推出了360极速浏览器(其实就是世界之窗极速版的翻版嘛) 导致了我现役浏览器为360极速6.0(强制升级被我黑掉了)，表喷我，chrome的速度+手势我实在甩不掉啊。 如今的世界之窗6还在体验中，虽然找到了一点原来的感觉，但是就功能性来说还是抵不过360啊！
+废话太多！直接上解决办法：
+1、用记事本打开C:\windows\system32\drivers\etc\名为下hosts文件 2、将以下文字复制粘贴入host文件中并保存。
+#世界之窗 115.182.38.16 bbs.ioage.com118.145.31.149 www.ioage.com118.145.31.149 media.ioage.com118.145.31.149 pages.ioage.com 希望这个IP能支撑一会儿吧。 不知道10年以后还有没有人继续用世界之窗，我一定会！</description>
+    </item>
+    
+  </channel>
+</rss>

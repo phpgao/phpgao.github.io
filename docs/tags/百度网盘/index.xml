@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>百度网盘 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/</link>
+    <description>Recent content in 百度网盘 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 Jul 2014 07:21:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次bypy的使用</title>
+      <link>https://phpgao.github.io/bypy.html</link>
+      <pubDate>Mon, 28 Jul 2014 07:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bypy.html</guid>
+      <description>&lt;p&gt;无意间发现了&lt;a href=&#34;https://github.com/houtianze/bypy&#34;&gt;bypy&lt;/a&gt;一个python写得&lt;strong&gt;百度网盘&lt;/strong&gt;的linux客户端&lt;/p&gt;
+&lt;p&gt;工具实在难得，记录一下，说不定以后能用上！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

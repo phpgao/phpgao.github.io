@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>yum on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/yum/</link>
+    <description>Recent content in yum on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 12 Oct 2015 08:33:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/yum/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>每天自动升级你的Centos</title>
+      <link>https://phpgao.github.io/yum_cron.html</link>
+      <pubDate>Mon, 12 Oct 2015 08:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum_cron.html</guid>
+      <description>搜到了这一篇文章Automatic nightly YUM updates with yum-cron
+给大家安利一下。
+# 安装 yum install yum-cron -y # 配置 vim /etc/sysconfig/yum-cron # 开启服务 chkconfig yum-cron on # or chkconfig --level 345 yum-cron on # 运行服务 service yum-cron start # 检查日志 grep yum.cron /var/log/cron | tail -10 </description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>putty中文乱码</title>
+      <link>https://phpgao.github.io/putty_chinese.html</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/putty_chinese.html</guid>
+      <description>每次重装centos总会碰到关于乱码的种种问题
+一般中文乱码有以下两个原因
+1.中文未安装
+一句话安装
+yum groupinstall &amp;#34;chinese support&amp;#34; # 重启 reboot 2.设置问题
+如果安装了中文支持还不行，那么就要考虑配置是否合适了。
+linux的语言配置文件位于/etc/sysconfig/i18n，使用vim打开
+cp /etc/sysconfig/i18n /etc/sysconfig/i18n.bak vim /etc/sysconfig/i18n 替换原来的内容为
+中文UTF-8（推荐）:
+LANG=&amp;#34;zh_CN.UTF-8&amp;#34; LANGUAGE=&amp;#34;zh_CN.UTF-8:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;latarcyrheb-sun16&amp;#34; 或者
+中文GBK:
+LANG=&amp;#34;zh_CN.GB18030&amp;#34; LANGUAGE=&amp;#34;zh_CN.GB18030:zh_CN.GB2312:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;lat0-sun16&amp;#34; 然后在putty等软件中设置对应字符集即可
+vim乱码请参考老高的另一篇博文 vim中文乱码的解决办法</description>
+    </item>
+    
+    <item>
+      <title>安装编译nginx</title>
+      <link>https://phpgao.github.io/nginx_installation.html</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_installation.html</guid>
+      <description>今天老高更新了一下nginx，顺便把nginx的安装编译过程记录一下，分享给大家！
+一并送上之前老高的博文：
+将nginx配置为服务
+nginx配置详解
+下载 官网下载地址：http://nginx.org/en/download.html
+准备 安装nginx时必须先安装相应的编译工具
+yum -y install gcc gcc-c++ autoconf automake yum -y install zlib zlib-devel openssl openssl-devel pcre-devel centos没有安装make编译器
+yum -y install gcc automake autoconf libtool make 建立nginx 组
+groupadd -r nginx useradd -s /sbin/nologin -g nginx -r nginx 注释：
+zlib:nginx提供gzip模块，需要zlib库支持 openssl:nginx提供ssl功能 pcre:支持地址重写rewrite功能
+修改版本号 再编译之前修改默认的版本号是个不错的习惯
+vim src/core/nginx.h #define NGINX_VERSION &amp;#34;0.0.0&amp;#34; #define NGINX_VER &amp;#34;phpergao&amp;#34; NGINX_VERSION 编译 高大上的编译参数
+./configure \ --prefix=/usr \ --sbin-path=/usr/sbin/nginx \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --pid-path=/var/run/nginx/nginx.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mbr on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/mbr/</link>
+    <description>Recent content in mbr on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Mar 2015 06:27:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/mbr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装双系统的一些记录</title>
+      <link>https://phpgao.github.io/install_multisystem_note.html</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_multisystem_note.html</guid>
+      <description>&lt;h2 id=&#34;mbrgrub&#34;&gt;MBR&amp;amp;GRUB&lt;/h2&gt;
+&lt;p&gt;MBR（Master boot record）指主引导记录，主要用于硬盘分区。GRUB就是安装在MBR中，起引导系统作用。&lt;/p&gt;
+&lt;p&gt;阶段1：POST自检后系统载入目标装置的MBR（Master boot record），即前512字节。MBR一共包含三个部分主引导程序（Boot Loader）、硬盘分区表DPT（Disk Partition table）和硬盘有效标志（55AA）。&lt;/p&gt;
+&lt;p&gt;阶段2：主引导程序被载入内存开始执行，他将继续执行加载系统内核的任务。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

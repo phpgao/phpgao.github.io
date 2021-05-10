@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>qq on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/qq/</link>
+    <description>Recent content in qq on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 26 Oct 2020 08:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/qq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>获取QQ头像</title>
+      <link>https://phpgao.github.io/qq_face_url.html</link>
+      <pubDate>Mon, 26 Oct 2020 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/qq_face_url.html</guid>
+      <description>&lt;p&gt;最近有一个需求，某个需求的某个功能是获取QQ号码的头像，虽然QQ内部有方法能够获取到这个头像的URL，但是多一次请求总是会对性能有影响，所以最后搜索到了一种方法，只要只到对方的QQ号码，就可以拿到Ta的头像。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

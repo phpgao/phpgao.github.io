@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>port on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/port/</link>
+    <description>Recent content in port on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Oct 2014 13:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/port/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>scp命令指定端口号</title>
+      <link>https://phpgao.github.io/scp_port.html</link>
+      <pubDate>Thu, 09 Oct 2014 13:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/scp_port.html</guid>
+      <description>scp命令经常用在主机之间拷贝文件用，但是如果目标机器的sshd的端口不是默认的22，怎么办呢？
+scp -P 1111 root@192.168.1.101:/home/xxx 这样就可以配合ssh-keygen -t rsa命令将生成的pub重命名为authorized_keys，并拷贝至目标机器的~/.ssh/文件夹下，这样以后就可以无密码登录ssh了。
+完</description>
+    </item>
+    
+  </channel>
+</rss>

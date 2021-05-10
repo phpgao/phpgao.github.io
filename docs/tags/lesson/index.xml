@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>lesson on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/lesson/</link>
+    <description>Recent content in lesson on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 Apr 2016 11:16:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/lesson/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel-非常规教程之1-生命周期</title>
+      <link>https://phpgao.github.io/laravel_lesson1.html</link>
+      <pubDate>Fri, 22 Apr 2016 11:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_lesson1.html</guid>
+      <description>&lt;p&gt;上一节老高零(瞎)散(扯)的讲了一下laravel的基本知识，不知道你现在搞清楚symfony vs laravel的关系了吗？其实没多大关系，l借用了s的组件，laravel的屏蔽了框架复杂的内部实现，让程序猿们注重业务的开发，而symfony的学习曲线很陡峭，需要你掌握框架的运行机制和各种组件的关系。&lt;/p&gt;
+&lt;p&gt;本节关注一次请求在Laravel中的生命周期！就是从接收到请求到返回请求整个过程中都发生了哪些比较重要的事件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Laravel-非常规教程之0-引入篇</title>
+      <link>https://phpgao.github.io/laravel_lesson0.html</link>
+      <pubDate>Fri, 22 Apr 2016 05:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_lesson0.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/2314951677.jpg&#34; alt=&#34;laravel logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;hi!大家好。老高又开始折腾laravel了 :-D&lt;/p&gt;
+&lt;p&gt;(基于Laravel 5.2)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>简单socket编程2</title>
+      <link>https://phpgao.github.io/socket-lesson2.html</link>
+      <pubDate>Sat, 27 Jun 2015 14:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-lesson2.html</guid>
+      <description>&lt;p&gt;上一节我们提到了socket编程的基本形式，这一节我们加强服务端的性能！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>简单socket编程1</title>
+      <link>https://phpgao.github.io/socket-lesson1.html</link>
+      <pubDate>Wed, 24 Jun 2015 04:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-lesson1.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2605814858.jpg&#34; alt=&#34;socket&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;说到socket，学过网络基础的人都听过，他是TCP/IP的抽象，他是网络世界的入口，它无处不在。&lt;/p&gt;
+&lt;p&gt;学会了socket编程，就意味着能够更深层次的控制你的流量，之后再看python的urllib*或php的curl，简直就是小儿科！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

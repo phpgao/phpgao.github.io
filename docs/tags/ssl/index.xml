@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ssl on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ssl/</link>
+    <description>Recent content in ssl on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 01 Dec 2016 03:28:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Let&#39;s-Encrypt-----免费的https证书</title>
+      <link>https://phpgao.github.io/let-us_encrypt.html</link>
+      <pubDate>Thu, 01 Dec 2016 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/let-us_encrypt.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/2787518341.png&#34; alt=&#34;letsencrypt&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自网络)&lt;/p&gt;
+&lt;p&gt;老高的证书快过期了(2016-12-11)，本着节约资(R)源(MB)的精神，准备使用&lt;a href=&#34;https://letsencrypt.org/getting-started/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Linux下建立自签名的https网站</title>
+      <link>https://phpgao.github.io/self_signed_ssl_site.html</link>
+      <pubDate>Thu, 09 Jun 2016 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/self_signed_ssl_site.html</guid>
+      <description>&lt;p&gt;学习完了&lt;a href=&#34;https://blog.phpgao.com/encryption_decryption.html&#34;&gt;证书，密钥，加密，rsa到底是啥？&lt;/a&gt;一文后，我们就可以开始着手建立一个自签名的网站了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装编译nginx</title>
+      <link>https://phpgao.github.io/nginx_installation.html</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_installation.html</guid>
+      <description>今天老高更新了一下nginx，顺便把nginx的安装编译过程记录一下，分享给大家！
+一并送上之前老高的博文：
+将nginx配置为服务
+nginx配置详解
+下载 官网下载地址：http://nginx.org/en/download.html
+准备 安装nginx时必须先安装相应的编译工具
+yum -y install gcc gcc-c++ autoconf automake yum -y install zlib zlib-devel openssl openssl-devel pcre-devel centos没有安装make编译器
+yum -y install gcc automake autoconf libtool make 建立nginx 组
+groupadd -r nginx useradd -s /sbin/nologin -g nginx -r nginx 注释：
+zlib:nginx提供gzip模块，需要zlib库支持 openssl:nginx提供ssl功能 pcre:支持地址重写rewrite功能
+修改版本号 再编译之前修改默认的版本号是个不错的习惯
+vim src/core/nginx.h #define NGINX_VERSION &amp;#34;0.0.0&amp;#34; #define NGINX_VER &amp;#34;phpergao&amp;#34; NGINX_VERSION 编译 高大上的编译参数
+./configure \ --prefix=/usr \ --sbin-path=/usr/sbin/nginx \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --pid-path=/var/run/nginx/nginx.</description>
+    </item>
+    
+    <item>
+      <title>为你的网站开启ssl支持</title>
+      <link>https://phpgao.github.io/https_support.html</link>
+      <pubDate>Sat, 13 Sep 2014 00:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/https_support.html</guid>
+      <description>&lt;p&gt;前几天再Startssl已经为我的博客申请的证书通过，今天早上学习了RSA加密原理，趁着热乎劲还没过，下午就把本站全部升级为https啦！&lt;/p&gt;
+&lt;p&gt;看到这个https，瞬间觉得高大上了许多。大家可能认为为自己的网站开启ssl功能很麻烦，其实不然。下面老高就简单的介绍一下开启的步骤，自己也做个记录。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不同的服务器配置ssl的方法大题思路相同，本文以nginx为例。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当然你还可以试试&lt;a href=&#34;https://blog.phpgao.com/let-us_encrypt.html&#34;&gt;使用Let&amp;rsquo;s Encrypt &amp;ndash; 免费的https证书&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

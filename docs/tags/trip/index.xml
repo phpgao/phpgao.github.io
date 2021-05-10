@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>trip on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/trip/</link>
+    <description>Recent content in trip on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 17 Nov 2015 06:22:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/trip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>暴走的程序猿---香港一日游</title>
+      <link>https://phpgao.github.io/hk_trip.html</link>
+      <pubDate>Tue, 17 Nov 2015 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/hk_trip.html</guid>
+      <description>&lt;p&gt;趁着去珠海出差的周末，老高偷偷的到澳门和香港溜达了一圈。这也是老高第一次正式接触万恶的资本主义，所以一定要写一篇文章记录一下！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

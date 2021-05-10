@@ -1,0 +1,69 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Linux下常用解压命令 | 老高的技术博客</title><meta name=keywords content="Linux,unzip"><meta name=description content="大家一定会用到的。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/linux_unzip_command.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Linux下常用解压命令"><meta property="og:description" content="大家一定会用到的。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/linux_unzip_command.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-01-28T13:46:00+00:00"><meta property="article:modified_time" content="2015-01-28T13:46:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Linux下常用解压命令"><meta name=twitter:description content="大家一定会用到的。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Linux下常用解压命令","item":"https://phpgao.github.io/linux_unzip_command.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Linux下常用解压命令","name":"Linux下常用解压命令","description":"大家一定会用到的。\n","keywords":["Linux","unzip"],"articleBody":"大家一定会用到的。\n.tar 解包：tar xvf FileName.tar 打包：tar cvf FileName.tar DirName （注：tar是打包，不是压缩！） ——————————————— .gz 解压1：gunzip FileName.gz 解压2：gzip -d FileName.gz 压缩：gzip FileName .tar.gz 和 .tgz 解压：tar zxvf FileName.tar.gz 压缩：tar zcvf FileName.tar.gz DirName ——————————————— .bz2 解压1：bzip2 -d FileName.bz2 解压2：bunzip2 FileName.bz2 压缩： bzip2 -z FileName .tar.bz2 解压：tar jxvf FileName.tar.bz2 压缩：tar jcvf FileName.tar.bz2 DirName ——————————————— .bz 解压1：bzip2 -d FileName.bz 解压2：bunzip2 FileName.bz 压缩：未知 .tar.bz 解压：tar jxvf FileName.tar.bz 压缩：未知 ——————————————— .Z 解压：uncompress FileName.Z 压缩：compress FileName .tar.Z 解压：tar Zxvf FileName.tar.Z 压缩：tar Zcvf FileName.tar.Z DirName ——————————————— .zip 解压：unzip FileName.zip 压缩：zip FileName.zip DirName ——————————————— .rar 解压：rar x FileName.rar 压缩：rar a FileName.rar DirName ——————————————— .lha 解压：lha -e FileName.lha 压缩：lha -a FileName.lha FileName ——————————————— .rpm 解包：rpm2cpio FileName.rpm | cpio -div ——————————————— .deb 解包：ar p FileName.deb data.tar.gz | tar zxf - ——————————————— .tar .tgz .tar.gz .tar.Z .tar.bz .tar.bz2 .zip .cpio .rpm .deb .slp .arj .rar .ace .lha .lzh .lzx .lzs .arc .sda .sfx .lnx .zoo .cab .kar .cpt .pit .sit .sea 解压：sEx x FileName.* 压缩：sEx a FileName.* FileName sEx只是调用相关程序，本身并无压缩、解压功能，请注意！ gzip 命令 减少文件大小有两个明显的好处，一是可以减少存储空间，二是通过网络传输文件时，可以减少传输的时间。gzip 是在 Linux 系统中经常使用的一个对文件进行压缩和解压缩的命令，既方便又好用。 语法：gzip [选项] 压缩（解压缩）的文件名该命令的各选项含义如下： -c 将输出写到标准输出上，并保留原有文件。-d 将压缩文件解压。-l 对每个压缩文件，显示下列字段： 压缩文件的大小；未压缩文件的大小；压缩比；未压缩文件的名字-r 递归式地查找指定目录并压缩其中的所有文件或者是解压缩。-t 测试，检查压缩文件是否完整。-v 对每一个压缩和解压的文件，显示文件名和压缩比。-num 用指定的数字 num 调整压缩的速度，-1 或 –fast 表示最快压缩方法（低压缩比），-9 或–best表示最慢压缩方法（高压缩比）。系统缺省值为 6。指令实例： gzip *% 把当前目录下的每个文件压缩成 .gz 文件。gzip -dv *% 把当前目录下每个压缩的文件解压，并列出详细的信息。gzip -l *% 详细显示例1中每个压缩的文件的信息，并不解压。gzip usr.tar% 压缩 tar 备份文件 usr.tar，此时压缩文件的扩展名为.tar.gz。\n转自\nhttp://blog.chinaunix.net/uid-27717694-id-3954628.html\n","wordCount":"198","inLanguage":"en","datePublished":"2015-01-28T13:46:00Z","dateModified":"2015-01-28T13:46:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/linux_unzip_command.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>Linux下常用解压命令</h1><div class=post-meta>January 28, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-01-28_linux_unzip_command.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>大家一定会用到的。</p><p>.tar
+解包：tar xvf FileName.tar
+打包：tar cvf FileName.tar DirName
+（注：tar是打包，不是压缩！）
+———————————————
+.gz
+解压1：gunzip FileName.gz
+解压2：gzip -d FileName.gz
+压缩：gzip FileName
+.tar.gz 和 .tgz
+解压：tar zxvf FileName.tar.gz
+压缩：tar zcvf FileName.tar.gz DirName
+———————————————
+.bz2
+解压1：bzip2 -d FileName.bz2
+解压2：bunzip2 FileName.bz2
+压缩： bzip2 -z FileName
+.tar.bz2
+解压：tar jxvf FileName.tar.bz2
+压缩：tar jcvf FileName.tar.bz2 DirName
+———————————————
+.bz
+解压1：bzip2 -d FileName.bz
+解压2：bunzip2 FileName.bz
+压缩：未知
+.tar.bz
+解压：tar jxvf FileName.tar.bz
+压缩：未知
+———————————————
+.Z
+解压：uncompress FileName.Z
+压缩：compress FileName
+.tar.Z
+解压：tar Zxvf FileName.tar.Z
+压缩：tar Zcvf FileName.tar.Z DirName
+———————————————
+.zip
+解压：unzip FileName.zip
+压缩：zip FileName.zip DirName
+———————————————
+.rar
+解压：rar x FileName.rar
+压缩：rar a FileName.rar DirName
+———————————————
+.lha
+解压：lha -e FileName.lha
+压缩：lha -a FileName.lha FileName
+———————————————
+.rpm
+解包：rpm2cpio FileName.rpm | cpio -div
+———————————————
+.deb
+解包：ar p FileName.deb data.tar.gz | tar zxf -
+———————————————
+.tar .tgz .tar.gz .tar.Z .tar.bz .tar.bz2 .zip .cpio .rpm .deb .slp .arj .rar .ace .lha .lzh .lzx .lzs .arc .sda .sfx .lnx .zoo .cab .kar .cpt .pit .sit .sea
+解压：sEx x FileName.*
+压缩：sEx a FileName.* FileName
+sEx只是调用相关程序，本身并无压缩、解压功能，请注意！
+gzip 命令
+减少文件大小有两个明显的好处，一是可以减少存储空间，二是通过网络传输文件时，可以减少传输的时间。gzip 是在 Linux 系统中经常使用的一个对文件进行压缩和解压缩的命令，既方便又好用。
+语法：gzip [选项] 压缩（解压缩）的文件名该命令的各选项含义如下：
+-c 将输出写到标准输出上，并保留原有文件。-d 将压缩文件解压。-l 对每个压缩文件，显示下列字段： 压缩文件的大小；未压缩文件的大小；压缩比；未压缩文件的名字-r 递归式地查找指定目录并压缩其中的所有文件或者是解压缩。-t 测试，检查压缩文件是否完整。-v 对每一个压缩和解压的文件，显示文件名和压缩比。-num 用指定的数字 num 调整压缩的速度，-1 或 &ndash;fast 表示最快压缩方法（低压缩比），-9 或&ndash;best表示最慢压缩方法（高压缩比）。系统缺省值为 6。指令实例：
+gzip *% 把当前目录下的每个文件压缩成 .gz 文件。gzip -dv *% 把当前目录下每个压缩的文件解压，并列出详细的信息。gzip -l *% 详细显示例1中每个压缩的文件的信息，并不解压。gzip usr.tar% 压缩 tar 备份文件 usr.tar，此时压缩文件的扩展名为.tar.gz。</p><p>转自</p><p><a href=http://blog.chinaunix.net/uid-27717694-id-3954628.html>http://blog.chinaunix.net/uid-27717694-id-3954628.html</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/linux/>Linux</a></li><li><a href=https://phpgao.github.io/tags/unzip/>unzip</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/mac_vim_configure.html><span class=title>« Prev Page</span><br><span>mac下vim的美化配置</span></a>
+<a class=next href=https://phpgao.github.io/git_useful_command.html><span class=title>Next Page »</span><br><span>git的一些特殊操作</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>proxy on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/proxy/</link>
+    <description>Recent content in proxy on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Dec 2016 06:38:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/proxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP判断网络连通</title>
+      <link>https://phpgao.github.io/php_test_network.html</link>
+      <pubDate>Mon, 19 Dec 2016 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_test_network.html</guid>
+      <description>&lt;p&gt;PHP代理其实挺麻烦的。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7下使用Squid快速搭建带认证的HTTP代理服务器</title>
+      <link>https://phpgao.github.io/squid_proxy_with_basic_auth.html</link>
+      <pubDate>Tue, 24 May 2016 03:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/squid_proxy_with_basic_auth.html</guid>
+      <description>&lt;p&gt;在centos下很容易就可以搭建好一个HTTP代理服务器，&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;搭建一个socks5代理更是简单的不用说&lt;/a&gt;！&lt;/p&gt;
+&lt;p&gt;不管是测试用途还是自己使用，Squid都是一个很不错的代理工具！他支持正向代理，反向代理，还有透明代理！老高最近搭建了一个简单的squid的正向代理，随便记记笔记！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果只是想使用代理而不需要认证功能，&lt;strong&gt;tinyproxy&lt;/strong&gt;也是不错的选择！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>让你的docker支持代理</title>
+      <link>https://phpgao.github.io/docker_proxy.html</link>
+      <pubDate>Thu, 10 Dec 2015 09:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_proxy.html</guid>
+      <description>&lt;p&gt;功夫网越来越猖狂，连docker都不放过。。。&lt;/p&gt;
+&lt;p&gt;So，我们需要使用代理去下载、搜索我们需要的镜像！&lt;/p&gt;
+&lt;p&gt;需要注意的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过老高的实验，在修改了代理设置后必须重启docker的守护进程！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>在MAC下使用proxychain</title>
+      <link>https://phpgao.github.io/proxychain.html</link>
+      <pubDate>Sun, 25 Oct 2015 14:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/proxychain.html</guid>
+      <description>&lt;p&gt;proxychain的功能很强大，让我们不需要使用export指定ssh的http代理就可以***了。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/3772244129.png&#34; alt=&#34;proxychain&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>pip下使用代理安装包</title>
+      <link>https://phpgao.github.io/pip_via_proxy.html</link>
+      <pubDate>Wed, 09 Sep 2015 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip_via_proxy.html</guid>
+      <description>一句话代码
+pip install --proxy x.x.x.x:8080 requsets pip install --proxy x.x.x.x:8080 --upgrade pip 帮助文件
+pip -h --proxy &amp;lt;proxy&amp;gt; Specify a proxy in the form [user:passwd@]proxy.server:port. </description>
+    </item>
+    
+    <item>
+      <title>代理网站列表</title>
+      <link>https://phpgao.github.io/proxy-list.html</link>
+      <pubDate>Tue, 23 Jun 2015 09:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/proxy-list.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4026837055.png&#34; alt=&#34;快递 代理&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;代理是个好东西！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Privoxy将socks5代理转为http代理</title>
+      <link>https://phpgao.github.io/privoxy-shadowsocks.html</link>
+      <pubDate>Fri, 19 Jun 2015 02:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/privoxy-shadowsocks.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/13067004.png&#34; alt=&#34;访问谷歌&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家都知道shadowsocks只提供了SOCKS5的代理，而没有提供http代理，而很多软件仅提供了http代理的支持，比如老高需要使用shell命令行扶墙，或者使用git同步android的源代码，再或者更新android SDK，该怎么办呢？&lt;/p&gt;
+&lt;p&gt;老高在此介绍一个软件&lt;a href=&#34;http://www.privoxy.org&#34;&gt;Privoxy&lt;/a&gt;，它可以作为&lt;strong&gt;代理的代理&lt;/strong&gt;，为我们解决上述问题！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing privacy, modifying web page data and HTTP headers, controlling access, and removing ads and other obnoxious Internet junk. Privoxy has a flexible configuration and can be customized to suit individual needs and tastes. It has application for both stand-alone systems and multi-user networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由介绍看来，privoxy的功能可远远不止http代理这么简单！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用nginx做反向代理</title>
+      <link>https://phpgao.github.io/nginx_reverse_proxy.html</link>
+      <pubDate>Sun, 12 Apr 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_reverse_proxy.html</guid>
+      <description>&lt;p&gt;很多同学喜欢用nginx做反向代理访问某些网站，原因大家都懂的，今天老高记录一下如何使用nginx做反向代理以及如何配置和优化nginx的反向代理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx配置详解</title>
+      <link>https://phpgao.github.io/nginx_conf.html</link>
+      <pubDate>Wed, 17 Sep 2014 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_conf.html</guid>
+      <description>#nginx配置详解
+用了nginx这么久，很多配置还是记不牢，还是总结一下吧！
+基本命令：
+service nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！
+此文件就是主配置文件了。
+##高层的配置
+#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。
+#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime.</description>
+    </item>
+    
+  </channel>
+</rss>

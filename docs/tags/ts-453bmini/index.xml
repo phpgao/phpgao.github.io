@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>TS-453Bmini on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ts-453bmini/</link>
+    <description>Recent content in TS-453Bmini on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 07 Sep 2019 09:26:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ts-453bmini/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>QNAP安装Entware</title>
+      <link>https://phpgao.github.io/qnap_install_entware.html</link>
+      <pubDate>Sat, 07 Sep 2019 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/qnap_install_entware.html</guid>
+      <description>&lt;p&gt;老高才入坑qnap(威联通)，在ssh到NAS后，发现没有常用的zsh、git、sudo，这可让用惯了centos，debian系统的老高情何以堪。&lt;/p&gt;
+&lt;p&gt;一番查阅后，老高发现原来QNAP所使用的系统QTS可以使用Entware，也就是opkg最为包管理系统，这不就简单了，老高以前在OpenWrt上用的就是这个玩意儿！&lt;/p&gt;
+&lt;p&gt;本篇内容可以让你学会如何在QNAP上安装Entware-ng，以及zsh，git，sudo还有ohmyzsh等常用工具，并且保证他们不会被系统还原！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

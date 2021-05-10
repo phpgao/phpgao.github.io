@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>decode on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/decode/</link>
+    <description>Recent content in decode on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 23 Jan 2015 02:21:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/decode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编码漫谈</title>
+      <link>https://phpgao.github.io/char_encode.html</link>
+      <pubDate>Fri, 23 Jan 2015 02:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/char_encode.html</guid>
+      <description>&lt;p&gt;编码一定是程序员永远的痛，不知道老高能不能救到你。&lt;/p&gt;
+&lt;p&gt;以下命令的操作环境：centos6 + python2.6&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

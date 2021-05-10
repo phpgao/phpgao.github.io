@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hotkey on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/hotkey/</link>
+    <description>Recent content in hotkey on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Oct 2014 14:41:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/hotkey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PYCHARM快捷键</title>
+      <link>https://phpgao.github.io/pycharm_hotkey.html</link>
+      <pubDate>Fri, 24 Oct 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pycharm_hotkey.html</guid>
+      <description>提示 CTRL Q: 在参数列表位置，显示可以输入的所有参数。 CTRL Q: 查看选中方法的文档字符串
+阅读 CTRL -: 折叠当前代码 CTRL +: 展开当前代码 CTRL SHIFT -: 折叠所有代码 CTRL SHIFT +: 展开所有代码 CTRL SHIFT F7: 将当前单词在整个文件中高亮，F3移动到下一个，ESC取消高亮。 CTRL F11 | F11: 设置书签. SHIFT F11: 显示所有书签。 CTRL F12: 当一个文件中方法太多，要快速跳到某个方法时，可以用此快捷键打开LIST, 除了用上下箭选择外，还可以输入字母。
+移动 ALT UP: 移到上一个方法 ALT DOWN: 移到下一个方法 CTRL B | CTRL 单击： 转到方法定义处 CTRL SHIFT UP: 将当前行上移一行 CTRL SHIFT UP: 将当前行下移一行
+SHIFT ENTER: 在行中间执行时，智能跳到下一行。
+注释 CTRL /: 注释、取消注释行
+选择 ALT 左键： 列模式选择 CTRL W: 选中当前单词，继续按，选中它所属的行/IF/方法.</description>
+    </item>
+    
+    <item>
+      <title>PHPSTORM快捷键</title>
+      <link>https://phpgao.github.io/phpstorm_hotkey.html</link>
+      <pubDate>Thu, 23 Oct 2014 06:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_hotkey.html</guid>
+      <description>点击菜单：File&amp;gt;Settings&amp;gt;(IDE Settings) Keymap 修改工具栏的字体File-&amp;gt;Setting-&amp;gt;Appearance 如何设置代码自动换行 File-&amp;gt;Setting-&amp;gt;editor-&amp;gt;use soft wrap in editor选项 显示行号 File-&amp;gt;Setting-&amp;gt;editor-&amp;gt;Appearance-&amp;gt; show line numbers选项 phpStorm设置大括号和方法名在同一行显示 ; 大括号和方法名在同一行警告 File -&amp;gt; Settings -&amp;gt; code style -&amp;gt; PHP -&amp;gt; Wrapping and Braces -&amp;gt; Braces placement -&amp;gt;End of line. 在settings-&amp;gt;Plugins里，Browse repositories按钮，搜索vim就会找到 IdeaVim插件该插件是控制phpstorm的keymap(也就是快捷键)的 phpstorm Settings-&amp;gt;Editor-&amp;gt;Highlight全部勾选 Editor tabs -&amp;gt; tab limit 16 Settings-&amp;gt;Editor-&amp;gt;colors&amp;amp;fonts -&amp;gt;font 设置字体大小 navigate/bookmark F11, 设置书签直接切换next bookmark
+ctrl+j 插入活动代码提示 ctrl+alt+t 当前位置插入环绕代码 alt+insert 生成代码菜单 Shift + Enter 新一行 ctrl+q 查看代码注释 ctrl+d 复制当前行 ctrl+y 删除当前行 ctrl+alt+y 刷新项目缓存Synchronize 或文件夹右键Synchronize shift+F6 重命名 ctrl+shift+u 字母大小写转换 ctrl+f 查找 ctrl+r 替换 ctrl+shift+I 查看变量或方法定义源 ctrl+g 跳转行 ctrl+alt+F12 跳转至当前文件在磁盘上的位置 alt+down 查看下一个方法 alt+up 查看上一个方法 ctrl+alt+l 重新格式化代码 ctrl+shift+down statement向下移动 ctrl+shift+up statement向上移动 alt+shift+down line向下移动 alt+shift+up line向上移动 ctrl+/ 行注释 ctrl+shift+/ 块注释 Ctrl + Shift + Z redo Ctrl + Shift + F 区域查找 ctrl+shift+n 打开工程中的文件 ctrl+b 跳到变量申明处 ctrl+[] 匹配 {}[] ctrl+shift+]/[ 选中块代码 ctrl+x 剪切行 ctrl+shift+v 复制多个文本 alt+left/right 标签切换 ctrl+p 显示默认参数 ctrl + -/+ 可以折叠项目中的任何代码块</description>
+    </item>
+    
+  </channel>
+</rss>

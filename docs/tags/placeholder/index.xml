@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>placeholder on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/placeholder/</link>
+    <description>Recent content in placeholder on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Feb 2014 13:32:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/placeholder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让你的IE也支持placeholder属性</title>
+      <link>https://phpgao.github.io/placeholder.html</link>
+      <pubDate>Fri, 28 Feb 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/placeholder.html</guid>
+      <description>placeholder属性是html5新加入的，所以非现代浏览器当然不会支持了。 已有牛人写了一下jquery插件实现了placeholder
+项目主页 https://github.com/mathiasbynens/jquery-placeholder使用方法 html &amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;name&amp;quot; placeholder=&amp;quot;e.g. John Doe&amp;quot;&amp;gt;&amp;lt;input type=&amp;quot;email&amp;quot; name=&amp;quot;email&amp;quot; placeholder=&amp;quot;e.g. address@example.ext&amp;quot;&amp;gt;&amp;lt;input type=&amp;quot;url&amp;quot; name=&amp;quot;url&amp;quot; placeholder=&amp;quot;e.g. http://mathiasbynens.be/&amp;quot;&amp;gt;&amp;lt;input type=&amp;quot;tel&amp;quot; name=&amp;quot;tel&amp;quot; placeholder=&amp;quot;e.g. +32 472 77 69 88&amp;quot;&amp;gt;&amp;lt;input type=&amp;quot;password&amp;quot; name=&amp;quot;password&amp;quot; placeholder=&amp;quot;e.g. h4x0rpr00fz&amp;quot;&amp;gt;&amp;lt;input type=&amp;quot;search&amp;quot; name=&amp;quot;search&amp;quot; placeholder=&amp;quot;Search this site…&amp;quot;&amp;gt;&amp;lt;textarea name=&amp;quot;message&amp;quot; placeholder=&amp;quot;Your message goes here&amp;quot;&amp;gt;&amp;lt;/textarea&amp;gt; js这样写： $(&#39;input, textarea&#39;).placeholder(); css提示 这个插件会自动添加一个名为class=&amp;ldquo;placeholder&amp;rdquo; ，如果想自己区分来，那就使用下面的css定义
+input, textarea { color: #000; }.placeholder { color: #aaa; } 动手试试吧！</description>
+    </item>
+    
+  </channel>
+</rss>

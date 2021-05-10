@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kcptun on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/kcptun/</link>
+    <description>Recent content in kcptun on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Dec 2016 03:30:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/kcptun/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用KCPTUN加速你的VPS</title>
+      <link>https://phpgao.github.io/kcptun.html</link>
+      <pubDate>Wed, 07 Dec 2016 03:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun.html</guid>
+      <description>&lt;p&gt;自从FS废了以后，老高一直在寻找一个替代品，直到发现了kcptun，老高的搬瓦工又迎来了第二春。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/748461753.png&#34; alt=&#34;kcptun_logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -20,23 +20,6 @@ url: "qq_face_url.html"
 https://q.qlogo.cn/g?b=qq&nk=123456&s=160
 https://q.qlogo.cn/g?b=qq&nk=123456&s=640
 
-> Use it if you're quoting a person, a song or whatever.
-
-> You can use *italic* or lists inside them also.
-And just like with other paragraphs,
-all of these lines are still
-part of the blockquote, even without the > character in front.
-
-To end the blockquote, just put a blank line before the following
-paragraph.
-
-
-> Docker匹配镜像决定是否使用缓存的规则如下:
-> 1. 从缓存中存在的基础镜像开始，比较所有子镜像，检查它们构建的指令是否和当前的是否完全一致。如果不一致则缓存不匹配。
-> 1. 多数情况中，使用其中一个子镜像来比较Dockerfile中的指令是足够的。然而，特定的指令需要做更多的判断。
-> 1. ADD COPY 指令中，将要添加到镜像中的文件也要被检查。通常是检查文件的校验和(checksum)。
-> 1. 缓存匹配检查并不检查容器中的文件。例如，当使用 RUN apt-get -y update 命令更新了容器中的文件，并不会被缓存检查策略作为缓存匹配的依据。
-
 把其中123456替换为你的QQ号，然后在浏览器中打开，是不是就是你的头像啦！细心的同学能够看出这个URL还带一个s的参数，其实就是size的意思，目前测试100，160，640都可以。
 
 聪明的你肯定能够发现，这样URL地址就会暴露qq号码了，那么有没有办法能够在不暴露QQ号码的情况下展示QQ头像呢？当然是可以的，只是多了一个步骤而已。

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>guitar on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/guitar/</link>
+    <description>Recent content in guitar on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 May 2017 03:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/guitar/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GarageBand中官方课程官网下载地址</title>
+      <link>https://phpgao.github.io/garageband_download.html</link>
+      <pubDate>Thu, 18 May 2017 03:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/garageband_download.html</guid>
+      <description>&lt;p&gt;弃ukulele转吉他，刚好GarageBand有教程，就不要脸的记录一下下载方法。有时间的话老高会把资源上传网盘，并更新下载地址。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/05/2351783159.jpg&#34; alt=&#34;GarageBand&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

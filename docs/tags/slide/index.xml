@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>slide on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/slide/</link>
+    <description>Recent content in slide on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Mar 2014 14:03:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/slide/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>jQuery平滑分栏标签切换特效</title>
+      <link>https://phpgao.github.io/jquery_slider.html</link>
+      <pubDate>Sat, 01 Mar 2014 14:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/jquery_slider.html</guid>
+      <description>此代码简洁明了，层次清晰，有不错的兼容性，很适合作为企业首页的图片轮播！ 实例在这：
+http://www.gayadesign.com/scripts/tabbed/原理很简单： 使用TabbedContent.init()检测鼠标是否mouseover，然后调用slideContent滚动下面的内容！
+&amp;lt;span style=&amp;quot;color: #ff0000;&amp;quot;&amp;gt;（注意类名的使用，可以在js文件中更改！）&amp;lt;/span&amp;gt;  下载链接：</description>
+    </item>
+    
+  </channel>
+</rss>

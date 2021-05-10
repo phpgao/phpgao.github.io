@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>openwrt on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/openwrt/</link>
+    <description>Recent content in openwrt on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Nov 2015 12:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/openwrt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>入手R6300-V2，大家有什么想说的？</title>
+      <link>https://phpgao.github.io/r6300v2.html</link>
+      <pubDate>Thu, 05 Nov 2015 12:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/r6300v2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/548519534.jpg&#34; alt=&#34;R6300 V2&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ssh的反向隧道管理内网路由器</title>
+      <link>https://phpgao.github.io/ssh-reverse-tunnel.html</link>
+      <pubDate>Fri, 02 Oct 2015 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh-reverse-tunnel.html</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SSH协议真是了不得！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/2363969333.png&#34; alt=&#34;pandorabox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;光是看标题，大家会看的云里雾里的，倾听老高细细道来！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在openwrt上开启sftp</title>
+      <link>https://phpgao.github.io/sftp_openwrt.html</link>
+      <pubDate>Fri, 24 Jul 2015 09:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sftp_openwrt.html</guid>
+      <description>一句话代码
+opkg update opkg install openssh-sftp-server reference:
+http://wiki.openwrt.org/doc/howto/sftp.server</description>
+    </item>
+    
+    <item>
+      <title>openwrt中br-lan,eth0,eth0.1,eth0.2</title>
+      <link>https://phpgao.github.io/openwrt-interface.html</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt-interface.html</guid>
+      <description>&lt;p&gt;openwrt的接口真是多，老高一下子都看晕了，不过仔细理一理，还是能够分辨的。&lt;/p&gt;
+&lt;p&gt;首先盗openwrt-wiki中的一张图，这张图对理解这些接口很重要！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3406911994.png&#34; alt=&#34;asus-internals-default&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译小米路由mini的openwrt固件</title>
+      <link>https://phpgao.github.io/xiaomi_router_openwrt.html</link>
+      <pubDate>Tue, 28 Apr 2015 16:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_openwrt.html</guid>
+      <description>&lt;p&gt;花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用nginx做反向代理</title>
+      <link>https://phpgao.github.io/nginx_reverse_proxy.html</link>
+      <pubDate>Sun, 12 Apr 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_reverse_proxy.html</guid>
+      <description>&lt;p&gt;很多同学喜欢用nginx做反向代理访问某些网站，原因大家都懂的，今天老高记录一下如何使用nginx做反向代理以及如何配置和优化nginx的反向代理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译openwrt</title>
+      <link>https://phpgao.github.io/compile_openwrt.html</link>
+      <pubDate>Tue, 07 Apr 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_openwrt.html</guid>
+      <description>&lt;p&gt;一些资料&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之DDNS动态域名解析篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_ddns.html</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_ddns.html</guid>
+      <description>&lt;p&gt;老高家里用的是联通10M宽带，500/年。自从小米路由器mini刷了pandorabox后无法使用官方的APP管理设备，于是想到了使用openwrt自带的DDNS，即动态DNS来远程管理家里的路由器。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之远程下载篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</link>
+      <pubDate>Thu, 12 Feb 2015 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</guid>
+      <description>&lt;p&gt;小米路由器mini刷了Pandorabox后还是可以使用迅雷的远程下载的，步骤如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之自动翻墙篇</title>
+      <link>https://phpgao.github.io/carzy_router.html</link>
+      <pubDate>Sun, 04 Jan 2015 14:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/carzy_router.html</guid>
+      <description>&lt;p&gt;趁着节假日，终于搞定了路由器的自动翻墙，终于有自己的翻墙路由器了，之后一发而不可收，记录了一些折腾的文章，索引在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router.html&#34;&gt;openwrt路由器折腾教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;附赠 &lt;a href=&#34;https://blog.phpgao.com/slip_across_gfw.html&#34;&gt;翻越功夫网教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自从发现Pandorabox在&lt;code&gt;r355版&lt;/code&gt;在固件中整合了ss，redsocks2和ChinaDNS-C，省下了不少事儿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有同学反应r355-20150114被移除，刚好老高有存货，文中有百度网盘下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本教程同样适用于其他openwrt系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;推荐查看&lt;strong&gt;更好的方案&lt;/strong&gt;一节！&lt;/p&gt;
+&lt;p&gt;你可能根据一下关键词找到此文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pandorabox openwrt 安装redsocks2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻墙路由器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;路由器翻墙教程&lt;/li&gt;
+&lt;li&gt;pandorabox openwrt 路由器翻墙&lt;/li&gt;
+&lt;li&gt;小米路由器翻墙 教程&lt;/li&gt;
+&lt;li&gt;打造自动翻墙的路由器&lt;/li&gt;
+&lt;li&gt;设置路由器翻墙&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

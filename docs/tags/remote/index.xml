@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>remote on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/remote/</link>
+    <description>Recent content in remote on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 Feb 2015 14:15:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/remote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米路由器mini折腾之远程下载篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</link>
+      <pubDate>Thu, 12 Feb 2015 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</guid>
+      <description>&lt;p&gt;小米路由器mini刷了Pandorabox后还是可以使用迅雷的远程下载的，步骤如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>开启phpMyAdmin的远程登录</title>
+      <link>https://phpgao.github.io/phpmyadmin_remote_server.html</link>
+      <pubDate>Wed, 05 Mar 2014 14:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpmyadmin_remote_server.html</guid>
+      <description>phpMyAdmin一般只能本地登录，即地址为localhost，如果想管理如192.168.1.254（非本机IP）的mysql应该如何做到呢？其实很简单，phpMyAdmin已经实现，但是默认并没有开启此功能。 3步搞定
+ 在phpMyAdmin目录下libraries目录中config.default.php文件并打开 找到此选项$cfg[&#39;AllowArbitraryServer&#39;] = false; 将false改为true 补充： 如果登录的是本地服务器，那么登录的时候可以把服务器一栏留空。  </description>
+    </item>
+    
+  </channel>
+</rss>

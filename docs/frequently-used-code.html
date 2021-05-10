@@ -1,0 +1,234 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>开发中经常用到的代码 | 老高的技术博客</title><meta name=keywords content="code,shell,html,thinkphp,js,dos"><meta name=description content="[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 <script src=&#34;http://libs.baidu.com/jquery/1.9.0/jquery.js&#34;></script><script src=&#34;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&#34;></script><link href=&#34;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;><script src=&#34;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&#34;></script> PHP //申明页面编码开启session并设置时区session_start();header(&#34;Content-Type: text/html; charset=UTF-8&#34;);ini_set('date.timezone','Asia/Shanghai');////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval('adasdasd');//heredoc==双引号$name=MyName;echo <<<EOTMy name is &#34;$name&#34;. I am printing some $foo->foo.Now, I am printing some {$foo->bar[1]}.This should print a capital 'A': \x41EOT;/*以上例程会输出：My name is &#34;MyName&#34;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital 'A': A*///Nowdoc==单引号echo <<<'EOT'My name is &#34;$name&#34;."><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/frequently-used-code.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="开发中经常用到的代码"><meta property="og:description" content="[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 <script src=&#34;http://libs.baidu.com/jquery/1.9.0/jquery.js&#34;></script><script src=&#34;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&#34;></script><link href=&#34;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;><script src=&#34;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&#34;></script> PHP //申明页面编码开启session并设置时区session_start();header(&#34;Content-Type: text/html; charset=UTF-8&#34;);ini_set('date.timezone','Asia/Shanghai');////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval('adasdasd');//heredoc==双引号$name=MyName;echo <<<EOTMy name is &#34;$name&#34;. I am printing some $foo->foo.Now, I am printing some {$foo->bar[1]}.This should print a capital 'A': \x41EOT;/*以上例程会输出：My name is &#34;MyName&#34;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital 'A': A*///Nowdoc==单引号echo <<<'EOT'My name is &#34;$name&#34;."><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/frequently-used-code.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-03-03T14:41:00+00:00"><meta property="article:modified_time" content="2014-03-03T14:41:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="开发中经常用到的代码"><meta name=twitter:description content="[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 <script src=&#34;http://libs.baidu.com/jquery/1.9.0/jquery.js&#34;></script><script src=&#34;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&#34;></script><link href=&#34;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;><script src=&#34;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&#34;></script> PHP //申明页面编码开启session并设置时区session_start();header(&#34;Content-Type: text/html; charset=UTF-8&#34;);ini_set('date.timezone','Asia/Shanghai');////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval('adasdasd');//heredoc==双引号$name=MyName;echo <<<EOTMy name is &#34;$name&#34;. I am printing some $foo->foo.Now, I am printing some {$foo->bar[1]}.This should print a capital 'A': \x41EOT;/*以上例程会输出：My name is &#34;MyName&#34;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital 'A': A*///Nowdoc==单引号echo <<<'EOT'My name is &#34;$name&#34;."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"开发中经常用到的代码","item":"https://phpgao.github.io/frequently-used-code.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"开发中经常用到的代码","name":"开发中经常用到的代码","description":"[TOC]\n短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 \u0026lt;script src=\u0026quot;http://libs.baidu.com/jquery/1.9.0/jquery.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt;\r\u0026lt;script src=\u0026quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt;\r\u0026lt;link href=\u0026quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css\u0026quot; rel=\u0026quot;stylesheet\u0026quot;\u0026gt;\r\u0026lt;script src=\u0026quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js\u0026quot;\u0026gt;\u0026lt;/script\u0026gt;\r PHP //申明页面编码开启session并设置时区\rsession_start();\rheader(\u0026quot;Content-Type: text/html; charset=UTF-8\u0026quot;);\rini_set('date.timezone','Asia/Shanghai');\r//\r//windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。\rset_time_limit(0);\r//获取变量的整数值\rintval('adasdasd');\r//heredoc==双引号\r$name=MyName;\recho \u0026lt;\u0026lt;\u0026lt;EOT\rMy name is \u0026quot;$name\u0026quot;. I am printing some $foo-\u0026gt;foo.\rNow, I am printing some {$foo-\u0026gt;bar[1]}.\rThis should print a capital 'A': \\x41\rEOT;\r/*\r以上例程会输出：\rMy name is \u0026quot;MyName\u0026quot;. I am printing some Foo.\rNow, I am printing some Bar2.\rThis should print a capital 'A': A\r*/\r//Nowdoc==单引号\recho \u0026lt;\u0026lt;\u0026lt;'EOT'\rMy name is \u0026quot;$name\u0026quot;.","keywords":["code","shell","html","thinkphp","js","dos"],"articleBody":"[TOC]\n短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 \r\r\r PHP //申明页面编码开启session并设置时区\rsession_start();\rheader(\"Content-Type: text/html; charset=UTF-8\");\rini_set('date.timezone','Asia/Shanghai');\r//\r//windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。\rset_time_limit(0);\r//获取变量的整数值\rintval('adasdasd');\r//heredoc==双引号\r$name=MyName;\recho foo.\rNow, I am printing some {$foo-bar[1]}.\rThis should print a capital 'A': \\x41\rEOT;\r/*\r以上例程会输出：\rMy name is \"MyName\". I am printing some Foo.\rNow, I am printing some Bar2.\rThis should print a capital 'A': A\r*/\r//Nowdoc==单引号\recho foo.\rNow, I am printing some {$foo-bar[1]}.\rThis should not print a capital 'A': \\x41\rEOT;\r/*\r以上例程会输出：\rMy name is \"$name\". I am printing some $foo-foo.\rNow, I am printing some {$foo-bar[1]}.\rThis should not print a capital 'A': \\x41\r*/\r//一周开始和结束\recho $today=date('Ymd',time());\recho $getWeekDay=date('w',time());//获取当前星期几\recho $weekstar=date(\"Ymd\",mktime(0,0,0,date('m'),date('d')-$getWeekDay+1,date(\"Y\")));//本周开始\recho $weekend=date('Ymd',mktime(0,0,0,date('m'),date('d')-$getWeekDay+7,date('Y')));//本周结束\r//内存占用 convert函数加单位\rfunction convert($size){ $unit=array('b','kb','mb','gb','tb','pb'); return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i]; } echo convert(memory_get_usage());\r$var = str_repeat(\"liuhui\", 10000); echo \"\";\recho memory_get_usage();\runset($var); echo \"\";\recho memory_get_usage();\r Thinkphp //Thinkphp常用配置 //CHECK_FILE_CASE -- windows环境下面的严格检查大小写。 /* 项目设定 */\r'APP_DEBUG' = false, // 是否开启调试模式\r'APP_DOMAIN_DEPLOY' = false, // 是否使用独立域名部署项目\r'APP_PLUGIN_ON' = false, // 是否开启插件机制\r'APP_FILE_CASE' = false, // 是否检查文件的大小写 对Windows平台有效\r'APP_GROUP_DEPR' = '.', // 模块分组之间的分割符\r'APP_GROUP_LIST' = '', // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin'\r'APP_AUTOLOAD_REG' = false, // 是否开启SPL_AUTOLOAD_REGISTER\r'APP_AUTOLOAD_PATH' = 'Think.Util.',// __autoLoad 机制额外检测路径设置,注意搜索顺序\r'APP_CONFIG_LIST' = array('taglibs','routes','tags','htmls','modules','actions'),// 项目额外需要加载的配置列表，默认包括：taglibs(标签库定义),routes(路由定义),tags(标签定义),(htmls)静态缓存定义, modules(扩展模块),actions(扩展操作)\r/* Cookie设置 */\r'COOKIE_EXPIRE' = 3600, // Coodie有效期\r'COOKIE_DOMAIN' = '', // Cookie有效域名\r'COOKIE_PATH' = '/', // Cookie路径\r'COOKIE_PREFIX' = '', // Cookie前缀 避免冲突\r/* 默认设定 */\r'DEFAULT_APP' = '@', // 默认项目名称，@表示当前项目\r'DEFAULT_GROUP' = 'Home', // 默认分组\r'DEFAULT_MODULE' = 'Index', // 默认模块名称\r'DEFAULT_ACTION' = 'index', // 默认操作名称\r'DEFAULT_CHARSET' = 'utf-8', // 默认输出编码\r'DEFAULT_TIMEZONE' = 'PRC', // 默认时区\r'DEFAULT_AJAX_RETURN' = 'JSON', // 默认AJAX 数据返回格式,可选JSON XML ...\r'DEFAULT_THEME' = 'default', // 默认模板主题名称\r'DEFAULT_LANG' = 'zh-cn', // 默认语言\r/* 数据库设置 */\r'DB_TYPE' = 'mysql', // 数据库类型\r'DB_HOST' = 'localhost', // 服务器地址\r'DB_NAME' = '', // 数据库名\r'DB_USER' = 'root', // 用户名\r'DB_PWD' = '', // 密码\r'DB_PORT' = 3306, // 端口\r'DB_PREFIX' = 'think_', // 数据库表前缀\r'DB_SUFFIX' = '', // 数据库表后缀\r'DB_FIELDTYPE_CHECK' = false, // 是否进行字段类型检查\r'DB_FIELDS_CACHE' = true, // 启用字段缓存\r'DB_CHARSET' = 'utf8', // 数据库编码默认采用utf8\r'DB_DEPLOY_TYPE' = 0, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)\r'DB_RW_SEPARATE' = false, // 数据库读写是否分离 主从式有效\r/* 数据缓存设置 */\r'DATA_CACHE_TIME' = -1, // 数据缓存有效期\r'DATA_CACHE_COMPRESS' = false, // 数据缓存是否压缩缓存\r'DATA_CACHE_CHECK' = false, // 数据缓存是否校验缓存\r'DATA_CACHE_TYPE' = 'File', // 数据缓存类型,支持:File|Db|Apc|Memcache|Shmop|Sqlite| Xcache|Apachenote|Eaccelerator\r'DATA_CACHE_PATH' = TEMP_PATH,// 缓存路径设置 (仅对File方式缓存有效)\r'DATA_CACHE_SUBDIR' = false, // 使用子目录缓存 (自动根据缓存标识的哈希创建子目录)\r'DATA_PATH_LEVEL' = 1, // 子目录缓存级别\r/* 错误设置 */\r'ERROR_MESSAGE' = '您浏览的页面暂时发生了错误！请稍后再试～',//错误显示信息,非调试模式有效\r'ERROR_PAGE' = '', // 错误定向页面\r/* 静态缓存设置 */\r'HTML_CACHE_ON' = false, // 默认关闭静态缓存\r'HTML_CACHE_TIME' = 60, // 静态缓存有效期\r'HTML_READ_TYPE' = 0, // 静态缓存读取方式 0 readfile 1 redirect\r'HTML_FILE_SUFFIX' = '.shtml',// 默认静态文件后缀\r/* 语言设置 */\r'LANG_SWITCH_ON' = false, // 默认关闭多语言包功能\r'LANG_AUTO_DETECT' = true, // 自动侦测语言 开启多语言功能后有效\r/* 日志设置 */\r'LOG_RECORD' = false, // 默认不记录日志\r'LOG_FILE_SIZE' = 2097152, // 日志文件大小限制\r'LOG_RECORD_LEVEL' = array('EMERG','ALERT','CRIT','ERR'),// 允许记录的日志级别\r/* 分页设置 */\r'PAGE_ROLLPAGE' = 5, // 分页显示页数\r'PAGE_LISTROWS' = 20, // 分页每页显示记录数\r/* SESSION设置 */\r'SESSION_AUTO_START' = true, // 是否自动开启Session\r// 内置SESSION类可用参数\r//'SESSION_NAME' = '', // Session名称\r//'SESSION_PATH' = '', // Session保存路径\r//'SESSION_CALLBACK' = '', // Session 对象反序列化时候的回调函数\r/* 运行时间设置 */\r'SHOW_RUN_TIME' = false, // 运行时间显示\r'SHOW_ADV_TIME' = false, // 显示详细的运行时间\r'SHOW_DB_TIMES' = false, // 显示数据库查询和写入次数\r'SHOW_CACHE_TIMES' = false, // 显示缓存操作次数\r'SHOW_USE_MEM' = false, // 显示内存开销\r'SHOW_PAGE_TRACE' = false, // 显示页面Trace信息 由Trace文件定义和Action操作赋值\r'SHOW_ERROR_MSG' = true, // 显示错误信息\r/* 模板引擎设置 */\r'TMPL_ENGINE_TYPE' = 'Think', // 默认模板引擎 以下设置仅对使用Think模板引擎有效\r'TMPL_DETECT_THEME' = false, // 自动侦测模板主题\r'TMPL_TEMPLATE_SUFFIX' = '.html', // 默认模板文件后缀\r'TMPL_CACHFILE_SUFFIX' = '.php', // 默认模板缓存后缀\r'TMPL_DENY_FUNC_LIST' = 'echo,exit', // 模板引擎禁用函数\r'TMPL_PARSE_STRING' = '', // 模板引擎要自动替换的字符串，必须是数组形式。\r'TMPL_L_DELIM' = '{', // 模板引擎普通标签开始标记\r'TMPL_R_DELIM' = '}', // 模板引擎普通标签结束标记\r'TMPL_VAR_IDENTIFY' = 'array', // 模板变量识别。留空自动判断,参数为'obj'则表示对象\r'TMPL_STRIP_SPACE' = false, // 是否去除模板文件里面的html空格与换行\r'TMPL_CACHE_ON' = true, // 是否开启模板编译缓存,设为false则每次都会重新编译\r'TMPL_CACHE_TIME' = -1, // 模板缓存有效期 -1 为永久，(以数字为值，单位:秒)\r'TMPL_ACTION_ERROR' = 'Public:success', // 默认错误跳转对应的模板文件\r'TMPL_ACTION_SUCCESS' = 'Public:success', // 默认成功跳转对应的模板文件\r'TMPL_TRACE_FILE' = THINK_PATH.'/Tpl/PageTrace.tpl.php', // 页面Trace的模板文件\r'TMPL_EXCEPTION_FILE' = THINK_PATH.'/Tpl/ThinkException.tpl.php',// 异常页面的模板文件\r'TMPL_FILE_DEPR'='/', //模板文件MODULE_NAME与ACTION_NAME之间的分割符，只对项目分组部署有效\r// Think模板引擎标签库相关设定\r'TAGLIB_BEGIN' = ''', // 标签库标签结束标记\r'TAGLIB_LOAD' = true, // 是否使用内置标签库之外的其它标签库，默认自动检测\r'TAGLIB_BUILD_IN' = 'cx', // 内置标签库名称(标签使用不必指定标签库名称),以逗号分隔\r'TAGLIB_PRE_LOAD' = '', // 需要额外加载的标签库(须指定标签库名称)，多个以逗号分隔\r'TAG_NESTED_LEVEL' = 3, // 标签嵌套级别\r'TAG_EXTEND_PARSE' = '', // 指定对普通标签进行扩展定义和解析的函数名称。\r/* 表单令牌验证 */\r'TOKEN_ON' = true, // 开启令牌验证\r'TOKEN_NAME' = '__hash__', // 令牌验证的表单隐藏字段名称\r'TOKEN_TYPE' = 'md5', // 令牌验证哈希规则\r/* URL设置 */\r'URL_CASE_INSENSITIVE' = false, // URL地址是否不区分大小写\r'URL_ROUTER_ON' = false, // 是否开启URL路由\r'URL_DISPATCH_ON' = true, // 是否启用Dispatcher\r'URL_MODEL' = 1, // URL访问模式,可选参数0、1、2、3,代表以下四种模式：\r// 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE 模式); 3 (兼容模式) 当URL_DISPATCH_ON开启后有效; 默认为PATHINFO 模式，提供最好的用户体验和SEO支持\r'URL_PATHINFO_MODEL' = 2, // PATHINFO 模式,使用数字1、2、3代表以下三种模式:\r// 1 普通模式(参数没有顺序,例如/m/module/a/action/id/1);\r// 2 智能模式(系统默认使用的模式，可自动识别模块和操作/module/action/id/1/ 或者 /module,action,id,1/...);\r// 3 兼容模式(通过一个GET变量将PATHINFO传递给dispather，默认为s index.php?s=/module/action/id/1)\r'URL_PATHINFO_DEPR' = '/', // PATHINFO模式下，各参数之间的分割符号\r'URL_HTML_SUFFIX' = '', // URL伪静态后缀设置\r/* 系统变量名称设置 */\r'VAR_GROUP' = 'g', // 默认分组获取变量\r'VAR_MODULE' = 'm', // 默认模块获取变量\r'VAR_ACTION' = 'a', // 默认操作获取变量\r'VAR_ROUTER' = 'r', // 默认路由获取变量\r'VAR_PAGE' = 'p', // 默认分页跳转变量\r'VAR_TEMPLATE' = 't', // 默认模板切换变量\r'VAR_LANGUAGE' = 'l', // 默认语言切换变量\r'VAR_AJAX_SUBMIT' = 'ajax', // 默认的AJAX提交变量\r'VAR_PATHINFO' = 's', // PATHINFO 兼容模式获取变量例如 ?s=/module/action/id/1 后面的参数取决于URL_PATHINFO_MODEL 和 URL_PATHINFO_DEPR\r HTML \r\r\r JS document.write(\"Hello\");\r//引入百度CDN公共库\r\r MYSQL #为已存在的表生成索引\rALTER TABLE mdqc_votes ADD INDEX vote_baby_id (baby_id);\r DOS ::清除本机DNS缓存\ripconfig /flushdns\r SHELL #列出当前目录里最大的10个文件 du -s * | sort -n | tail ","wordCount":"850","inLanguage":"en","datePublished":"2014-03-03T14:41:00Z","dateModified":"2014-03-03T14:41:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/frequently-used-code.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>开发中经常用到的代码</h1><div class=post-meta>March 3, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-03-03_frequently-used-code.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>[TOC]</p><h2 id=短链接>短链接<a hidden class=anchor aria-hidden=true href=#短链接>#</a></h2><p><a href=http://surl.sinaapp.com/>http://surl.sinaapp.com/</a> 引入百度CDN公共库 地址:<a href=http://t.cn/zYDC8wj>http://t.cn/zYDC8wj</a></p><h2 id=引入文件>引入文件<a hidden class=anchor aria-hidden=true href=#引入文件>#</a></h2><pre><code>&lt;script src=&quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;link href=&quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;script src=&quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&quot;&gt;&lt;/script&gt;
+</code></pre><h2 id=php>PHP<a hidden class=anchor aria-hidden=true href=#php>#</a></h2><pre><code>//申明页面编码开启session并设置时区
+session_start();
+header(&quot;Content-Type: text/html; charset=UTF-8&quot;);
+ini_set('date.timezone','Asia/Shanghai');
+
+//
+
+//windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。
+set_time_limit(0);
+//获取变量的整数值
+intval('adasdasd');
+
+//heredoc==双引号
+$name=MyName;
+echo &lt;&lt;&lt;EOT
+My name is &quot;$name&quot;. I am printing some $foo-&gt;foo.
+Now, I am printing some {$foo-&gt;bar[1]}.
+This should print a capital 'A': \x41
+EOT;
+/*
+以上例程会输出：
+My name is &quot;MyName&quot;. I am printing some Foo.
+Now, I am printing some Bar2.
+This should print a capital 'A': A
+*/
+
+//Nowdoc==单引号
+echo &lt;&lt;&lt;'EOT'
+My name is &quot;$name&quot;. I am printing some $foo-&gt;foo.
+Now, I am printing some {$foo-&gt;bar[1]}.
+This should not print a capital 'A': \x41
+EOT;
+/*
+以上例程会输出：
+My name is &quot;$name&quot;. I am printing some $foo-&gt;foo.
+Now, I am printing some {$foo-&gt;bar[1]}.
+This should not print a capital 'A': \x41
+*/
+
+//一周开始和结束
+echo $today=date('Ymd',time());
+echo $getWeekDay=date('w',time());//获取当前星期几
+echo $weekstar=date(&quot;Ymd&quot;,mktime(0,0,0,date('m'),date('d')-$getWeekDay+1,date(&quot;Y&quot;)));//本周开始
+echo $weekend=date('Ymd',mktime(0,0,0,date('m'),date('d')-$getWeekDay+7,date('Y')));//本周结束
+
+//内存占用  convert函数加单位
+function convert($size){ 
+$unit=array('b','kb','mb','gb','tb','pb'); 
+return @round($size/pow(1024,($i=floor(log($size,1024)))),2).' '.$unit[$i]; 
+} 
+echo convert(memory_get_usage());
+$var = str_repeat(&quot;liuhui&quot;, 10000); 
+echo &quot;&lt;br/&gt;&quot;;
+echo memory_get_usage();
+unset($var); 
+echo &quot;&lt;br/&gt;&quot;;
+echo memory_get_usage();
+</code></pre><h2 id=thinkphp>Thinkphp<a hidden class=anchor aria-hidden=true href=#thinkphp>#</a></h2><pre><code>//Thinkphp常用配置 
+//CHECK_FILE_CASE -- windows环境下面的严格检查大小写。 
+
+    /* 项目设定 */
+    'APP_DEBUG'    =&gt; false, // 是否开启调试模式
+    'APP_DOMAIN_DEPLOY'     =&gt; false,   // 是否使用独立域名部署项目
+    'APP_PLUGIN_ON'         =&gt; false,   // 是否开启插件机制
+    'APP_FILE_CASE'         =&gt; false,   // 是否检查文件的大小写 对Windows平台有效
+    'APP_GROUP_DEPR'        =&gt; '.',     // 模块分组之间的分割符
+    'APP_GROUP_LIST'        =&gt; '',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin'
+    'APP_AUTOLOAD_REG'      =&gt; false,   // 是否开启SPL_AUTOLOAD_REGISTER
+    'APP_AUTOLOAD_PATH'     =&gt; 'Think.Util.',// __autoLoad 机制额外检测路径设置,注意搜索顺序
+    'APP_CONFIG_LIST'       =&gt; array('taglibs','routes','tags','htmls','modules','actions'),// 项目额外需要加载的配置列表，默认包括：taglibs(标签库定义),routes(路由定义),tags(标签定义),(htmls)静态缓存定义, modules(扩展模块),actions(扩展操作)
+
+    /* Cookie设置 */
+    'COOKIE_EXPIRE'         =&gt; 3600,    // Coodie有效期
+    'COOKIE_DOMAIN'         =&gt; '',      // Cookie有效域名
+    'COOKIE_PATH'           =&gt; '/',     // Cookie路径
+    'COOKIE_PREFIX'         =&gt; '',      // Cookie前缀 避免冲突
+
+    /* 默认设定 */
+    'DEFAULT_APP'           =&gt; '@',     // 默认项目名称，@表示当前项目
+    'DEFAULT_GROUP'         =&gt; 'Home', // 默认分组
+    'DEFAULT_MODULE'        =&gt; 'Index', // 默认模块名称
+    'DEFAULT_ACTION'        =&gt; 'index', // 默认操作名称
+    'DEFAULT_CHARSET'       =&gt; 'utf-8', // 默认输出编码
+    'DEFAULT_TIMEZONE'      =&gt; 'PRC', // 默认时区
+    'DEFAULT_AJAX_RETURN'   =&gt; 'JSON', // 默认AJAX 数据返回格式,可选JSON XML ...
+    'DEFAULT_THEME'    =&gt; 'default', // 默认模板主题名称
+    'DEFAULT_LANG'          =&gt; 'zh-cn', // 默认语言
+
+    /* 数据库设置 */
+    'DB_TYPE'               =&gt; 'mysql',     // 数据库类型
+     'DB_HOST'               =&gt; 'localhost', // 服务器地址
+     'DB_NAME'               =&gt; '',          // 数据库名
+     'DB_USER'               =&gt; 'root',      // 用户名
+     'DB_PWD'                =&gt; '',          // 密码
+     'DB_PORT'               =&gt; 3306,        // 端口
+     'DB_PREFIX'             =&gt; 'think_',    // 数据库表前缀
+   'DB_SUFFIX'             =&gt; '',          // 数据库表后缀
+    'DB_FIELDTYPE_CHECK'    =&gt; false,       // 是否进行字段类型检查
+    'DB_FIELDS_CACHE'       =&gt; true,        // 启用字段缓存
+    'DB_CHARSET'            =&gt; 'utf8',      // 数据库编码默认采用utf8
+    'DB_DEPLOY_TYPE'        =&gt; 0, // 数据库部署方式:0 集中式(单一服务器),1 分布式(主从服务器)
+    'DB_RW_SEPARATE'        =&gt; false,       // 数据库读写是否分离 主从式有效
+
+    /* 数据缓存设置 */
+    'DATA_CACHE_TIME' =&gt; -1,      // 数据缓存有效期
+    'DATA_CACHE_COMPRESS'   =&gt; false,   // 数据缓存是否压缩缓存
+    'DATA_CACHE_CHECK' =&gt; false,   // 数据缓存是否校验缓存
+    'DATA_CACHE_TYPE' =&gt; 'File', // 数据缓存类型,支持:File|Db|Apc|Memcache|Shmop|Sqlite| Xcache|Apachenote|Eaccelerator
+    'DATA_CACHE_PATH'       =&gt; TEMP_PATH,// 缓存路径设置 (仅对File方式缓存有效)
+    'DATA_CACHE_SUBDIR' =&gt; false,    // 使用子目录缓存 (自动根据缓存标识的哈希创建子目录)
+    'DATA_PATH_LEVEL'       =&gt; 1,        // 子目录缓存级别
+
+    /* 错误设置 */
+    'ERROR_MESSAGE' =&gt; '您浏览的页面暂时发生了错误！请稍后再试～',//错误显示信息,非调试模式有效
+    'ERROR_PAGE'    =&gt; '', // 错误定向页面
+
+    /* 静态缓存设置 */
+    'HTML_CACHE_ON'   =&gt; false,   // 默认关闭静态缓存
+    'HTML_CACHE_TIME' =&gt; 60,      // 静态缓存有效期
+    'HTML_READ_TYPE'        =&gt; 0,       // 静态缓存读取方式 0 readfile 1 redirect
+    'HTML_FILE_SUFFIX'      =&gt; '.shtml',// 默认静态文件后缀
+
+    /* 语言设置 */
+    'LANG_SWITCH_ON'        =&gt; false,   // 默认关闭多语言包功能
+    'LANG_AUTO_DETECT'      =&gt; true,   // 自动侦测语言 开启多语言功能后有效
+
+    /* 日志设置 */
+    'LOG_RECORD'            =&gt; false,   // 默认不记录日志
+    'LOG_FILE_SIZE'         =&gt; 2097152, // 日志文件大小限制
+    'LOG_RECORD_LEVEL'      =&gt; array('EMERG','ALERT','CRIT','ERR'),// 允许记录的日志级别
+
+    /* 分页设置 */
+   'PAGE_ROLLPAGE'         =&gt; 5,      // 分页显示页数
+   'PAGE_LISTROWS'         =&gt; 20,     // 分页每页显示记录数
+
+    /* SESSION设置 */
+    'SESSION_AUTO_START'    =&gt; true,    // 是否自动开启Session
+    // 内置SESSION类可用参数
+    //'SESSION_NAME'          =&gt; '',      // Session名称
+    //'SESSION_PATH'          =&gt; '',      // Session保存路径
+    //'SESSION_CALLBACK'      =&gt; '',      // Session 对象反序列化时候的回调函数
+
+    /* 运行时间设置 */
+    'SHOW_RUN_TIME'   =&gt; false,   // 运行时间显示
+    'SHOW_ADV_TIME'   =&gt; false,   // 显示详细的运行时间
+    'SHOW_DB_TIMES'   =&gt; false,   // 显示数据库查询和写入次数
+    'SHOW_CACHE_TIMES' =&gt; false,   // 显示缓存操作次数
+    'SHOW_USE_MEM'   =&gt; false,   // 显示内存开销
+    'SHOW_PAGE_TRACE' =&gt; false,   // 显示页面Trace信息 由Trace文件定义和Action操作赋值
+    'SHOW_ERROR_MSG'        =&gt; true,    // 显示错误信息
+
+    /* 模板引擎设置 */
+    'TMPL_ENGINE_TYPE' =&gt; 'Think',     // 默认模板引擎 以下设置仅对使用Think模板引擎有效
+    'TMPL_DETECT_THEME'     =&gt; false,       // 自动侦测模板主题
+    'TMPL_TEMPLATE_SUFFIX' =&gt; '.html',     // 默认模板文件后缀
+    'TMPL_CACHFILE_SUFFIX' =&gt; '.php',      // 默认模板缓存后缀
+    'TMPL_DENY_FUNC_LIST' =&gt; 'echo,exit', // 模板引擎禁用函数
+    'TMPL_PARSE_STRING'     =&gt; '',          // 模板引擎要自动替换的字符串，必须是数组形式。
+    'TMPL_L_DELIM'          =&gt; '{',   // 模板引擎普通标签开始标记
+    'TMPL_R_DELIM'          =&gt; '}',   // 模板引擎普通标签结束标记
+    'TMPL_VAR_IDENTIFY'     =&gt; 'array',     // 模板变量识别。留空自动判断,参数为'obj'则表示对象
+    'TMPL_STRIP_SPACE'      =&gt; false,       // 是否去除模板文件里面的html空格与换行
+    'TMPL_CACHE_ON'   =&gt; true,        // 是否开启模板编译缓存,设为false则每次都会重新编译
+    'TMPL_CACHE_TIME' =&gt; -1,         // 模板缓存有效期 -1 为永久，(以数字为值，单位:秒)
+    'TMPL_ACTION_ERROR'     =&gt; 'Public:success', // 默认错误跳转对应的模板文件
+    'TMPL_ACTION_SUCCESS'   =&gt; 'Public:success', // 默认成功跳转对应的模板文件
+    'TMPL_TRACE_FILE'       =&gt; THINK_PATH.'/Tpl/PageTrace.tpl.php',     // 页面Trace的模板文件
+    'TMPL_EXCEPTION_FILE'   =&gt; THINK_PATH.'/Tpl/ThinkException.tpl.php',// 异常页面的模板文件
+    'TMPL_FILE_DEPR'=&gt;'/', //模板文件MODULE_NAME与ACTION_NAME之间的分割符，只对项目分组部署有效
+    // Think模板引擎标签库相关设定
+    'TAGLIB_BEGIN'          =&gt; '&lt;', // 标签库标签开始标记
+    'TAGLIB_END'            =&gt; '&gt;', // 标签库标签结束标记
+    'TAGLIB_LOAD'           =&gt; true, // 是否使用内置标签库之外的其它标签库，默认自动检测
+    'TAGLIB_BUILD_IN'       =&gt; 'cx', // 内置标签库名称(标签使用不必指定标签库名称),以逗号分隔
+    'TAGLIB_PRE_LOAD'       =&gt; '',   // 需要额外加载的标签库(须指定标签库名称)，多个以逗号分隔
+    'TAG_NESTED_LEVEL' =&gt; 3,    // 标签嵌套级别
+    'TAG_EXTEND_PARSE'      =&gt; '',   // 指定对普通标签进行扩展定义和解析的函数名称。
+
+    /* 表单令牌验证 */
+    'TOKEN_ON'                    =&gt;   true,     // 开启令牌验证
+    'TOKEN_NAME'                =&gt;   '__hash__',    // 令牌验证的表单隐藏字段名称
+    'TOKEN_TYPE'                 =&gt;    'md5',   // 令牌验证哈希规则
+
+    /* URL设置 */
+'URL_CASE_INSENSITIVE' =&gt; false,   // URL地址是否不区分大小写
+    'URL_ROUTER_ON'         =&gt; false,   // 是否开启URL路由
+    'URL_DISPATCH_ON'       =&gt; true, // 是否启用Dispatcher
+    'URL_MODEL'      =&gt; 1,       // URL访问模式,可选参数0、1、2、3,代表以下四种模式：
+    // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE 模式); 3 (兼容模式) 当URL_DISPATCH_ON开启后有效; 默认为PATHINFO 模式，提供最好的用户体验和SEO支持
+    'URL_PATHINFO_MODEL'    =&gt; 2,       // PATHINFO 模式,使用数字1、2、3代表以下三种模式:
+    // 1 普通模式(参数没有顺序,例如/m/module/a/action/id/1);
+    // 2 智能模式(系统默认使用的模式，可自动识别模块和操作/module/action/id/1/ 或者 /module,action,id,1/...);
+    // 3 兼容模式(通过一个GET变量将PATHINFO传递给dispather，默认为s index.php?s=/module/action/id/1)
+    'URL_PATHINFO_DEPR'     =&gt; '/', // PATHINFO模式下，各参数之间的分割符号
+    'URL_HTML_SUFFIX'       =&gt; '', // URL伪静态后缀设置
+
+    /* 系统变量名称设置 */
+    'VAR_GROUP'             =&gt; 'g',     // 默认分组获取变量
+    'VAR_MODULE'            =&gt; 'm', // 默认模块获取变量
+    'VAR_ACTION'            =&gt; 'a', // 默认操作获取变量
+    'VAR_ROUTER'            =&gt; 'r',     // 默认路由获取变量
+    'VAR_PAGE'              =&gt; 'p', // 默认分页跳转变量
+    'VAR_TEMPLATE'          =&gt; 't', // 默认模板切换变量
+'VAR_LANGUAGE'          =&gt; 'l', // 默认语言切换变量
+    'VAR_AJAX_SUBMIT'       =&gt; 'ajax', // 默认的AJAX提交变量
+    'VAR_PATHINFO'          =&gt; 's', // PATHINFO 兼容模式获取变量例如 ?s=/module/action/id/1 后面的参数取决于URL_PATHINFO_MODEL 和 URL_PATHINFO_DEPR
+</code></pre><h2 id=html>HTML<a hidden class=anchor aria-hidden=true href=#html>#</a></h2><pre><code>&lt;!--修正页面显示问题--&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+&lt;!--html5页面编码--&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;!--以最新的IE版本模式来显示网页--&gt;
+&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+</code></pre><h2 id=js>JS<a hidden class=anchor aria-hidden=true href=#js>#</a></h2><pre><code>document.write(&quot;Hello&quot;);
+//引入百度CDN公共库
+&lt;script src=&quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&quot;&gt;&lt;/script&gt;
+</code></pre><h2 id=mysql>MYSQL<a hidden class=anchor aria-hidden=true href=#mysql>#</a></h2><pre><code>#为已存在的表生成索引
+ALTER TABLE mdqc_votes ADD INDEX vote_baby_id (baby_id);
+</code></pre><h2 id=dos>DOS<a hidden class=anchor aria-hidden=true href=#dos>#</a></h2><pre><code>::清除本机DNS缓存
+ipconfig /flushdns
+</code></pre><h2 id=shell>SHELL<a hidden class=anchor aria-hidden=true href=#shell>#</a></h2><pre><code>#列出当前目录里最大的10个文件  
+du -s * | sort -n | tail</code></pre></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/code/>code</a></li><li><a href=https://phpgao.github.io/tags/shell/>shell</a></li><li><a href=https://phpgao.github.io/tags/html/>html</a></li><li><a href=https://phpgao.github.io/tags/thinkphp/>thinkphp</a></li><li><a href=https://phpgao.github.io/tags/js/>js</a></li><li><a href=https://phpgao.github.io/tags/dos/>dos</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/phpmyadmin_remote_server.html><span class=title>« Prev Page</span><br><span>开启phpMyAdmin的远程登录</span></a>
+<a class=next href=https://phpgao.github.io/curl_init.html><span class=title>Next Page »</span><br><span>PHP_cURL初始化和执行方法</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

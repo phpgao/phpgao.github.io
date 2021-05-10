@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>launchrocket on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/launchrocket/</link>
+    <description>Recent content in launchrocket on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Apr 2018 14:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/launchrocket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Launchrocket管理MacOS的服务</title>
+      <link>https://phpgao.github.io/launchrocket.html</link>
+      <pubDate>Tue, 03 Apr 2018 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/launchrocket.html</guid>
+      <description>&lt;p&gt;经常使用MacOS做web开发的同学们，当我们使用&lt;code&gt;brew&lt;/code&gt;安装nginx、php后，管理其守护进程的生命周期就基本只能靠类似&lt;code&gt;brew services start nginx&lt;/code&gt;管理了，要是有一个GUI程序为我们管理这些服务进程就好了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

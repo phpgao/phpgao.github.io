@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/docker/</link>
+    <description>Recent content in docker on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Dec 2019 02:23:53 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker系统源加速命令</title>
+      <link>https://phpgao.github.io/docker_sed.html</link>
+      <pubDate>Tue, 10 Dec 2019 02:23:53 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_sed.html</guid>
+      <description>alpine  注：如果有@test或者@edge，可以先add后在sed
+ sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories ubuntu sed -i &amp;#39;s/archive.ubuntu.com/mirrors.aliyun.com/g&amp;#39; /etc/apt/sources.list &amp;amp;&amp;amp; \  sed -i &amp;#39;s/security.ubuntu.com/mirrors.aliyun.com/g&amp;#39; /etc/apt/sources.list </description>
+    </item>
+    
+    <item>
+      <title>使用docker搭建私有git服务(gogs&#43;https)</title>
+      <link>https://phpgao.github.io/gogs.html</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/gogs.html</guid>
+      <description>&lt;p&gt;为什么有了github还要有自己的平台？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审计安全(不会随便被删除)&lt;/li&gt;
+&lt;li&gt;自己团队需要&lt;/li&gt;
+&lt;li&gt;速度更快&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么选择gogs?&lt;/p&gt;
+&lt;p&gt;请移步&lt;a href=&#34;https://gogs.io/&#34;&gt;官网&lt;/a&gt;学习，配置文件请参考&lt;a href=&#34;https://gogs.io/docs/advanced/configuration_cheat_sheet&#34;&gt;配置文件手册&lt;/a&gt;，配置样例请访问&lt;a href=&#34;https://github.com/gogs/gogs/blob/master/conf/app.ini&#34;&gt;app.ini&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在alpine中运行mysql</title>
+      <link>https://phpgao.github.io/run_mysql_in_alpine.html</link>
+      <pubDate>Sun, 05 May 2019 15:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/run_mysql_in_alpine.html</guid>
+      <description>&lt;p&gt;搬瓦工的1G内存，想要跑一个MySQL服务，动辄500M内存就没了，剩下一半的内存让我感觉很虚，于是想把是不是把MySQL塞进alpine镜像中看看，结果一搜，果然已经有大神这样做了，使用的是MariaDB，测试下来，同样跑一个博客只需要50M内存就OK，简直完美！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/r/yobasystems/alpine-mariadb&#34;&gt;yobasystems/alpine-mariadb&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker-最新安装命令</title>
+      <link>https://phpgao.github.io/install_docker_in_centos.html</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_docker_in_centos.html</guid>
+      <description>&lt;p&gt;docker就不多说了，按照贴出的代码一步一步就可以安装成功&lt;/p&gt;
+&lt;p&gt;安装之前最好手动关闭selinux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;setenforce 0
+getenforce
+# Permissive
+sed -i &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/&amp;#39; /etc/selinux/config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos升级内核版本以支持overlay2</title>
+      <link>https://phpgao.github.io/update_linux_kernel.html</link>
+      <pubDate>Thu, 30 Nov 2017 05:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_linux_kernel.html</guid>
+      <description>&lt;p&gt;搬瓦工新入的KVM架构的机器，默认内核版本是&lt;code&gt;4.10.4&lt;/code&gt;，如果是本地用ISO安装的系统，默认内核版本可能更低，比如&lt;code&gt;3.10.0&lt;/code&gt;，如果我们想要获取到最新的Linux特性，那么就必须升级内核版本到最新，我们可以用很简单的几个命令就可做到。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>体验Alpine-Linux-Docker-Image</title>
+      <link>https://phpgao.github.io/docker_alpine.html</link>
+      <pubDate>Fri, 10 Mar 2017 05:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_alpine.html</guid>
+      <description>&lt;p&gt;如果你已经研究过老高的&lt;a href=&#34;https://blog.phpgao.com/kcptun_on_sakura.html&#34;&gt;为樱花打造的KCPTUN&lt;/a&gt;，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3782981747.png&#34; alt=&#34;alpine_log&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用docker运行redmine</title>
+      <link>https://phpgao.github.io/docker_remine.html</link>
+      <pubDate>Wed, 08 Mar 2017 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_remine.html</guid>
+      <description>&lt;p&gt;网上的都不太靠谱，还是自己过一遍吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>为樱花打造的KCPTUN</title>
+      <link>https://phpgao.github.io/kcptun_on_sakura.html</link>
+      <pubDate>Thu, 02 Mar 2017 02:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun_on_sakura.html</guid>
+      <description>&lt;p&gt;老高课余时间研究了一下kcptun，然后维护了一个支持shadowsocks-libv + kcptun的镜像，希望能给大家点帮助。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用日本樱花arukas的免费docker服务搭建shadowsocks</title>
+      <link>https://phpgao.github.io/arukas.html</link>
+      <pubDate>Wed, 07 Dec 2016 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/arukas.html</guid>
+      <description>&lt;p&gt;这个工具是老高的同事介绍给我的！目前应该是测试阶段，他的有点像国内的Daocloud，操作很简单，老高1min就能搭建完毕，看完本文，你一定也可以！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3239870027.png&#34; alt=&#34;sakura&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. arukas倒着念不就是Sakura ?，樱花家的IP算是比较优质的了，老高用上海电信ping值在80-90ms。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>当用户不存在时执行adduser</title>
+      <link>https://phpgao.github.io/adduser_if_user_do_not_exist.html</link>
+      <pubDate>Fri, 21 Oct 2016 07:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adduser_if_user_do_not_exist.html</guid>
+      <description>使用了id工具，构建docker镜像的时候这一句很有用！
+id -u laogao &amp;amp;&amp;gt;/dev/null || useradd -u 30105 laogao </description>
+    </item>
+    
+    <item>
+      <title>修改docker容器的Base-Device-Size</title>
+      <link>https://phpgao.github.io/docker_base_device_size.html</link>
+      <pubDate>Thu, 18 Aug 2016 06:41:03 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_base_device_size.html</guid>
+      <description>&lt;p&gt;老高的容器在运行一段时间的时候会突然无法写入数据，报错&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker no space left on device&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Google之，发现原来是&lt;strong&gt;Base Device Size&lt;/strong&gt;的问题，其默认值是10G，而容器经过一段时间的运行写入文件量早已超过10G，就造成无法写入数据的问题了。&lt;/p&gt;
+&lt;p&gt;下面给出解决方案：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记VI----PHP</title>
+      <link>https://phpgao.github.io/docker-note6-php.html</link>
+      <pubDate>Thu, 30 Jun 2016 10:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note6-php.html</guid>
+      <description>&lt;p&gt;在docker里构建一个PHP环境，很简单吗？我可不觉得。。。赶紧记录一下！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记V----FTP-与-SSH-支持</title>
+      <link>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</link>
+      <pubDate>Thu, 30 Jun 2016 08:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</guid>
+      <description>&lt;p&gt;给容器赋予FTP和ssh登录在调试和使用阶段都是很不错的功能！下面看老高怎么实现的。&lt;/p&gt;
+&lt;p&gt;(基于ubuntu:xenial)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记IV----使用docker的风格分离Nginx-PHP--Mysql</title>
+      <link>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</link>
+      <pubDate>Wed, 29 Jun 2016 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</guid>
+      <description>&lt;p&gt;今天老高动手实践一下分离nginx和php，还有mysql。即三个image: g-nginx,g-php,g-mysql。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/20358963.png&#34; alt=&#34;php7&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装指定版本的docker</title>
+      <link>https://phpgao.github.io/docker_install_specific_version.html</link>
+      <pubDate>Fri, 24 Jun 2016 03:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_install_specific_version.html</guid>
+      <description>&lt;p&gt;安装指定版本的docker，在Google上搜索关键字&lt;strong&gt;docker install specific version&lt;/strong&gt;，搜到的解决办法基本都没法用。于是自己动手，发现一个安装指定版本的捷径！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/799230615.png&#34; alt=&#34;安装指定版本的docker&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>把zsh放到docker里</title>
+      <link>https://phpgao.github.io/zsh_in_docker.html</link>
+      <pubDate>Fri, 20 May 2016 11:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/zsh_in_docker.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/05/3841937683.png&#34; alt=&#34;zsh &amp;#43; oh-my-zsh&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;每次进入docker容器内操作一些东西时，那效率简直太低！吓得老高赶紧把&lt;strong&gt;zsh + oh-my-zsh&lt;/strong&gt;打包塞进去，终于可以愉快的开发了！zsh都装了，sshd也一起开了得了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记III----docker的快速安装</title>
+      <link>https://phpgao.github.io/docker-note3-html.html</link>
+      <pubDate>Sun, 10 Apr 2016 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note3-html.html</guid>
+      <description>&lt;p&gt;docker快速安装笔记&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Docker打包优化</title>
+      <link>https://phpgao.github.io/docker_build_optimize.html</link>
+      <pubDate>Fri, 01 Apr 2016 03:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_build_optimize.html</guid>
+      <description>&lt;p&gt;老高最近快被工作掩埋了，各种赶上线，各种修BUG，真凄惨！
+今天来说说Docker打包的优化问题。为什么要说这个问题呢？请听我慢慢道来。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/1459029166.png&#34; alt=&#34;Docker&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker的tag实验</title>
+      <link>https://phpgao.github.io/docker_tag.html</link>
+      <pubDate>Mon, 25 Jan 2016 11:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_tag.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker tag&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;git的tag功能是为了将代码的某个状态打上一个戳，通过tag我们可以很轻易的找到对应的提交。一般大家会在一些重要事件打tag，比如提测时，开发完成时，测试结束时，版本发布时等等。&lt;/p&gt;
+&lt;p&gt;对比git的tag，docker的tag似乎更加灵活，docker将文件等信息的变动抽象为一次次的commit，每一次commit以后可能走向不同的分支，当我们完成dockerfile的构建后，会生成一串无规则的字符串代表此次生成的ID，此时，tag的作用就是为他创建一个友好的NAME，方便我们对镜像库的管理。&lt;/p&gt;
+&lt;p&gt;有时候tag的过度友好也会对我们造成一些困惑，下面老高总结一下在使用docker tag时遇到的坑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker-批量删除名字为none的镜像</title>
+      <link>https://phpgao.github.io/docker_rmi_none_name.html</link>
+      <pubDate>Wed, 20 Jan 2016 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_rmi_none_name.html</guid>
+      <description>下面代码的意思是批量停止已经Exited的容器，然后删除之，最后删除，因为名称为none的镜像可能还没有退出，这样做也保险一点。
+docker stop $(docker ps -a -q -f status=exited) docker rm -v $(docker ps -a -q -f status=exited) docker images|grep none|awk &amp;#39;{print $3 }&amp;#39;|xargs docker rmi 如果要直接删除所有的容器，可以这样：
+docker kill $(docker ps -a -q) docker rm -v $(docker ps -a -q) </description>
+    </item>
+    
+    <item>
+      <title>跑在raspberry上的docker</title>
+      <link>https://phpgao.github.io/docker_on_raspberry_pi.html</link>
+      <pubDate>Fri, 08 Jan 2016 11:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_raspberry_pi.html</guid>
+      <description>&lt;p&gt;老高的树莓派昨天(2016-01-07)到货，配件果断买买买（其实只买了SD卡和亚克力盒子）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/01/293942554.jpg&#34; alt=&#34;树莓派&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;你能找到树莓派藏在哪儿吗？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>让你的docker支持代理</title>
+      <link>https://phpgao.github.io/docker_proxy.html</link>
+      <pubDate>Thu, 10 Dec 2015 09:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_proxy.html</guid>
+      <description>&lt;p&gt;功夫网越来越猖狂，连docker都不放过。。。&lt;/p&gt;
+&lt;p&gt;So，我们需要使用代理去下载、搜索我们需要的镜像！&lt;/p&gt;
+&lt;p&gt;需要注意的是：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过老高的实验，在修改了代理设置后必须重启docker的守护进程！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-II----multi-port-shadowsocks</title>
+      <link>https://phpgao.github.io/docker_note2.html</link>
+      <pubDate>Thu, 12 Nov 2015 05:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_note2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/docker-note1.html&#34;&gt;上一节&lt;/a&gt;我们建立了简单的容器，这一届我们进一步探索docker的功能&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-I----Dockerfile-build-run-kill</title>
+      <link>https://phpgao.github.io/docker-note1.html</link>
+      <pubDate>Thu, 12 Nov 2015 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note1.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker &amp;ndash; 像安装卸载APP一样简单的部署服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这些文章是老高自己使用docker是的一些笔记，偶尔会更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在mac上安装并使用docker</title>
+      <link>https://phpgao.github.io/docker_on_mac.html</link>
+      <pubDate>Thu, 30 Apr 2015 10:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_mac.html</guid>
+      <description>&lt;p&gt;docker最近实在火的不行，老高最近也在使用，顺便记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装&lt;/h2&gt;
+&lt;p&gt;下载和安装主要参考下面的文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.docker.com/installation/mac/&#34;&gt;http://docs.docker.com/installation/mac/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://community.emc.com/docs/DOC-44372&#34;&gt;https://community.emc.com/docs/DOC-44372&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

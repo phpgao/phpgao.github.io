@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>福利 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/categories/%E7%A6%8F%E5%88%A9/</link>
+    <description>Recent content in 福利 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 07 Sep 2019 03:56:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/categories/%E7%A6%8F%E5%88%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mac-quick-look插件大全</title>
+      <link>https://phpgao.github.io/mac_quicklook_plugins.html</link>
+      <pubDate>Sat, 07 Sep 2019 03:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_quicklook_plugins.html</guid>
+      <description>不要问那么多，装就对了！
+brew cask install \ qlimagesize \ qlmarkdown \ qlcolorcode \ quicklook-json \ qlprettypatch \ suspicious-package \ quicklookase \ qlvideo \ provisionql \ quicklookapk \ webpquicklook \ quicklook-pat \ quicklook-csv \ qladdict </description>
+    </item>
+    
+    <item>
+      <title>魔兽世界原版GM命令合集</title>
+      <link>https://phpgao.github.io/wow_gm.html</link>
+      <pubDate>Sat, 27 Jul 2019 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/wow_gm.html</guid>
+      <description>&lt;p&gt;自己总结的魔兽世界GM命令，适合魔兽世界的各个版本，比如燃烧的远征，巫妖王等版本！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Launchrocket管理MacOS的服务</title>
+      <link>https://phpgao.github.io/launchrocket.html</link>
+      <pubDate>Tue, 03 Apr 2018 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/launchrocket.html</guid>
+      <description>&lt;p&gt;经常使用MacOS做web开发的同学们，当我们使用&lt;code&gt;brew&lt;/code&gt;安装nginx、php后，管理其守护进程的生命周期就基本只能靠类似&lt;code&gt;brew services start nginx&lt;/code&gt;管理了，要是有一个GUI程序为我们管理这些服务进程就好了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP官方中文手册chm下载地址</title>
+      <link>https://phpgao.github.io/php_manual.html</link>
+      <pubDate>Tue, 27 Mar 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_manual.html</guid>
+      <description>&lt;p&gt;学习一门语言，官方文档很重要，网上下载到的都是一些过时的PHP官方中文手册，要么是2015年版，要么挂摇头卖狗肉的写的最新，实际下载下来还是2015。偶然间发现原来PHP.NET官网提供下载，本篇文章里老高就来告诉大家PHP官方中文手册chm下载地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一些好用好玩的app和web</title>
+      <link>https://phpgao.github.io/fun_apps_and_web.html</link>
+      <pubDate>Tue, 13 Mar 2018 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/fun_apps_and_web.html</guid>
+      <description>http://www.upupoo.com/ https://docs.microsoft.com/zh-cn/sysinternals/ https://github.com/yangyangwithgnu/hardseed http://www.yingdev.com/projects/wgestures https://www.snipaste.com/ https://www.draw.io http://mikeschultz.xyz/materialette/ https://www.autohotkey.com/ https://windirstat.net/ https://www.ipip.net/download.html#ip_trace https://ivarptr.github.io/yu-writer.site/ http://1218.io/ https://github.com/shadowsocksrr/shadowsocksr-csharp/releases https://www.alertover.com https://send-anywhere.com/business http://pooi.moe/QuickLook/ https://www.chuyu.me/zh-Hans/index.html http://clipber.com/clipber/#download_app http://www.hellofont.cn/ https://github.com/chengr28/RevokeChinaCerts http://code.taobao.org/p/mychrome/src/trunk/release/ https://github.com/sylnsfar/qrcode https://chris.dziemborowicz.com/apps/hourglass/ https://getsharex.com/ http://rufus.akeo.ie/ https://www.xnview.com/en/xnconvert/#downloads https://otp.landian.la/index.html http://www.rjno1.com/mpv-easy-player.html https://github.com/Codeusa/SteamCleaner https://www.shencut.com/ http://www.screentogif.com/?l=zh_cn http://www.traynier.com/software/steammover</description>
+    </item>
+    
+    <item>
+      <title>K2P刷padavan教程</title>
+      <link>https://phpgao.github.io/padavan_for_k2p.html</link>
+      <pubDate>Tue, 23 Jan 2018 05:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/padavan_for_k2p.html</guid>
+      <description>&lt;p&gt;快上车吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;padavan原生支持802.1X认证，虽然K2也行，但是百兆的性能确实跟不上时代了，所以入了K2P愉快的刷起！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>WootHosting-KVM架构512M内存$15一年</title>
+      <link>https://phpgao.github.io/woothosting.html</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/woothosting.html</guid>
+      <description>&lt;p&gt;WootHosting是老高最近才发现的一款VPS服务商，目测又是华人开的，并且界面和&lt;a href=&#34;https://blog.phpgao.com/hostmybytes.html&#34;&gt;HostMyBytes&lt;/a&gt;简直一模一样，同样支持中文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac挂载NTFS免费工具mounty</title>
+      <link>https://phpgao.github.io/mounty.html</link>
+      <pubDate>Wed, 27 Dec 2017 04:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mounty.html</guid>
+      <description>&lt;p&gt;你还在为MacOs无法写入NTFS格式的U盘或者移动硬盘烦恼吗？赶紧试试，mac需要安装brew先：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>那些值得一试的油猴(Tampermonkey)脚本</title>
+      <link>https://phpgao.github.io/tampermonkey_script.html</link>
+      <pubDate>Wed, 13 Dec 2017 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tampermonkey_script.html</guid>
+      <description>&lt;p&gt;一下都是老高觉得十分好用的油猴脚本，分享给大家！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用tasker把新短信和未接电话转发到email或server酱</title>
+      <link>https://phpgao.github.io/tasker_sms_calls_to_internet.html</link>
+      <pubDate>Tue, 12 Dec 2017 09:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tasker_sms_calls_to_internet.html</guid>
+      <description>&lt;p&gt;有两个手机号又同时用着IP的同学是不是每天都要带着两部手机闯天下呢？(老高更是有三个手机卡。。)每天在多个手机上操作简直快要精分了，于是想起了之前在PLAY上购买了tasker，貌似可以把多个手机收到的信息转发到网上，比如邮件或者push服务，老高能想到的几个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.pushbullet.com/&#34;&gt;Pushbullet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://pushover.net/&#34;&gt;Pushover&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://instapush.im/&#34;&gt;Instapush&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://sc.ftqq.com&#34;&gt;server酱&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;各家服务都差不多，都可以实现用一个API推送你的消息，区别就是UI和价格了，这次就以server酱(免费)为例看看如何设置吧。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有闲置的手机(最好是小米)也是可以搞一搞的，毕竟那么多神卡可以申请。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>chrome-firefox-Opera浏览器的正确下载地址</title>
+      <link>https://phpgao.github.io/browser-lists.html</link>
+      <pubDate>Thu, 09 Nov 2017 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/browser-lists.html</guid>
+      <description>&lt;p&gt;如果下载Windows版本的Chrome，其实官网会直接给一个很小的下载器，打开下载器才能安装最新版的Chrome，这个很不爽了！&lt;/p&gt;
+&lt;p&gt;好在我们可以通过再下载地址URL后加&lt;code&gt;Standalone&lt;/code&gt;参数来告诉Google我们不想要那个安装器。&lt;/p&gt;
+&lt;p&gt;还有火狐，一不小心就下载到了国内的定制版本，所以记录一下各个浏览器的下载地址，省的下次又被忽悠了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GarageBand中官方课程官网下载地址</title>
+      <link>https://phpgao.github.io/garageband_download.html</link>
+      <pubDate>Thu, 18 May 2017 03:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/garageband_download.html</guid>
+      <description>&lt;p&gt;弃ukulele转吉他，刚好GarageBand有教程，就不要脸的记录一下下载方法。有时间的话老高会把资源上传网盘，并更新下载地址。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/05/2351783159.jpg&#34; alt=&#34;GarageBand&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>高性价比VPS再现---DeployNode</title>
+      <link>https://phpgao.github.io/deploynode.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/deploynode.html</guid>
+      <description>&lt;p&gt;该服务器位于法国，后台管理界面很不错，1G内存用起来很爽，老高机器的IP是&lt;strong&gt;213.32.42.xx&lt;/strong&gt;，欢迎骚扰。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://deploynode.com/clients/aff.php?aff=3&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/1889568454.png&#34; alt=&#34;deploynode&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>下载站</title>
+      <link>https://phpgao.github.io/download_sites.html</link>
+      <pubDate>Wed, 21 Dec 2016 05:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/download_sites.html</guid>
+      <description>&lt;p&gt;为了塞满硬盘，一起努力吧！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1137613735.jpg&#34; alt=&#34;disk_full&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;图片来自网络&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>老高推荐的VPS---Bandwagon-Host</title>
+      <link>https://phpgao.github.io/bandwagon.html</link>
+      <pubDate>Fri, 09 Dec 2016 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagon.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1997432409.png&#34; alt=&#34;bandwagon_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;作为老高博客的常客来说，搬瓦工一定再熟悉不过了。这篇文章是从&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;30元一年，打造自己的翻墙VPS&lt;/a&gt;独立出来的。主要是介绍搬瓦工(Bandwagon Host)的购买方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps.老高的博客目前就稳定运行在bandwagon每年$9.9的服务器上！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用日本樱花arukas的免费docker服务搭建shadowsocks</title>
+      <link>https://phpgao.github.io/arukas.html</link>
+      <pubDate>Wed, 07 Dec 2016 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/arukas.html</guid>
+      <description>&lt;p&gt;这个工具是老高的同事介绍给我的！目前应该是测试阶段，他的有点像国内的Daocloud，操作很简单，老高1min就能搭建完毕，看完本文，你一定也可以！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3239870027.png&#34; alt=&#34;sakura&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. arukas倒着念不就是Sakura ?，樱花家的IP算是比较优质的了，老高用上海电信ping值在80-90ms。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录一些好用的管理面板</title>
+      <link>https://phpgao.github.io/useful_admin.html</link>
+      <pubDate>Wed, 30 Nov 2016 09:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/useful_admin.html</guid>
+      <description>redis  RedisMyAdmin RedisAdmin PyRedisAdmin Redis Desktop Manager  Memcached  phpMemAdmin phpMemcachedAdmin  mysql  phpMyAdmin  Beanstalk  beanstalk_console aurora  </description>
+    </item>
+    
+    <item>
+      <title>送转运中国邀请码</title>
+      <link>https://phpgao.github.io/zyzg.html</link>
+      <pubDate>Thu, 21 Jan 2016 02:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/zyzg.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/01/2815969812.png&#34; alt=&#34;uszcn&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;为了防止以后这种事情在此发生，请在此页面留下你的邮箱，老高会尽快给你发的。&lt;/p&gt;
+&lt;p&gt;由于新的邀请码必须在旧的邀请码使用之后才能生成，&lt;strong&gt;所以同一天求码的同学收到的码可能是同一个&lt;/strong&gt;，就看谁先激活了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>充分利用oh-my-zsh</title>
+      <link>https://phpgao.github.io/oh_my_zsh_advanced.html</link>
+      <pubDate>Thu, 26 Nov 2015 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh_my_zsh_advanced.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3511197024.png&#34; alt=&#34;sss2.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;都听说&lt;a href=&#34;http://ohmyz.sh&#34;&gt;oh-my-zsh&lt;/a&gt;很NB，但是具体NB在哪里呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码补全&lt;/li&gt;
+&lt;li&gt;切换目录增强&lt;/li&gt;
+&lt;li&gt;各种主题&lt;/li&gt;
+&lt;li&gt;命令历史增强&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用zsh&#43;omz打造你的超级终端</title>
+      <link>https://phpgao.github.io/ultimate_terminal.html</link>
+      <pubDate>Wed, 25 Nov 2015 13:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ultimate_terminal.html</guid>
+      <description>&lt;p&gt;自从走上了Linux这条路，就离不开终端了。。。&lt;/p&gt;
+&lt;p&gt;如果不好好折腾一下，真是对不起自己的老花眼了！&lt;/p&gt;
+&lt;p&gt;所以老高针对Mac(没有的赶紧买买买)下的iterm2进行了简单的定制，记录如下：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2794686997.png&#34; alt=&#34;Screen Shot 2015-11-25 at 7.11.28 PM.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----RamNode</title>
+      <link>https://phpgao.github.io/ramnode.html</link>
+      <pubDate>Tue, 24 Nov 2015 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ramnode.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2000021281.png&#34; alt=&#34;afflogoblack.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小技巧---在Finder中显示路径</title>
+      <link>https://phpgao.github.io/show_path_in_finder.html</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/show_path_in_finder.html</guid>
+      <description>&lt;p&gt;在默认的Finder中是直接看不到路径的，除非你把某个文件拖到终端里。。。&lt;/p&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/536081178.png&#34; alt=&#34;Finder&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;如何解决呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>chrome插件---Redirect-Path(揪出隐藏起来的小尾巴)</title>
+      <link>https://phpgao.github.io/chrome_redirect_path.html</link>
+      <pubDate>Mon, 23 Nov 2015 05:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chrome_redirect_path.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/792731461.png&#34; alt=&#34;Redirect Path&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;有时候我们在查看一些外链的时候，某些链接大家看到的可能已经是被t.cn转换过的链接，比如&lt;code&gt;http://t.cn/Rw0r7Y5&lt;/code&gt;，这样导致了一个问题————我该不该点呢？&lt;/p&gt;
+&lt;p&gt;还有一个案例，就是类似色魔张大妈的直达链接，基本上都会跳转很多次，其中几个有一次可能带有推广的小尾巴，但是他们在网址连一扫而过，我们根本抓不住他，怎么办？&lt;/p&gt;
+&lt;p&gt;下面这个工具可以帮你！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----MrRapidHost</title>
+      <link>https://phpgao.github.io/mrapidhost.html</link>
+      <pubDate>Tue, 22 Sep 2015 02:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mrapidhost.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1388919397.png&#34; alt=&#34;MrRapidHost&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;MrRapidHost目前有一款VPS性价比不错，很适合搭梯子。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----time4vps</title>
+      <link>https://phpgao.github.io/time4vps.html</link>
+      <pubDate>Sat, 19 Sep 2015 05:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/time4vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/3507011008.png&#34; alt=&#34;time4vps&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安利一个电影----只有你听见</title>
+      <link>https://phpgao.github.io/only-you-can-hear-me.html</link>
+      <pubDate>Wed, 08 Jul 2015 12:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/only-you-can-hear-me.html</guid>
+      <description>B站链接: 白乙一代表作
+网盘链接: cxt3
+由于百度误判，请把.rar去掉，然后解压zip文件</description>
+    </item>
+    
+    <item>
+      <title>yunfile文件下载脚本</title>
+      <link>https://phpgao.github.io/yum-file-downloader.html</link>
+      <pubDate>Mon, 29 Jun 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum-file-downloader.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4049188365.png&#34; alt=&#34;YUNFILE&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;脚本的诞生源自这里&lt;a href=&#34;https://www.v2ex.com/t/201623&#34;&gt;python 爬虫求助&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>发现了一个不错的PHP框架Slim</title>
+      <link>https://phpgao.github.io/php-slim-framework.html</link>
+      <pubDate>Thu, 25 Jun 2015 04:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-slim-framework.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2369929849.png&#34; alt=&#34;Slim Framework&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Slim的中文意思是苗条的。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>代理网站列表</title>
+      <link>https://phpgao.github.io/proxy-list.html</link>
+      <pubDate>Tue, 23 Jun 2015 09:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/proxy-list.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4026837055.png&#34; alt=&#34;快递 代理&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;代理是个好东西！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用7牛云储存加速你的网站</title>
+      <link>https://phpgao.github.io/7niu.html</link>
+      <pubDate>Mon, 15 Jun 2015 04:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/7niu.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://portal.qiniu.com/signup?code=3lpzf8jdg9h02&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1776694894.png&#34; alt=&#34;7牛LOGO&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不知道大家有没有发现老高的博客虽然使用了低价的搬瓦工，但是速度却没有你想象的那么满。答案就是使用了7牛的云加速。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UltraVPS-性价比$12-年</title>
+      <link>https://phpgao.github.io/ultravps.html</link>
+      <pubDate>Mon, 15 Jun 2015 03:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ultravps.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ultravps.com/clients/aff.php?aff=155&amp;amp;pid=34&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2007871324.png&#34; alt=&#34;2015-06-22_09-51-10.png&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今天老高发现了一个算是性价比和搬瓦工持平的VPS－－－UltraVPS&lt;/p&gt;
+&lt;p&gt;如果对搬瓦工速度不太满意的可以试试UltraVPS的基础套餐。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前基础套餐可以使用3折优惠码！
+这家VPS可能不稳定，购买前请三思！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>免费shadowsocks</title>
+      <link>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</link>
+      <pubDate>Wed, 29 Apr 2015 03:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</guid>
+      <description>&lt;p&gt;老高最近搭建了一个小应用，功能是共享老高科学上网的帐号供大家体验，使用方法很简单，使用软件提供的&lt;strong&gt;二维码扫描&lt;/strong&gt; 或者 直接打开 &lt;strong&gt;json版本&lt;/strong&gt;，里面什么密码的都有，地址在文末。&lt;/p&gt;
+&lt;p&gt;客户端下载请移步 &lt;a href=&#34;https://blog.phpgao.com/download_shadowsocks.html&#34;&gt;shadowsocks相关资源下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;服务器由&lt;strong&gt;搬瓦工&lt;/strong&gt;提供，地点是&lt;strong&gt;洛杉矶&lt;/strong&gt;，使用的套餐是**$9.9**，搭建方法请参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;使用shadowsocks轻松扶墙教程&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>和老高一起把域名转至namesilo吧</title>
+      <link>https://phpgao.github.io/transfer_to_namesilo.html</link>
+      <pubDate>Fri, 17 Apr 2015 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/transfer_to_namesilo.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.namesilo.com/pricing.php?rid=8447580yc&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2091233691.gif&#34; alt=&#34;namesilo的logo&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单的总结一下namesilo的优点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;价格便宜&lt;/li&gt;
+&lt;li&gt;免费终生whois隐私保护 godaddy的隐私保护价格为 &lt;strong&gt;9.99美元&lt;/strong&gt; 一年&lt;/li&gt;
+&lt;li&gt;域名越多越便宜&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>常用User-Agent整理</title>
+      <link>https://phpgao.github.io/user_agent_collection.html</link>
+      <pubDate>Thu, 29 Jan 2015 03:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/user_agent_collection.html</guid>
+      <description>&lt;p&gt;采集什么的喜欢这个了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30元一年，打造自己的翻墙VPS</title>
+      <link>https://phpgao.github.io/vps.html</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2425396346.png&#34; alt=&#34;SS&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从此告别龟速的goagent，节省下来的时间会让你觉得很值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要自己搭梯子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;答：请看此试验 &amp;mdash;-&amp;gt; &lt;a href=&#34;http://www.hekaiyu.cn/hacker/1527.html&#34;&gt;评测告诉你：那些免费代理悄悄做的龌蹉事儿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;strong&gt;免费的东西是最贵的！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更多性价比VPS请移步 &lt;strong&gt;&lt;a href=&#34;https://blog.phpgao.com/vpses.html&#34;&gt;老高推荐的VPS&lt;/a&gt;&lt;/strong&gt;，希望大家在这里能够找到适合自己的VPS&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

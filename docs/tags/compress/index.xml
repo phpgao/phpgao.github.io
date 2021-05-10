@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>compress on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/compress/</link>
+    <description>Recent content in compress on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 25 Jul 2014 03:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/compress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php将image转换为base64编码</title>
+      <link>https://phpgao.github.io/base64_pic.html</link>
+      <pubDate>Fri, 25 Jul 2014 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/base64_pic.html</guid>
+      <description>&lt;p&gt;引用PHP手册里的一评论&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This will greatly reduce your page load time as the browser will only
+need to send one server request for the entire page, rather than
+multiple requests for the HTML and the images. Requests need to be
+uploaded and 99% of the world are limited on their upload speed to the
+server.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译一下就是&lt;/p&gt;
+&lt;p&gt;这种方式能够大大减少页面载入时间，因为整个页面只需要一个请求，多个针对html文档和图片的请求。请求需要被提(上)交(传)，但是99%的上传速度是被限制的。&lt;/p&gt;
+&lt;p&gt;所以减少请求也是一个明确的选择！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

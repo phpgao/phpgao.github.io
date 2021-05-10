@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kvm on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/kvm/</link>
+    <description>Recent content in kvm on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Jan 2018 17:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WootHosting-KVM架构512M内存$15一年</title>
+      <link>https://phpgao.github.io/woothosting.html</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/woothosting.html</guid>
+      <description>&lt;p&gt;WootHosting是老高最近才发现的一款VPS服务商，目测又是华人开的，并且界面和&lt;a href=&#34;https://blog.phpgao.com/hostmybytes.html&#34;&gt;HostMyBytes&lt;/a&gt;简直一模一样，同样支持中文。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

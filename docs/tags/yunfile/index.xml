@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>yunfile on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/yunfile/</link>
+    <description>Recent content in yunfile on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 29 Jun 2015 04:25:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/yunfile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>yunfile文件下载脚本</title>
+      <link>https://phpgao.github.io/yum-file-downloader.html</link>
+      <pubDate>Mon, 29 Jun 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum-file-downloader.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4049188365.png&#34; alt=&#34;YUNFILE&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;脚本的诞生源自这里&lt;a href=&#34;https://www.v2ex.com/t/201623&#34;&gt;python 爬虫求助&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

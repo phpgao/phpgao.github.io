@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ios on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ios/</link>
+    <description>Recent content in ios on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Dec 2017 03:16:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>查询IOS可降级版本</title>
+      <link>https://phpgao.github.io/f_ck_ios.html</link>
+      <pubDate>Wed, 13 Dec 2017 03:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/f_ck_ios.html</guid>
+      <description>&lt;p&gt;IP6用到现在，系统版本已经是11了，眼看着系统越来越卡，到现在逛个淘宝都不想用IP看了。废话不多说，这篇文章就是想记录一下查询能够降级的最低版本，让IP6再能撑几年吧。&lt;/p&gt;
+&lt;p&gt;下面两个地址可以查询能降级的版本，二者好像数据不太一致，待我降级完成后更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IOScydia源推荐</title>
+      <link>https://phpgao.github.io/ioscydia.html</link>
+      <pubDate>Sat, 19 Jul 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ioscydia.html</guid>
+      <description>转自手机中国论坛
+apt.178.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;178第一中文源 我个人是推荐大家用这个的。。功能很多很强大
+cydia.51ipa.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-很著名的51国产源。
+cydia.xsellize.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;必备的源~
+www.sinfuliphonerepo.com&amp;mdash;-大量PJ软件源。
+cydia.clezz.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-大量PJ软件源。
+cy.sosiphone.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-PJ软件源。
+kuaidial.googlecode.com/svn/deb&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-软件kuaidial的官方源。
+cydia.myrepospace.com/wi-inputmethod&amp;mdash;&amp;mdash;&amp;mdash;-WI输入法官方源
+cydia.myrepospace.com/wiim&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;WI输入法官方源
+i.danstaface.net/deb&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-下载vWallpaper官方源
+iphonedelivery.advinux.fr/cydia&amp;mdash;&amp;mdash;&amp;ndash;下载iphonedelivery短信回执官方源
+cydia.sogou.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;搜狗输入法官方源
+mi.baidu.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;百度输入法官方源
+DownLoad.voicecloud.cn/Cydia/&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;讯飞语音输入法官方源
+beta.notifiedapp.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;下载Notified Pro 官方源
+cydia.myrepospace.com/pw5a29ip4&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;Temperaturization 官方源
+apt.25pp.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- pp助手官方源</description>
+    </item>
+    
+  </channel>
+</rss>

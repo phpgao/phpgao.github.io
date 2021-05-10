@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>command on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/command/</link>
+    <description>Recent content in command on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 21 Apr 2016 08:16:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/command/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>两个好用的命令行工具-watch-和-rsync</title>
+      <link>https://phpgao.github.io/command_line_tool_watch_rsync.html</link>
+      <pubDate>Thu, 21 Apr 2016 08:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/command_line_tool_watch_rsync.html</guid>
+      <description>几句话说完。
+watch有监控的需求，比如文件列表的变化等。
+# -5 指的是间隔5s执行一次 # --differences 指高亮变化的地方 watch -n 5 --differences ls -l rsync不多说了，主要解决了我在服务器之间的大文件同步需求，scp本来也能做，但是如果文件名相同会直接覆盖。
+# --update 不覆盖更新的文件 # --times 选项保持每个文件的访问权限、创建和最后修改时间 rsync -e ssh --update --verbose --times someone@someip:~/* /tmp/ </description>
+    </item>
+    
+    <item>
+      <title>几条命令找出服务器上的垃圾文件</title>
+      <link>https://phpgao.github.io/clean-up-your-linux.html</link>
+      <pubDate>Sun, 24 May 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/clean-up-your-linux.html</guid>
+      <description>&lt;p&gt;Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！&lt;/p&gt;
+&lt;p&gt;当然，如果你的服务器容量是TB、PB级别的请无视此文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Shell中各种奇怪的变量</title>
+      <link>https://phpgao.github.io/linux_puzzle.html</link>
+      <pubDate>Wed, 18 Jun 2014 02:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_puzzle.html</guid>
+      <description>这些变量是随系统运行而变化的，灵活使这些变量可简化我们的操作和更好地控制bash shell的行为。
+$# 是传给脚本的参数个数 $0 是脚本本身的名字 $1 是传递给该shell脚本的第一个参数 $2 是传递给该shell脚本的第二个参数 $@ 是传给脚本的所有参数的列表 $* 是以一个单字符串显示所有向脚本传递的参数，与位置变量不同，参数可超过9个 $$ 是脚本运行的当前进程ID号 $? 是显示最后命令的退出状态，0表示没有错误，其他表示有错误 </description>
+    </item>
+    
+  </channel>
+</rss>

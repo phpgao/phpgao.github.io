@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mysqldb on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/mysqldb/</link>
+    <description>Recent content in mysqldb on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Aug 2014 04:41:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/mysqldb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos下安装python-MySQLdb</title>
+      <link>https://phpgao.github.io/python_mysqldb.html</link>
+      <pubDate>Fri, 15 Aug 2014 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_mysqldb.html</guid>
+      <description>源码安装： 点击这里下载源码
+解压前线装一下必要的包
+yum install python-devel mysql-devel zlib-devel openssl-devel 解压
+tar xf MySQL-python-1.2.3.tar.gz cd MySQL-python-1.2.3 修改mysite.cfg，指定mysql-config的路径
+使用whereis mysql-config找路径
+vi mysite.cfg #找到mysql_config = XXX 改为你的路径 继续安装
+python setup.py build python setup.py install 工具安装： sudo easy_install mysql-pythonsudo pip install mysql-python 出现错误的解决办法 --- ```bash vi ~/.bash_profile # add export DYLD_LIBRARY_PATH=&amp;#39;/usr/local/mysql/lib&amp;#39;; PATH=&amp;#34;$PATH:/usr/local/mysql/bin&amp;#34; enjoy~
+Win下请直接下载编译好的安装包：
+请输入链接描述</description>
+    </item>
+    
+  </channel>
+</rss>

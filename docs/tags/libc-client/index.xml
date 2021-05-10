@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>libc-client on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/libc-client/</link>
+    <description>Recent content in libc-client on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 23 May 2015 04:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/libc-client/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>彻底解决编译PHP找不到libc-client.a的问题</title>
+      <link>https://phpgao.github.io/libc-client-404.html</link>
+      <pubDate>Sat, 23 May 2015 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/libc-client-404.html</guid>
+      <description>&lt;p&gt;最近PHP爆出漏洞，老高也在升级PHP版本，并加入一些支持，但是遇到这个问题很蛋疼&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;configure: error: Cannot find imap library (libc-client.a). Please check your c-client installation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;网上搜了各种教程，各种cp都没用，索性我们就自己编译吧！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>socks on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/socks/</link>
+    <description>Recent content in socks on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jun 2015 09:44:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/socks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>代理网站列表</title>
+      <link>https://phpgao.github.io/proxy-list.html</link>
+      <pubDate>Tue, 23 Jun 2015 09:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/proxy-list.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4026837055.png&#34; alt=&#34;快递 代理&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;代理是个好东西！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

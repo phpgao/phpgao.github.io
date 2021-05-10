@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>quote on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/quote/</link>
+    <description>Recent content in quote on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Jul 2014 08:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/quote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>单引号和双引号的区别及用法</title>
+      <link>https://phpgao.github.io/php_quotation_marks.html</link>
+      <pubDate>Tue, 22 Jul 2014 08:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_quotation_marks.html</guid>
+      <description>&lt;p&gt;双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考&lt;/p&gt;
+&lt;p&gt;转自&lt;a href=&#34;http://blog.sina.com.cn/s/blog_706476980100xapp.html&#34;&gt;http://blog.sina.com.cn/s/blog_706476980100xapp.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3.&amp;quot; &amp;ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而&#39; &amp;lsquo;单引号里面的不进行解释，直接输出。
+例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$abc=&#39;my name is tome&#39;;
+echo $abc //结果是:my name is tom
+echo &#39;$abc&#39; //结果是:$abc
+echo &amp;quot;$abc&amp;quot; //结果是:my name is tom
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select    *    from    abc_table where user_name=&#39;abc&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQL语句可以写成:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr = &amp;quot;select    *    from abc_table where user _name= &#39;abc&#39;&amp;quot; ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;假设查询条件中使用的是变量，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$user_name = $_REQUEST[&#39;user_name&#39;]; //字符串变量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$user=array (&amp;quot;name&amp;quot;=&amp;gt; $_REQUEST[&#39;user_name‘,&amp;quot;age&amp;quot;=&amp;gt;$_REQUEST[&#39;age&#39;];//数组变量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQL语句就可以写成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr = &amp;quot;select    *    from abc_table where user_name = &#39; &amp;quot; . $user_name . &amp;quot; &#39; &amp;quot;;
+SQLstr = &amp;quot;select * from abc_table where user_name = &#39; &amp;quot; . $user[&amp;quot;name&amp;quot;] . &amp;quot; &#39; &amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对比一下:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr=&amp;quot;select * from abc_table where user_name = &#39; abc &#39; &amp;quot; ;
+SQLstr=&amp;quot;select * from abc_table where user_name =&#39; &amp;quot; . $user _name . &amp;quot; &#39; &amp;quot;;
+SQLstr=&amp;quot;select * from abc_table where user_name =&#39; &amp;quot; . $user[&amp;quot;name&amp;quot;] . &amp;quot; &#39; &amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQLstr可以分解为以下3个部分:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1：&amp;quot;select * from table where user_name = &#39; &amp;quot; //固定SQL语句 
+2：$user //变量 
+3：&amp;quot; &#39; &amp;quot;
+1,2,3部分字符串之间用&amp;quot;.&amp;quot; 来连接
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ss-panel on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ss-panel/</link>
+    <description>Recent content in ss-panel on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 May 2015 14:43:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ss-panel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用ss-manyuser和ss-panel搭建shadowsocks分享平台</title>
+      <link>https://phpgao.github.io/share_shadowsocks.html</link>
+      <pubDate>Mon, 18 May 2015 14:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/share_shadowsocks.html</guid>
+      <description>ss-manyuser做前端，ss-panel做后端，运行环境centos6。
+项目地址 感谢以下大神提供源码
+manyuser：
+shadowsocks manyuser branch
+ss-panel:
+ss-panel
+安装 mkdir /data cd /data git clone https://github.com/mengskysama/shadowsocks.git backend git clone https://github.com/orvice/ss-panel.git front 配置 front # 1. 创建数据库，并建立一个本地用户shadowsocks@localhost，并赋予权限 CREATE DATABASE IF NOT EXISTS shadowsocks DEFAULT CHARSET utf8 COLLATE utf8_general_ci; GRANT ALL PRIVILEGES ON shadowsocks.* TO &amp;#39;shadowsocks&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; # 2. 导入sql cd front cat sql/*.sql &amp;gt; merged.sql # 登录mysql mysql&amp;gt;use shadowsocks; mysql&amp;gt;source path/to/merged.sql; # 3. 将数据库配置信息写入lib/config.php 这里要提一下：
+userid=1的用户是管理员，最好把他的端口将50000改为15000，密码是直接md5，可以自己修改。
+passwd字段是ss的连接密码。
+backend # 准备环境 yum -y install python-pip m2crypto pip install cymysql # 2.</description>
+    </item>
+    
+  </channel>
+</rss>

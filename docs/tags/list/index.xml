@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>list on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/list/</link>
+    <description>Recent content in list on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Feb 2014 07:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/list/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>美化Apache的文件列表</title>
+      <link>https://phpgao.github.io/prettify_index.html</link>
+      <pubDate>Fri, 28 Feb 2014 07:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/prettify_index.html</guid>
+      <description>此篇针对apache服务器，其他服务器还在研究中 PC端：
+手机端：
+此为原帖地址，讲得有点简单了，本人总结并修改了一下，发现只要遵循我的步骤，一定能开启！ (系统不限win,linux)
+开启美化文件列表步骤：
+ 打开Apache的autoindex模块 开启htaccess及includes  &amp;lt;Directory &amp;#34;../htdocs&amp;#34;&amp;gt; Options Indexes FollowSymLinks MultiViews IncludesNoExec AllowOverride All Order allow,deny allow from all 打开ssi(shtml)功能 去注释 AddType text/html .shtml AddOutputFilter INCLUDES .shtml 将压缩包解压至web根目录 enjoy  下载地址提取码：rod5</description>
+    </item>
+    
+  </channel>
+</rss>

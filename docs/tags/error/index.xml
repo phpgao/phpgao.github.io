@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>error on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/error/</link>
+    <description>Recent content in error on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Sep 2014 12:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/error/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP编译错误的解决办法</title>
+      <link>https://phpgao.github.io/php_configuration_error.html</link>
+      <pubDate>Sun, 07 Sep 2014 12:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_configuration_error.html</guid>
+      <description>This article is post on https://coderwall.com/p/ggmpfa
+ configure: error: xslt-config not found. Please reinstall the libxslt &amp;gt;= 1.1.0 distribution
+ yum -y install libxslt-devel  configure: error: Could not find net-snmp-config binary. Please check your net-snmp installation.
+ yum -y install net-snmp-devel  configure: error: Please reinstall readline - I cannot find readline.h
+ yum -y install readline-devel  configure: error: Cannot find pspell
+ yum -y install aspell-devel  checking for unixODBC support&amp;hellip; configure: error: ODBC header file &amp;lsquo;/usr/include/sqlext.</description>
+    </item>
+    
+  </channel>
+</rss>

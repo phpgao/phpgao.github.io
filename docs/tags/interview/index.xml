@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>interview on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/interview/</link>
+    <description>Recent content in interview on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Jun 2014 02:41:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux经典面试题</title>
+      <link>https://phpgao.github.io/linux_interview_questions.html</link>
+      <pubDate>Wed, 18 Jun 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_interview_questions.html</guid>
+      <description>Linux挂载Winodws共享文件夹
+  查看http的并发请求数及其TCP连接状态：
+  用tcpdump嗅探80端口的访问看看谁最高
+  统计/var/log/下文件个数
+  查看当前系统每IP连接数
+  shell下32位随机密码生成
+  统计出apache的access.log中访问量最多的5个IP
+  如何查看二进制文件的内容
+  ps aux 中VSZ代表什么意思 RSS代表什么
+  检测并修复/dev/hda5
+  Linux开机启动顺序
+  符号链接和硬链接的区别
+  保存当前磁盘分区的分区表
+  手动安装grub
+  改内核参数
+  在1-39内取随机数
+  限定apache每秒钟连接数为1,峰值为3
+  FTP主动与被动模式
+  显示/etc/inittab中以#开头,且后面跟一个或多个空白字符,而后又跟了任意非空白字符的行;
+  显示/etc/inittab中包含了:一个数字:(即两个冒号中间一个数字)的行;
+  怎么把自己写的脚本添加到服务里面，即可以使用service命令来调用
+  写一个脚本，实现批量添加20个用户，用户名为user1-20，密码为user后面跟5个随机字符
+  写一个脚本，实现判断192.</description>
+    </item>
+    
+  </channel>
+</rss>

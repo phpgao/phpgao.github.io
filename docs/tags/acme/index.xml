@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>acme on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/acme/</link>
+    <description>Recent content in acme on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Aug 2018 11:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/acme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Acme工具配置Let&#39;s-Encrypt通配符HTTPS证书</title>
+      <link>https://phpgao.github.io/acme.html</link>
+      <pubDate>Thu, 16 Aug 2018 11:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/acme.html</guid>
+      <description>&lt;p&gt;老高的域名使用很久了，同时也产生了大量的二级域名，Let&amp;rsquo;s Encrypt虽然每三个月续签的时候不需要加域名参数，但是如果要多加一个或者删除又需要敲一大堆命令，今年(2018)Let&amp;rsquo;s Encrypt强势支持了通配符证书，支持验证的方式是dns，所以需要自己去DNS解析处申请一个API，虽然多了DNS的操作，但是带来的好处真是太多，下面赶紧跟着老高学一下如果使用Acme工具配置Let&amp;rsquo;s Encrypt通配符HTTPS证书吧！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2018/08/3089062749.png&#34; alt=&#34;wildcard&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

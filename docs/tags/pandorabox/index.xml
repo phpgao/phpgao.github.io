@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pandorabox on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pandorabox/</link>
+    <description>Recent content in pandorabox on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Jan 2017 06:11:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pandorabox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>斐讯K2刷机记录</title>
+      <link>https://phpgao.github.io/phicomm_k2.html</link>
+      <pubDate>Fri, 06 Jan 2017 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phicomm_k2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/01/3380399088.jpg&#34; alt=&#34;K2&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;过节359入的，购买地址&lt;a href=&#34;https://union-click.jd.com/jdc?e=0&amp;amp;p=AyIHZR5bEgAWBVMfWyUBFQdRElsUMlZYDUUEJVtXQhQQRQtaV1MJBABAHUBZCQVYEgIWDlUaRExHTlplTy8XcVZgVhw%2Bc1ZCfTwaEGcDFEcsTVcZMhM3VRpaFAIVA1EcXiUyEgdlTTUVAxMGVBpaHAAUN1MbWBUCEAJSGmsVBxsPUxlcHQoVDlccaxcCIlwAdVwWBxUCUR0OEQRCAFYrayUy&amp;amp;t=W1dCFBBFC1pXUwkEAEAdQFkJBVgSAhYOVRpETEdOWg%3D%3D&#34;&gt;【斐讯PSG1218】-京东&lt;/a&gt;，记一下刷机步骤。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译openwrt</title>
+      <link>https://phpgao.github.io/compile_openwrt.html</link>
+      <pubDate>Tue, 07 Apr 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_openwrt.html</guid>
+      <description>&lt;p&gt;一些资料&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之配置opkg篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_opkg.html</link>
+      <pubDate>Sun, 22 Mar 2015 15:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_opkg.html</guid>
+      <description>&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+&lt;p&gt;opkg是openwrt里的软件包管理器，类似mac下的brew、Ubuntu下的apt-get和centos下的yum。&lt;/p&gt;
+&lt;p&gt;但是为什么有很多同学都没办法在openwrt中使用opkg，其主要原因其实嵌入式的硬件繁多，不像我们一般PC只有i386和AMD64之分。&lt;/p&gt;
+&lt;p&gt;此方法适用于OpenWRT,Pandorabox,官方系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之DDNS动态域名解析篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_ddns.html</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_ddns.html</guid>
+      <description>&lt;p&gt;老高家里用的是联通10M宽带，500/年。自从小米路由器mini刷了pandorabox后无法使用官方的APP管理设备，于是想到了使用openwrt自带的DDNS，即动态DNS来远程管理家里的路由器。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之去adbyby广告篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_noad.html</link>
+      <pubDate>Sat, 07 Mar 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_noad.html</guid>
+      <description>&lt;p&gt;为了去广告，普通用户可在扩展插件中找到非官方插件-网页广告拦截，安装即可！&lt;/p&gt;
+&lt;p&gt;但是这种方法的缺点也很明显，无法自由控制去广告功能，而adbyby官方为我们提供了MT7620A平台的编译版本，我们只需要下载运行即可！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之远程下载篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</link>
+      <pubDate>Thu, 12 Feb 2015 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</guid>
+      <description>&lt;p&gt;小米路由器mini刷了Pandorabox后还是可以使用迅雷的远程下载的，步骤如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之Python篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_python.html</link>
+      <pubDate>Tue, 10 Feb 2015 13:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_python.html</guid>
+      <description>&lt;p&gt;上回老高写了翻墙篇，寻思着这openwrt下能不能跑个python，继续折腾！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之自动翻墙篇</title>
+      <link>https://phpgao.github.io/carzy_router.html</link>
+      <pubDate>Sun, 04 Jan 2015 14:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/carzy_router.html</guid>
+      <description>&lt;p&gt;趁着节假日，终于搞定了路由器的自动翻墙，终于有自己的翻墙路由器了，之后一发而不可收，记录了一些折腾的文章，索引在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router.html&#34;&gt;openwrt路由器折腾教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;附赠 &lt;a href=&#34;https://blog.phpgao.com/slip_across_gfw.html&#34;&gt;翻越功夫网教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自从发现Pandorabox在&lt;code&gt;r355版&lt;/code&gt;在固件中整合了ss，redsocks2和ChinaDNS-C，省下了不少事儿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有同学反应r355-20150114被移除，刚好老高有存货，文中有百度网盘下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本教程同样适用于其他openwrt系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;推荐查看&lt;strong&gt;更好的方案&lt;/strong&gt;一节！&lt;/p&gt;
+&lt;p&gt;你可能根据一下关键词找到此文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pandorabox openwrt 安装redsocks2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻墙路由器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;路由器翻墙教程&lt;/li&gt;
+&lt;li&gt;pandorabox openwrt 路由器翻墙&lt;/li&gt;
+&lt;li&gt;小米路由器翻墙 教程&lt;/li&gt;
+&lt;li&gt;打造自动翻墙的路由器&lt;/li&gt;
+&lt;li&gt;设置路由器翻墙&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

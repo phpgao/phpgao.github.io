@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vpsmate on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/vpsmate/</link>
+    <description>Recent content in vpsmate on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 03:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/vpsmate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos6新系统初始化脚本</title>
+      <link>https://phpgao.github.io/new_cents_shell.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_cents_shell.html</guid>
+      <description>&lt;p&gt;最近装机次数有点多，本来想写到这里的&lt;a href=&#34;https://blog.phpgao.com/centos_optimize.html&#34;&gt;centos6 优化脚本与安全脚本&lt;/a&gt;，结果一想还是新开一个帖子吧。&lt;/p&gt;
+&lt;p&gt;centos源设置可以参考&lt;a href=&#34;https://blog.phpgao.com/repo_for_centos.html&#34;&gt;Centos源设置&lt;/a&gt;，老高推荐安装阿里源。&lt;/p&gt;
+&lt;p&gt;新机子先运行上面的脚本，再运行这个脚本&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

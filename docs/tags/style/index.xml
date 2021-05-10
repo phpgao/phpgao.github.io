@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>style on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/style/</link>
+    <description>Recent content in style on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Sep 2014 03:05:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/style/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>也谈代码风格</title>
+      <link>https://phpgao.github.io/coding_rules.html</link>
+      <pubDate>Wed, 10 Sep 2014 03:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/coding_rules.html</guid>
+      <description>先讲个笑话
+ 我们程序员分两种，一种是:
+if( #condition ){//codes} 另一种是：
+if( #condition ){//codes} 你是哪一种呢?
+ 这个笑话比较冷，但是也说明了一个问题 —— 代码风格难以统一。
+一个好的代码风格会使程序更容易阅读，提高团队合作的效率不说，自己看着也会赏心悦目，好像自己淫的一手好湿。
+而混乱的代码轻则增加团队沟通成本，重则影响团队和谐。所以我认为不论是作为一个团队还是所谓一名开发者，必须坚持自己的程序编写风格。老高偶尔也会因为考虑到一致性而使用我不喜欢的代码风格，事实上这个行为是很不可取的。
+所以今后老高今后要改正这个不良习惯，保持自己的代码风格，之前写的都不算 XD 。
+我的风格 下面老高精(HU)心(LUAN)整理了一些PHP编码的习惯，不知道有没有和我一样的TX？
+编码 编码推荐UTF-8，所以在处理文字长度的时候请使用mb_*系列函数。
+换行 由于UNIX/Linux、Mac与Windows在换行格式上的差别，请搞清楚运行环境， 再搞清楚CR(carriage return, 符号’r’表示, 十进制ASCII代码是13, 十六进制代码为0x0D), LF(line feed,使用’n’符号表示, ASCII代码是10, 十六制为0x0A), CR/LF的概念，然后在编辑器中把换行格式改为对应的格式即可。
+   系统 换行编码 正则     UNIX/Linux 换行 \r   Mac 回车 \n   Windows 回车+换行 \r\n    换行回车的历史，来自豆瓣</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Figurine on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/figurine/</link>
+    <description>Recent content in Figurine on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Sep 2015 02:11:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/figurine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>还是忍不住下单了</title>
+      <link>https://phpgao.github.io/github-shop-2015.html</link>
+      <pubDate>Wed, 09 Sep 2015 02:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github-shop-2015.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/172808848.jpg&#34; alt=&#34;Octocat Figurine&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;终于在&lt;a href=&#34;http://github.myshopify.com/&#34;&gt;github shop&lt;/a&gt;败了Octocat Figurine！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

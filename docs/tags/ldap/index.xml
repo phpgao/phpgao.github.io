@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ldap on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ldap/</link>
+    <description>Recent content in ldap on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Dec 2018 09:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ldap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用openldap搭建LDAP服务篇1--初见LDAP</title>
+      <link>https://phpgao.github.io/how_to_config_ldap_server.html</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_config_ldap_server.html</guid>
+      <description>&lt;p&gt;LDAP是轻量目录访问协议，这个服务从老高进入360就一直在用，LDAP带来的好处真的是很多，你可以把它想象成为一个内网版的单点登录服务，可以让你使用同一组账户密码访问所有支持LDAP验证的系统，为企业的内部运维带来了极大的便利。&lt;/p&gt;
+&lt;p&gt;不过想要自己独立搭建一个LDAP服务还是挺麻烦的！不过一旦搭建好了LDAP服务器，剩下的管理和运维就简单多了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

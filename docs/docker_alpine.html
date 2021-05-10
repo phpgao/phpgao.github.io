@@ -1,0 +1,119 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>体验Alpine-Linux-Docker-Image | 老高的技术博客</title><meta name=keywords content="docker,alpine"><meta name=description content="如果你已经研究过老高的为樱花打造的KCPTUN，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。
+
+
+
+Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。
+"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/docker_alpine.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="体验Alpine-Linux-Docker-Image"><meta property="og:description" content="如果你已经研究过老高的为樱花打造的KCPTUN，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。
+
+
+
+Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。
+"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/docker_alpine.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-03-10T05:23:00+00:00"><meta property="article:modified_time" content="2017-03-10T05:23:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="体验Alpine-Linux-Docker-Image"><meta name=twitter:description content="如果你已经研究过老高的为樱花打造的KCPTUN，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。
+
+
+
+Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"体验Alpine-Linux-Docker-Image","item":"https://phpgao.github.io/docker_alpine.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"体验Alpine-Linux-Docker-Image","name":"体验Alpine-Linux-Docker-Image","description":"如果你已经研究过老高的为樱花打造的KCPTUN，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。\n Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。\n","keywords":["docker","alpine"],"articleBody":"如果你已经研究过老高的为樱花打造的KCPTUN，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。\n Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。\n 官网  Alpine Linux Docker Image alpine - Docker Store 目前最新tag为 3.5  特点 通过阅读官方说明，简单的总结一下这个镜像\n 集成musl libc，提供完整又强大的功能 集成busy_box，胜于busy_box 镜像小，节省传输时间，和docker简直是天作之合！  获取 docker pull alpine docker images # 由图看到只有3.99 MB大小，基于alpine而build出来的endoffight/shadowsocks-kcp也只有14.5 MB 运行 由于启用一个镜像必须有一个进程，所以我们运行ash(Bash in alpine)\n# 启动一个容器 docker run --name=al -itd alpine ash # 进入系统 docker exec -it al ash APK包管理命令 # 更新源 apk add --update # 缓存的index文件保存在/var/cache/apk/文件夹中 ls -al /var/cache/apk/ # 搜索nginx，目前nginx最新是1.11，1.10.3是最新的稳定版，看来库里的软件还是很新的 apk search nginx nginx-1.10.3-r0 ... # libsodium 也有，这不是就shadowsocks而生的么? apk search libsodium libsodium-1.0.11-r0 libsodium-dev-1.0.11-r0 # 安装命令 apk add --update --no-cache python openrc # 组安装，--virtual web_tools表示后面的程序都会被归到web_tools组，最后删除的时候可以一起被删 apk --update add --virtual web_tools nginx php7-fpm # 删除 apk del python # 列出已安装的程序 apk info|sort apk -vv info|sort 服务管理 # 非docker环境的服务管理 rc-service nginx start rc-service nginx stop rc-service nginx php 实战 下面进入实战环节，让我们配置一个最简单的Nginx+PHP运行环境吧！\n新建 docker run --name=web -itd alpine ash docker exec -it web ash 添加软件 apk add --no-cache --virtual web_tools nginx php7-fpm supervisor 配置supervisor # supervisor 前台运行 sed -i 's/\\;nodaemon=false/nodaemon=true/g' /etc/supervisord.conf vi /etc/supervisord.conf # 添加如下内容 [program:php-fpm] command=php-fpm7 -F stdout_logfile=/var/log/php7/php.log # /dev/stdout stdout_logfile_maxbytes=1MB stderr_logfile=/var/log/php7/php_error.log # /dev/stderr stderr_logfile_maxbytes=1MB [program:nginx] command=nginx -g 'daemon off;' stdout_logfile=/var/log/nginx/nginx.log stdout_logfile_maxbytes=1MB stderr_logfile=/var/log/nginx/nginx_error.log stderr_logfile_maxbytes=1MB 配置nginx true  /etc/nginx/conf.d/default.conf vi /etc/nginx/conf.d/default.conf # add server { listen 80; root /www; index index.html index.htm index.php; server_name localhost; client_max_body_size 32m; error_page 500 502 503 504 /50x.html; location = /50x.html { root /var/lib/nginx/html; } location ~ \\.php$ { fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; include fastcgi.conf; } } 新建PHP文件 vi /www/index.php # add \"Hello world!\\n\"; 运行 /usr/bin/supervisord 查看 外部新启一个终端查看\ndocker exec -it web ash curl lcoalhost # get # Hello world! 完\n","wordCount":"244","inLanguage":"en","datePublished":"2017-03-10T05:23:00Z","dateModified":"2017-03-10T05:23:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/docker_alpine.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>体验Alpine-Linux-Docker-Image</h1><div class=post-meta>March 10, 2017&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2017-03-10_docker_alpine.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>如果你已经研究过老高的<a href=https://blog.phpgao.com/kcptun_on_sakura.html>为樱花打造的KCPTUN</a>，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2017/03/3782981747.png alt=alpine_log></p><blockquote><p>Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。</p></blockquote><h2 id=官网>官网<a hidden class=anchor aria-hidden=true href=#官网>#</a></h2><ul><li><a href=http://gliderlabs.viewdocs.io/docker-alpine/>Alpine Linux Docker Image</a></li><li><a href=https://store.docker.com/images/e7e5dbc4-2103-4b7c-9409-b0ca32ce3d83>alpine - Docker Store</a></li><li>目前最新tag为 3.5</li></ul><h2 id=特点>特点<a hidden class=anchor aria-hidden=true href=#特点>#</a></h2><p>通过阅读<a href=http://gliderlabs.viewdocs.io/docker-alpine/about/>官方说明</a>，简单的总结一下这个镜像</p><ul><li>集成<a href=http://www.etalabs.net/compare_libcs.html>musl libc</a>，提供完整又强大的功能</li><li>集成busy_box，胜于busy_box</li><li>镜像小，节省传输时间，和docker简直是天作之合！</li></ul><h2 id=获取>获取<a hidden class=anchor aria-hidden=true href=#获取>#</a></h2><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2017/03/4196534547.png alt=alpine镜像></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker pull alpine
+docker images
+<span style=color:#75715e># 由图看到只有3.99 MB大小，基于alpine而build出来的endoffight/shadowsocks-kcp也只有14.5 MB</span>
+</code></pre></div><h2 id=运行>运行<a hidden class=anchor aria-hidden=true href=#运行>#</a></h2><p>由于启用一个镜像必须有一个进程，所以我们运行ash(Bash in alpine)</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2017/03/2007223611.png alt="process list"></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 启动一个容器</span>
+docker run --name<span style=color:#f92672>=</span>al -itd alpine ash
+
+<span style=color:#75715e># 进入系统</span>
+docker exec -it al ash
+</code></pre></div><h3 id=apk包管理命令>APK包管理命令<a hidden class=anchor aria-hidden=true href=#apk包管理命令>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 更新源</span>
+apk add --update
+
+<span style=color:#75715e># 缓存的index文件保存在/var/cache/apk/文件夹中</span>
+ls -al /var/cache/apk/
+
+<span style=color:#75715e># 搜索nginx，目前nginx最新是1.11，1.10.3是最新的稳定版，看来库里的软件还是很新的</span>
+apk search nginx
+
+nginx-1.10.3-r0
+...
+
+<span style=color:#75715e># libsodium 也有，这不是就shadowsocks而生的么?</span>
+apk search libsodium
+libsodium-1.0.11-r0
+libsodium-dev-1.0.11-r0
+
+<span style=color:#75715e># 安装命令</span>
+apk add --update --no-cache python openrc
+
+<span style=color:#75715e># 组安装，--virtual web_tools表示后面的程序都会被归到web_tools组，最后删除的时候可以一起被删</span>
+apk --update add --virtual web_tools nginx php7-fpm
+
+<span style=color:#75715e># 删除</span>
+apk del python
+
+<span style=color:#75715e># 列出已安装的程序</span>
+apk info|sort
+apk -vv info|sort
+</code></pre></div><h3 id=服务管理>服务管理<a hidden class=anchor aria-hidden=true href=#服务管理>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 非docker环境的服务管理</span>
+rc-service nginx start
+rc-service nginx stop
+rc-service nginx php
+</code></pre></div><h2 id=实战>实战<a hidden class=anchor aria-hidden=true href=#实战>#</a></h2><p>下面进入实战环节，让我们配置一个最简单的Nginx+PHP运行环境吧！</p><h3 id=新建>新建<a hidden class=anchor aria-hidden=true href=#新建>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker run --name<span style=color:#f92672>=</span>web -itd alpine ash
+
+docker exec -it web ash
+</code></pre></div><h3 id=添加软件>添加软件<a hidden class=anchor aria-hidden=true href=#添加软件>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>apk add --no-cache --virtual web_tools nginx php7-fpm supervisor
+</code></pre></div><h3 id=配置supervisor>配置supervisor<a hidden class=anchor aria-hidden=true href=#配置supervisor>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># supervisor 前台运行</span>
+sed -i <span style=color:#e6db74>&#39;s/\;nodaemon=false/nodaemon=true/g&#39;</span> /etc/supervisord.conf
+
+vi /etc/supervisord.conf
+<span style=color:#75715e># 添加如下内容</span>
+
+<span style=color:#f92672>[</span>program:php-fpm<span style=color:#f92672>]</span>
+command<span style=color:#f92672>=</span>php-fpm7 -F
+stdout_logfile<span style=color:#f92672>=</span>/var/log/php7/php.log
+<span style=color:#75715e># /dev/stdout</span>
+stdout_logfile_maxbytes<span style=color:#f92672>=</span>1MB
+stderr_logfile<span style=color:#f92672>=</span>/var/log/php7/php_error.log
+<span style=color:#75715e># /dev/stderr</span>
+stderr_logfile_maxbytes<span style=color:#f92672>=</span>1MB
+
+<span style=color:#f92672>[</span>program:nginx<span style=color:#f92672>]</span>
+command<span style=color:#f92672>=</span>nginx -g <span style=color:#e6db74>&#39;daemon off;&#39;</span>
+stdout_logfile<span style=color:#f92672>=</span>/var/log/nginx/nginx.log
+stdout_logfile_maxbytes<span style=color:#f92672>=</span>1MB
+stderr_logfile<span style=color:#f92672>=</span>/var/log/nginx/nginx_error.log
+stderr_logfile_maxbytes<span style=color:#f92672>=</span>1MB
+</code></pre></div><h3 id=配置nginx>配置nginx<a hidden class=anchor aria-hidden=true href=#配置nginx>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>true &gt; /etc/nginx/conf.d/default.conf
+vi /etc/nginx/conf.d/default.conf
+
+<span style=color:#75715e># add</span>
+server <span style=color:#f92672>{</span>
+        listen                  80;
+        root                    /www;
+        index                   index.html index.htm index.php;
+        server_name             localhost;
+        client_max_body_size    32m;
+        error_page              <span style=color:#ae81ff>500</span> <span style=color:#ae81ff>502</span> <span style=color:#ae81ff>503</span> <span style=color:#ae81ff>504</span>  /50x.html;
+        location <span style=color:#f92672>=</span> /50x.html <span style=color:#f92672>{</span>
+              root              /var/lib/nginx/html;
+        <span style=color:#f92672>}</span>
+        location ~ <span style=color:#ae81ff>\.</span>php$ <span style=color:#f92672>{</span>
+              fastcgi_pass      127.0.0.1:9000;
+              fastcgi_index     index.php;
+              include           fastcgi.conf;
+        <span style=color:#f92672>}</span>
+    <span style=color:#f92672>}</span>
+</code></pre></div><h3 id=新建php文件>新建PHP文件<a hidden class=anchor aria-hidden=true href=#新建php文件>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>vi /www/index.php
+
+<span style=color:#75715e># add</span>
+&lt;?php
+echo <span style=color:#e6db74>&#34;Hello world!\n&#34;</span>;
+
+</code></pre></div><h3 id=运行-1>运行<a hidden class=anchor aria-hidden=true href=#运行-1>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>/usr/bin/supervisord
+</code></pre></div><h3 id=查看>查看<a hidden class=anchor aria-hidden=true href=#查看>#</a></h3><p>外部新启一个终端查看</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>docker exec -it web ash
+curl lcoalhost
+<span style=color:#75715e># get</span>
+<span style=color:#75715e># Hello world!</span>
+</code></pre></div><p>完</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/docker/>docker</a></li><li><a href=https://phpgao.github.io/tags/alpine/>alpine</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/laravel_container.html><span class=title>« Prev Page</span><br><span>Laravel的容器的工作原理</span></a>
+<a class=next href=https://phpgao.github.io/win10_sound_mixer_reset.html><span class=title>Next Page »</span><br><span>Windows10,Windows7复原音量合成器</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

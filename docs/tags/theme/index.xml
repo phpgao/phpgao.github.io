@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>theme on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/theme/</link>
+    <description>Recent content in theme on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 Dec 2015 11:23:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>sublime-配置-插件-主题总结</title>
+      <link>https://phpgao.github.io/go_sublime.html</link>
+      <pubDate>Thu, 03 Dec 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/go_sublime.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/3173255088.png&#34; alt=&#34;sublime&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;可自用，可参考，欢迎大家补充！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新主题基于Bootstrap3</title>
+      <link>https://phpgao.github.io/new_theme_bootstrap3.html</link>
+      <pubDate>Fri, 19 Jun 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_theme_bootstrap3.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3708675869.png&#34; alt=&#34;新主题&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家应该注意到了，老高花了两天时间匆忙做的难看的主题终于上线了。&lt;/p&gt;
+&lt;p&gt;已经实现的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自适应页面&lt;/li&gt;
+&lt;li&gt;lazyload图片加载&lt;/li&gt;
+&lt;li&gt;加载速度优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前BS的浏览器支持情况如下表&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>换一个主题，换一个心情</title>
+      <link>https://phpgao.github.io/new_theme_20150512.html</link>
+      <pubDate>Tue, 12 May 2015 03:50:31 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_theme_20150512.html</guid>
+      <description>历时2天，使用了Amaze UI，并且移植了Amaze UI的官方博客主题。
+目前还有BUG，待修复。。。</description>
+    </item>
+    
+    <item>
+      <title>记一次主题更新</title>
+      <link>https://phpgao.github.io/theme_update.html</link>
+      <pubDate>Tue, 13 May 2014 01:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/theme_update.html</guid>
+      <description>国外的主题对中文支持不好很不和谐，需要修改的地方很多，用起来也很麻烦，但是古语有云：
+ Bitch is bitchy!Taylor is Swift!
+ 下面就记录一下更新主题前后的工作。动手能力强的可以参考这里自己写一个子主题，也可以完美解决！
+ 预先备份原来主题文件夹，起个名字叫old_theme。留个后悔药 备份路径wp-content/themes/sparkling，sparkling就是老高的主题 升级主题，原主题被覆盖 老高修改过的文件包括(old_theme文件夹里按时间排序就能找到)  header.php -&amp;ndash;|-&amp;ndash;|seo优化 functions.php -&amp;ndash;|&amp;ndash;常用函数 single.php -&amp;ndash;|-&amp;ndash;| 解决手机底部链接打不开的样式问题 content.php -&amp;ndash;|-&amp;ndash;|-主页显示文章字数限制，参考这篇文章 footer.php &amp;mdash;&amp;mdash;&amp;ndash;统计代码已解决   在新的主题文件夹中找到对应文件并修改 子主题以后讲  </description>
+    </item>
+    
+  </channel>
+</rss>

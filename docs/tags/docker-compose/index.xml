@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>docker-compose on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/docker-compose/</link>
+    <description>Recent content in docker-compose on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Apr 2019 14:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/docker-compose/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker-最新安装命令</title>
+      <link>https://phpgao.github.io/install_docker_in_centos.html</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_docker_in_centos.html</guid>
+      <description>&lt;p&gt;docker就不多说了，按照贴出的代码一步一步就可以安装成功&lt;/p&gt;
+&lt;p&gt;安装之前最好手动关闭selinux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;setenforce 0
+getenforce
+# Permissive
+sed -i &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/&amp;#39; /etc/selinux/config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

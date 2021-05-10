@@ -1,0 +1,141 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>将nginx配置为服务 | 老高的技术博客</title><meta name=keywords content="nginx"><meta name=description content="编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。
+编写脚本 vi /etc/init.d/nginx 写入以下内容，并修改nginx路径
+#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration."><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/run_nginx_as_service.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="将nginx配置为服务"><meta property="og:description" content="编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。
+编写脚本 vi /etc/init.d/nginx 写入以下内容，并修改nginx路径
+#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration."><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/run_nginx_as_service.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-10-09T14:15:00+00:00"><meta property="article:modified_time" content="2014-10-09T14:15:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="将nginx配置为服务"><meta name=twitter:description content="编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。
+编写脚本 vi /etc/init.d/nginx 写入以下内容，并修改nginx路径
+#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"将nginx配置为服务","item":"https://phpgao.github.io/run_nginx_as_service.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"将nginx配置为服务","name":"将nginx配置为服务","description":"编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。\n编写脚本 vi /etc/init.d/nginx\r 写入以下内容，并修改nginx路径\n#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration.","keywords":["nginx"],"articleBody":"编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。\n编写脚本 vi /etc/init.d/nginx\r 写入以下内容，并修改nginx路径\n#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration. . /etc/sysconfig/network if [ -f /etc/sysconfig/nginx ];then . /etc/sysconfig/nginx fi # Check that networking is up. [ \"$NETWORKING\" = \"no\" ] \u0026\u0026 exit 0 nginx=\"#改为nginx二进制的路径\" prog=$(basename $nginx) NGINX_CONF_FILE=\"/etc/nginx/nginx.conf\" [ -f /etc/sysconfig/nginx ] \u0026\u0026 . /etc/sysconfig/nginx lockfile=/var/lock/subsys/nginx start() { [ -x $nginx ] || exit 5 [ -f $NGINX_CONF_FILE ] || exit 6 echo -n $\"Starting $prog: \" daemon $nginx #-c $NGINX_CONF_FILE retval=$? echo [ $retval -eq 0 ] \u0026\u0026 touch $lockfile return $retval } stop() { echo -n $\"Stopping $prog: \" killproc $prog -QUIT retval=$? echo [ $retval -eq 0 ] \u0026\u0026 rm -f $lockfile return $retval killall -9 nginx } restart() { configtest || return $? stop sleep 1 start } reload() { configtest || return $? echo -n $\"Reloading $prog: \" killproc $nginx -HUP RETVAL=$? echo } force_reload() { restart } configtest() { $nginx -t #-c $NGINX_CONF_FILE } rh_status() { status $prog } rh_status_q() { rh_status /dev/null 2\u00261 } case \"$1\" in start) rh_status_q \u0026\u0026 exit 0 $1 ;; stop) rh_status_q || exit 0 $1 ;; restart) $1 ;; test) configtest ;; reload) rh_status_q || exit 7 $1 ;; force-reload) force_reload ;; status) rh_status ;; condrestart|try-restart) rh_status_q || exit 0 ;; *) echo $\"Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload|test}\" exit 2 esac\r 给予执行权 chmod a+x /etc/init.d/nginx\r 添加并打开服务 chkconfig --add nginx\rchkconfig nginx on\r 测试 service nginx start\rservice nginx stop service nginx reload\r 转自：\nhttp://binyan17.iteye.com/blog/1688308\n","wordCount":"297","inLanguage":"en","datePublished":"2014-10-09T14:15:00Z","dateModified":"2014-10-09T14:15:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/run_nginx_as_service.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>将nginx配置为服务</h1><div class=post-meta>October 9, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-10-09_run_nginx_as_service.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>编译安装nginx后，没有将nginx配置为服务，则无法使用诸如<code>service nginx restart</code>的命令，下面我们看看如何将其配置为服务。</p><h2 id=编写脚本>编写脚本<a hidden class=anchor aria-hidden=true href=#编写脚本>#</a></h2><pre><code>vi /etc/init.d/nginx
+</code></pre><p>写入以下内容，并修改nginx路径</p><pre><code>#!/bin/sh   
+#   
+# nginx - this script starts and stops the nginx daemon   
+#   
+# chkconfig: - 85 15   
+# description: Nginx is an HTTP(S) server, HTTP(S) reverse   
+# proxy and IMAP/POP3 proxy server   
+# processname: nginx   
+# chkconfig: 2345 90 91   
+# description: nginx web server  
+# processname: nginx  
+# config: /opt/nginx/conf/nginx.conf  
+# pidfile: /opt/nginx/nginx.pid  
+  
+# Source function library.  
+. /etc/init.d/functions  
+  
+# Source networking configuration.  
+. /etc/sysconfig/network  
+  
+  
+if [ -f /etc/sysconfig/nginx ];then  
+. /etc/sysconfig/nginx  
+fi  
+  
+# Check that networking is up.   
+[ &quot;$NETWORKING&quot; = &quot;no&quot; ] &amp;&amp; exit 0  
+  
+nginx=&quot;#改为nginx二进制的路径&quot;   
+prog=$(basename $nginx)  
+  
+NGINX_CONF_FILE=&quot;/etc/nginx/nginx.conf&quot;  
+  
+[ -f /etc/sysconfig/nginx ] &amp;&amp; . /etc/sysconfig/nginx  
+  
+lockfile=/var/lock/subsys/nginx  
+  
+start() {   
+[ -x $nginx ] || exit 5   
+[ -f $NGINX_CONF_FILE ] || exit 6   
+echo -n $&quot;Starting $prog: &quot;   
+daemon $nginx #-c $NGINX_CONF_FILE   
+retval=$?   
+echo   
+[ $retval -eq 0 ] &amp;&amp; touch $lockfile   
+return $retval   
+}  
+  
+stop() {   
+echo -n $&quot;Stopping $prog: &quot;   
+killproc $prog -QUIT   
+retval=$?   
+echo   
+[ $retval -eq 0 ] &amp;&amp; rm -f $lockfile   
+return $retval   
+killall -9 nginx   
+}  
+  
+restart() {   
+configtest || return $?   
+stop   
+sleep 1   
+start   
+}  
+  
+reload() {   
+configtest || return $?   
+echo -n $&quot;Reloading $prog: &quot;   
+killproc $nginx -HUP   
+RETVAL=$?   
+echo   
+}  
+  
+force_reload() {   
+restart   
+}  
+  
+configtest() {   
+$nginx -t #-c $NGINX_CONF_FILE   
+}  
+  
+rh_status() {   
+status $prog   
+}  
+  
+rh_status_q() {   
+rh_status &gt;/dev/null 2&gt;&amp;1   
+}  
+  
+case &quot;$1&quot; in   
+start)   
+    rh_status_q &amp;&amp; exit 0   
+    $1   
+    ;;   
+stop)   
+rh_status_q || exit 0   
+    $1   
+    ;;   
+restart)   
+    $1   
+    ;;   
+test)   
+    configtest   
+    ;;   
+reload)   
+    rh_status_q || exit 7   
+    $1   
+    ;;   
+force-reload)   
+    force_reload   
+    ;;   
+status)   
+    rh_status   
+    ;;   
+condrestart|try-restart)   
+    rh_status_q || exit 0   
+    ;;   
+*)   
+echo $&quot;Usage: $0 {start|stop|status|restart|condrestart|try-restart|reload|force-reload|test}&quot;   
+exit 2   
+esac
+</code></pre><h2 id=给予执行权>给予执行权<a hidden class=anchor aria-hidden=true href=#给予执行权>#</a></h2><pre><code>chmod a+x /etc/init.d/nginx
+</code></pre><h2 id=添加并打开服务>添加并打开服务<a hidden class=anchor aria-hidden=true href=#添加并打开服务>#</a></h2><pre><code>chkconfig --add nginx
+chkconfig nginx on
+</code></pre><h2 id=测试>测试<a hidden class=anchor aria-hidden=true href=#测试>#</a></h2><pre><code>service nginx start
+service nginx stop 
+service nginx reload
+</code></pre><p>转自：</p><p><a href=http://binyan17.iteye.com/blog/1688308>http://binyan17.iteye.com/blog/1688308</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/nginx/>nginx</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/framework_faq.html><span class=title>« Prev Page</span><br><span>我们为什么使用框架</span></a>
+<a class=next href=https://phpgao.github.io/ssh_on_mac.html><span class=title>Next Page »</span><br><span>mac下ssh总是失去响应</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

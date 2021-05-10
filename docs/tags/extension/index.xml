@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>extension on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/extension/</link>
+    <description>Recent content in extension on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Nov 2015 05:39:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/extension/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chrome插件---Redirect-Path(揪出隐藏起来的小尾巴)</title>
+      <link>https://phpgao.github.io/chrome_redirect_path.html</link>
+      <pubDate>Mon, 23 Nov 2015 05:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chrome_redirect_path.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/792731461.png&#34; alt=&#34;Redirect Path&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;有时候我们在查看一些外链的时候，某些链接大家看到的可能已经是被t.cn转换过的链接，比如&lt;code&gt;http://t.cn/Rw0r7Y5&lt;/code&gt;，这样导致了一个问题————我该不该点呢？&lt;/p&gt;
+&lt;p&gt;还有一个案例，就是类似色魔张大妈的直达链接，基本上都会跳转很多次，其中几个有一次可能带有推广的小尾巴，但是他们在网址连一扫而过，我们根本抓不住他，怎么办？&lt;/p&gt;
+&lt;p&gt;下面这个工具可以帮你！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux服务器配置memcached并启用PHP支持</title>
+      <link>https://phpgao.github.io/php-memcached-extension-installation.html</link>
+      <pubDate>Sun, 24 May 2015 02:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-memcached-extension-installation.html</guid>
+      <description>&lt;p&gt;最近在服务器上部缓存系统，记录一下PHP安装memcached扩展。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>推荐几个chrome必装插件</title>
+      <link>https://phpgao.github.io/chrome-extentions.html</link>
+      <pubDate>Fri, 19 Sep 2014 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chrome-extentions.html</guid>
+      <description>普通用户篇 Adblock大家族 URL：
+Adblock Plus
+AdBlock
+Adblock Pro
+这几个货名气太大，赶紧安装，远离广告
+强制雅黑字体 URL：强制雅黑字体
+win7下还是用雅黑吧。。。。其他系统随意
+OneTab URL：OneTab
+标签神器，我就用这个导出当前所有标签的URL
+Proxy SwitchySharp URL：Proxy SwitchySharp
+这个就不多说了，翻{防屏蔽}墙神器
+Tampermonkey URL：Tampermonkey
+油猴脚本，允许你在网页中执行任何js
+微博是个好图床 URL：微博是个好图床
+图片外链神器么，趁着Sina还没有封，抓紧用吧
+微博急简 URL：微博急简
+新浪微博的官网实在恶心，要学会做减法
+慧慧购物助手 URL：慧慧购物助手
+购物必备，海淘也给力！
+妈妈再也不用担心我的macbook发烫了计划2.0Beta URL：妈妈再也不用担心我的macbook发烫了计划2.0Beta
+我承认这个插件在气势上已经赢了，优酷土豆去广告
+开发者篇 POSTMAN URL：POSTMAN
+chrome下测试接口神器
+User-Agent Switcher URL：User-Agent Switcher
+修改浏览器代理，调试app或者mobile页，还可以去广告。
+NoFollow URL：NoFollow
+seo专用，给网页中no follow的链接高亮出来
+SEO in China URL：SEO in China
+快捷查询网站的SEO信息</description>
+    </item>
+    
+  </channel>
+</rss>

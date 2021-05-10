@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cisco on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/cisco/</link>
+    <description>Recent content in cisco on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Apr 2016 05:35:41 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/cisco/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>卸载思科any-connect-OS-X客户端</title>
+      <link>https://phpgao.github.io/uninstall_cisco_any_connect_client-1.html</link>
+      <pubDate>Mon, 18 Apr 2016 05:35:41 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/uninstall_cisco_any_connect_client-1.html</guid>
+      <description>一句话命令
+sudo pkgutil --forget com.cisco.pkg.anyconnect.vpn </description>
+    </item>
+    
+  </channel>
+</rss>

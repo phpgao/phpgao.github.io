@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>phpsso on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/phpsso/</link>
+    <description>Recent content in phpsso on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Nov 2014 06:38:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/phpsso/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHPCMS登陆流程</title>
+      <link>https://phpgao.github.io/phpcms_login.html</link>
+      <pubDate>Wed, 05 Nov 2014 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpcms_login.html</guid>
+      <description>  调用phpcms/modules/member/index.php中login。
+  读取caches/configs/system.php中phpsso的配置。
+  调用phpcms/modules/member/classes/client.class.php的_ps_post()发送登录信息。
+  该请求被发送到phpsso_server/phpcms/modules/phpsso/index.php的login方法。
+  phpsso读取数据库配置phpsso_server/caches/configs/database.php，连接数据库，执行登陆逻辑
+  返回登录结果
+  </description>
+    </item>
+    
+  </channel>
+</rss>

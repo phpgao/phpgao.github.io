@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pillow on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pillow/</link>
+    <description>Recent content in pillow on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 03:46:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pillow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pillow解决encoder-zip-not-available问题</title>
+      <link>https://phpgao.github.io/pillow_solve_encoder_zip_not_available.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pillow_solve_encoder_zip_not_available.html</guid>
+      <description>&lt;p&gt;最近写程序用到了这个模块，但是貌似在 &amp;lt;Python2.7 的环境下用总是会出现这个问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

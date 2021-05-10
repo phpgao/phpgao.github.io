@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dispatch on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dispatch/</link>
+    <description>Recent content in dispatch on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Oct 2014 01:24:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dispatch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typecho源代码解析3---路由分发</title>
+      <link>https://phpgao.github.io/typecho_source_code_dispatch.html</link>
+      <pubDate>Sun, 12 Oct 2014 01:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_dispatch.html</guid>
+      <description>上一节
+时光匆匆，我们终于来到路由工作的地方。几乎每个MVC框架都不会缺少路由功能，因为他实在太重要了。
+路由的功能简单的说就是根据请求找到对应业务代码，请求来自外部，业务由系统提供，路由器为二者建立了可靠的链接。
+typecho和thinkphp都有路由模块，虽然实现方式不同，但用法却惊人的相似！
+thinkphp：
+Dispatcher::dispatch(); typecho：
+Typecho_Router::dispatch(); typecho的路由实现是保存在数据库中的路由表，使用正则匹配路径，这一点和Django框架有点像，thinkphp则是基于自己设定的一套规则，详见官方文档。
+typecho的路由表如下数组组成，路由器类会使用子数组中的regx正则式逐个匹配pathinfo中的路径，如果匹配成功，立即初始化并执行该类对应的action。
+以index为例，如果使用正则表达式匹配成功，系统就会新建Widget_Archive类并执行其render方法，看他的名字就知道执行的是渲染页面的方法，也就是之前说的业务。
+Array([index] =&amp;gt; Array([url] =&amp;gt; /[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^[/]?$|[format] =&amp;gt; /[params] =&amp;gt; Array())[archive] =&amp;gt; Array([url] =&amp;gt; /blog/[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^/blog[/]?$|[format] =&amp;gt; /blog/[params] =&amp;gt; Array())# .... 有的同学可能会说，typecho的路由表写在数据库里，不够灵活。其实作者也考虑到了，大家可以自由扩展路由表。有兴趣的同学可以去看看Helper类中addRoute和removeRoute的用法。举个例子，如果你需要自定义一个URL,比如www.phpgao.com/robots.txt，就可以在路由表加入如下路由：
+[robots] =&amp;gt; Array([url] =&amp;gt; /robots.</description>
+    </item>
+    
+  </channel>
+</rss>

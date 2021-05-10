@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>deploynode on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/deploynode/</link>
+    <description>Recent content in deploynode on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Mar 2017 07:37:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/deploynode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>高性价比VPS再现---DeployNode</title>
+      <link>https://phpgao.github.io/deploynode.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/deploynode.html</guid>
+      <description>&lt;p&gt;该服务器位于法国，后台管理界面很不错，1G内存用起来很爽，老高机器的IP是&lt;strong&gt;213.32.42.xx&lt;/strong&gt;，欢迎骚扰。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://deploynode.com/clients/aff.php?aff=3&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/1889568454.png&#34; alt=&#34;deploynode&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

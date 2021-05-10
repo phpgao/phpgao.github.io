@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>socket on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/socket/</link>
+    <description>Recent content in socket on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 27 Jun 2015 14:09:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>简单socket编程2</title>
+      <link>https://phpgao.github.io/socket-lesson2.html</link>
+      <pubDate>Sat, 27 Jun 2015 14:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-lesson2.html</guid>
+      <description>&lt;p&gt;上一节我们提到了socket编程的基本形式，这一节我们加强服务端的性能！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>简单socket编程1</title>
+      <link>https://phpgao.github.io/socket-lesson1.html</link>
+      <pubDate>Wed, 24 Jun 2015 04:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-lesson1.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2605814858.jpg&#34; alt=&#34;socket&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;说到socket，学过网络基础的人都听过，他是TCP/IP的抽象，他是网络世界的入口，它无处不在。&lt;/p&gt;
+&lt;p&gt;学会了socket编程，就意味着能够更深层次的控制你的流量，之后再看python的urllib*或php的curl，简直就是小儿科！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>近距离接触HTTP协议</title>
+      <link>https://phpgao.github.io/socket-http.html</link>
+      <pubDate>Wed, 24 Jun 2015 00:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-http.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4066750042.png&#34; alt=&#34;HTTP_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自WIKI)&lt;/p&gt;
+&lt;p&gt;超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。我们打开浏览器输入网址&lt;code&gt;www.google.com&lt;/code&gt;，不对！刚才那个是一个不存在的网址，我们还是用&lt;code&gt;www.phpgao.com&lt;/code&gt;为例吧。我们(客户端)将老高的域名输入浏览器，浏览器就会为我们呈现老高的网页，首先我们能确定作为客户端，在此期间必定与老高的服务器发生了某种关系！但是具体发送了什么呢？作为一名WEB开发人员，这是我们必须知道的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>upgrade on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/upgrade/</link>
+    <description>Recent content in upgrade on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 28 Dec 2014 14:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/upgrade/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置</title>
+      <link>https://phpgao.github.io/bandwagonhost_vps_panel.html</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagonhost_vps_panel.html</guid>
+      <description>&lt;p&gt;购买了搬瓦工(bandwagonhost)的VPS，如何使用呢？&lt;/p&gt;
+&lt;p&gt;在此，老高以FAQ的形式给出介绍。&lt;/p&gt;
+&lt;p&gt;首先插几句使用建议，老高认为十分重要，为什么呢？搬瓦工如果监控到有大量的垃圾信息从我们的主机上发出，就会立即冻结VPS，冻结后的VPS相当于关机，我们可以进入panel后手动解冻即可恢复正常，但是解冻的次数每年只有三次，所以大家一定要注意自己VPS的安全。在此老高也给大家分享一些必要的操作，请务必参考。部分建议需要一定的linux基础，不会的TX请参考老高的&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;翻墙教程&lt;/a&gt;后再google之。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

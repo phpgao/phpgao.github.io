@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ubuntu on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ubuntu/</link>
+    <description>Recent content in ubuntu on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Mar 2018 07:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu-系统一键安装-Shadowsocks-和-KCPTUN-加速</title>
+      <link>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun-html.html</link>
+      <pubDate>Wed, 14 Mar 2018 07:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun-html.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;的兄弟篇，基于&lt;strong&gt;Ubuntu 16.04&lt;/strong&gt;编写，兼容性未测试。&lt;/p&gt;
+&lt;p&gt;卸载命令参考&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;里的说明，操作一样。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>跑在raspberry上的docker</title>
+      <link>https://phpgao.github.io/docker_on_raspberry_pi.html</link>
+      <pubDate>Fri, 08 Jan 2016 11:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_raspberry_pi.html</guid>
+      <description>&lt;p&gt;老高的树莓派昨天(2016-01-07)到货，配件果断买买买（其实只买了SD卡和亚克力盒子）。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/01/293942554.jpg&#34; alt=&#34;树莓派&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;你能找到树莓派藏在哪儿吗？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装双系统的一些记录</title>
+      <link>https://phpgao.github.io/install_multisystem_note.html</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_multisystem_note.html</guid>
+      <description>&lt;h2 id=&#34;mbrgrub&#34;&gt;MBR&amp;amp;GRUB&lt;/h2&gt;
+&lt;p&gt;MBR（Master boot record）指主引导记录，主要用于硬盘分区。GRUB就是安装在MBR中，起引导系统作用。&lt;/p&gt;
+&lt;p&gt;阶段1：POST自检后系统载入目标装置的MBR（Master boot record），即前512字节。MBR一共包含三个部分主引导程序（Boot Loader）、硬盘分区表DPT（Disk Partition table）和硬盘有效标志（55AA）。&lt;/p&gt;
+&lt;p&gt;阶段2：主引导程序被载入内存开始执行，他将继续执行加载系统内核的任务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>(转)UBUNTU之SSH登陆认证慢的解决办法</title>
+      <link>https://phpgao.github.io/ubuntu_slow_ssh_authorize.html</link>
+      <pubDate>Thu, 26 Jun 2014 14:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_slow_ssh_authorize.html</guid>
+      <description>步骤一 关闭ssh的gssapi认证
+vi /etc/ssh/ssh_config 注释掉如下两行
+GSSAPIAuthentication yes GSSAPIDelegateCredentials no  步骤二 关闭ssh的UseDNS
+vi /etc/ssh/sshd_config  注：ubuntu的sshd_config文件没有UseDNS参数,而据我了解,其它类*NIX、*BSD操作系统的sshd_config都有UseDNS参数，且它们缺省都是&amp;quot;UseDNS yes&amp;quot;，那估计ubuntu的sshd_config虽然没有UseDNS，那它缺省也是&amp;quot;UseDNS yes&amp;quot;了
+于是，在sshd_config末尾处插入如下行
+UseDNS no  然后执行指令&amp;quot;/etc/init.d/ssh restart&amp;quot;，重启ssh服务，配置生效
+经测试，使用此方法后，ubuntu的认证时间大大缩短，原来其登录认证一般耗时在10秒以上15秒左右，有些时候甚至达到20多秒到30秒左右，而经过此修改，ubuntu的登录认证时间将会缩短在3秒以内。</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下ssh无法启动</title>
+      <link>https://phpgao.github.io/ubuntu_ssh.html</link>
+      <pubDate>Sat, 21 Jun 2014 15:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_ssh.html</guid>
+      <description>安装完Ubuntu后自然需要使用ssh远程管理，但是sudo apt-get install openssh-server后虽然安装成功，但是总是提示
+ Unknown job: ssh 百度之，未解决 google之，
+ 运行
+sudo /usr/sbin/sshd 提示
+ Missing privilege separation directory: /var/run/sshd (缺少权限分离目录)
+ 然后运行
+sudo mkdir /var/run/sshdsudo /usr/sbin/sshdnetstat -nlt 应该能看到22端口已经启用！</description>
+    </item>
+    
+    <item>
+      <title>ubuntu编译webkit</title>
+      <link>https://phpgao.github.io/ubuntu_webkitgtk.html</link>
+      <pubDate>Thu, 29 May 2014 08:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_webkitgtk.html</guid>
+      <description>下载安装包：http://webkitgtk.org/使用下面命令压缩包
+tar xvJf 安装依赖库：
+apt-get install autoconf automake autotools-dev bison flex gperf glib-networking gtk-doc-tools libenchant-dev libgail-dev libgeoclue-dev libglib2.0-dev libgstreamer-plugins-base0.10-dev libgtk2.0-dev libicu-dev libjpeg62-dev libpango1.0-dev libpng12-dev libsoup2.4-dev libsqlite3-dev libtool libxslt1-dev libxt-dev 试试Configure一下
+./configure 可能还不够，提示找不到 libwebp，找一下吧：
+apt-cache search libwebplibwebp-dev - Lossy compression of digital photographic images.libwebp5 - Lossy compression of digital photographic images.libwebpdemux1 - Lossy compression of digital photographic images.libwebpmux1 - Lossy compression of digital photographic images.</description>
+    </item>
+    
+  </channel>
+</rss>

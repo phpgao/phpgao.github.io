@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>360 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/360/</link>
+    <description>Recent content in 360 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jan 2018 06:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/360/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2018年了，你在用什么浏览器，我在用什么浏览器</title>
+      <link>https://phpgao.github.io/360chrome.html</link>
+      <pubDate>Tue, 23 Jan 2018 06:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/360chrome.html</guid>
+      <description>&lt;p&gt;2018年了，你在用哪个浏览器？&lt;/p&gt;
+&lt;p&gt;今天给大家推荐一款很有诚意的浏览器 &amp;mdash; &lt;a href=&#34;http://chrome.360.cn/&#34;&gt;360极速浏览器&lt;/a&gt;，不是那个绿色LOGO的360安全浏览器，而是血统还算纯正的360极速浏览器。为什么想推荐这个浏览器呢？下面老高讲几个超级好用的功能，看看其他做到的浏览器有几个？&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

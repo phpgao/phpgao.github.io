@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>container on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/container/</link>
+    <description>Recent content in container on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Mar 2017 16:08:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel的容器的工作原理</title>
+      <link>https://phpgao.github.io/laravel_container.html</link>
+      <pubDate>Tue, 14 Mar 2017 16:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_container.html</guid>
+      <description>&lt;p&gt;使用Laravel有一段时间了，终于抽点了时间看了一下其laravel实现的IOC控制反转的概念，确实很有意思。&lt;/p&gt;
+&lt;p&gt;Laravel的容器虽然和docker的容器概念不同，但是都一样承载了十分重要的信息！docker的容器为程序提供了可读写的环境，Lravel的容器为类的初始化提供了便利，解决了以依赖注入和资源获取的问题。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ifconfig on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ifconfig/</link>
+    <description>Recent content in ifconfig on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Sep 2014 09:47:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ifconfig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos7.0-的最小化安装</title>
+      <link>https://phpgao.github.io/centos7.html</link>
+      <pubDate>Sun, 07 Sep 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos7.html</guid>
+      <description>&lt;p&gt;放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。&lt;code&gt;ifconfig&lt;/code&gt;竟然都被废了，以后看IP就要用&lt;code&gt;ip addr&lt;/code&gt;了。&lt;/p&gt;
+&lt;p&gt;下面记录一下需要注意的地方。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

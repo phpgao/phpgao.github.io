@@ -84,8 +84,6 @@ git clone https://git.coding.net/phpgao/solarized.git
 
 ## 设置zsh
 
-> ps.这里最重要！
-
 ### 创建新主题文件
 
 在文件夹`~/.oh-my-zsh/themes`中新建主题文件，名称自定：如`laogao.zsh-theme`，后面会用到。

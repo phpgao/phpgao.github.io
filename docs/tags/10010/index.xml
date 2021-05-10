@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>10010 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/10010/</link>
+    <description>Recent content in 10010 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Jan 2015 06:46:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/10010/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>模拟登录联通10010.com查询宽带余额</title>
+      <link>https://phpgao.github.io/china_unicom_broadband_balance.html</link>
+      <pubDate>Tue, 06 Jan 2015 06:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/china_unicom_broadband_balance.html</guid>
+      <description>家里的宽带是包年按天扣费，时间长了就忘了改什么时候续费了。
+抽时间写了个模拟登录10010.com的脚本，自动查询余额。
+每天中午12点查一次，省得下次又欠费了。
+模拟登录的过程很简单，获取查询的cookie需要两步请求，拿到cookie后可以随意查询。
+有TX想看源码么？
+已贴源码
+#!/usr/bin/env python # encoding: utf-8 &amp;#34;&amp;#34;&amp;#34; @version: 0.2 @author: phpergao @license: Apache Licence @contact: endoffight@gmail.com @site: http://www.phpgao.com @software: PyCharm @file: 10010.py @time: 15-1-3 下午6:06 一键查询联通宽带余额 &amp;#34;&amp;#34;&amp;#34; import urllib2 import cookielib import json class Crawl(): def __init__(self, username, passwd, debug=False): (self.username, self.passwd) = (username, passwd) self.cookie = cookielib.CookieJar() cookieHandler = urllib2.HTTPCookieProcessor(self.cookie) self.is_debug = debug if self.is_debug: httpHandler = urllib2.HTTPHandler(debuglevel=1) httpsHandler = urllib2.HTTPSHandler(debuglevel=1) opener = urllib2.build_opener(cookieHandler, httpHandler, httpsHandler) else: opener = urllib2.</description>
+    </item>
+    
+  </channel>
+</rss>

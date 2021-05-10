@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>danga on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/danga/</link>
+    <description>Recent content in danga on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 Nov 2019 05:42:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/danga/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一个flag引发的惨案(memcached)</title>
+      <link>https://phpgao.github.io/memcached_flag_error.html</link>
+      <pubDate>Wed, 20 Nov 2019 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/memcached_flag_error.html</guid>
+      <description>&lt;h2 id=&#34;起因&#34;&gt;起因&lt;/h2&gt;
+&lt;p&gt;老高最近在重构一个服务，流程中有一步需要将数据格式化后放入memcached中，改数据之后会被另一个服务消费。老高使用的Python的&lt;code&gt;pymemcache&lt;/code&gt;包，调用add方法后没有错误。然后通知另一个JAVA服务来读数据，JAVA使用的包名为&lt;code&gt;com.danga.MemCached&lt;/code&gt;。该服务接受到消费任务后就来找之前放在memecached中的数据，好的！问题来了。&lt;/p&gt;
+&lt;p&gt;JAVA用什么方法都读不到Python放进去的数据，但是JAVA自己放自己取是能读到的。
+PYTHON同理，能够读到自己设置的数据，但是读取JAVA程序设置的值有乱码。
+通过命令行设置的值JAVA读取有问题，Python没问题。&lt;/p&gt;
+&lt;p&gt;程序猿的直觉告诉我，肯定是库出了问题！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

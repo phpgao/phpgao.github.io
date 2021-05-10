@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pre_commit on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pre_commit/</link>
+    <description>Recent content in pre_commit on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Dec 2014 03:33:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pre_commit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVN预提交(Pre-Commit)钩子的利用</title>
+      <link>https://phpgao.github.io/svn_pre_commit.html</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_pre_commit.html</guid>
+      <description>转自：http://java.dzone.com/articles/useful-subversion-pre-commit
+ Checks whether the commit message is not empty Checks whether the commit message consists of at least 5 characters Checks if the committed files are UTF-8 compliant Checks whether the svn:eol-style property is set to LF on newly added files Checks if the committed files have no TAB characters  The UTF-8 and TAB checks are performed on the following file suffixes
+ *.java *.js *.xhtml *.css *.xml *.</description>
+    </item>
+    
+  </channel>
+</rss>

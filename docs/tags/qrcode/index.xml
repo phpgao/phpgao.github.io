@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>qrcode on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/qrcode/</link>
+    <description>Recent content in qrcode on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Apr 2015 03:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/qrcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>免费shadowsocks</title>
+      <link>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</link>
+      <pubDate>Wed, 29 Apr 2015 03:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</guid>
+      <description>&lt;p&gt;老高最近搭建了一个小应用，功能是共享老高科学上网的帐号供大家体验，使用方法很简单，使用软件提供的&lt;strong&gt;二维码扫描&lt;/strong&gt; 或者 直接打开 &lt;strong&gt;json版本&lt;/strong&gt;，里面什么密码的都有，地址在文末。&lt;/p&gt;
+&lt;p&gt;客户端下载请移步 &lt;a href=&#34;https://blog.phpgao.com/download_shadowsocks.html&#34;&gt;shadowsocks相关资源下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;服务器由&lt;strong&gt;搬瓦工&lt;/strong&gt;提供，地点是&lt;strong&gt;洛杉矶&lt;/strong&gt;，使用的套餐是**$9.9**，搭建方法请参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;使用shadowsocks轻松扶墙教程&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

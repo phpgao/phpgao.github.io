@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>wget on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/wget/</link>
+    <description>Recent content in wget on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 15 Jan 2015 15:06:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/wget/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在路由器下载文件</title>
+      <link>https://phpgao.github.io/download_on_router.html</link>
+      <pubDate>Thu, 15 Jan 2015 15:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/download_on_router.html</guid>
+      <description>昨天晚上用wget命令下载了WOW客户端，要是搁到往常，还必须开机电脑下载，现在只需要再路由器的ssh里执行以下即可！
+离线下载BT和ED2K还在研究中
+wget http://wow.zip 2&amp;gt;&amp;amp;1 &amp;gt;/dev/null &amp;amp; </description>
+    </item>
+    
+  </channel>
+</rss>

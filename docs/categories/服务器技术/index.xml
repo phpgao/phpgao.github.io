@@ -1,0 +1,1851 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>服务器技术 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 服务器技术 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 20 Dec 2019 07:12:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>批量复制ssh密钥到Linux系统的主机</title>
+      <link>https://phpgao.github.io/batch_key_copy.html</link>
+      <pubDate>Fri, 20 Dec 2019 07:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/batch_key_copy.html</guid>
+      <description>&lt;p&gt;老高的测试环境中机器很多，每次登录都要输入密码很烦人，下面的脚本可以批量导入公钥到指定多个ip中，使用后记得把文件删除掉！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sshpass在macos下可能不好搞定，brew因为安全问题默认不给安装，可以通过别人写好的脚本来安装，其他系统自己想办法！很简单。
+&lt;code&gt;brew install https://raw.githubusercontent.com/kadwanev/bigboybrew/master/Library/Formula/sshpass.rb&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker系统源加速命令</title>
+      <link>https://phpgao.github.io/docker_sed.html</link>
+      <pubDate>Tue, 10 Dec 2019 02:23:53 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_sed.html</guid>
+      <description>alpine  注：如果有@test或者@edge，可以先add后在sed
+ sed -i &amp;#39;s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g&amp;#39; /etc/apk/repositories ubuntu sed -i &amp;#39;s/archive.ubuntu.com/mirrors.aliyun.com/g&amp;#39; /etc/apt/sources.list &amp;amp;&amp;amp; \  sed -i &amp;#39;s/security.ubuntu.com/mirrors.aliyun.com/g&amp;#39; /etc/apt/sources.list </description>
+    </item>
+    
+    <item>
+      <title>国内加速Homebrew</title>
+      <link>https://phpgao.github.io/homebrew_boost.html</link>
+      <pubDate>Mon, 09 Sep 2019 02:21:36 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/homebrew_boost.html</guid>
+      <description>感谢ustc
+brew 以及 homebrew-core # 替换brew.git: cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://mirrors.ustc.edu.cn/brew.git # 替换homebrew-core.git: cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git bottles # 对于bash用户： echo &amp;#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&amp;#39; &amp;gt;&amp;gt; ~/.bash_profile source ~/.bash_profile # 对于zsh用户 echo &amp;#39;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&amp;#39; &amp;gt;&amp;gt; ~/.zshrc source ~/.zshrc 重置 # 重置brew.git: cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git # 重置homebrew-core.git: cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.com/Homebrew/homebrew-core.git </description>
+    </item>
+    
+    <item>
+      <title>QNAP安装Entware</title>
+      <link>https://phpgao.github.io/qnap_install_entware.html</link>
+      <pubDate>Sat, 07 Sep 2019 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/qnap_install_entware.html</guid>
+      <description>&lt;p&gt;老高才入坑qnap(威联通)，在ssh到NAS后，发现没有常用的zsh、git、sudo，这可让用惯了centos，debian系统的老高情何以堪。&lt;/p&gt;
+&lt;p&gt;一番查阅后，老高发现原来QNAP所使用的系统QTS可以使用Entware，也就是opkg最为包管理系统，这不就简单了，老高以前在OpenWrt上用的就是这个玩意儿！&lt;/p&gt;
+&lt;p&gt;本篇内容可以让你学会如何在QNAP上安装Entware-ng，以及zsh，git，sudo还有ohmyzsh等常用工具，并且保证他们不会被系统还原！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记一次网站升级</title>
+      <link>https://phpgao.github.io/web_server_update.html</link>
+      <pubDate>Sat, 10 Aug 2019 14:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/web_server_update.html</guid>
+      <description>&lt;p&gt;老高于今年(2019)初收到了搬瓦工要停止OPENVZ的旧版服务器，同时列表中auto renew的选项被强制置灰。9.9刀的绝版服务器就这样被印上了大大的&lt;code&gt;拆&lt;/code&gt;字，而且还是两台！😂&lt;/p&gt;
+&lt;p&gt;跑数据库的那台机器4月到期，于是把数据库先迁移了，跑在一台内存1G的机器上，由于上面还跑了一个git服务和ss，剩余内存也就400MB左右。下来就剩web服务器了，一看8月到期，先就这样吧！&lt;/p&gt;
+&lt;p&gt;于是就一晃到了今天。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos8终于要来了！</title>
+      <link>https://phpgao.github.io/centos8_is_coming.html</link>
+      <pubDate>Sat, 10 Aug 2019 12:09:27 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos8_is_coming.html</guid>
+      <description>&lt;p&gt;一路从7.0用到7.6，内核从2.7升级到5.X，centos8终于来了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用docker搭建私有git服务(gogs&#43;https)</title>
+      <link>https://phpgao.github.io/gogs.html</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/gogs.html</guid>
+      <description>&lt;p&gt;为什么有了github还要有自己的平台？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审计安全(不会随便被删除)&lt;/li&gt;
+&lt;li&gt;自己团队需要&lt;/li&gt;
+&lt;li&gt;速度更快&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么选择gogs?&lt;/p&gt;
+&lt;p&gt;请移步&lt;a href=&#34;https://gogs.io/&#34;&gt;官网&lt;/a&gt;学习，配置文件请参考&lt;a href=&#34;https://gogs.io/docs/advanced/configuration_cheat_sheet&#34;&gt;配置文件手册&lt;/a&gt;，配置样例请访问&lt;a href=&#34;https://github.com/gogs/gogs/blob/master/conf/app.ini&#34;&gt;app.ini&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在alpine中运行mysql</title>
+      <link>https://phpgao.github.io/run_mysql_in_alpine.html</link>
+      <pubDate>Sun, 05 May 2019 15:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/run_mysql_in_alpine.html</guid>
+      <description>&lt;p&gt;搬瓦工的1G内存，想要跑一个MySQL服务，动辄500M内存就没了，剩下一半的内存让我感觉很虚，于是想把是不是把MySQL塞进alpine镜像中看看，结果一搜，果然已经有大神这样做了，使用的是MariaDB，测试下来，同样跑一个博客只需要50M内存就OK，简直完美！&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://hub.docker.com/r/yobasystems/alpine-mariadb&#34;&gt;yobasystems/alpine-mariadb&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何使用openldap搭建LDAP服务篇1--初见LDAP</title>
+      <link>https://phpgao.github.io/how_to_config_ldap_server.html</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_config_ldap_server.html</guid>
+      <description>&lt;p&gt;LDAP是轻量目录访问协议，这个服务从老高进入360就一直在用，LDAP带来的好处真的是很多，你可以把它想象成为一个内网版的单点登录服务，可以让你使用同一组账户密码访问所有支持LDAP验证的系统，为企业的内部运维带来了极大的便利。&lt;/p&gt;
+&lt;p&gt;不过想要自己独立搭建一个LDAP服务还是挺麻烦的！不过一旦搭建好了LDAP服务器，剩下的管理和运维就简单多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>修复nginx空主机头的问题</title>
+      <link>https://phpgao.github.io/nignx_empty_host.html</link>
+      <pubDate>Wed, 05 Dec 2018 16:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nignx_empty_host.html</guid>
+      <description>&lt;p&gt;老高最近在整理服务器的nginx配置，但是整理好之后有一个问题，就是访问一个没有绑定的域名（已解析）的时候，会自动跳转到blog.phpgao.com。为了解决这个问题，查了很多资料，发现此文档&lt;a href=&#34;https://tengine.taobao.org/nginx_docs/cn/docs/http/request_processing.html#how_to_prevent_undefined_server_names&#34;&gt;Nginx如何处理一个请求&lt;/a&gt;，问题解决。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>V2上看到一个很棒的网站-nginxconfig.io</title>
+      <link>https://phpgao.github.io/nginxconfig.html</link>
+      <pubDate>Tue, 04 Dec 2018 04:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginxconfig.html</guid>
+      <description>&lt;p&gt;nginx的配置老高的博客里有很多篇文章都有讲过，但是总是觉得不是很标准，前些天在V2看到了这个网站，浏览后发现这个工具简直神器！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Acme工具配置Let&#39;s-Encrypt通配符HTTPS证书</title>
+      <link>https://phpgao.github.io/acme.html</link>
+      <pubDate>Thu, 16 Aug 2018 11:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/acme.html</guid>
+      <description>&lt;p&gt;老高的域名使用很久了，同时也产生了大量的二级域名，Let&amp;rsquo;s Encrypt虽然每三个月续签的时候不需要加域名参数，但是如果要多加一个或者删除又需要敲一大堆命令，今年(2018)Let&amp;rsquo;s Encrypt强势支持了通配符证书，支持验证的方式是dns，所以需要自己去DNS解析处申请一个API，虽然多了DNS的操作，但是带来的好处真是太多，下面赶紧跟着老高学一下如果使用Acme工具配置Let&amp;rsquo;s Encrypt通配符HTTPS证书吧！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2018/08/3089062749.png&#34; alt=&#34;wildcard&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>穿墙神器frp的安装与配置</title>
+      <link>https://phpgao.github.io/frp_config.html</link>
+      <pubDate>Fri, 13 Jul 2018 11:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/frp_config.html</guid>
+      <description>&lt;p&gt;如题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Windows激活工具的研究学习</title>
+      <link>https://phpgao.github.io/windows_activation.html</link>
+      <pubDate>Thu, 21 Jun 2018 07:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_activation.html</guid>
+      <description>&lt;p&gt;老高的K3路由器刷了官改，果然已经集成了最新的vlmcsd，路径为&lt;code&gt;/usr/root/kms/vlmcsd&lt;/code&gt;，命令行为&lt;code&gt;/usr/root/kms/vlmcsd -i /usr/root/kms/vlmcsd.ini -p /tmp/vlmcsd.pid -l /tmp/kms.log&lt;/code&gt;，既然有了这个，我们就学习一下怎么使用KMS激活Windows系统吧！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;严正声明：此篇文章只是研究学习，学习后请勿使用于任何场合！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>最近数据库总是报错的原因</title>
+      <link>https://phpgao.github.io/blog_down.html</link>
+      <pubDate>Thu, 21 Jun 2018 06:41:03 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/blog_down.html</guid>
+      <description>&lt;p&gt;最近博客数据库总是挂掉，很是郁闷，其实出错的原因很简单，老高手贱升级了&lt;code&gt;MySQL 8.0&lt;/code&gt;版本，从目前来看，MySQL 8.0不太适合配置低的机器。&lt;/p&gt;
+&lt;p&gt;按照惯例，老高总结一下遇到的问题吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用pgbench测试你的数据库性能</title>
+      <link>https://phpgao.github.io/how_to_use_pgbench.html</link>
+      <pubDate>Tue, 12 Jun 2018 13:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_use_pgbench.html</guid>
+      <description>&lt;p&gt;老高最近遇到了一些性能问题，排查起来很麻烦，其中一个步骤就是需要确定当前DB的抗压能力，Google后收获很大，所以赶紧和老高一起学习研究如果使用pgbench测试你的数据库性能吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>扶墙的原理</title>
+      <link>https://phpgao.github.io/how_to_do_gfw.html</link>
+      <pubDate>Thu, 07 Jun 2018 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_do_gfw.html</guid>
+      <description>&lt;h2 id=&#34;扶墙的原理&#34;&gt;扶墙的原理&lt;/h2&gt;
+&lt;p&gt;简单的说说翻墙到底怎么翻！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何备份MySQL-PG数据库并恢复</title>
+      <link>https://phpgao.github.io/how_to_backup_and_restore_database.html</link>
+      <pubDate>Mon, 04 Jun 2018 04:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_backup_and_restore_database.html</guid>
+      <description>&lt;p&gt;老高最近又迁移了一次数据库，期间遇到了很多问题，本文主要记录了如果备份数据库并恢复到新的数据库中！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. 由于老高工作用的是PG数据库，而博客用的是MySQL，于是本篇就把二者的用法都写出来吧！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Virtual-box时间同步</title>
+      <link>https://phpgao.github.io/virtua_box_time_sync.html</link>
+      <pubDate>Sat, 14 Oct 2017 16:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtua_box_time_sync.html</guid>
+      <description>&lt;p&gt;当虚拟机安装好之后，如果有一段时间没有启动，当下一次启动时后系统时间会变得和主机环境不一致，我们需要安装一些软件来保证每次开机后会与主机时间同步。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Logrotate的基本使用方法</title>
+      <link>https://phpgao.github.io/logrotate_conf.html</link>
+      <pubDate>Sat, 14 Oct 2017 15:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/logrotate_conf.html</guid>
+      <description>&lt;p&gt;Linux服务器上我们用Logrotate来分割归档日志文件，结合crond我们可以指定每天在某个时间自动整理日志等文档。本文主要说明了Centos下Logrotate的使用和配置的方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Dropbox新姿势备份服务器数据</title>
+      <link>https://phpgao.github.io/dropbox_backup.html</link>
+      <pubDate>Fri, 13 Oct 2017 08:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dropbox_backup.html</guid>
+      <description>&lt;p&gt;老高以前写过一篇&lt;a href=&#34;https://blog.phpgao.com/dropbox_sync_cli.html&#34;&gt;使用dropbox同步备份网站和数据库&lt;/a&gt;的文章，里面的内容虽说能用，但已经很过时了，今天老高给大家介绍一中更好的方式，那就是用过API备份。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Cron在Centos上的安装方法</title>
+      <link>https://phpgao.github.io/cron_on_centos.html</link>
+      <pubDate>Fri, 17 Mar 2017 08:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/cron_on_centos.html</guid>
+      <description>&lt;p&gt;Centos最小化安装时候貌似crond是不带的，需要自己手动安装。但是Centos不同的版本安装命令不一样，在此记录一下！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派安装记录-usb-samba-aria2-xware-apt-get</title>
+      <link>https://phpgao.github.io/raspberry_setup_tool.html</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/raspberry_setup_tool.html</guid>
+      <description>&lt;p&gt;老高的R6300v2自从刷了梅林后，一直在挂硬盘做迅雷离线下载。眼看着夏天到了，还是给路由器减减压，于是祭出老早买的树莓派2B，再次踏上折腾之路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>体验Alpine-Linux-Docker-Image</title>
+      <link>https://phpgao.github.io/docker_alpine.html</link>
+      <pubDate>Fri, 10 Mar 2017 05:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_alpine.html</guid>
+      <description>&lt;p&gt;如果你已经研究过老高的&lt;a href=&#34;https://blog.phpgao.com/kcptun_on_sakura.html&#34;&gt;为樱花打造的KCPTUN&lt;/a&gt;，此docker镜像就是基于Alpine最新版，当时只是简单的使用了一下，这次老高想深入研究一下docker的Alpine。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3782981747.png&#34; alt=&#34;alpine_log&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Alpine做名词将意思是高山植物，估计想表达简单，耐用的意思吧。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>一个ss的安装脚本</title>
+      <link>https://phpgao.github.io/shadowsocks_install_script.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_install_script.html</guid>
+      <description>&lt;p&gt;这个脚本是写给小白和我用的，可以直接在&lt;strong&gt;centos&lt;/strong&gt;上可以执行，使用方法很简单。&lt;/p&gt;
+&lt;p&gt;更新：&lt;/p&gt;
+&lt;p&gt;这个脚本已经很旧了，请移步&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun-html.html&#34;&gt;Ubuntu 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>为樱花打造的KCPTUN</title>
+      <link>https://phpgao.github.io/kcptun_on_sakura.html</link>
+      <pubDate>Thu, 02 Mar 2017 02:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun_on_sakura.html</guid>
+      <description>&lt;p&gt;老高课余时间研究了一下kcptun，然后维护了一个支持shadowsocks-libv + kcptun的镜像，希望能给大家点帮助。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7-安装最新版-NGINX,PHP,Mysql,Mariadb</title>
+      <link>https://phpgao.github.io/all_in_centos7.html</link>
+      <pubDate>Fri, 24 Feb 2017 06:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/all_in_centos7.html</guid>
+      <description>&lt;p&gt;自己下载源代码编译很麻烦有没有？注意系统是&lt;strong&gt;Centos7&lt;/strong&gt;！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>让typecho支持emoji</title>
+      <link>https://phpgao.github.io/typecho_with_emoji.html</link>
+      <pubDate>Wed, 07 Dec 2016 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_with_emoji.html</guid>
+      <description>&lt;p&gt;这年头文章里加个emoji很正常吧，但是typecho貌似之前没有考虑到，没有原生支持emoji，但是这怎么能难倒我们勤劳的码农呢！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/2007228227.jpg&#34; alt=&#34;doge&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用KCPTUN加速你的VPS</title>
+      <link>https://phpgao.github.io/kcptun.html</link>
+      <pubDate>Wed, 07 Dec 2016 03:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun.html</guid>
+      <description>&lt;p&gt;自从FS废了以后，老高一直在寻找一个替代品，直到发现了kcptun，老高的搬瓦工又迎来了第二春。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/748461753.png&#34; alt=&#34;kcptun_logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Let&#39;s-Encrypt-----免费的https证书</title>
+      <link>https://phpgao.github.io/let-us_encrypt.html</link>
+      <pubDate>Thu, 01 Dec 2016 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/let-us_encrypt.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/2787518341.png&#34; alt=&#34;letsencrypt&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自网络)&lt;/p&gt;
+&lt;p&gt;老高的证书快过期了(2016-12-11)，本着节约资(R)源(MB)的精神，准备使用&lt;a href=&#34;https://letsencrypt.org/getting-started/&#34;&gt;Let&amp;rsquo;s Encrypt&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>修改docker容器的Base-Device-Size</title>
+      <link>https://phpgao.github.io/docker_base_device_size.html</link>
+      <pubDate>Thu, 18 Aug 2016 06:41:03 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_base_device_size.html</guid>
+      <description>&lt;p&gt;老高的容器在运行一段时间的时候会突然无法写入数据，报错&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker no space left on device&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Google之，发现原来是&lt;strong&gt;Base Device Size&lt;/strong&gt;的问题，其默认值是10G，而容器经过一段时间的运行写入文件量早已超过10G，就造成无法写入数据的问题了。&lt;/p&gt;
+&lt;p&gt;下面给出解决方案：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记VI----PHP</title>
+      <link>https://phpgao.github.io/docker-note6-php.html</link>
+      <pubDate>Thu, 30 Jun 2016 10:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note6-php.html</guid>
+      <description>&lt;p&gt;在docker里构建一个PHP环境，很简单吗？我可不觉得。。。赶紧记录一下！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记V----FTP-与-SSH-支持</title>
+      <link>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</link>
+      <pubDate>Thu, 30 Jun 2016 08:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</guid>
+      <description>&lt;p&gt;给容器赋予FTP和ssh登录在调试和使用阶段都是很不错的功能！下面看老高怎么实现的。&lt;/p&gt;
+&lt;p&gt;(基于ubuntu:xenial)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记IV----使用docker的风格分离Nginx-PHP--Mysql</title>
+      <link>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</link>
+      <pubDate>Wed, 29 Jun 2016 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</guid>
+      <description>&lt;p&gt;今天老高动手实践一下分离nginx和php，还有mysql。即三个image: g-nginx,g-php,g-mysql。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/20358963.png&#34; alt=&#34;php7&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装指定版本的docker</title>
+      <link>https://phpgao.github.io/docker_install_specific_version.html</link>
+      <pubDate>Fri, 24 Jun 2016 03:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_install_specific_version.html</guid>
+      <description>&lt;p&gt;安装指定版本的docker，在Google上搜索关键字&lt;strong&gt;docker install specific version&lt;/strong&gt;，搜到的解决办法基本都没法用。于是自己动手，发现一个安装指定版本的捷径！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/799230615.png&#34; alt=&#34;安装指定版本的docker&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>自己建立ngrok服务器进行内网穿透</title>
+      <link>https://phpgao.github.io/ngrok_how_to.html</link>
+      <pubDate>Tue, 14 Jun 2016 11:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ngrok_how_to.html</guid>
+      <description>&lt;p&gt;随着国内运营商的IP不够用的节奏，我们拨号拿到的IP已经不再是类似&lt;code&gt;122.1.33.22&lt;/code&gt;的公网IP了，而是类似&lt;code&gt;10.1.2.33&lt;/code&gt;的内网IP，换句话说，我们没法直接访问到我们自己家里的路由器了！如何解决这个问题呢？目前成本最低的方式就是使用内网穿透技术了。说白了就是端口转发，即我们需要一台类似反向代理的VPS(&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;老高的VPS使用的搬瓦工&lt;/a&gt;)，把我们的请求转发到内网里，这样就相当于在防火墙内打了个洞，我们的数据能够穿透运营商的限制到达内网设备。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/3882816681.png&#34; alt=&#34;ngrok原理&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;图片来自网络，侵删。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7下使用Squid快速搭建带认证的HTTP代理服务器</title>
+      <link>https://phpgao.github.io/squid_proxy_with_basic_auth.html</link>
+      <pubDate>Tue, 24 May 2016 03:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/squid_proxy_with_basic_auth.html</guid>
+      <description>&lt;p&gt;在centos下很容易就可以搭建好一个HTTP代理服务器，&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;搭建一个socks5代理更是简单的不用说&lt;/a&gt;！&lt;/p&gt;
+&lt;p&gt;不管是测试用途还是自己使用，Squid都是一个很不错的代理工具！他支持正向代理，反向代理，还有透明代理！老高最近搭建了一个简单的squid的正向代理，随便记记笔记！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果只是想使用代理而不需要认证功能，&lt;strong&gt;tinyproxy&lt;/strong&gt;也是不错的选择！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>两个好用的命令行工具-watch-和-rsync</title>
+      <link>https://phpgao.github.io/command_line_tool_watch_rsync.html</link>
+      <pubDate>Thu, 21 Apr 2016 08:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/command_line_tool_watch_rsync.html</guid>
+      <description>几句话说完。
+watch有监控的需求，比如文件列表的变化等。
+# -5 指的是间隔5s执行一次 # --differences 指高亮变化的地方 watch -n 5 --differences ls -l rsync不多说了，主要解决了我在服务器之间的大文件同步需求，scp本来也能做，但是如果文件名相同会直接覆盖。
+# --update 不覆盖更新的文件 # --times 选项保持每个文件的访问权限、创建和最后修改时间 rsync -e ssh --update --verbose --times someone@someip:~/* /tmp/ </description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记III----docker的快速安装</title>
+      <link>https://phpgao.github.io/docker-note3-html.html</link>
+      <pubDate>Sun, 10 Apr 2016 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note3-html.html</guid>
+      <description>&lt;p&gt;docker快速安装笔记&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用VirtualBox在后台运行镜像</title>
+      <link>https://phpgao.github.io/virtualbox_run_in_background.html</link>
+      <pubDate>Tue, 05 Apr 2016 01:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtualbox_run_in_background.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/3686880991.png&#34; alt=&#34;VirtualBox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高的想做的很简单，就是开一个没有界面的虚拟机运行在后台，由于VirtualBox的GUI和虚拟机的运行管理是分离的，想要做到这一点很容易！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>获取所有用户的计划任务</title>
+      <link>https://phpgao.github.io/crontab_for_everyone.html</link>
+      <pubDate>Fri, 18 Mar 2016 10:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/crontab_for_everyone.html</guid>
+      <description>一句话代码
+cut -d: -f1 /etc/passwd|xargs -i sudo crontab -u {} -l </description>
+    </item>
+    
+    <item>
+      <title>Centos搭建GIT服务器</title>
+      <link>https://phpgao.github.io/build-git-server.html</link>
+      <pubDate>Mon, 14 Mar 2016 05:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/build-git-server.html</guid>
+      <description>&lt;h2 id=&#34;server&#34;&gt;server&lt;/h2&gt;
+&lt;p&gt;1.首先安装git&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yum install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>迅雷远程下载的服务脚本</title>
+      <link>https://phpgao.github.io/xunlei_service_start.html</link>
+      <pubDate>Sun, 31 Jan 2016 09:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xunlei_service_start.html</guid>
+      <description>&lt;p&gt;放到&lt;code&gt;/etc/init.d&lt;/code&gt;中即可。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;/home/pi/xunlei/portal&lt;/code&gt;是portal的绝对路径！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker的tag实验</title>
+      <link>https://phpgao.github.io/docker_tag.html</link>
+      <pubDate>Mon, 25 Jan 2016 11:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_tag.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker tag&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;git的tag功能是为了将代码的某个状态打上一个戳，通过tag我们可以很轻易的找到对应的提交。一般大家会在一些重要事件打tag，比如提测时，开发完成时，测试结束时，版本发布时等等。&lt;/p&gt;
+&lt;p&gt;对比git的tag，docker的tag似乎更加灵活，docker将文件等信息的变动抽象为一次次的commit，每一次commit以后可能走向不同的分支，当我们完成dockerfile的构建后，会生成一串无规则的字符串代表此次生成的ID，此时，tag的作用就是为他创建一个友好的NAME，方便我们对镜像库的管理。&lt;/p&gt;
+&lt;p&gt;有时候tag的过度友好也会对我们造成一些困惑，下面老高总结一下在使用docker tag时遇到的坑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派samba的配置和自动挂载USB储存设备</title>
+      <link>https://phpgao.github.io/raspberry_automount.html</link>
+      <pubDate>Sat, 09 Jan 2016 07:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/raspberry_automount.html</guid>
+      <description>安装依赖包 apt-get install ntfs-3g apt-get install samba 编辑samba vi /etc/samba/smb.conf #add [media] comment = Temporary file space path = /media read only = no public = yes 重启samba服务
+/etc/init.d/samba restart USB自动挂载 挂载好麻烦，自动脚本来帮忙，使用的技术叫做udev。
+vi /etc/udev/rules.d/10-usbstorage.rules KERNEL!=&amp;#34;sd*&amp;#34;, GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; SUBSYSTEM!=&amp;#34;block&amp;#34;,GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; IMPORT{program}=&amp;#34;/sbin/blkid -o udev -p %N&amp;#34; ENV{ID_FS_TYPE}==&amp;#34;&amp;#34;, GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; ENV{ID_FS_LABEL}!=&amp;#34;&amp;#34;, ENV{dir_name}=&amp;#34;%E{ID_FS_LABEL}&amp;#34; ENV{ID_FS_LABEL}==&amp;#34;&amp;#34;, ENV{dir_name}=&amp;#34;Untitled-%k&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{mount_options}=&amp;#34;relatime,sync&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{ID_FS_TYPE}==&amp;#34;vfat&amp;#34;, ENV{mount_options}=&amp;#34;iocharset=utf8,umask=000&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{ID_FS_TYPE}==&amp;#34;ntfs&amp;#34;, ENV{mount_options}=&amp;#34;iocharset=utf8,umask=000&amp;#34; ACTION==&amp;#34;add&amp;#34;, RUN+=&amp;#34;/bin/mkdir -p /media/%E{dir_name}&amp;#34;, RUN+=&amp;#34;/bin/mount -o $env{mount_options} /dev/%k /media/%E{dir_name}&amp;#34; ACTION==&amp;#34;remove&amp;#34;, ENV{dir_name}!=&amp;#34;&amp;#34;, RUN+=&amp;#34;/bin/umount -l /media/%E{dir_name}&amp;#34;, RUN+=&amp;#34;/bin/rmdir /media/%E{dir_name}&amp;#34; LABEL=&amp;#34;media_by_label_auto_mount_end&amp;#34; 参考 树莓派自动挂载usb移动存储设备</description>
+    </item>
+    
+    <item>
+      <title>终于全站https了，看到小绿锁开心不？</title>
+      <link>https://phpgao.github.io/enable_https.html</link>
+      <pubDate>Sun, 13 Dec 2015 12:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/enable_https.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/3818874258.png&#34; alt=&#34;https&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;今天花了点时间把全站改为https了，其实主要是把多说砍了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将你的PHP程序升级到PHP7.0</title>
+      <link>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</link>
+      <pubDate>Sun, 06 Dec 2015 13:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/515318547.png&#34; alt=&#34;PHP&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(以上图片来自互联网)&lt;/p&gt;
+&lt;p&gt;这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-II----multi-port-shadowsocks</title>
+      <link>https://phpgao.github.io/docker_note2.html</link>
+      <pubDate>Thu, 12 Nov 2015 05:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_note2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/docker-note1.html&#34;&gt;上一节&lt;/a&gt;我们建立了简单的容器，这一届我们进一步探索docker的功能&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-I----Dockerfile-build-run-kill</title>
+      <link>https://phpgao.github.io/docker-note1.html</link>
+      <pubDate>Thu, 12 Nov 2015 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note1.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker &amp;ndash; 像安装卸载APP一样简单的部署服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这些文章是老高自己使用docker是的一些笔记，偶尔会更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>每天自动升级你的Centos</title>
+      <link>https://phpgao.github.io/yum_cron.html</link>
+      <pubDate>Mon, 12 Oct 2015 08:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum_cron.html</guid>
+      <description>搜到了这一篇文章Automatic nightly YUM updates with yum-cron
+给大家安利一下。
+# 安装 yum install yum-cron -y # 配置 vim /etc/sysconfig/yum-cron # 开启服务 chkconfig yum-cron on # or chkconfig --level 345 yum-cron on # 运行服务 service yum-cron start # 检查日志 grep yum.cron /var/log/cron | tail -10 </description>
+    </item>
+    
+    <item>
+      <title>使用ssh的反向隧道管理内网路由器</title>
+      <link>https://phpgao.github.io/ssh-reverse-tunnel.html</link>
+      <pubDate>Fri, 02 Oct 2015 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh-reverse-tunnel.html</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SSH协议真是了不得！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/2363969333.png&#34; alt=&#34;pandorabox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;光是看标题，大家会看的云里雾里的，倾听老高细细道来！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SS公共服务器的基本安全措施</title>
+      <link>https://phpgao.github.io/ss-public-server.html</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-public-server.html</guid>
+      <description>&lt;p&gt;老高以前免费分享的ss服务器 &lt;a href=&#34;https://blog.phpgao.com/try_shadowsocks_via_qrcode.html&#34;&gt;免费shadowsocks&lt;/a&gt; ，被攻击了。。。后台检测到有大量的垃圾邮件，是我大意了，忘记了给做一些保护措施，赶紧补上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openwrt中br-lan,eth0,eth0.1,eth0.2</title>
+      <link>https://phpgao.github.io/openwrt-interface.html</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt-interface.html</guid>
+      <description>&lt;p&gt;openwrt的接口真是多，老高一下子都看晕了，不过仔细理一理，还是能够分辨的。&lt;/p&gt;
+&lt;p&gt;首先盗openwrt-wiki中的一张图，这张图对理解这些接口很重要！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3406911994.png&#34; alt=&#34;asus-internals-default&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----iptables防火墙设置</title>
+      <link>https://phpgao.github.io/vbird_linux_note_iptables.html</link>
+      <pubDate>Sun, 31 May 2015 08:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_iptables.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;
+&lt;p&gt;以下内容总结自鸟哥的 Linux 私房菜 &amp;ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。&lt;/p&gt;
+&lt;p&gt;关于VPS的更多安全设置可以参考 &lt;a href=&#34;https://blog.phpgao.com/vps_safty.html&#34;&gt;VPS安全设置&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://blog.phpgao.com/vps_iptables.html&#34;&gt;VPS安全之防火墙设置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----网络速查</title>
+      <link>https://phpgao.github.io/vbird_linux_note_network.html</link>
+      <pubDate>Sun, 31 May 2015 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_network.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>-etc-profile,-etc-bashrc等文件的区别与作用</title>
+      <link>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</link>
+      <pubDate>Thu, 28 May 2015 17:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</guid>
+      <description>&lt;p&gt;当我们在做一些与bash相关的操作时，比如设置别名、登录启动项等，多多少少都会与下面几个文件打交道，用的时候一查，然后又忘了。好记性不如烂笔头，下面老高就帮你理一理这些文件到底是干啥的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/profile&lt;/li&gt;
+&lt;li&gt;/etc/bashrc&lt;/li&gt;
+&lt;li&gt;~/.bash_profile&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下安装trash-cli防止误删文件</title>
+      <link>https://phpgao.github.io/linux-trash-cli.html</link>
+      <pubDate>Thu, 28 May 2015 11:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux-trash-cli.html</guid>
+      <description>&lt;p&gt;玩过Linux的同学应该都知道这个要命的命令，此命令一出，系统几乎废了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;虽然一再强调&lt;code&gt;rm&lt;/code&gt;的时候要注意，但是还是会有同学犯错误删文件，有什么办法能够减少此类事情的发生呢？&lt;/p&gt;
+&lt;p&gt;今天老高就要介绍此工具&amp;mdash;&amp;ndash;  &lt;code&gt;trash-cli&lt;/code&gt;。他实现了类似回收站的功能，以后删除的时候就有了后悔药。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/2919137931.jpg&#34; alt=&#34;trash-cli&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos安装EPEL</title>
+      <link>https://phpgao.github.io/centos_install_epel.html</link>
+      <pubDate>Wed, 27 May 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_install_epel.html</guid>
+      <description>EPEL全称Extra Packages for Enterprise Linux，官方翻译为 企业版 Linux 附加软件包。顾名思义，他可以扩充你的软件库，安装很多软件时能省去很多时间。比如最近很火的PHP的DoS漏洞，Bug 61461，在EPEL下面只需要一条命令就能将PHP升级为5.9，避免重新编。
+老高推荐新安装的centos系统都先安装此附加软件包！
+安装命令：
+yum install epel-release 没有报错的话，那么EPEL就安装完毕了。
+如果上述命令还是解决不了问题，那就必须有针对性的安装了。
+以下命令复制自Install EPEL and additional repositories on CentOS and Red Hat
+#CentOS and Red Hat Enterprise Linux 5.x wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm rpm -Uvh epel-release-5*.rpm #CentOS and Red Hat Enterprise Linux 6.x wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm rpm -Uvh epel-release-6*.rpm #CentOS and Red Hat Enterprise Linux 7.x wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm rpm -Uvh epel-release-7*.rpm 你还可以在此查看每个系统对应的最新的EPEL版本</description>
+    </item>
+    
+    <item>
+      <title>在centos上安装Munin监控服务器运行状态</title>
+      <link>https://phpgao.github.io/munin_on_centos.html</link>
+      <pubDate>Wed, 27 May 2015 13:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/munin_on_centos.html</guid>
+      <description>&lt;p&gt;老高的服务器在搬瓦工上跑着，虽然后台有各种监控信息，但是要想查看还是必须登录后再点击很多次才能看到，很麻烦，于是通过Google找到了这个小巧的系统监控软件 &amp;ndash; &lt;a href=&#34;http://munin-monitoring.org&#34;&gt;Munin&lt;/a&gt;。这个软件在系统中部署很简单，几行代码就能搞定！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2014-11-24: Munin 2.0.25 is released.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://guide.munin-monitoring.org/en/latest/index.html&#34;&gt;Munin手册地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux服务器配置Redis并启用PHP支持</title>
+      <link>https://phpgao.github.io/redis_php.html</link>
+      <pubDate>Mon, 25 May 2015 13:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/redis_php.html</guid>
+      <description>&lt;p&gt;redis目前(20150525)已经更新到了3.0版本，今天我们来学习如何在服务器部署Redis，并启用php支持。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/1996252458.jpg&#34; alt=&#34;Redis logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决MySQL中Sleep连接过多的问题</title>
+      <link>https://phpgao.github.io/mysql_too_many_sleeping_connections.html</link>
+      <pubDate>Mon, 25 May 2015 12:19:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_too_many_sleeping_connections.html</guid>
+      <description>&lt;p&gt;有时候你在mysql中运行&lt;code&gt;SHOW PROCESSLIST;&lt;/code&gt;后会发现数据库中有很多这样的进程：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/1013249303.jpg&#34; alt=&#34;MySQL中Sleep连接过多&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决ngx_lua_waf总是提示参数错误的问题</title>
+      <link>https://phpgao.github.io/ngx_lua_waf_error_500.html</link>
+      <pubDate>Mon, 25 May 2015 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ngx_lua_waf_error_500.html</guid>
+      <description>&lt;p&gt;最近服务上了ngx_lua_waf以防御攻击，但是ngx_lua_waf的参数确实有些严格，导致自己写文章都被BAN，于是看了看源码，发现可以添加url白名单功能，这不就搞定了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>几条命令找出服务器上的垃圾文件</title>
+      <link>https://phpgao.github.io/clean-up-your-linux.html</link>
+      <pubDate>Sun, 24 May 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/clean-up-your-linux.html</guid>
+      <description>&lt;p&gt;Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！&lt;/p&gt;
+&lt;p&gt;当然，如果你的服务器容量是TB、PB级别的请无视此文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP安装配置Opcache加速你的网站</title>
+      <link>https://phpgao.github.io/php-opcache-optimize.html</link>
+      <pubDate>Sun, 24 May 2015 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-opcache-optimize.html</guid>
+      <description>&lt;p&gt;本文针对PHP5.5等高级版本，编译时需要加上&lt;code&gt;--enable-opcache&lt;/code&gt;参数&lt;/p&gt;
+&lt;p&gt;编译PHP请参考&lt;a href=&#34;https://blog.phpgao.com/compile_php.html&#34;&gt;编译PHP5.6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;编译安装完成后，我们开始配置Opcache&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux服务器配置memcached并启用PHP支持</title>
+      <link>https://phpgao.github.io/php-memcached-extension-installation.html</link>
+      <pubDate>Sun, 24 May 2015 02:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-memcached-extension-installation.html</guid>
+      <description>&lt;p&gt;最近在服务器上部缓存系统，记录一下PHP安装memcached扩展。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>彻底解决编译PHP找不到libc-client.a的问题</title>
+      <link>https://phpgao.github.io/libc-client-404.html</link>
+      <pubDate>Sat, 23 May 2015 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/libc-client-404.html</guid>
+      <description>&lt;p&gt;最近PHP爆出漏洞，老高也在升级PHP版本，并加入一些支持，但是遇到这个问题很蛋疼&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;configure: error: Cannot find imap library (libc-client.a). Please check your c-client installation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;网上搜了各种教程，各种cp都没用，索性我们就自己编译吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用搬瓦工的VPS搭建博客网站</title>
+      <link>https://phpgao.github.io/website_on_bandwagonhost.html</link>
+      <pubDate>Fri, 22 May 2015 02:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/website_on_bandwagonhost.html</guid>
+      <description>&lt;p&gt;想必大家买了VPS后一定都不想闲着。。。搭个博客算是最简单实用了。&lt;/p&gt;
+&lt;p&gt;但是基本上大家在网上下载到的一键安装包都没有&lt;strong&gt;后台管理&lt;/strong&gt;功能，如果想多绑定几个域名都不知道怎么操作，更别提搭建多个站点了。&lt;/p&gt;
+&lt;p&gt;下面老高就介绍一种简单实用的网站搭建方法，搭建出的网站速度快，安全性高，还支持各种优化配置。&lt;/p&gt;
+&lt;p&gt;最重要的是操作基本都是傻瓜式的，不需要很多web技能也可以完整的配置下来，而且基本上就成了半个运维了，是不是很厉害！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像老高这样的&lt;strong&gt;老司机&lt;/strong&gt;，整个装下来再加上安全设置最多5分钟搞定，相信你一定也可以！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搭建过程中如果有什么问题，请留言交流！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3949848852.gif&#34; alt=&#34;kangle&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>删除nginx-fastcgi-cache缓存</title>
+      <link>https://phpgao.github.io/nginx-fastcgi-cache-deletion.html</link>
+      <pubDate>Wed, 20 May 2015 05:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx-fastcgi-cache-deletion.html</guid>
+      <description>老高通过nginx的优化配置，配置了fastcgi_cache，服务器使用缓存固然很好，但是也会遇到很尴尬的时候。
+比如突然发现某个错别字，在后台改好后发现文章之前已被缓存，不知道还要等多久才能刷新，解决办法是删除生成的文件
+但想要找到已经可不容易，有两个办法：
+ 一个一个找或者直接删除全部缓存 根据nginx的URL &amp;ndash; key的规则，再使用两层hash来定位文件  因为老高缓存的文件数不多，所以最后的解决办法是 &amp;ndash; 关键字过滤
+# 找 grep -r &amp;#39;your keywords&amp;#39; . # 删 grep -rl &amp;#39;your keywords&amp;#39; . |xargs rm 下面的也可以
+find |xargs grep &amp;#39;your keywords&amp;#39; find |xargs grep -l &amp;#39;your keywords&amp;#39;|xargs rm 顺便记个笔记
+# 顺便记一下find限定查找文件和目录 find -type f find -type d # grep --help 中-R也很有用！ grep -r --include=&amp;#34;*.php&amp;#34; </description>
+    </item>
+    
+    <item>
+      <title>nginx编译安装ngx_lua模块</title>
+      <link>https://phpgao.github.io/nginx_ngx_lua.html</link>
+      <pubDate>Tue, 19 May 2015 06:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_ngx_lua.html</guid>
+      <description>&lt;p&gt;nginx lua模块淘宝开发的nginx第三方模块,它能将lua语言嵌入到nginx配置中,从而使用lua就极大增强了nginx的能力.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx的优化配置</title>
+      <link>https://phpgao.github.io/nginx_optimization.html</link>
+      <pubDate>Tue, 19 May 2015 01:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_optimization.html</guid>
+      <description>&lt;p&gt;老高的服务器最近表示亚历山大，先祭出此篇缓解前端压力，之后再从代码中优化一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用ss-manyuser和ss-panel搭建shadowsocks分享平台</title>
+      <link>https://phpgao.github.io/share_shadowsocks.html</link>
+      <pubDate>Mon, 18 May 2015 14:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/share_shadowsocks.html</guid>
+      <description>ss-manyuser做前端，ss-panel做后端，运行环境centos6。
+项目地址 感谢以下大神提供源码
+manyuser：
+shadowsocks manyuser branch
+ss-panel:
+ss-panel
+安装 mkdir /data cd /data git clone https://github.com/mengskysama/shadowsocks.git backend git clone https://github.com/orvice/ss-panel.git front 配置 front # 1. 创建数据库，并建立一个本地用户shadowsocks@localhost，并赋予权限 CREATE DATABASE IF NOT EXISTS shadowsocks DEFAULT CHARSET utf8 COLLATE utf8_general_ci; GRANT ALL PRIVILEGES ON shadowsocks.* TO &amp;#39;shadowsocks&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; # 2. 导入sql cd front cat sql/*.sql &amp;gt; merged.sql # 登录mysql mysql&amp;gt;use shadowsocks; mysql&amp;gt;source path/to/merged.sql; # 3. 将数据库配置信息写入lib/config.php 这里要提一下：
+userid=1的用户是管理员，最好把他的端口将50000改为15000，密码是直接md5，可以自己修改。
+passwd字段是ss的连接密码。
+backend # 准备环境 yum -y install python-pip m2crypto pip install cymysql # 2.</description>
+    </item>
+    
+    <item>
+      <title>发现一个命令ldd</title>
+      <link>https://phpgao.github.io/good_cmd_ldd.html</link>
+      <pubDate>Sun, 17 May 2015 10:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/good_cmd_ldd.html</guid>
+      <description>ldd是Linux库操作中最实用的一个命令了，他可以查看一个程序所依赖的库。
+如果你的程序执行起来缺少某个库，我们就去下载，但是把库放到哪里才能让程序正确是识别出来呢？使用ldd就可以了！
+使用方法: ldd [options] file 功能:列出file运行所需的共享库 可用选项
+➜ sbin ldd --help Usage: ldd [OPTION]... FILE... --help print this help and exit --version print version information and exit -d, --data-relocs process data relocations 执行符号重部署，并报告缺少的目标对象 -r, --function-relocs process data and function relocations 对目标对象和函数执行重新部署，并报告缺少的目标对象和函数 -u, --unused print unused direct dependencies 打印不需要链接的库 -v, --verbose print all information 打印所有信息 例子
+➜ /bin ldd /bin/cp linux-vdso.so.1 =&amp;gt; (0x00007fff8dbfe000) libselinux.so.1 =&amp;gt; /lib64/libselinux.so.1 (0x00007f94558e4000) librt.so.1 =&amp;gt; /lib64/librt.so.1 (0x00007f94556dc000) libacl.</description>
+    </item>
+    
+    <item>
+      <title>mysql优化之日志配置</title>
+      <link>https://phpgao.github.io/mysql_log_configure.html</link>
+      <pubDate>Thu, 14 May 2015 11:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_log_configure.html</guid>
+      <description>如果你选mysql数据库作为数据持久化的工具，那么就需要一个合理的日志配置，这样有助于排错和数据备份及恢复！
+首先我们可以通过下面的MySQL的sql查询正在运行中的日志配置。
+刚好我们熟悉一下SHOW VARIABLES LIKE的用法！这个命令是用来查询MySQL运行时配置的语句，LIKE后面的可以接通配符查找！
+还有对应的设置语法叫SET GLOBAL，后面我们会用到。
+mysql&amp;gt; SHOW VARIABLES LIKE &amp;#39;%log%&amp;#39;; +-----------------------------------------+---------------------------------+ | Variable_name | Value | +-----------------------------------------+---------------------------------+ | back_log | 50 | | binlog_cache_size | 32768 | | binlog_direct_non_transactional_updates | OFF | | binlog_format | STATEMENT | | expire_logs_days | 0 | | general_log | OFF | | general_log_file | /var/run/mysqld/mysqld.log | | innodb_flush_log_at_trx_commit | 1 | | innodb_locks_unsafe_for_binlog | OFF | | innodb_log_buffer_size | 1048576 | | innodb_log_file_size | 5242880 | | innodb_log_files_in_group | 2 | | innodb_log_group_home_dir | .</description>
+    </item>
+    
+    <item>
+      <title>将-php-fpm-配置为服务</title>
+      <link>https://phpgao.github.io/php-fpm-service.html</link>
+      <pubDate>Thu, 14 May 2015 10:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-service.html</guid>
+      <description>&lt;p&gt;请将以下脚本适当修改后命名为&lt;strong&gt;php-fpm&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>php-fpm---启动参数及重要配置详解</title>
+      <link>https://phpgao.github.io/php-fpm-configure.html</link>
+      <pubDate>Thu, 14 May 2015 10:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-configure.html</guid>
+      <description>&lt;p&gt;约定几个目录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/usr/local/php/sbin/php-fpm
+/usr/local/php/etc/php-fpm.conf
+/usr/local/php/etc/php.ini&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>在mac上安装并使用docker</title>
+      <link>https://phpgao.github.io/docker_on_mac.html</link>
+      <pubDate>Thu, 30 Apr 2015 10:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_mac.html</guid>
+      <description>&lt;p&gt;docker最近实在火的不行，老高最近也在使用，顺便记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装&lt;/h2&gt;
+&lt;p&gt;下载和安装主要参考下面的文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.docker.com/installation/mac/&#34;&gt;http://docs.docker.com/installation/mac/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://community.emc.com/docs/DOC-44372&#34;&gt;https://community.emc.com/docs/DOC-44372&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>zsh-&#43;-oh-my-zsh-默认shell的最佳替代品</title>
+      <link>https://phpgao.github.io/oh-my-zsh.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh-my-zsh.html</guid>
+      <description>项目地址
+zsh &amp;mdash;&amp;ndash;&amp;gt; http://www.zsh.org oh-my-zsh &amp;mdash;-&amp;gt; http://ohmyz.sh
+ The last shell you’ll ever need!
+ 使用方法 为你的MAC、Linux安装zsh
+# Centos yum install zsh git -y # OSX brew install zsh git -y 安装oh-my-zsh # via curl curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh # via wget wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 设置zsh为系统默认shell # 为root用户修改默认shell为zsh chsh -s /bin/zsh root # 为当前用户修改默认shell为zsh chsh -s /bin/zsh # or chsh -s `which zsh` # 恢复命令 chsh -s /bin/bash add to ~/.</description>
+    </item>
+    
+    <item>
+      <title>编译小米路由mini的openwrt固件</title>
+      <link>https://phpgao.github.io/xiaomi_router_openwrt.html</link>
+      <pubDate>Tue, 28 Apr 2015 16:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_openwrt.html</guid>
+      <description>&lt;p&gt;花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用nginx-&#43;-uWSGI运行flask程序</title>
+      <link>https://phpgao.github.io/nginx_uwsgi_flask.html</link>
+      <pubDate>Mon, 27 Apr 2015 11:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_uwsgi_flask.html</guid>
+      <description>&lt;p&gt;老高最近写了一个&lt;a href=&#34;https://github.com/phpgao/qrcode-for-ss&#34;&gt;flask小应用&lt;/a&gt;，功能很简单，就是通过读取配置再显示ss的二维码配置，不过想让他运行起来统一管理，还是费了一些周折啊。&lt;/p&gt;
+&lt;p&gt;如果你自己Google过，你可能会发现一个关键字uWSGI，他就是本篇的主角。&lt;/p&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;p&gt;Web服务器网关接口（Python Web Server Gateway Interface，缩写为WSGI。
+uwsgi与WSGI一样，是一个通信协议。
+uWSGI，一个实现了WSGI，uwsgi，http等协议的服务器，与nginx在一个层次。&lt;/p&gt;
+&lt;p&gt;鉴于国内的一些教程都写成翔了，那老高就赶紧记录分享一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos6新系统初始化脚本</title>
+      <link>https://phpgao.github.io/new_cents_shell.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_cents_shell.html</guid>
+      <description>&lt;p&gt;最近装机次数有点多，本来想写到这里的&lt;a href=&#34;https://blog.phpgao.com/centos_optimize.html&#34;&gt;centos6 优化脚本与安全脚本&lt;/a&gt;，结果一想还是新开一个帖子吧。&lt;/p&gt;
+&lt;p&gt;centos源设置可以参考&lt;a href=&#34;https://blog.phpgao.com/repo_for_centos.html&#34;&gt;Centos源设置&lt;/a&gt;，老高推荐安装阿里源。&lt;/p&gt;
+&lt;p&gt;新机子先运行上面的脚本，再运行这个脚本&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>各个系统安装dig工具的教程</title>
+      <link>https://phpgao.github.io/how_to_install_dig.html</link>
+      <pubDate>Mon, 27 Apr 2015 02:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_install_dig.html</guid>
+      <description>&lt;p&gt;dig是一个很不错的工具，它比nslookup好用太多。&lt;/p&gt;
+&lt;p&gt;老高主要用dig判断DNS解析故障和DNS解析线路的问题。dig命令虽然好用，但是想要在各个系统中安装使用dig，安装方法还是要记录一下的。&lt;/p&gt;
+&lt;p&gt;那么如何安装呢？老高总结了linux服务器，openwrt，Windows等系统的安装dig的方法，希望能够帮助到你。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>shadowsocks一键安装脚本</title>
+      <link>https://phpgao.github.io/ss_onekey_installation.html</link>
+      <pubDate>Fri, 24 Apr 2015 16:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss_onekey_installation.html</guid>
+      <description>&lt;p&gt;摘自&lt;strong&gt;搬瓦工&lt;/strong&gt;后台，脚本简洁明了，请自取。&lt;/p&gt;
+&lt;p&gt;一键安装需求：&lt;/p&gt;
+&lt;p&gt;centos6 + root用户。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买前必读</title>
+      <link>https://phpgao.github.io/pre_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pre_buy_faq.html</guid>
+      <description>&lt;h2 id=&#34;这个vps能做什么&#34;&gt;这个VPS能做什么&lt;/h2&gt;
+&lt;p&gt;首先，当你租下这台属于你的服务器后，你有很大的自由去做你想做的事情，但是需要声明的是&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果任何人以任何形式使用从老高的博客购买的VPS去做违法的事(包括违反中美两国的法律)，此行为与老高无关！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个服务器系统基于Linux(Linux是程序猿入门必备基础工具，所以程序员拿来练手非常适合，老高就是用这个入门的)，网速不错，有了它相当于你在国外有个代理，这个代理可以搭建你的博客，做你的DNS服务器，做你的翻墙工具等等。&lt;/p&gt;
+&lt;p&gt;最大的&lt;strong&gt;卖点&lt;/strong&gt;就是价格了，其一年的主机价格与国内主机半个月的价格相当。&lt;/p&gt;
+&lt;p&gt;再加上Linux的可玩性，有很多&lt;strong&gt;高级玩法&lt;/strong&gt;可以折腾。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买后必读</title>
+      <link>https://phpgao.github.io/post_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 10:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/post_buy_faq.html</guid>
+      <description>&lt;p&gt;本文介绍了搬瓦工购买后的常规操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用nginx做反向代理</title>
+      <link>https://phpgao.github.io/nginx_reverse_proxy.html</link>
+      <pubDate>Sun, 12 Apr 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_reverse_proxy.html</guid>
+      <description>&lt;p&gt;很多同学喜欢用nginx做反向代理访问某些网站，原因大家都懂的，今天老高记录一下如何使用nginx做反向代理以及如何配置和优化nginx的反向代理。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译openwrt</title>
+      <link>https://phpgao.github.io/compile_openwrt.html</link>
+      <pubDate>Tue, 07 Apr 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_openwrt.html</guid>
+      <description>&lt;p&gt;一些资料&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用U盘安装OSX10.10.2(YOSEMITE)</title>
+      <link>https://phpgao.github.io/osx_yosemite_installation.html</link>
+      <pubDate>Sun, 05 Apr 2015 12:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/osx_yosemite_installation.html</guid>
+      <description>&lt;p&gt;转自：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://mirrorpirate.com/?load=/torrent/11671739/OS_X_Yosemite_10.10.2_%2814C109%29_bootable_USB_%28DMG_File%29&#34;&gt;http://mirrorpirate.com/?load=/torrent/11671739/OS_X_Yosemite_10.10.2_%2814C109%29_bootable_USB_%28DMG_File%29&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>推荐两个sourceforge的FTP镜像(直接下载)</title>
+      <link>https://phpgao.github.io/sourceforge_ftp.html</link>
+      <pubDate>Sat, 28 Mar 2015 03:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sourceforge_ftp.html</guid>
+      <description>一个FTP协议，一个http协议，实时更新，方便直接下载！
+ ftp://ftp.jaist.ac.jp/pub/sourceforge/ http://www.mirrorservice.org/sites/download.sourceforge.net/pub/sourceforge/  顺便补充几个与路由器翻墙有关的地址
+ http://openwrt-dist.sourceforge.net http://openwrt-dist.sourceforge.net/releases/ramips/packages/  </description>
+    </item>
+    
+    <item>
+      <title>使用supervisor托管shadowsocks</title>
+      <link>https://phpgao.github.io/supervisor_shadowsocks.html</link>
+      <pubDate>Tue, 10 Mar 2015 06:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/supervisor_shadowsocks.html</guid>
+      <description>&lt;p&gt;由于shadowsocks在服务器运行可能会不稳定，所以我们将shadowsocks的运行管理任务交给supervisor，这样如果ss挂了，supervisor会帮我们自动将shadowsocks重新启动，保证了ss的稳定性。&lt;/p&gt;
+&lt;p&gt;supervisor是什么我就不多介绍了，老高在此只强调一点，他是由python编写的，官网在此
+&lt;a href=&#34;http://supervisord.org/&#34;&gt;http://supervisord.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文也可作为supervisor的入门文章使用，欢迎大家交流！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>多说圆形旋转头像</title>
+      <link>https://phpgao.github.io/duoshuo_css_custom.html</link>
+      <pubDate>Sun, 08 Mar 2015 15:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/duoshuo_css_custom.html</guid>
+      <description>&lt;p&gt;其实现使用了css3的一些特性。使用方法很简单！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装双系统的一些记录</title>
+      <link>https://phpgao.github.io/install_multisystem_note.html</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_multisystem_note.html</guid>
+      <description>&lt;h2 id=&#34;mbrgrub&#34;&gt;MBR&amp;amp;GRUB&lt;/h2&gt;
+&lt;p&gt;MBR（Master boot record）指主引导记录，主要用于硬盘分区。GRUB就是安装在MBR中，起引导系统作用。&lt;/p&gt;
+&lt;p&gt;阶段1：POST自检后系统载入目标装置的MBR（Master boot record），即前512字节。MBR一共包含三个部分主引导程序（Boot Loader）、硬盘分区表DPT（Disk Partition table）和硬盘有效标志（55AA）。&lt;/p&gt;
+&lt;p&gt;阶段2：主引导程序被载入内存开始执行，他将继续执行加载系统内核的任务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在windows和linux下合并sql文件</title>
+      <link>https://phpgao.github.io/merge_sqlfiles.html</link>
+      <pubDate>Mon, 09 Feb 2015 08:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/merge_sqlfiles.html</guid>
+      <description>合并多个sql文件
+win:
+copy *.sql merged.sql # \b 指二进制合并，可用于图片等二进制文件 # \a 指ASCII合并 copy \b *.sql merged.sql # 小技巧，可实现文本隐藏 copy 1.jpg/b + 2.txt/a 3.jpg linux:
+# 合并所有扩展名为.sql的文件 cat *.sql&amp;gt;&amp;gt;merged.sql </description>
+    </item>
+    
+    <item>
+      <title>centos-awstats简单安装教程</title>
+      <link>https://phpgao.github.io/centos_awstats.html</link>
+      <pubDate>Fri, 30 Jan 2015 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_awstats.html</guid>
+      <description>&lt;p&gt;本文关键字:awstats linux centos nginx&lt;/p&gt;
+&lt;p&gt;Awstats官网：&lt;a href=&#34;http://www.awstats.org/&#34;&gt;http://www.awstats.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;发行协议：GNU GPL&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Awstats is short for Advanced Web statistic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。&lt;/p&gt;
+&lt;p&gt;再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。&lt;/p&gt;
+&lt;p&gt;注意：以下内容以配置老高的域名为例。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下常用解压命令</title>
+      <link>https://phpgao.github.io/linux_unzip_command.html</link>
+      <pubDate>Wed, 28 Jan 2015 13:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_unzip_command.html</guid>
+      <description>&lt;p&gt;大家一定会用到的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决MAC远程总是Broken-pipe</title>
+      <link>https://phpgao.github.io/mac_broken_pipe.html</link>
+      <pubDate>Sun, 25 Jan 2015 03:12:56 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_broken_pipe.html</guid>
+      <description>与ServerAliveInterval的设置有关
+vim ~/.ssh/config # add ServerAliveInterval 60 </description>
+    </item>
+    
+    <item>
+      <title>mysql中localhost和127.0.0.1的区别</title>
+      <link>https://phpgao.github.io/mysql_hostname_issue.html</link>
+      <pubDate>Mon, 19 Jan 2015 05:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_hostname_issue.html</guid>
+      <description>mysql的默认的root用户会有很多行，自习观察后你就会发现每行的用户名或密码可能相同，但是host一定不同，host是登陆用户的主机名，也就是说，&amp;lsquo;localhost&amp;rsquo;,&amp;lsquo;127.0.0.1&amp;rsquo;,&amp;lsquo;phpgao.local&amp;rsquo;,&#39;%&amp;lsquo;都算不同的用户！
+理解了这一点后，那么我的问题就附上水面了！
+有些TX经常会遇到这个问题：
+ 使用PHP连接mysql数据库，使用localhost作为主机名总是连接失败，但是使用&#39;127.0.0.1&amp;rsquo;就可以顺利连接，这到底是为什么？
+  mysql中HOST为localhost和127.0.0.1到底有什么区别？
+ 经过一番搜索，老高总结如下：
+使用到的命令
+mysql&amp;gt;status; mysql&amp;gt;show grants;   类Unix系统下，如果不使用-h指定主机名或者使用了localhost，那么会使用unix domain socket与mysql服务器沟通，比TCP/IP快一些！所以你想使用TCP/IP协议，请将host指定为&#39;127.0.0.1&amp;rsquo;。
+  PHP连接mysql如果使用&amp;rsquo;localhost&amp;rsquo;发生问题，首先可以明确的是PHP会试着使用unix domain socket与服务器连接，所以请检查php.ini中mysql.default_socket = /var/mysql/mysql.sock是否配置正确。
+  如果想要明确连接方式，可以再配置文件中显式声明
+  protocol=tcp 在mysql的官方文档中解释道:如果mysql在win上跑，如果系统开启了&amp;ndash;enable-named-pipe，然后访问服务器的时候没有指定hostname，那么mysql客户端会以pipe为优先连接，如果连接失败，那么再会去尝试使用TCP/IP去连接。你可以指定hostname为.在win下强制使用pipes。   If the MySQL server is running on Windows, you can connect using TCP/IP. If the server is started with the &amp;ndash;enable-named-pipe option, you can also connect with named pipes if you run the client on the host where the server is running.</description>
+    </item>
+    
+    <item>
+      <title>kangle的安装和使用</title>
+      <link>https://phpgao.github.io/kangle_note.html</link>
+      <pubDate>Wed, 14 Jan 2015 08:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kangle_note.html</guid>
+      <description>kangle是一款国人产的服务器软件，老高经常使用它搭建测试环境。
+安装 kangle的安装主要分两大块：kangle+easypanel。
+# centos下一键安装命令 yum -y install wget;wget http://download.kanglesoft.com/easypanel/ep.sh -O ep.sh;sh ep.sh 使用 安装完成后，使用方法: 管理面板网址: http://服务器ip:3312/admin/ 独立网站管理: http://服务器ip:3312/vhost/
+Reference:
+http://www.kanglesoft.com/thread-5891-1-1.html</description>
+    </item>
+    
+    <item>
+      <title>使用net_speeder加速你的VPS</title>
+      <link>https://phpgao.github.io/vps_net_speeder.html</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_net_speeder.html</guid>
+      <description>&lt;p&gt;转自:http://www.im1987.com/post/853.html&lt;/p&gt;
+&lt;p&gt;老高安装了以后480P是不卡了，720P还是有点力不从心啊~&lt;/p&gt;
+&lt;p&gt;另外推荐一下锐速，应该还是会有一点效果的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全之防火墙设置</title>
+      <link>https://phpgao.github.io/vps_iptables.html</link>
+      <pubDate>Mon, 29 Dec 2014 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_iptables.html</guid>
+      <description>&lt;p&gt;iptables是基于内核的防火墙，功能非常强大，iptables内置了filter，nat和mangle三张表。&lt;/p&gt;
+&lt;p&gt;filter负责过滤数据包，包括的规则链有，input，output和forward；&lt;/p&gt;
+&lt;p&gt;nat则涉及到网络地址转换，包括的规则链有，prerouting，postrouting和output；&lt;/p&gt;
+&lt;p&gt;mangle表则主要应用在修改数据包内容上，用来做流量整形的，默认的规则链有：INPUT，OUTPUT，NAT，POSTROUTING，PREROUTING；&lt;/p&gt;
+&lt;p&gt;input匹配目的IP是本机的数据包；
+forward匹配流经本机的数据包；
+prerouting用来修改目的地址用来做DNAT；
+postrouting用来修改源地址用来做SNAT。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全之SSH设置</title>
+      <link>https://phpgao.github.io/vps_ssh.html</link>
+      <pubDate>Mon, 29 Dec 2014 02:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_ssh.html</guid>
+      <description>&lt;p&gt;SSH是管理VPS的重要途径，所以SSH经常会受到攻击，所以我们需要将SSH&lt;strong&gt;武装&lt;/strong&gt;起来，保护我们VPS的安全。&lt;/p&gt;
+&lt;p&gt;SSH服务的配置文件位于&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;，我们的安全设置都是围绕此文件展开，所以修改前最好先备份一次，以免出现无法登陆的情况。&lt;/p&gt;
+&lt;p&gt;修改完不要忘了执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;service sshd restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置</title>
+      <link>https://phpgao.github.io/bandwagonhost_vps_panel.html</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagonhost_vps_panel.html</guid>
+      <description>&lt;p&gt;购买了搬瓦工(bandwagonhost)的VPS，如何使用呢？&lt;/p&gt;
+&lt;p&gt;在此，老高以FAQ的形式给出介绍。&lt;/p&gt;
+&lt;p&gt;首先插几句使用建议，老高认为十分重要，为什么呢？搬瓦工如果监控到有大量的垃圾信息从我们的主机上发出，就会立即冻结VPS，冻结后的VPS相当于关机，我们可以进入panel后手动解冻即可恢复正常，但是解冻的次数每年只有三次，所以大家一定要注意自己VPS的安全。在此老高也给大家分享一些必要的操作，请务必参考。部分建议需要一定的linux基础，不会的TX请参考老高的&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;翻墙教程&lt;/a&gt;后再google之。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos实时网速监控工具nload</title>
+      <link>https://phpgao.github.io/nload_centos.html</link>
+      <pubDate>Sat, 27 Dec 2014 04:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nload_centos.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.roland-riegel.de/nload/&#34;&gt;nload&lt;/a&gt;是一个很小巧的工具，用来监控当前系统的网速&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>putty中文乱码</title>
+      <link>https://phpgao.github.io/putty_chinese.html</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/putty_chinese.html</guid>
+      <description>每次重装centos总会碰到关于乱码的种种问题
+一般中文乱码有以下两个原因
+1.中文未安装
+一句话安装
+yum groupinstall &amp;#34;chinese support&amp;#34; # 重启 reboot 2.设置问题
+如果安装了中文支持还不行，那么就要考虑配置是否合适了。
+linux的语言配置文件位于/etc/sysconfig/i18n，使用vim打开
+cp /etc/sysconfig/i18n /etc/sysconfig/i18n.bak vim /etc/sysconfig/i18n 替换原来的内容为
+中文UTF-8（推荐）:
+LANG=&amp;#34;zh_CN.UTF-8&amp;#34; LANGUAGE=&amp;#34;zh_CN.UTF-8:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;latarcyrheb-sun16&amp;#34; 或者
+中文GBK:
+LANG=&amp;#34;zh_CN.GB18030&amp;#34; LANGUAGE=&amp;#34;zh_CN.GB18030:zh_CN.GB2312:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;lat0-sun16&amp;#34; 然后在putty等软件中设置对应字符集即可
+vim乱码请参考老高的另一篇博文 vim中文乱码的解决办法</description>
+    </item>
+    
+    <item>
+      <title>安装编译nginx</title>
+      <link>https://phpgao.github.io/nginx_installation.html</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_installation.html</guid>
+      <description>今天老高更新了一下nginx，顺便把nginx的安装编译过程记录一下，分享给大家！
+一并送上之前老高的博文：
+将nginx配置为服务
+nginx配置详解
+下载 官网下载地址：http://nginx.org/en/download.html
+准备 安装nginx时必须先安装相应的编译工具
+yum -y install gcc gcc-c++ autoconf automake yum -y install zlib zlib-devel openssl openssl-devel pcre-devel centos没有安装make编译器
+yum -y install gcc automake autoconf libtool make 建立nginx 组
+groupadd -r nginx useradd -s /sbin/nologin -g nginx -r nginx 注释：
+zlib:nginx提供gzip模块，需要zlib库支持 openssl:nginx提供ssl功能 pcre:支持地址重写rewrite功能
+修改版本号 再编译之前修改默认的版本号是个不错的习惯
+vim src/core/nginx.h #define NGINX_VERSION &amp;#34;0.0.0&amp;#34; #define NGINX_VER &amp;#34;phpergao&amp;#34; NGINX_VERSION 编译 高大上的编译参数
+./configure \ --prefix=/usr \ --sbin-path=/usr/sbin/nginx \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --pid-path=/var/run/nginx/nginx.</description>
+    </item>
+    
+    <item>
+      <title>windows下cmd的替换工具cmder</title>
+      <link>https://phpgao.github.io/cmder.html</link>
+      <pubDate>Wed, 17 Dec 2014 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/cmder.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2014/12/465248068.png&#34; alt=&#34;cmder界面&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用pip升级所有安装的package</title>
+      <link>https://phpgao.github.io/pip_update_package.html</link>
+      <pubDate>Sat, 06 Dec 2014 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip_update_package.html</guid>
+      <description>升级的时候注意权限
+import pip from subprocess import call for dist in pip.get_installed_distributions(): call(&amp;#34;pip install --upgrade -i https://pypi.douban.com/simple/ &amp;#34; + dist.project_name, shell=True) </description>
+    </item>
+    
+    <item>
+      <title>su超时退出-sudo超时需要输密码的解决方法</title>
+      <link>https://phpgao.github.io/su_timeout.html</link>
+      <pubDate>Fri, 05 Dec 2014 08:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/su_timeout.html</guid>
+      <description>服务器为了安全设置，使用普通用户登陆，再su至root。
+而su以后超过一定时间会超时退出到普通用户，带来了一定的麻烦。
+解决办法：
+OS:CENTOS 6
+vi /etc/profile # 注释 #TMOUT=300 sudo执行的第一次需要验证密码，之后一段时间不需要输入就可以执行命令，控制超时的方法：
+sudo visudo # 翻到60-70行，类似 Defaults env_reset #改为，30000指的是超时时间是30000min，请合理设置 Defaults env_reset,timestamp_timeout=30000 </description>
+    </item>
+    
+    <item>
+      <title>MySQL主从复制操作步骤</title>
+      <link>https://phpgao.github.io/mysql_master_slave.html</link>
+      <pubDate>Thu, 04 Dec 2014 01:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_master_slave.html</guid>
+      <description>主服务器（master）IP：192.168.0.1 从服务器（slave）IP：192.168.0.2 首先确保主从服务器上的Mysql版本相同
+主服务器上操作 创建用户名为repl的一个账户
+GRANT REPLICATION SLAVE ON *.* TO &amp;#39;repl&amp;#39;@&amp;#39;192.168.0.2&amp;#39; IDENTIFIED BY &amp;#39;xxxxxxxxx&amp;#39;; 修改主数据库的配置文件my.cnf,开启BINLOG，并设置server-id的值，修改之后必须重启Mysql服务，如果不需要修改可不用重启。
+server-id=1 log_bin = /usr/llocal/mysql/log/mysql-bin.log 之后可以得到主服务器当前二进制日志名和偏移量，这个操作的目的是为了在从数据库启动后，从这个点开始进行数据的恢复
+flush tables with read lock; 这是session级，退出就隐式 unlock tables; show master status; 生成主数据库的备份 如果mysqldump 无法识别，则在/home/mysql/.bash_profile 添加环境变量 export PATH=$PATH:/usr/local/mysql/bin mysqldump -p3306 -uroot –pxxxxxxxx test &amp;gt; test.sql unlock tables; 将备份出来的数据复制到从数据库
+Scp test.sql 192.168.0.2: 从服务器上操作 将备份数据导入数据库
+Mysql –uroot –pxxxxxxxx test &amp;lt; test.sql 修改从数据库的my.cnf,增加server-id参数，如有更改需要重启
+server-id=2 # 注：一定不能跟主数据库一样 指定复制使用的用户,主数据库服务器的ip,端口以及开始执行复制日志的文件和位置
+CHANGE MASTER TO MASTER_HOST=&amp;#39;192.168.1.130&amp;#39;, MASTER_USER=&amp;#39;repl&amp;#39;, MASTER_PASSWORD=&amp;#39;456123&amp;#39;, MASTER_LOG_FILE=&amp;#39;mysql-bin.</description>
+    </item>
+    
+    <item>
+      <title>SVN预提交(Pre-Commit)钩子的利用</title>
+      <link>https://phpgao.github.io/svn_pre_commit.html</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_pre_commit.html</guid>
+      <description>转自：http://java.dzone.com/articles/useful-subversion-pre-commit
+ Checks whether the commit message is not empty Checks whether the commit message consists of at least 5 characters Checks if the committed files are UTF-8 compliant Checks whether the svn:eol-style property is set to LF on newly added files Checks if the committed files have no TAB characters  The UTF-8 and TAB checks are performed on the following file suffixes
+ *.java *.js *.xhtml *.css *.xml *.</description>
+    </item>
+    
+    <item>
+      <title>WIN下phpstorm不能检出svn的问题</title>
+      <link>https://phpgao.github.io/phpstorm_svn_authorize.html</link>
+      <pubDate>Tue, 21 Oct 2014 03:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_svn_authorize.html</guid>
+      <description>今天使用win上的phpstrom发现不能检出svn服务器上的文件，折腾了一番才发现原来是svn设置问题。
+解决办法：
+进入settings
+按照下图设置：
+这里我们指定了svn的命令行路径，CollabNet\Subversion Client是CollabNet出的svn客户端命令行工具，换成其他的也可以，只要路径指定正确就行。
+附下载地址：
+支持各种系统的svn
+推荐visualsvn</description>
+    </item>
+    
+    <item>
+      <title>使用DDoS-Deflate</title>
+      <link>https://phpgao.github.io/dos_deflate.html</link>
+      <pubDate>Thu, 16 Oct 2014 02:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dos_deflate.html</guid>
+      <description>昨天老高的博客受攻击了，本想着没啥流量就不用太在意，哎，防人之心不可无啊！
+先装个DoS-Deflate试试看效果吧！
+下载 wget http://www.inetbase.com/scripts/ddos/install.shsh install.sh 配置 vi /usr/local/ddos/ddos.conf# show##### Paths of the script and other filesPROGDIR=&amp;quot;/usr/local/ddos&amp;quot;PROG=&amp;quot;/usr/local/ddos/ddos.sh&amp;quot;IGNORE_IP_LIST=&amp;quot;/usr/local/ddos/ignore.ip.list&amp;quot;CRON=&amp;quot;/etc/cron.d/ddos.cron&amp;quot;APF=&amp;quot;/etc/apf/apf&amp;quot;IPT=&amp;quot;/sbin/iptables&amp;quot;##### frequency in minutes for running the script##### Caution: Every time this setting is changed, run the script with --cron##### option so that the new frequency takes effectFREQ=1##### How many connections define a bad IP? Indicate that below.NO_OF_CONNECTIONS=150##### APF_BAN=1 (Make sure your APF version is atleast 0.</description>
+    </item>
+    
+    <item>
+      <title>新装虚拟机记录一下</title>
+      <link>https://phpgao.github.io/virtual_machine_record.html</link>
+      <pubDate>Sat, 11 Oct 2014 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtual_machine_record.html</guid>
+      <description>镜像下载 centos官方 Aliyun Open Source Mirror Site 网易开源镜像站
+虚拟化工具 免费的virtualbox，下载地址 KVM Xen
+安装 记一次centos最小安装 centos7.0 的最小化安装
+优化 分享一个centos6.*优化脚本 CentOS精简命令
+后续 关闭防火墙和SELinux # 关闭防火墙service iptables stop chkconfig iptables offchkconfig ip6tables off# SELinuxvi /etc/selinux/config# changeSELINUX=disabled#网卡------vi /etc/sysconfig/network-scripts/ifcfg-eth0TYPE=Ethernet# changeONBOOT=yesNM_CONTROLLED=yes# changeBOOTPROTO=dhcporBOOTPROTO=static# 加上# 静态IPIPADDR=192.168.1.107# 设置子网NETMASK=255.255.255.0# 设置网关GATEWAY=192.168.1.1# 设置DNSDNS1=114.114.114.114IPV6INIT=noUSERCTL=no------service network restartchkconfig network on------# 全局关闭IPv6vi /etc/sysctl.</description>
+    </item>
+    
+    <item>
+      <title>将nginx配置为服务</title>
+      <link>https://phpgao.github.io/run_nginx_as_service.html</link>
+      <pubDate>Thu, 09 Oct 2014 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/run_nginx_as_service.html</guid>
+      <description>编译安装nginx后，没有将nginx配置为服务，则无法使用诸如service nginx restart的命令，下面我们看看如何将其配置为服务。
+编写脚本 vi /etc/init.d/nginx 写入以下内容，并修改nginx路径
+#!/bin/sh # # nginx - this script starts and stops the nginx daemon # # chkconfig: - 85 15 # description: Nginx is an HTTP(S) server, HTTP(S) reverse # proxy and IMAP/POP3 proxy server # processname: nginx # chkconfig: 2345 90 91 # description: nginx web server # processname: nginx # config: /opt/nginx/conf/nginx.conf # pidfile: /opt/nginx/nginx.pid # Source function library. . /etc/init.d/functions # Source networking configuration.</description>
+    </item>
+    
+    <item>
+      <title>mac下ssh总是失去响应</title>
+      <link>https://phpgao.github.io/ssh_on_mac.html</link>
+      <pubDate>Thu, 09 Oct 2014 14:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh_on_mac.html</guid>
+      <description>自从使用mac以后，ssh连接总是超时成了老高的一个心病啊，只要一小会儿不动电脑，远程就失去相应，或者干脆直接提示broken pipe，然后断掉。现在终于有了算是能接受的解决办法。
+方法一：直截了当砍掉法 ~.，是的，你没有看错！这个组合命令就是主动断开ssh的命令，不行自己问问man。
+方法二：修改配置文件 服务器和客户端每隔一定的时间会发一个KeepAlive请求，避免因为路由器或线路的限制而断线，例子中的60s可以因具体的环境改变。
+针对服务器端 修改/etc/ssh/sshd_config，修改ServerAliveInterval一项，而ServerAliveCountMax表示如果失败重试的次数
+ServerAliveInterval 60ServerAliveCountMax 3 针对客户端 vi /etc/ssh_configClientAliveInterval 60ClientAliveCountMax 3 完</description>
+    </item>
+    
+    <item>
+      <title>scp命令指定端口号</title>
+      <link>https://phpgao.github.io/scp_port.html</link>
+      <pubDate>Thu, 09 Oct 2014 13:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/scp_port.html</guid>
+      <description>scp命令经常用在主机之间拷贝文件用，但是如果目标机器的sshd的端口不是默认的22，怎么办呢？
+scp -P 1111 root@192.168.1.101:/home/xxx 这样就可以配合ssh-keygen -t rsa命令将生成的pub重命名为authorized_keys，并拷贝至目标机器的~/.ssh/文件夹下，这样以后就可以无密码登录ssh了。
+完</description>
+    </item>
+    
+    <item>
+      <title>使用vsftp需要用到的东西</title>
+      <link>https://phpgao.github.io/vsftp_conf.html</link>
+      <pubDate>Wed, 08 Oct 2014 08:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vsftp_conf.html</guid>
+      <description>安装 yum install -y vsftpd 安全配置 vi /etc/vsftpd/vsftpd.conf#addlisten_port= XXXXanonymous_enable=NOlocal_enable=NOchroot_local_user=YESchroot_list_enable=NO 日志配置 xferlog_enable=YESxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt#addroooooooterrandom_passwd#生成认证文件db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db#删除明文rm -f vi /etc/vsftpd/user_list.txt#编辑vsftpd的PAM认证文件#删除其他行，加入下面两行#pam_userdb.so 为认证库文件 db即上文user.dbvi /etc/pam.d/vsftpdauth required pam_userdb.so db=/etc/vsftpd/useraccount required pam_userdb.so db=/etc/vsftpd/user#设定FTP用户映射(注意权限)useradd –d /home/xxx –s /sbin/nologin xxxchmod 700 /home/xxx#开启虚拟用户vi /etc/vsftpd/vsftpd.</description>
+    </item>
+    
+    <item>
+      <title>Linux目录和文件的权限设置</title>
+      <link>https://phpgao.github.io/linux_privilege.html</link>
+      <pubDate>Sat, 04 Oct 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_privilege.html</guid>
+      <description>要求就是：
+ 将当前目录中的所有“子目录”的权限设置为755； 将当前目录中的所有“文件”的权限设置为644。  解决方法：
+chmod 644 -R *chmod 755 `find -type d` 也可以用find彻底些：
+find /path -type f -exec chmod 644 {} /;find /path -type d -exec chmod 755 {} /; 转自：
+http://blog.csdn.net/study16/article/details/5896390</description>
+    </item>
+    
+    <item>
+      <title>CentOS精简命令</title>
+      <link>https://phpgao.github.io/centos_lite.html</link>
+      <pubDate>Fri, 19 Sep 2014 05:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_lite.html</guid>
+      <description>删除自带web、数据库、php
+yum remove httpd* php* mysql-server mysql* php-mysql -y 删除不需要的程序
+yum remove Deployment_Guide-en-US finger cups-libs cups ypbind bluez-libs desktop-file-utils ppp rp-pppoe wireless-tools irda-utils sendmail* samba* talk-server finger-server bind* xinetd nfs-utils nfs-utils-lib rdate fetchmail eject ksh mkbootdisk mtools syslinux tcsh startup-notification talk apmd rmt dump setserial portmap yp-tools -yyum groupremove &amp;quot;Mail Server&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;X Window System&amp;quot; &amp;quot;X Software Development&amp;quot; &amp;quot;Development Libraries&amp;quot; &amp;quot;Dialup Networking Support&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;Sound and Video&amp;quot; &amp;quot;Graphics&amp;quot; &amp;quot;Editors&amp;quot; &amp;quot;Text-based Internet&amp;quot; &amp;quot;GNOME Desktop Environment&amp;quot; &amp;quot;GNOME Software Development&amp;quot; -yyum -y groupremove &amp;quot;FTP Server&amp;quot; &amp;quot;PostgreSQL Database client&amp;quot; &amp;quot;PostgreSQL Database server&amp;quot; &amp;quot;MySQL Database server&amp;quot; &amp;quot;MySQL Database client&amp;quot; &amp;quot;Web Server&amp;quot; &amp;quot;Office Suite and Productivity&amp;quot; &amp;quot;E-mail server&amp;quot; &amp;quot;Ruby Support&amp;quot; &amp;quot;Printing client&amp;quot; 关闭selinux</description>
+    </item>
+    
+    <item>
+      <title>在Liunx上彻底删除kangle服务器</title>
+      <link>https://phpgao.github.io/del_kangle.html</link>
+      <pubDate>Fri, 19 Sep 2014 03:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/del_kangle.html</guid>
+      <description>之前单位用的kangle服务器，便于快速搭建网站。
+但是现在不想用了，如何删除呢？
+其实很简单：
+停止服务 service kangle stop 删除服务启动项 chkconfig kangle off 删除服务 chkconfig --del kangle 删除残留文件 rm -rf /vhsrm -f /etc/init.d/kangle 现在重启看看，是不是已经删除的很干净了！
+##ps.这个删除流程也可以针对其他服务使用！##
+顺便提一下
+删除Apache可以用rpm -qa|grep apache|xargs rpm -e，一次删除所有与Apache有关的包</description>
+    </item>
+    
+    <item>
+      <title>编译PHP5.6</title>
+      <link>https://phpgao.github.io/compile_php.html</link>
+      <pubDate>Thu, 18 Sep 2014 06:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_php.html</guid>
+      <description>准备 PHP的安装最头疼的就是因为某些类库没有安装而报错，所以编译前请确保以下包已安装
+yum groupinstall &amp;#34;development tools&amp;#34; yum install -y gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libpng libpng-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses curl curl-devel openssl-devel gdbm-devel db4-devel libXpm-devel libX11-devel gd-devel gmp-devel readline-devel libxslt-devel expat-devel xmlrpc-c xmlrpc-c-devel 编译 高大上的编译选项
+./configure \ --prefix=/usr/local/php \ --enable-fpm \ --with-curl \ --with-openssl \ --enable-mbregex \ --with-mysql \ --with-mysqli \ --with-mysql-sock \ --enable-pdo \ --with-pdo-mysql \ --with-pdo-pgsql \ --with-pdo-sqlite \ --enable-mysqlnd \ --with-gd \ --enable-gd-native-ttf \ --enable-exif \ --with-jpeg-dir=/usr/local/jpeg \ --with-png-dir=/usr/local/png \ --with-freetype-dir=/usr/local/freetype \ --enable-gd-jis-conv \ --with-gettext \ --with-zlib \ --enable-zip \ --with-bz2 \ --disable-fileinfo \ --enable-xmlreader \ --enable-xmlwriter \ --with-xmlrpc \ --enable-mbstring \ --enable-inline-optimization \ 20150524更新 5.</description>
+    </item>
+    
+    <item>
+      <title>修改Linux系统语言</title>
+      <link>https://phpgao.github.io/change_system_lang.html</link>
+      <pubDate>Thu, 18 Sep 2014 05:42:38 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/change_system_lang.html</guid>
+      <description>中文总是能引出很多麻烦，所以推荐安装系统的时候不要选择任何与中文有关的选项。
+但是如果很不幸你选了中文作为系统语言，还是有补救的办法的。
+很简单，请看下面的代码：
+编辑i18n：
+vi /etc/sysconfig/i18n 将LANG=&amp;quot;zh_CN.UTF-8&amp;quot;改为LANG=&amp;quot;en_US.UTF-8&amp;quot;即可！</description>
+    </item>
+    
+    <item>
+      <title>在mac上使用adb与fastboot</title>
+      <link>https://phpgao.github.io/adb_fastboot_on_mac_osx.html</link>
+      <pubDate>Mon, 08 Sep 2014 00:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adb_fastboot_on_mac_osx.html</guid>
+      <description>今天给老娘的Mi2S刷机，研究了一下在mac上刷机的方法，在此记录一下。
+PS.本方法适用于所有Android机器
+Android File Transfer 安装Android File Transfer
+brew cask install android-file-transfer 要在OSX上管理Android手机上的文件，需要下载安装这个官方工具http://www.android.com/filetransfer/
+由于某些特殊原因网站打不开不要紧，不会翻墙的TX可以到我的网盘下载到目前最新的Android File Transfer。
+下载安装完成后运行，就可以轻松管理手机文件了，这个时候把下载好的ROM拷贝到手机目录下，再进入recovery刷机了。
+命令行刷机 安装adb工具
+brew cask install android-platform-tools 接下来再terminal中运行adb和fastboot即可开始刷机
+**小提示：**刷机用到的命令可以参考博主的这篇文章adb,fastboot常用命令及刷机技巧
+部分参考来自：
+http://www.technobuzz.net/install-adb-fastboot-mac-linux-chrome-os-nexus-tool-script/?utm_source=tuicool</description>
+    </item>
+    
+    <item>
+      <title>centos7.0-的最小化安装</title>
+      <link>https://phpgao.github.io/centos7.html</link>
+      <pubDate>Sun, 07 Sep 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos7.html</guid>
+      <description>&lt;p&gt;放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。&lt;code&gt;ifconfig&lt;/code&gt;竟然都被废了，以后看IP就要用&lt;code&gt;ip addr&lt;/code&gt;了。&lt;/p&gt;
+&lt;p&gt;下面记录一下需要注意的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos国内源总结</title>
+      <link>https://phpgao.github.io/centos_repo.html</link>
+      <pubDate>Mon, 11 Aug 2014 03:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_repo.html</guid>
+      <description>有时候centos使用yum命令的时候软件下载速度会很慢，还好国内有很多镜像站供大家选择，在此博主为大家总结了一些centos国内镜像站，如果你需要下载centos的iso文件或者相关软件，可以到以下网站下载，速度相当快！
+当然，如果你想直接替换掉centos系统内置的yum源地址，可以参考这篇文章Centos源设置，将你的源设为比较快的地址！
+   地区 HTTP     Alibaba Cloud Computing http://mirrors.aliyun.com/centos/   Beijing Institute of Technology http://mirror.bit.edu.cn/centos/   Beijing Teletron Telecom Engineering http://mirrors.btte.net/centos/   BitComm Ltd. http://mirrors.pubyun.com/centos/   CDS China http://mirrors.yun-idc.com/centos/   China University of Geosciences http://mirrors.cug.edu.cn/centos/   Dalian Neusoft University of Information http://mirrors.neusoft.edu.cn/centos/   Grand Cloud http://mirrors.grandcloud.cn/centos/   Huazhong University of Science and Technology http://mirrors.hust.edu.cn/centos/   NetEase http://mirrors.</description>
+    </item>
+    
+    <item>
+      <title>vim入门</title>
+      <link>https://phpgao.github.io/vim_ABC.html</link>
+      <pubDate>Thu, 31 Jul 2014 07:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vim_ABC.html</guid>
+      <description>vim常用命令 VIM虽说不长用，然是还是很需要掌握的，VIM功能强大的没话说，就是命令太多不好记！
+老高就来慢慢总结一下VIM的常用命令和技巧吧！
+ 命令 选择，删除，复制，粘贴    快捷键 作用     v 从光标当前行开始，光标经过的行都会被选中，再按一下v结束   V 从光标当前行开始，光标经过的行都会被选中，再按一下V结束   Ctrl + v 从光标当前位置开始，选中光标起点和终点所构成的矩形区域，再按一下Ctrl + v结束。   gg``VG 选中全部的文本，其中gg为跳到行首，V选中整行，G末尾   y 复制 （默认是复制到&amp;quot;寄存器   p 粘贴 （默认从&amp;quot;寄存器取出内容粘贴）   &amp;quot;+y 复制到系统剪贴板(也就是vim的+寄存器）   删除 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   d 删除   x 删除字符   dd 删除一行   J 删除换行符，两行合并为一行   重做 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   u 撤销   CTRL + R 反转撤消   U 一次撤消对一行的全部操作 第二次使用该命令则会撤消前一个U的操作   追加 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   i 在当前光标之前插入文本。   a 在当前光标之后插入文本。   o 在当前行的下面另起一行，并使当前模式转为Insert模式。   O 将在当前行的上面另起一行。   使用命令计数 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   kkkkkkkkk 或 9k 要向上移动9行   a!</description>
+    </item>
+    
+    <item>
+      <title>使用dropbox同步备份网站和数据库</title>
+      <link>https://phpgao.github.io/dropbox_sync_cli.html</link>
+      <pubDate>Tue, 29 Jul 2014 08:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dropbox_sync_cli.html</guid>
+      <description>&lt;p&gt;自从用了Shadowsocks，整个人都精神多了！&lt;/p&gt;
+&lt;p&gt;今天开整Dropbox，话说这货也被Q了。&lt;/p&gt;
+&lt;p&gt;废话不多说&lt;/p&gt;
+&lt;p&gt;以下内容需要翻{防屏蔽}墙使用，如果没有，可以参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;老高的这篇文章&lt;/a&gt;搭建一个稳定又极速的翻{防屏蔽}墙环境&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.dropbox.com/install?os=lnx&#34;&gt;官网&lt;/a&gt;找到linux专用脚本，执行一下对应系统的脚本&lt;/p&gt;
+&lt;h3 id=&#34;32位系统&#34;&gt;32位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;64位系统&#34;&gt;64位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>python交互模式下方向键乱码的正确解决方法</title>
+      <link>https://phpgao.github.io/python_arrow_key_messup.html</link>
+      <pubDate>Tue, 29 Jul 2014 03:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_arrow_key_messup.html</guid>
+      <description>&lt;h1 id=&#34;python交互模式下方向键乱码的正确解决方法&#34;&gt;python交互模式下方向键乱码的正确解决方法&lt;/h1&gt;
+&lt;p&gt;今天升级了python后，发现在交互模式中上下左右变成了乱码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;^[[A ^[[D ^[[B ^[[C ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;搜索了一下，普遍的解决方法是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为方向键被转义了
+原因主要是由于缺少readline Module问题导致的。而CentOS默认只有readline模块而没有readline-devel模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决方法
+yum -y install readline-devl
+然后重新编译安装python就ok了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再仔细一看，这些问题都是N年前了，yum中的包名早都换了。。。怪不得总是报错，说找不到&lt;code&gt;readline-devl&lt;/code&gt;，貌似现在开发版后面都变成&lt;code&gt;devel&lt;/code&gt;了&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>bad-interpreter-没有那个文件或目录</title>
+      <link>https://phpgao.github.io/bad_interpreter.html</link>
+      <pubDate>Tue, 29 Jul 2014 01:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bad_interpreter.html</guid>
+      <description>bad interpreter: 没有那个文件或目录
+起因 今天在linux上运行一个python脚本，总是报错bad interpreter，开始我以为是解释器的路径问题，可是whereis python告诉我路径没有错！
+google之，问题解决：
+在windows上编辑的脚本，到linux上执行，会提示上面的错误
+解决办法 dos2unix myfilename
+报错的话执行一下yum install dos2unix -y
+原因 在windows下编辑的脚本，是dos格式的，即每一行的行尾以\r\n来标识, 其ASCII码分别是0x0D, 0x0A。
+以后再windows上的写脚本一定要三思！</description>
+    </item>
+    
+    <item>
+      <title>vim中文乱码的解决办法</title>
+      <link>https://phpgao.github.io/vim_garbled.html</link>
+      <pubDate>Mon, 28 Jul 2014 06:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vim_garbled.html</guid>
+      <description>以centos为例，执行yum install -y vim后，打开php、py等文件，发现中文乱码了。。。
+google之
+解决办法：
+vim /etc/.vimrc 将以下内容写入
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936set termencoding=utf-8set encoding=utf-8 再次打开，中文已正常显示。</description>
+    </item>
+    
+    <item>
+      <title>使用shadowsocks轻松搭建翻墙环境教程</title>
+      <link>https://phpgao.github.io/shadowsocks_on_linux.html</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_on_linux.html</guid>
+      <description>&lt;p&gt;之前大家翻墙可能都会用到免费的goagent代理，但是他速度慢，链接也不稳定，看油管更是无望，更好的解决方案是shadowsocks。&lt;/p&gt;
+&lt;p&gt;shadowsocks是一个著名的轻量级socket代理，基于python编写。&lt;/p&gt;
+&lt;p&gt;如果你有国外的VPS，那么使用shadowsocks搭建一个翻{防屏蔽}墙服务器是一件很轻松的事情！&lt;/p&gt;
+&lt;p&gt;先看看&lt;a href=&#34;http://shadowsocks.org/en/download/clients.html&#34;&gt;shadowsocks覆盖的客户端覆盖了多少系统&lt;/a&gt;，连OpenWRT都支持！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/05/3138848860.jpg&#34; alt=&#34;shadowsocks客户端&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高之前买的$4.99一年的VPS，128MB，用起来妥妥的!现在已经升级至$9.99，512MB内存，运行速度更快，翻{防屏蔽}墙速度更是没话说，如果你感兴趣，可以看看&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;VPS购买攻略&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;看完本文，你就能够轻松打造独享的翻{防屏蔽}墙环境！&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;甚至能够将shadowsocks安装到你的路由器中，子网设备自动翻墙&lt;/a&gt;！再也不需要在网上购买shadowsocks的账号了，也不需要在忍受速度巨慢的免费shadowsocks账号了。&lt;/p&gt;
+&lt;p&gt;如果你的VPS是搬瓦工，那么恭喜你！你可以直接在后台一键安装shadowsocks，具体如何操作请参考&lt;a href=&#34;https://blog.phpgao.com/bandwagonhost_vps_panel.html&#34;&gt;使用搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置&lt;/a&gt;中如何一键安装shadowsocks一节，配置完毕后ss就会运行在后台，重启后也会自动运行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;友情提示：有些打包好的ss程序很难保证是否会记录你的服务器信息，所以一定要经常更新服务器端的密码或端口！或者，自己编译一个。。。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>在linux下安装ctorrent下载种子文件</title>
+      <link>https://phpgao.github.io/ctorrent.html</link>
+      <pubDate>Sun, 27 Jul 2014 02:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ctorrent.html</guid>
+      <description>&lt;p&gt;VPS大家手里多多少少都会有那么一两个（win请绕道），如果能让他们在空闲的时候帮我们下载一些很大，但是又下载很慢的种子，岂不是一举两得！&lt;/p&gt;
+&lt;p&gt;linux命令行下的torrent下载软件真的很少([rc]Torrent和Transmission的命令行版本)，而且实在不太好用（当然是和迅雷不能比）。&lt;/p&gt;
+&lt;p&gt;但是如果你看完此篇，也许会发现原来在命令行里下载种子其实不是那么难！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全设置</title>
+      <link>https://phpgao.github.io/vps_safty.html</link>
+      <pubDate>Sun, 27 Jul 2014 02:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_safty.html</guid>
+      <description>&lt;p&gt;内容转自 &lt;a href=&#34;http://www.linode.im/1642.html&#34;&gt;做好VPS的基础安全防护工作&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。&lt;/p&gt;
+&lt;p&gt;很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。&lt;/p&gt;
+&lt;p&gt;直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？&lt;/p&gt;
+&lt;p&gt;在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>IOScydia源推荐</title>
+      <link>https://phpgao.github.io/ioscydia.html</link>
+      <pubDate>Sat, 19 Jul 2014 13:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ioscydia.html</guid>
+      <description>转自手机中国论坛
+apt.178.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;178第一中文源 我个人是推荐大家用这个的。。功能很多很强大
+cydia.51ipa.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-很著名的51国产源。
+cydia.xsellize.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;必备的源~
+www.sinfuliphonerepo.com&amp;mdash;-大量PJ软件源。
+cydia.clezz.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-大量PJ软件源。
+cy.sosiphone.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-PJ软件源。
+kuaidial.googlecode.com/svn/deb&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-软件kuaidial的官方源。
+cydia.myrepospace.com/wi-inputmethod&amp;mdash;&amp;mdash;&amp;mdash;-WI输入法官方源
+cydia.myrepospace.com/wiim&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;WI输入法官方源
+i.danstaface.net/deb&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-下载vWallpaper官方源
+iphonedelivery.advinux.fr/cydia&amp;mdash;&amp;mdash;&amp;ndash;下载iphonedelivery短信回执官方源
+cydia.sogou.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;搜狗输入法官方源
+mi.baidu.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash;百度输入法官方源
+DownLoad.voicecloud.cn/Cydia/&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;讯飞语音输入法官方源
+beta.notifiedapp.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;下载Notified Pro 官方源
+cydia.myrepospace.com/pw5a29ip4&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;Temperaturization 官方源
+apt.25pp.com&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;- pp助手官方源</description>
+    </item>
+    
+    <item>
+      <title>adb,fastboot常用命令及刷机技巧</title>
+      <link>https://phpgao.github.io/adb.html</link>
+      <pubDate>Thu, 03 Jul 2014 01:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adb.html</guid>
+      <description>&lt;p&gt;Google最近发布了Android L，我也按捺不住动手尝尝鲜，不过刷机工具我不是很喜欢，还是自己动手吧！&lt;/p&gt;
+&lt;p&gt;Nexus5最近火了，先是MIUI，又是FLYME，CM,OMNI也很给力，现在又是Android L，大家都在抢夺4.4.*的制高点， 而五太子的开源特性正好可以为ROM的移植打好基础，所以各大ROM商都加入了此行列。 此篇讲的内容是Android Debug Bridge（简称adb）的使用方法，学会它可以让你的刷机工作事半功倍！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>(转)UBUNTU之SSH登陆认证慢的解决办法</title>
+      <link>https://phpgao.github.io/ubuntu_slow_ssh_authorize.html</link>
+      <pubDate>Thu, 26 Jun 2014 14:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_slow_ssh_authorize.html</guid>
+      <description>步骤一 关闭ssh的gssapi认证
+vi /etc/ssh/ssh_config 注释掉如下两行
+GSSAPIAuthentication yes GSSAPIDelegateCredentials no  步骤二 关闭ssh的UseDNS
+vi /etc/ssh/sshd_config  注：ubuntu的sshd_config文件没有UseDNS参数,而据我了解,其它类*NIX、*BSD操作系统的sshd_config都有UseDNS参数，且它们缺省都是&amp;quot;UseDNS yes&amp;quot;，那估计ubuntu的sshd_config虽然没有UseDNS，那它缺省也是&amp;quot;UseDNS yes&amp;quot;了
+于是，在sshd_config末尾处插入如下行
+UseDNS no  然后执行指令&amp;quot;/etc/init.d/ssh restart&amp;quot;，重启ssh服务，配置生效
+经测试，使用此方法后，ubuntu的认证时间大大缩短，原来其登录认证一般耗时在10秒以上15秒左右，有些时候甚至达到20多秒到30秒左右，而经过此修改，ubuntu的登录认证时间将会缩短在3秒以内。</description>
+    </item>
+    
+    <item>
+      <title>call-recorder通话录音文件命名格式</title>
+      <link>https://phpgao.github.io/callrecorder.html</link>
+      <pubDate>Mon, 23 Jun 2014 01:46:24 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/callrecorder.html</guid>
+      <description>手机装的是call recorder，每次整理录音的时候发现默认的文件命名规则简直是乱的逆天 还好可以自定义 文件格式改为
+%type%/%time%_[%name%]_[%number%]  时间格式改为
+yyyy-MM-dd_HH-mm-ss  解决！ ps.这个软件真心很不错，推荐购买正版！下面是链接
+CallRecorder购买链接</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下ssh无法启动</title>
+      <link>https://phpgao.github.io/ubuntu_ssh.html</link>
+      <pubDate>Sat, 21 Jun 2014 15:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_ssh.html</guid>
+      <description>安装完Ubuntu后自然需要使用ssh远程管理，但是sudo apt-get install openssh-server后虽然安装成功，但是总是提示
+ Unknown job: ssh 百度之，未解决 google之，
+ 运行
+sudo /usr/sbin/sshd 提示
+ Missing privilege separation directory: /var/run/sshd (缺少权限分离目录)
+ 然后运行
+sudo mkdir /var/run/sshdsudo /usr/sbin/sshdnetstat -nlt 应该能看到22端口已经启用！</description>
+    </item>
+    
+    <item>
+      <title>Centos源设置</title>
+      <link>https://phpgao.github.io/repo_for_centos.html</link>
+      <pubDate>Wed, 18 Jun 2014 06:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/repo_for_centos.html</guid>
+      <description>起因 刚刚装好的centos网卡也配好了，就是解析不了mirror.centos.org，估计是DNS的问题，索性换了163源。
+网易源地址
+使用帮助
+方法 很简单，注意备份即可
+cd /etc/yum.repos.d mv CentOS-Base.repo CentOS-Base.repo.backup wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS5-Base-163.repo #centos5 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS6-Base-163.repo #centos6 yum clean all yum makecache 意外 在执行update的时候又报错
+ GPG key retrieval failed: [Errno 12] Timeout on http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6: (28, &amp;lsquo;connect() timed out!&#39;)
+ 貌似需要在源服务器验证RPM的合法性 本办法，只好祭出终极武器，host大法!
+vi /etc/hosts 加入 74.53.10.146 mirror.centos.org 解决！
+阿里源 阿里的速度也不错！
+repo下载地址： http://mirrors.aliyun.com/repo/
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup # 根据系统版本下载对应版本的repo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo 或 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo # 更新缓存 yum clean all yum makecache </description>
+    </item>
+    
+    <item>
+      <title>Linux经典面试题</title>
+      <link>https://phpgao.github.io/linux_interview_questions.html</link>
+      <pubDate>Wed, 18 Jun 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_interview_questions.html</guid>
+      <description>Linux挂载Winodws共享文件夹
+  查看http的并发请求数及其TCP连接状态：
+  用tcpdump嗅探80端口的访问看看谁最高
+  统计/var/log/下文件个数
+  查看当前系统每IP连接数
+  shell下32位随机密码生成
+  统计出apache的access.log中访问量最多的5个IP
+  如何查看二进制文件的内容
+  ps aux 中VSZ代表什么意思 RSS代表什么
+  检测并修复/dev/hda5
+  Linux开机启动顺序
+  符号链接和硬链接的区别
+  保存当前磁盘分区的分区表
+  手动安装grub
+  改内核参数
+  在1-39内取随机数
+  限定apache每秒钟连接数为1,峰值为3
+  FTP主动与被动模式
+  显示/etc/inittab中以#开头,且后面跟一个或多个空白字符,而后又跟了任意非空白字符的行;
+  显示/etc/inittab中包含了:一个数字:(即两个冒号中间一个数字)的行;
+  怎么把自己写的脚本添加到服务里面，即可以使用service命令来调用
+  写一个脚本，实现批量添加20个用户，用户名为user1-20，密码为user后面跟5个随机字符
+  写一个脚本，实现判断192.</description>
+    </item>
+    
+    <item>
+      <title>记一次FFMPEG的安装</title>
+      <link>https://phpgao.github.io/yum_install_ffmpeg.html</link>
+      <pubDate>Fri, 13 Jun 2014 02:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum_install_ffmpeg.html</guid>
+      <description>下载源代码 现在都不用svn了，学学git吧
+git clone git://source.ffmpeg.org/ffmpeg.git configure 在执行./configure的时候，可能会提示没有安装yasm，那么执行”yum install -y yasm“即可。
+yum install -y yasm./configure make 执行make，就是编译整个ffmpeg项目了，会生成一些二进制文件，例如：ffplay、ffserver、ffmpeg、ffprobe!
+makeinstall 执行make install时候，会把编译生成的.a归档复制到/usr/local/lib下!</description>
+    </item>
+    
+    <item>
+      <title>centos升级gcc至4.8</title>
+      <link>https://phpgao.github.io/centos_gcc_update.html</link>
+      <pubDate>Tue, 03 Jun 2014 08:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_gcc_update.html</guid>
+      <description>&lt;p&gt;webkitgtk+的编译要用到4.8+的GCC 人家ubuntu都有编译好的gcc。。。可怜我centos只能编译源代码了。。。&lt;/p&gt;
+&lt;p&gt;废话不说，速度干活&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;先下载需要的GCC源码，&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://gcc.gnu.org/&#34;&gt;http://gcc.gnu.org/&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;以gcc-4.8.3为例 先解压文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd ~
+mkdir src
+cd src
+wget http://自己写吧
+tar xf gcc-4.8.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这一步停下，还有软件包没有下载安装，难点重点就在这儿了，这三个软件包的安装顺序不能乱，而且安装后一个软件之前必须指定前面安装的路径，很麻烦！&lt;/p&gt;
+&lt;p&gt;下载源代码可以执行gcc-4.8.3/contrib下的download_prerequisites脚本，即可自动下载，到时候也好一起编译&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu编译webkit</title>
+      <link>https://phpgao.github.io/ubuntu_webkitgtk.html</link>
+      <pubDate>Thu, 29 May 2014 08:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_webkitgtk.html</guid>
+      <description>下载安装包：http://webkitgtk.org/使用下面命令压缩包
+tar xvJf 安装依赖库：
+apt-get install autoconf automake autotools-dev bison flex gperf glib-networking gtk-doc-tools libenchant-dev libgail-dev libgeoclue-dev libglib2.0-dev libgstreamer-plugins-base0.10-dev libgtk2.0-dev libicu-dev libjpeg62-dev libpango1.0-dev libpng12-dev libsoup2.4-dev libsqlite3-dev libtool libxslt1-dev libxt-dev 试试Configure一下
+./configure 可能还不够，提示找不到 libwebp，找一下吧：
+apt-cache search libwebplibwebp-dev - Lossy compression of digital photographic images.libwebp5 - Lossy compression of digital photographic images.libwebpdemux1 - Lossy compression of digital photographic images.libwebpmux1 - Lossy compression of digital photographic images.</description>
+    </item>
+    
+    <item>
+      <title>记一次centos最小安装</title>
+      <link>https://phpgao.github.io/centos_minimal.html</link>
+      <pubDate>Wed, 28 May 2014 03:52:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_minimal.html</guid>
+      <description>基本流程吧啊，以后可能会更新，以6.5为例：
+下载安装必要文件，比如虚拟机virtualbox,vm等，还有镜像i386或者x86_64的，按需下载吧
+设置虚拟机，开始安装，推荐使用全英文安装，速度和稳定性会好一点
+完毕后网卡不会自动启动，需要手动开启
+vi /etc/sysconfig/network-scripts/ifcfg-eth0DEVICE=eth0HWADDR=00:0C:29:64:A5:E3TYPE=EthernetUUID=ff171f7b-3bc5-465d-a5ba-287e200f6da6ONBOOT=yesNM_CONTROLLED=noBOOTPROTO=dhcp 然后
+/etc/init.d/network start 现在看看ifconfig里有没有IP信息
+有了IP就能上网了，下面就是各种yum了，有兴趣的TX可以执行一下这个优化脚本</description>
+    </item>
+    
+    <item>
+      <title>内存常识</title>
+      <link>https://phpgao.github.io/memory_bank.html</link>
+      <pubDate>Wed, 28 May 2014 01:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/memory_bank.html</guid>
+      <description>逛淘宝店的时候看到的，记一下
+内存有SD DDR和DDR2 DDR3之分，4种内存不能混用，拍前请确定自己的机器是用的什么内存，如果不能确定，可以用CPU-Z或者EVEREST这个软件检测一下！
+打开软件后看”SPD”选项的”最大带宽”一栏!
+SD类型PC-100是 SD 100PC-133是 SD 133DDR1类型PC-2100是DDR-266内存!PC-2700是DDR-333内存!PC-3200是DDR-400内存!DDR2类型PC2-3200是DDR2-400内存!不要和DDR1的弄混了！PC2-4200(有时可能是PC2-4300)是DDR2-533内存!PC2-5300是DDR2-667内存！PC2-6400是DDR2-800内存！DDR3类型PC3-8500是DDR3-1066内存！PC3-10600是DDR3-1333内存！以下是3代游戏版本和高频率：PC3-12800是DDR3-1600内存！PC3-15000是DDR3-1866内存！PC3-16000是DDR3-2000内存！ 如果不会查看请直接百度搜索CPU-Z下载，下载1.49版本以上的，解压缩运行CPU-Z，查看SPD项即可知道自己内存的信息，然后根据自己所需要的购买！</description>
+    </item>
+    
+    <item>
+      <title>linux-ip限制的两种设置方式</title>
+      <link>https://phpgao.github.io/linux_ip.html</link>
+      <pubDate>Tue, 27 May 2014 02:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_ip.html</guid>
+      <description>经常网络被攻击，最有效的方式就是在linux操作系统上直接限制ip访问，主要有两种方式设置
+1.使用hosts.allow和hosts.deny来设置ip白名单和黑名单，/etc/目录下
+优先级为先检查hosts.deny，再检查hosts.allow， 后者设定可越过前者限制， 例如： a.限制所有的ssh， 除非从218.64.87.0 - 127上来。 hosts.deny: in.sshd:ALL hosts.allow: in.sshd:218.64.87.0/255.255.255.128b.封掉218.64.87.0 - 127的telnet hosts.deny in.sshd:218.64.87.0/255.255.255.128c.限制所有人的TCP连接，除非从218.64.87.0 - 127访问 hosts.deny ALL:ALL hosts.allow ALL:218.64.87.0/255.255.255.128d.限制218.64.87.0 - 127对所有服务的访问 hosts.deny ALL:218.64.87.0/255.255.255.128其中冒号前面是TCP daemon的服务进程名称，通常系统 进程在/etc/inetd.conf中指定，比如in.ftpd，in.telnetd，in.sshd 其中IP地址范围的写法有若干中，主要的三种是： 1.网络地址--子网掩码方式： 218.64.87.0/255.255.255.02.网络地址方式（我自己这样叫，呵呵） 218.64.（即以218.64打头的IP地址） 3.缩略子网掩码方式，既数一数二进制子网掩码前面有多少个“1”比如： 218.64.87.0/255.255.255.0 -- 218.64.87.0/24设置好后，要重新启动# /etc/rc.d/init.d/xinetd restart# /etc/rc.d/init.d/network restart 2.使用iptables命令
+单个IP的命令是iptables -I INPUT -s 80.241.219.171 -j DROP封IP段的命令是iptables -I INPUT -s 96.47.225.0/16 -j DROPiptables -I INPUT -s 96.</description>
+    </item>
+    
+    <item>
+      <title>centos6-优化脚本与安全脚本</title>
+      <link>https://phpgao.github.io/centos_optimize.html</link>
+      <pubDate>Tue, 13 May 2014 01:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_optimize.html</guid>
+      <description>新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &amp;#34;x86_64&amp;#34; ];then echo &amp;#34;this script is only for 64bit Operating System !&amp;#34; exit 1 fi echo &amp;#34;the platform is ok&amp;#34; version=`lsb_release -r |awk &amp;#39;{print substr($2,1,1)}&amp;#39;` if [ $version != 6 ];then echo &amp;#34;this script is only for CentOS 6 !</description>
+    </item>
+    
+    <item>
+      <title>nexus5的ROM下载地址</title>
+      <link>https://phpgao.github.io/nexus5_rom.html</link>
+      <pubDate>Mon, 24 Feb 2014 07:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nexus5_rom.html</guid>
+      <description>转自啥论坛忘了：
+看到很多同学问ROM哪儿下，还说ROM少， 殊不知谷歌亲儿子最不缺的就是ROM？ 这里给大家稍稍整理了一些名气比较大的，名气小的自己去goo.im下吧。 记住我们手中 Nexus 5 的名字 hammerhead （中文翻译是锤头的意思，这么好的名字smartisan居然不支持，鄙视一个） 进入正题：
+CyanogenMod （简称CM） 入口地址： http://download.cyanogenmod.org/?device=hammerhead
+SlimKait （简称Slim，这个&amp;hellip;我被GFW墙了，懒得翻出去找，能进去的尽量搬运下吧，这个ROM不错） 入口地址： http://www.slimroms.net/index.php/downloads
+Paranoid（简称PA） 入口地址： http://download.paranoidandroid.co/roms/hammerhead/
+OmniRom （简称Omni） 入口地址： http://dl.omnirom.org/hammerhead/
+mokee （魔趣） 入口地址： http://download.mfunz.com/?device=hammerhead
+AOKP 入口地址： http://aokp.co/devices/hammerhead
+ChameleonOS （简称ChaOS） 入口地址： http://roms.chameleonos.org/index.php?device=hammerhead
+carbon 入口地址： http://carbon-rom.com/downloads/?device=hammerhead
+mahdi 入口地址： http://mahdi-rom.androidfilesharing.com/Nexus%205/
+clockworkmod （简称CWM，大家进去找Nexus 5，里边有很多大家需要的东西，比如CWM recovery，Gapps等） 入口地址： http://www.clockworkmod.com/rommanager
+在goo.im中搜索hammerhead就可以找到很多ROM了，大家可以去看看，这是我搜索好的： http://goo.im/devs
+附：Nexus 5 XDA论坛入口地址，这里才是金库： http://forum.xda-developers.com/google-nexus-5
+整理的不全面，但是足够用了，这些都是有官网的ROM团队，还有些没有的ROM团队做的也很好，大多都发在goo.im中，建议大家去看看。</description>
+    </item>
+    
+  </channel>
+</rss>

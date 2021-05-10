@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bulid on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bulid/</link>
+    <description>Recent content in bulid on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 May 2014 01:28:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bulid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网站搭建手记</title>
+      <link>https://phpgao.github.io/build_notes.html</link>
+      <pubDate>Sat, 10 May 2014 01:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/build_notes.html</guid>
+      <description>简单的记录一下搭建自己的博客需要做的事情！
+确定主题 一个网站的主题很重要，要不然你会无从下手，所以千万不要像我这样开一个这么无聊的blog。为什么说此步骤最难，就是因为点子是最重要的，只要主题（目标）明确，那么建立（实现）它就是易如反掌了。
+选域名 域名是什么？其实就是一个网站的艺名而已。人家的网站叫“234.156.78.90”，你的叫“ccav.com”，那么你说那个更容易出名呢？所以，好的域名可能让你的网站迅速火起来。举个小栗子,以前的京东商城的域名是360buy.com，不懂英语的人当然不好记了，现在改名jd.com，既好记又提升了企业形象，何乐而不为呢？（估计这个域名京东花了不少钱）。不建议大家购买com以外的域名，尤其是cn结尾的，至于为什么大家可以自己研究。域名选好了后，就购买空间了。
+虚拟主机（网站空间） 光是有了像phpgao.com这样的域名是不够的，因为你需要把你的文章放到互联网上供大家访问，所以你需要一个专用服务器，当然自己搭建服务器也是可以的，但是如果是个规模不大的网站老高建议还是租用吧，我的空间就是淘宝上买的，28半年，香港主机，速度还行。（为什么是香港空间？免备案呗！）
+域名与空间的绑定 GOOD！既然你已经有了域名和空间，是时候将它们相互关联了。这一步比较关键！为了让大家更好的理解这一节。老高来举个大栗子，某一天老高要孤身一人拜访位从未谋面的远房亲戚，远程通话后确定目的地，坐飞机2小时（想的好美啊），下飞机后找那个举着牌子的人，我才能顺利见到那位亲戚。也就是说，我从出发到坐飞机，到达后根据牌子辨认身份这一系列的动作如果有一个失误，我的此次出行就是失败的，之后我只能沮丧的回家了。。。反应到现实就是：和我通话的那个人就是域名，他告诉我他在哪个IP等我，等我通过IP到站后，找那个举着牌子的人，这样就完成了一次“见面”。简单的说空间有个IP，你的域名必须解析到那个IP才行，当然不要忘了空间需要和你的域名绑定。
+最后的工作 如果域名没有备案的话，那么你的空间应该和我一样不在内地吧。不过不要紧，能访问就行。想要搭建WP这类博客，你的空间还需要一个不是太小的MYSQL空间，也就是传说中的数据库。我的空间是200M+200M型，也就是说我的空间能放小于200M的MP3文件并且在数据库能够存放200M的数据。其实这么点空间建一个站已经很富裕了。（注：国外的空间不是很稳定，一定要定期备份！）</description>
+    </item>
+    
+  </channel>
+</rss>

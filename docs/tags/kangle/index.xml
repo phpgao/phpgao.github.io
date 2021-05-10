@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kangle on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/kangle/</link>
+    <description>Recent content in kangle on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Jan 2015 08:56:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/kangle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>kangle的安装和使用</title>
+      <link>https://phpgao.github.io/kangle_note.html</link>
+      <pubDate>Wed, 14 Jan 2015 08:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kangle_note.html</guid>
+      <description>kangle是一款国人产的服务器软件，老高经常使用它搭建测试环境。
+安装 kangle的安装主要分两大块：kangle+easypanel。
+# centos下一键安装命令 yum -y install wget;wget http://download.kanglesoft.com/easypanel/ep.sh -O ep.sh;sh ep.sh 使用 安装完成后，使用方法: 管理面板网址: http://服务器ip:3312/admin/ 独立网站管理: http://服务器ip:3312/vhost/
+Reference:
+http://www.kanglesoft.com/thread-5891-1-1.html</description>
+    </item>
+    
+    <item>
+      <title>在Liunx上彻底删除kangle服务器</title>
+      <link>https://phpgao.github.io/del_kangle.html</link>
+      <pubDate>Fri, 19 Sep 2014 03:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/del_kangle.html</guid>
+      <description>之前单位用的kangle服务器，便于快速搭建网站。
+但是现在不想用了，如何删除呢？
+其实很简单：
+停止服务 service kangle stop 删除服务启动项 chkconfig kangle off 删除服务 chkconfig --del kangle 删除残留文件 rm -rf /vhsrm -f /etc/init.d/kangle 现在重启看看，是不是已经删除的很干净了！
+##ps.这个删除流程也可以针对其他服务使用！##
+顺便提一下
+删除Apache可以用rpm -qa|grep apache|xargs rpm -e，一次删除所有与Apache有关的包</description>
+    </item>
+    
+  </channel>
+</rss>

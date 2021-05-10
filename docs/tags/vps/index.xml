@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vps on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/vps/</link>
+    <description>Recent content in vps on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Jan 2018 17:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WootHosting-KVM架构512M内存$15一年</title>
+      <link>https://phpgao.github.io/woothosting.html</link>
+      <pubDate>Sat, 06 Jan 2018 17:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/woothosting.html</guid>
+      <description>&lt;p&gt;WootHosting是老高最近才发现的一款VPS服务商，目测又是华人开的，并且界面和&lt;a href=&#34;https://blog.phpgao.com/hostmybytes.html&#34;&gt;HostMyBytes&lt;/a&gt;简直一模一样，同样支持中文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>高性价比VPS再现---DeployNode</title>
+      <link>https://phpgao.github.io/deploynode.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/deploynode.html</guid>
+      <description>&lt;p&gt;该服务器位于法国，后台管理界面很不错，1G内存用起来很爽，老高机器的IP是&lt;strong&gt;213.32.42.xx&lt;/strong&gt;，欢迎骚扰。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://deploynode.com/clients/aff.php?aff=3&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/1889568454.png&#34; alt=&#34;deploynode&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>老高推荐的VPS---Bandwagon-Host</title>
+      <link>https://phpgao.github.io/bandwagon.html</link>
+      <pubDate>Fri, 09 Dec 2016 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagon.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1997432409.png&#34; alt=&#34;bandwagon_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;作为老高博客的常客来说，搬瓦工一定再熟悉不过了。这篇文章是从&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;30元一年，打造自己的翻墙VPS&lt;/a&gt;独立出来的。主要是介绍搬瓦工(Bandwagon Host)的购买方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps.老高的博客目前就稳定运行在bandwagon每年$9.9的服务器上！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>老高推荐的VPS---virmach</title>
+      <link>https://phpgao.github.io/virmach.html</link>
+      <pubDate>Fri, 09 Dec 2016 02:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virmach.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/3240554130.png&#34; alt=&#34;virmach&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;特价页地址：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://virmach.com/manage/aff.php?aff=1248&amp;amp;gid=22&#34;&gt;Cheap Windows VPS &amp;amp; Linux VPS - VirMach.com | The Best &amp;amp; Cheapest VPS Cloud Hosting&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;推荐理由：&lt;/p&gt;
+&lt;p&gt;价格低廉，支持中文，可以与搬瓦工一战！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用KCPTUN加速你的VPS</title>
+      <link>https://phpgao.github.io/kcptun.html</link>
+      <pubDate>Wed, 07 Dec 2016 03:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kcptun.html</guid>
+      <description>&lt;p&gt;自从FS废了以后，老高一直在寻找一个替代品，直到发现了kcptun，老高的搬瓦工又迎来了第二春。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/748461753.png&#34; alt=&#34;kcptun_logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----RamNode</title>
+      <link>https://phpgao.github.io/ramnode.html</link>
+      <pubDate>Tue, 24 Nov 2015 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ramnode.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2000021281.png&#34; alt=&#34;afflogoblack.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ssh的反向隧道管理内网路由器</title>
+      <link>https://phpgao.github.io/ssh-reverse-tunnel.html</link>
+      <pubDate>Fri, 02 Oct 2015 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh-reverse-tunnel.html</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SSH协议真是了不得！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/2363969333.png&#34; alt=&#34;pandorabox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;光是看标题，大家会看的云里雾里的，倾听老高细细道来！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----MrRapidHost</title>
+      <link>https://phpgao.github.io/mrapidhost.html</link>
+      <pubDate>Tue, 22 Sep 2015 02:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mrapidhost.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1388919397.png&#34; alt=&#34;MrRapidHost&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;MrRapidHost目前有一款VPS性价比不错，很适合搭梯子。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[VPS]老高推荐VPS----time4vps</title>
+      <link>https://phpgao.github.io/time4vps.html</link>
+      <pubDate>Sat, 19 Sep 2015 05:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/time4vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/3507011008.png&#34; alt=&#34;time4vps&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>UltraVPS-性价比$12-年</title>
+      <link>https://phpgao.github.io/ultravps.html</link>
+      <pubDate>Mon, 15 Jun 2015 03:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ultravps.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.ultravps.com/clients/aff.php?aff=155&amp;amp;pid=34&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2007871324.png&#34; alt=&#34;2015-06-22_09-51-10.png&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;今天老高发现了一个算是性价比和搬瓦工持平的VPS－－－UltraVPS&lt;/p&gt;
+&lt;p&gt;如果对搬瓦工速度不太满意的可以试试UltraVPS的基础套餐。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前基础套餐可以使用3折优惠码！
+这家VPS可能不稳定，购买前请三思！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买前必读</title>
+      <link>https://phpgao.github.io/pre_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pre_buy_faq.html</guid>
+      <description>&lt;h2 id=&#34;这个vps能做什么&#34;&gt;这个VPS能做什么&lt;/h2&gt;
+&lt;p&gt;首先，当你租下这台属于你的服务器后，你有很大的自由去做你想做的事情，但是需要声明的是&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果任何人以任何形式使用从老高的博客购买的VPS去做违法的事(包括违反中美两国的法律)，此行为与老高无关！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个服务器系统基于Linux(Linux是程序猿入门必备基础工具，所以程序员拿来练手非常适合，老高就是用这个入门的)，网速不错，有了它相当于你在国外有个代理，这个代理可以搭建你的博客，做你的DNS服务器，做你的翻墙工具等等。&lt;/p&gt;
+&lt;p&gt;最大的&lt;strong&gt;卖点&lt;/strong&gt;就是价格了，其一年的主机价格与国内主机半个月的价格相当。&lt;/p&gt;
+&lt;p&gt;再加上Linux的可玩性，有很多&lt;strong&gt;高级玩法&lt;/strong&gt;可以折腾。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买后必读</title>
+      <link>https://phpgao.github.io/post_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 10:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/post_buy_faq.html</guid>
+      <description>&lt;p&gt;本文介绍了搬瓦工购买后的常规操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用net_speeder加速你的VPS</title>
+      <link>https://phpgao.github.io/vps_net_speeder.html</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_net_speeder.html</guid>
+      <description>&lt;p&gt;转自:http://www.im1987.com/post/853.html&lt;/p&gt;
+&lt;p&gt;老高安装了以后480P是不卡了，720P还是有点力不从心啊~&lt;/p&gt;
+&lt;p&gt;另外推荐一下锐速，应该还是会有一点效果的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全之防火墙设置</title>
+      <link>https://phpgao.github.io/vps_iptables.html</link>
+      <pubDate>Mon, 29 Dec 2014 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_iptables.html</guid>
+      <description>&lt;p&gt;iptables是基于内核的防火墙，功能非常强大，iptables内置了filter，nat和mangle三张表。&lt;/p&gt;
+&lt;p&gt;filter负责过滤数据包，包括的规则链有，input，output和forward；&lt;/p&gt;
+&lt;p&gt;nat则涉及到网络地址转换，包括的规则链有，prerouting，postrouting和output；&lt;/p&gt;
+&lt;p&gt;mangle表则主要应用在修改数据包内容上，用来做流量整形的，默认的规则链有：INPUT，OUTPUT，NAT，POSTROUTING，PREROUTING；&lt;/p&gt;
+&lt;p&gt;input匹配目的IP是本机的数据包；
+forward匹配流经本机的数据包；
+prerouting用来修改目的地址用来做DNAT；
+postrouting用来修改源地址用来做SNAT。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置</title>
+      <link>https://phpgao.github.io/bandwagonhost_vps_panel.html</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagonhost_vps_panel.html</guid>
+      <description>&lt;p&gt;购买了搬瓦工(bandwagonhost)的VPS，如何使用呢？&lt;/p&gt;
+&lt;p&gt;在此，老高以FAQ的形式给出介绍。&lt;/p&gt;
+&lt;p&gt;首先插几句使用建议，老高认为十分重要，为什么呢？搬瓦工如果监控到有大量的垃圾信息从我们的主机上发出，就会立即冻结VPS，冻结后的VPS相当于关机，我们可以进入panel后手动解冻即可恢复正常，但是解冻的次数每年只有三次，所以大家一定要注意自己VPS的安全。在此老高也给大家分享一些必要的操作，请务必参考。部分建议需要一定的linux基础，不会的TX请参考老高的&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;翻墙教程&lt;/a&gt;后再google之。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30元一年，打造自己的翻墙VPS</title>
+      <link>https://phpgao.github.io/vps.html</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2425396346.png&#34; alt=&#34;SS&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从此告别龟速的goagent，节省下来的时间会让你觉得很值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要自己搭梯子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;答：请看此试验 &amp;mdash;-&amp;gt; &lt;a href=&#34;http://www.hekaiyu.cn/hacker/1527.html&#34;&gt;评测告诉你：那些免费代理悄悄做的龌蹉事儿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;strong&gt;免费的东西是最贵的！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更多性价比VPS请移步 &lt;strong&gt;&lt;a href=&#34;https://blog.phpgao.com/vpses.html&#34;&gt;老高推荐的VPS&lt;/a&gt;&lt;/strong&gt;，希望大家在这里能够找到适合自己的VPS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全设置</title>
+      <link>https://phpgao.github.io/vps_safty.html</link>
+      <pubDate>Sun, 27 Jul 2014 02:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_safty.html</guid>
+      <description>&lt;p&gt;内容转自 &lt;a href=&#34;http://www.linode.im/1642.html&#34;&gt;做好VPS的基础安全防护工作&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。&lt;/p&gt;
+&lt;p&gt;很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。&lt;/p&gt;
+&lt;p&gt;直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？&lt;/p&gt;
+&lt;p&gt;在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

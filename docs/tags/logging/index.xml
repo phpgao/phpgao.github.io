@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>logging on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/logging/</link>
+    <description>Recent content in logging on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Feb 2017 15:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/logging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为python的logging加点颜色吧</title>
+      <link>https://phpgao.github.io/python_colorful_log.html</link>
+      <pubDate>Wed, 22 Feb 2017 15:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_colorful_log.html</guid>
+      <description>&lt;p&gt;代码原理很简单，在需要加颜色的地方加上控制颜色显示的语义即可。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

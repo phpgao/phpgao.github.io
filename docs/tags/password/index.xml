@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>password on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/password/</link>
+    <description>Recent content in password on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 May 2014 01:27:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mysql忘记root密码解决方法</title>
+      <link>https://phpgao.github.io/iforget_mysql.html</link>
+      <pubDate>Sat, 10 May 2014 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/iforget_mysql.html</guid>
+      <description>Windows 步骤如下： 1.停止mysql服务(以管理员身份,在cmd命令行下运行)
+net stop mysql 2.使用 mysqld –skip-grant-tables 命令启动mysql数据库
+&amp;gt;D:\&amp;gt;net stop mysql MySQL 服务正在停止. MySQL 服务已成功停止。 D:\&amp;gt;mysqld --skip-grant-tables&amp;lt;/pre&amp;gt;  3.新开一个cmd窗口，进行如下操作
+D:\&amp;gt;mysql -uroot Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 1 Server version: 5.1.26-rc-community MySQL Community Server (GPL) Type &amp;#39;help;&amp;#39; or &amp;#39;\h&amp;#39; for help. Type &amp;#39;\c&amp;#39; to clear the buffer. mysql&amp;gt; update mysql.user set password=password(&amp;#39;root&amp;#39;) where user=&amp;#39;root&amp;#39;; Query OK, 1 row affected (0.</description>
+    </item>
+    
+  </channel>
+</rss>

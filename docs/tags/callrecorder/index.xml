@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>callrecorder on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/callrecorder/</link>
+    <description>Recent content in callrecorder on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Jun 2014 01:46:24 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/callrecorder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>call-recorder通话录音文件命名格式</title>
+      <link>https://phpgao.github.io/callrecorder.html</link>
+      <pubDate>Mon, 23 Jun 2014 01:46:24 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/callrecorder.html</guid>
+      <description>手机装的是call recorder，每次整理录音的时候发现默认的文件命名规则简直是乱的逆天 还好可以自定义 文件格式改为
+%type%/%time%_[%name%]_[%number%]  时间格式改为
+yyyy-MM-dd_HH-mm-ss  解决！ ps.这个软件真心很不错，推荐购买正版！下面是链接
+CallRecorder购买链接</description>
+    </item>
+    
+  </channel>
+</rss>

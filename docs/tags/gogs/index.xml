@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gog&#39;s on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/gogs/</link>
+    <description>Recent content in gog&#39;s on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Jul 2019 06:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/gogs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用docker搭建私有git服务(gogs&#43;https)</title>
+      <link>https://phpgao.github.io/gogs.html</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/gogs.html</guid>
+      <description>&lt;p&gt;为什么有了github还要有自己的平台？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审计安全(不会随便被删除)&lt;/li&gt;
+&lt;li&gt;自己团队需要&lt;/li&gt;
+&lt;li&gt;速度更快&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么选择gogs?&lt;/p&gt;
+&lt;p&gt;请移步&lt;a href=&#34;https://gogs.io/&#34;&gt;官网&lt;/a&gt;学习，配置文件请参考&lt;a href=&#34;https://gogs.io/docs/advanced/configuration_cheat_sheet&#34;&gt;配置文件手册&lt;/a&gt;，配置样例请访问&lt;a href=&#34;https://github.com/gogs/gogs/blob/master/conf/app.ini&#34;&gt;app.ini&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sync on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sync/</link>
+    <description>Recent content in sync on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 29 Jul 2014 08:24:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sync/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用dropbox同步备份网站和数据库</title>
+      <link>https://phpgao.github.io/dropbox_sync_cli.html</link>
+      <pubDate>Tue, 29 Jul 2014 08:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dropbox_sync_cli.html</guid>
+      <description>&lt;p&gt;自从用了Shadowsocks，整个人都精神多了！&lt;/p&gt;
+&lt;p&gt;今天开整Dropbox，话说这货也被Q了。&lt;/p&gt;
+&lt;p&gt;废话不多说&lt;/p&gt;
+&lt;p&gt;以下内容需要翻{防屏蔽}墙使用，如果没有，可以参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;老高的这篇文章&lt;/a&gt;搭建一个稳定又极速的翻{防屏蔽}墙环境&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.dropbox.com/install?os=lnx&#34;&gt;官网&lt;/a&gt;找到linux专用脚本，执行一下对应系统的脚本&lt;/p&gt;
+&lt;h3 id=&#34;32位系统&#34;&gt;32位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;64位系统&#34;&gt;64位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

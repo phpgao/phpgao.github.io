@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>note on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/note/</link>
+    <description>Recent content in note on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Apr 2019 14:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/note/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker-最新安装命令</title>
+      <link>https://phpgao.github.io/install_docker_in_centos.html</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_docker_in_centos.html</guid>
+      <description>&lt;p&gt;docker就不多说了，按照贴出的代码一步一步就可以安装成功&lt;/p&gt;
+&lt;p&gt;安装之前最好手动关闭selinux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;setenforce 0
+getenforce
+# Permissive
+sed -i &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/&amp;#39; /etc/selinux/config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-II----multi-port-shadowsocks</title>
+      <link>https://phpgao.github.io/docker_note2.html</link>
+      <pubDate>Thu, 12 Nov 2015 05:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_note2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/docker-note1.html&#34;&gt;上一节&lt;/a&gt;我们建立了简单的容器，这一届我们进一步探索docker的功能&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记-I----Dockerfile-build-run-kill</title>
+      <link>https://phpgao.github.io/docker-note1.html</link>
+      <pubDate>Thu, 12 Nov 2015 03:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note1.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker &amp;ndash; 像安装卸载APP一样简单的部署服务器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这些文章是老高自己使用docker是的一些笔记，偶尔会更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----iptables防火墙设置</title>
+      <link>https://phpgao.github.io/vbird_linux_note_iptables.html</link>
+      <pubDate>Sun, 31 May 2015 08:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_iptables.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;
+&lt;p&gt;以下内容总结自鸟哥的 Linux 私房菜 &amp;ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。&lt;/p&gt;
+&lt;p&gt;关于VPS的更多安全设置可以参考 &lt;a href=&#34;https://blog.phpgao.com/vps_safty.html&#34;&gt;VPS安全设置&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://blog.phpgao.com/vps_iptables.html&#34;&gt;VPS安全之防火墙设置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----网络速查</title>
+      <link>https://phpgao.github.io/vbird_linux_note_network.html</link>
+      <pubDate>Sun, 31 May 2015 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_network.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

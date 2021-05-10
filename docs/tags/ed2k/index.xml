@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ed2k on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ed2k/</link>
+    <description>Recent content in ed2k on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 Dec 2016 05:56:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ed2k/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下载站</title>
+      <link>https://phpgao.github.io/download_sites.html</link>
+      <pubDate>Wed, 21 Dec 2016 05:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/download_sites.html</guid>
+      <description>&lt;p&gt;为了塞满硬盘，一起努力吧！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1137613735.jpg&#34; alt=&#34;disk_full&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;图片来自网络&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

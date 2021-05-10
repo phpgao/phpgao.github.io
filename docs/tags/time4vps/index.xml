@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>time4vps on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/time4vps/</link>
+    <description>Recent content in time4vps on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 19 Sep 2015 05:21:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/time4vps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[VPS]老高推荐VPS----time4vps</title>
+      <link>https://phpgao.github.io/time4vps.html</link>
+      <pubDate>Sat, 19 Sep 2015 05:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/time4vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/3507011008.png&#34; alt=&#34;time4vps&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

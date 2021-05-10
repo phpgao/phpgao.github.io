@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dos on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dos/</link>
+    <description>Recent content in dos on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 03 Mar 2014 14:41:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开发中经常用到的代码</title>
+      <link>https://phpgao.github.io/frequently-used-code.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/frequently-used-code.html</guid>
+      <description>[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 &amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; PHP //申明页面编码开启session并设置时区session_start();header(&amp;quot;Content-Type: text/html; charset=UTF-8&amp;quot;);ini_set(&#39;date.timezone&#39;,&#39;Asia/Shanghai&#39;);////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval(&#39;adasdasd&#39;);//heredoc==双引号$name=MyName;echo &amp;lt;&amp;lt;&amp;lt;EOTMy name is &amp;quot;$name&amp;quot;. I am printing some $foo-&amp;gt;foo.Now, I am printing some {$foo-&amp;gt;bar[1]}.This should print a capital &#39;A&#39;: \x41EOT;/*以上例程会输出：My name is &amp;quot;MyName&amp;quot;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital &#39;A&#39;: A*///Nowdoc==单引号echo &amp;lt;&amp;lt;&amp;lt;&#39;EOT&#39;My name is &amp;quot;$name&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>manual on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/manual/</link>
+    <description>Recent content in manual on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Nov 2015 03:23:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/manual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>才发现PHP官方已经提供CHM了</title>
+      <link>https://phpgao.github.io/php_chm.html</link>
+      <pubDate>Tue, 03 Nov 2015 03:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_chm.html</guid>
+      <description>&lt;p&gt;丢个链接走人&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2827250856.png&#34; alt=&#34;PHP chm&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP文档收藏夹</title>
+      <link>https://phpgao.github.io/php_manual_fav.html</link>
+      <pubDate>Fri, 31 Oct 2014 10:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_manual_fav.html</guid>
+      <description>&lt;p&gt;主要记录一些值得研究的PHP文档页面&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

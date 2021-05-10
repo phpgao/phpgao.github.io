@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sleep on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sleep/</link>
+    <description>Recent content in sleep on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 May 2015 12:19:28 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sleep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决MySQL中Sleep连接过多的问题</title>
+      <link>https://phpgao.github.io/mysql_too_many_sleeping_connections.html</link>
+      <pubDate>Mon, 25 May 2015 12:19:28 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_too_many_sleeping_connections.html</guid>
+      <description>&lt;p&gt;有时候你在mysql中运行&lt;code&gt;SHOW PROCESSLIST;&lt;/code&gt;后会发现数据库中有很多这样的进程：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/1013249303.jpg&#34; alt=&#34;MySQL中Sleep连接过多&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

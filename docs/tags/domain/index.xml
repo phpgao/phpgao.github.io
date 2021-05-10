@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>domain on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/domain/</link>
+    <description>Recent content in domain on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 22 May 2015 02:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/domain/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用搬瓦工的VPS搭建博客网站</title>
+      <link>https://phpgao.github.io/website_on_bandwagonhost.html</link>
+      <pubDate>Fri, 22 May 2015 02:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/website_on_bandwagonhost.html</guid>
+      <description>&lt;p&gt;想必大家买了VPS后一定都不想闲着。。。搭个博客算是最简单实用了。&lt;/p&gt;
+&lt;p&gt;但是基本上大家在网上下载到的一键安装包都没有&lt;strong&gt;后台管理&lt;/strong&gt;功能，如果想多绑定几个域名都不知道怎么操作，更别提搭建多个站点了。&lt;/p&gt;
+&lt;p&gt;下面老高就介绍一种简单实用的网站搭建方法，搭建出的网站速度快，安全性高，还支持各种优化配置。&lt;/p&gt;
+&lt;p&gt;最重要的是操作基本都是傻瓜式的，不需要很多web技能也可以完整的配置下来，而且基本上就成了半个运维了，是不是很厉害！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像老高这样的&lt;strong&gt;老司机&lt;/strong&gt;，整个装下来再加上安全设置最多5分钟搞定，相信你一定也可以！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搭建过程中如果有什么问题，请留言交流！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3949848852.gif&#34; alt=&#34;kangle&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>和老高一起把域名转至namesilo吧</title>
+      <link>https://phpgao.github.io/transfer_to_namesilo.html</link>
+      <pubDate>Fri, 17 Apr 2015 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/transfer_to_namesilo.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.namesilo.com/pricing.php?rid=8447580yc&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2091233691.gif&#34; alt=&#34;namesilo的logo&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单的总结一下namesilo的优点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;价格便宜&lt;/li&gt;
+&lt;li&gt;免费终生whois隐私保护 godaddy的隐私保护价格为 &lt;strong&gt;9.99美元&lt;/strong&gt; 一年&lt;/li&gt;
+&lt;li&gt;域名越多越便宜&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

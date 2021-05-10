@@ -1,0 +1,118 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>python中的cookielib的使用方法 | 老高的技术博客</title><meta name=keywords content="python,cookie,爬虫,cookielib"><meta name=description content="
+
+(图片来自互联网)
+cookielib是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。
+但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/python-cookielib.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="python中的cookielib的使用方法"><meta property="og:description" content="
+
+(图片来自互联网)
+cookielib是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。
+但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/python-cookielib.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-06-21T11:18:00+00:00"><meta property="article:modified_time" content="2015-06-21T11:18:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="python中的cookielib的使用方法"><meta name=twitter:description content="
+
+(图片来自互联网)
+cookielib是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。
+但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"python中的cookielib的使用方法","item":"https://phpgao.github.io/python-cookielib.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"python中的cookielib的使用方法","name":"python中的cookielib的使用方法","description":"(图片来自互联网)\ncookielib是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。\n但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。\n","keywords":["python","cookie","爬虫","cookielib"],"articleBody":"(图片来自互联网)\ncookielib是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。\n但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。\n核心类 Cookie 该类实现了Netscape and RFC 2965 cookies定义的cookie标准，基本可以理解为某一条cookie数据。\n部分代码如下，很多属性是不是很眼熟？\nself.domain_initial_dot = domain_initial_dot self.path = path self.path_specified = path_specified self.secure = secure self.expires = expires self.discard = discard self.comment = comment self.comment_url = comment_url self.rfc2109 = rfc2109 CookiePolicy 该类的主要功能是收发cookie，即确保正确的cookie发往对应的域名，反之一样。\nDefaultCookiePolicy 该类实现了CookiePolicy的接口。\nCookieJar CookieJar是cookie的集合，可以包含有很多Cookie类，是我们的主要操作对象。里面有一系列的方法可以支持更加细致的操作！\nFileCookieJar 该类继承自CookieJar，CookieJar只是在内存中完成自己的生命周期，FileCookieJar的子类能够实现数据持久化，定义了save、load、revert三个接口。\nMozillaCookieJar \u0026 LWPCookieJar 两个实现类，继承关系如下：\n使用 简单例子 一段简单的使用代码\n#!/usr/bin/env python # encoding: utf-8 import requests import cookielib url = 'http://www.baidu.com/' jar = cookielib.LWPCookieJar('cookie.txt') # 试着载入cookie # 提一个问题，为什么要加入ignore_discard属性？ try: jar.load(ignore_discard=True) except: pass # 建立一个session s = requests.Session() # 设定 headers与cookies s.headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36'} s.cookies = jar # 访问url r = s.get(url) # 持久化cookie jar.save(ignore_discard=True) # 打印cookie for item in jar: print \"cookie name : %s---- value: %s\" % (item.name, item.value) 我们得到如下cookie\ncat cookie.txt #LWP-Cookies-2.0 Set-Cookie3: BAIDUID=\"2F5340B39928231AA09353CDAE3DA14D:FG=1\"; path=\"/\"; domain=\".baidu.com\"; path_spec; domain_dot; expires=\"2083-07-09 16:27:51Z\"; version=0 Set-Cookie3: BIDUPSID=2F5340B39928231AA09353CDAE3DA14D; path=\"/\"; domain=\".baidu.com\"; path_spec; domain_dot; expires=\"2083-07-09 16:27:51Z\"; version=0 Set-Cookie3: H_PS_PSSID=14872_1457_14412_14509_14444_12826_10812_14430_12868_14871_12723_14962_14919_14902_15384_12095_13937_15963; path=\"/\"; domain=\".baidu.com\"; path_spec; domain_dot; discard; version=0 Set-Cookie3: PSTM=1434892424; path=\"/\"; domain=\".baidu.com\"; path_spec; domain_dot; expires=\"2083-07-09 16:27:51Z\"; version=0 Set-Cookie3: BDSVRTM=0; path=\"/\"; domain=\"www.baidu.com\"; path_spec; discard; version=0 Set-Cookie3: BD_HOME=0; path=\"/\"; domain=\"www.baidu.com\"; path_spec; discard; version=0 生成一个Cookie类 我们由Cookie的定义可以简单的生成一条cookie\nimport cookielib class Cookie: def __init__(self, version, name, value, port, port_specified, domain, domain_specified, domain_initial_dot, path, path_specified, secure, expires, discard, comment, comment_url, rest, rfc2109=False, ): ..... # 初始化一个cookie def createCookie(name, value, domain, expires=None): return cookielib.Cookie( version=None, name=name, value=value, port='80', port_specified=True, domain=domain, domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=expires, discard=False, comment=None, comment_url=None, rest=None, rfc2109=False ) new_cookie = createCookie('phpgao', 'laogao', 'www.phpgao.com', '1434977736') # 加入到现有cookies mycookie = cookielib.CookieJar() mycookie.set_cookie(new_cookie) 扩展阅读 官方文档\ncookielib\ncookie\n","wordCount":"250","inLanguage":"en","datePublished":"2015-06-21T11:18:00Z","dateModified":"2015-06-21T11:18:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/python-cookielib.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>python中的cookielib的使用方法</h1><div class=post-meta>June 21, 2015&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-06-21_python-cookielib.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/06/2635542683.jpg alt=cookie></p><p>(图片来自互联网)</p><p><a href=https://docs.python.org/2/library/cookielib.html>cookielib</a>是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。</p><p>但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。</p><h2 id=核心类>核心类<a hidden class=anchor aria-hidden=true href=#核心类>#</a></h2><h3 id=cookie>Cookie<a hidden class=anchor aria-hidden=true href=#cookie>#</a></h3><p>该类实现了Netscape and RFC 2965 cookies定义的cookie标准，基本可以理解为某一条cookie数据。</p><p>部分代码如下，很多属性是不是很眼熟？</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>        self<span style=color:#f92672>.</span>domain_initial_dot <span style=color:#f92672>=</span> domain_initial_dot
+        self<span style=color:#f92672>.</span>path <span style=color:#f92672>=</span> path
+        self<span style=color:#f92672>.</span>path_specified <span style=color:#f92672>=</span> path_specified
+        self<span style=color:#f92672>.</span>secure <span style=color:#f92672>=</span> secure
+        self<span style=color:#f92672>.</span>expires <span style=color:#f92672>=</span> expires
+        self<span style=color:#f92672>.</span>discard <span style=color:#f92672>=</span> discard
+        self<span style=color:#f92672>.</span>comment <span style=color:#f92672>=</span> comment
+        self<span style=color:#f92672>.</span>comment_url <span style=color:#f92672>=</span> comment_url
+        self<span style=color:#f92672>.</span>rfc2109 <span style=color:#f92672>=</span> rfc2109
+</code></pre></div><h3 id=cookiepolicy>CookiePolicy<a hidden class=anchor aria-hidden=true href=#cookiepolicy>#</a></h3><p>该类的主要功能是收发cookie，即确保正确的cookie发往对应的域名，反之一样。</p><h3 id=defaultcookiepolicy>DefaultCookiePolicy<a hidden class=anchor aria-hidden=true href=#defaultcookiepolicy>#</a></h3><p>该类实现了CookiePolicy的接口。</p><h3 id=cookiejar>CookieJar<a hidden class=anchor aria-hidden=true href=#cookiejar>#</a></h3><p>CookieJar是cookie的集合，可以包含有很多Cookie类，是我们的主要操作对象。里面有一系列的方法可以支持更加细致的操作！</p><h3 id=filecookiejar>FileCookieJar<a hidden class=anchor aria-hidden=true href=#filecookiejar>#</a></h3><p>该类继承自CookieJar，CookieJar只是在内存中完成自己的生命周期，FileCookieJar的子类能够实现数据持久化，定义了save、load、revert三个接口。</p><h3 id=mozillacookiejar--lwpcookiejar>MozillaCookieJar & LWPCookieJar<a hidden class=anchor aria-hidden=true href=#mozillacookiejar--lwpcookiejar>#</a></h3><p>两个实现类，继承关系如下：</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/06/2416418833.png alt="MozillaCookieJar &amp;amp; LWPCookieJar"></p><h2 id=使用>使用<a hidden class=anchor aria-hidden=true href=#使用>#</a></h2><h3 id=简单例子>简单例子<a hidden class=anchor aria-hidden=true href=#简单例子>#</a></h3><p>一段简单的使用代码</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#!/usr/bin/env python</span>
+<span style=color:#75715e># encoding: utf-8</span>
+
+
+<span style=color:#f92672>import</span> requests
+<span style=color:#f92672>import</span> cookielib
+
+
+url <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;http://www.baidu.com/&#39;</span>
+jar <span style=color:#f92672>=</span> cookielib<span style=color:#f92672>.</span>LWPCookieJar(<span style=color:#e6db74>&#39;cookie.txt&#39;</span>)
+
+<span style=color:#75715e># 试着载入cookie</span>
+<span style=color:#75715e># 提一个问题，为什么要加入ignore_discard属性？</span>
+<span style=color:#66d9ef>try</span>:
+    jar<span style=color:#f92672>.</span>load(ignore_discard<span style=color:#f92672>=</span>True)
+<span style=color:#66d9ef>except</span>:
+    <span style=color:#66d9ef>pass</span>
+
+<span style=color:#75715e># 建立一个session</span>
+s <span style=color:#f92672>=</span> requests<span style=color:#f92672>.</span>Session()
+
+<span style=color:#75715e># 设定 headers与cookies</span>
+s<span style=color:#f92672>.</span>headers <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#39;user-agent&#39;</span>: <span style=color:#e6db74>&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36&#39;</span>}
+s<span style=color:#f92672>.</span>cookies <span style=color:#f92672>=</span> jar
+
+<span style=color:#75715e># 访问url</span>
+r <span style=color:#f92672>=</span> s<span style=color:#f92672>.</span>get(url)
+
+<span style=color:#75715e># 持久化cookie</span>
+jar<span style=color:#f92672>.</span>save(ignore_discard<span style=color:#f92672>=</span>True)
+
+<span style=color:#75715e># 打印cookie</span>
+<span style=color:#66d9ef>for</span> item <span style=color:#f92672>in</span> jar:
+    <span style=color:#66d9ef>print</span> <span style=color:#e6db74>&#34;cookie name : </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> ---- value: </span><span style=color:#e6db74>%s</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> (item<span style=color:#f92672>.</span>name, item<span style=color:#f92672>.</span>value)
+</code></pre></div><p>我们得到如下cookie</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cat cookie.txt
+
+#LWP-Cookies-2.0
+Set-Cookie3: BAIDUID=&#34;2F5340B39928231AA09353CDAE3DA14D:FG=1&#34;; path=&#34;/&#34;; domain=&#34;.baidu.com&#34;; path_spec; domain_dot; expires=&#34;2083-07-09 16:27:51Z&#34;; version=0
+Set-Cookie3: BIDUPSID=2F5340B39928231AA09353CDAE3DA14D; path=&#34;/&#34;; domain=&#34;.baidu.com&#34;; path_spec; domain_dot; expires=&#34;2083-07-09 16:27:51Z&#34;; version=0
+Set-Cookie3: H_PS_PSSID=14872_1457_14412_14509_14444_12826_10812_14430_12868_14871_12723_14962_14919_14902_15384_12095_13937_15963; path=&#34;/&#34;; domain=&#34;.baidu.com&#34;; path_spec; domain_dot; discard; version=0
+Set-Cookie3: PSTM=1434892424; path=&#34;/&#34;; domain=&#34;.baidu.com&#34;; path_spec; domain_dot; expires=&#34;2083-07-09 16:27:51Z&#34;; version=0
+Set-Cookie3: BDSVRTM=0; path=&#34;/&#34;; domain=&#34;www.baidu.com&#34;; path_spec; discard; version=0
+Set-Cookie3: BD_HOME=0; path=&#34;/&#34;; domain=&#34;www.baidu.com&#34;; path_spec; discard; version=0
+</code></pre></div><h3 id=生成一个cookie类>生成一个Cookie类<a hidden class=anchor aria-hidden=true href=#生成一个cookie类>#</a></h3><p>我们由Cookie的定义可以简单的生成一条cookie</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>import</span> cookielib
+
+<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Cookie</span>:
+    <span style=color:#66d9ef>def</span> __init__(self, version, name, value,
+                 port, port_specified,
+                 domain, domain_specified, domain_initial_dot,
+                 path, path_specified,
+                 secure,
+                 expires,
+                 discard,
+                 comment,
+                 comment_url,
+                 rest,
+                 rfc2109<span style=color:#f92672>=</span>False,
+                 ):
+         <span style=color:#f92672>.....</span>
+
+<span style=color:#75715e># 初始化一个cookie</span>
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>createCookie</span>(name, value, domain, expires<span style=color:#f92672>=</span>None):
+    <span style=color:#66d9ef>return</span> cookielib<span style=color:#f92672>.</span>Cookie(
+        version<span style=color:#f92672>=</span>None,
+        name<span style=color:#f92672>=</span>name,
+        value<span style=color:#f92672>=</span>value,
+        port<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;80&#39;</span>,
+        port_specified<span style=color:#f92672>=</span>True,
+        domain<span style=color:#f92672>=</span>domain,
+        domain_specified<span style=color:#f92672>=</span>True,
+        domain_initial_dot<span style=color:#f92672>=</span>False,
+        path<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;/&#39;</span>,
+        path_specified<span style=color:#f92672>=</span>True,
+        secure<span style=color:#f92672>=</span>False,
+        expires<span style=color:#f92672>=</span>expires,
+        discard<span style=color:#f92672>=</span>False,
+        comment<span style=color:#f92672>=</span>None,
+        comment_url<span style=color:#f92672>=</span>None,
+        rest<span style=color:#f92672>=</span>None,
+        rfc2109<span style=color:#f92672>=</span>False
+    )
+
+
+new_cookie <span style=color:#f92672>=</span> createCookie(<span style=color:#e6db74>&#39;phpgao&#39;</span>, <span style=color:#e6db74>&#39;laogao&#39;</span>, <span style=color:#e6db74>&#39;www.phpgao.com&#39;</span>, <span style=color:#e6db74>&#39;1434977736&#39;</span>)
+
+<span style=color:#75715e># 加入到现有cookies</span>
+
+mycookie <span style=color:#f92672>=</span> cookielib<span style=color:#f92672>.</span>CookieJar()
+mycookie<span style=color:#f92672>.</span>set_cookie(new_cookie)
+</code></pre></div><h2 id=扩展阅读>扩展阅读<a hidden class=anchor aria-hidden=true href=#扩展阅读>#</a></h2><p>官方文档</p><p><a href=https://docs.python.org/2/library/cookielib.html>cookielib</a></p><p><a href=https://docs.python.org/2/library/cookie.html>cookie</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/python/>python</a></li><li><a href=https://phpgao.github.io/tags/cookie/>cookie</a></li><li><a href=https://phpgao.github.io/tags/%E7%88%AC%E8%99%AB/>爬虫</a></li><li><a href=https://phpgao.github.io/tags/cookielib/>cookielib</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/proxy-list.html><span class=title>« Prev Page</span><br><span>代理网站列表</span></a>
+<a class=next href=https://phpgao.github.io/privoxy-shadowsocks.html><span class=title>Next Page »</span><br><span>使用Privoxy将socks5代理转为http代理</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

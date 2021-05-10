@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>phpstorm on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/phpstorm/</link>
+    <description>Recent content in phpstorm on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Oct 2017 08:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/phpstorm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PhpStorm-一些配置</title>
+      <link>https://phpgao.github.io/phpstorm_config.html</link>
+      <pubDate>Wed, 11 Oct 2017 08:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_config.html</guid>
+      <description>&lt;p&gt;代码写时间长了难免有重装的时候，然后之前一些自定义的东西就没了，主要是一些格式化，模板等一些规范化的东西，之前看好像有配置导出功能，但是用了一次，貌似没什么卵用，所以还是记下来吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git使用笔记</title>
+      <link>https://phpgao.github.io/note_for_git.html</link>
+      <pubDate>Sun, 02 Nov 2014 13:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/note_for_git.html</guid>
+      <description>GIT虽然概念比较难理解，但不得不说他是一款开发利器。
+老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。
+基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core.</description>
+    </item>
+    
+    <item>
+      <title>PHPSTORM快捷键</title>
+      <link>https://phpgao.github.io/phpstorm_hotkey.html</link>
+      <pubDate>Thu, 23 Oct 2014 06:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_hotkey.html</guid>
+      <description>点击菜单：File&amp;gt;Settings&amp;gt;(IDE Settings) Keymap 修改工具栏的字体File-&amp;gt;Setting-&amp;gt;Appearance 如何设置代码自动换行 File-&amp;gt;Setting-&amp;gt;editor-&amp;gt;use soft wrap in editor选项 显示行号 File-&amp;gt;Setting-&amp;gt;editor-&amp;gt;Appearance-&amp;gt; show line numbers选项 phpStorm设置大括号和方法名在同一行显示 ; 大括号和方法名在同一行警告 File -&amp;gt; Settings -&amp;gt; code style -&amp;gt; PHP -&amp;gt; Wrapping and Braces -&amp;gt; Braces placement -&amp;gt;End of line. 在settings-&amp;gt;Plugins里，Browse repositories按钮，搜索vim就会找到 IdeaVim插件该插件是控制phpstorm的keymap(也就是快捷键)的 phpstorm Settings-&amp;gt;Editor-&amp;gt;Highlight全部勾选 Editor tabs -&amp;gt; tab limit 16 Settings-&amp;gt;Editor-&amp;gt;colors&amp;amp;fonts -&amp;gt;font 设置字体大小 navigate/bookmark F11, 设置书签直接切换next bookmark
+ctrl+j 插入活动代码提示 ctrl+alt+t 当前位置插入环绕代码 alt+insert 生成代码菜单 Shift + Enter 新一行 ctrl+q 查看代码注释 ctrl+d 复制当前行 ctrl+y 删除当前行 ctrl+alt+y 刷新项目缓存Synchronize 或文件夹右键Synchronize shift+F6 重命名 ctrl+shift+u 字母大小写转换 ctrl+f 查找 ctrl+r 替换 ctrl+shift+I 查看变量或方法定义源 ctrl+g 跳转行 ctrl+alt+F12 跳转至当前文件在磁盘上的位置 alt+down 查看下一个方法 alt+up 查看上一个方法 ctrl+alt+l 重新格式化代码 ctrl+shift+down statement向下移动 ctrl+shift+up statement向上移动 alt+shift+down line向下移动 alt+shift+up line向上移动 ctrl+/ 行注释 ctrl+shift+/ 块注释 Ctrl + Shift + Z redo Ctrl + Shift + F 区域查找 ctrl+shift+n 打开工程中的文件 ctrl+b 跳到变量申明处 ctrl+[] 匹配 {}[] ctrl+shift+]/[ 选中块代码 ctrl+x 剪切行 ctrl+shift+v 复制多个文本 alt+left/right 标签切换 ctrl+p 显示默认参数 ctrl + -/+ 可以折叠项目中的任何代码块</description>
+    </item>
+    
+    <item>
+      <title>WIN下phpstorm不能检出svn的问题</title>
+      <link>https://phpgao.github.io/phpstorm_svn_authorize.html</link>
+      <pubDate>Tue, 21 Oct 2014 03:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_svn_authorize.html</guid>
+      <description>今天使用win上的phpstrom发现不能检出svn服务器上的文件，折腾了一番才发现原来是svn设置问题。
+解决办法：
+进入settings
+按照下图设置：
+这里我们指定了svn的命令行路径，CollabNet\Subversion Client是CollabNet出的svn客户端命令行工具，换成其他的也可以，只要路径指定正确就行。
+附下载地址：
+支持各种系统的svn
+推荐visualsvn</description>
+    </item>
+    
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

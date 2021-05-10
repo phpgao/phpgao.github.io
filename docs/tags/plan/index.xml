@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>plan on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/plan/</link>
+    <description>Recent content in plan on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 25 Mar 2015 01:36:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/plan/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>下一步计划</title>
+      <link>https://phpgao.github.io/next_step_201503.html</link>
+      <pubDate>Wed, 25 Mar 2015 01:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/next_step_201503.html</guid>
+      <description>博客 目前博客的百度收录不再像以前一样不稳定了(主要针对百度)，基本上今天发的最迟明天就会收录，可能是因为我的插件的原因吧，看来还是有点用的，最近打算为插件做一个面板，主要功能是展示百度的请求（话说百度还真准时）。
+职业 目前正在求职中，希望到南方发展，上海或深圳，求推荐啊！
+学习 最近在学习ANDROID，准备开发一个APP，和某论坛有关，源码会公开在github上。
+发现一个自学网站的合集：一纳米学习，推荐给大家！
+还有准备读一些C方面的书。
+生活 家里最近有很多烦心事，需要一步步处理。
+最近听了几首达达乐队的歌，还有Niykee Heaton的歌。</description>
+    </item>
+    
+  </channel>
+</rss>

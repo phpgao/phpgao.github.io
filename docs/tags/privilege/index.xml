@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>privilege on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/privilege/</link>
+    <description>Recent content in privilege on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 04 Oct 2014 15:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/privilege/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux目录和文件的权限设置</title>
+      <link>https://phpgao.github.io/linux_privilege.html</link>
+      <pubDate>Sat, 04 Oct 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_privilege.html</guid>
+      <description>要求就是：
+ 将当前目录中的所有“子目录”的权限设置为755； 将当前目录中的所有“文件”的权限设置为644。  解决方法：
+chmod 644 -R *chmod 755 `find -type d` 也可以用find彻底些：
+find /path -type f -exec chmod 644 {} /;find /path -type d -exec chmod 755 {} /; 转自：
+http://blog.csdn.net/study16/article/details/5896390</description>
+    </item>
+    
+  </channel>
+</rss>

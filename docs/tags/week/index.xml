@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>week on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/week/</link>
+    <description>Recent content in week on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Dec 2015 08:53:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/week/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2015年12月20日周总结</title>
+      <link>https://phpgao.github.io/2015-12-20.html</link>
+      <pubDate>Sun, 20 Dec 2015 08:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/2015-12-20.html</guid>
+      <description>学习：
+select、poll、epoll之间的区别总结[整理] I/O多路复用技术（multiplexing）是什么？ 所谓全栈——《Web全栈工程师的自我修养》读书笔记 Awesome Networking &amp;mdash; clowwindy 《理解网络IO模型》四部曲：从模型到实现，从select到poll，再到epoll，基于源码深层探究，一起看看 IOS9 SURGE Go语言TCP Socket编程 setsockopt中参数之SO_REUSEADDR的意义 select — Waiting for I/O completion socket — Low-level networking interface
+工具：
+PHP standards Dockerfile 语法检查及优化工具 搭建docker内网私服（docker-registry with nginx&amp;amp;ssl on centos） Centos 7.x 使用Docker registry镜像创建私有仓库</description>
+    </item>
+    
+  </channel>
+</rss>

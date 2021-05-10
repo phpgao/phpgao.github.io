@@ -1,0 +1,266 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>nginx配置详解 | 老高的技术博客</title><meta name=keywords content="nginx,proxy,conf"><meta name=description content="#nginx配置详解
+用了nginx这么久，很多配置还是记不牢，还是总结一下吧！
+基本命令：
+service nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！
+此文件就是主配置文件了。
+##高层的配置
+#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。
+#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime."><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/nginx_conf.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="nginx配置详解"><meta property="og:description" content="#nginx配置详解
+用了nginx这么久，很多配置还是记不牢，还是总结一下吧！
+基本命令：
+service nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！
+此文件就是主配置文件了。
+##高层的配置
+#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。
+#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime."><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/nginx_conf.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-09-17T03:28:00+00:00"><meta property="article:modified_time" content="2014-09-17T03:28:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="nginx配置详解"><meta name=twitter:description content="#nginx配置详解
+用了nginx这么久，很多配置还是记不牢，还是总结一下吧！
+基本命令：
+service nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！
+此文件就是主配置文件了。
+##高层的配置
+#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。
+#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"nginx配置详解","item":"https://phpgao.github.io/nginx_conf.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"nginx配置详解","name":"nginx配置详解","description":"#nginx配置详解\n用了nginx这么久，很多配置还是记不牢，还是总结一下吧！\n基本命令：\nservice nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！\n此文件就是主配置文件了。\n##高层的配置\n#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。\n#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime.","keywords":["nginx","proxy","conf"],"articleBody":"#nginx配置详解\n用了nginx这么久，很多配置还是记不牢，还是总结一下吧！\n基本命令：\nservice nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！\n此文件就是主配置文件了。\n##高层的配置\n#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。\n#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime.type文件定义  include /etc/nginx/mime.types; #设置文件使用的默认的MIME-type  default_type text/html; #设置我们的头文件中的默认的字符集  charset UTF-8; #设定日志格式  log_format main '$remote_addr - $remote_user [$time_local] \"$request\" ' '$status $body_bytes_sent \"$http_referer\" ' '\"$http_user_agent\" \"$http_x_forwarded_for\"'; #日志存放地址  access_log /var/log/nginx/access.log; #告诉nginx只能记录严重的错误  error_log /var/log/nginx/error.log crit; #sendfile 指令指定 nginx 是否调用 sendfile 函数（zero copy 方式）来输出文件，对于普通应用，  #必须设为 on,如果用来进行下载等应用磁盘IO重负载应用，可设置为 off，以平衡磁盘与网络I/O处理速度，降低系统的uptime.  #传统方式：硬盘  kernel buffer  user buffer kernel socket buffer 协议栈  #sendfile：硬盘  kernel buffer (快速拷贝到kernelsocket buffer) 协议栈  sendfile on; #告诉nginx在一个数据包里发送所有头文件，而不一个接一个的发送。默认已开启，可以不写  #tcp_nopush on;  #连接超时时间  #The parameters can differ from each other. Line Keep-Alive:timeout=time understands Mozilla and Konqueror. MSIE itself shutskeep-alive connection approximately after 60 seconds.  keepalive_timeout 65; #告诉nginx不要缓存数据，而是一段一段的发送--当需要及时发送数据时，就应该给应用设置这个属性，这样发送一小块数据信息时就不能立即得到返回值  tcp_nodelay on; #开启gzip压缩  gzip on; #设置对数据启用压缩的最少字节数  gzip_min_length 1k; gzip_buffers 4 16k; #gzip_http_version 1.0;  #设置数据的压缩等级，这个等级可以是1-9之间的任意数值，9是最慢但是压缩比最大的。我们设置为4，这是一个比较折中的设置  gzip_comp_level 2; #gzip针对一下类型文件进行压缩，可以适当增减  gzip_types text/plain application/javascript application/x-javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png; #和http头有关系，加个vary头，给代理服务器用的，有的浏览器支持压缩，有的不支持。  #因此，为避免浪费不支持的也压缩，需要根据客户端的HTTP头来判断，是否需要压缩。  gzip_vary off; #在某些浏览器中禁止gzip  gzip_disable \"MSIE [1-6]\\.\"; #客户请求头缓冲大小，nginx默认会用client_header_buffer_size这个buffer来读取header值  #如果header过大，它会使用large_client_header_buffers来读取  #如果设置过小HTTP头/Cookie过大 会报400 错误 nginx 400 bad request  #求行如果超过buffer，就会报HTTP 414错误(URI Too Long)  #nginx接受最长的HTTP头部大小必须比其中一个buffer大，否则就会报400的  client_header_buffer_size 1k; large_client_header_buffers 4 4k; #打开缓存的同时也指定了缓存最大数目，以及缓存的时间  open_file_cache max=100000 inactive=20s; #在open_file_cache中指定检测正确信息的间隔时间  open_file_cache_valid 30s; #定义了open_file_cache中指令参数不活动时间期间里最小的文件数  open_file_cache_min_uses 2; #指定了当搜索一个文件时是否缓存错误信息，也包括再次给配置中添加文件  open_file_cache_errors on; #设定负载均衡的服务器列表  upstream servers1 { #weigth参数表示权值，权值越高被分配到的几率越大  #本机上的Squid开启3128端口  server 192.168.8.1:3128 weight=5; server 192.168.8.2:80 weight=1; server 192.168.8.3:80 weight=6; } #负载可以分组  upstream servers2 { #weigth参数表示权值，权值越高被分配到的几率越大  #本机上的Squid开启3128端口  server 192.168.9.1:3128 weight=2; server 192.168.9.2:80 weight=3; server 192.168.0.3:80 weight=1; } ##  # Virtual Host Configs  # aka our settings for specific servers  #下面包含了虚拟主机的设置  #可以将虚拟主机的配置如www.phpgao.com保存为phpgao.conf放conf.d里  #nginx就会自动索引到他  ##  include /etc/nginx/conf.d/*.conf; } 虚拟主机配置 虚拟主机可以先指定一个空主机头server_name _，并return 500，以防止不带主机名的访问。\nserver { listen 80 default; server_name _; return 500; } 下面是某个主机的标准配置，可以将其保存到phpgao.conf文件中，放在conf.d文件夹，就可以正确的被nginx.conf识别到\nserver { #限制IP访问  allow 10.57.22.172; #表示除了上面allow的其他都禁止  deny all; #监听端口，可以基于IP，如1.1.1.1:8080  listen 80; #绑定域名，可以同时绑定多个域名  server_name www.phpgao.com; server_name phpgao.com; #设定本虚拟主机的访问日志  access_log logs/www.phpgao.com.access.log main; #根目录可以设为全局，也可以针对某个路径，index同理  root /var/www/virtual/htdocs; index index.php index.html index.htm; #默认请求  location / { root /root; #定义服务器的默认网站根目录位置  index index.php index.html index.htm; #定义首页索引文件的名称  } # 定义错误提示页面  error_page 500 502 503 504 /50x.html; location = /50x.html { root /root; } #静态文件，nginx自己处理  location ~ ^/(images|javascript|js|css|flash|media|static)/ { root /var/www/virtual/htdocs; #过期30天，静态文件不怎么更新，过期可以设大一点，如果频繁更新，则可以设置得小一点。  expires 30d; } #PHP 脚本请求全部转发到 FastCGI处理. 使用FastCGI默认配置.  location ~ \\.php$ { fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; include fastcgi_params; } #设定查看Nginx状态的地址  location /NginxStatus { stub_status on; access_log on; auth_basic \"NginxStatus\"; auth_basic_user_file conf/htpasswd; } #禁止访问 .htxxx 文件  location ~ /\\.ht { deny all; } #负载均衡  #请求转向之前定义的服务器列表  proxy_pass http://servers2; #后端的Web服务器可以通过X-Forwarded-For获取用户真实IP  proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; #允许客户端请求的最大单文件字节数  client_max_body_size 10m; #缓冲区代理缓冲用户端请求的最大字节数  client_body_buffer_size 128k; #nginx跟后端服务器连接超时时间(代理连接超时)  proxy_connect_timeout 90; #后端服务器数据回传时间(代理发送超时)  proxy_send_timeout 90; #连接成功后，后端服务器响应时间(代理接收超时)  proxy_read_timeout 90; #设置代理服务器（nginx）保存用户头信息的缓冲区大小  proxy_buffer_size 4k; #proxy_buffers缓冲区  proxy_buffers 4 32k; #高负荷下缓冲大小（proxy_buffers*2）  proxy_busy_buffers_size 64k; #设定缓存文件夹大小  proxy_temp_file_write_size 64k; } ssl的配置请参考老高的另一篇文章为你的网站开启ssl\n常用配置 301重定向，将不带www的域名转向带www：\nserver{ listen 80; server_name phpgao.com; #rewrite ^/(.*)$ https://blog.phpgao.com/$1 permanent;  return 301 https://www.phpgao.com$request_uri; } rewrite，许多站点都启用了伪静态，其实原理很简单，如果发现文件或文件夹不存在，就会在URL加一个index.php，然后交给程序解析这个URL，整个过程是对浏览器透明的。\nlocation / { if (-f $request_filename/index.html) { rewrite (.*) $1/index.html break; } if (-f $request_filename/index.php) { rewrite (.*) $1/index.php; } if (!-f $request_filename) { rewrite (.*) /index.php; } } 总结 其实服务器的配置大同小异，只是有些功能侧重点不同而已。研究了服务器的配置后其实也大致了解了http是如何在服务器中流动的，了解这一点很重要，后期的优化就靠他了。\n参考：\nhttp://www.th7.cn/system/lin/201306/41314.shtml\nhttp://www.cnblogs.com/xiaogangqq123/archive/2011/03/02/1969006.html\n","wordCount":"493","inLanguage":"en","datePublished":"2014-09-17T03:28:00Z","dateModified":"2014-09-17T03:28:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/nginx_conf.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>nginx配置详解</h1><div class=post-meta>September 17, 2014&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-09-17_nginx_conf.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>#nginx配置详解</p><p>用了nginx这么久，很多配置还是记不牢，还是总结一下吧！</p><p>基本命令：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>service nginx reload
+service nginx start
+service nginx stop
+<span style=color:#75715e>#检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied</span>
+/usr/sbin/nginx -t
+<span style=color:#75715e>#平滑重启</span>
+nginx -s reload
+</code></pre></div><p>当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！</p><p>此文件就是主配置文件了。</p><p>##高层的配置</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#75715e>#运行用户
+</span><span style=color:#75715e></span><span style=color:#66d9ef>user</span> <span style=color:#e6db74>www</span>;    
+<span style=color:#75715e>#启动进程,一般等于cpu的总核数
+</span><span style=color:#75715e></span><span style=color:#66d9ef>worker_processes</span>  <span style=color:#e6db74>auto</span>;
+<span style=color:#75715e>#更改worker进程的最大打开文件数限制
+</span><span style=color:#75715e></span><span style=color:#66d9ef>worker_rlimit_nofile</span> <span style=color:#ae81ff>100000</span>; 
+
+<span style=color:#75715e>#全局错误日志及PID文件
+</span><span style=color:#75715e></span><span style=color:#66d9ef>error_log</span>  <span style=color:#e6db74>/var/log/nginx/error.log</span>;
+<span style=color:#66d9ef>pid</span>        <span style=color:#e6db74>/var/run/nginx.pid</span>;
+
+<span style=color:#75715e>#工作模式及连接数上限
+</span><span style=color:#75715e></span><span style=color:#66d9ef>events</span> {
+    <span style=color:#75715e>#每个工作进程允许最大的同时连接数 
+</span><span style=color:#75715e></span>    <span style=color:#f92672>worker_connections</span> <span style=color:#ae81ff>65535</span>; 
+    <span style=color:#75715e>#epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#如果你使用*BSD，你应该使用kqueue
+</span><span style=color:#75715e></span>    <span style=color:#f92672>use</span> <span style=color:#e6db74>epoll</span>;
+    <span style=color:#75715e>#单个后台worker process进程的最大并发链接数
+</span><span style=color:#75715e></span>    <span style=color:#f92672>worker_connections</span>  <span style=color:#ae81ff>1024</span>;
+    <span style=color:#75715e>#设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接
+</span><span style=color:#75715e></span>    <span style=color:#75715e># multi_accept on; 
+</span><span style=color:#75715e></span>}
+</code></pre></div><h2 id=http-模块>HTTP 模块<a hidden class=anchor aria-hidden=true href=#http-模块>#</a></h2><p>HTTP模块控制着nginx http处理的所有核心特性。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#75715e>#设定http服务器，利用它的反向代理功能提供负载均衡支持
+</span><span style=color:#75715e></span><span style=color:#66d9ef>http</span> 
+{
+    <span style=color:#75715e>#并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的
+</span><span style=color:#75715e></span>    <span style=color:#f92672>server_tokens</span>  <span style=color:#66d9ef>off</span>;
+    <span style=color:#75715e>#设定mime类型,类型由mime.type文件定义
+</span><span style=color:#75715e></span>    <span style=color:#f92672>include</span>       <span style=color:#e6db74>/etc/nginx/mime.types</span>;
+    <span style=color:#75715e>#设置文件使用的默认的MIME-type
+</span><span style=color:#75715e></span>    <span style=color:#f92672>default_type</span> <span style=color:#e6db74>text/html</span>;
+    <span style=color:#75715e>#设置我们的头文件中的默认的字符集
+</span><span style=color:#75715e></span>    <span style=color:#f92672>charset</span> <span style=color:#e6db74>UTF-8</span>;
+    <span style=color:#75715e>#设定日志格式
+</span><span style=color:#75715e></span>    <span style=color:#f92672>log_format</span>  <span style=color:#e6db74>main</span>  <span style=color:#e6db74>&#39;</span>$remote_addr <span style=color:#e6db74>-</span> $remote_user <span style=color:#e6db74>[</span>$time_local] <span style=color:#e6db74>&#34;</span>$request&#34; <span style=color:#e6db74>&#39;</span>
+                  <span style=color:#e6db74>&#39;</span>$status $body_bytes_sent <span style=color:#e6db74>&#34;</span>$http_referer&#34; <span style=color:#e6db74>&#39;</span>
+                  <span style=color:#e6db74>&#39;&#34;</span>$http_user_agent&#34; <span style=color:#e6db74>&#34;</span>$http_x_forwarded_for&#34;&#39;;
+    <span style=color:#75715e>#日志存放地址
+</span><span style=color:#75715e></span>    <span style=color:#f92672>access_log</span>    <span style=color:#e6db74>/var/log/nginx/access.log</span>;
+    <span style=color:#75715e>#告诉nginx只能记录严重的错误
+</span><span style=color:#75715e></span>    <span style=color:#f92672>error_log</span> <span style=color:#e6db74>/var/log/nginx/error.log</span> <span style=color:#e6db74>crit</span>;
+
+    <span style=color:#75715e>#sendfile 指令指定 nginx 是否调用 sendfile 函数（zero copy 方式）来输出文件，对于普通应用，
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#必须设为 on,如果用来进行下载等应用磁盘IO重负载应用，可设置为 off，以平衡磁盘与网络I/O处理速度，降低系统的uptime.
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#传统方式：硬盘 &gt;&gt; kernel buffer &gt;&gt; user buffer&gt;&gt; kernel socket buffer &gt;&gt;协议栈
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#sendfile：硬盘 &gt;&gt; kernel buffer (快速拷贝到kernelsocket buffer) &gt;&gt;协议栈
+</span><span style=color:#75715e></span>    <span style=color:#f92672>sendfile</span>        <span style=color:#66d9ef>on</span>;
+    <span style=color:#75715e>#告诉nginx在一个数据包里发送所有头文件，而不一个接一个的发送。默认已开启，可以不写
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#tcp_nopush     on;
+</span><span style=color:#75715e></span>    
+    <span style=color:#75715e>#连接超时时间
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#The parameters can differ from each other. Line Keep-Alive:timeout=time understands Mozilla and Konqueror. MSIE itself shutskeep-alive connection approximately after 60 seconds.
+</span><span style=color:#75715e></span>    <span style=color:#f92672>keepalive_timeout</span>  <span style=color:#ae81ff>65</span>;
+    <span style=color:#75715e>#告诉nginx不要缓存数据，而是一段一段的发送--当需要及时发送数据时，就应该给应用设置这个属性，这样发送一小块数据信息时就不能立即得到返回值
+</span><span style=color:#75715e></span>    <span style=color:#f92672>tcp_nodelay</span>        <span style=color:#66d9ef>on</span>;
+    
+    <span style=color:#75715e>#开启gzip压缩
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip</span> <span style=color:#66d9ef>on</span>;
+    <span style=color:#75715e>#设置对数据启用压缩的最少字节数
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip_min_length</span> <span style=color:#ae81ff>1k</span>;
+    <span style=color:#f92672>gzip_buffers</span> <span style=color:#ae81ff>4</span> <span style=color:#ae81ff>16k</span>;
+    <span style=color:#75715e>#gzip_http_version 1.0;
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#设置数据的压缩等级，这个等级可以是1-9之间的任意数值，9是最慢但是压缩比最大的。我们设置为4，这是一个比较折中的设置
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip_comp_level</span> <span style=color:#ae81ff>2</span>;
+    <span style=color:#75715e>#gzip针对一下类型文件进行压缩，可以适当增减
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip_types</span> <span style=color:#e6db74>text/plain</span> <span style=color:#e6db74>application/javascript</span> <span style=color:#e6db74>application/x-javascript</span> <span style=color:#e6db74>text/css</span> <span style=color:#e6db74>application/xml</span> <span style=color:#e6db74>text/javascript</span> <span style=color:#e6db74>application/x-httpd-php</span> <span style=color:#e6db74>image/jpeg</span> <span style=color:#e6db74>image/gif</span> <span style=color:#e6db74>image/png</span>;
+    <span style=color:#75715e>#和http头有关系，加个vary头，给代理服务器用的，有的浏览器支持压缩，有的不支持。
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#因此，为避免浪费不支持的也压缩，需要根据客户端的HTTP头来判断，是否需要压缩。
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip_vary</span> <span style=color:#66d9ef>off</span>;
+    <span style=color:#75715e>#在某些浏览器中禁止gzip
+</span><span style=color:#75715e></span>    <span style=color:#f92672>gzip_disable</span> <span style=color:#e6db74>&#34;MSIE</span> <span style=color:#e6db74>[1-6]\.&#34;</span>;
+
+
+    <span style=color:#75715e>#客户请求头缓冲大小，nginx默认会用client_header_buffer_size这个buffer来读取header值
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#如果header过大，它会使用large_client_header_buffers来读取
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#如果设置过小HTTP头/Cookie过大 会报400 错误 nginx 400 bad request
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#求行如果超过buffer，就会报HTTP 414错误(URI Too Long)
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#nginx接受最长的HTTP头部大小必须比其中一个buffer大，否则就会报400的
+</span><span style=color:#75715e></span>    <span style=color:#f92672>client_header_buffer_size</span>    <span style=color:#ae81ff>1k</span>;
+    <span style=color:#f92672>large_client_header_buffers</span>  <span style=color:#ae81ff>4</span> <span style=color:#ae81ff>4k</span>;
+    
+    <span style=color:#75715e>#打开缓存的同时也指定了缓存最大数目，以及缓存的时间
+</span><span style=color:#75715e></span>    <span style=color:#f92672>open_file_cache</span> <span style=color:#e6db74>max=100000</span> <span style=color:#e6db74>inactive=20s</span>; 
+    <span style=color:#75715e>#在open_file_cache中指定检测正确信息的间隔时间
+</span><span style=color:#75715e></span>    <span style=color:#f92672>open_file_cache_valid</span> <span style=color:#e6db74>30s</span>; 
+    <span style=color:#75715e>#定义了open_file_cache中指令参数不活动时间期间里最小的文件数
+</span><span style=color:#75715e></span>    <span style=color:#f92672>open_file_cache_min_uses</span> <span style=color:#ae81ff>2</span>; 
+    <span style=color:#75715e>#指定了当搜索一个文件时是否缓存错误信息，也包括再次给配置中添加文件
+</span><span style=color:#75715e></span>    <span style=color:#f92672>open_file_cache_errors</span> <span style=color:#66d9ef>on</span>; 
+    
+    <span style=color:#75715e>#设定负载均衡的服务器列表
+</span><span style=color:#75715e></span>    <span style=color:#f92672>upstream</span> <span style=color:#e6db74>servers1</span> {
+    <span style=color:#75715e>#weigth参数表示权值，权值越高被分配到的几率越大
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#本机上的Squid开启3128端口
+</span><span style=color:#75715e></span>    <span style=color:#f92672>server</span> 192.168.8.1:<span style=color:#ae81ff>3128</span> <span style=color:#e6db74>weight=5</span>;
+    <span style=color:#f92672>server</span> 192.168.8.2:<span style=color:#ae81ff>80</span>  <span style=color:#e6db74>weight=1</span>;
+    <span style=color:#f92672>server</span> 192.168.8.3:<span style=color:#ae81ff>80</span>  <span style=color:#e6db74>weight=6</span>;
+    }
+    
+    <span style=color:#75715e>#负载可以分组
+</span><span style=color:#75715e></span>    <span style=color:#f92672>upstream</span> <span style=color:#e6db74>servers2</span> {
+    <span style=color:#75715e>#weigth参数表示权值，权值越高被分配到的几率越大
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#本机上的Squid开启3128端口
+</span><span style=color:#75715e></span>    <span style=color:#f92672>server</span> 192.168.9.1:<span style=color:#ae81ff>3128</span> <span style=color:#e6db74>weight=2</span>;
+    <span style=color:#f92672>server</span> 192.168.9.2:<span style=color:#ae81ff>80</span>  <span style=color:#e6db74>weight=3</span>;
+    <span style=color:#f92672>server</span> 192.168.0.3:<span style=color:#ae81ff>80</span>  <span style=color:#e6db74>weight=1</span>;
+    }
+    
+    <span style=color:#75715e>## 
+</span><span style=color:#75715e></span>    <span style=color:#75715e># Virtual Host Configs 
+</span><span style=color:#75715e></span>    <span style=color:#75715e># aka our settings for specific servers 
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#下面包含了虚拟主机的设置
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#可以将虚拟主机的配置如www.phpgao.com保存为phpgao.conf放conf.d里
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#nginx就会自动索引到他
+</span><span style=color:#75715e></span>    <span style=color:#75715e>## 
+</span><span style=color:#75715e></span>    <span style=color:#f92672>include</span> <span style=color:#e6db74>/etc/nginx/conf.d/*.conf</span>;
+}
+</code></pre></div><h2 id=虚拟主机配置>虚拟主机配置<a hidden class=anchor aria-hidden=true href=#虚拟主机配置>#</a></h2><p>虚拟主机可以先指定一个空主机头<code>server_name _</code>，并return 500，以防止不带主机名的访问。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> 
+{ 
+    <span style=color:#f92672>listen</span> <span style=color:#ae81ff>80</span> <span style=color:#e6db74>default</span>; 
+    <span style=color:#f92672>server_name</span> <span style=color:#e6db74>_</span>;
+    <span style=color:#f92672>return</span> <span style=color:#ae81ff>500</span>; 
+}
+</code></pre></div><p>下面是某个主机的标准配置，可以将其保存到phpgao.conf文件中，放在conf.d文件夹，就可以正确的被nginx.conf识别到</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> 
+{
+    <span style=color:#75715e>#限制IP访问
+</span><span style=color:#75715e></span>    <span style=color:#f92672>allow</span> <span style=color:#ae81ff>10</span><span style=color:#e6db74>.57.22.172</span>;
+    <span style=color:#75715e>#表示除了上面allow的其他都禁止
+</span><span style=color:#75715e></span>    <span style=color:#f92672>deny</span> <span style=color:#e6db74>all</span>;
+    <span style=color:#75715e>#监听端口，可以基于IP，如1.1.1.1:8080
+</span><span style=color:#75715e></span>    <span style=color:#f92672>listen</span>       <span style=color:#ae81ff>80</span>;
+    <span style=color:#75715e>#绑定域名，可以同时绑定多个域名
+</span><span style=color:#75715e></span>    <span style=color:#f92672>server_name</span>  <span style=color:#e6db74>www.phpgao.com</span>;
+    <span style=color:#f92672>server_name</span>  <span style=color:#e6db74>phpgao.com</span>;
+    <span style=color:#75715e>#设定本虚拟主机的访问日志
+</span><span style=color:#75715e></span>    <span style=color:#f92672>access_log</span>  <span style=color:#e6db74>logs/www.phpgao.com.access.log</span>  <span style=color:#e6db74>main</span>;
+    
+    <span style=color:#75715e>#根目录可以设为全局，也可以针对某个路径，index同理
+</span><span style=color:#75715e></span>    <span style=color:#f92672>root</span> <span style=color:#e6db74>/var/www/virtual/htdocs</span>;
+    <span style=color:#f92672>index</span> <span style=color:#e6db74>index.php</span> <span style=color:#e6db74>index.html</span> <span style=color:#e6db74>index.htm</span>;
+    
+    <span style=color:#75715e>#默认请求
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> <span style=color:#e6db74>/</span> {
+        <span style=color:#f92672>root</span>   <span style=color:#e6db74>/root</span>;      <span style=color:#75715e>#定义服务器的默认网站根目录位置
+</span><span style=color:#75715e></span>        <span style=color:#f92672>index</span> <span style=color:#e6db74>index.php</span> <span style=color:#e6db74>index.html</span> <span style=color:#e6db74>index.htm</span>;   <span style=color:#75715e>#定义首页索引文件的名称
+</span><span style=color:#75715e></span>    }
+
+    <span style=color:#75715e># 定义错误提示页面
+</span><span style=color:#75715e></span>    <span style=color:#f92672>error_page</span>   <span style=color:#ae81ff>500</span> <span style=color:#ae81ff>502</span> <span style=color:#ae81ff>503</span> <span style=color:#ae81ff>504</span> <span style=color:#e6db74>/50x.html</span>;
+        <span style=color:#f92672>location</span> = <span style=color:#e6db74>/50x.html</span> {
+        <span style=color:#f92672>root</span>   <span style=color:#e6db74>/root</span>;
+    }
+
+    <span style=color:#75715e>#静态文件，nginx自己处理
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>^/(images|javascript|js|css|flash|media|static)/</span> {
+        <span style=color:#f92672>root</span> <span style=color:#e6db74>/var/www/virtual/htdocs</span>;
+        <span style=color:#75715e>#过期30天，静态文件不怎么更新，过期可以设大一点，如果频繁更新，则可以设置得小一点。
+</span><span style=color:#75715e></span>        <span style=color:#f92672>expires</span> <span style=color:#e6db74>30d</span>;
+    }
+    
+    <span style=color:#75715e>#PHP 脚本请求全部转发到 FastCGI处理. 使用FastCGI默认配置.
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>\.php$</span> {
+        <span style=color:#f92672>fastcgi_pass</span>   127.0.0.1:<span style=color:#ae81ff>9000</span>;
+        <span style=color:#f92672>fastcgi_index</span>  <span style=color:#e6db74>index.php</span>;
+        <span style=color:#f92672>fastcgi_param</span>  <span style=color:#e6db74>SCRIPT_FILENAME</span> $document_root$fastcgi_script_name;
+        <span style=color:#f92672>include</span>        <span style=color:#e6db74>fastcgi_params</span>;
+    }
+    
+    <span style=color:#75715e>#设定查看Nginx状态的地址
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> <span style=color:#e6db74>/NginxStatus</span> {
+        <span style=color:#f92672>stub_status</span>            <span style=color:#66d9ef>on</span>;
+        <span style=color:#f92672>access_log</span>              <span style=color:#66d9ef>on</span>;
+        <span style=color:#f92672>auth_basic</span>              <span style=color:#e6db74>&#34;NginxStatus&#34;</span>;
+        <span style=color:#f92672>auth_basic_user_file</span>  <span style=color:#e6db74>conf/htpasswd</span>;
+    }
+    
+    <span style=color:#75715e>#禁止访问 .htxxx 文件
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>/\.ht</span> {
+        <span style=color:#f92672>deny</span> <span style=color:#e6db74>all</span>;
+    }
+    
+    <span style=color:#75715e>#负载均衡
+</span><span style=color:#75715e></span>    <span style=color:#75715e>#请求转向之前定义的服务器列表
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_pass</span>  <span style=color:#e6db74>http://servers2</span>;
+    <span style=color:#75715e>#后端的Web服务器可以通过X-Forwarded-For获取用户真实IP
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_set_header</span> <span style=color:#e6db74>Host</span> $host;
+    <span style=color:#f92672>proxy_set_header</span> <span style=color:#e6db74>X-Real-IP</span> $remote_addr;
+    <span style=color:#f92672>proxy_set_header</span> <span style=color:#e6db74>X-Forwarded-For</span> $proxy_add_x_forwarded_for;
+    <span style=color:#75715e>#允许客户端请求的最大单文件字节数
+</span><span style=color:#75715e></span>    <span style=color:#f92672>client_max_body_size</span> <span style=color:#ae81ff>10m</span>;
+    <span style=color:#75715e>#缓冲区代理缓冲用户端请求的最大字节数
+</span><span style=color:#75715e></span>    <span style=color:#f92672>client_body_buffer_size</span> <span style=color:#ae81ff>128k</span>;
+    <span style=color:#75715e>#nginx跟后端服务器连接超时时间(代理连接超时)
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_connect_timeout</span> <span style=color:#ae81ff>90</span>;
+    <span style=color:#75715e>#后端服务器数据回传时间(代理发送超时)
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_send_timeout</span> <span style=color:#ae81ff>90</span>;
+    <span style=color:#75715e>#连接成功后，后端服务器响应时间(代理接收超时)
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_read_timeout</span> <span style=color:#ae81ff>90</span>;
+    <span style=color:#75715e>#设置代理服务器（nginx）保存用户头信息的缓冲区大小
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_buffer_size</span> <span style=color:#ae81ff>4k</span>;
+    <span style=color:#75715e>#proxy_buffers缓冲区
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_buffers</span> <span style=color:#ae81ff>4</span> <span style=color:#ae81ff>32k</span>;
+    <span style=color:#75715e>#高负荷下缓冲大小（proxy_buffers*2）
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_busy_buffers_size</span> <span style=color:#ae81ff>64k</span>;
+    <span style=color:#75715e>#设定缓存文件夹大小
+</span><span style=color:#75715e></span>    <span style=color:#f92672>proxy_temp_file_write_size</span> <span style=color:#ae81ff>64k</span>;
+
+}
+</code></pre></div><p>ssl的配置请参考老高的另一篇文章<a href=https://blog.phpgao.com/https_support.html>为你的网站开启ssl</a></p><h2 id=常用配置>常用配置<a hidden class=anchor aria-hidden=true href=#常用配置>#</a></h2><p>301重定向，将不带www的域名转向带www：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx>    <span style=color:#66d9ef>server{</span>
+    
+        <span style=color:#e6db74>listen</span>    <span style=color:#ae81ff>80</span>;
+        <span style=color:#66d9ef>server_name</span>  <span style=color:#e6db74>phpgao.com</span>;
+        <span style=color:#75715e>#rewrite  ^/(.*)$ https://blog.phpgao.com/$1 permanent;
+</span><span style=color:#75715e></span>        <span style=color:#66d9ef>return</span>    <span style=color:#ae81ff>301</span> <span style=color:#e6db74>https://www.phpgao.com</span>$request_uri;
+    <span style=color:#66d9ef>}</span>
+</code></pre></div><p>rewrite，许多站点都启用了伪静态，其实原理很简单，如果发现文件或文件夹不存在，就会在URL加一个<code>index.php</code>，然后交给程序解析这个URL，整个过程是对浏览器透明的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>location</span> <span style=color:#e6db74>/</span>
+{
+    <span style=color:#f92672>if</span> <span style=color:#e6db74>(-f</span> $request_filename/index.html<span style=color:#e6db74>)</span>
+    {
+        <span style=color:#f92672>rewrite</span> <span style=color:#e6db74>(.*)</span> $1/index.html <span style=color:#e6db74>break</span>;
+    }
+    <span style=color:#f92672>if</span> <span style=color:#e6db74>(-f</span> $request_filename/index.php<span style=color:#e6db74>)</span>
+    {
+        <span style=color:#f92672>rewrite</span> <span style=color:#e6db74>(.*)</span> $1/index.php;
+    }
+    <span style=color:#f92672>if</span> <span style=color:#e6db74>(!-f</span> $request_filename<span style=color:#e6db74>)</span>
+    {
+        <span style=color:#f92672>rewrite</span> <span style=color:#e6db74>(.*)</span> <span style=color:#e6db74>/index.php</span>;
+    }
+}
+</code></pre></div><h2 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h2><p>其实服务器的配置大同小异，只是有些功能侧重点不同而已。研究了服务器的配置后其实也大致了解了http是如何在服务器中流动的，了解这一点很重要，后期的优化就靠他了。</p><p>参考：</p><p><a href=http://www.th7.cn/system/lin/201306/41314.shtml>http://www.th7.cn/system/lin/201306/41314.shtml</a></p><p><a href=http://www.cnblogs.com/xiaogangqq123/archive/2011/03/02/1969006.html>http://www.cnblogs.com/xiaogangqq123/archive/2011/03/02/1969006.html</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/nginx/>nginx</a></li><li><a href=https://phpgao.github.io/tags/proxy/>proxy</a></li><li><a href=https://phpgao.github.io/tags/conf/>conf</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/change_system_lang.html><span class=title>« Prev Page</span><br><span>修改Linux系统语言</span></a>
+<a class=next href=https://phpgao.github.io/https_support.html><span class=title>Next Page »</span><br><span>为你的网站开启ssl支持</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>puppeteer on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/puppeteer/</link>
+    <description>Recent content in puppeteer on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Aug 2019 11:47:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/puppeteer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>puppeteer的使用教程2---更多设置</title>
+      <link>https://phpgao.github.io/puppeteer_basic_settings.html</link>
+      <pubDate>Mon, 19 Aug 2019 11:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/puppeteer_basic_settings.html</guid>
+      <description>&lt;p&gt;在第一篇，老高只是简单的介绍了puppeteer如何安装和简单的用法，在第二篇中，老高为大家带来chrome浏览器的一些基本设置，比如禁止gpu以提升性能等等！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>puppeteer的使用教程1---基本用法</title>
+      <link>https://phpgao.github.io/puppeteer.html</link>
+      <pubDate>Mon, 19 Aug 2019 10:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/puppeteer.html</guid>
+      <description>&lt;p&gt;说到爬虫，就不得不接触一些反爬的技术了。其中，针对一些无法绕过或者无法正常阅读的JS代码，我们的最终法宝就是无头浏览器了！&lt;/p&gt;
+&lt;p&gt;无头浏览器其实就是为我们提供了一个环境，这个环境让我们可以使用一些指令，这些指令基本能够包含人们能够用到的所有操作，所以特别适合用来做一些自动化测试(界面，接口或者漏洞)，或者爬虫。&lt;/p&gt;
+&lt;p&gt;在Puppeteer之前，还是有很多无头浏览器的，比如老牌的selenium，还有phantomJs，目前他们已经基本停止维护，所以我们今天的主角就是Puppeteer了！Puppeteer到底如何使用呢？使用的时候又有哪些坑呢？请听老高一一道来！&lt;/p&gt;
+&lt;p&gt;本篇是第一篇，主要让大家对Puppeteer有一个基本的概念！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

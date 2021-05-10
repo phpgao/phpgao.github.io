@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ASN on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/asn/</link>
+    <description>Recent content in ASN on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Mar 2018 03:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/asn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记录一下Telegram的IP地址</title>
+      <link>https://phpgao.github.io/telegram_ip.html</link>
+      <pubDate>Fri, 09 Mar 2018 03:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/telegram_ip.html</guid>
+      <description>&lt;p&gt;斐讯K3刷的官改版用GFWlist上不了TG，估计是TG的服务器IP没有进黑名单，解决办法是手动加入到GFW强制走代理列表。&lt;/p&gt;
+&lt;p&gt;20181115更新&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

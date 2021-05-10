@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>jekyll on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/jekyll/</link>
+    <description>Recent content in jekyll on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Jul 2014 04:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/jekyll/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在github写博客</title>
+      <link>https://phpgao.github.io/github_blog.html</link>
+      <pubDate>Sat, 26 Jul 2014 04:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github_blog.html</guid>
+      <description>&lt;p&gt;没想到jekyll这么火啊！&lt;/p&gt;
+&lt;p&gt;今天闲来无事，也想试试把博客搬到github玩玩。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

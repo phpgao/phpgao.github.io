@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tag on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/tag/</link>
+    <description>Recent content in tag on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Dec 2019 02:12:21 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/tag/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git-批量删除tag</title>
+      <link>https://phpgao.github.io/git_delete_tags.html</link>
+      <pubDate>Fri, 13 Dec 2019 02:12:21 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/git_delete_tags.html</guid>
+      <description>一句话代码
+# 批量删除远程tag git tag -l|xargs git push origin --delete tag # 批量删除本地tag git tag -l|xargs git tag -d </description>
+    </item>
+    
+    <item>
+      <title>docker的tag实验</title>
+      <link>https://phpgao.github.io/docker_tag.html</link>
+      <pubDate>Mon, 25 Jan 2016 11:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_tag.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2256355596.png&#34; alt=&#34;docker tag&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;git的tag功能是为了将代码的某个状态打上一个戳，通过tag我们可以很轻易的找到对应的提交。一般大家会在一些重要事件打tag，比如提测时，开发完成时，测试结束时，版本发布时等等。&lt;/p&gt;
+&lt;p&gt;对比git的tag，docker的tag似乎更加灵活，docker将文件等信息的变动抽象为一次次的commit，每一次commit以后可能走向不同的分支，当我们完成dockerfile的构建后，会生成一串无规则的字符串代表此次生成的ID，此时，tag的作用就是为他创建一个友好的NAME，方便我们对镜像库的管理。&lt;/p&gt;
+&lt;p&gt;有时候tag的过度友好也会对我们造成一些困惑，下面老高总结一下在使用docker tag时遇到的坑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git的tag操作</title>
+      <link>https://phpgao.github.io/git_tag.html</link>
+      <pubDate>Sun, 25 Jan 2015 12:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/git_tag.html</guid>
+      <description>&lt;h2 id=&#34;什么是tag&#34;&gt;什么是tag&lt;/h2&gt;
+&lt;p&gt;很简单，tag的字面意思是标签。在git中tag的功能就是把开发阶段做一个总结，打上标签，方便以后的查看与管理，通常用于版本发布。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>boot2docker on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/boot2docker/</link>
+    <description>Recent content in boot2docker on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Apr 2015 10:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/boot2docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在mac上安装并使用docker</title>
+      <link>https://phpgao.github.io/docker_on_mac.html</link>
+      <pubDate>Thu, 30 Apr 2015 10:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_mac.html</guid>
+      <description>&lt;p&gt;docker最近实在火的不行，老高最近也在使用，顺便记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装&lt;/h2&gt;
+&lt;p&gt;下载和安装主要参考下面的文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.docker.com/installation/mac/&#34;&gt;http://docs.docker.com/installation/mac/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://community.emc.com/docs/DOC-44372&#34;&gt;https://community.emc.com/docs/DOC-44372&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

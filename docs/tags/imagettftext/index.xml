@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>imagettftext on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/imagettftext/</link>
+    <description>Recent content in imagettftext on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 03 Oct 2014 06:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/imagettftext/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Call-to-undefined-function-imagettftext()解决方法</title>
+      <link>https://phpgao.github.io/undefined_imagettftext.html</link>
+      <pubDate>Fri, 03 Oct 2014 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/undefined_imagettftext.html</guid>
+      <description>老高在一个新环境中装DEDECMS的时候发现后台验证码无法显示。直接搜索一下这个错误，有人说session错误，有的说权限错误等等，这不胡扯么！只能看源代码了，定位到文件/include/vdimgck.php。出错的函数是imagettftext()，由于织梦使用了@将错误隐去，导致这次莫名的错误。将@去掉，错误立马出现：
+ Fatal error: Call to undefined function imagettftext()
+ 现在我们就明确了，出现错误的原因是PHP编译时没有加上FreeType。
+解决办法：
+首先编译安装FreeType，以2.4.0为例：
+wget http://download.savannah.gnu.org/releases/freetype/freetype-2.4.0.tar.bz2tar -jxf freetype-2.4.0.tar.bz2cd reetype-2.4.0# 安装到/usr/local/freetype./configure --prefix=/usr/local/freetypemake &amp;amp;&amp;amp; make install 下面我们重新编译PHP，加上参数--with-freetype-dir=/usr/local/freetype
+./configure \... \... \--with-freetype-dir=/usr/local/freetype 编译完成重启php
+kill -USR2 `cat /usr/local/php/var/run/php-fpm.pid` 再GD库中找到FreeType Support说明安装成功！
+需要注意的是，如果服务器freetype的版本是1.*，那么你可能需要改变编译参数为--with-ttf[=DIR]，以下转自ChinaUnix论坛：
+ 字库 配置开关 FreeType 1.x 要激活 FreeType 1.x 的支持，加上 &amp;ndash;with-ttf[=DIR]。
+FreeType 2 要激活 FreeType 2 的支持，加上 &amp;ndash;with-freetype-dir=DIR。
+T1lib 要激活 T1lib（Type 1 字体），加上 &amp;ndash;with-t1lib[=DIR]。</description>
+    </item>
+    
+  </channel>
+</rss>

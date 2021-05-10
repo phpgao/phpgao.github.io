@@ -1,0 +1,193 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>将你的PHP程序升级到PHP7.0 | 老高的技术博客</title><meta name=keywords content="PHP,centos"><meta name=description content="
+
+(以上图片来自互联网)
+这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/upgrade_to_php_70_on_centos7.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="将你的PHP程序升级到PHP7.0"><meta property="og:description" content="
+
+(以上图片来自互联网)
+这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/upgrade_to_php_70_on_centos7.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-12-06T13:20:00+00:00"><meta property="article:modified_time" content="2015-12-06T13:20:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="将你的PHP程序升级到PHP7.0"><meta name=twitter:description content="
+
+(以上图片来自互联网)
+这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"将你的PHP程序升级到PHP7.0","item":"https://phpgao.github.io/upgrade_to_php_70_on_centos7.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"将你的PHP程序升级到PHP7.0","name":"将你的PHP程序升级到PHP7.0","description":"(以上图片来自互联网)\n这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！\n","keywords":["PHP","centos"],"articleBody":"(以上图片来自互联网)\n这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！\n 操作环境centos7-minimal，其他的系统可能不适用\n 准备工作 第一步备份配置\n nginx的所有配置 PHP的所有配置 网站的备份脚本 网站的全备份  export LC_ALL=en_US.UTF-8 yum -y update yum -y install zsh git net-tools vim chsh -s /bin/zsh /bin/zsh sh -c \"$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)\" timedatectl set-timezone Asia/Shanghai 数据库 mariadb(mysql) yum -y install mariadb mariadb-server systemctl start mariadb.service systemctl enable mariadb.service # 初始化mariadb mysql_secure_installation # 新建数据库 CREATE DATABASE IF NOT EXISTS db DEFAULT CHARSET utf8 COLLATE utf8_general_ci; # 新用户并赋予权限 GRANT ALL PRIVILEGES ON db.* TO 'phpgao'@'localhost' IDENTIFIED BY 'phpgao'; FLUSH PRIVILEGES; # 改密码 SET PASSWORD FOR 'phpgao'@'localhost' = PASSWORD('phpgao'); # 安全配置 vim /etc/my.cnf # add # [mysqld] # bind-address = 127.0.0.1 nginx nginx如果需要某些高级特性，比如lua支持等，可以自己下载源码编译，这里老高图快，直接用官方源yum安装了\nrpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm yum -y install nginx systemctl restart nginx.service systemctl enable nginx.service # firewall(optional) firewall-cmd --permanent --zone=public --add-service=http firewall-cmd --reload # curl localhost php7.0的安装与配置 php70有两个源可以选择，一个是webtatic提供的，也就是php70w，那个w指得就是webtatic，另一个可以使用remi源。\nwebtatic方式 rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm yum -y install php70w php70w-opcache php70w-fpm php70w-mysql php70w-pdo php70w-pgsql php70w-xml php70w-mbstring php70w-mcrypt php70w-gd # or goto http://www.tecmint.com/install-and-compile-php-7-on-centos-7-and-debian-8/ # goto http://my.oschina.net/dingdayu/blog/513359?fromerr=Ob30V98l vim /etc/php.ini # 防止漏洞 # add # cgi.fix_pathinfo=0 sed -i 's/user = apache/user = nginx/' /etc/php-fpm.d/www.conf sed -i 's/group = apache/group = nginx/' /etc/php-fpm.d/www.conf systemctl enable php-fpm systemctl start php-fpm remi方式 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm yum --enablerepo=remi update remi-release yum --enablerepo=remi-php70 # 搜索PHP yum search php70 # 各取所需吧 yum install php70 php70-php-devel php70-php-fpm php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-gd php70-php-opcache php70-php-pdo php70-php-json php70-php-xml php70-php-pecl-xdebug php70-php-pecl-zip systemctl start php70-php-fpm.service systemctl enable php70-php-fpm.service sed -i 's/user = apache/user = nginx/' /etc/opt/remi/php70/php-fpm.d/www.conf sed -i 's/group = apache/group = nginx/' /etc/opt/remi/php70/php-fpm.d/www.conf # PHP的执行文件不再是php，而是被命名为php70，所以需要做一个软连接 # ➜ /home ll /usr/bin/|grep php # lrwxrwxrwx 1 root root 14 Dec 8 23:58 php - /usr/bin/php70 # lrwxrwxrwx 1 root root 32 Dec 8 23:49 php70 - /opt/remi/php70/root/usr/bin/php # lrwxrwxrwx 1 root root 36 Dec 8 23:49 php70-cgi - /opt/remi/php70/root/usr/bin/php-cgi # lrwxrwxrwx 1 root root 33 Dec 8 23:57 php70-pear - /opt/remi/php70/root/usr/bin/pear # lrwxrwxrwx 1 root root 38 Dec 8 23:49 php70-phar - /opt/remi/php70/root/usr/bin/phar.phar # 其他以此类推 ln -s /usr/bin/php70 /usr/bin/php # PHP的配置文件位于 ls /etc/opt/remi/php70/|grep -E '\\.conf|\\.ini' # pear.conf # php-fpm.conf # php.ini # 还有php-fpm.d/php.d目录下的单独配置 # 需要注意的是session的文件路径需要写入权限，在php-fpm.d/www.conf下定义，默认在 /var/opt/remi/php70/lib/php/session/ 下，opcache、wsdlcache同理。 php -v # PHP 7.0.0 (cli) (built: Dec 1 2015 16:06:41) ( NTS ) # Copyright (c) 1997-2015 The PHP Group # Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies # with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend # # # Technologies # with Xdebug v2.4.0RC2, Copyright (c) 2002-2015, by Derick Rethans nginx 与 php-fpm mkdir -p /var/log/nginx/phpgao # 以后将所有的虚拟主机配置放到这里 mkdir /etc/nginx/sites-available # 将所有运行中的站点放在这里 mkdir /etc/nginx/sites-enabled vim /etc/nginx/nginx.conf 注意下面的配置 nginx与php的配置就不多说了，\ninclude /etc/nginx/sites-enabled/*.conf; location ~ .*\\.(php|php5){ fastcgi_pass 127.0.0.1:9000; fastcgi_index index.php; #fastcgi_split_path_info ^(.+?.php)(/.*)$; fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name; include fastcgi_params; } 最后重启服务\n# 检查配置 nginx -t # 重启 systemctl reload nginx.service # 或者 nginx -s reload 计划任务 yum -y install crontabs systemctl start crond systemctl enable crond 检查服务 systemctl list-unit-files --type=service systemctl list-unit-files --type=service | grep enabled systemctl list-unit-files --type=service | grep disabled 防火墙（危险操作） # 检查端口 netstat -atpln # 结果应该是监听 0.0.0.0地址的只有nginx与sshd yum -y install firewalld systemctl start firewalld firewall-cmd --state # running # 查看所有zone firewall-cmd --list-all # 查看所有指定zone的所有规则 firewall-cmd --zone=public --list-all # 查看指定zone的服务 firewall-cmd --zone=public --list-services # 查看所有支持的zone firewall-cmd --get-zones # 查看全部启用的区域的特性 firewall-cmd --list-all-zones # 查看默认zone firewall-cmd --get-default-zone # 查看支持的service firewall-cmd --get-service # 将sshd端口和http服务加入规则 firewall-cmd --permanent --zone=public --add-port=yoursshd/tcp firewall-cmd --permanent --zone=public --add-service=http 重启 firewall-cmd --reload # 删除指定服务 firewall-cmd --zone=public --remove-service=http # 删除指定端口 firewall-cmd --zone=public --remove-port=22-23/tcp 参考：\n Installing and Configuring Nginx + PHP-FPM + MariaDB on CentOS 7 Nginx + PHP-FPM + MariaDB on CentOS 7 / RHEL 7 How To Install Linux, Nginx, MySQL, PHP (LEMP) stack On CentOS 7 server-world Upgrading PHP to PHP7.0 in a CentOS server with Vesta CP CentOS7下Firewall防火墙配置用法详解 ","wordCount":"583","inLanguage":"en","datePublished":"2015-12-06T13:20:00Z","dateModified":"2015-12-06T13:20:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/upgrade_to_php_70_on_centos7.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>将你的PHP程序升级到PHP7.0</h1><div class=post-meta>December 6, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-12-06_upgrade_to_php_70_on_centos7.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/12/515318547.png alt=PHP></p><p>(以上图片来自互联网)</p><p>这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！</p><blockquote><p>操作环境centos7-minimal，其他的系统可能不适用</p></blockquote><h2 id=准备工作>准备工作<a hidden class=anchor aria-hidden=true href=#准备工作>#</a></h2><p>第一步备份配置</p><ul><li>nginx的所有配置</li><li>PHP的所有配置</li><li>网站的备份脚本</li><li>网站的全备份</li></ul><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>export LC_ALL<span style=color:#f92672>=</span>en_US.UTF-8
+yum -y update
+yum -y install zsh git net-tools vim
+chsh -s /bin/zsh
+/bin/zsh
+sh -c <span style=color:#e6db74>&#34;</span><span style=color:#66d9ef>$(</span>curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span style=color:#66d9ef>)</span><span style=color:#e6db74>&#34;</span>
+timedatectl set-timezone Asia/Shanghai
+</code></pre></div><h2 id=数据库-mariadbmysql>数据库 mariadb(mysql)<a hidden class=anchor aria-hidden=true href=#数据库-mariadbmysql>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>yum -y install mariadb mariadb-server
+systemctl start mariadb.service
+systemctl enable mariadb.service
+
+# 初始化mariadb
+mysql_secure_installation
+
+# 新建数据库
+CREATE DATABASE IF NOT EXISTS db DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+# 新用户并赋予权限
+GRANT ALL PRIVILEGES ON db.* TO &#39;phpgao&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;phpgao&#39;;
+FLUSH PRIVILEGES;
+
+# 改密码
+SET PASSWORD FOR &#39;phpgao&#39;@&#39;localhost&#39; = PASSWORD(&#39;phpgao&#39;);
+
+# 安全配置
+vim /etc/my.cnf
+# add
+# [mysqld]
+# bind-address = 127.0.0.1
+</code></pre></div><h1 id=nginx>nginx<a hidden class=anchor aria-hidden=true href=#nginx>#</a></h1><p>nginx如果需要某些高级特性，比如lua支持等，可以自己下载源码编译，这里老高图快，直接用官方源yum安装了</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>rpm -Uvh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+
+yum -y install nginx
+
+systemctl restart nginx.service
+systemctl enable nginx.service
+
+# firewall(optional)
+
+firewall-cmd --permanent --zone=public --add-service=http
+firewall-cmd --reload
+
+# curl localhost
+</code></pre></div><h2 id=php70的安装与配置>php7.0的安装与配置<a hidden class=anchor aria-hidden=true href=#php70的安装与配置>#</a></h2><p>php70有两个源可以选择，一个是<a href=https://webtatic.com/packages/php70/>webtatic</a>提供的，也就是php70w，那个w指得就是<strong>webtatic</strong>，另一个可以使用<a href=http://rpms.famillecollet.com>remi源</a>。</p><h3 id=webtatic方式>webtatic方式<a hidden class=anchor aria-hidden=true href=#webtatic方式>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
+
+yum -y install php70w php70w-opcache php70w-fpm php70w-mysql php70w-pdo php70w-pgsql php70w-xml php70w-mbstring php70w-mcrypt php70w-gd
+
+<span style=color:#75715e># or goto http://www.tecmint.com/install-and-compile-php-7-on-centos-7-and-debian-8/</span>
+<span style=color:#75715e># goto http://my.oschina.net/dingdayu/blog/513359?fromerr=Ob30V98l</span>
+
+vim /etc/php.ini
+
+<span style=color:#75715e># 防止漏洞</span>
+<span style=color:#75715e># add</span>
+<span style=color:#75715e># cgi.fix_pathinfo=0</span>
+
+sed -i <span style=color:#e6db74>&#39;s/user = apache/user = nginx/&#39;</span> /etc/php-fpm.d/www.conf
+sed -i <span style=color:#e6db74>&#39;s/group = apache/group = nginx/&#39;</span> /etc/php-fpm.d/www.conf
+
+
+systemctl enable php-fpm
+systemctl start php-fpm
+</code></pre></div><h3 id=remi方式>remi方式<a hidden class=anchor aria-hidden=true href=#remi方式>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+wget http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
+ 
+yum --enablerepo=remi update remi-release
+yum --enablerepo=remi-php70
+
+# 搜索PHP
+yum search php70
+
+# 各取所需吧
+yum install php70 php70-php-devel php70-php-fpm php70-php-mbstring php70-php-mcrypt php70-php-mysqlnd php70-php-gd php70-php-opcache php70-php-pdo php70-php-json php70-php-xml php70-php-pecl-xdebug php70-php-pecl-zip
+
+
+systemctl start  php70-php-fpm.service
+systemctl enable  php70-php-fpm.service
+
+
+sed -i &#39;s/user = apache/user = nginx/&#39; /etc/opt/remi/php70/php-fpm.d/www.conf
+sed -i &#39;s/group = apache/group = nginx/&#39; /etc/opt/remi/php70/php-fpm.d/www.conf
+
+
+# PHP的执行文件不再是php，而是被命名为php70，所以需要做一个软连接
+
+# ➜  /home  ll /usr/bin/|grep php
+# lrwxrwxrwx   1 root root     14 Dec  8 23:58 php -&gt; /usr/bin/php70
+# lrwxrwxrwx   1 root root     32 Dec  8 23:49 php70 -&gt; /opt/remi/php70/root/usr/bin/php
+# lrwxrwxrwx   1 root root     36 Dec  8 23:49 php70-cgi -&gt; /opt/remi/php70/root/usr/bin/php-cgi
+# lrwxrwxrwx   1 root root     33 Dec  8 23:57 php70-pear -&gt; /opt/remi/php70/root/usr/bin/pear
+# lrwxrwxrwx   1 root root     38 Dec  8 23:49 php70-phar -&gt; /opt/remi/php70/root/usr/bin/phar.phar
+
+# 其他以此类推
+ln -s /usr/bin/php70 /usr/bin/php
+
+# PHP的配置文件位于
+ls /etc/opt/remi/php70/|grep -E &#39;\.conf|\.ini&#39;
+# pear.conf
+# php-fpm.conf
+# php.ini
+# 还有php-fpm.d/php.d目录下的单独配置
+# 需要注意的是session的文件路径需要写入权限，在php-fpm.d/www.conf下定义，默认在 /var/opt/remi/php70/lib/php/session/ 下，opcache、wsdlcache同理。
+
+php -v
+# PHP 7.0.0 (cli) (built: Dec  1 2015 16:06:41) ( NTS )
+# Copyright (c) 1997-2015 The PHP Group
+# Zend Engine v3.0.0, Copyright (c) 1998-2015 Zend Technologies
+#    with Zend OPcache v7.0.6-dev, Copyright (c) 1999-2015, by Zend # # # Technologies
+#    with Xdebug v2.4.0RC2, Copyright (c) 2002-2015, by Derick Rethans
+</code></pre></div><h2 id=nginx-与-php-fpm>nginx 与 php-fpm<a hidden class=anchor aria-hidden=true href=#nginx-与-php-fpm>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>mkdir -p /var/log/nginx/phpgao
+
+# 以后将所有的虚拟主机配置放到这里
+mkdir /etc/nginx/sites-available
+# 将所有运行中的站点放在这里
+mkdir /etc/nginx/sites-enabled
+
+vim /etc/nginx/nginx.conf
+</code></pre></div><h3 id=注意下面的配置>注意下面的配置<a hidden class=anchor aria-hidden=true href=#注意下面的配置>#</a></h3><p>nginx与php的配置就不多说了，</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>include /etc/nginx/sites-enabled/*.conf;
+
+    location ~ .*\.(php|php5){
+        fastcgi_pass   127.0.0.1:9000;
+        fastcgi_index  index.php;
+        #fastcgi_split_path_info ^(.+?.php)(/.*)$;
+        fastcgi_param  SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include    fastcgi_params;
+    }
+</code></pre></div><p>最后重启服务</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 检查配置
+nginx -t
+# 重启
+systemctl reload nginx.service
+# 或者
+nginx -s reload
+</code></pre></div><h2 id=计划任务>计划任务<a hidden class=anchor aria-hidden=true href=#计划任务>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>yum -y install crontabs
+systemctl start crond
+systemctl enable crond
+</code></pre></div><h2 id=检查服务>检查服务<a hidden class=anchor aria-hidden=true href=#检查服务>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>systemctl list-unit-files --type=service
+
+systemctl list-unit-files --type=service | grep enabled
+systemctl list-unit-files --type=service | grep disabled
+</code></pre></div><h2 id=防火墙危险操作>防火墙（危险操作）<a hidden class=anchor aria-hidden=true href=#防火墙危险操作>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 检查端口
+netstat -atpln
+# 结果应该是监听 0.0.0.0地址的只有nginx与sshd
+
+yum -y install firewalld
+systemctl start firewalld
+
+firewall-cmd --state
+# running
+
+# 查看所有zone
+firewall-cmd --list-all
+# 查看所有指定zone的所有规则
+firewall-cmd --zone=public --list-all
+# 查看指定zone的服务
+firewall-cmd --zone=public --list-services
+# 查看所有支持的zone
+firewall-cmd --get-zones
+# 查看全部启用的区域的特性
+firewall-cmd --list-all-zones
+# 查看默认zone
+firewall-cmd --get-default-zone
+# 查看支持的service
+firewall-cmd --get-service
+
+# 将sshd端口和http服务加入规则
+firewall-cmd --permanent --zone=public --add-port=yoursshd/tcp
+firewall-cmd --permanent --zone=public --add-service=http
+重启
+firewall-cmd --reload
+
+# 删除指定服务
+firewall-cmd --zone=public --remove-service=http
+
+# 删除指定端口
+firewall-cmd --zone=public --remove-port=22-23/tcp
+
+</code></pre></div><p>参考：</p><ol><li><a href=https://www.simplehelix.com/blog/uncategorized/installing-and-configuring-nginx-php-fpm-mariadb-on-centos-7/>Installing and Configuring Nginx + PHP-FPM + MariaDB on CentOS 7</a></li><li><a href=http://www.itzgeek.com/how-tos/linux/centos-how-tos/nginx-php-fpm-mariadb-on-centos-7-rhel-7.html>Nginx + PHP-FPM + MariaDB on CentOS 7 / RHEL 7</a></li><li><a href=https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-centos-7>How To Install Linux, Nginx, MySQL, PHP (LEMP) stack On CentOS 7</a></li><li><a href="http://www.server-world.info/en/note?os=CentOS_7">server-world</a></li><li><a href=http://hasin.me/2015/12/06/upgrading-php-to-php7-0-in-a-centos-server-with-vesta-cp/>Upgrading PHP to PHP7.0 in a CentOS server with Vesta CP</a></li><li><a href=http://www.centoscn.com/CentOS/Intermediate/2015/0313/4879.html>CentOS7下Firewall防火墙配置用法详解</a></li></ol></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/php/>PHP</a></li><li><a href=https://phpgao.github.io/tags/centos/>centos</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/sb_china_train.html><span class=title>« Prev Page</span><br><span>傻逼铁道部</span></a>
+<a class=next href=https://phpgao.github.io/black_friday_in_2015.html><span class=title>Next Page »</span><br><span>年年有黑五，今年活儿特多</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

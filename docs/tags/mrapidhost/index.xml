@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mrapidhost on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/mrapidhost/</link>
+    <description>Recent content in mrapidhost on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 22 Sep 2015 02:37:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/mrapidhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[VPS]老高推荐VPS----MrRapidHost</title>
+      <link>https://phpgao.github.io/mrapidhost.html</link>
+      <pubDate>Tue, 22 Sep 2015 02:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mrapidhost.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1388919397.png&#34; alt=&#34;MrRapidHost&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;MrRapidHost目前有一款VPS性价比不错，很适合搭梯子。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

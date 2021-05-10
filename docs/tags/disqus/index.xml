@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>disqus on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/disqus/</link>
+    <description>Recent content in disqus on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 13 Dec 2015 12:40:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/disqus/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>终于全站https了，看到小绿锁开心不？</title>
+      <link>https://phpgao.github.io/enable_https.html</link>
+      <pubDate>Sun, 13 Dec 2015 12:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/enable_https.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/3818874258.png&#34; alt=&#34;https&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;今天花了点时间把全站改为https了，其实主要是把多说砍了！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

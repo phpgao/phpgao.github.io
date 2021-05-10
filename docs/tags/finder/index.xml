@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>finder on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/finder/</link>
+    <description>Recent content in finder on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Nov 2015 07:01:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/finder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小技巧---在Finder中显示路径</title>
+      <link>https://phpgao.github.io/show_path_in_finder.html</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/show_path_in_finder.html</guid>
+      <description>&lt;p&gt;在默认的Finder中是直接看不到路径的，除非你把某个文件拖到终端里。。。&lt;/p&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/536081178.png&#34; alt=&#34;Finder&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;如何解决呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在Finder当前目录打开终端</title>
+      <link>https://phpgao.github.io/open_terminal_in_finder.html</link>
+      <pubDate>Sat, 27 Dec 2014 11:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/open_terminal_in_finder.html</guid>
+      <description>&lt;p&gt;在终端里打开Finder很简单，使用&lt;code&gt;open .&lt;/code&gt;即可&lt;/p&gt;
+&lt;h2 id=&#34;系统设置&#34;&gt;系统设置&lt;/h2&gt;
+&lt;p&gt;在Finder打开terminal这个功能其实是有的，但是系统默认没有打开，我们可以通过如下方法将其打开&lt;/p&gt;
+&lt;p&gt;进入系统偏好设置-&amp;gt;键盘-&amp;gt;快捷键-&amp;gt;服务。&lt;/p&gt;
+&lt;p&gt;在右边&lt;code&gt;新建位于文件夹位置的终端窗口&lt;/code&gt;上打勾。&lt;/p&gt;
+&lt;p&gt;如此设置后，在Finder中右击某文件，在出现的菜单中找到服务，然后点击&lt;code&gt;新建位于文件夹位置的终端窗口&lt;/code&gt;即可！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

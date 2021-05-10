@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>adduser on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/adduser/</link>
+    <description>Recent content in adduser on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 21 Oct 2016 07:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/adduser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>当用户不存在时执行adduser</title>
+      <link>https://phpgao.github.io/adduser_if_user_do_not_exist.html</link>
+      <pubDate>Fri, 21 Oct 2016 07:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adduser_if_user_do_not_exist.html</guid>
+      <description>使用了id工具，构建docker镜像的时候这一句很有用！
+id -u laogao &amp;amp;&amp;gt;/dev/null || useradd -u 30105 laogao </description>
+    </item>
+    
+  </channel>
+</rss>

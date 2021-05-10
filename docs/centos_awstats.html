@@ -1,0 +1,201 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>centos-awstats简单安装教程 | 老高的技术博客</title><meta name=keywords content="centos,aws,awstats"><meta name=description content="本文关键字:awstats linux centos nginx
+Awstats官网：http://www.awstats.org/
+发行协议：GNU GPL
+
+Awstats is short for Advanced Web statistic.
+
+Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。
+再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。
+注意：以下内容以配置老高的域名为例。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/centos_awstats.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="centos-awstats简单安装教程"><meta property="og:description" content="本文关键字:awstats linux centos nginx
+Awstats官网：http://www.awstats.org/
+发行协议：GNU GPL
+
+Awstats is short for Advanced Web statistic.
+
+Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。
+再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。
+注意：以下内容以配置老高的域名为例。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/centos_awstats.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-01-30T08:08:00+00:00"><meta property="article:modified_time" content="2015-01-30T08:08:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="centos-awstats简单安装教程"><meta name=twitter:description content="本文关键字:awstats linux centos nginx
+Awstats官网：http://www.awstats.org/
+发行协议：GNU GPL
+
+Awstats is short for Advanced Web statistic.
+
+Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。
+再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。
+注意：以下内容以配置老高的域名为例。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"centos-awstats简单安装教程","item":"https://phpgao.github.io/centos_awstats.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"centos-awstats简单安装教程","name":"centos-awstats简单安装教程","description":"本文关键字:awstats linux centos nginx\nAwstats官网：http://www.awstats.org/\n发行协议：GNU GPL\n Awstats is short for Advanced Web statistic.\n Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。\n再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。\n注意：以下内容以配置老高的域名为例。\n","keywords":["centos","aws","awstats"],"articleBody":"本文关键字:awstats linux centos nginx\nAwstats官网：http://www.awstats.org/\n发行协议：GNU GPL\n Awstats is short for Advanced Web statistic.\n Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。\n再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。\n注意：以下内容以配置老高的域名为例。\n下载源码 下载地址：http://www.awstats.org/#DOWNLOAD\n老高推荐下载Last stable\n# Last stable version is 7.3 - 2014-07-23 07:50 # 2015-01-30 21:50:29 cd /tmp wget http://heanet.dl.sourceforge.net/project/awstats/AWStats/7.3/awstats-7.3.tar.gz tar -zxf awstats-7.3.tar.gz # rename mv awstats-7.3 awstats # move to /usr/share/ # 至于为什么要移至/usr/share/，后文有原因 mv awstats /usr/share/ cd /usr/share/awstats # dir tree tree -L 1 . ├── docs ├── README.TXT ├── tools # tools即我们需要的计算工具 └── wwwroot # wwwroot是我们需要的web视图 配置计算工具 接下来我们初始化我们需要计算的内容\n首先需要明确几个文件的位置：\n 日志文件(eg. /var/log/nginx/xxx.access.log) 配置文件(eg. /etc/awstats) 工具类文件(eg. /usr/share/awstats/tools)  下面我们进入tools文件夹，开始走第一条线。\n新建配置文件 cd tools perl awstats_configure.pl Do you want to continue setup from this NON standard directory [yN] ? y # 是否配置web服务器 Config file path ('none' to skip web server setup): none # 是否新建一个配置文件 Do you want me to build a new AWStats config/profile file (required if first install) [y/N] ? y Your web site, virtual server or profile name: www.phpgao.com # 你要分析的域名 # 这一步选择你的配置文件路径 In which directory do you plan to store your config file(s) ? Default: /etc/awstats Directory path to store config file(s) (Enter for default): Enter # 继续回车，配置完毕 # 接下来自定义我们的配置文件 vim /etc/awstats/awstats.www.phpgao.com.conf 配置日志路径 如果要统计那就必须指定统计日志的路径。\nAWS为我们提供了很多种办法，帮助我们找到正确的文件。\n配置路径的变量一般在line 50左右，在它的上面可以找到编写路径的提示。\n%YYYY # 可以代替4位年份 %YY # 可以代替2位年份 %MM # 可以代替2位月份 %DD # 可以代替2位天数 %HH # 可以代替2位小时 %YYYY-%MM-%DD-%HH # 在程序执行的时候自动以当前日期2015-01-31-10(此时)替换，是不是很方便？ 指定日志文件一般有两种常见的形式\n# 指定单个文件 LogFile=\"/var/log/nginx/logs/xxxx.access.log\" # 指定多个文件 # 需要使用/usr/share/awstats/tools/logresolvemerge.pl脚本指定你需要的所有日志文件，然后再文本最后加入一个字符 \"|\"，表示合并所有文件结果。 LogFile=\"/usr/share/awstats/tools/logresolvemerge.pl /var/log/nginx/logs/xxx.access.log /var/log/nginx/logs/yyy.access.log|\" 配置日志格式 一般nginx的日志格式不需要配置，如果需要变动，请修改大约line 122，系统预置了四种格式供选择。\n# 1 - Apache or Lotus Notes/Domino native combined log format (NCSA combined/XLF/ELF log format) # 2 - IIS or ISA format (IIS W3C log format). See FAQ-COM115 For ISA. # 3 - Webstar native log format. # 4 - Apache or Squid native common log format (NCSA common/CLF log format) LogFormat=1 指定计算结果目录 系统计算出的结果是需要保存在磁盘上的，如果自定义这个路径呢？\n在配置文件line 203附近，你可以找到系统的默认配置。\nDirData=\"/var/lib/awstats\" # custom DirData=\"your_path_to/awstats\" # 然后我们需要对这个路径的权限做一些处理 chown -R www:www awstats # www用户我们稍后创建 网页端刷新数据 如果需要在网页里能够主动刷新数据，请找到约line 239，并修改内容。\n# modify AllowToUpdateStatsFromBrowser=1 开启地理位置支持 如果想得到如下结果，需要安装并开启GEO支持。\n# 安装GEO支持 yum install GeoIP GeoIP-data GeoIP-devel perl-Geo-IP -y # 安装完毕后移至 配置文件约 line 1429 # uncomment LoadPlugin=\"geoip GEOIP_STANDARD /usr/share/GeoIP/GeoIP.dat\" 解决中文乱码 如果安装AWS后搜索处中文乱码，请修改约line 1204，删除注释。\nLoadPlugin=\"decodeutfkeys\" 测试并更新配置 解决了以上问题，我们就可以开始动手测试配置是否正确了。\nperl /usr/share/awstats/wwwroot/cgi-bin/awstats.pl -config=www.phpgao.com ------------------------------------------ From data in log file \"/usr/share/awstats/tools/logresolvemerge.pl /var/log/nginx/logs/xxx.access.log /var/log/nginx/logs/yyy.access.log|\"... Phase 1 : First bypass old records, searching new record... Searching new records from beginning of log file... Phase 2 : Now process new records (Flush history on disk after 20000 hosts)... Jumped lines in file: 0 Parsed lines in file: 42302 Found 42 dropped records, Found 0 comments, Found 0 blank records, Found 404 corrupted records, Found 41801 old records, Found 55 new qualified records. ------------------------------------------ # 如果看到这种信息说明你的配置文件没有问题，否则请检查。 至此，配置完毕\n配置服务器 配置nginx虚拟主机 如果你仔细浏览/usr/share/awstats/tools目录，会发现一个nginx文件夹，没错，源码包已经为我们提供了nginx的虚拟主机配置文件了，我们只需要简单的修改一下即可！\n 老高把虚拟主机都放到vhosts文件夹下，然后再主配置文件里使用include vhost/*.conf引用，是不是很方便！\n # 配置虚拟主机 cp awstats-nginx.conf /etc/nginx/vhost/awstats.conf vim /etc/nginx/vhosts/awstats.conf 以下是老高给出的配置示例文件，为统计查看绑定的域名为aws.phpgao.com，端口80。\nserver { listen 80; server_name aws.phpgao.com; access_log /var/log/nginx/awstats.access_log main; error_log /var/log/nginx/awstats.error_log info; root /var/www/localhost/htdocs; index index.html; # Restrict access  # auth_basic \"Restricted\";  # auth_basic_user_file /etc/awstats/htpasswd;  # Static awstats files: HTML files stored in DOCUMENT_ROOT/awstats/  location /awstats/classes/ { alias /usr/share/awstats/wwwroot/classes/; } location /awstats/css/ { alias /usr/share/awstats/wwwroot/css/; } location /awstats/icon/ { alias /usr/share/awstats/wwwroot/icon/; } location /awstats-icon/ { alias /usr/share/awstats/wwwroot/icon/; } location /awstats/js/ { alias /usr/share/awstats/wwwroot/js/; } location /awstatsicons/ { alias /usr/share/awstats/wwwroot/icon/; } # Dynamic stats.  location ~ ^/cgi-bin/(awredir|awstats)\\.pl { gzip off; fastcgi_pass 127.0.0.1:9000; fastcgi_param SCRIPT_FILENAME /usr/share/awstats/wwwroot/cgi-bin/fcgi.php; fastcgi_param X_SCRIPT_FILENAME /usr/share/awstats/wwwroot$fastcgi_script_name; fastcgi_param X_SCRIPT_NAME $fastcgi_script_name; include fastcgi_params; } #Rewrite  location ~ ^/([a-z0-9-_\\.]+)$ { return 301 $scheme://aws.phpgao.com/cgi-bin/awstats.pl?config=$1; } } 默认网址 ： http://aws.phpgao.com/cgi-bin/awstats.pl?config=www.phpgao.com 伪静态后 ： http://aws.phpgao.com/www.phpgao.com\n开启认证 由于AWS没有提供认证模块，所以我们使用nginx的认证，我们需要为nginx提供一个认证文件。\n有两种办法生成此文件\n1.htpasswd命令\n# 路径可以自己指定 htpasswd -c /etc/awstats/htpasswd username:password # 删除文件中Restrict access的注释 Restrict access auth_basic \"Restricted\"; auth_basic_user_file /etc/awstats/htpasswd; 2.PHP生成\n$password = 'www.phpgao.com'; // 对密码进行加密 $password = crypt($password, base64_encode($password)); // 获得加密后的密码 echo $password; 然后将得出的密码手动写入文件/etc/awstats/htpasswd，格式如下\nusername1:xucqMk13TfooE username2:YXTfb3xWKOMBM 效果如下：\n完\nReference\n http://kamisama.me/2013/03/20/install-configure-and-protect-awstats-for-multiple-nginx-vhost-on-debian/ http://www.fancycedar.info/2013/06/apache-nginx-htpasswd/ ","wordCount":"563","inLanguage":"en","datePublished":"2015-01-30T08:08:00Z","dateModified":"2015-01-30T08:08:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/centos_awstats.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>centos-awstats简单安装教程</h1><div class=post-meta>January 30, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-01-30_centos_awstats.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>本文关键字:awstats linux centos nginx</p><p>Awstats官网：<a href=http://www.awstats.org/>http://www.awstats.org/</a></p><p>发行协议：GNU GPL</p><blockquote><p>Awstats is short for Advanced Web statistic.</p></blockquote><p>Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。</p><p>再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。</p><p>注意：以下内容以配置老高的域名为例。</p><p><img loading=lazy src=http://ww3.sinaimg.cn/large/6735b7fatw1eorvt807nlj20oz08e0th.jpg alt=Awstats安装说明></p><h2 id=下载源码>下载源码<a hidden class=anchor aria-hidden=true href=#下载源码>#</a></h2><p>下载地址：<a href=http://www.awstats.org/#DOWNLOAD>http://www.awstats.org/#DOWNLOAD</a></p><p>老高推荐下载<strong>Last stable</strong></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Last stable version is 7.3 - 2014-07-23 07:50</span>
+<span style=color:#75715e># 2015-01-30 21:50:29</span>
+cd /tmp
+wget http://heanet.dl.sourceforge.net/project/awstats/AWStats/7.3/awstats-7.3.tar.gz
+tar -zxf awstats-7.3.tar.gz
+
+<span style=color:#75715e># rename</span>
+mv awstats-7.3 awstats
+
+<span style=color:#75715e># move to /usr/share/</span>
+<span style=color:#75715e># 至于为什么要移至/usr/share/，后文有原因</span>
+mv awstats /usr/share/
+cd /usr/share/awstats
+
+<span style=color:#75715e># dir tree</span>
+tree -L <span style=color:#ae81ff>1</span>
+.
+├── docs
+├── README.TXT
+├── tools           <span style=color:#75715e># tools即我们需要的计算工具</span>
+└── wwwroot         <span style=color:#75715e># wwwroot是我们需要的web视图</span>
+</code></pre></div><h2 id=配置计算工具>配置计算工具<a hidden class=anchor aria-hidden=true href=#配置计算工具>#</a></h2><p>接下来我们初始化我们需要计算的内容</p><p>首先需要明确几个文件的位置：</p><ol><li>日志文件(eg. <code>/var/log/nginx/xxx.access.log</code>)</li><li>配置文件(eg. <code>/etc/awstats</code>)</li><li>工具类文件(eg. <code>/usr/share/awstats/tools</code>)</li></ol><p>下面我们进入tools文件夹，开始走第一条线。</p><h3 id=新建配置文件>新建配置文件<a hidden class=anchor aria-hidden=true href=#新建配置文件>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd tools
+perl awstats_configure.pl
+Do you want to <span style=color:#66d9ef>continue</span> setup from this NON standard directory <span style=color:#f92672>[</span>yN<span style=color:#f92672>]</span> ? y
+
+<span style=color:#75715e># 是否配置web服务器</span>
+Config file path <span style=color:#f92672>(</span><span style=color:#e6db74>&#39;none&#39;</span> to skip web server setup<span style=color:#f92672>)</span>:
+&gt;none
+
+<span style=color:#75715e># 是否新建一个配置文件</span>
+Do you want me to build a new AWStats config/profile
+file <span style=color:#f92672>(</span>required <span style=color:#66d9ef>if</span> first install<span style=color:#f92672>)</span> <span style=color:#f92672>[</span>y/N<span style=color:#f92672>]</span> ? y
+
+Your web site, virtual server or profile name:
+&gt;www.phpgao.com <span style=color:#75715e># 你要分析的域名</span>
+
+<span style=color:#75715e># 这一步选择你的配置文件路径</span>
+In which directory <span style=color:#66d9ef>do</span> you plan to store your config file<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span> ?
+Default: /etc/awstats
+Directory path to store config file<span style=color:#f92672>(</span>s<span style=color:#f92672>)</span> <span style=color:#f92672>(</span>Enter <span style=color:#66d9ef>for</span> default<span style=color:#f92672>)</span>:
+&gt;Enter
+
+<span style=color:#75715e># 继续回车，配置完毕</span>
+<span style=color:#75715e># 接下来自定义我们的配置文件</span>
+
+vim /etc/awstats/awstats.www.phpgao.com.conf
+</code></pre></div><h3 id=配置日志路径>配置日志路径<a hidden class=anchor aria-hidden=true href=#配置日志路径>#</a></h3><p>如果要统计那就必须指定统计日志的路径。</p><p>AWS为我们提供了很多种办法，帮助我们找到正确的文件。</p><p>配置路径的变量一般在line 50左右，在它的上面可以找到编写路径的提示。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>%YYYY <span style=color:#75715e># 可以代替4位年份</span>
+%YY   <span style=color:#75715e># 可以代替2位年份</span>
+%MM   <span style=color:#75715e># 可以代替2位月份</span>
+%DD   <span style=color:#75715e># 可以代替2位天数</span>
+%HH   <span style=color:#75715e># 可以代替2位小时</span>
+
+%YYYY-%MM-%DD-%HH  <span style=color:#75715e># 在程序执行的时候自动以当前日期2015-01-31-10(此时)替换，是不是很方便？</span>
+</code></pre></div><p>指定日志文件一般有两种常见的形式</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 指定单个文件</span>
+LogFile<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/var/log/nginx/logs/xxxx.access.log&#34;</span>
+
+<span style=color:#75715e># 指定多个文件</span>
+<span style=color:#75715e># 需要使用/usr/share/awstats/tools/logresolvemerge.pl脚本指定你需要的所有日志文件，然后再文本最后加入一个字符 &#34;|&#34;，表示合并所有文件结果。</span>
+
+LogFile<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/usr/share/awstats/tools/logresolvemerge.pl /var/log/nginx/logs/xxx.access.log  /var/log/nginx/logs/yyy.access.log|&#34;</span>
+
+</code></pre></div><h3 id=配置日志格式>配置日志格式<a hidden class=anchor aria-hidden=true href=#配置日志格式>#</a></h3><p>一般nginx的日志格式不需要配置，如果需要变动，请修改大约line 122，系统预置了四种格式供选择。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 1 - Apache or Lotus Notes/Domino native combined log format (NCSA combined/XLF/ELF log format)</span>
+<span style=color:#75715e># 2 - IIS or ISA format (IIS W3C log format). See FAQ-COM115 For ISA.</span>
+<span style=color:#75715e># 3 - Webstar native log format.</span>
+<span style=color:#75715e># 4 - Apache or Squid native common log format (NCSA common/CLF log format)</span>
+LogFormat<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+</code></pre></div><h3 id=指定计算结果目录>指定计算结果目录<a hidden class=anchor aria-hidden=true href=#指定计算结果目录>#</a></h3><p>系统计算出的结果是需要保存在磁盘上的，如果自定义这个路径呢？</p><p>在配置文件line 203附近，你可以找到系统的默认配置。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>DirData<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;/var/lib/awstats&#34;</span>
+<span style=color:#75715e># custom</span>
+DirData<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;your_path_to/awstats&#34;</span>
+<span style=color:#75715e># 然后我们需要对这个路径的权限做一些处理</span>
+
+chown -R www:www awstats
+<span style=color:#75715e># www用户我们稍后创建</span>
+</code></pre></div><h3 id=网页端刷新数据>网页端刷新数据<a hidden class=anchor aria-hidden=true href=#网页端刷新数据>#</a></h3><p>如果需要在网页里能够主动刷新数据，请找到约line 239，并修改内容。</p><p><img loading=lazy src=http://ww3.sinaimg.cn/large/6735b7fagw1eosij24axej20av01t74e.jpg alt=主动刷新数据></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># modify</span>
+AllowToUpdateStatsFromBrowser<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+</code></pre></div><h3 id=开启地理位置支持>开启地理位置支持<a hidden class=anchor aria-hidden=true href=#开启地理位置支持>#</a></h3><p>如果想得到如下结果，需要安装并开启GEO支持。</p><p><img loading=lazy src=http://ww3.sinaimg.cn/large/6735b7fagw1eosi1a6i0pj20ln07776j.jpg alt=地理位置支持></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 安装GEO支持</span>
+yum install GeoIP GeoIP-data GeoIP-devel perl-Geo-IP -y
+
+<span style=color:#75715e># 安装完毕后移至 配置文件约 line 1429</span>
+<span style=color:#75715e># uncomment</span>
+LoadPlugin<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;geoip GEOIP_STANDARD  /usr/share/GeoIP/GeoIP.dat&#34;</span>
+</code></pre></div><h3 id=解决中文乱码>解决中文乱码<a hidden class=anchor aria-hidden=true href=#解决中文乱码>#</a></h3><p>如果安装AWS后搜索处中文乱码，请修改约line 1204，删除注释。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>LoadPlugin<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;decodeutfkeys&#34;</span>
+</code></pre></div><h3 id=测试并更新配置>测试并更新配置<a hidden class=anchor aria-hidden=true href=#测试并更新配置>#</a></h3><p>解决了以上问题，我们就可以开始动手测试配置是否正确了。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>perl /usr/share/awstats/wwwroot/cgi-bin/awstats.pl -config<span style=color:#f92672>=</span>www.phpgao.com
+
+------------------------------------------
+From data in log file <span style=color:#e6db74>&#34;/usr/share/awstats/tools/logresolvemerge.pl /var/log/nginx/logs/xxx.access.log  /var/log/nginx/logs/yyy.access.log|&#34;</span>...
+Phase <span style=color:#ae81ff>1</span> : First bypass old records, searching new record...
+Searching new records from beginning of log file...
+Phase <span style=color:#ae81ff>2</span> : Now process new records <span style=color:#f92672>(</span>Flush history on disk after <span style=color:#ae81ff>20000</span> hosts<span style=color:#f92672>)</span>...
+Jumped lines in file: <span style=color:#ae81ff>0</span>
+Parsed lines in file: <span style=color:#ae81ff>42302</span>
+ Found <span style=color:#ae81ff>42</span> dropped records,
+ Found <span style=color:#ae81ff>0</span> comments,
+ Found <span style=color:#ae81ff>0</span> blank records,
+ Found <span style=color:#ae81ff>404</span> corrupted records,
+ Found <span style=color:#ae81ff>41801</span> old records,
+ Found <span style=color:#ae81ff>55</span> new qualified records.
+------------------------------------------
+<span style=color:#75715e># 如果看到这种信息说明你的配置文件没有问题，否则请检查。</span>
+</code></pre></div><p>至此，配置完毕</p><h2 id=配置服务器>配置服务器<a hidden class=anchor aria-hidden=true href=#配置服务器>#</a></h2><h3 id=配置nginx虚拟主机>配置nginx虚拟主机<a hidden class=anchor aria-hidden=true href=#配置nginx虚拟主机>#</a></h3><p>如果你仔细浏览<code>/usr/share/awstats/tools</code>目录，会发现一个nginx文件夹，没错，源码包已经为我们提供了nginx的虚拟主机配置文件了，我们只需要简单的修改一下即可！</p><blockquote><p>老高把虚拟主机都放到vhosts文件夹下，然后再主配置文件里使用<code>include vhost/*.conf</code>引用，是不是很方便！</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 配置虚拟主机</span>
+cp awstats-nginx.conf /etc/nginx/vhost/awstats.conf
+
+vim /etc/nginx/vhosts/awstats.conf
+</code></pre></div><p>以下是老高给出的配置示例文件，为统计查看绑定的域名为aws.phpgao.com，端口80。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> {
+    <span style=color:#f92672>listen</span>  <span style=color:#ae81ff>80</span>;
+    <span style=color:#f92672>server_name</span> <span style=color:#e6db74>aws.phpgao.com</span>;
+    <span style=color:#f92672>access_log</span> <span style=color:#e6db74>/var/log/nginx/awstats.access_log</span> <span style=color:#e6db74>main</span>;
+    <span style=color:#f92672>error_log</span> <span style=color:#e6db74>/var/log/nginx/awstats.error_log</span> <span style=color:#e6db74>info</span>;
+    <span style=color:#f92672>root</span> <span style=color:#e6db74>/var/www/localhost/htdocs</span>;
+    <span style=color:#f92672>index</span> <span style=color:#e6db74>index.html</span>;
+
+    <span style=color:#75715e># Restrict access
+</span><span style=color:#75715e></span>    <span style=color:#75715e># auth_basic &#34;Restricted&#34;;
+</span><span style=color:#75715e></span>    <span style=color:#75715e># auth_basic_user_file /etc/awstats/htpasswd;
+</span><span style=color:#75715e></span>
+
+    <span style=color:#75715e># Static awstats files: HTML files stored in DOCUMENT_ROOT/awstats/
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstats/classes/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/classes/</span>;
+    }
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstats/css/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/css/</span>;
+    }
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstats/icon/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/icon/</span>;
+    }
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstats-icon/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/icon/</span>;
+    }
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstats/js/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/js/</span>;
+    }
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/awstatsicons/</span> {
+        <span style=color:#f92672>alias</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/icon/</span>;
+    }
+    
+    <span style=color:#75715e># Dynamic stats.
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>^/cgi-bin/(awredir|awstats)\.pl</span> {
+        <span style=color:#f92672>gzip</span> <span style=color:#66d9ef>off</span>;
+        <span style=color:#f92672>fastcgi_pass</span> 127.0.0.1:<span style=color:#ae81ff>9000</span>;
+        <span style=color:#f92672>fastcgi_param</span> <span style=color:#e6db74>SCRIPT_FILENAME</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot/cgi-bin/fcgi.php</span>;
+        <span style=color:#f92672>fastcgi_param</span> <span style=color:#e6db74>X_SCRIPT_FILENAME</span> <span style=color:#e6db74>/usr/share/awstats/wwwroot</span>$fastcgi_script_name;
+        <span style=color:#f92672>fastcgi_param</span> <span style=color:#e6db74>X_SCRIPT_NAME</span> $fastcgi_script_name;
+        <span style=color:#f92672>include</span> <span style=color:#e6db74>fastcgi_params</span>;
+    }
+
+    <span style=color:#75715e>#Rewrite
+</span><span style=color:#75715e></span>    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>^/([a-z0-9-_\.]+)$</span> {
+        <span style=color:#f92672>return</span> <span style=color:#ae81ff>301</span> $scheme://aws.phpgao.com/cgi-bin/awstats.pl?config=$1;
+    }
+}
+</code></pre></div><p>默认网址 ： <code>http://aws.phpgao.com/cgi-bin/awstats.pl?config=www.phpgao.com</code>
+伪静态后 ： <code>http://aws.phpgao.com/www.phpgao.com</code></p><h3 id=开启认证>开启认证<a hidden class=anchor aria-hidden=true href=#开启认证>#</a></h3><p>由于AWS没有提供认证模块，所以我们使用nginx的认证，我们需要为nginx提供一个认证文件。</p><p>有两种办法生成此文件</p><p>1.htpasswd命令</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 路径可以自己指定</span>
+htpasswd -c /etc/awstats/htpasswd username:password
+<span style=color:#75715e># 删除文件中Restrict access的注释</span>
+    Restrict access
+    auth_basic <span style=color:#e6db74>&#34;Restricted&#34;</span>;
+    auth_basic_user_file /etc/awstats/htpasswd;
+</code></pre></div><p>2.PHP生成</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php>$password <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;www.phpgao.com&#39;</span>; 
+<span style=color:#75715e>// 对密码进行加密 
+</span><span style=color:#75715e></span>$password <span style=color:#f92672>=</span> <span style=color:#a6e22e>crypt</span>($password, <span style=color:#a6e22e>base64_encode</span>($password)); 
+<span style=color:#75715e>// 获得加密后的密码 
+</span><span style=color:#75715e></span><span style=color:#66d9ef>echo</span> $password;
+</code></pre></div><p>然后将得出的密码手动写入文件/etc/awstats/htpasswd，格式如下</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>username1:xucqMk13TfooE
+username2:YXTfb3xWKOMBM
+</code></pre></div><p>效果如下：</p><p><img loading=lazy src=http://ww4.sinaimg.cn/large/6735b7fagw1eoskm7mn7mj209y0763yu.jpg alt=密码验证></p><p>完</p><p>Reference</p><ul><li><a href=http://kamisama.me/2013/03/20/install-configure-and-protect-awstats-for-multiple-nginx-vhost-on-debian/>http://kamisama.me/2013/03/20/install-configure-and-protect-awstats-for-multiple-nginx-vhost-on-debian/</a></li><li><a href=http://www.fancycedar.info/2013/06/apache-nginx-htpasswd/>http://www.fancycedar.info/2013/06/apache-nginx-htpasswd/</a></li></ul></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/centos/>centos</a></li><li><a href=https://phpgao.github.io/tags/aws/>aws</a></li><li><a href=https://phpgao.github.io/tags/awstats/>awstats</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/pyfetion.html><span class=title>« Prev Page</span><br><span>python的飞信发送类</span></a>
+<a class=next href=https://phpgao.github.io/svn_cli.html><span class=title>Next Page »</span><br><span>SVN命令行操作</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

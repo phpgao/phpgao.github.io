@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>module on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/module/</link>
+    <description>Recent content in module on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Nov 2019 05:13:26 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/module/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang的goproxy</title>
+      <link>https://phpgao.github.io/goproxy.html</link>
+      <pubDate>Tue, 26 Nov 2019 05:13:26 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/goproxy.html</guid>
+      <description>既然go module已经官方支持，那么以后新建项目就直接go mod init了，但是老高在最近的开发中遇到了一个超级难题，包下不下来。。。
+经过一番摸索和尝试，发现最好用的还是GOPROXY，于是给大家推荐几个GOPROXY地址，方便后期使用
+export GOPROXY=https://goproxy.cn,direct, export GOPROXY=https://goproxy.io,direct, export GOPROXY=https://mirrors.aliyun.com/goproxy,direct, </description>
+    </item>
+    
+  </channel>
+</rss>

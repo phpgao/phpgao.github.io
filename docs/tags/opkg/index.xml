@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>opkg on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/opkg/</link>
+    <description>Recent content in opkg on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Apr 2015 03:42:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/opkg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米路由器mini折腾之安装shadowsocks-libev-spec</title>
+      <link>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</link>
+      <pubDate>Sun, 12 Apr 2015 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</guid>
+      <description>&lt;p&gt;DNS污染问题很是让人烦心，小米路由器mini的pandorabox自带了shadowsocks-libev，没有UDP转发功能，在期待下次pandorabox的更新能够自带shadowsocks-libev-spec的时候，我们还可以选择手动安装，下面老高就介绍一下如何安装。&lt;/p&gt;
+&lt;p&gt;你也许能通过以下关键字找到本文：&lt;/p&gt;
+&lt;p&gt;如何安装shadowsocks-libev-spec
+如何配置shadowsocks-libev-spec
+openwrt\pandorabox如何转发UDP
+如果解决DNS污染&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之配置opkg篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_opkg.html</link>
+      <pubDate>Sun, 22 Mar 2015 15:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_opkg.html</guid>
+      <description>&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+&lt;p&gt;opkg是openwrt里的软件包管理器，类似mac下的brew、Ubuntu下的apt-get和centos下的yum。&lt;/p&gt;
+&lt;p&gt;但是为什么有很多同学都没办法在openwrt中使用opkg，其主要原因其实嵌入式的硬件繁多，不像我们一般PC只有i386和AMD64之分。&lt;/p&gt;
+&lt;p&gt;此方法适用于OpenWRT,Pandorabox,官方系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之Python篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_python.html</link>
+      <pubDate>Tue, 10 Feb 2015 13:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_python.html</guid>
+      <description>&lt;p&gt;上回老高写了翻墙篇，寻思着这openwrt下能不能跑个python，继续折腾！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

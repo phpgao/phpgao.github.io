@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>update on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/update/</link>
+    <description>Recent content in update on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 13 May 2014 01:40:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/update/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次主题更新</title>
+      <link>https://phpgao.github.io/theme_update.html</link>
+      <pubDate>Tue, 13 May 2014 01:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/theme_update.html</guid>
+      <description>国外的主题对中文支持不好很不和谐，需要修改的地方很多，用起来也很麻烦，但是古语有云：
+ Bitch is bitchy!Taylor is Swift!
+ 下面就记录一下更新主题前后的工作。动手能力强的可以参考这里自己写一个子主题，也可以完美解决！
+ 预先备份原来主题文件夹，起个名字叫old_theme。留个后悔药 备份路径wp-content/themes/sparkling，sparkling就是老高的主题 升级主题，原主题被覆盖 老高修改过的文件包括(old_theme文件夹里按时间排序就能找到)  header.php -&amp;ndash;|-&amp;ndash;|seo优化 functions.php -&amp;ndash;|&amp;ndash;常用函数 single.php -&amp;ndash;|-&amp;ndash;| 解决手机底部链接打不开的样式问题 content.php -&amp;ndash;|-&amp;ndash;|-主页显示文章字数限制，参考这篇文章 footer.php &amp;mdash;&amp;mdash;&amp;ndash;统计代码已解决   在新的主题文件夹中找到对应文件并修改 子主题以后讲  </description>
+    </item>
+    
+  </channel>
+</rss>

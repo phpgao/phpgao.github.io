@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>webkit on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/webkit/</link>
+    <description>Recent content in webkit on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Jul 2014 06:36:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>webkit研究(1)</title>
+      <link>https://phpgao.github.io/webkit.html</link>
+      <pubDate>Tue, 15 Jul 2014 06:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/webkit.html</guid>
+      <description>&lt;h2 id=&#34;web-browser-diy&#34;&gt;Web Browser DIY&lt;/h2&gt;
+&lt;p&gt;此文是希望使用开源软件打造一个自己专属的webkit内核浏览器！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

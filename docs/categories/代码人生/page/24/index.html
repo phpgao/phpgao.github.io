@@ -1,0 +1,194 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>代码人生 | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="代码人生"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="代码人生"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/categories/>Categories</a></div><h1>代码人生</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2>使用PHP的CURL模拟POST采集</h2></header><section class=entry-content><p>这个函数很不错，curl函数中的header还可以加入随机UA等功能防屏蔽，以后改改做自己的采集类！
+/**
+QQ群:223494678
+函数:模拟post得到所有分页的页面信息
+参数:
+string $EVENTARGUMENT
+string $VIEWSTATE
+string $EVENTVALIDATION
+string $EVENTTARGET
+返回:
+string
+/**/
+function getn($EVENTARGUMENT = "", $VIEWSTATE = "", $EVENTVALIDATION = "", $EVENTTARGET = "pager"){
+$args = array();
+if($EVENTARGUMENT){
+$args = array(
+'__EVENTTARGET'=>$EVENTTARGET,
+'__EVENTARGUMENT'=>$EVENTARGUMENT,
+'__VIEWSTATE'=>$VIEWSTATE,
+'__EVENTVALIDATION'=>$EVENTVALIDATION,
+'__VIEWSTATEENCRYPTED'=>'',
+'search$txtFundName='=>'',
+'search$txtFundManger'=>'',
+'search$ddlFoundationDateOperater'=>'1',
+'search$txtFoundationDate'=>'',
+'search$dltFundType$ctl01$chkFundType'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$0'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$1'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$2'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$3'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$4'=>'on',
+'search$chklFundStatus$0'=>'on',
+'search$ddlFundOrg'=>'0',
+'search$txtFundOrgName'=>'',
+'search$ddlStatisticDateOperater'=>'1',
+'search$txtStatisticDate'=>'',
+'search$radlStatisticMode'=>'1'
+);
+}
+$user_agent = "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535....</p></section><footer class=entry-footer>May 19, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 使用PHP的CURL模拟POST采集" href=https://phpgao.github.io/curl_post.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>PHP清除html格式</h2></header><section class=entry-content><p>做采集的都知道，一般采集过来的内容难免会带有html标签，如果有太多的标签会影响之后的数据分析或提取，所以需要过滤掉！PHP已经为我们提供了很多清除html格式的方法了，下面就让老高介绍一下。
+strip_tags strip_tags($str) 去掉 HTML 及 PHP 的标记 语法: string strip_tags(string str); 传回值: 字串 函式种类: 资料处理 内容说明 : 解析：本函式可去掉字串中包含的任何 HTML 及 PHP 的标记字串。若是字串的 HTML 及 PHP 标签原来就有错，例如少了大于的符号，则也会传回错误。这个函数和 fgetss() 有着相同的功能
+例子
+echo strip_tags("Hello &lt;b>world!&lt;/b>"); # Hello world! htmlspecialchars 这个函数把html中的标签转换为html实体，博客的代码展示就必须使用这个函数，要不贴出来的代码就会被执行了。 预定义的字符是： & （和号） 成为 & ” （双引号） 成为 ” ‘ （单引号） 成为 ‘ &lt; （小于） 成为 &lt; > （大于） 成为 >
+例子
+$new = htmlspecialchars("&lt;a href='test'>Test&lt;/a>", ENT_QUOTES); echo $new; # &amp;lt;a href=&amp;#039;test&amp;#039;&amp;gt;Test&amp;lt;/a&amp;gt; # 如果需要展现&lt;br>，那么浏览器解析HTML的时候会自动将他变为换行 # 但是通过htmlspecialchars就可以让&lt; 变为 &amp;#039; 与htmlspecialchars功能相反的函数是htmlspecialchars_decode，他会把HTML实体转化为字符！...</p></section><footer class=entry-footer>May 18, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP清除html格式" href=https://phpgao.github.io/html_tag_clear.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>通过微博的mid获取微博的URL</h2></header><section class=entry-content><p>代码网上参考的，一共有两种，自己优化了一下：
+1.离线方法
+参考：http://www.iganlei.cn/demo/186.html
+&lt;?php
+function int10to62($int10)
+{
+static $str62keys;
+$str62keys = array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+$s62 = '';
+$r = 0;
+while ($int10 != 0) {
+$r = $int10 % 62;
+$s62 = $str62keys[$r] . $s62;
+$int10 = floor($int10 / 62);
+}
+return $s62;
+}
+function getCodeByMid($mid)
+{
+$url = '';
+for ($i = strlen($mid) - 7; $i > -7; $i -= 7) //从最后往前以7字节为一组读取mid
+{
+$offset1 = $i &lt; 0 ? 0 : $i;
+$offset2 = $i + 7;
+$num = substr($mid, $offset1, $offset2 - $offset1);
+$num = int10to62($num);
+$url = $num ....</p></section><footer class=entry-footer>May 16, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 通过微博的mid获取微博的URL" href=https://phpgao.github.io/mid_weibo_url.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>数据库持久连接</h2></header><section class=entry-content><p>搜PHP长链接把这个搜出来了，2006年的帖子比较久远了，希望对你有帮助！
+转自http://bbs.phpchina.com/forum.php?mod=viewthread&tid=4577&page=1 中forest的回帖：
+永久的数据库连接是指在脚本结束运行时不关闭的连接。当收到一个永久连接的请求时。PHP 将检查是否已经存在一个（前面已经开启的）相同的永久连接。如果存在，将直接使用这个连接；如果不存在，则建立一个新的连接。所谓“相同”的连接是指用相同的用户名和密码到相同主机的连接。
+对 web 服务器的工作和分布负载没有完全理解的读者可能会错误地理解永久连接的作用。特别的，永久连接不会在相同的连接上提供建立“用户会话”的能力，也不提供有效建立事务的能力。实际上，从严格意义上来讲，永久连接不会提供任何非永久连接无法提供的特殊功能。
+为什么？
+这和 web 服务器工作的方式有关。web 服务器可以用三种方法来利用 PHP 生成 web 页面。
+第一种方法是将 PHP 用作一个“外壳”。以这种方法运行，PHP 会为向 web 服务器提出的每个 PHP 页面请求生成并结束一个 PHP 解释器线程。由于该线程会随每个请求的结束而结束，因此任何在这个线程中利用的任何资源（例如指向 SQL 数据库服务器的连接）都会随线程的结束而关闭。在这种情况下，使用永久连接不会获得任何地改变――因为它们根本不是永久的。
+第二，也是最常用的方法，是把 PHP 用作多进程 web 服务器的一个模块，这种方法目前只适用于 Apache。对于一个多进程的服务器，其典型特征是有一个父进程和一组子进程协调运行，其中实际生成 web 页面的是子进程。每当客户端向父进程提出请求时，该请求会被传递给还没有被其它的客户端请求占用的子进程。这也就是说当相同的客户端第二次向服务端提出请求时，它将有可能被一个不同的子进程来处理。在开启了一个永久连接后，所有请求 SQL 服务的后继页面都能够重新使用这个已经建立的 SQL Server 连接。
+最后一种方法是将 PHP 用作多线程 web 服务器的一个插件。目前 PHP 4 已经支持 ISAPI、WSAPI 和 NSAPI（在 Windows 环境下），这些使得 PHP 可以被用作诸如 Netscape FastTrack (iPlanet)、Microsoft’s Internet Information Server (IIS) 和 O’Reilly’s WebSite Pro 等多线程 web 服务器的插件。永久连接的行为和前面所描述的多过程模型在本质上是相同的。注意 PHP 3 不支持 SAPI。...</p></section><footer class=entry-footer>May 16, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 数据库持久连接" href=https://phpgao.github.io/db_pconnect.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>PHP获取新浪微博token</h2></header><section class=entry-content><p>最近在做采集微博的功能，由于要自动采集，所以必须获得最终的用户的token，获取了这个token以后就可以为所欲为啦！
+贴代码
+$s = new SaeTOAuthV2 ( WB_AKEY, WB_SKEY);
+//准备post数据
+$post ['action'] = 'login';
+//$post ['display'] = 'default';
+//$post ['withOfficalFlag'] = 0;
+//$post ['quick_auth'] = null;
+//$post ['withOfficalAccount'] = '';
+//$post ['scope'] = '';
+//$post ['ticket'] = '';
+//$post ['isLoginSina'] = '';
+//$post ['isLoginSina'] = 'code';
+//regCallback|appkey62需要预先请求一次拿到
+//$post ['regCallback'] = $match_regCallback[1];
+//这里不用urlencode,http_build_query会自动处理
+$post ['redirect_uri'] = WB_CALLBACK_URL;
+$post ['client_id'] = WB_AKEY;
+//$post ['appkey62'] = $match_appkey[1];
+//$post ['state'] = '';
+//$post ['verifyToken'] = null;
+//$post ['from'] = '';
+$post ['userId'] = '*******';//测试用户名
+$post ['passwd'] = '*******';//测试密码,不要有！@￥%……&*（）这些符号，最好全是字符或数字，否则验证会失败
+$post = http_build_query($post);
+//UA貌似没有也行，保险起见还是加上吧
+$UA = 'Mozilla/5....</p></section><footer class=entry-footer>May 15, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP获取新浪微博token" href=https://phpgao.github.io/weibo_token.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>新浪微博商业API使用参考</h2></header><section class=entry-content><p>工作中需要微博的商业API，记录一下 不了解的TX先去看说说明 http://open.weibo.com/wiki/商业数据API
+商业数据API：包括数据分析、舆情监测、获取全量粉丝三大特性，同时还有实时数据推送、历史数据检索、监测粉丝变化趋势、活跃&活动粉丝分析等多项功能，协助和指引企业开展社会化营销，让真实的用户数据变为企业的决策。 申请试用 申请试用的邮箱为 businessapi@staff.sina.com.cn 给这个地址发邮件说明意图即可 这一步挺麻烦的，需要提供很多企业信息，需要注意的是：商业API只提供商业用途，所以如果你的APP的服务对象不是企业，请绕道。 然后填写两张申请单，分别为 订阅服务申请单、REST接口申请单-测试版。 一个是订阅微博，粉丝登上数据用的，另一个是标准API，可以使用搜索等高级接口！
+价格 确定试用时间 试用时间一般两周，请充分利用好这宝贵的时间吧！
+测试 REST接口很简单，和普通接口一样直接调用。就是订阅接口比较麻烦，当你生成订阅列表后，他会把满足你需要的数据放进一个类似队列的东西，然后你需要不断从这个队列中取出你需要的信息，而且这个获取过程需要HTTP长链接。。。。。。说起来很复杂，其实做起来更复杂 :mad: ！ 下面就来讲讲订阅接口，先看看这两个文档：
+订阅接口的服务手册 http://open.weibo.com/wiki/Subscription_guide 订阅管理接口 http://open.weibo.com/wiki/C/2/subscribe/update_subscribe 看完这两个接口就基本知道了订阅到底是干啥用的。
+订阅开启 首先，开启了订阅接口服务以后，你会有推送时间，还有推送IP等很多需要设置的东西，当然完成了这些基本设置后，就可以开始配置订阅规则了，订阅规则基于以下两个条件：
+订阅用户
+订阅关键字 从subscribe/update_subscribe这个接口的示例来看，订阅有以下特点：
+订阅规则即刻生效 规则可以添加，修改 规则可以随时查询 每次修改量很有限（用户：50个；关键词：20个） 使用订阅 添加与删除一样 需要说明的是：
+$params['subid'] = '***'; //你的订阅ID 新浪提供
+$params['source'] = '***'; //你的APPid
+session_start();
+include_once( 'config.php' );
+include_once( 'saetv2.ex.class.php' );
+$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
+$uid_get = $c->get_uid();
+$uid = $uid_get['uid'];
+//获取所有关注，默认一次50个，可以自己写循环
+$friends = $c->friends_by_id($uid);
+$subscribe = '';
+foreach( $friends['users'] as $value )
+{
+$subscribe ....</p></section><footer class=entry-footer>May 12, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 新浪微博商业API使用参考" href=https://phpgao.github.io/sina_weibo_business_api.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>mysql忘记root密码解决方法</h2></header><section class=entry-content><p>Windows 步骤如下： 1.停止mysql服务(以管理员身份,在cmd命令行下运行)
+net stop mysql 2.使用 mysqld –skip-grant-tables 命令启动mysql数据库
+>D:\>net stop mysql MySQL 服务正在停止. MySQL 服务已成功停止。 D:\>mysqld --skip-grant-tables&lt;/pre> 3.新开一个cmd窗口，进行如下操作
+D:\>mysql -uroot Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 1 Server version: 5.1.26-rc-community MySQL Community Server (GPL) Type 'help;' or '\h' for help. Type '\c' to clear the buffer. mysql> update mysql.user set password=password('root') where user='root'; Query OK, 1 row affected (0....</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to mysql忘记root密码解决方法" href=https://phpgao.github.io/iforget_mysql.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>各种编码字符长度</h2></header><section class=entry-content><p>测试源码如下
+header("Content-type: text/html; charset=utf-8"); echo '&lt;br/>'; echo "ascii ", strlen('hello'); //ascii echo '&lt;br/>'; echo '&lt;br/>'; function strlentest($str) { echo '&lt;br/>'; echo $str, ":"; echo '&lt;br/>'; echo "utf8 ", strlen($str); //utf8 echo '&lt;br/>'; echo "gbk ", strlen(iconv('utf-8', 'GBK', $str)); //gbk echo '&lt;br/>'; echo "gb2312 ", strlen(iconv('utf-8', 'gb2312', $str)); //gb2312 echo '&lt;br/>'; } $str = "中国人"; strlentest($str); $str = "A人1"; strlentest($str); $str = "AAA"; strlentest($str); $str = "111"; strlentest($str); 结论： 自己总结吧</p></section><footer class=entry-footer>May 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 各种编码字符长度" href=https://phpgao.github.io/characters_length.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>dede-常用SQL总结</h2></header><section class=entry-content><p>织梦cms不知大家用过没有，功能比较强大，但是对于我还是有一些不够，所以我总结了一些经常会使用的SQL，比如批量修改文章发布人、替换栏目字符串、批量修改文章点击数、批量修改文章命名规则等，这些SQL使用dedecmsv5.7测试，其他版本不保证。
+老高温馨提醒：使用此SQL务必备份数据库清空所有文章 TRUNCATE TABLE dede_addonarticle; TRUNCATE TABLE dede_archives; TRUNCATE TABLE dede_arctiny; 批量修改文章发布人 UPDATE dede_arctiny AS a
+SET a.mid=2;
+UPDATE dede_archives AS a
+SET a.mid=2;
+/*mid为管理员ID*/
+替换栏目字符串 UPDATE dede_arctype as a
+SET a.typename=REPLACE(a.typename,'AAA','BBB')
+#AAA替换为BBB
+修改文章点击数 /*随机数为300-1300*/
+UPDATE dede_archives AS a
+SET a.click=FLOOR(300 + (RAND() * 1001));
+批量修改文章命名规则 UPDATE
+dede_arctype AS a
+SET
+a.namerule='{typedir}/{aid}.html'
+查看栏目表 SELECT dede_arctype.typename,
+dede_arctype.description,
+dede_arctype.keywords,
+dede_arctype.seotitle,
+dede_arctype.namerule,
+dede_arctype.namerule2
+FROM dede_arctype
+ORDER BY typename;
+所有文章都改为动态 #ismake的值为1时为静态，-1 时表示动态
+update dede_archives set ismake=-1;
+#将所有栏目设置为“使用静态页”，
+update dede_arctype set isdefault=1</p></section><footer class=entry-footer>May 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to dede-常用SQL总结" href=https://phpgao.github.io/dede_sql.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>常用正则表达式速查</h2></header><section class=entry-content><p>“^\d+$”　//非负整数（正整数 + 0）
+“^[0-9]*[1-9][0-9]*$”　//正整数
+“^((-\d+)|(0+))$”　//非正整数（负整数 + 0）
+“^-[0-9]*[1-9][0-9]*$”　//负整数
+“^-?\d+$”　//整数
+“^\d+(\.\d+)?$”　//非负浮点数（正浮点数 + 0）
+“^(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*))$”　//正浮点数
+“^((-\d+(\.\d+)?)|(0+(\.0+)?))$”　//非正浮点数（负浮点数 + 0）
+“^(-(([0-9]+\.[0-9]*[1-9][0-9]*)|([0-9]*[1-9][0-9]*\.[0-9]+)|([0-9]*[1-9][0-9]*)))$”　//负浮点数
+“^(-?\d+)(\.\d+)?$”　//浮点数
+“^[A-Za-z]+$”　//由26个英文字母组成的字符串
+“^[A-Z]+$”　//由26个英文字母的大写组成的字符串
+“^[a-z]+$”　//由26个英文字母的小写组成的字符串
+“^[A-Za-z0-9]+$”　//由数字和26个英文字母组成的字符串
+“^\w+$”　//由数字、26个英文字母或者下划线组成的字符串
+“^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)+$”　//email地址
+“^[a-zA-z]+://(\w+(-\w+)*)(\.(\w+(-\w+)*))*(\?\S*)?$”　//url
+/^(d{2}|d{4})-((0([1-9]{1}))|(1[1|2]))-(([0-2]([1-9]{1}))|(3[0|1]))$/ // 年-月-日
+/^((0([1-9]{1}))|(1[1|2]))/(([0-2]([1-9]{1}))|(3[0|1]))/(d{2}|d{4})$/ // 月/日/年
+“^([w-.]+)@(([[0-9]{1,3}.[0-9]{1,3}.[0-9]{1,3}.)|(([w-]+.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(]?)$” //Emil
+/^((\+?[0-9]{2,4}\-[0-9]{3,4}\-)|([0-9]{3,4}\-))?([0-9]{7,8})(\-[0-9]+)?$/ //电话号码
+“^(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5]).(d{1,2}|1dd|2[0-4]d|25[0-5])$” //IP地址
+匹配中文字符的正则表达式： [\u4e00-\u9fa5] 匹配双字节字符(包括汉字在内)：[^\x00-\xff] 匹配空行的正则表达式：\n[\s| ]*\r 匹配HTML标记的正则表达式：/&lt;(.*)>.*&lt;\/\1>|&lt;(.*) \/>/ 匹配首尾空格的正则表达式：(^\s*)|(\s*$) 匹配Email地址的正则表达式：\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*
+匹配网址URL的正则表达式：^[a-zA-z]+://(\\w+(-\\w+)*)(\\.(\\w+(-\\w+)*))*(\\?\\S*)?$ 匹配帐号是否合法(字母开头，允许5-16字节，允许字母数字下划线)：^[a-zA-Z][a-zA-Z0-9_]{4,15}$ 匹配国内电话号码：(\d{3}-|\d{4}-)?(\d{8}|\d{7})? 匹配腾讯QQ号：^[1-9]*[1-9][0-9]*$
+元字符及其在正则表达式上下文中的行为：
+\ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个后向引用、或一个八进制转义符。
+^ 匹配输入字符串的开始位置。如果设置了 RegExp 对象的Multiline 属性，^ 也匹配 ’\n’ 或 ’\r’ 之后的位置。
+$ 匹配输入字符串的结束位置。如果设置了 RegExp 对象的Multiline 属性，$ 也匹配 ’\n’ 或 ’\r’ 之前的位置。
+* 匹配前面的子表达式零次或多次。
++ 匹配前面的子表达式一次或多次。+ 等价于 {1,}。
+?...</p></section><footer class=entry-footer>April 28, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 常用正则表达式速查" href=https://phpgao.github.io/regex_fast_reference.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/page/23/>« Prev Page</a>
+<a class=next href=https://phpgao.github.io/categories/%E4%BB%A3%E7%A0%81%E4%BA%BA%E7%94%9F/page/25/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

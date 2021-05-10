@@ -1,0 +1,334 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>python守护进程demo | 老高的技术博客</title><meta name=keywords content="python,daemon"><meta name=description content="代码网上copy的，原理基本一致。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/pythond.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="python守护进程demo"><meta property="og:description" content="代码网上copy的，原理基本一致。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/pythond.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2016-02-23T04:11:00+00:00"><meta property="article:modified_time" content="2016-02-23T04:11:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="python守护进程demo"><meta name=twitter:description content="代码网上copy的，原理基本一致。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"python守护进程demo","item":"https://phpgao.github.io/pythond.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"python守护进程demo","name":"python守护进程demo","description":"代码网上copy的，原理基本一致。\n","keywords":["python","daemon"],"articleBody":"代码网上copy的，原理基本一致。\n还有一个daemon的模块python-daemon，基于PEP 3143，直接封装好了守护进程需要实现的方法，推荐使用！安装命令：\npip install python-daemon 使用方法\n#! /usr/bin/env python # -*- coding: utf-8 -*- import logging import time # third party libs from daemon import runner class Updater(): def __init__(self): self.stdin_path = '/dev/null' self.stdout_path = '/dev/tty' self.stderr_path = '/dev/tty' self.pidfile_path = '/tmp/testdaemon.pid' self.pidfile_timeout = 5 def run(self): while True: # Main code goes here ... # Note that logger level needs to be set to logging.DEBUG before this shows up in the logs logger.debug(\"Debug message\") logger.info(\"Info message\") logger.warn(\"Warning message\") logger.error(\"Error message\") time.sleep(10) app = Updater() logger = logging.getLogger(\"DaemonLog\") logger.setLevel(logging.INFO) formatter = logging.Formatter(\"%(asctime)s- %(name)s- %(levelname)s- %(message)s\") handler = logging.FileHandler(\"/tmp/testdaemon.log\") handler.setFormatter(formatter) logger.addHandler(handler) daemon_runner = runner.DaemonRunner(app) # This ensures that the logger file handle does not get closed during daemonization daemon_runner.daemon_context.files_preserve = [handler.stream] daemon_runner.do_action() python2 的实现\n#!/usr/bin/env python import sys, os, time, atexit from signal import SIGTERM class Daemon: \"\"\" A generic daemon class. Usage: subclass the Daemon class and override the run() method \"\"\" def __init__(self, pidfile, stdin='/dev/null', stdout='/dev/null', stderr='/dev/null'): self.stdin = stdin self.stdout = stdout self.stderr = stderr self.pidfile = pidfile def daemonize(self): \"\"\" do the UNIX double-fork magic, see Stevens' \"Advanced Programming in the UNIX Environment\" for details (ISBN 0201563177) http://www.erlenstar.demon.co.uk/unix/faq_2.html#SEC16 \"\"\" try: pid = os.fork() if pid  0: # exit first parent sys.exit(0) except OSError, e: sys.stderr.write(\"fork #1 failed: %d(%s)\\n\" % (e.errno, e.strerror)) sys.exit(1) # decouple from parent environment os.chdir(\"/\") os.setsid() os.umask(0) # do second fork try: pid = os.fork() if pid  0: # exit from second parent sys.exit(0) except OSError, e: sys.stderr.write(\"fork #2 failed: %d(%s)\\n\" % (e.errno, e.strerror)) sys.exit(1) # redirect standard file descriptors sys.stdout.flush() sys.stderr.flush() si = file(self.stdin, 'r') so = file(self.stdout, 'a+') se = file(self.stderr, 'a+', 0) os.dup2(si.fileno(), sys.stdin.fileno()) os.dup2(so.fileno(), sys.stdout.fileno()) os.dup2(se.fileno(), sys.stderr.fileno()) # write pidfile atexit.register(self.delpid) pid = str(os.getpid()) file(self.pidfile, 'w+').write(\"%s\\n\" % pid) def delpid(self): os.remove(self.pidfile) def start(self): \"\"\" Start the daemon \"\"\" # Check for a pidfile to see if the daemon already runs try: pf = file(self.pidfile, 'r') pid = int(pf.read().strip()) pf.close() except IOError: pid = None if pid: message = \"pidfile %salready exist. Daemon already running?\\n\" sys.stderr.write(message % self.pidfile) sys.exit(1) # Start the daemon self.daemonize() self.run() def stop(self): \"\"\" Stop the daemon \"\"\" # Get the pid from the pidfile try: pf = file(self.pidfile, 'r') pid = int(pf.read().strip()) pf.close() except IOError: pid = None if not pid: message = \"pidfile %sdoes not exist. Daemon not running?\\n\" sys.stderr.write(message % self.pidfile) return # not an error in a restart # Try killing the daemon process  try: while 1: os.kill(pid, SIGTERM) time.sleep(0.1) except OSError, err: err = str(err) if err.find(\"No such process\")  0: if os.path.exists(self.pidfile): os.remove(self.pidfile) else: print str(err) sys.exit(1) def restart(self): \"\"\" Restart the daemon \"\"\" self.stop() self.start() def run(self): \"\"\" You should override this method when you subclass Daemon. It will be called after the process has been daemonized by start() or restart(). \"\"\" 守护进程写法\n#!/usr/bin/env python import sys, time from daemon import Daemon class MyDaemon(Daemon): def run(self): while True: time.sleep(1) if __name__ == \"__main__\": daemon = MyDaemon('/tmp/daemon-example.pid') if len(sys.argv) == 2: if 'start' == sys.argv[1]: daemon.start() elif 'stop' == sys.argv[1]: daemon.stop() elif 'restart' == sys.argv[1]: daemon.restart() else: print \"Unknown command\" sys.exit(2) sys.exit(0) else: print \"usage: %s start|stop|restart\" % sys.argv[0] sys.exit(2) python3 的实现\n\"\"\"Generic linux daemon base class for python 3.x.\"\"\" import sys, os, time, atexit, signal class daemon: \"\"\"A generic daemon class. Usage: subclass the daemon class and override the run() method.\"\"\" def __init__(self, pidfile): self.pidfile = pidfile def daemonize(self): \"\"\"Deamonize class. UNIX double fork mechanism.\"\"\" try: pid = os.fork() if pid  0: # exit first parent sys.exit(0) except OSError as err: sys.stderr.write('fork #1 failed: {0}\\n'.format(err)) sys.exit(1) # decouple from parent environment os.chdir('/') os.setsid() os.umask(0) # do second fork try: pid = os.fork() if pid  0: # exit from second parent sys.exit(0) except OSError as err: sys.stderr.write('fork #2 failed: {0}\\n'.format(err)) sys.exit(1) # redirect standard file descriptors sys.stdout.flush() sys.stderr.flush() si = open(os.devnull, 'r') so = open(os.devnull, 'a+') se = open(os.devnull, 'a+') os.dup2(si.fileno(), sys.stdin.fileno()) os.dup2(so.fileno(), sys.stdout.fileno()) os.dup2(se.fileno(), sys.stderr.fileno()) # write pidfile atexit.register(self.delpid) pid = str(os.getpid()) with open(self.pidfile,'w+') as f: f.write(pid + '\\n') def delpid(self): os.remove(self.pidfile) def start(self): \"\"\"Start the daemon.\"\"\" # Check for a pidfile to see if the daemon already runs try: with open(self.pidfile,'r') as pf: pid = int(pf.read().strip()) except IOError: pid = None if pid: message = \"pidfile {0} already exist. \" + \\ \"Daemon already running?\\n\" sys.stderr.write(message.format(self.pidfile)) sys.exit(1) # Start the daemon self.daemonize() self.run() def stop(self): \"\"\"Stop the daemon.\"\"\" # Get the pid from the pidfile try: with open(self.pidfile,'r') as pf: pid = int(pf.read().strip()) except IOError: pid = None if not pid: message = \"pidfile {0} does not exist. \" + \\ \"Daemon not running?\\n\" sys.stderr.write(message.format(self.pidfile)) return # not an error in a restart # Try killing the daemon process\t try: while 1: os.kill(pid, signal.SIGTERM) time.sleep(0.1) except OSError as err: e = str(err.args) if e.find(\"No such process\")  0: if os.path.exists(self.pidfile): os.remove(self.pidfile) else: print (str(err.args)) sys.exit(1) def restart(self): \"\"\"Restart the daemon.\"\"\" self.stop() self.start() def run(self): \"\"\"You should override this method when you subclass Daemon. It will be called after the process has been daemonized by start() or restart().\"\"\" A simple unix/linux daemon in Python 12.14 在Unix系统上面启动守护进程\n","wordCount":"841","inLanguage":"en","datePublished":"2016-02-23T04:11:00Z","dateModified":"2016-02-23T04:11:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/pythond.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>python守护进程demo</h1><div class=post-meta>February 23, 2016&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2016-02-23_pythond.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>代码网上copy的，原理基本一致。</p><p>还有一个daemon的模块<a href=https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins>python-daemon</a>，基于<a href=http://www.python.org/dev/peps/pep-3143>PEP 3143</a>，直接封装好了守护进程需要实现的方法，推荐使用！安装命令：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>pip install python-daemon
+</code></pre></div><p>使用方法</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#! /usr/bin/env python</span>
+<span style=color:#75715e># -*- coding: utf-8 -*-</span>
+
+<span style=color:#f92672>import</span> logging
+<span style=color:#f92672>import</span> time
+
+<span style=color:#75715e># third party libs</span>
+<span style=color:#f92672>from</span> daemon <span style=color:#f92672>import</span> runner
+
+
+<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Updater</span>():
+    <span style=color:#66d9ef>def</span> __init__(self):
+        self<span style=color:#f92672>.</span>stdin_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/dev/null&#39;</span>
+        self<span style=color:#f92672>.</span>stdout_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/dev/tty&#39;</span>
+        self<span style=color:#f92672>.</span>stderr_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/dev/tty&#39;</span>
+        self<span style=color:#f92672>.</span>pidfile_path <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/tmp/testdaemon.pid&#39;</span>
+        self<span style=color:#f92672>.</span>pidfile_timeout <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
+        <span style=color:#66d9ef>while</span> True:
+            <span style=color:#75715e># Main code goes here ...</span>
+            <span style=color:#75715e># Note that logger level needs to be set to logging.DEBUG before this shows up in the logs</span>
+            logger<span style=color:#f92672>.</span>debug(<span style=color:#e6db74>&#34;Debug message&#34;</span>)
+            logger<span style=color:#f92672>.</span>info(<span style=color:#e6db74>&#34;Info message&#34;</span>)
+            logger<span style=color:#f92672>.</span>warn(<span style=color:#e6db74>&#34;Warning message&#34;</span>)
+            logger<span style=color:#f92672>.</span>error(<span style=color:#e6db74>&#34;Error message&#34;</span>)
+            time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>10</span>)
+
+
+app <span style=color:#f92672>=</span> Updater()
+logger <span style=color:#f92672>=</span> logging<span style=color:#f92672>.</span>getLogger(<span style=color:#e6db74>&#34;DaemonLog&#34;</span>)
+logger<span style=color:#f92672>.</span>setLevel(logging<span style=color:#f92672>.</span>INFO)
+formatter <span style=color:#f92672>=</span> logging<span style=color:#f92672>.</span>Formatter(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%(asctime)s</span><span style=color:#e6db74> - </span><span style=color:#e6db74>%(name)s</span><span style=color:#e6db74> - </span><span style=color:#e6db74>%(levelname)s</span><span style=color:#e6db74> - </span><span style=color:#e6db74>%(message)s</span><span style=color:#e6db74>&#34;</span>)
+handler <span style=color:#f92672>=</span> logging<span style=color:#f92672>.</span>FileHandler(<span style=color:#e6db74>&#34;/tmp/testdaemon.log&#34;</span>)
+handler<span style=color:#f92672>.</span>setFormatter(formatter)
+logger<span style=color:#f92672>.</span>addHandler(handler)
+
+daemon_runner <span style=color:#f92672>=</span> runner<span style=color:#f92672>.</span>DaemonRunner(app)
+
+<span style=color:#75715e># This ensures that the logger file handle does not get closed during daemonization</span>
+daemon_runner<span style=color:#f92672>.</span>daemon_context<span style=color:#f92672>.</span>files_preserve <span style=color:#f92672>=</span> [handler<span style=color:#f92672>.</span>stream]
+daemon_runner<span style=color:#f92672>.</span>do_action()
+
+</code></pre></div><p>python2 的实现</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#75715e>#!/usr/bin/env python</span>
+
+<span style=color:#f92672>import</span> sys<span style=color:#f92672>,</span> os<span style=color:#f92672>,</span> time<span style=color:#f92672>,</span> atexit
+<span style=color:#f92672>from</span> signal <span style=color:#f92672>import</span> SIGTERM
+
+
+<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Daemon</span>:
+    <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>    A generic daemon class.
+</span><span style=color:#e6db74>   
+</span><span style=color:#e6db74>    Usage: subclass the Daemon class and override the run() method
+</span><span style=color:#e6db74>    &#34;&#34;&#34;</span>
+
+    <span style=color:#66d9ef>def</span> __init__(self, pidfile, stdin<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;/dev/null&#39;</span>, stdout<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;/dev/null&#39;</span>, stderr<span style=color:#f92672>=</span><span style=color:#e6db74>&#39;/dev/null&#39;</span>):
+        self<span style=color:#f92672>.</span>stdin <span style=color:#f92672>=</span> stdin
+        self<span style=color:#f92672>.</span>stdout <span style=color:#f92672>=</span> stdout
+        self<span style=color:#f92672>.</span>stderr <span style=color:#f92672>=</span> stderr
+        self<span style=color:#f92672>.</span>pidfile <span style=color:#f92672>=</span> pidfile
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>daemonize</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        do the UNIX double-fork magic, see Stevens&#39; &#34;Advanced
+</span><span style=color:#e6db74>        Programming in the UNIX Environment&#34; for details (ISBN 0201563177)
+</span><span style=color:#e6db74>        http://www.erlenstar.demon.co.uk/unix/faq_2.html#SEC16
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        <span style=color:#66d9ef>try</span>:
+            pid <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>fork()
+            <span style=color:#66d9ef>if</span> pid <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+                <span style=color:#75715e># exit first parent</span>
+                sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>0</span>)
+        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span>, e:
+            sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;fork #1 failed: </span><span style=color:#e6db74>%d</span><span style=color:#e6db74> (</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>)</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> (e<span style=color:#f92672>.</span>errno, e<span style=color:#f92672>.</span>strerror))
+            sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+
+        <span style=color:#75715e># decouple from parent environment</span>
+        os<span style=color:#f92672>.</span>chdir(<span style=color:#e6db74>&#34;/&#34;</span>)
+        os<span style=color:#f92672>.</span>setsid()
+        os<span style=color:#f92672>.</span>umask(<span style=color:#ae81ff>0</span>)
+
+        <span style=color:#75715e># do second fork</span>
+        <span style=color:#66d9ef>try</span>:
+            pid <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>fork()
+            <span style=color:#66d9ef>if</span> pid <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+                <span style=color:#75715e># exit from second parent</span>
+                sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>0</span>)
+        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span>, e:
+            sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;fork #2 failed: </span><span style=color:#e6db74>%d</span><span style=color:#e6db74> (</span><span style=color:#e6db74>%s</span><span style=color:#e6db74>)</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> (e<span style=color:#f92672>.</span>errno, e<span style=color:#f92672>.</span>strerror))
+            sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+
+        <span style=color:#75715e># redirect standard file descriptors</span>
+        sys<span style=color:#f92672>.</span>stdout<span style=color:#f92672>.</span>flush()
+        sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>flush()
+        si <span style=color:#f92672>=</span> file(self<span style=color:#f92672>.</span>stdin, <span style=color:#e6db74>&#39;r&#39;</span>)
+        so <span style=color:#f92672>=</span> file(self<span style=color:#f92672>.</span>stdout, <span style=color:#e6db74>&#39;a+&#39;</span>)
+        se <span style=color:#f92672>=</span> file(self<span style=color:#f92672>.</span>stderr, <span style=color:#e6db74>&#39;a+&#39;</span>, <span style=color:#ae81ff>0</span>)
+        os<span style=color:#f92672>.</span>dup2(si<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stdin<span style=color:#f92672>.</span>fileno())
+        os<span style=color:#f92672>.</span>dup2(so<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stdout<span style=color:#f92672>.</span>fileno())
+        os<span style=color:#f92672>.</span>dup2(se<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>fileno())
+
+        <span style=color:#75715e># write pidfile</span>
+        atexit<span style=color:#f92672>.</span>register(self<span style=color:#f92672>.</span>delpid)
+        pid <span style=color:#f92672>=</span> str(os<span style=color:#f92672>.</span>getpid())
+        file(self<span style=color:#f92672>.</span>pidfile, <span style=color:#e6db74>&#39;w+&#39;</span>)<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#34;</span><span style=color:#e6db74>%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span> <span style=color:#f92672>%</span> pid)
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>delpid</span>(self):
+        os<span style=color:#f92672>.</span>remove(self<span style=color:#f92672>.</span>pidfile)
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        Start the daemon
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        <span style=color:#75715e># Check for a pidfile to see if the daemon already runs</span>
+        <span style=color:#66d9ef>try</span>:
+            pf <span style=color:#f92672>=</span> file(self<span style=color:#f92672>.</span>pidfile, <span style=color:#e6db74>&#39;r&#39;</span>)
+            pid <span style=color:#f92672>=</span> int(pf<span style=color:#f92672>.</span>read()<span style=color:#f92672>.</span>strip())
+            pf<span style=color:#f92672>.</span>close()
+        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+            pid <span style=color:#f92672>=</span> None
+
+        <span style=color:#66d9ef>if</span> pid:
+            message <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;pidfile </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> already exist. Daemon already running?</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>
+            sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(message <span style=color:#f92672>%</span> self<span style=color:#f92672>.</span>pidfile)
+            sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+
+        <span style=color:#75715e># Start the daemon</span>
+        self<span style=color:#f92672>.</span>daemonize()
+        self<span style=color:#f92672>.</span>run()
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stop</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        Stop the daemon
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        <span style=color:#75715e># Get the pid from the pidfile</span>
+        <span style=color:#66d9ef>try</span>:
+            pf <span style=color:#f92672>=</span> file(self<span style=color:#f92672>.</span>pidfile, <span style=color:#e6db74>&#39;r&#39;</span>)
+            pid <span style=color:#f92672>=</span> int(pf<span style=color:#f92672>.</span>read()<span style=color:#f92672>.</span>strip())
+            pf<span style=color:#f92672>.</span>close()
+        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+            pid <span style=color:#f92672>=</span> None
+
+        <span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> pid:
+            message <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;pidfile </span><span style=color:#e6db74>%s</span><span style=color:#e6db74> does not exist. Daemon not running?</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>
+            sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(message <span style=color:#f92672>%</span> self<span style=color:#f92672>.</span>pidfile)
+            <span style=color:#66d9ef>return</span>  <span style=color:#75715e># not an error in a restart</span>
+
+        <span style=color:#75715e># Try killing the daemon process       </span>
+        <span style=color:#66d9ef>try</span>:
+            <span style=color:#66d9ef>while</span> <span style=color:#ae81ff>1</span>:
+                os<span style=color:#f92672>.</span>kill(pid, SIGTERM)
+                time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.1</span>)
+        <span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span>, err:
+            err <span style=color:#f92672>=</span> str(err)
+            <span style=color:#66d9ef>if</span> err<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;No such process&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+                <span style=color:#66d9ef>if</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(self<span style=color:#f92672>.</span>pidfile):
+                    os<span style=color:#f92672>.</span>remove(self<span style=color:#f92672>.</span>pidfile)
+            <span style=color:#66d9ef>else</span>:
+                <span style=color:#66d9ef>print</span> str(err)
+                sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>restart</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        Restart the daemon
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+        self<span style=color:#f92672>.</span>stop()
+        self<span style=color:#f92672>.</span>start()
+
+    <span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
+        <span style=color:#e6db74>&#34;&#34;&#34;
+</span><span style=color:#e6db74>        You should override this method when you subclass Daemon. It will be called after the process has been
+</span><span style=color:#e6db74>        daemonized by start() or restart().
+</span><span style=color:#e6db74>        &#34;&#34;&#34;</span>
+</code></pre></div><p>守护进程写法</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>#!/usr/bin/env python
+
+import sys, time
+from daemon import Daemon
+
+
+class MyDaemon(Daemon):
+    def run(self):
+        while True:
+            time.sleep(1)
+
+
+if __name__ == &#34;__main__&#34;:
+    daemon = MyDaemon(&#39;/tmp/daemon-example.pid&#39;)
+    if len(sys.argv) == 2:
+        if &#39;start&#39; == sys.argv[1]:
+            daemon.start()
+        elif &#39;stop&#39; == sys.argv[1]:
+            daemon.stop()
+        elif &#39;restart&#39; == sys.argv[1]:
+            daemon.restart()
+        else:
+            print &#34;Unknown command&#34;
+            sys.exit(2)
+        sys.exit(0)
+    else:
+        print &#34;usage: %s start|stop|restart&#34; % sys.argv[0]
+        sys.exit(2)
+
+</code></pre></div><p>python3 的实现</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#e6db74>&#34;&#34;&#34;Generic linux daemon base class for python 3.x.&#34;&#34;&#34;</span>
+
+<span style=color:#f92672>import</span> sys<span style=color:#f92672>,</span> os<span style=color:#f92672>,</span> time<span style=color:#f92672>,</span> atexit<span style=color:#f92672>,</span> signal
+
+<span style=color:#66d9ef>class</span> <span style=color:#a6e22e>daemon</span>:
+	<span style=color:#e6db74>&#34;&#34;&#34;A generic daemon class.
+</span><span style=color:#e6db74>
+</span><span style=color:#e6db74>	Usage: subclass the daemon class and override the run() method.&#34;&#34;&#34;</span>
+
+	<span style=color:#66d9ef>def</span> __init__(self, pidfile): self<span style=color:#f92672>.</span>pidfile <span style=color:#f92672>=</span> pidfile
+	
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>daemonize</span>(self):
+		<span style=color:#e6db74>&#34;&#34;&#34;Deamonize class. UNIX double fork mechanism.&#34;&#34;&#34;</span>
+
+		<span style=color:#66d9ef>try</span>: 
+			pid <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>fork() 
+			<span style=color:#66d9ef>if</span> pid <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+				<span style=color:#75715e># exit first parent</span>
+				sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>0</span>) 
+		<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span> <span style=color:#66d9ef>as</span> err: 
+			sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#39;fork #1 failed: {0}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span><span style=color:#f92672>.</span>format(err))
+			sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+	
+		<span style=color:#75715e># decouple from parent environment</span>
+		os<span style=color:#f92672>.</span>chdir(<span style=color:#e6db74>&#39;/&#39;</span>) 
+		os<span style=color:#f92672>.</span>setsid() 
+		os<span style=color:#f92672>.</span>umask(<span style=color:#ae81ff>0</span>) 
+	
+		<span style=color:#75715e># do second fork</span>
+		<span style=color:#66d9ef>try</span>: 
+			pid <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>fork() 
+			<span style=color:#66d9ef>if</span> pid <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+
+				<span style=color:#75715e># exit from second parent</span>
+				sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>0</span>) 
+		<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span> <span style=color:#66d9ef>as</span> err: 
+			sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(<span style=color:#e6db74>&#39;fork #2 failed: {0}</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span><span style=color:#f92672>.</span>format(err))
+			sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>) 
+	
+		<span style=color:#75715e># redirect standard file descriptors</span>
+		sys<span style=color:#f92672>.</span>stdout<span style=color:#f92672>.</span>flush()
+		sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>flush()
+		si <span style=color:#f92672>=</span> open(os<span style=color:#f92672>.</span>devnull, <span style=color:#e6db74>&#39;r&#39;</span>)
+		so <span style=color:#f92672>=</span> open(os<span style=color:#f92672>.</span>devnull, <span style=color:#e6db74>&#39;a+&#39;</span>)
+		se <span style=color:#f92672>=</span> open(os<span style=color:#f92672>.</span>devnull, <span style=color:#e6db74>&#39;a+&#39;</span>)
+
+		os<span style=color:#f92672>.</span>dup2(si<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stdin<span style=color:#f92672>.</span>fileno())
+		os<span style=color:#f92672>.</span>dup2(so<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stdout<span style=color:#f92672>.</span>fileno())
+		os<span style=color:#f92672>.</span>dup2(se<span style=color:#f92672>.</span>fileno(), sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>fileno())
+	
+		<span style=color:#75715e># write pidfile</span>
+		atexit<span style=color:#f92672>.</span>register(self<span style=color:#f92672>.</span>delpid)
+
+		pid <span style=color:#f92672>=</span> str(os<span style=color:#f92672>.</span>getpid())
+		<span style=color:#66d9ef>with</span> open(self<span style=color:#f92672>.</span>pidfile,<span style=color:#e6db74>&#39;w+&#39;</span>) <span style=color:#66d9ef>as</span> f:
+			f<span style=color:#f92672>.</span>write(pid <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#39;</span>)
+	
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>delpid</span>(self):
+		os<span style=color:#f92672>.</span>remove(self<span style=color:#f92672>.</span>pidfile)
+
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>start</span>(self):
+		<span style=color:#e6db74>&#34;&#34;&#34;Start the daemon.&#34;&#34;&#34;</span>
+
+		<span style=color:#75715e># Check for a pidfile to see if the daemon already runs</span>
+		<span style=color:#66d9ef>try</span>:
+			<span style=color:#66d9ef>with</span> open(self<span style=color:#f92672>.</span>pidfile,<span style=color:#e6db74>&#39;r&#39;</span>) <span style=color:#66d9ef>as</span> pf:
+
+				pid <span style=color:#f92672>=</span> int(pf<span style=color:#f92672>.</span>read()<span style=color:#f92672>.</span>strip())
+		<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+			pid <span style=color:#f92672>=</span> None
+	
+		<span style=color:#66d9ef>if</span> pid:
+			message <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;pidfile {0} already exist. &#34;</span> <span style=color:#f92672>+</span> \
+					<span style=color:#e6db74>&#34;Daemon already running?</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>
+			sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(message<span style=color:#f92672>.</span>format(self<span style=color:#f92672>.</span>pidfile))
+			sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+		
+		<span style=color:#75715e># Start the daemon</span>
+		self<span style=color:#f92672>.</span>daemonize()
+		self<span style=color:#f92672>.</span>run()
+
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>stop</span>(self):
+		<span style=color:#e6db74>&#34;&#34;&#34;Stop the daemon.&#34;&#34;&#34;</span>
+
+		<span style=color:#75715e># Get the pid from the pidfile</span>
+		<span style=color:#66d9ef>try</span>:
+			<span style=color:#66d9ef>with</span> open(self<span style=color:#f92672>.</span>pidfile,<span style=color:#e6db74>&#39;r&#39;</span>) <span style=color:#66d9ef>as</span> pf:
+				pid <span style=color:#f92672>=</span> int(pf<span style=color:#f92672>.</span>read()<span style=color:#f92672>.</span>strip())
+		<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>IOError</span>:
+			pid <span style=color:#f92672>=</span> None
+	
+		<span style=color:#66d9ef>if</span> <span style=color:#f92672>not</span> pid:
+			message <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;pidfile {0} does not exist. &#34;</span> <span style=color:#f92672>+</span> \
+					<span style=color:#e6db74>&#34;Daemon not running?</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>
+			sys<span style=color:#f92672>.</span>stderr<span style=color:#f92672>.</span>write(message<span style=color:#f92672>.</span>format(self<span style=color:#f92672>.</span>pidfile))
+			<span style=color:#66d9ef>return</span> <span style=color:#75715e># not an error in a restart</span>
+
+		<span style=color:#75715e># Try killing the daemon process	</span>
+		<span style=color:#66d9ef>try</span>:
+			<span style=color:#66d9ef>while</span> <span style=color:#ae81ff>1</span>:
+				os<span style=color:#f92672>.</span>kill(pid, signal<span style=color:#f92672>.</span>SIGTERM)
+				time<span style=color:#f92672>.</span>sleep(<span style=color:#ae81ff>0.1</span>)
+		<span style=color:#66d9ef>except</span> <span style=color:#a6e22e>OSError</span> <span style=color:#66d9ef>as</span> err:
+			e <span style=color:#f92672>=</span> str(err<span style=color:#f92672>.</span>args)
+			<span style=color:#66d9ef>if</span> e<span style=color:#f92672>.</span>find(<span style=color:#e6db74>&#34;No such process&#34;</span>) <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>0</span>:
+				<span style=color:#66d9ef>if</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(self<span style=color:#f92672>.</span>pidfile):
+					os<span style=color:#f92672>.</span>remove(self<span style=color:#f92672>.</span>pidfile)
+			<span style=color:#66d9ef>else</span>:
+				<span style=color:#66d9ef>print</span> (str(err<span style=color:#f92672>.</span>args))
+				sys<span style=color:#f92672>.</span>exit(<span style=color:#ae81ff>1</span>)
+
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>restart</span>(self):
+		<span style=color:#e6db74>&#34;&#34;&#34;Restart the daemon.&#34;&#34;&#34;</span>
+		self<span style=color:#f92672>.</span>stop()
+		self<span style=color:#f92672>.</span>start()
+
+	<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>run</span>(self):
+		<span style=color:#e6db74>&#34;&#34;&#34;You should override this method when you subclass Daemon.
+</span><span style=color:#e6db74>		
+</span><span style=color:#e6db74>		It will be called after the process has been daemonized by 
+</span><span style=color:#e6db74>		start() or restart().&#34;&#34;&#34;</span>
+
+</code></pre></div><p><a href=http://web.archive.org/web/20131017130434/http://www.jejik.com/articles/2007/02/a_simple_unix_linux_daemon_in_python/>A simple unix/linux daemon in Python</a>
+<a href=http://python3-cookbook.readthedocs.org/zh_CN/latest/c12/p14_launching_daemon_process_on_unix.html>12.14 在Unix系统上面启动守护进程</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/python/>python</a></li><li><a href=https://phpgao.github.io/tags/daemon/>daemon</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/build-git-server.html><span class=title>« Prev Page</span><br><span>Centos搭建GIT服务器</span></a>
+<a class=next href=https://phpgao.github.io/xunlei_service_start.html><span class=title>Next Page »</span><br><span>迅雷远程下载的服务脚本</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>repo on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/repo/</link>
+    <description>Recent content in repo on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 11 Aug 2014 03:34:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/repo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos国内源总结</title>
+      <link>https://phpgao.github.io/centos_repo.html</link>
+      <pubDate>Mon, 11 Aug 2014 03:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_repo.html</guid>
+      <description>有时候centos使用yum命令的时候软件下载速度会很慢，还好国内有很多镜像站供大家选择，在此博主为大家总结了一些centos国内镜像站，如果你需要下载centos的iso文件或者相关软件，可以到以下网站下载，速度相当快！
+当然，如果你想直接替换掉centos系统内置的yum源地址，可以参考这篇文章Centos源设置，将你的源设为比较快的地址！
+   地区 HTTP     Alibaba Cloud Computing http://mirrors.aliyun.com/centos/   Beijing Institute of Technology http://mirror.bit.edu.cn/centos/   Beijing Teletron Telecom Engineering http://mirrors.btte.net/centos/   BitComm Ltd. http://mirrors.pubyun.com/centos/   CDS China http://mirrors.yun-idc.com/centos/   China University of Geosciences http://mirrors.cug.edu.cn/centos/   Dalian Neusoft University of Information http://mirrors.neusoft.edu.cn/centos/   Grand Cloud http://mirrors.grandcloud.cn/centos/   Huazhong University of Science and Technology http://mirrors.hust.edu.cn/centos/   NetEase http://mirrors.</description>
+    </item>
+    
+    <item>
+      <title>Centos源设置</title>
+      <link>https://phpgao.github.io/repo_for_centos.html</link>
+      <pubDate>Wed, 18 Jun 2014 06:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/repo_for_centos.html</guid>
+      <description>起因 刚刚装好的centos网卡也配好了，就是解析不了mirror.centos.org，估计是DNS的问题，索性换了163源。
+网易源地址
+使用帮助
+方法 很简单，注意备份即可
+cd /etc/yum.repos.d mv CentOS-Base.repo CentOS-Base.repo.backup wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS5-Base-163.repo #centos5 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS6-Base-163.repo #centos6 yum clean all yum makecache 意外 在执行update的时候又报错
+ GPG key retrieval failed: [Errno 12] Timeout on http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6: (28, &amp;lsquo;connect() timed out!&#39;)
+ 貌似需要在源服务器验证RPM的合法性 本办法，只好祭出终极武器，host大法!
+vi /etc/hosts 加入 74.53.10.146 mirror.centos.org 解决！
+阿里源 阿里的速度也不错！
+repo下载地址： http://mirrors.aliyun.com/repo/
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup # 根据系统版本下载对应版本的repo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo 或 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo # 更新缓存 yum clean all yum makecache </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>clone on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/clone/</link>
+    <description>Recent content in clone on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Nov 2014 09:33:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/clone/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>python中浅拷贝和深拷贝</title>
+      <link>https://phpgao.github.io/python_copy.html</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_copy.html</guid>
+      <description>python中浅拷贝和深拷贝 今天写python脚本，遇到了一个问题。先贴代码：
+#coding=utf-8 new_list = [] # 声明一个list tmp = {&amp;#39;a&amp;#39;:123,&amp;#39;b&amp;#39;:&amp;#39;ccc&amp;#39;} # 新建一个dict new_list.append(tmp) # 追加 print tmp print new_list tmp[&amp;#39;a&amp;#39;] = 456 # 修改tmp tmp[&amp;#39;b&amp;#39;] = &amp;#39;ddd&amp;#39; new_list.append(tmp) # 追加 print tmp print new_list # 执行结果： {&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;} [{&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;}] # 当改变了tmp，list中的值也会变化 {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;} [{&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}, {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}] 如果是PHP会发生什么？
+$b = array(); $a = array(&amp;#39;b&amp;#39;=&amp;gt;123); array_push($b , $a); $a = array(&amp;#39;b&amp;#39;=&amp;gt;456); array_push($b , $a); var_dump($b); $a = new ArrayObject(array(&amp;#39;b&amp;#39;=&amp;gt;123)); $arr = new ArrayObject(); $arr-&amp;gt;append($a); $a[&amp;#39;b&amp;#39;] = 456; $arr-&amp;gt;append($a); var_dump($arr); # 执行结果  array(2) { [0]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(123) } [1]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } object(ArrayObject)#2 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(2) { [0]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } [1]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } } } 由结果看，PHP中array_push方法和array_object的结果也不同。</description>
+    </item>
+    
+  </channel>
+</rss>

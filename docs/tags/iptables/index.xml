@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>iptables on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/iptables/</link>
+    <description>Recent content in iptables on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Jun 2015 08:15:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SS公共服务器的基本安全措施</title>
+      <link>https://phpgao.github.io/ss-public-server.html</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-public-server.html</guid>
+      <description>&lt;p&gt;老高以前免费分享的ss服务器 &lt;a href=&#34;https://blog.phpgao.com/try_shadowsocks_via_qrcode.html&#34;&gt;免费shadowsocks&lt;/a&gt; ，被攻击了。。。后台检测到有大量的垃圾邮件，是我大意了，忘记了给做一些保护措施，赶紧补上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----iptables防火墙设置</title>
+      <link>https://phpgao.github.io/vbird_linux_note_iptables.html</link>
+      <pubDate>Sun, 31 May 2015 08:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_iptables.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;
+&lt;p&gt;以下内容总结自鸟哥的 Linux 私房菜 &amp;ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。&lt;/p&gt;
+&lt;p&gt;关于VPS的更多安全设置可以参考 &lt;a href=&#34;https://blog.phpgao.com/vps_safty.html&#34;&gt;VPS安全设置&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://blog.phpgao.com/vps_iptables.html&#34;&gt;VPS安全之防火墙设置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全之防火墙设置</title>
+      <link>https://phpgao.github.io/vps_iptables.html</link>
+      <pubDate>Mon, 29 Dec 2014 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_iptables.html</guid>
+      <description>&lt;p&gt;iptables是基于内核的防火墙，功能非常强大，iptables内置了filter，nat和mangle三张表。&lt;/p&gt;
+&lt;p&gt;filter负责过滤数据包，包括的规则链有，input，output和forward；&lt;/p&gt;
+&lt;p&gt;nat则涉及到网络地址转换，包括的规则链有，prerouting，postrouting和output；&lt;/p&gt;
+&lt;p&gt;mangle表则主要应用在修改数据包内容上，用来做流量整形的，默认的规则链有：INPUT，OUTPUT，NAT，POSTROUTING，PREROUTING；&lt;/p&gt;
+&lt;p&gt;input匹配目的IP是本机的数据包；
+forward匹配流经本机的数据包；
+prerouting用来修改目的地址用来做DNAT；
+postrouting用来修改源地址用来做SNAT。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux-ip限制的两种设置方式</title>
+      <link>https://phpgao.github.io/linux_ip.html</link>
+      <pubDate>Tue, 27 May 2014 02:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_ip.html</guid>
+      <description>经常网络被攻击，最有效的方式就是在linux操作系统上直接限制ip访问，主要有两种方式设置
+1.使用hosts.allow和hosts.deny来设置ip白名单和黑名单，/etc/目录下
+优先级为先检查hosts.deny，再检查hosts.allow， 后者设定可越过前者限制， 例如： a.限制所有的ssh， 除非从218.64.87.0 - 127上来。 hosts.deny: in.sshd:ALL hosts.allow: in.sshd:218.64.87.0/255.255.255.128b.封掉218.64.87.0 - 127的telnet hosts.deny in.sshd:218.64.87.0/255.255.255.128c.限制所有人的TCP连接，除非从218.64.87.0 - 127访问 hosts.deny ALL:ALL hosts.allow ALL:218.64.87.0/255.255.255.128d.限制218.64.87.0 - 127对所有服务的访问 hosts.deny ALL:218.64.87.0/255.255.255.128其中冒号前面是TCP daemon的服务进程名称，通常系统 进程在/etc/inetd.conf中指定，比如in.ftpd，in.telnetd，in.sshd 其中IP地址范围的写法有若干中，主要的三种是： 1.网络地址--子网掩码方式： 218.64.87.0/255.255.255.02.网络地址方式（我自己这样叫，呵呵） 218.64.（即以218.64打头的IP地址） 3.缩略子网掩码方式，既数一数二进制子网掩码前面有多少个“1”比如： 218.64.87.0/255.255.255.0 -- 218.64.87.0/24设置好后，要重新启动# /etc/rc.d/init.d/xinetd restart# /etc/rc.d/init.d/network restart 2.使用iptables命令
+单个IP的命令是iptables -I INPUT -s 80.241.219.171 -j DROP封IP段的命令是iptables -I INPUT -s 96.47.225.0/16 -j DROPiptables -I INPUT -s 96.</description>
+    </item>
+    
+  </channel>
+</rss>

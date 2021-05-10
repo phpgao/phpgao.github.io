@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>kernel on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/kernel/</link>
+    <description>Recent content in kernel on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Nov 2017 05:00:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/kernel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos升级内核版本以支持overlay2</title>
+      <link>https://phpgao.github.io/update_linux_kernel.html</link>
+      <pubDate>Thu, 30 Nov 2017 05:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_linux_kernel.html</guid>
+      <description>&lt;p&gt;搬瓦工新入的KVM架构的机器，默认内核版本是&lt;code&gt;4.10.4&lt;/code&gt;，如果是本地用ISO安装的系统，默认内核版本可能更低，比如&lt;code&gt;3.10.0&lt;/code&gt;，如果我们想要获取到最新的Linux特性，那么就必须升级内核版本到最新，我们可以用很简单的几个命令就可做到。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

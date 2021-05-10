@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>code on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/code/</link>
+    <description>Recent content in code on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Mar 2017 09:16:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>一句话命令</title>
+      <link>https://phpgao.github.io/simple_command_line.html</link>
+      <pubDate>Thu, 09 Mar 2017 09:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/simple_command_line.html</guid>
+      <description>&lt;p&gt;记录一些比较简单又懒得记得命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>获取天气预报的方法</title>
+      <link>https://phpgao.github.io/php_weather.html</link>
+      <pubDate>Wed, 25 Mar 2015 14:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_weather.html</guid>
+      <description>&lt;p&gt;老高最近在处理天气预报的问题时总结了一下，备用！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编码漫谈</title>
+      <link>https://phpgao.github.io/char_encode.html</link>
+      <pubDate>Fri, 23 Jan 2015 02:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/char_encode.html</guid>
+      <description>&lt;p&gt;编码一定是程序员永远的痛，不知道老高能不能救到你。&lt;/p&gt;
+&lt;p&gt;以下命令的操作环境：centos6 + python2.6&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>不常见的字符</title>
+      <link>https://phpgao.github.io/funny_char.html</link>
+      <pubDate>Mon, 12 May 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/funny_char.html</guid>
+      <description>Ø ⊙ ╰_╯ ● § ㄥ ★ ☆ ▽ ° ◎ 〤ι〤 ≡ ˋ_ˊ ← → ↖ ↗ ↘ ↙ ↑ ↓ ﹏ ε ☭ ξ ็ ä └(^o^)┘ ﹌○﹋ ~^o^~
+ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็&amp;gt; ฌูููููู</description>
+    </item>
+    
+    <item>
+      <title>开发中经常用到的代码</title>
+      <link>https://phpgao.github.io/frequently-used-code.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/frequently-used-code.html</guid>
+      <description>[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 &amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; PHP //申明页面编码开启session并设置时区session_start();header(&amp;quot;Content-Type: text/html; charset=UTF-8&amp;quot;);ini_set(&#39;date.timezone&#39;,&#39;Asia/Shanghai&#39;);////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval(&#39;adasdasd&#39;);//heredoc==双引号$name=MyName;echo &amp;lt;&amp;lt;&amp;lt;EOTMy name is &amp;quot;$name&amp;quot;. I am printing some $foo-&amp;gt;foo.Now, I am printing some {$foo-&amp;gt;bar[1]}.This should print a capital &#39;A&#39;: \x41EOT;/*以上例程会输出：My name is &amp;quot;MyName&amp;quot;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital &#39;A&#39;: A*///Nowdoc==单引号echo &amp;lt;&amp;lt;&amp;lt;&#39;EOT&#39;My name is &amp;quot;$name&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

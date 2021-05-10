@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>samba on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/samba/</link>
+    <description>Recent content in samba on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Mar 2017 15:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/samba/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>树莓派安装记录-usb-samba-aria2-xware-apt-get</title>
+      <link>https://phpgao.github.io/raspberry_setup_tool.html</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/raspberry_setup_tool.html</guid>
+      <description>&lt;p&gt;老高的R6300v2自从刷了梅林后，一直在挂硬盘做迅雷离线下载。眼看着夏天到了，还是给路由器减减压，于是祭出老早买的树莓派2B，再次踏上折腾之路。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>树莓派samba的配置和自动挂载USB储存设备</title>
+      <link>https://phpgao.github.io/raspberry_automount.html</link>
+      <pubDate>Sat, 09 Jan 2016 07:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/raspberry_automount.html</guid>
+      <description>安装依赖包 apt-get install ntfs-3g apt-get install samba 编辑samba vi /etc/samba/smb.conf #add [media] comment = Temporary file space path = /media read only = no public = yes 重启samba服务
+/etc/init.d/samba restart USB自动挂载 挂载好麻烦，自动脚本来帮忙，使用的技术叫做udev。
+vi /etc/udev/rules.d/10-usbstorage.rules KERNEL!=&amp;#34;sd*&amp;#34;, GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; SUBSYSTEM!=&amp;#34;block&amp;#34;,GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; IMPORT{program}=&amp;#34;/sbin/blkid -o udev -p %N&amp;#34; ENV{ID_FS_TYPE}==&amp;#34;&amp;#34;, GOTO=&amp;#34;media_by_label_auto_mount_end&amp;#34; ENV{ID_FS_LABEL}!=&amp;#34;&amp;#34;, ENV{dir_name}=&amp;#34;%E{ID_FS_LABEL}&amp;#34; ENV{ID_FS_LABEL}==&amp;#34;&amp;#34;, ENV{dir_name}=&amp;#34;Untitled-%k&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{mount_options}=&amp;#34;relatime,sync&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{ID_FS_TYPE}==&amp;#34;vfat&amp;#34;, ENV{mount_options}=&amp;#34;iocharset=utf8,umask=000&amp;#34; ACTION==&amp;#34;add&amp;#34;, ENV{ID_FS_TYPE}==&amp;#34;ntfs&amp;#34;, ENV{mount_options}=&amp;#34;iocharset=utf8,umask=000&amp;#34; ACTION==&amp;#34;add&amp;#34;, RUN+=&amp;#34;/bin/mkdir -p /media/%E{dir_name}&amp;#34;, RUN+=&amp;#34;/bin/mount -o $env{mount_options} /dev/%k /media/%E{dir_name}&amp;#34; ACTION==&amp;#34;remove&amp;#34;, ENV{dir_name}!=&amp;#34;&amp;#34;, RUN+=&amp;#34;/bin/umount -l /media/%E{dir_name}&amp;#34;, RUN+=&amp;#34;/bin/rmdir /media/%E{dir_name}&amp;#34; LABEL=&amp;#34;media_by_label_auto_mount_end&amp;#34; 参考 树莓派自动挂载usb移动存储设备</description>
+    </item>
+    
+  </channel>
+</rss>

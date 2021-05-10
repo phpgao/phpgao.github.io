@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bbscache on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bbscache/</link>
+    <description>Recent content in bbscache on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 Jun 2014 05:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bbscache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>误删了phpwind下data-bbscache怎么办？</title>
+      <link>https://phpgao.github.io/phpwin_bbscache.html</link>
+      <pubDate>Sun, 22 Jun 2014 05:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpwin_bbscache.html</guid>
+      <description>今天手残，把上述文件夹给删了，而缺没有备份，网页直接打不开了 网上的回答五花八门，有登陆后台重建缓存的，有分析install.php重建文件夹的。。。各种无语啊 还是自己想的办法好：
+自己在本地重建建立一个一模一样的phpwind，然后把生成的bbscache文件夹覆盖回去即可！
+难点在于如何搭建一模一样的phpwind，主要是数据库的用户名密码和域名，还有后台管理的用户名密码，讲一下步骤：
+ 先在host里绑定域名www.abc.com到127.0.0.2 在Apache或其他服务器新建虚拟主机127.0.0.2，别名设为www.abc.com 把俺炸U那个文件拷贝进去，安装吧~  </description>
+    </item>
+    
+  </channel>
+</rss>

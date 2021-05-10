@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>headless on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/headless/</link>
+    <description>Recent content in headless on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 Apr 2016 01:58:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/headless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用VirtualBox在后台运行镜像</title>
+      <link>https://phpgao.github.io/virtualbox_run_in_background.html</link>
+      <pubDate>Tue, 05 Apr 2016 01:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtualbox_run_in_background.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/3686880991.png&#34; alt=&#34;VirtualBox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高的想做的很简单，就是开一个没有界面的虚拟机运行在后台，由于VirtualBox的GUI和虚拟机的运行管理是分离的，想要做到这一点很容易！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux无界面(headless)使用selenium抓取数据</title>
+      <link>https://phpgao.github.io/headless_selenium.html</link>
+      <pubDate>Tue, 09 Dec 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/headless_selenium.html</guid>
+      <description>问题 老高最近遇到一个需求，linux\centos下，使用selenium技术抓取数据。本来很简单的问题，但是由于内存限制，安装X window不现实，所以一个BT的想法诞生了，是否可以在centos命令行界面运行一个虚拟的桌面，然后使用selenium控制Firefox浏览器完成一些操作，Firefox运行在虚拟的桌面中，一切操作都在命令行中完成。
+Google之，发现了Xvfb，他可以新建一个虚拟的X窗口，再配合python的pyvirtualdisplay，简直就是神器！
+安装 centos下：
+# 安装Xvfb和pyvirtualdisplay yum install xorg-x11-server-Xvfb pip install pyvirtualdisplay 安装firefox和selenium
+yum install firefox pip install selenium 代码 from pyvirtualdisplay import Display from selenium import webdriver display = Display(visible=0, size=(800, 600)) display.start() browser = webdriver.Firefox() browser.get(&amp;#39;http://www.google.com&amp;#39;) print browser.title browser.quit() display.stop() 参考网站：
+http://selenium-python.readthedocs.org/en/latest/getting-started.html http://nullege.com/codes/search/selenium.webdriver.Remote.find_elements_by_class_name http://www.opsview.com/forum/opsview-core/how-do-i/how-do-i-install-selenium-centos-server https://gist.github.com/textarcana/5855427 http://scraping.pro/use-headless-firefox-scraping-linux/ http://serverfault.com/questions/363827/how-can-i-run-firefox-on-centos-with-no-display https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/ https://pypi.python.org/pypi/selenium
+http://selenium.googlecode.com/git/docs/api/py/selenium/selenium.selenium.html#module-selenium.selenium
+http://www.ibm.com/developerworks/cn/opensource/os-php-designptrns/ http://www.cnblogs.com/fnng/p/3230768.html http://www.cnblogs.com/fnng/p/3157639.html http://www.cnblogs.com/fnng/p/3157639.html</description>
+    </item>
+    
+  </channel>
+</rss>

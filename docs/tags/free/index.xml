@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>free on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/free/</link>
+    <description>Recent content in free on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 27 Jul 2014 03:22:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/free/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用shadowsocks轻松搭建翻墙环境教程</title>
+      <link>https://phpgao.github.io/shadowsocks_on_linux.html</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_on_linux.html</guid>
+      <description>&lt;p&gt;之前大家翻墙可能都会用到免费的goagent代理，但是他速度慢，链接也不稳定，看油管更是无望，更好的解决方案是shadowsocks。&lt;/p&gt;
+&lt;p&gt;shadowsocks是一个著名的轻量级socket代理，基于python编写。&lt;/p&gt;
+&lt;p&gt;如果你有国外的VPS，那么使用shadowsocks搭建一个翻{防屏蔽}墙服务器是一件很轻松的事情！&lt;/p&gt;
+&lt;p&gt;先看看&lt;a href=&#34;http://shadowsocks.org/en/download/clients.html&#34;&gt;shadowsocks覆盖的客户端覆盖了多少系统&lt;/a&gt;，连OpenWRT都支持！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/05/3138848860.jpg&#34; alt=&#34;shadowsocks客户端&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高之前买的$4.99一年的VPS，128MB，用起来妥妥的!现在已经升级至$9.99，512MB内存，运行速度更快，翻{防屏蔽}墙速度更是没话说，如果你感兴趣，可以看看&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;VPS购买攻略&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;看完本文，你就能够轻松打造独享的翻{防屏蔽}墙环境！&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;甚至能够将shadowsocks安装到你的路由器中，子网设备自动翻墙&lt;/a&gt;！再也不需要在网上购买shadowsocks的账号了，也不需要在忍受速度巨慢的免费shadowsocks账号了。&lt;/p&gt;
+&lt;p&gt;如果你的VPS是搬瓦工，那么恭喜你！你可以直接在后台一键安装shadowsocks，具体如何操作请参考&lt;a href=&#34;https://blog.phpgao.com/bandwagonhost_vps_panel.html&#34;&gt;使用搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置&lt;/a&gt;中如何一键安装shadowsocks一节，配置完毕后ss就会运行在后台，重启后也会自动运行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;友情提示：有些打包好的ss程序很难保证是否会记录你的服务器信息，所以一定要经常更新服务器端的密码或端口！或者，自己编译一个。。。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>regex on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/regex/</link>
+    <description>Recent content in regex on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jan 2018 06:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP验证IP</title>
+      <link>https://phpgao.github.io/php_valid_ip.html</link>
+      <pubDate>Tue, 23 Jan 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_valid_ip.html</guid>
+      <description>正则的效率是在比不上原生的，所以丢个链接(过滤器函数)走人。
+二逼正则:
+$valid = preg_match(&amp;#39;/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/&amp;#39;, $string); 正确正则:
+preg_match(&amp;#39;/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/&amp;#39;, $ipAddress); 过滤器的选项，比如可以过滤私有IP地址等。
+用法参考Validating an IP address with PHP&amp;rsquo;s filter_var function</description>
+    </item>
+    
+    <item>
+      <title>PHP正则表达式的模式修正符</title>
+      <link>https://phpgao.github.io/pattern_modifiers.html</link>
+      <pubDate>Fri, 25 Jul 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pattern_modifiers.html</guid>
+      <description>PHP在处理正则表达式的时候，在最后面可以加上诸如/i, /is, /s, /isU的选项，他们都代表什么含义呢？
+其实他们是PHP正则表达式的模式修正符，用于对正则表达式的补充。
+[TOC]
+优先级概念 正则符号的优先级：
+()圆括号因为是内存处理所以第1 * ? + { } 重复匹配内容第2 ^ $ \b 边界处理第3 | 条件处理第4 最后按照运算顺序计算匹配
+常用的修正符 i (PCRE_CASELESS)正则内容在匹配时候不区分大小写（默认是区分的）。
+如preg_match(&#39;/\[TOC\]/i&#39;,$str) 这句话中的小写字母i，他跟在正则表达式后面，起的作用是匹配时忽略大小写 所以，上述正则表达式可以匹配诸如 [toc]、[ToC]、或者[TOC]。
+m (PCRE_MULTILINE) 在匹配首内容或者尾内容时候采用多行识别匹配。默认情况下，PCRE 将目标字符串作为单一的一“行”字符所组成的（甚至其中包含有换行符也是如此）。“行起始”元字符（^）仅仅匹配字符串的起始，“行结束”元字符（$）仅仅匹配字符串的结束，或者最后一个字符是换行符时其前面（除非设定了 D 修正符）。这和 Perl 是一样的。 当设定了此修正符，“行起始”和“行结束”除了匹配整个字符串开头和结束外，还分别匹配其中的换行符的之后和之前。这和 Perl 的 /m 修正符是等效的。如果目标字符串中没有“/n”字符或者模式中没有 ^ 或 $，则设定此修正符没有任何效果。
+S (PCRE_DOTALL) 如果没有使用这个模式修正符号，元字符中的&amp;quot;.&amp;ldquo;默认不能表示换行符号,将字符串视为单行。如果设定了此修正符，模式中的圆点元字符（.）匹配所有的字符，包括换行符。没有此设定的话，则不包括换行符。这和 Perl 的 /s 修正符是等效的。排除字符类例如 [^a] 总是匹配换行符的，无论是否设定了此修正符。
+x (PCRE_EXTENDED) 忽略正则中的空白。如果设定了此修正符，模式中的空白字符除了被转义的或在字符类中的以外完全被忽略，在未转义的字符类之外的 # 以及下一个换行符之间的所有字符，包括两头，也都被忽略。
+A (PCRE_ANCHORED) 强制从头开始匹配。如果设定了此修正符，模式被强制为“anchored”，即强制仅从目标字符串的开头开始匹配即自动在模式开头加上^。此效果也可以通过适当的模式本身来实现（在 Perl 中实现的唯一方法）。
+D (PCRE_DOLLAR_ENDONLY) 强制$匹配尾部无任何内容。如果设定了此修正符，模式中的美元元字符仅匹配目标字符串的结尾。没有此选项时，如果最后一个字符是换行符的话，美元符号也会匹配此字符之前（但不会匹配任何其它换行符之前）。如果设定了 m 修正符则忽略此选项。Perl 中没有与其等价的修正符。 S 当一个模式将被使用若干次时，为加速匹配起见值得先对其进行分析。如果设定了此修正符则会进行额外的分析。目前，分析一个模式仅对没有单一固定起始字符的 non-anchored 模式有用。</description>
+    </item>
+    
+    <item>
+      <title>正则表达式教程</title>
+      <link>https://phpgao.github.io/regex_abc.html</link>
+      <pubDate>Tue, 22 Jul 2014 07:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/regex_abc.html</guid>
+      <description>&lt;h1 id=&#34;正则表达式入门&#34;&gt;正则表达式入门&lt;/h1&gt;
+&lt;h2 id=&#34;概念&#34;&gt;概念&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;字符是计算机软件处理文字时最基本的单位，可能是字母，数字，标点符号，空格，换行符，汉字等等。字符串是0个或更多个字符的序列。文本也就是文字，字符串。
+正则表达式是对字符串操作的一种逻辑公式，就是用事先定义好的一些特定字符、及这些特定字符的组合，组成一个“规则字符串”，这个“规则字符串”用来表达对字符串的一种过滤逻辑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;支持&#34;&gt;支持&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在最近的六十年中，正则表达式逐渐从模糊而深奥的数学概念，发展成为在计算机各类工具和软件包应用中的主要功能。不仅仅众多UNIX工具支持正则表达式，近二十年来，在WINDOWS的阵营下，正则表达式的思想和应用在大部分 Windows 开发者工具包中得到支持和嵌入应用！从正则式在Microsoft Visual Basic 6 或 Microsoft VBScript到.NET Framework中的探索和发展，WINDOWS系列产品对正则表达式的支持发展到无与伦比的高度，几乎所有 Microsoft 开发者和所有.NET语言都可以使用正则表达式。如果你是一位接触计算机语言的工作者，那么你会在主流操作系统（*nix[Linux, Unix等]、Windows、HP、BeOS等）、主流的开发语言（PHP、C#、Java、C++、VB、Javascript、Ruby以及python等）、数以亿万计的各种应用软件中，都可以看到正则表达式优美的舞姿。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上内容引自百度百科&lt;/p&gt;
+&lt;hr&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bootstrap on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bootstrap/</link>
+    <description>Recent content in bootstrap on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Jun 2015 01:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bootstrap/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新主题基于Bootstrap3</title>
+      <link>https://phpgao.github.io/new_theme_bootstrap3.html</link>
+      <pubDate>Fri, 19 Jun 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_theme_bootstrap3.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3708675869.png&#34; alt=&#34;新主题&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家应该注意到了，老高花了两天时间匆忙做的难看的主题终于上线了。&lt;/p&gt;
+&lt;p&gt;已经实现的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自适应页面&lt;/li&gt;
+&lt;li&gt;lazyload图片加载&lt;/li&gt;
+&lt;li&gt;加载速度优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前BS的浏览器支持情况如下表&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

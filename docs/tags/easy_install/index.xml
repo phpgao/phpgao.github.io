@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>easy_install on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/easy_install/</link>
+    <description>Recent content in easy_install on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 30 Jun 2015 05:44:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/easy_install/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速升级python到2.7</title>
+      <link>https://phpgao.github.io/update_python_to_27.html</link>
+      <pubDate>Tue, 30 Jun 2015 05:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_python_to_27.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1602052211.png&#34; alt=&#34;python&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(python logo来自互联网)&lt;/p&gt;
+&lt;p&gt;摘自 &lt;a href=&#34;https://github.com/h2oai/h2o-2/wiki/Installing-python-2.7-on-centos-6.3.-Follow-this-sequence-exactly-for-centos-machine-only#how-to-install-python-276-on-centos-63-62-and-64-okay-too-probably-others&#34;&gt;Installing python 2.7 on centos 6.3. Follow this sequence exactly for centos machine only&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>升级python2.7和安装pip,easy_install和setuptool</title>
+      <link>https://phpgao.github.io/pip-easy_install-setuptool.html</link>
+      <pubDate>Wed, 30 Jul 2014 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip-easy_install-setuptool.html</guid>
+      <description>&lt;h1 id=&#34;升级python和安装pipeasy_install和setuptool&#34;&gt;升级python和安装pip,easy_install和setuptool&lt;/h1&gt;
+&lt;p&gt;新机子装环境什么的最麻烦了，在此记录一下python的升级和包(模块)管理软件&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

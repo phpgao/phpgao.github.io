@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gfw on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/gfw/</link>
+    <description>Recent content in gfw on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Jun 2014 08:03:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/gfw/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>google被封的几个解决办法</title>
+      <link>https://phpgao.github.io/higoogle.html</link>
+      <pubDate>Fri, 13 Jun 2014 08:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/higoogle.html</guid>
+      <description>唉。。。功夫网大开杀戒了。P民如何应对，请看下面的网址
+http://www.googlestable.com/
+https://s3-ap-southeast-1.amazonaws.com/google.cn/index.html
+http://ls.ganquancun.com/ggip/
+http://www.hotbot.com/
+http://www.dogpile.com/
+https://www.projecth.us/sources
+这篇文章教你怎么配置go-agent代理*翻**q墙，推荐一下，点我</description>
+    </item>
+    
+  </channel>
+</rss>

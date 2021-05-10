@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>conf on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/conf/</link>
+    <description>Recent content in conf on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Sep 2014 03:28:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/conf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>nginx配置详解</title>
+      <link>https://phpgao.github.io/nginx_conf.html</link>
+      <pubDate>Wed, 17 Sep 2014 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_conf.html</guid>
+      <description>#nginx配置详解
+用了nginx这么久，很多配置还是记不牢，还是总结一下吧！
+基本命令：
+service nginx reload service nginx start service nginx stop #检测配置文件是否通过，需要比较高的权限，否则可能会报 Permission denied /usr/sbin/nginx -t #平滑重启 nginx -s reload 当编译安装好nginx后，其配置文件nginx.conf可以在/etc/nginx/下找到！
+此文件就是主配置文件了。
+##高层的配置
+#运行用户 user www; #启动进程,一般等于cpu的总核数 worker_processes auto; #更改worker进程的最大打开文件数限制 worker_rlimit_nofile 100000; #全局错误日志及PID文件 error_log /var/log/nginx/error.log; pid /var/run/nginx.pid; #工作模式及连接数上限 events { #每个工作进程允许最大的同时连接数  worker_connections 65535; #epoll是多路复用IO(I/O Multiplexing)中的一种方式,但是仅用于linux2.6以上内核,可以大大提高nginx的性能  #如果你使用*BSD，你应该使用kqueue  use epoll; #单个后台worker process进程的最大并发链接数  worker_connections 1024; #设置是否允许，Nginx在已经得到一个新连接的通知时，接收尽可能更多的连接  # multi_accept on; } HTTP 模块 HTTP模块控制着nginx http处理的所有核心特性。
+#设定http服务器，利用它的反向代理功能提供负载均衡支持 http { #并不会让nginx执行的速度更快，但它可以关闭在错误页面中的nginx版本数字，这样对于安全性是有好处的  server_tokens off; #设定mime类型,类型由mime.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Linux on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/linux/</link>
+    <description>Recent content in Linux on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Dec 2018 09:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何使用openldap搭建LDAP服务篇1--初见LDAP</title>
+      <link>https://phpgao.github.io/how_to_config_ldap_server.html</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_config_ldap_server.html</guid>
+      <description>&lt;p&gt;LDAP是轻量目录访问协议，这个服务从老高进入360就一直在用，LDAP带来的好处真的是很多，你可以把它想象成为一个内网版的单点登录服务，可以让你使用同一组账户密码访问所有支持LDAP验证的系统，为企业的内部运维带来了极大的便利。&lt;/p&gt;
+&lt;p&gt;不过想要自己独立搭建一个LDAP服务还是挺麻烦的！不过一旦搭建好了LDAP服务器，剩下的管理和运维就简单多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos升级内核版本以支持overlay2</title>
+      <link>https://phpgao.github.io/update_linux_kernel.html</link>
+      <pubDate>Thu, 30 Nov 2017 05:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_linux_kernel.html</guid>
+      <description>&lt;p&gt;搬瓦工新入的KVM架构的机器，默认内核版本是&lt;code&gt;4.10.4&lt;/code&gt;，如果是本地用ISO安装的系统，默认内核版本可能更低，比如&lt;code&gt;3.10.0&lt;/code&gt;，如果我们想要获取到最新的Linux特性，那么就必须升级内核版本到最新，我们可以用很简单的几个命令就可做到。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在linux或MacOS统创建和解压cab(cabinet)文件</title>
+      <link>https://phpgao.github.io/create_and_extract_cab_file_in_linux_or_macos.html</link>
+      <pubDate>Mon, 07 Aug 2017 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/create_and_extract_cab_file_in_linux_or_macos.html</guid>
+      <description>&lt;p&gt;由于工作原因，需要在Linux下操作cab文件，拜访Google后得到两枚神器，在此与大家分享。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/08/3551035709.jpeg&#34; alt=&#34;cab file&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下简单计算md5,base64,sha1,sha2</title>
+      <link>https://phpgao.github.io/md5_sha1_sha2_in_linux.html</link>
+      <pubDate>Wed, 01 Jun 2016 03:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/md5_sha1_sha2_in_linux.html</guid>
+      <description>&lt;p&gt;经常加密的同学，算个md5真是顺手的事儿。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ssh的反向隧道管理内网路由器</title>
+      <link>https://phpgao.github.io/ssh-reverse-tunnel.html</link>
+      <pubDate>Fri, 02 Oct 2015 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh-reverse-tunnel.html</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;SSH协议真是了不得！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/2363969333.png&#34; alt=&#34;pandorabox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;光是看标题，大家会看的云里雾里的，倾听老高细细道来！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openwrt中br-lan,eth0,eth0.1,eth0.2</title>
+      <link>https://phpgao.github.io/openwrt-interface.html</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt-interface.html</guid>
+      <description>&lt;p&gt;openwrt的接口真是多，老高一下子都看晕了，不过仔细理一理，还是能够分辨的。&lt;/p&gt;
+&lt;p&gt;首先盗openwrt-wiki中的一张图，这张图对理解这些接口很重要！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3406911994.png&#34; alt=&#34;asus-internals-default&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----iptables防火墙设置</title>
+      <link>https://phpgao.github.io/vbird_linux_note_iptables.html</link>
+      <pubDate>Sun, 31 May 2015 08:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_iptables.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;
+&lt;p&gt;以下内容总结自鸟哥的 Linux 私房菜 &amp;ndash; 服务器(第三版)，同时推荐喜欢Linux的同学们学习阅读。&lt;/p&gt;
+&lt;p&gt;关于VPS的更多安全设置可以参考 &lt;a href=&#34;https://blog.phpgao.com/vps_safty.html&#34;&gt;VPS安全设置&lt;/a&gt; &amp;amp; &lt;a href=&#34;https://blog.phpgao.com/vps_iptables.html&#34;&gt;VPS安全之防火墙设置&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----网络速查</title>
+      <link>https://phpgao.github.io/vbird_linux_note_network.html</link>
+      <pubDate>Sun, 31 May 2015 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_network.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>-etc-profile,-etc-bashrc等文件的区别与作用</title>
+      <link>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</link>
+      <pubDate>Thu, 28 May 2015 17:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</guid>
+      <description>&lt;p&gt;当我们在做一些与bash相关的操作时，比如设置别名、登录启动项等，多多少少都会与下面几个文件打交道，用的时候一查，然后又忘了。好记性不如烂笔头，下面老高就帮你理一理这些文件到底是干啥的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/profile&lt;/li&gt;
+&lt;li&gt;/etc/bashrc&lt;/li&gt;
+&lt;li&gt;~/.bash_profile&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>几条命令找出服务器上的垃圾文件</title>
+      <link>https://phpgao.github.io/clean-up-your-linux.html</link>
+      <pubDate>Sun, 24 May 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/clean-up-your-linux.html</guid>
+      <description>&lt;p&gt;Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！&lt;/p&gt;
+&lt;p&gt;当然，如果你的服务器容量是TB、PB级别的请无视此文。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>发现一个命令ldd</title>
+      <link>https://phpgao.github.io/good_cmd_ldd.html</link>
+      <pubDate>Sun, 17 May 2015 10:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/good_cmd_ldd.html</guid>
+      <description>ldd是Linux库操作中最实用的一个命令了，他可以查看一个程序所依赖的库。
+如果你的程序执行起来缺少某个库，我们就去下载，但是把库放到哪里才能让程序正确是识别出来呢？使用ldd就可以了！
+使用方法: ldd [options] file 功能:列出file运行所需的共享库 可用选项
+➜ sbin ldd --help Usage: ldd [OPTION]... FILE... --help print this help and exit --version print version information and exit -d, --data-relocs process data relocations 执行符号重部署，并报告缺少的目标对象 -r, --function-relocs process data and function relocations 对目标对象和函数执行重新部署，并报告缺少的目标对象和函数 -u, --unused print unused direct dependencies 打印不需要链接的库 -v, --verbose print all information 打印所有信息 例子
+➜ /bin ldd /bin/cp linux-vdso.so.1 =&amp;gt; (0x00007fff8dbfe000) libselinux.so.1 =&amp;gt; /lib64/libselinux.so.1 (0x00007f94558e4000) librt.so.1 =&amp;gt; /lib64/librt.so.1 (0x00007f94556dc000) libacl.</description>
+    </item>
+    
+    <item>
+      <title>Linux终端美化资源整理</title>
+      <link>https://phpgao.github.io/pretty_linux.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pretty_linux.html</guid>
+      <description>配色方案 通用主题 https://github.com/chriskempson/tomorrow-theme.git
+https://github.com/altercation/solarized.git
+iterm2 Monokai-Soda
+寻找主题方法 github里随便一搜就是一堆堆
+https://github.com/search?q=iterm2+theme</description>
+    </item>
+    
+    <item>
+      <title>安装双系统的一些记录</title>
+      <link>https://phpgao.github.io/install_multisystem_note.html</link>
+      <pubDate>Fri, 06 Mar 2015 06:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_multisystem_note.html</guid>
+      <description>&lt;h2 id=&#34;mbrgrub&#34;&gt;MBR&amp;amp;GRUB&lt;/h2&gt;
+&lt;p&gt;MBR（Master boot record）指主引导记录，主要用于硬盘分区。GRUB就是安装在MBR中，起引导系统作用。&lt;/p&gt;
+&lt;p&gt;阶段1：POST自检后系统载入目标装置的MBR（Master boot record），即前512字节。MBR一共包含三个部分主引导程序（Boot Loader）、硬盘分区表DPT（Disk Partition table）和硬盘有效标志（55AA）。&lt;/p&gt;
+&lt;p&gt;阶段2：主引导程序被载入内存开始执行，他将继续执行加载系统内核的任务。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux下windows的换行符</title>
+      <link>https://phpgao.github.io/return_in_linux_windows.html</link>
+      <pubDate>Wed, 04 Mar 2015 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/return_in_linux_windows.html</guid>
+      <description>&lt;p&gt;Unix/MAC和windows下换行总会出现以下问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unix/MAC下打开windows下的文本会多出一个^M，win下打开Unix/MAC文本会变成一行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原因是换行机制不一样，Unix下是&lt;code&gt;\n&lt;/code&gt;(0A)，mac下是&lt;code&gt;\r&lt;/code&gt;(0D)，win下是&lt;code&gt;\r\n&lt;/code&gt;(0D0A)。导致的结果是在程序中会造成一定的混乱。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://ww4.sinaimg.cn/large/6735b7fagw1eptjmcjvynj20je03mwh3.jpg&#34; alt=&#34;十六进制的换行&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在windows和linux下合并sql文件</title>
+      <link>https://phpgao.github.io/merge_sqlfiles.html</link>
+      <pubDate>Mon, 09 Feb 2015 08:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/merge_sqlfiles.html</guid>
+      <description>合并多个sql文件
+win:
+copy *.sql merged.sql # \b 指二进制合并，可用于图片等二进制文件 # \a 指ASCII合并 copy \b *.sql merged.sql # 小技巧，可实现文本隐藏 copy 1.jpg/b + 2.txt/a 3.jpg linux:
+# 合并所有扩展名为.sql的文件 cat *.sql&amp;gt;&amp;gt;merged.sql </description>
+    </item>
+    
+    <item>
+      <title>Linux下常用解压命令</title>
+      <link>https://phpgao.github.io/linux_unzip_command.html</link>
+      <pubDate>Wed, 28 Jan 2015 13:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_unzip_command.html</guid>
+      <description>&lt;p&gt;大家一定会用到的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux无界面(headless)使用selenium抓取数据</title>
+      <link>https://phpgao.github.io/headless_selenium.html</link>
+      <pubDate>Tue, 09 Dec 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/headless_selenium.html</guid>
+      <description>问题 老高最近遇到一个需求，linux\centos下，使用selenium技术抓取数据。本来很简单的问题，但是由于内存限制，安装X window不现实，所以一个BT的想法诞生了，是否可以在centos命令行界面运行一个虚拟的桌面，然后使用selenium控制Firefox浏览器完成一些操作，Firefox运行在虚拟的桌面中，一切操作都在命令行中完成。
+Google之，发现了Xvfb，他可以新建一个虚拟的X窗口，再配合python的pyvirtualdisplay，简直就是神器！
+安装 centos下：
+# 安装Xvfb和pyvirtualdisplay yum install xorg-x11-server-Xvfb pip install pyvirtualdisplay 安装firefox和selenium
+yum install firefox pip install selenium 代码 from pyvirtualdisplay import Display from selenium import webdriver display = Display(visible=0, size=(800, 600)) display.start() browser = webdriver.Firefox() browser.get(&amp;#39;http://www.google.com&amp;#39;) print browser.title browser.quit() display.stop() 参考网站：
+http://selenium-python.readthedocs.org/en/latest/getting-started.html http://nullege.com/codes/search/selenium.webdriver.Remote.find_elements_by_class_name http://www.opsview.com/forum/opsview-core/how-do-i/how-do-i-install-selenium-centos-server https://gist.github.com/textarcana/5855427 http://scraping.pro/use-headless-firefox-scraping-linux/ http://serverfault.com/questions/363827/how-can-i-run-firefox-on-centos-with-no-display https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/ https://pypi.python.org/pypi/selenium
+http://selenium.googlecode.com/git/docs/api/py/selenium/selenium.selenium.html#module-selenium.selenium
+http://www.ibm.com/developerworks/cn/opensource/os-php-designptrns/ http://www.cnblogs.com/fnng/p/3230768.html http://www.cnblogs.com/fnng/p/3157639.html http://www.cnblogs.com/fnng/p/3157639.html</description>
+    </item>
+    
+    <item>
+      <title>Linux目录和文件的权限设置</title>
+      <link>https://phpgao.github.io/linux_privilege.html</link>
+      <pubDate>Sat, 04 Oct 2014 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_privilege.html</guid>
+      <description>要求就是：
+ 将当前目录中的所有“子目录”的权限设置为755； 将当前目录中的所有“文件”的权限设置为644。  解决方法：
+chmod 644 -R *chmod 755 `find -type d` 也可以用find彻底些：
+find /path -type f -exec chmod 644 {} /;find /path -type d -exec chmod 755 {} /; 转自：
+http://blog.csdn.net/study16/article/details/5896390</description>
+    </item>
+    
+    <item>
+      <title>在Linux上使用sysstat的iostat监控系统IO</title>
+      <link>https://phpgao.github.io/sysstat.html</link>
+      <pubDate>Thu, 18 Sep 2014 07:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sysstat.html</guid>
+      <description>在Linux上使用sysstat 搜索iostat命令后才发现如此强大的系统监控工具！
+安装 centos
+yum install sysstat -y Ubuntu
+apt-get install sysstat 使用  iostat 工具提供CPU使用率及硬盘吞吐效率的数据； mpstat 工具提供单个处理器或多个处理器相关数据； sar 工具负责收集、报告并存储系统活跃的信息； sa1 工具负责收集并存储每天系统动态信息到一个二进制的文件中。它是通过计划任务工具cron来运行，是为sadc所设计的程序前端程序； sa2 工具负责把每天的系统活跃性息写入总结性的报告中。它是为sar所设计的前端 ，要通过cron来调用 sadc 是系统动态数据收集工具，收集的数据被写一个二进制的文件中，它被用作sar工具的后端； sadf 显示被sar通过多种格式收集的数据；  iostat ➜ /bin iostat &amp;ndash;help 用法: iostat [ 选项 ] [ &amp;lt;时间间隔&amp;gt; [ &amp;lt;次数&amp;gt; ] ] Options are: [ -c ] [ -d ] [ -N ] [ -n ] [ -h ] [ -k | -m ] [ -t ] [ -V ] [ -x ] [ -y ] [ -z ] [ -j { ID | LABEL | PATH | UUID | &amp;hellip; } [ [&amp;hellip;] | ALL ] ] [ [&amp;hellip;] | ALL ] [ -p [ [,&amp;hellip;] | ALL ] ]</description>
+    </item>
+    
+    <item>
+      <title>修改Linux系统语言</title>
+      <link>https://phpgao.github.io/change_system_lang.html</link>
+      <pubDate>Thu, 18 Sep 2014 05:42:38 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/change_system_lang.html</guid>
+      <description>中文总是能引出很多麻烦，所以推荐安装系统的时候不要选择任何与中文有关的选项。
+但是如果很不幸你选了中文作为系统语言，还是有补救的办法的。
+很简单，请看下面的代码：
+编辑i18n：
+vi /etc/sysconfig/i18n 将LANG=&amp;quot;zh_CN.UTF-8&amp;quot;改为LANG=&amp;quot;en_US.UTF-8&amp;quot;即可！</description>
+    </item>
+    
+    <item>
+      <title>使用dropbox同步备份网站和数据库</title>
+      <link>https://phpgao.github.io/dropbox_sync_cli.html</link>
+      <pubDate>Tue, 29 Jul 2014 08:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dropbox_sync_cli.html</guid>
+      <description>&lt;p&gt;自从用了Shadowsocks，整个人都精神多了！&lt;/p&gt;
+&lt;p&gt;今天开整Dropbox，话说这货也被Q了。&lt;/p&gt;
+&lt;p&gt;废话不多说&lt;/p&gt;
+&lt;p&gt;以下内容需要翻{防屏蔽}墙使用，如果没有，可以参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;老高的这篇文章&lt;/a&gt;搭建一个稳定又极速的翻{防屏蔽}墙环境&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.dropbox.com/install?os=lnx&#34;&gt;官网&lt;/a&gt;找到linux专用脚本，执行一下对应系统的脚本&lt;/p&gt;
+&lt;h3 id=&#34;32位系统&#34;&gt;32位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;64位系统&#34;&gt;64位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>python交互模式下方向键乱码的正确解决方法</title>
+      <link>https://phpgao.github.io/python_arrow_key_messup.html</link>
+      <pubDate>Tue, 29 Jul 2014 03:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_arrow_key_messup.html</guid>
+      <description>&lt;h1 id=&#34;python交互模式下方向键乱码的正确解决方法&#34;&gt;python交互模式下方向键乱码的正确解决方法&lt;/h1&gt;
+&lt;p&gt;今天升级了python后，发现在交互模式中上下左右变成了乱码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;^[[A ^[[D ^[[B ^[[C ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;搜索了一下，普遍的解决方法是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为方向键被转义了
+原因主要是由于缺少readline Module问题导致的。而CentOS默认只有readline模块而没有readline-devel模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决方法
+yum -y install readline-devl
+然后重新编译安装python就ok了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再仔细一看，这些问题都是N年前了，yum中的包名早都换了。。。怪不得总是报错，说找不到&lt;code&gt;readline-devl&lt;/code&gt;，貌似现在开发版后面都变成&lt;code&gt;devel&lt;/code&gt;了&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记一次bypy的使用</title>
+      <link>https://phpgao.github.io/bypy.html</link>
+      <pubDate>Mon, 28 Jul 2014 07:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bypy.html</guid>
+      <description>&lt;p&gt;无意间发现了&lt;a href=&#34;https://github.com/houtianze/bypy&#34;&gt;bypy&lt;/a&gt;一个python写得&lt;strong&gt;百度网盘&lt;/strong&gt;的linux客户端&lt;/p&gt;
+&lt;p&gt;工具实在难得，记录一下，说不定以后能用上！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用shadowsocks轻松搭建翻墙环境教程</title>
+      <link>https://phpgao.github.io/shadowsocks_on_linux.html</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_on_linux.html</guid>
+      <description>&lt;p&gt;之前大家翻墙可能都会用到免费的goagent代理，但是他速度慢，链接也不稳定，看油管更是无望，更好的解决方案是shadowsocks。&lt;/p&gt;
+&lt;p&gt;shadowsocks是一个著名的轻量级socket代理，基于python编写。&lt;/p&gt;
+&lt;p&gt;如果你有国外的VPS，那么使用shadowsocks搭建一个翻{防屏蔽}墙服务器是一件很轻松的事情！&lt;/p&gt;
+&lt;p&gt;先看看&lt;a href=&#34;http://shadowsocks.org/en/download/clients.html&#34;&gt;shadowsocks覆盖的客户端覆盖了多少系统&lt;/a&gt;，连OpenWRT都支持！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/05/3138848860.jpg&#34; alt=&#34;shadowsocks客户端&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高之前买的$4.99一年的VPS，128MB，用起来妥妥的!现在已经升级至$9.99，512MB内存，运行速度更快，翻{防屏蔽}墙速度更是没话说，如果你感兴趣，可以看看&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;VPS购买攻略&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;看完本文，你就能够轻松打造独享的翻{防屏蔽}墙环境！&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;甚至能够将shadowsocks安装到你的路由器中，子网设备自动翻墙&lt;/a&gt;！再也不需要在网上购买shadowsocks的账号了，也不需要在忍受速度巨慢的免费shadowsocks账号了。&lt;/p&gt;
+&lt;p&gt;如果你的VPS是搬瓦工，那么恭喜你！你可以直接在后台一键安装shadowsocks，具体如何操作请参考&lt;a href=&#34;https://blog.phpgao.com/bandwagonhost_vps_panel.html&#34;&gt;使用搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置&lt;/a&gt;中如何一键安装shadowsocks一节，配置完毕后ss就会运行在后台，重启后也会自动运行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;友情提示：有些打包好的ss程序很难保证是否会记录你的服务器信息，所以一定要经常更新服务器端的密码或端口！或者，自己编译一个。。。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>在linux下安装ctorrent下载种子文件</title>
+      <link>https://phpgao.github.io/ctorrent.html</link>
+      <pubDate>Sun, 27 Jul 2014 02:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ctorrent.html</guid>
+      <description>&lt;p&gt;VPS大家手里多多少少都会有那么一两个（win请绕道），如果能让他们在空闲的时候帮我们下载一些很大，但是又下载很慢的种子，岂不是一举两得！&lt;/p&gt;
+&lt;p&gt;linux命令行下的torrent下载软件真的很少([rc]Torrent和Transmission的命令行版本)，而且实在不太好用（当然是和迅雷不能比）。&lt;/p&gt;
+&lt;p&gt;但是如果你看完此篇，也许会发现原来在命令行里下载种子其实不是那么难！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux经典面试题</title>
+      <link>https://phpgao.github.io/linux_interview_questions.html</link>
+      <pubDate>Wed, 18 Jun 2014 02:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_interview_questions.html</guid>
+      <description>Linux挂载Winodws共享文件夹
+  查看http的并发请求数及其TCP连接状态：
+  用tcpdump嗅探80端口的访问看看谁最高
+  统计/var/log/下文件个数
+  查看当前系统每IP连接数
+  shell下32位随机密码生成
+  统计出apache的access.log中访问量最多的5个IP
+  如何查看二进制文件的内容
+  ps aux 中VSZ代表什么意思 RSS代表什么
+  检测并修复/dev/hda5
+  Linux开机启动顺序
+  符号链接和硬链接的区别
+  保存当前磁盘分区的分区表
+  手动安装grub
+  改内核参数
+  在1-39内取随机数
+  限定apache每秒钟连接数为1,峰值为3
+  FTP主动与被动模式
+  显示/etc/inittab中以#开头,且后面跟一个或多个空白字符,而后又跟了任意非空白字符的行;
+  显示/etc/inittab中包含了:一个数字:(即两个冒号中间一个数字)的行;
+  怎么把自己写的脚本添加到服务里面，即可以使用service命令来调用
+  写一个脚本，实现批量添加20个用户，用户名为user1-20，密码为user后面跟5个随机字符
+  写一个脚本，实现判断192.</description>
+    </item>
+    
+    <item>
+      <title>Shell中各种奇怪的变量</title>
+      <link>https://phpgao.github.io/linux_puzzle.html</link>
+      <pubDate>Wed, 18 Jun 2014 02:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux_puzzle.html</guid>
+      <description>这些变量是随系统运行而变化的，灵活使这些变量可简化我们的操作和更好地控制bash shell的行为。
+$# 是传给脚本的参数个数 $0 是脚本本身的名字 $1 是传递给该shell脚本的第一个参数 $2 是传递给该shell脚本的第二个参数 $@ 是传给脚本的所有参数的列表 $* 是以一个单字符串显示所有向脚本传递的参数，与位置变量不同，参数可超过9个 $$ 是脚本运行的当前进程ID号 $? 是显示最后命令的退出状态，0表示没有错误，其他表示有错误 </description>
+    </item>
+    
+    <item>
+      <title>mysql忘记root密码解决方法</title>
+      <link>https://phpgao.github.io/iforget_mysql.html</link>
+      <pubDate>Sat, 10 May 2014 01:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/iforget_mysql.html</guid>
+      <description>Windows 步骤如下： 1.停止mysql服务(以管理员身份,在cmd命令行下运行)
+net stop mysql 2.使用 mysqld –skip-grant-tables 命令启动mysql数据库
+&amp;gt;D:\&amp;gt;net stop mysql MySQL 服务正在停止. MySQL 服务已成功停止。 D:\&amp;gt;mysqld --skip-grant-tables&amp;lt;/pre&amp;gt;  3.新开一个cmd窗口，进行如下操作
+D:\&amp;gt;mysql -uroot Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 1 Server version: 5.1.26-rc-community MySQL Community Server (GPL) Type &amp;#39;help;&amp;#39; or &amp;#39;\h&amp;#39; for help. Type &amp;#39;\c&amp;#39; to clear the buffer. mysql&amp;gt; update mysql.user set password=password(&amp;#39;root&amp;#39;) where user=&amp;#39;root&amp;#39;; Query OK, 1 row affected (0.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>chacha20 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/chacha20/</link>
+    <description>Recent content in chacha20 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 14:29:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/chacha20/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安装shadowsocks-python并启用chacha20加密</title>
+      <link>https://phpgao.github.io/shadowsocks_chacha20.html</link>
+      <pubDate>Mon, 27 Apr 2015 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_chacha20.html</guid>
+      <description>&lt;p&gt;原版shadowsocks使用python写的，源码在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks&#34;&gt;https://github.com/shadowsocks/shadowsocks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下面老高写一个如何安装shadowsocks并且开启chacha20加密的方法&lt;/p&gt;
+&lt;p&gt;老高的运行环境&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;centos6 + python2.6&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

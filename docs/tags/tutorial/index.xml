@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tutorial on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/tutorial/</link>
+    <description>Recent content in tutorial on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Jun 2015 03:00:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>typecho插件编写教程7---Helper类</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-7.html</link>
+      <pubDate>Tue, 02 Jun 2015 03:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-7.html</guid>
+      <description>&lt;p&gt;&lt;code&gt;Helper&lt;/code&gt;类为我们封装了很多与插件有关的操作，并且全部是公共静态方法，比如获取系统配置、添加路由、添加面板等功能，是开发插件必不可少的工具。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;插件帮手将默认出现在所有的typecho发行版中.因此你可以放心使用它的功能, 以方便你的插件安装在用户的系统里.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Helper类的注释已经写的很清楚了，老高在此仅挑几个常用的方法讲讲。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程6---调用接口</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-6.html</link>
+      <pubDate>Wed, 20 May 2015 12:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-6.html</guid>
+      <description>&lt;p&gt;此篇我们开始调用接口，我们在插件类中新定义一个方法，起名为&lt;code&gt;send_post&lt;/code&gt;，在方法中我们通过系统配置获取接口调用地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程5---核心代码</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-5.html</link>
+      <pubDate>Wed, 20 May 2015 10:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-5.html</guid>
+      <description>&lt;p&gt;之前啰嗦了很多，现在开始写核心代码。&lt;/p&gt;
+&lt;p&gt;分析一下，发布文章的时候，我们需要的信息就是当前文章的URL，我们需要想办法从&lt;code&gt;$contents&lt;/code&gt;、 &lt;code&gt;$class&lt;/code&gt;中拿到他。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程4---插件点</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-4.html</link>
+      <pubDate>Wed, 20 May 2015 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-4.html</guid>
+      <description>&lt;p&gt;终于，在能够保存配置信息后，我们可以开始编写插件的挂载功能了。&lt;/p&gt;
+&lt;p&gt;首先我们需要知道系统为我们在各个关键的环节都预留了插件点给我们，系统运行到插件点时，会检测到是否有插件挂在这个点上，然后执行插件的逻辑！&lt;/p&gt;
+&lt;p&gt;插件的工作就是找到合适的插件点，挂上去，然后执行自己的逻辑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程3---保存配置</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-3.html</link>
+      <pubDate>Wed, 20 May 2015 02:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-3.html</guid>
+      <description>&lt;p&gt;上一节我们制作了一个裸插件，下面我们开始让我们的插件开始工作！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程2---新插件</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-2.html</link>
+      <pubDate>Wed, 20 May 2015 01:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-2.html</guid>
+      <description>&lt;p&gt;第一节我们了解了一个插件的基本构成，下面我们需要一个实例练习巩固。&lt;/p&gt;
+&lt;p&gt;真赶巧，老高最近正在改版&lt;a href=&#34;https://blog.phpgao.com/typecho_plugin_baidusubmit.html&#34;&gt;百度sitemap提交插件for typecho&lt;/a&gt;，下面和老高一起改版吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程1---从HelloWorld说起</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-1.html</link>
+      <pubDate>Tue, 19 May 2015 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-1.html</guid>
+      <description>&lt;p&gt;最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！&lt;/p&gt;
+&lt;p&gt;如果你对typecho的源码有兴趣，可以参考老高的系列文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_init.html&#34;&gt;typecho源代码解析1 - 系统初始化&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_plugin.html&#34;&gt;typecho源代码解析2 - 插件机制&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_dispatch.html&#34;&gt;typecho源代码解析3 - 路由分发&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_business_logic.html&#34;&gt;typecho源代码解析4 - 业务逻辑&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

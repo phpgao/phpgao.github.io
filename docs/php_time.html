@@ -1,0 +1,146 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>PHP时间函数总结 | 老高的技术博客</title><meta name=keywords content="PHP,time,mktime,gtm,date,strtotime"><meta name=description content="PHP关于时间的函数可以参考这里，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！
+ps.关于时间戳与日期的转换工具，博主推荐这个时间戳转换工具。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/php_time.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="PHP时间函数总结"><meta property="og:description" content="PHP关于时间的函数可以参考这里，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！
+ps.关于时间戳与日期的转换工具，博主推荐这个时间戳转换工具。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/php_time.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-09-08T16:13:00+00:00"><meta property="article:modified_time" content="2014-09-08T16:13:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="PHP时间函数总结"><meta name=twitter:description content="PHP关于时间的函数可以参考这里，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！
+ps.关于时间戳与日期的转换工具，博主推荐这个时间戳转换工具。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"PHP时间函数总结","item":"https://phpgao.github.io/php_time.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"PHP时间函数总结","name":"PHP时间函数总结","description":"PHP关于时间的函数可以参考这里，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！\nps.关于时间戳与日期的转换工具，博主推荐这个时间戳转换工具。\n","keywords":["PHP","time","mktime","gtm","date","strtotime"],"articleBody":"PHP关于时间的函数可以参考这里，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！\nps.关于时间戳与日期的转换工具，博主推荐这个时间戳转换工具。\n[TOC]\nPHP时区设置 在使用PHP与时间有关的时间函数时，一定要先定义时区，否则每次使用时间函数的时候会显示一个Notice级别的错误。\n本文中所有的示例都基于中国时间，即GTM+8\n固化在文件 再php.ini配置文件里找到被注释掉的\n ;data.timezone =\n 改为：\n date.timezone = PRC\n 其中PRC可以换为\nAsia/Shanghai – 上海\rAsia/Chongqing – 重庆\rAsia/Urumqi – 乌鲁木齐\rAsia/Hong_Kong – 香港\rAsia/Macao – 澳门\rAsia/Taipei – 台北\rAsia/Singapore – 新加坡\r 运行时定义时区 方法一 ini_set('date.timezone','Asia/Shanghai');\r 方法二 date_default_timezone_set('PRC'); //此函数PHP4不存在，考虑到兼容性可以先使用下面的方法用来判断函数是否可用\rfunction_exists(date_default_timezone_set)\r 时间戳 什么是时间戳(timestamp)？他指的是格林威治时间 1970 年 1 月 1 日 00:00:00到当前时间的秒数，也称Unix时间戳（Unix timestamp）或时间戳。\ntime time()函数应该是最简单的时间函数了，该函数不接受参数，返回的是当前时间的时间戳。\necho time();\r//1410174652\r microtime 这个函数与time()类似，他返回当前时间戳以及微秒数，用空格隔开。\necho microtime();\r//0.55958200 1410174780\r 为了计算时间，一般会把该函数封装。\nfunction microtime_float()\r{\rlist($usec, $sec) = explode(\" \", microtime());\rreturn ((float)$usec + (float)$sec);\r}\r mktime 根据参数生成对应的时间戳\nint mktime ([ int $hour = date(\"H\") [, int $minute = date(\"i\") [, int $second = date(\"s\") [, int $month = date(\"n\") [, int $day = date(\"j\") [, int $year = date(\"Y\") [, int $is_dst = -1 ]]]]]]] )\r 例子：\necho mktime(0, 0, 0, 3, 27, 1990);\r//638467200\r//1990-3-27 00:00:00\r 下面几种情况值得注意：\n小时，分钟和秒 以小时为例，小时的范围应该是0-23，但是如果超过这个范围，会发生什么？请读者结合示例代码自己总结。\necho mktime(28, 0, 0, 3, 27, 1990);\r//638568000\r//1990-3-28 04:00:00\recho mktime(-28, 0, 0, 3, 27, 1990);\r//638366400\r//1990-3-25 20:00:00\r 月，日和年 以日为例，其范围应该是1-31，有几个特殊情况需要注意。请看下面示例。\necho mktime(0, 0, 0, 3, 1, 1990);\r//1990-3-01 00:00:00\recho mktime(0, 0, 0, 3, 0, 1990);\r//636134400\r//1990-2-28 00:00:00\r//1变为0，日期提前了一天。\r//利用这个特性，我们可以轻易的得出当月的最后一天的日期\recho mktime(0, 0, 0, 4, 0, 1990);\r//638812800\r//1990-3-31 00:00:00\r//也能轻易得出给定月份的天数\recho date( \"t\", mktime( 0, 0, 0, 2, 1, 2000 ) );\r//29\r 格式化 date 这个函数的作用是把时间戳格式化为指定格式，接受两个参数，第一个为格式，具体写法请参考官方说明，第二个为时间戳，默认为当前时间，即time()。\n下面的例子可以得到明天，上个月和下一年。\n$tomorrow = mktime(0, 0, 0, date(\"m\") , date(\"d\")+1, date(\"Y\"));\r$lastmonth = mktime(0, 0, 0, date(\"m\")-1, date(\"d\"), date(\"Y\"));\r$nextyear = mktime(0, 0, 0, date(\"m\"), date(\"d\"), date(\"Y\")+1);\r strtotime 将任何英文文本的日期时间描述解析为Unix时间戳，这是一个很强大的函数！\nint strtotime ( string $time [, int $now = time() ] )\r 参数1：日期/时间字符串。 参数2：用来计算返回值的时间戳。\n注意年月日的顺序\necho date('Y-m-d', strtotime(\"06/08/2014\")), \"\\n\"; //2014-06-08\recho date('Y-m-d', strtotime(\"06-08-2014\")), \"\\n\"; //2014-08-06\r strtotime可以**‘理解’**一些自然语句，十分好用！\necho strtotime(\"2014-03-27\"), \"\\n\";\recho strtotime(\"December 31\"), \"\\n\";\recho strtotime(\"now\"), \"\\n\";\recho strtotime(\"10 September 2000\"), \"\\n\";\recho strtotime(\"+1 day\"), \"\\n\";\recho strtotime(\"+1 week\"), \"\\n\";\recho strtotime(\"Saturday\"), \"\\n\";\recho strtotime(\"+1 week 2 days 4 hours 2 seconds\"), \"\\n\";\recho strtotime(\"next Thursday\"), \"\\n\";\recho strtotime(\"last Monday\"), \"\\n\";\r 还可以指定日期\n$time = date('Y-m-d H:i:s', time());\recho strtotime($time.'1day'), \"\\n\";\recho \"\\n\";\recho strtotime($time.'-1year'), \"\\n\";\r//也可以直接使用时间戳\recho strtotime('-1year', time());, \"\\n\";\rstrtotime(\"+1 week\", $startdate);\r 星期数相关\n//获取指定星期数的第一天，参数格式yyyyWww\r//最后两个ww指你需要的周数\recho date('Y-m-d H:i:s',strtotime('2014W01')), \"\\n\";\r//2014年第一周的第一天\r//2013-12-30 00:00:00\r//获取指定星期数的第N天，参数格式yyyyWww-N。N的取值范围是1-7\recho date('Y-m-d H:i:s',strtotime('2014W01-5')), \"\\n\";\r//2014年第一周的第五天\r//2014-01-03 00:00:00\r DateTime类 这里是DateTime类文档链接\nDateTime类实现了DateTimeInterface接口，它实现了很多关于时间的功能，如时间的比较、修改、创建和格式化等。 创建一个DateTime对象很简单：\n$datetime = new DateTime; //面向对象\r$datetime_specific = new DateTime('2014-03-27'); //面向对象\r 其主要方法包括：\n$datetime-add(); //增加时间\r$datetime-sub(); //减少时间\r$datetime-modify(); //修改时间\r$datetime-format(); //格式化输出\r$datetime-setTime(); //设置时间\r$datetime-diff(); //对比时间，返回时间差\r 以上方法在此不展开讲了，有兴趣TX请自己上面的文档学习。\nDateInterval类 DateInterval类表示一个时间段，这个类在DateTime的add()、sub()还有diff()中会用到，其构造函数里需要传入时间增量\n 什么是时间增量？\n 他用来描述一段时间，形如P1Y2M3DT4H5M6S，字母都是大写。其中P后面跟年月日，T后面是时分秒。例：\nP1YT1S 1年零一秒\rT1H1S 1小时零一秒\r 理解了时间增量，那么我们来构造一个DateInterval对象吧：\n$eightynine_days_ago = new DateInterval( \"P89D\" );  接下来就可以把他们用在DateTime的add()、sub()还有diff()中了。\nlocaltime array localtime ([ int $timestamp = time() [, bool $is_associative = false ]] )\r localtime以时间戳为准，返回一个数组，其结构和 C 函数调用返回的完全一样。\n例：\nprint_r( localtime(strtotime('2014-03-27 12:13:14')) );\rArray\r(\r[0] = 14\r[1] = 13\r[2] = 12\r[3] = 27\r[4] = 2\r[5] = 114\r[6] = 4\r[7] = 85\r[8] = 0\r)\r 如果第二参数为真，则返回一个关联数组，与之前的索引数组对应。\nprint_r( localtime(strtotime('2014-03-27 12:13:14'), true) );\rArray\r(\r[tm_sec] = 14\r[tm_min] = 13\r[tm_hour] = 12\r[tm_mday] = 27\r[tm_mon] = 2\r[tm_year] = 114\r[tm_wday] = 4\r[tm_yday] = 85\r[tm_isdst] = 0\r)\r 说明：\n\"tm_sec\" - 秒数， 0 到 59\r\"tm_min\" - 分钟数， 0 到 59\r\"tm_hour\" - 小时， 0 到 23\r\"tm_mday\" - 月份中的第几日， 1 到 31\r\"tm_mon\" - 年份中的第几个月， 0 (Jan) 到 11 (Dec)\r\"tm_year\" - 年份，从 1900 开始\r\"tm_wday\" - 星期中的第几天， 0 (Sun) 到 6 (Sat)\r\"tm_yday\" - 一年中的第几天， 0 到 365\r\"tm_isdst\" - 夏令时当前是否生效？ 如果是生效的是正数， 0 代表未生效，负数代表未知。\r 日历Calender函数 文档在这儿\n老高觉得这Calender函数中最有用的就是这个cal_days_in_month了，他返回某个历法中某年中某月的天数。\n例:\necho cal_days_in_month(CAL_GREGORIAN, 2, 2014);\r//28\r 比之前mktime()要简单的多吧。\n总结 关于时间的函数就介绍到这儿，由于老高时间有限，许多有趣的函数，如checkdate、date_diff都没有铺开介绍，争取日后补上。\n纵观PHP在5.0版本的时间函数，不难发现，PHP为我们提供了一套很简单快捷的函数帮助我们处理时间，而且很多计算的方法不止一种，希望大家掌握本文提供的最基础的函数，然后运用到实际的开发中去。\n","wordCount":"546","inLanguage":"en","datePublished":"2014-09-08T16:13:00Z","dateModified":"2014-09-08T16:13:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/php_time.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>PHP时间函数总结</h1><div class=post-meta>September 8, 2014&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-09-08_php_time.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>PHP关于时间的函数可以参考<a href=http://cn2.php.net/manual/zh/ref.datetime.php>这里</a>，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！</p><p>ps.关于时间戳与日期的转换工具，博主推荐这个<a href=http://shijianchuo.911cha.com>时间戳转换工具</a>。</p><p>[TOC]</p><h1 id=php时区设置>PHP时区设置<a hidden class=anchor aria-hidden=true href=#php时区设置>#</a></h1><p>在使用PHP与时间有关的时间函数时，一定要先定义时区，否则每次使用时间函数的时候会显示一个Notice级别的错误。</p><p><strong>本文中所有的示例都基于中国时间，即GTM+8</strong></p><h2 id=固化在文件>固化在文件<a hidden class=anchor aria-hidden=true href=#固化在文件>#</a></h2><p>再php.ini配置文件里找到被注释掉的</p><blockquote><p>;data.timezone =</p></blockquote><p>改为：</p><blockquote><p>date.timezone = PRC</p></blockquote><p>其中PRC可以换为</p><pre><code>Asia/Shanghai – 上海
+Asia/Chongqing – 重庆
+Asia/Urumqi – 乌鲁木齐
+Asia/Hong_Kong – 香港
+Asia/Macao – 澳门
+Asia/Taipei – 台北
+Asia/Singapore – 新加坡
+</code></pre><h2 id=运行时定义时区>运行时定义时区<a hidden class=anchor aria-hidden=true href=#运行时定义时区>#</a></h2><h3 id=方法一>方法一<a hidden class=anchor aria-hidden=true href=#方法一>#</a></h3><pre><code>ini_set('date.timezone','Asia/Shanghai');
+</code></pre><h3 id=方法二>方法二<a hidden class=anchor aria-hidden=true href=#方法二>#</a></h3><pre><code>date_default_timezone_set('PRC'); 
+//此函数PHP4不存在，考虑到兼容性可以先使用下面的方法用来判断函数是否可用
+function_exists(date_default_timezone_set)
+</code></pre><h1 id=时间戳>时间戳<a hidden class=anchor aria-hidden=true href=#时间戳>#</a></h1><p>什么是时间戳(timestamp)？他指的是格林威治时间 1970 年 1 月 1 日 00:00:00到当前时间的秒数，也称Unix时间戳（Unix timestamp）或时间戳。</p><h2 id=time>time<a hidden class=anchor aria-hidden=true href=#time>#</a></h2><p><code>time()</code>函数应该是最简单的时间函数了，该函数不接受参数，返回的是当前时间的时间戳。</p><pre><code>echo time();
+//1410174652
+</code></pre><h2 id=microtime>microtime<a hidden class=anchor aria-hidden=true href=#microtime>#</a></h2><p>这个函数与<code>time()</code>类似，他返回当前时间戳以及微秒数，用空格隔开。</p><pre><code>echo microtime();
+//0.55958200 1410174780
+</code></pre><p>为了计算时间，一般会把该函数封装。</p><pre><code>function microtime_float()
+{
+    list($usec, $sec) = explode(&quot; &quot;, microtime());
+    return ((float)$usec + (float)$sec);
+}
+</code></pre><h2 id=mktime>mktime<a hidden class=anchor aria-hidden=true href=#mktime>#</a></h2><p>根据参数生成对应的时间戳</p><pre><code>int mktime ([ int $hour = date(&quot;H&quot;) [, int $minute = date(&quot;i&quot;) [, int $second = date(&quot;s&quot;) [, int $month = date(&quot;n&quot;) [, int $day = date(&quot;j&quot;) [, int $year = date(&quot;Y&quot;) [, int $is_dst = -1 ]]]]]]] )
+</code></pre><p>例子：</p><pre><code>echo mktime(0, 0, 0, 3, 27, 1990);
+//638467200
+//1990-3-27 00:00:00
+</code></pre><p>下面几种情况值得注意：</p><h3 id=小时分钟和秒>小时，分钟和秒<a hidden class=anchor aria-hidden=true href=#小时分钟和秒>#</a></h3><p>以小时为例，小时的范围应该是0-23，但是如果超过这个范围，会发生什么？请读者结合示例代码自己总结。</p><pre><code>echo mktime(28, 0, 0, 3, 27, 1990);
+//638568000
+//1990-3-28 04:00:00
+
+echo mktime(-28, 0, 0, 3, 27, 1990);
+//638366400
+//1990-3-25 20:00:00
+</code></pre><h3 id=月日和年>月，日和年<a hidden class=anchor aria-hidden=true href=#月日和年>#</a></h3><p>以日为例，其范围应该是1-31，有几个特殊情况需要注意。请看下面示例。</p><pre><code>echo mktime(0, 0, 0, 3, 1, 1990);
+//1990-3-01 00:00:00
+
+echo mktime(0, 0, 0, 3, 0, 1990);
+//636134400
+//1990-2-28 00:00:00
+//1变为0，日期提前了一天。
+
+//利用这个特性，我们可以轻易的得出当月的最后一天的日期
+echo mktime(0, 0, 0, 4, 0, 1990);
+//638812800
+//1990-3-31 00:00:00
+
+//也能轻易得出给定月份的天数
+echo date( &quot;t&quot;, mktime( 0, 0, 0, 2, 1, 2000 ) );
+//29
+</code></pre><h2 id=格式化>格式化<a hidden class=anchor aria-hidden=true href=#格式化>#</a></h2><h3 id=date>date<a hidden class=anchor aria-hidden=true href=#date>#</a></h3><p>这个函数的作用是把时间戳格式化为指定格式，接受两个参数，第一个为格式，具体写法请参考<a href=http://cn2.php.net/manual/zh/function.date.php>官方说明</a>，第二个为时间戳，默认为当前时间，即<code>time()</code>。</p><p>下面的例子可以得到明天，上个月和下一年。</p><pre><code>$tomorrow  = mktime(0, 0, 0, date(&quot;m&quot;)  , date(&quot;d&quot;)+1, date(&quot;Y&quot;));
+$lastmonth = mktime(0, 0, 0, date(&quot;m&quot;)-1, date(&quot;d&quot;),   date(&quot;Y&quot;));
+$nextyear  = mktime(0, 0, 0, date(&quot;m&quot;),   date(&quot;d&quot;),   date(&quot;Y&quot;)+1);
+</code></pre><h3 id=strtotime>strtotime<a hidden class=anchor aria-hidden=true href=#strtotime>#</a></h3><p>将任何英文文本的日期时间描述解析为Unix时间戳，这是一个很强大的函数！</p><pre><code>int strtotime ( string $time [, int $now = time() ] )
+</code></pre><p>参数1：日期/时间字符串。
+参数2：用来计算返回值的时间戳。</p><p><strong>注意年月日的顺序</strong></p><pre><code>echo date('Y-m-d', strtotime(&quot;06/08/2014&quot;)), &quot;\n&quot;; 
+//2014-06-08
+
+echo date('Y-m-d', strtotime(&quot;06-08-2014&quot;)), &quot;\n&quot;; 
+//2014-08-06
+</code></pre><p><code>strtotime</code>可以**&lsquo;理解&rsquo;**一些自然语句，十分好用！</p><pre><code>echo strtotime(&quot;2014-03-27&quot;), &quot;\n&quot;;
+echo strtotime(&quot;December 31&quot;), &quot;\n&quot;;
+echo strtotime(&quot;now&quot;), &quot;\n&quot;;
+echo strtotime(&quot;10 September 2000&quot;), &quot;\n&quot;;
+echo strtotime(&quot;+1 day&quot;), &quot;\n&quot;;
+echo strtotime(&quot;+1 week&quot;), &quot;\n&quot;;
+echo strtotime(&quot;Saturday&quot;), &quot;\n&quot;;
+echo strtotime(&quot;+1 week 2 days 4 hours 2 seconds&quot;), &quot;\n&quot;;
+echo strtotime(&quot;next Thursday&quot;), &quot;\n&quot;;
+echo strtotime(&quot;last Monday&quot;), &quot;\n&quot;;
+</code></pre><p><strong>还可以指定日期</strong></p><pre><code>$time = date('Y-m-d H:i:s', time());
+echo strtotime($time.'1day'), &quot;\n&quot;;
+echo &quot;\n&quot;;
+echo strtotime($time.'-1year'), &quot;\n&quot;;
+//也可以直接使用时间戳
+echo strtotime('-1year', time());, &quot;\n&quot;;
+strtotime(&quot;+1 week&quot;, $startdate);
+</code></pre><p><strong>星期数相关</strong></p><pre><code>//获取指定星期数的第一天，参数格式yyyyWww
+//最后两个ww指你需要的周数
+echo date('Y-m-d H:i:s',strtotime('2014W01')), &quot;\n&quot;;
+//2014年第一周的第一天
+//2013-12-30 00:00:00
+
+//获取指定星期数的第N天，参数格式yyyyWww-N。N的取值范围是1-7
+echo date('Y-m-d H:i:s',strtotime('2014W01-5')), &quot;\n&quot;;
+//2014年第一周的第五天
+//2014-01-03 00:00:00
+</code></pre><h2 id=datetime类>DateTime类<a hidden class=anchor aria-hidden=true href=#datetime类>#</a></h2><p>这里是<a href=http://php.net/manual/zh/class.datetime.php>DateTime类文档链接</a></p><p>DateTime类实现了DateTimeInterface接口，它实现了很多关于时间的功能，如时间的比较、修改、创建和格式化等。
+创建一个DateTime对象很简单：</p><pre><code>$datetime = new DateTime;  //面向对象
+$datetime_specific = new DateTime('2014-03-27'); //面向对象
+</code></pre><p>其主要方法包括：</p><pre><code>$datetime-&gt;add();            //增加时间
+$datetime-&gt;sub();            //减少时间
+$datetime-&gt;modify();         //修改时间
+$datetime-&gt;format();         //格式化输出
+$datetime-&gt;setTime();        //设置时间
+$datetime-&gt;diff();          //对比时间，返回时间差
+</code></pre><p>以上方法在此不展开讲了，有兴趣TX请自己上面的文档学习。</p><h2 id=dateinterval类>DateInterval类<a hidden class=anchor aria-hidden=true href=#dateinterval类>#</a></h2><p>DateInterval类表示一个时间段，这个类在DateTime的<code>add()</code>、<code>sub()</code>还有<code>diff()</code>中会用到，其构造函数里需要传入<strong>时间增量</strong></p><blockquote><p>什么是时间增量？</p></blockquote><p>他用来描述一段时间，形如P1Y2M3DT4H5M6S，字母都是大写。其中P后面跟年月日，T后面是时分秒。例：</p><pre><code>P1YT1S      1年零一秒
+T1H1S       1小时零一秒
+</code></pre><p>理解了时间增量，那么我们来构造一个DateInterval对象吧：</p><pre><code>$eightynine_days_ago = new DateInterval( &quot;P89D&quot; ); 
+</code></pre><p>接下来就可以把他们用在DateTime的<code>add()</code>、<code>sub()</code>还有<code>diff()</code>中了。</p><h2 id=localtime>localtime<a hidden class=anchor aria-hidden=true href=#localtime>#</a></h2><pre><code>array localtime ([ int $timestamp = time() [, bool $is_associative = false ]] )
+</code></pre><p><code>localtime</code>以时间戳为准，返回一个数组，其结构和 C 函数调用返回的完全一样。</p><p>例：</p><pre><code>print_r( localtime(strtotime('2014-03-27 12:13:14')) );
+
+Array
+(
+    [0] =&gt; 14
+    [1] =&gt; 13
+    [2] =&gt; 12
+    [3] =&gt; 27
+    [4] =&gt; 2
+    [5] =&gt; 114
+    [6] =&gt; 4
+    [7] =&gt; 85
+    [8] =&gt; 0
+)
+</code></pre><p>如果第二参数为真，则返回一个关联数组，与之前的索引数组对应。</p><pre><code>print_r( localtime(strtotime('2014-03-27 12:13:14'), true) );
+
+Array
+(
+    [tm_sec] =&gt; 14
+    [tm_min] =&gt; 13
+    [tm_hour] =&gt; 12
+    [tm_mday] =&gt; 27
+    [tm_mon] =&gt; 2
+    [tm_year] =&gt; 114
+    [tm_wday] =&gt; 4
+    [tm_yday] =&gt; 85
+    [tm_isdst] =&gt; 0
+)
+</code></pre><p>说明：</p><pre><code>&quot;tm_sec&quot; - 秒数， 0 到 59
+&quot;tm_min&quot; - 分钟数， 0 到 59
+&quot;tm_hour&quot; - 小时， 0 到 23
+&quot;tm_mday&quot; - 月份中的第几日， 1 到 31
+&quot;tm_mon&quot; - 年份中的第几个月， 0 (Jan) 到 11 (Dec)
+&quot;tm_year&quot; - 年份，从 1900 开始
+&quot;tm_wday&quot; - 星期中的第几天， 0 (Sun) 到 6 (Sat)
+&quot;tm_yday&quot; - 一年中的第几天， 0 到 365
+&quot;tm_isdst&quot; - 夏令时当前是否生效？ 如果是生效的是正数， 0 代表未生效，负数代表未知。
+</code></pre><h2 id=日历calender函数>日历Calender函数<a hidden class=anchor aria-hidden=true href=#日历calender函数>#</a></h2><p><a href=http://php.net/manual/zh/ref.calendar.php>文档在这儿</a></p><p>老高觉得这Calender函数中最有用的就是这个<code>cal_days_in_month</code>了，他返回某个历法中某年中某月的天数。</p><p>例:</p><pre><code>echo cal_days_in_month(CAL_GREGORIAN, 2, 2014);
+//28
+</code></pre><p>比之前<code>mktime()</code>要简单的多吧。</p><h1 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h1><p>关于时间的函数就介绍到这儿，由于老高时间有限，许多有趣的函数，如<code>checkdate</code>、<code>date_diff</code>都没有铺开介绍，争取日后补上。</p><p>纵观PHP在5.0版本的时间函数，不难发现，PHP为我们提供了一套很简单快捷的函数帮助我们处理时间，而且很多计算的方法不止一种，希望大家掌握本文提供的最基础的函数，然后运用到实际的开发中去。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/php/>PHP</a></li><li><a href=https://phpgao.github.io/tags/time/>time</a></li><li><a href=https://phpgao.github.io/tags/mktime/>mktime</a></li><li><a href=https://phpgao.github.io/tags/gtm/>gtm</a></li><li><a href=https://phpgao.github.io/tags/date/>date</a></li><li><a href=https://phpgao.github.io/tags/strtotime/>strtotime</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/coding_rules.html><span class=title>« Prev Page</span><br><span>也谈代码风格</span></a>
+<a class=next href=https://phpgao.github.io/adb_fastboot_on_mac_osx.html><span class=title>Next Page »</span><br><span>在mac上使用adb与fastboot</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

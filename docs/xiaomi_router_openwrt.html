@@ -1,0 +1,144 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>编译小米路由mini的openwrt固件 | 老高的技术博客</title><meta name=keywords content="router,xiaomi,openwrt"><meta name=description content="花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/xiaomi_router_openwrt.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="编译小米路由mini的openwrt固件"><meta property="og:description" content="花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/xiaomi_router_openwrt.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-04-28T16:15:00+00:00"><meta property="article:modified_time" content="2015-04-28T16:15:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="编译小米路由mini的openwrt固件"><meta name=twitter:description content="花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"编译小米路由mini的openwrt固件","item":"https://phpgao.github.io/xiaomi_router_openwrt.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"编译小米路由mini的openwrt固件","name":"编译小米路由mini的openwrt固件","description":"花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。\n","keywords":["router","xiaomi","openwrt"],"articleBody":"花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。\n硬件准备 老高之前很天真的想用搬瓦工的VPS编译，没想到真是的图样图森破。\n当时想的是搬瓦工vps的下载速度很快，能够缩短编译时间，事实证明，确实下载很快。\n第一个坑 但遇到的第一个坑当然是内存不足，无法编译。\n无奈，于是打开virtualbox，创建了一个centos6.6系统。\n内存1G，硬盘8G，快速安装。\n软件准备 既然是centos，那么安装软件的工具当然是yum，如果对速度不满意，可以参考Centos源设置将源服务器设为国内的阿里或者163，这样速度能快一些。\n其他系统可以参考官方的文档\n# 国内网速你懂的 yum update -y yum groupinstall \"development tools\" -y yum install zlib zlib-devel bzip2-devel pcre-devel openssl openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel -y 下载源代码 git clone git://git.openwrt.org/openwrt.git 编译 cd openwrt/ ./scripts/feeds update -a ./scripts/feeds install -a make menuconfig # 穿墙你懂的 pushd package git clone https://github.com/aa65535/openwrt-dist-luci.git popd make menuconfig # 由于是mac没敢开多线程，如果是台式机，推荐使用-j参数 make V=99 # 编译期间可能会遇到某些源代码无法下载，这个不算是坑，可以自己手动下载，并复制到`openwrt/dl`文件夹里，然后继续编译即可。 # 接下来就是等待编译过程完毕了！ 教程貌似结束了？\n 不过问题来了 当然不会完，期间老高遇到的问题无数，考验人的耐力和体力啊！\n第二个坑 当程序运行到某处报错\n i686-linux-gnu-g++: internal compiler error: Killed (program cc1plus)\n 通过重现发现此时MEM占用99%，瞬间懂了，原来是内存给少了，1G+500SWAP都不够。。。\n解决办法：\n# 关机 init 0 #然后在虚拟机设置处将内存调整至2G 第三个坑 空间不足，8G也不够。。。真是小看openwrt了。\n我的解决办法是在上一块虚拟硬盘，通过扩展LVM容量解决的。\n盗一个图先\n# 第一步，关机，上一个新的同规格硬盘，容量8G，开机 # 查看是否安装成功 ll /dev/sd* # 此时应该多一个/dev/sdb fdisk /dev/sdb # 现在进入交互模式，输入m可以打开帮助 # 输入n，然后一路回车，就把sdb创建了一整个分区sdb1 # 输入q退出 # 下面开始增加容量 # 在sdb1上创建新的物理卷（Physical Volume，PV） pvcreate /dev/sdb1 # 如果需要把整个磁盘直接创建为物理卷可以使用 pvcreate /dev/sdb # 查看物理卷 pvdisplay  — Physical volume — PV Name /dev/sda2 VG Name VolGroup PV Size 7.51 GiB / not usable 3.00 MiB Allocatable yes (but full) PE Size 4.00 MiB Total PE 1922 Free PE 0 Allocated PE 1922 PV UUID 6QpO6a-Xg0D-bbnu-znPR-EyLf-J4AD-PFna1y\n  — Physical volume — PV Name /dev/sdb1 VG Name VolGroup PV Size 8.00 GiB / not usable 4.38 MiB Allocatable yes (but full) PE Size 4.00 MiB Total PE 2046 Free PE 0 Allocated PE 2046 PV UUID q0uMIR-Sqy6-0djq-wJ2g-V1zN-TdoV-Nk9wAY\n # 查看卷组（Volume Group，VG） vgdisplay  — Volume group — VG Name VolGroup System ID Format lvm2 Metadata Areas 2 Metadata Sequence No 5 VG Access read/write VG Status resizable MAX LV 0 Cur LV 2 Open LV 2 Max PV 0 Cur PV 2 Act PV 2 VG Size 7.4 GiB PE Size 4.00 MiB Total PE 3968 Alloc PE / Size 3968 / 15.50 GiB Free PE / Size 0 / 0 VG UUID PlIpGQ-gBtF-RpQp-fzFh-9jao-JyDY-hfxVDl\n # 现在将VG扩容，注意VG Name vgextend VolGroup /dev/sdb1 # get # Volume group \"VolGroup\" successfully extended # 下面开始'分区' 查看逻辑卷（Logical Volume，LV） lvdisplay  — Logical volume — LV Path /dev/VolGroup/lv_root LV Name lv_root VG Name VolGroup LV UUID FbWpkT-WAz3-bmXI-3j06-kdYh-1dvt-ZbwKmH LV Write Access read/write LV Creation host, time localhost.localdomain, 2015-04-28 09:48:44 +0800 LV Status available open 1 LV Size 7.4 GiB Current LE 3764 Segments 2 Allocation inherit Read ahead sectors auto /- currently set to 256 Block device 253:0\n  — Logical volume — LV Path /dev/VolGroup/lv_swap LV Name lv_swap VG Name VolGroup LV UUID 0o4wmo-lj1r-xRTe-zSvd-Bpo7-wLI7-9kX1gf LV Write Access read/write LV Creation host, time localhost.localdomain, 2015-04-28 09:48:45 +0800 LV Status available open 1 LV Size 816.00 MiB Current LE 204 Segments 1 Allocation inherit Read ahead sectors auto /- currently set to 256 Block device 253:1\n # 继续查看挂载，可以发现 /dev/mapper/VolGroup-lv_root 被挂载到根目录 df -h #/dev/mapper/VolGroup-lv_root 7.4G 7.4G 0G 100% / # 开始扩充 lvextend /dev/VolGroup/lv_root /dev/sdb1 # Logical volume lv_root successfully resized # 增加了逻辑卷的容量以后，就需要修改文件系统大小以实现利用扩充的空间 resize2fs /dev/VolGroup/lv_root 至此扩容完成，可以继续愉快的编译了。\n总结 硬件：虚拟机2G内存 =16G硬盘(编译完还有3.4G剩余) 系统：centos6.6 其他：耐心\n 第一次运行会下载很多软件在dl目录，下次编译的时候就快了\n","wordCount":"438","inLanguage":"en","datePublished":"2015-04-28T16:15:00Z","dateModified":"2015-04-28T16:15:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/xiaomi_router_openwrt.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>编译小米路由mini的openwrt固件</h1><div class=post-meta>April 28, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-04-28_xiaomi_router_openwrt.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。</p><h2 id=硬件准备>硬件准备<a hidden class=anchor aria-hidden=true href=#硬件准备>#</a></h2><p>老高之前很天真的想用搬瓦工的VPS编译，没想到真是的图样图森破。</p><p>当时想的是搬瓦工vps的下载速度很快，能够缩短编译时间，事实证明，确实下载很快。</p><h2 id=第一个坑>第一个坑<a hidden class=anchor aria-hidden=true href=#第一个坑>#</a></h2><p>但遇到的<strong>第一个坑</strong>当然是内存不足，无法编译。</p><p>无奈，于是打开virtualbox，创建了一个centos6.6系统。</p><p><strong>内存1G，硬盘8G，快速安装</strong>。</p><h2 id=软件准备>软件准备<a hidden class=anchor aria-hidden=true href=#软件准备>#</a></h2><p>既然是centos，那么安装软件的工具当然是<code>yum</code>，如果对速度不满意，可以参考<a href=https://blog.phpgao.com/repo_for_centos.html>Centos源设置</a>将源服务器设为国内的阿里或者163，这样速度能快一些。</p><p>其他系统可以参考<a href=http://wiki.openwrt.org/doc/howto/buildroot.exigence>官方的文档</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 国内网速你懂的
+yum update -y
+yum groupinstall &#34;development tools&#34; -y
+yum install zlib zlib-devel bzip2-devel pcre-devel openssl openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel -y
+</code></pre></div><h2 id=下载源代码>下载源代码<a hidden class=anchor aria-hidden=true href=#下载源代码>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>git clone git://git.openwrt.org/openwrt.git
+</code></pre></div><h2 id=编译>编译<a hidden class=anchor aria-hidden=true href=#编译>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cd openwrt/
+
+./scripts/feeds update -a
+./scripts/feeds install -a
+
+make menuconfig
+
+# 穿墙你懂的
+pushd package
+git clone https://github.com/aa65535/openwrt-dist-luci.git
+popd
+
+make menuconfig
+
+# 由于是mac没敢开多线程，如果是台式机，推荐使用-j参数
+make V=99
+
+# 编译期间可能会遇到某些源代码无法下载，这个不算是坑，可以自己手动下载，并复制到`openwrt/dl`文件夹里，然后继续编译即可。
+# 接下来就是等待编译过程完毕了！
+</code></pre></div><p>教程貌似结束了？</p><hr><h2 id=不过问题来了>不过问题来了<a hidden class=anchor aria-hidden=true href=#不过问题来了>#</a></h2><p>当然不会完，期间老高遇到的问题无数，考验人的耐力和体力啊！</p><h3 id=第二个坑>第二个坑<a hidden class=anchor aria-hidden=true href=#第二个坑>#</a></h3><p>当程序运行到某处报错</p><blockquote><p>i686-linux-gnu-g++: internal compiler error: Killed (program cc1plus)</p></blockquote><p>通过重现发现此时MEM占用99%，瞬间懂了，原来是内存给少了，1G+500SWAP都不够。。。</p><p>解决办法：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 关机
+init 0
+#然后在虚拟机设置处将内存调整至2G
+</code></pre></div><h3 id=第三个坑>第三个坑<a hidden class=anchor aria-hidden=true href=#第三个坑>#</a></h3><p>空间不足，8G也不够。。。真是小看openwrt了。</p><p>我的解决办法是在上一块虚拟硬盘，通过<strong>扩展LVM容量</strong>解决的。</p><p>盗一个图先</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/04/2747659839.png alt=LVM关系图></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 第一步，关机，上一个新的同规格硬盘，容量8G，开机
+# 查看是否安装成功
+ll /dev/sd*
+# 此时应该多一个/dev/sdb
+fdisk /dev/sdb
+# 现在进入交互模式，输入m可以打开帮助
+# 输入n，然后一路回车，就把sdb创建了一整个分区sdb1
+# 输入q退出
+
+# 下面开始增加容量
+
+# 在sdb1上创建新的物理卷（Physical Volume，PV）
+pvcreate /dev/sdb1
+
+# 如果需要把整个磁盘直接创建为物理卷可以使用 pvcreate /dev/sdb
+# 查看物理卷
+pvdisplay
+</code></pre></div><blockquote><p>&mdash; Physical volume &mdash;
+PV Name /dev/sda2
+VG Name VolGroup
+PV Size 7.51 GiB / not usable 3.00 MiB
+Allocatable yes (but full)
+PE Size 4.00 MiB
+Total PE 1922
+Free PE 0
+Allocated PE 1922
+PV UUID 6QpO6a-Xg0D-bbnu-znPR-EyLf-J4AD-PFna1y</p></blockquote><blockquote><p>&mdash; Physical volume &mdash;
+PV Name /dev/sdb1
+VG Name VolGroup
+PV Size 8.00 GiB / not usable 4.38 MiB
+Allocatable yes (but full)
+PE Size 4.00 MiB
+Total PE 2046
+Free PE 0
+Allocated PE 2046
+PV UUID q0uMIR-Sqy6-0djq-wJ2g-V1zN-TdoV-Nk9wAY</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 查看卷组（Volume Group，VG）
+vgdisplay
+</code></pre></div><blockquote><p>&mdash; Volume group &mdash;
+<strong>VG Name VolGroup</strong>
+System ID
+Format lvm2
+Metadata Areas 2
+Metadata Sequence No 5
+VG Access read/write
+VG Status resizable
+MAX LV 0
+Cur LV 2
+Open LV 2
+Max PV 0
+Cur PV 2
+Act PV 2
+<strong>VG Size 7.4 GiB</strong>
+PE Size 4.00 MiB
+Total PE 3968
+Alloc PE / Size 3968 / 15.50 GiB
+Free PE / Size 0 / 0
+VG UUID PlIpGQ-gBtF-RpQp-fzFh-9jao-JyDY-hfxVDl</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 现在将VG扩容，注意VG Name
+vgextend VolGroup /dev/sdb1
+
+# get
+# Volume group &#34;VolGroup&#34; successfully extended
+
+# 下面开始&#39;分区&#39;
+查看逻辑卷（Logical Volume，LV）
+lvdisplay
+</code></pre></div><blockquote><p>&mdash; Logical volume &mdash;
+LV Path /dev/VolGroup/lv_root
+LV Name lv_root
+VG Name VolGroup
+LV UUID FbWpkT-WAz3-bmXI-3j06-kdYh-1dvt-ZbwKmH
+LV Write Access read/write
+LV Creation host, time localhost.localdomain, 2015-04-28 09:48:44 +0800
+LV Status available
+open 1
+<strong>LV Size 7.4 GiB</strong>
+Current LE 3764
+Segments 2
+Allocation inherit
+Read ahead sectors auto
+/- currently set to 256
+Block device 253:0</p></blockquote><blockquote><p>&mdash; Logical volume &mdash;
+LV Path /dev/VolGroup/lv_swap
+LV Name lv_swap
+VG Name VolGroup
+LV UUID 0o4wmo-lj1r-xRTe-zSvd-Bpo7-wLI7-9kX1gf
+LV Write Access read/write
+LV Creation host, time localhost.localdomain, 2015-04-28 09:48:45 +0800
+LV Status available
+open 1
+LV Size 816.00 MiB
+Current LE 204
+Segments 1
+Allocation inherit
+Read ahead sectors auto
+/- currently set to 256
+Block device 253:1</p></blockquote><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># 继续查看挂载，可以发现 /dev/mapper/VolGroup-lv_root 被挂载到根目录
+df -h
+
+#/dev/mapper/VolGroup-lv_root 7.4G   7.4G  0G  100% /
+
+# 开始扩充
+lvextend /dev/VolGroup/lv_root /dev/sdb1
+
+# Logical volume lv_root successfully resized
+
+# 增加了逻辑卷的容量以后，就需要修改文件系统大小以实现利用扩充的空间
+resize2fs /dev/VolGroup/lv_root
+
+</code></pre></div><p>至此扩容完成，可以继续愉快的编译了。</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/04/1849193754.png alt=编译成果></p><h2 id=总结>总结<a hidden class=anchor aria-hidden=true href=#总结>#</a></h2><p>硬件：虚拟机2G内存 >=16G硬盘(编译完还有3.4G剩余)
+系统：centos6.6
+其他：耐心</p><blockquote><p>第一次运行会下载很多软件在dl目录，下次编译的时候就快了</p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/router/>router</a></li><li><a href=https://phpgao.github.io/tags/xiaomi/>xiaomi</a></li><li><a href=https://phpgao.github.io/tags/openwrt/>openwrt</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/try_shadowsocks_via_qrcode.html><span class=title>« Prev Page</span><br><span>免费shadowsocks</span></a>
+<a class=next href=https://phpgao.github.io/shadowsocks_chacha20.html><span class=title>Next Page »</span><br><span>安装shadowsocks-python并启用chacha20加密</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

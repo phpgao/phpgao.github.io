@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vsftp on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/vsftp/</link>
+    <description>Recent content in vsftp on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 08 Oct 2014 08:32:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/vsftp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用vsftp需要用到的东西</title>
+      <link>https://phpgao.github.io/vsftp_conf.html</link>
+      <pubDate>Wed, 08 Oct 2014 08:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vsftp_conf.html</guid>
+      <description>安装 yum install -y vsftpd 安全配置 vi /etc/vsftpd/vsftpd.conf#addlisten_port= XXXXanonymous_enable=NOlocal_enable=NOchroot_local_user=YESchroot_list_enable=NO 日志配置 xferlog_enable=YESxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt#addroooooooterrandom_passwd#生成认证文件db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db#删除明文rm -f vi /etc/vsftpd/user_list.txt#编辑vsftpd的PAM认证文件#删除其他行，加入下面两行#pam_userdb.so 为认证库文件 db即上文user.dbvi /etc/pam.d/vsftpdauth required pam_userdb.so db=/etc/vsftpd/useraccount required pam_userdb.so db=/etc/vsftpd/user#设定FTP用户映射(注意权限)useradd –d /home/xxx –s /sbin/nologin xxxchmod 700 /home/xxx#开启虚拟用户vi /etc/vsftpd/vsftpd.</description>
+    </item>
+    
+  </channel>
+</rss>

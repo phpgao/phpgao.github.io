@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>log on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/log/</link>
+    <description>Recent content in log on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 14 May 2015 11:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/log/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mysql优化之日志配置</title>
+      <link>https://phpgao.github.io/mysql_log_configure.html</link>
+      <pubDate>Thu, 14 May 2015 11:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_log_configure.html</guid>
+      <description>如果你选mysql数据库作为数据持久化的工具，那么就需要一个合理的日志配置，这样有助于排错和数据备份及恢复！
+首先我们可以通过下面的MySQL的sql查询正在运行中的日志配置。
+刚好我们熟悉一下SHOW VARIABLES LIKE的用法！这个命令是用来查询MySQL运行时配置的语句，LIKE后面的可以接通配符查找！
+还有对应的设置语法叫SET GLOBAL，后面我们会用到。
+mysql&amp;gt; SHOW VARIABLES LIKE &amp;#39;%log%&amp;#39;; +-----------------------------------------+---------------------------------+ | Variable_name | Value | +-----------------------------------------+---------------------------------+ | back_log | 50 | | binlog_cache_size | 32768 | | binlog_direct_non_transactional_updates | OFF | | binlog_format | STATEMENT | | expire_logs_days | 0 | | general_log | OFF | | general_log_file | /var/run/mysqld/mysqld.log | | innodb_flush_log_at_trx_commit | 1 | | innodb_locks_unsafe_for_binlog | OFF | | innodb_log_buffer_size | 1048576 | | innodb_log_file_size | 5242880 | | innodb_log_files_in_group | 2 | | innodb_log_group_home_dir | .</description>
+    </item>
+    
+  </channel>
+</rss>

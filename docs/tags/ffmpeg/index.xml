@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ffmpeg on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ffmpeg/</link>
+    <description>Recent content in ffmpeg on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Jun 2014 02:14:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次FFMPEG的安装</title>
+      <link>https://phpgao.github.io/yum_install_ffmpeg.html</link>
+      <pubDate>Fri, 13 Jun 2014 02:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum_install_ffmpeg.html</guid>
+      <description>下载源代码 现在都不用svn了，学学git吧
+git clone git://source.ffmpeg.org/ffmpeg.git configure 在执行./configure的时候，可能会提示没有安装yasm，那么执行”yum install -y yasm“即可。
+yum install -y yasm./configure make 执行make，就是编译整个ffmpeg项目了，会生成一些二进制文件，例如：ffplay、ffserver、ffmpeg、ffprobe!
+makeinstall 执行make install时候，会把编译生成的.a归档复制到/usr/local/lib下!</description>
+    </item>
+    
+  </channel>
+</rss>

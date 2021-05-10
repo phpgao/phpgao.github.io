@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sort on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sort/</link>
+    <description>Recent content in sort on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 09 Jun 2015 15:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sort/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP实现常见排序</title>
+      <link>https://phpgao.github.io/php-sort.html</link>
+      <pubDate>Tue, 09 Jun 2015 15:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-sort.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1704156785.png&#34; alt=&#34;排序&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;最近老高复习了下数据结构，此文会慢慢更新！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&amp;lt;?php
+
+$count = 1000;
+
+for($i=0;$i&amp;lt;$count;$i++){
+    $random_array[$i] = rand(0,$count);
+}
+
+
+# 空白对照
+$start = microtime(1);
+echo &amp;#39;Do nothing takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 原生方法排序
+$test_array = $random_array;
+$start = microtime(1);
+
+sort($test_array);
+echo &amp;#39;Origin sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 冒泡排序
+# 两两交换，思路很简单
+$test_array = $random_array;
+$start = microtime(1);
+# 需要把计算个数的时间也考虑到
+$count = count($test_array);
+# 循环n-1次
+for($i=1;$i&amp;lt;$count;$i++){
+    # 循环n-1-$i次
+    for($j=0;$j&amp;lt;$count-$i;$j++){
+        if($test_array[$j] &amp;gt; $test_array[$j+1]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$j+1];
+            $test_array[$j+1] = $tmp;
+        }
+    }
+}
+echo &amp;#39;Bubble sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 选择排序
+# 依次选择最小(大)的元素，等选择完毕自动有序
+$test_array = $random_array;
+$start = microtime(1);
+$count = count($test_array);
+
+for($i=0;$i&amp;lt;$count-1;$i++){
+    # $test_array[$i]为当前最小
+    for($j=$i+1;$j&amp;lt;$count;$j++){
+        # 从下一个开始比较
+        if($test_array[$i] &amp;gt; $test_array[$j]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$i];
+            $test_array[$i] = $tmp;
+        }
+    }
+}
+echo &amp;#39;Select sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+
+# 插入排序
+# 就像别人给你发扑克牌，拿到一张牌就插到你手上，并使之有序
+$test_array = $random_array;
+$start = microtime(1);
+$count = count($test_array);
+# 直接跳过$i=0
+for($i=1;$i&amp;lt;$count;$i++){
+    # 取$i左边的元素先比，比到最左
+    for($j=$i-1;$j&amp;gt;=0;$j--){
+        # 共$j+1个元素，其中前$j个有序
+        if($test_array[$j] &amp;gt; $test_array[$j+1]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$j+1];
+            $test_array[$j+1] = $tmp;
+        }else{
+            break;
+        }
+    }
+}
+
+echo &amp;#39;Insertion sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+
+# 快速排序
+# 有点递归的思想，随机一个基准，将集合分为两半，然后继续分解，直到元素个数为1或0个
+$test_array = $random_array;
+$start = microtime(1);
+
+function quick_sort($arr){
+    $len = count($arr);
+    # 符合条件&amp;lt;=1即无需分组
+    if($len &amp;lt;= 1) return $arr;
+
+    # floor也行，主要是取整
+    $index = ceil($len/2);
+    $base = $arr[$index];
+
+    $left = array();
+    $right = array();
+
+    for($i=0;$i&amp;lt;$len;$i++){
+        if($i == $index) continue;
+        if($arr[$i] &amp;lt; $base){
+            $left[] = $arr[$i];
+        }else{
+            $right[] = $arr[$i];
+        }
+    }
+
+    $l = quick_sort($left);
+    $r = quick_sort($right);
+    return array_merge($l, (array)$base, $r);
+}
+
+quick_sort($test_array);
+echo &amp;#39;Quick sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

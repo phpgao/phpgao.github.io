@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pycharm on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pycharm/</link>
+    <description>Recent content in pycharm on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 11 Mar 2015 07:53:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pycharm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pycharm创建文件模板</title>
+      <link>https://phpgao.github.io/pycharm_template.html</link>
+      <pubDate>Tue, 23 Dec 2014 09:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pycharm_template.html</guid>
+      <description>进入File-&amp;gt;settings-&amp;gt;Editor-&amp;gt;File and Code Templates-&amp;gt;Python Script
+添加以下内容：
+#!/usr/bin/env python # encoding: utf-8 #set( $SITE = &amp;#34;http://www.phpgao.com&amp;#34; ) &amp;#34;&amp;#34;&amp;#34; @version: ?? @author: phpergao @license: Apache Licence @contact: endoffight@gmail.com @site: ${SITE} @software: ${PRODUCT_NAME} @file: ${NAME}.py @time: ${DATE} ${TIME} &amp;#34;&amp;#34;&amp;#34; def func(): pass class Main(): def __init__(self): pass if __name__ == &amp;#39;__main__&amp;#39;: pass 脚本中还可以添加自定义变量！
+参考链接：
+http://wiki.woodpecker.org.cn/moin/CodeCommentingRule http://www.cnblogs.com/ziyouchutuwenwu/archive/2013/12/18/3480035.html https://github.com/phpgao/PyCharm-Python-Templates https://www.jetbrains.com/pycharm/webhelp/creating-and-editing-file-templates.html http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html</description>
+    </item>
+    
+    <item>
+      <title>PYCHARM快捷键</title>
+      <link>https://phpgao.github.io/pycharm_hotkey.html</link>
+      <pubDate>Fri, 24 Oct 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pycharm_hotkey.html</guid>
+      <description>提示 CTRL Q: 在参数列表位置，显示可以输入的所有参数。 CTRL Q: 查看选中方法的文档字符串
+阅读 CTRL -: 折叠当前代码 CTRL +: 展开当前代码 CTRL SHIFT -: 折叠所有代码 CTRL SHIFT +: 展开所有代码 CTRL SHIFT F7: 将当前单词在整个文件中高亮，F3移动到下一个，ESC取消高亮。 CTRL F11 | F11: 设置书签. SHIFT F11: 显示所有书签。 CTRL F12: 当一个文件中方法太多，要快速跳到某个方法时，可以用此快捷键打开LIST, 除了用上下箭选择外，还可以输入字母。
+移动 ALT UP: 移到上一个方法 ALT DOWN: 移到下一个方法 CTRL B | CTRL 单击： 转到方法定义处 CTRL SHIFT UP: 将当前行上移一行 CTRL SHIFT UP: 将当前行下移一行
+SHIFT ENTER: 在行中间执行时，智能跳到下一行。
+注释 CTRL /: 注释、取消注释行
+选择 ALT 左键： 列模式选择 CTRL W: 选中当前单词，继续按，选中它所属的行/IF/方法.</description>
+    </item>
+    
+  </channel>
+</rss>

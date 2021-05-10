@@ -1,0 +1,151 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>git使用笔记 | 老高的技术博客</title><meta name=keywords content="git,phpstorm"><meta name=description content="GIT虽然概念比较难理解，但不得不说他是一款开发利器。
+老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。
+基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core."><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/note_for_git.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="git使用笔记"><meta property="og:description" content="GIT虽然概念比较难理解，但不得不说他是一款开发利器。
+老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。
+基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core."><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/note_for_git.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-11-02T13:04:00+00:00"><meta property="article:modified_time" content="2014-11-02T13:04:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="git使用笔记"><meta name=twitter:description content="GIT虽然概念比较难理解，但不得不说他是一款开发利器。
+老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。
+基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"git使用笔记","item":"https://phpgao.github.io/note_for_git.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"git使用笔记","name":"git使用笔记","description":"GIT虽然概念比较难理解，但不得不说他是一款开发利器。\n老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。\n基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core.","keywords":["git","phpstorm"],"articleBody":"GIT虽然概念比较难理解，但不得不说他是一款开发利器。\n老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。\n基础篇： 帮助 git help # 获取帮助，内容如下 usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path] [-p|--paginate|--no-pager] [--no-replace-objects] [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE] [--help] COMMAND [ARGS] The most commonly used git commands are: add Add file contents to the index bisect Find by binary search the change that introduced a bug branch List, create, or delete branches checkout Checkout a branch or paths to the working tree clone Clone a repository into a new directory commit Record changes to the repository diff Show changes between commits, commit and working tree, etc fetch Download objects and refs from another repository grep Print lines matching a pattern init Create an empty git repository or reinitialize an existing one log Show commit logs merge Join two or more development histories together mv Move or rename a file, a directory, or a symlink pull Fetch from and merge with another repository or a local branch push Update remote refs along with associated objects rebase Forward-port local commits to the updated upstream head reset Reset current HEAD to the specified state rm Remove files from the working tree and from the index show Show various types of objects status Show the working tree status tag Create, list, delete or verify a tag object signed with GPG 配置git # 查看配置 git config -l/--list # 以下是可能出现的配置 core.symlinks=false core.autocrlf=true color.diff=auto color.status=auto color.branch=auto color.interactive=true pack.packsizelimit=2g help.format=html ... ... # 配置全局信息 git config --global user.name=phpgao # 配置局部信息 git config --system user.email=endoffight@gmail.com # 查看某一个配置信息 git config user.email 初始化仓库 git init # 在当前目录初始化一个git仓库 git init --bare # 在当前目录初始化一个git裸仓库 查看 git status # 显示工作流中的状态 git diff # 显示工作目录(Working tree)和暂存区域快照(index)之间的差异 git diff --stat # 简报 git diff --cached # 显示已经暂存起来的文件(staged)和上次提交时的快照之间(HEAD)的差异 git diff --staged # 下一次commit时会提交到HEAD的内容(不带-a情况下) git diff dev # 比较当前目录和dev分支  git diff HEAD # 工作目录和HEAD的差别 git diff HEAD^ HEAD # 比较上次和上上次提交的不同 git diff dev master # 比较两个分支最新提交 git diff dev..master # 同上 git diff dev...master # 比较从分支开始时至今所有的修改 git log --pretty=oneline # 显示日志 ### 美化格式一 git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short ### 美化格式二 git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative 增删提 先读懂这个图\ngit add # 添加工作区修改的文件提交至Stage(index) git commit -m \"comment\" # 将Stage(index)中的文件提交至本地库中(commit)，并添加注释 git commit -am \"comment\" # 省略了add步骤，直接提交Working Directory和Stage(index)中的内容 git rm  # 删除库中的文件 git reset --hard # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改 git reset -- . # 从暂存区恢复到工作文件 分支与合并 git branch  # 根据分支创建新分支 git branch -r # 查看远程分支 git branch -v # 查看各分支最近的提交 git branch -d  # 删除一个分支 git br -D  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制) git branch -m   # 重命名一个分支 git checkout  # 切换至某分支 git checkout -b  # 创建并切换至新分支 git merge dev # 将当前分支与dev分支合并 git merge dev --no-ff # 不使用Fast-Foward合并，为了保持项目的清晰的轨迹，推荐合并时使用此选项 这里前者到一个概念叫分支策略，可以参考这篇文章Git分支管理策略。\n远程操作 clone git clone /xx/xxx/xxx.git # 克隆某个项目 git支持很多协议，如ssh、git、https等。 remote git remote -v # 查看远程库 git remote add origin xxxx.git # 添加一个远程主机 git remote rm # 删除一个远程主机 fetch git fetch  # 取回所有信息 git fetch   # 只取回某分支 git branch -a # 查看所有分支 git branch -r # 查看远程分支 pull git push push jetbrains系列软件问题 GIT Remotes “Can’t push, because no remotes are defined” 软件中没有添加remote的功能，所以如果你要新加入一个远程库就需要在terminal中使用以下命令\ngit remote add origin \"path to .git\" fatal: No existing author found with ‘john doe’ 先使用git config -l查看配置，得到name和email如下\n user.name=aaa user.email=bbb@cc.com\n 软件配置里填入\naaa bbb@cc.com\n这样软件转化的命令就变成\ngit commit --author=\"aaa \" -m \"Note\" 参考：\nhttps://ruby-china.org/topics/939\n","wordCount":"524","inLanguage":"en","datePublished":"2014-11-02T13:04:00Z","dateModified":"2014-11-02T13:04:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/note_for_git.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>git使用笔记</h1><div class=post-meta>November 2, 2014&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-11-02_note_for_git.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>GIT虽然概念比较难理解，但不得不说他是一款开发利器。</p><p>老高总结出了一些GIT中很常见的操作命令，分享给大家。但由于GIT命令繁多，所以我将分为基础和进阶两部分。</p><h2 id=基础篇>基础篇：<a hidden class=anchor aria-hidden=true href=#基础篇>#</a></h2><h3 id=帮助>帮助<a hidden class=anchor aria-hidden=true href=#帮助>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git help <span style=color:#75715e># 获取帮助，内容如下</span>
+
+usage: git <span style=color:#f92672>[</span>--version<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>--exec-path<span style=color:#f92672>[=</span>GIT_EXEC_PATH<span style=color:#f92672>]]</span> <span style=color:#f92672>[</span>--html-path<span style=color:#f92672>]</span>
+           <span style=color:#f92672>[</span>-p|--paginate|--no-pager<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>--no-replace-objects<span style=color:#f92672>]</span>
+           <span style=color:#f92672>[</span>--bare<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>--git-dir<span style=color:#f92672>=</span>GIT_DIR<span style=color:#f92672>]</span> <span style=color:#f92672>[</span>--work-tree<span style=color:#f92672>=</span>GIT_WORK_TREE<span style=color:#f92672>]</span>
+           <span style=color:#f92672>[</span>--help<span style=color:#f92672>]</span> COMMAND <span style=color:#f92672>[</span>ARGS<span style=color:#f92672>]</span>
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+</code></pre></div><h3 id=配置git>配置git<a hidden class=anchor aria-hidden=true href=#配置git>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 查看配置</span>
+git config -l/--list
+
+<span style=color:#75715e># 以下是可能出现的配置</span>
+core.symlinks<span style=color:#f92672>=</span>false
+core.autocrlf<span style=color:#f92672>=</span>true
+color.diff<span style=color:#f92672>=</span>auto
+color.status<span style=color:#f92672>=</span>auto
+color.branch<span style=color:#f92672>=</span>auto
+color.interactive<span style=color:#f92672>=</span>true
+pack.packsizelimit<span style=color:#f92672>=</span>2g
+help.format<span style=color:#f92672>=</span>html
+...
+...
+
+<span style=color:#75715e># 配置全局信息</span>
+git config --global user.name<span style=color:#f92672>=</span>phpgao
+
+<span style=color:#75715e># 配置局部信息</span>
+git config --system user.email<span style=color:#f92672>=</span>endoffight@gmail.com
+
+<span style=color:#75715e># 查看某一个配置信息</span>
+git config user.email
+
+</code></pre></div><h3 id=初始化仓库>初始化仓库<a hidden class=anchor aria-hidden=true href=#初始化仓库>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git init <span style=color:#75715e># 在当前目录初始化一个git仓库</span>
+
+git init --bare <span style=color:#75715e># 在当前目录初始化一个git裸仓库</span>
+</code></pre></div><h3 id=查看>查看<a hidden class=anchor aria-hidden=true href=#查看>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git status <span style=color:#75715e># 显示工作流中的状态</span>
+
+git diff <span style=color:#75715e># 显示工作目录(Working tree)和暂存区域快照(index)之间的差异</span>
+
+git diff --stat <span style=color:#75715e># 简报</span>
+
+git diff --cached <span style=color:#75715e># 显示已经暂存起来的文件(staged)和上次提交时的快照之间(HEAD)的差异</span>
+
+git diff --staged <span style=color:#75715e># 下一次commit时会提交到HEAD的内容(不带-a情况下)</span>
+
+git diff dev <span style=color:#75715e># 比较当前目录和dev分支 </span>
+
+git diff HEAD <span style=color:#75715e># 工作目录和HEAD的差别</span>
+
+git diff HEAD^ HEAD <span style=color:#75715e># 比较上次和上上次提交的不同</span>
+
+git diff dev master <span style=color:#75715e># 比较两个分支最新提交</span>
+
+git diff dev..master <span style=color:#75715e># 同上</span>
+
+git diff dev...master <span style=color:#75715e># 比较从分支开始时至今所有的修改</span>
+
+git log --pretty<span style=color:#f92672>=</span>oneline <span style=color:#75715e># 显示日志</span>
+
+<span style=color:#75715e>### 美化格式一</span>
+
+git log --pretty<span style=color:#f92672>=</span>format:<span style=color:#e6db74>&#34;%h %ad | %s%d [%an]&#34;</span> --graph --date<span style=color:#f92672>=</span>short
+
+<span style=color:#75715e>### 美化格式二</span>
+
+git log --graph --pretty<span style=color:#f92672>=</span>format:<span style=color:#e6db74>&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset&#39;</span> --abbrev-commit --date<span style=color:#f92672>=</span>relative 
+</code></pre></div><h2 id=增删提>增删提<a hidden class=anchor aria-hidden=true href=#增删提>#</a></h2><p>先读懂这个图</p><p><img loading=lazy src=http://dl2.iteye.com/upload/attachment/0080/2435/75df9cfb-7c89-3c5e-bbab-1d8610a2e22d.jpg alt=提交关系图></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git add <span style=color:#75715e># 添加工作区修改的文件提交至Stage(index)</span>
+
+git commit -m <span style=color:#e6db74>&#34;comment&#34;</span> <span style=color:#75715e># 将Stage(index)中的文件提交至本地库中(commit)，并添加注释</span>
+
+git commit -am <span style=color:#e6db74>&#34;comment&#34;</span> <span style=color:#75715e># 省略了add步骤，直接提交Working Directory和Stage(index)中的内容</span>
+
+git rm &lt;文件名&gt; <span style=color:#75715e># 删除库中的文件</span>
+
+git reset --hard <span style=color:#75715e># 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改</span>
+
+git reset -- . <span style=color:#75715e># 从暂存区恢复到工作文件</span>
+
+</code></pre></div><h2 id=分支与合并>分支与合并<a hidden class=anchor aria-hidden=true href=#分支与合并>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git branch &lt;分支名&gt; &lt;老分支名&gt;# 根据分支创建新分支
+
+git branch -r <span style=color:#75715e># 查看远程分支</span>
+
+git branch -v <span style=color:#75715e># 查看各分支最近的提交</span>
+
+git branch -d &lt;分支名&gt; <span style=color:#75715e># 删除一个分支</span>
+
+git br -D &lt;分支名&gt; <span style=color:#75715e># 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</span>
+
+git branch -m &lt;分支名&gt; &lt;新分支名&gt; <span style=color:#75715e># 重命名一个分支</span>
+
+git checkout &lt;分支名&gt; <span style=color:#75715e># 切换至某分支</span>
+
+git checkout -b &lt;分支名&gt; <span style=color:#75715e># 创建并切换至新分支</span>
+
+git merge dev <span style=color:#75715e># 将当前分支与dev分支合并</span>
+
+git merge dev --no-ff <span style=color:#75715e># 不使用Fast-Foward合并，为了保持项目的清晰的轨迹，推荐合并时使用此选项</span>
+</code></pre></div><p>这里前者到一个概念叫分支策略，可以参考这篇文章<a href=http://www.ruanyifeng.com/blog/2012/07/git.html>Git分支管理策略</a>。</p><h2 id=远程操作>远程操作<a hidden class=anchor aria-hidden=true href=#远程操作>#</a></h2><h3 id=clone>clone<a hidden class=anchor aria-hidden=true href=#clone>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git clone /xx/xxx/xxx.git <span style=color:#75715e># 克隆某个项目</span>
+
+git支持很多协议，如ssh、git、https等。
+</code></pre></div><h3 id=remote>remote<a hidden class=anchor aria-hidden=true href=#remote>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git remote -v <span style=color:#75715e># 查看远程库</span>
+
+git remote add origin xxxx.git <span style=color:#75715e># 添加一个远程主机</span>
+
+git remote rm <span style=color:#75715e># 删除一个远程主机</span>
+</code></pre></div><h3 id=fetch>fetch<a hidden class=anchor aria-hidden=true href=#fetch>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git fetch &lt;远程主机名&gt; <span style=color:#75715e># 取回所有信息</span>
+
+git fetch &lt;远程主机名&gt; &lt;分支名&gt; <span style=color:#75715e># 只取回某分支</span>
+
+git branch -a <span style=color:#75715e># 查看所有分支</span>
+
+git branch -r <span style=color:#75715e># 查看远程分支</span>
+</code></pre></div><h3 id=pull>pull<a hidden class=anchor aria-hidden=true href=#pull>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git push 
+</code></pre></div><h3 id=push>push<a hidden class=anchor aria-hidden=true href=#push>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
+</code></pre></div><h2 id=jetbrains系列软件问题>jetbrains系列软件问题<a hidden class=anchor aria-hidden=true href=#jetbrains系列软件问题>#</a></h2><h3 id=git-remotes-cant-push-because-no-remotes-are-defined>GIT Remotes &ldquo;Can&rsquo;t push, because no remotes are defined&rdquo;<a hidden class=anchor aria-hidden=true href=#git-remotes-cant-push-because-no-remotes-are-defined>#</a></h3><p>软件中没有添加remote的功能，所以如果你要新加入一个远程库就需要在terminal中使用以下命令</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git remote add origin <span style=color:#e6db74>&#34;path to .git&#34;</span> 
+</code></pre></div><h3 id=fatal-no-existing-author-found-with-john-doe>fatal: No existing author found with &lsquo;john doe&rsquo;<a hidden class=anchor aria-hidden=true href=#fatal-no-existing-author-found-with-john-doe>#</a></h3><p>先使用<code>git config -l</code>查看配置，得到name和email如下</p><blockquote><p>user.name=aaa
+<a href="mailto:user.email=bbb@cc.com">user.email=bbb@cc.com</a></p></blockquote><p>软件配置里填入</p><p>aaa <a href=mailto:bbb@cc.com>bbb@cc.com</a></p><p>这样软件转化的命令就变成</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>git commit --author<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;aaa &lt;bbb@cc.com&gt;&#34;</span> -m <span style=color:#e6db74>&#34;Note&#34;</span>
+</code></pre></div><p>参考：</p><p><a href=https://ruby-china.org/topics/939>https://ruby-china.org/topics/939</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/git/>git</a></li><li><a href=https://phpgao.github.io/tags/phpstorm/>phpstorm</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/phpcms_login.html><span class=title>« Prev Page</span><br><span>PHPCMS登陆流程</span></a>
+<a class=next href=https://phpgao.github.io/php_manual_fav.html><span class=title>Next Page »</span><br><span>PHP文档收藏夹</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

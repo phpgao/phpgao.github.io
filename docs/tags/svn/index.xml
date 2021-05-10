@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>svn on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/svn/</link>
+    <description>Recent content in svn on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 29 Jan 2015 06:34:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/svn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVN命令行操作</title>
+      <link>https://phpgao.github.io/svn_cli.html</link>
+      <pubDate>Thu, 29 Jan 2015 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_cli.html</guid>
+      <description>&lt;p&gt;svn命令和git很像啊！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>File-already-exists--filesystem-解决办法</title>
+      <link>https://phpgao.github.io/svn_file_already_exists.html</link>
+      <pubDate>Wed, 03 Dec 2014 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_file_already_exists.html</guid>
+      <description>今天用svn命令行提交版本的时候，碰到了这个比较麻烦的问题
+svn: File already exists: filesystem &amp;#39;xxx/svn/xxx/db&amp;#39; 搜了一下解决办法，都是需要两次commit，太麻烦。
+直接在提交根目录执行以下命令
+svn update path/ --accept=mine-full 一句话解决！</description>
+    </item>
+    
+    <item>
+      <title>SVN预提交(Pre-Commit)钩子的利用</title>
+      <link>https://phpgao.github.io/svn_pre_commit.html</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_pre_commit.html</guid>
+      <description>转自：http://java.dzone.com/articles/useful-subversion-pre-commit
+ Checks whether the commit message is not empty Checks whether the commit message consists of at least 5 characters Checks if the committed files are UTF-8 compliant Checks whether the svn:eol-style property is set to LF on newly added files Checks if the committed files have no TAB characters  The UTF-8 and TAB checks are performed on the following file suffixes
+ *.java *.js *.xhtml *.css *.xml *.</description>
+    </item>
+    
+    <item>
+      <title>WIN下phpstorm不能检出svn的问题</title>
+      <link>https://phpgao.github.io/phpstorm_svn_authorize.html</link>
+      <pubDate>Tue, 21 Oct 2014 03:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_svn_authorize.html</guid>
+      <description>今天使用win上的phpstrom发现不能检出svn服务器上的文件，折腾了一番才发现原来是svn设置问题。
+解决办法：
+进入settings
+按照下图设置：
+这里我们指定了svn的命令行路径，CollabNet\Subversion Client是CollabNet出的svn客户端命令行工具，换成其他的也可以，只要路径指定正确就行。
+附下载地址：
+支持各种系统的svn
+推荐visualsvn</description>
+    </item>
+    
+  </channel>
+</rss>

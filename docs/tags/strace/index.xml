@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>strace on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/strace/</link>
+    <description>Recent content in strace on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 May 2015 10:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/strace/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>排查PHP-FPM占用CPU过高</title>
+      <link>https://phpgao.github.io/php-fpm-high-cpu-consumption.html</link>
+      <pubDate>Fri, 15 May 2015 10:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-high-cpu-consumption.html</guid>
+      <description>最近老高发现服务器的CPU总是被某个php-fpm占用过高，记录一下如何排查。
+发现 如何发现的呢？当然是使用top命令，发现系统的load average&amp;gt;3，这说明系统已经处于比较高的负载中。
+尝试解决 当我把php-fpm重启后，没过一会儿又开始cpu狂飙！这是什么鬼？
+开始排查 首先，我们开启在php-fmp.conf中开启错误日志，慢执行日志还有常规日志
+error_log = /var/log/php/error.log access.log = /var/log/php/access.$pool.log access.format = &amp;#34;%R - %u %t \&amp;#34;%m %r%Q%q\&amp;#34; %s %f %{mili}d %{kilo}M %{system}C%%&amp;#34; slowlog = /var/log/php/slow.$pool.log request_slowlog_timeout = 3s 重启php-fpm后我们开始监视日志
+# 查看慢执行日志 [15-May-2015 12:50:22] [pool www] pid 1819 script_filename = /home/ftp/phpergao/wwwroot/index.php [0x00007f2d286c2790] replace() /home/ftp/phpergao/wwwroot/usr/plugins/CdnHelper/Plugin.php:72 [0x00007fff78ab00f0] replace() unknown:0 [0x00007f2d286c2420] call_user_func_array() /home/ftp/phpergao/wwwroot/var/Typecho/Plugin.php:489 [0x00007fff78ab0430] __call() unknown:0 [0x00007f2d286c1f78] contentEx() /home/ftp/phpergao/wwwroot/var/Widget/Abstract/Contents.php:141 [0x00007f2d286c1b78] ___content() /home/ftp/phpergao/wwwroot/var/Typecho/Widget.php:385 [0x00007fff78ab0850] __get() unknown:0 [0x00007f2d286c1870] content() /home/ftp/phpergao/wwwroot/var/Widget/Abstract/Contents.php:783 [0x00007f2d286c1628] content() /home/ftp/phpergao/wwwroot/var/Widget/Archive.</description>
+    </item>
+    
+  </channel>
+</rss>

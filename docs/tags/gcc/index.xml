@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>gcc on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/gcc/</link>
+    <description>Recent content in gcc on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 03:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/gcc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos6新系统初始化脚本</title>
+      <link>https://phpgao.github.io/new_cents_shell.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_cents_shell.html</guid>
+      <description>&lt;p&gt;最近装机次数有点多，本来想写到这里的&lt;a href=&#34;https://blog.phpgao.com/centos_optimize.html&#34;&gt;centos6 优化脚本与安全脚本&lt;/a&gt;，结果一想还是新开一个帖子吧。&lt;/p&gt;
+&lt;p&gt;centos源设置可以参考&lt;a href=&#34;https://blog.phpgao.com/repo_for_centos.html&#34;&gt;Centos源设置&lt;/a&gt;，老高推荐安装阿里源。&lt;/p&gt;
+&lt;p&gt;新机子先运行上面的脚本，再运行这个脚本&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos升级gcc至4.8</title>
+      <link>https://phpgao.github.io/centos_gcc_update.html</link>
+      <pubDate>Tue, 03 Jun 2014 08:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_gcc_update.html</guid>
+      <description>&lt;p&gt;webkitgtk+的编译要用到4.8+的GCC 人家ubuntu都有编译好的gcc。。。可怜我centos只能编译源代码了。。。&lt;/p&gt;
+&lt;p&gt;废话不说，速度干活&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;先下载需要的GCC源码，&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://gcc.gnu.org/&#34;&gt;http://gcc.gnu.org/&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;以gcc-4.8.3为例 先解压文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd ~
+mkdir src
+cd src
+wget http://自己写吧
+tar xf gcc-4.8.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这一步停下，还有软件包没有下载安装，难点重点就在这儿了，这三个软件包的安装顺序不能乱，而且安装后一个软件之前必须指定前面安装的路径，很麻烦！&lt;/p&gt;
+&lt;p&gt;下载源代码可以执行gcc-4.8.3/contrib下的download_prerequisites脚本，即可自动下载，到时候也好一起编译&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu编译webkit</title>
+      <link>https://phpgao.github.io/ubuntu_webkitgtk.html</link>
+      <pubDate>Thu, 29 May 2014 08:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_webkitgtk.html</guid>
+      <description>下载安装包：http://webkitgtk.org/使用下面命令压缩包
+tar xvJf 安装依赖库：
+apt-get install autoconf automake autotools-dev bison flex gperf glib-networking gtk-doc-tools libenchant-dev libgail-dev libgeoclue-dev libglib2.0-dev libgstreamer-plugins-base0.10-dev libgtk2.0-dev libicu-dev libjpeg62-dev libpango1.0-dev libpng12-dev libsoup2.4-dev libsqlite3-dev libtool libxslt1-dev libxt-dev 试试Configure一下
+./configure 可能还不够，提示找不到 libwebp，找一下吧：
+apt-cache search libwebplibwebp-dev - Lossy compression of digital photographic images.libwebp5 - Lossy compression of digital photographic images.libwebpdemux1 - Lossy compression of digital photographic images.libwebpmux1 - Lossy compression of digital photographic images.</description>
+    </item>
+    
+  </channel>
+</rss>

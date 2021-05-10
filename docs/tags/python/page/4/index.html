@@ -1,0 +1,140 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>python | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/tags/python/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/tags/python/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="python"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/tags/python/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="python"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/tags/>Tags</a></div><h1>python</h1></header><article class="post-entry tag-entry"><header class=entry-header><h2>#!-usr-bin-env与#!-usr-bin-python的区别</h2></header><section class=entry-content><p>今天写了个采集脚本，使用了BeautifulSoup，所以在代码中有下面的import语句
+from BeautifulSoup import BeautifulSoup as BS
+在win下执行，没问题，但是在linux下执行，就报这个错误
+ImportError: No module named BeautifulSoup
+google之
+转自快乐&&平凡
+脚本语言的第一行，目的就是指出，你想要你的这个文件中的代码用什么可执行程序去运行它，就这么简单
+#!/usr/bin/python是告诉操作系统执行这个脚本的时候，调用/usr/bin下的python解释器;
+#!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。
+#!/usr/bin/python相当于写死了python路径;
+#!/usr/bin/env python会去环境设置寻找python目录,推荐这种写法。
+而我的/usr/bin/python是2.6版本，但是安装BeautifulSoup的是2.7。。。
+#mv /usr/bin/python /usr/bin/python2.6.6
+#ln -s /usr/local/bin/python2.7 /usr/bin/python
+成功解决!</p></section><footer class=entry-footer>July 29, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to #!-usr-bin-env与#!-usr-bin-python的区别" href=https://phpgao.github.io/usr_bin_python.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>记一次bypy的使用</h2></header><section class=entry-content><p>无意间发现了bypy一个python写得百度网盘的linux客户端
+工具实在难得，记录一下，说不定以后能用上！
+...</p></section><footer class=entry-footer>July 28, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 记一次bypy的使用" href=https://phpgao.github.io/bypy.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>在python的urllib2中使用socks代理</h2></header><section class=entry-content><p>转自潘魏增的博客！
+python2.5中的urllib2支持http代理，不支持socks代理。假如代码库或者编码时使用了urllib2，同时又要使用socks，就需要第三方的库来实现。幸运的是，已经有人造好了轮子。
+SocksiPy是一个socks module。它提供了一个类socket的接口，支持socks4、socks5和http proxy。下载后在代码中引用socks.py即可，也可以写个setup.py文件安装到python的site-packages目录中。 使用时，将下面的代码放在调用urllib2的代码之前即可：
+import socks
+import socket
+socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 8080)
+socket.socket = socks.socksocket
+import urllib2
+print urllib2.urlopen('http://baidu.com').read()
+如果是自己写的程序，也可以尝试使用pycurl这个库。ubuntu使用sudo apt-get install python-pycurl python-pycurl-dbg安装。 示例代码
+import pycurl
+c = pycurl.Curl()
+c.setopt(pycurl.URL, 'http://baidu.com')
+c.setopt(pycurl.PROXY, '127.0.0.1')
+c.setopt(pycurl.PROXYPORT, 8080)
+c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
+c.perform()
+如果在程序外部使用socks，推荐使用tsocks。ubuntu中直接使用sudo apt-get install tsocks安装。安装完毕以后需要修改/etc/tsocks.conf。配置样例如下
+# 默认代理服务器
+server = 127.0.0.1 # 代理服务器类型 server_type = 5 # 代理服务器端口
+server_port = 8080
+使用时，在命令行输入tsocks 程序名即可。例如ubuntu下的epiphany浏览器没有代理设置，如果想使用socks代理，输入tsocks epiphany-browser即可（注意先关闭其他的epiphany实例）。</p></section><footer class=entry-footer>July 27, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 在python的urllib2中使用socks代理" href=https://phpgao.github.io/python_socks_proxy.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Python程序监控脚本</h2></header><section class=entry-content><p>有些软件虽然卖的很贵，但是稳定性还是让人很无语，经常莫名其妙的崩溃，生产服务器怎么能允许这种事情发生！
+一个监控程序运行的就这样诞生了，程序Python 2.7
+思路很简单，先写一个监控的函数，判断是否在运行，然后循环调用N次，直到运行成功，实在不行，就发个通知或者记录下来
+难点在于如何判断进程在运行。
+思路也很简单，主要用到了这两个方法
+os.popen os.system 他们两个都可以直接运行cmd或者shell中的命令，但是前者会返回输出的内容，可以做进一步的处理
+而后者只是执行，并把结果打印出来。
+下面是程序，注释已经很清晰了
+#coding=utf-8 """ To check program if it is running @author PHPergao @time 2014-7-22 """ import re import os import time import urllib2 import urllib flag = 1 #check function def checkhct(): #tasklist也可换成linux下打印所有进程的命令 ps aux for line in os.popen('tasklist').readlines(): #判断用正则更准确，也可以使用find或者index判断 pattern = re.compile(r'qq.*', re.I) match = pattern.match(line) if(match): return True return False #repeat 3 times for x in xrange(0,3): if(checkhct() == False): print 'error' #程序路径 os....</p></section><footer class=entry-footer>July 22, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Python程序监控脚本" href=https://phpgao.github.io/check_running_python.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>使用python模拟登陆腾讯微博</h2></header><section class=entry-content><p>由于业务需要，研究了一下腾讯微博等登陆，下面分享一些经验给大家： 标题写的是腾讯微博的登陆，其实也可以隐身到腾讯旗下多个产品的登陆，比如QQ空间，webQQ等，想到这儿大伙是不是很激动呢？
+[TOC]
+表急，等我细细道来。
+数据采集 有时候简单的数据不需要这么大费周折！使用某些语言自带的web工具也是可以的！下面我以Python为例：
+分析登录过程 登录过程需要抓包，我是用的HttpWatch，大体步骤如下
+第一步 手动登陆，抓包，记录登录过程 当输入完账号后想服务器请求验证码 等级登陆按钮后将登录信息发送至认证服务器，实现第一次认证 服务器返回登陆成功信息，其中包含最终URL 第二次认证，获取腾讯微博的cookie 第二步 伪造登录过程 获取验证码 根据验证码计算出加密后的密码以及其他信息，发送GET请求至认证服务器 根据返回URL获取最终cookie 工作难点 本文假设读者理解http协议及数据包的发送原理，以此为基础，工作的难点就集中在数据的准备上。
+密码的加密原理 cookie的处理 header的UA及refer的一致性 密码加密算法 以下提取自登录页面的c_login_2.js文件
+function getEncryption(password, uin, vcode) {
+var str1 = hexchar2bin(md5(password));
+var str2 = md5(str1 + uin);
+var str3 = md5(str2 + vcode.toUpperCase());
+return str3
+}
+if (b == "login") {
+d.u = encodeURIComponent(pt.plogin.at_accout);
+d.verifycode = $("verifycode").value;
+if (pt.plogin.needShowNewVc && pt....</p></section><footer class=entry-footer>June 16, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 使用python模拟登陆腾讯微博" href=https://phpgao.github.io/t_login.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>用Python写了个日志清理的脚本</h2></header><section class=entry-content><p>欢迎吐槽！
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+import os,time,shutil
+path = os.getcwd()
+target_dir = []
+cal = []
+target_dir.append('/var/lib/mysql/log/')
+target_dir.append('/newlogs/')
+target_dir.append('/oldlogs/')
+#初始化删除文件名
+del_ext = ['frm','MYD','MYI']
+#你要保留几天
+days_before = 5
+#初始化删除日期
+for x in xrange(days_before+1,days_before+30):
+cal.append(time.strftime('%Y_%m_%d',time.localtime(time.time() - x*24*3600)))
+#初始化删除文件名，使用笛卡尔积！
+fl = map('.'.join, [[x,y] for x in cal for y in del_ext])
+#以日期命名的文件夹
+cal = []
+for x in xrange(days_before+1,days_before+30):
+cal.append(time.strftime('%Y-%m-%d',time.localtime(time.time() - x*24*3600)))
+fl += cal
+#获取文件扩展名
+def get_ext(filename):
+return filename....</p></section><footer class=entry-footer>June 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 用Python写了个日志清理的脚本" href=https://phpgao.github.io/log_cleaner.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>python时间函数整理</h2></header><section class=entry-content><p>有一些是拷的，自己加了一点，大家凑活看吧
+#-*- coding:utf-8 -*-
+import time
+import datetime
+#in python is float while in php is int
+currenttime = 1402244512.48
+print time.time()
+print time.ctime()
+print time.ctime(currenttime)
+print time.localtime()
+print type(time.localtime())
+print time.strftime('%Y-%m-%d',time.localtime(time.time()-3600*24))
+print time.strftime('%Y-%m-%d %H:%I:%S',time.localtime(time.time()))
+print time.strftime('%Y-%m-%d %H:%I:%S',time.gmtime(time.time()))
+currentstr = '2013-08-21 17:05:01'
+print time.strptime(currentstr,'%Y-%m-%d %H:%I:%S')
+'''
+python中时间日期格式化符号：
+%y 两位数的年份表示（00-99）
+%Y 四位数的年份表示（000-9999）
+%m 月份（01-12）
+%d 月内中的一天（0-31）
+%H 24小时制小时数（0-23）
+%I 12小时制小时数（01-12）
+%M 分钟数（00=59）
+%S 秒（00-59）
+%a 本地简化星期名称
+%A 本地完整星期名称
+%b 本地简化的月份名称
+%B 本地完整的月份名称
+%c 本地相应的日期表示和时间表示
+%j 年内的一天（001-366）
+%p 本地A....</p></section><footer class=entry-footer>June 9, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to python时间函数整理" href=https://phpgao.github.io/python_time.html></a></article><article class="post-entry tag-entry"><header class=entry-header><h2>Python标准库urllib2的使用细节</h2></header><section class=entry-content><p>以下转自
+http://blog.csdn.net/pleasecallmewhy/article/details/8925978
+[TOC]
+Python 标准库中有很多实用的工具类，但是在具体使用时，标准库文档上对使用细节描述的并不清楚，比如 urllib2 这个 HTTP 客户端库。这里总结了一些 urllib2 的使用细节。
+Proxy 的设置 urllib2 默认会使用环境变量 http_proxy 来设置 HTTP Proxy。如果想在程序中明确控制 Proxy 而不受环境变量的影响，可以使用下面的方式
+import urllib2
+enable_proxy = True
+proxy_handler = urllib2.ProxyHandler({"http" : 'http://some-proxy.com:8080'})
+null_proxy_handler = urllib2.ProxyHandler({})
+if enable_proxy:
+opener = urllib2.build_opener(proxy_handler)
+else:
+opener = urllib2.build_opener(null_proxy_handler)
+urllib2.install_opener(opener)
+这里要注意的一个细节，使用 urllib2.install_opener() 会设置 urllib2 的全局 opener 。这样后面的使用会很方便，但不能做更细粒度的控制，比如想在程序中使用两个不同的 Proxy 设置等。比较好的做法是不使用 install_opener 去更改全局的设置，而只是直接调用 opener 的 open 方法代替全局的 urlopen 方法。
+Timeout 设置 在老版 Python 中，urllib2 的 API 并没有暴露 Timeout 的设置，要设置 Timeout 值，只能更改 Socket 的全局 Timeout 值。...</p></section><footer class=entry-footer>June 5, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Python标准库urllib2的使用细节" href=https://phpgao.github.io/python_urllib.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/tags/python/page/3/>« Prev Page</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

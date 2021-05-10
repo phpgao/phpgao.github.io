@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sourceforge on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sourceforge/</link>
+    <description>Recent content in sourceforge on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 28 Mar 2015 03:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sourceforge/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>推荐两个sourceforge的FTP镜像(直接下载)</title>
+      <link>https://phpgao.github.io/sourceforge_ftp.html</link>
+      <pubDate>Sat, 28 Mar 2015 03:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sourceforge_ftp.html</guid>
+      <description>一个FTP协议，一个http协议，实时更新，方便直接下载！
+ ftp://ftp.jaist.ac.jp/pub/sourceforge/ http://www.mirrorservice.org/sites/download.sourceforge.net/pub/sourceforge/  顺便补充几个与路由器翻墙有关的地址
+ http://openwrt-dist.sourceforge.net http://openwrt-dist.sourceforge.net/releases/ramips/packages/  </description>
+    </item>
+    
+  </channel>
+</rss>

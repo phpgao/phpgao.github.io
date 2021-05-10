@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>markdown on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/markdown/</link>
+    <description>Recent content in markdown on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 May 2018 03:28:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用markdown编写简单的接口文档</title>
+      <link>https://phpgao.github.io/markdown_api_doc.html</link>
+      <pubDate>Wed, 09 May 2018 03:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/markdown_api_doc.html</guid>
+      <description>如题，使用markdown格式写接口文档效率还是挺高的，因为你只需要关系接口的功能和内容，而不用在意排版，顺带提一下使用这个工具markdown_tables创建markdown格式的表格不要太方便！
+ 需要说明的是如果是大型多人合作项目，还是老老实实用apidoc等工具吧。
+ 接口大类 ----------- [toc] ----------- ### 接口1 #### 接口功能 &amp;gt; 接口说明 #### 接口地址 &amp;gt; 接口地址 #### 返回格式 &amp;gt; JSON #### 请求方式 &amp;gt; GET #### 请求参数 | 参数 | 必选 | 类型 | 默认值 | 说明 | |------|------|--------|--------|-----------------------------------------| | name | ture | string | foo | 请求的项目名 | | type | true | int | bar | 请求项目的类型。1：类型一；2：类型二 。 | #### 返回字段 | 返回字段 | 字段类型 | 说明 | |----------|----------|----------------------------------| | result | int | 返回结果状态。0：正常；1：错误。 | | reason | string | 错误说明 | | data | string | 数据 | #### 字段变化 字段变化说明 #### 接口示例 &amp;gt; 地址：接口地址示例 #```json { &amp;#34;result&amp;#34;: 0, &amp;#34;reason&amp;#34;: &amp;#34;success&amp;#34;, &amp;#34;data&amp;#34;: [] } #```  代码里的#请删除</description>
+    </item>
+    
+    <item>
+      <title>让typecho支持table-of-contents</title>
+      <link>https://phpgao.github.io/typecho_toc.html</link>
+      <pubDate>Thu, 24 Jul 2014 08:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_toc.html</guid>
+      <description>什么是toc? [toc]
+ table of contents 即文章目录
+ toc有什么用  废话，你说目录有啥用，方便查找呗
+ 使用typecho的TX，一定会一点markdown吧，在文章中如果出现##this&#39;s h2 tag##，会被程序转换为
+&amp;lt;h2&amp;gt;this&#39;s h2 tag&amp;lt;/h2&amp;gt; 一个h标签就好比一本书的各个章节，如果我们能把他们清点一下，组成一个目录输出，岂不是妙哉！
+TOC如何使用 简单到不能再简单，在你想插入目录的地方放一个[toc]或[TOC]即可(推荐大写)！
+ [TOC]必须处于顶格
+ typecho中的markdown typecho的源代码中已经使用了激进的MarkdownExtraExtended类来转化md文件，为什么说他很激进呢？因为他扩展了标准的markdown，添加了很多个性化的语法，如直接给元素添加id或者class，还有脚注、缩写词等，用起来确实很爽！但需要注意的是：太多的非标准语法可能会带来移植性差的问题
+具体的语法参考请看这里php Markdown Extra
+如何使typecho支持toc 要使typecho支持toc需要替换位于源程序中的/wwwroot/var/文件夹下的MarkdownExtraExtended.php 为 MarkdownExtraExtended.php
+原理 这个文件的作用就是为typecho提供md2html的作用，我修改了MarkdownExtraExtended类的__construct方法，为block_gamut数组添加了 doToc 处理模块，并把优先级降到最低。
+转换细节位于doToc与_doToc_callback中，在此不作赘述。
+不完美的地方  要是能加入一个锚点之间平滑滚动的效果就更完美了，改天写个插件弄一弄 在首页也能看到目录，改天看看源代码研究一下，看能不能解决 希望后台加一个选项，自动生成目录，这个比较麻烦，以后看情况解决  </description>
+    </item>
+    
+    <item>
+      <title>markdown语法简介</title>
+      <link>https://phpgao.github.io/markdown_usage.html</link>
+      <pubDate>Wed, 16 Jul 2014 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/markdown_usage.html</guid>
+      <description>&lt;p&gt;最近把之前的文章都用markdown重写了一遍&lt;/p&gt;
+&lt;p&gt;之前寄希望于md自动转换，可惜转换后的格式惨不忍睹，同时发现我写得的文章也是惨不忍睹 ::&amp;gt;_&amp;lt;::&lt;/p&gt;
+&lt;p&gt;下面简单写一下md的语法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>现在都用md，咱也不落后</title>
+      <link>https://phpgao.github.io/use_markdown.html</link>
+      <pubDate>Thu, 10 Jul 2014 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/use_markdown.html</guid>
+      <description>markdown是个好东西！让我们可以集中精力去写文章，提高文章质量，不过有几个方面还是值得吐槽的：
+ 超链接的target属性不能自定义 在WP中插入图片太麻烦 没有很好的支持或者支持标准不一 待补充  推荐一个好工具：stackedit
+还有他的升级版：stackedit-beta
+2014年10月19日补充：
+markdown标准语法请参考http://commonmark.org</description>
+    </item>
+    
+  </channel>
+</rss>

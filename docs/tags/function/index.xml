@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>function on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/function/</link>
+    <description>Recent content in function on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 15 Jul 2014 01:30:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP所有函数列表</title>
+      <link>https://phpgao.github.io/php_function_all.html</link>
+      <pubDate>Tue, 15 Jul 2014 01:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_function_all.html</guid>
+      <description>&lt;p&gt;说所有函数有点夸张，有错误请指正！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP经典函数收集</title>
+      <link>https://phpgao.github.io/php_functions.html</link>
+      <pubDate>Mon, 10 Mar 2014 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_functions.html</guid>
+      <description>PHP经典函数 sys_getloadavg() 这个函数返回当前系统的负载均值信息（当然 Windows 下不适用），详细文档可以翻阅 PHP的相关文档。文档中有段示例代码，基本上也就能看出它的用途了。
+$load = sys_getloadavg();if ($load[0] &amp;gt; 80) {header(&#39;HTTP/1.1 503 Too busy, try again later&#39;);die(&#39;Server too busy. Please try again later.&#39;);}//PS，如果“很不幸”你的 PHP 环境中没有这个函数，可以考虑使用下面这段代码if (!function_exists(&#39;sys_getloadavg&#39;)) {function sys_getloadavg(){$loadavg_file = &#39;/proc/loadavg&#39;;if (file_exists($loadavg_file)) {return explode(chr(32),file_get_contents($loadavg_file));}return array(0,0,0);}} debug_backtrace兄弟 使用请参考使用debug_backtrace()做PHP调试
+get_browser() 该方法参考一个名叫browscap.ini的文件，该文件收录了各种浏览器信息，通过比对实现查找客户浏览器的功能。 两个使用方法：
+1.下载最新的browscap.ini,放入PHP的安装目录或者C:\Windows文件夹下
+下载地址
+2.在PHP.INI文件中加入以下配置
+[browscap];https://blog.phpgao.com/classic_code/browscap = php_browscap.ini 3.使用代码如下
+http://www.phpgao.com&amp;lt;/a&amp;gt;print_r($browser); 返回结果如下</description>
+    </item>
+    
+  </channel>
+</rss>

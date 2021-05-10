@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>typecho on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/typecho/</link>
+    <description>Recent content in typecho on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Jun 2015 01:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/typecho/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新主题基于Bootstrap3</title>
+      <link>https://phpgao.github.io/new_theme_bootstrap3.html</link>
+      <pubDate>Fri, 19 Jun 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_theme_bootstrap3.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3708675869.png&#34; alt=&#34;新主题&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家应该注意到了，老高花了两天时间匆忙做的难看的主题终于上线了。&lt;/p&gt;
+&lt;p&gt;已经实现的：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自适应页面&lt;/li&gt;
+&lt;li&gt;lazyload图片加载&lt;/li&gt;
+&lt;li&gt;加载速度优化&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前BS的浏览器支持情况如下表&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程7---Helper类</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-7.html</link>
+      <pubDate>Tue, 02 Jun 2015 03:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-7.html</guid>
+      <description>&lt;p&gt;&lt;code&gt;Helper&lt;/code&gt;类为我们封装了很多与插件有关的操作，并且全部是公共静态方法，比如获取系统配置、添加路由、添加面板等功能，是开发插件必不可少的工具。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;插件帮手将默认出现在所有的typecho发行版中.因此你可以放心使用它的功能, 以方便你的插件安装在用户的系统里.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Helper类的注释已经写的很清楚了，老高在此仅挑几个常用的方法讲讲。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>缓存插件TpCache-for-Typecho</title>
+      <link>https://phpgao.github.io/tpcache_for_typecho.html</link>
+      <pubDate>Sun, 24 May 2015 13:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tpcache_for_typecho.html</guid>
+      <description>&lt;h2 id=&#34;功能&#34;&gt;功能&lt;/h2&gt;
+&lt;p&gt;减缓网站并发压力而开发的缓存插件。&lt;/p&gt;
+&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持&lt;strong&gt;Memcache&lt;/strong&gt;，&lt;strong&gt;Redis&lt;/strong&gt;，&lt;strong&gt;Mysql&lt;/strong&gt;三种驱动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非js方式的&lt;/strong&gt;访问统计插件会失效&lt;/li&gt;
+&lt;li&gt;BUG请在&lt;a href=&#34;https://blog.phpgao.com/tpcache_for_typecho.html&#34;&gt;缓存插件TpCache for Typecho&lt;/a&gt;页汇报&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程6---调用接口</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-6.html</link>
+      <pubDate>Wed, 20 May 2015 12:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-6.html</guid>
+      <description>&lt;p&gt;此篇我们开始调用接口，我们在插件类中新定义一个方法，起名为&lt;code&gt;send_post&lt;/code&gt;，在方法中我们通过系统配置获取接口调用地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程5---核心代码</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-5.html</link>
+      <pubDate>Wed, 20 May 2015 10:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-5.html</guid>
+      <description>&lt;p&gt;之前啰嗦了很多，现在开始写核心代码。&lt;/p&gt;
+&lt;p&gt;分析一下，发布文章的时候，我们需要的信息就是当前文章的URL，我们需要想办法从&lt;code&gt;$contents&lt;/code&gt;、 &lt;code&gt;$class&lt;/code&gt;中拿到他。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程4---插件点</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-4.html</link>
+      <pubDate>Wed, 20 May 2015 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-4.html</guid>
+      <description>&lt;p&gt;终于，在能够保存配置信息后，我们可以开始编写插件的挂载功能了。&lt;/p&gt;
+&lt;p&gt;首先我们需要知道系统为我们在各个关键的环节都预留了插件点给我们，系统运行到插件点时，会检测到是否有插件挂在这个点上，然后执行插件的逻辑！&lt;/p&gt;
+&lt;p&gt;插件的工作就是找到合适的插件点，挂上去，然后执行自己的逻辑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程3---保存配置</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-3.html</link>
+      <pubDate>Wed, 20 May 2015 02:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-3.html</guid>
+      <description>&lt;p&gt;上一节我们制作了一个裸插件，下面我们开始让我们的插件开始工作！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程2---新插件</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-2.html</link>
+      <pubDate>Wed, 20 May 2015 01:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-2.html</guid>
+      <description>&lt;p&gt;第一节我们了解了一个插件的基本构成，下面我们需要一个实例练习巩固。&lt;/p&gt;
+&lt;p&gt;真赶巧，老高最近正在改版&lt;a href=&#34;https://blog.phpgao.com/typecho_plugin_baidusubmit.html&#34;&gt;百度sitemap提交插件for typecho&lt;/a&gt;，下面和老高一起改版吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程1---从HelloWorld说起</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-1.html</link>
+      <pubDate>Tue, 19 May 2015 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-1.html</guid>
+      <description>&lt;p&gt;最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！&lt;/p&gt;
+&lt;p&gt;如果你对typecho的源码有兴趣，可以参考老高的系列文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_init.html&#34;&gt;typecho源代码解析1 - 系统初始化&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_plugin.html&#34;&gt;typecho源代码解析2 - 插件机制&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_dispatch.html&#34;&gt;typecho源代码解析3 - 路由分发&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_business_logic.html&#34;&gt;typecho源代码解析4 - 业务逻辑&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>文章目录-Table-Of-Contents-for-Typecho</title>
+      <link>https://phpgao.github.io/table_of_contents_for_typecho.html</link>
+      <pubDate>Wed, 13 May 2015 14:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/table_of_contents_for_typecho.html</guid>
+      <description>&lt;p&gt;Table Of Contents大家都懂得，效果可以看老高的博客。&lt;/p&gt;
+&lt;p&gt;欢迎使用！欢迎FORK！欢迎star！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/3482950149.png&#34; alt=&#34;Table Of Contents&#34;  title=&#34;Table Of Contents 截图&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>百度sitemap提交插件-for-Typecho</title>
+      <link>https://phpgao.github.io/typecho_plugin_baidusubmit.html</link>
+      <pubDate>Sun, 25 Jan 2015 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_baidusubmit.html</guid>
+      <description>&lt;p&gt;几经开发，这款工具终于可以进入测试阶段。&lt;/p&gt;
+&lt;p&gt;其主要内容是向百度提交sitemap，参考了站长工具里wp的插件制作。&lt;/p&gt;
+&lt;p&gt;老高目测对SEO还是有一些用处的。&lt;/p&gt;
+&lt;p&gt;目前没有做分页sitemap，如果大家有这个需求，老高会考虑加上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析4---业务逻辑</title>
+      <link>https://phpgao.github.io/typecho_source_code_business_logic.html</link>
+      <pubDate>Tue, 14 Oct 2014 13:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_business_logic.html</guid>
+      <description>上一节
+这篇我们就讲讲首页的业务逻辑，首先我们看看路由。
+[index] =&amp;gt; Array ( [url] =&amp;gt; / [widget] =&amp;gt; Widget_Archive [action] =&amp;gt; render [regx] =&amp;gt; |^[/]?$| [format] =&amp;gt; / [params] =&amp;gt; Array ( ) ) 由路由表中的正则表达式我们能看出首页的URL为https://blog.phpgao.com/或http://www.phpgao.com，并且不接受任何参数。
+下面我们找到了Widget_Archive类，让我们先看看这个类的继承关系（其中Typecho_Widget和Widget_Abstract为抽象类）：
+由上一节我们可以得到结论，当路由表匹配到/，会实例化Widget_Archive类，他位于var/Widget/Archive.php，其方法为render。
+下面我们一步步跟进，看看到底发生了些什么？
+再深入之前，我们需要有一些基本的概念，在此需要讲清楚，便于理解typecho的设计模式：
+ 基类Typecho_Widget  该类位于var/Typecho/Widget.php，是var/Widget文件夹下所有类的基类，也就是说，几乎所有与业务有关的功能，就是继承此类。
+纵观此类，方法不是很多，老高在此挑几个重要的讲解：
+/** * 获取对象插件句柄 * 此方法为插件的实现提供了快捷的语法 */ public function pluginHandle($handle = NULL) { return Typecho_Plugin::factory(empty($handle) ? get_class($this) : $handle); } /** * 将类本身赋值 * 模板中很常见，将自己复制给某一个变量，在调用next()方法循环输出 */ public function to(&amp;amp;$variable) { return $variable = $this; } /** * 将每一行的值压入堆栈 * 把数据放到自己的&amp;#39;肚子&amp;#39;里 */ public function push(array $value) { //将行数据按顺序置位  $this-&amp;gt;row = $value; $this-&amp;gt;length ++; $this-&amp;gt;stack[] = $value; return $value; } /** * 返回堆栈每一行的值 * 有点像从数据库中循环读取结果集 * 与push相对应，值得大家参考 */ public function next() { if ($this-&amp;gt;stack) { $this-&amp;gt;row = @$this-&amp;gt;stack[key($this-&amp;gt;stack)]; next($this-&amp;gt;stack); $this-&amp;gt;sequence ++; } if (!</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析2---插件机制</title>
+      <link>https://phpgao.github.io/typecho_source_code_plugin.html</link>
+      <pubDate>Sun, 12 Oct 2014 01:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_plugin.html</guid>
+      <description>上一节
+上次我们讲到了系统完成了初始化，这一篇我们会更加深入typecho，同时会介绍typecho的插件机制。
+插件点 热心的读者肯定会问，什么是插件点？当然你会不知道，因为这个名词是老高想出来的ಠ౪ಠ，本次要讲的插件机制的基础知识可以参考我的另一片博文thinkphp钩子的实现。钩子这个词比较粗俗，其实高大上的叫法就是插件，而老高自创的插件点就是事件的意思。
+index.php中Typecho_Plugin::factory(&#39;index.php&#39;)-&amp;gt;begin()，其实就是通知挂载到&amp;rsquo;index.php&amp;rsquo;这个事件的插件可以执行了。
+具体流程如下：
+Typecho_Plugin::factory(&amp;lsquo;index.php&amp;rsquo;)返回了Typecho_Plugin的实例，构造函数中确定了唯一的句柄，即&amp;rsquo;index.php&#39;，紧接着执行了该实例的begin()方法，由于该方法不存在，所以调用了魔术方法__call，最后由__call方法执行所有在这个插件点挂载的插件。
+__call方法源代码：
+public function __call($component, $args) { $component = $this-&amp;gt;_handle . &amp;#39;:&amp;#39; . $component; $last = count($args); $args[$last] = $last &amp;gt; 0 ? $args[0] : false; if (isset(self::$_plugins[&amp;#39;handles&amp;#39;][$component])) { $args[$last] = NULL; $this-&amp;gt;_signal = true; foreach (self::$_plugins[&amp;#39;handles&amp;#39;][$component] as $callback) { $args[$last] = call_user_func_array($callback, $args); } } return $args[$last]; } 关键点：
+ __call是可以带参数的 $callback是二位数组，一个类名，一个方法名 在该类init方法中，activated和handles是分开保存的，因为activated以插件名做键名，而handles以插件点为键，目的不同 插件的关联信息保存在数据库中typecho_options表中的plugins 需要禁用再启用才能使修改后的插件生效  当完成了第一个插件点的挂载后，程序开始路由分发。
+下一节
+码字不易，转载请注明出处。</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析3---路由分发</title>
+      <link>https://phpgao.github.io/typecho_source_code_dispatch.html</link>
+      <pubDate>Sun, 12 Oct 2014 01:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_dispatch.html</guid>
+      <description>上一节
+时光匆匆，我们终于来到路由工作的地方。几乎每个MVC框架都不会缺少路由功能，因为他实在太重要了。
+路由的功能简单的说就是根据请求找到对应业务代码，请求来自外部，业务由系统提供，路由器为二者建立了可靠的链接。
+typecho和thinkphp都有路由模块，虽然实现方式不同，但用法却惊人的相似！
+thinkphp：
+Dispatcher::dispatch(); typecho：
+Typecho_Router::dispatch(); typecho的路由实现是保存在数据库中的路由表，使用正则匹配路径，这一点和Django框架有点像，thinkphp则是基于自己设定的一套规则，详见官方文档。
+typecho的路由表如下数组组成，路由器类会使用子数组中的regx正则式逐个匹配pathinfo中的路径，如果匹配成功，立即初始化并执行该类对应的action。
+以index为例，如果使用正则表达式匹配成功，系统就会新建Widget_Archive类并执行其render方法，看他的名字就知道执行的是渲染页面的方法，也就是之前说的业务。
+Array([index] =&amp;gt; Array([url] =&amp;gt; /[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^[/]?$|[format] =&amp;gt; /[params] =&amp;gt; Array())[archive] =&amp;gt; Array([url] =&amp;gt; /blog/[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^/blog[/]?$|[format] =&amp;gt; /blog/[params] =&amp;gt; Array())# .... 有的同学可能会说，typecho的路由表写在数据库里，不够灵活。其实作者也考虑到了，大家可以自由扩展路由表。有兴趣的同学可以去看看Helper类中addRoute和removeRoute的用法。举个例子，如果你需要自定义一个URL,比如www.phpgao.com/robots.txt，就可以在路由表加入如下路由：
+[robots] =&amp;gt; Array([url] =&amp;gt; /robots.</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析1---系统初始化</title>
+      <link>https://phpgao.github.io/typecho_source_code_init.html</link>
+      <pubDate>Sat, 11 Oct 2014 12:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_init.html</guid>
+      <description>首先恭喜typecho v1.0的上线！
+其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！
+最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？
+老高的建议是：
+ 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：
+文档 如果有什么不明白的，文档里也许会找到答案。
+typecho开发文档
+版本 再研究源代码前，如果知道自己使用的typecho的版本呢？
+答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。
+例子：
+class Typecho_Common{/** 程序版本 */const VERSION = &#39;1.0/14.10.9&#39;;...} 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。
+开启方法：
+# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define(&amp;#39;__TYPECHO_DEBUG__&amp;#39;,1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。
+在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。
+# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?</description>
+    </item>
+    
+    <item>
+      <title>修复typecho删除分类后统计文章数的错误</title>
+      <link>https://phpgao.github.io/typecho_delete_category_mistake.html</link>
+      <pubDate>Thu, 11 Sep 2014 15:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_delete_category_mistake.html</guid>
+      <description>博客的文章渐渐多了起来，之前随意的分类就需要好好想整理一下。
+为了图方便，直接在数据库里做了替换查询，不料typecho和WP一样，都会在metas表里存着分类和tag的统计信息，统计了这个分类下有多少篇文章，这个统计信息显示在分类和TAG管理页面。
+也就是说，如果正常再文章编辑里修改分类并保存，统计信息会走一加一减这个过程，而暴力数据库修改不会触发。
+而这种混乱导致老高的瞬间变身不搞不舒服斯基，下面我们一步一步来修复这个统计信息。
+首先，找到所有分类（标签同理）
+SELECT mid FROM typecho_metas AS m WHERE m.type = &#39;category&#39;; 然后，找到分类关系表，统计文章数
+SELECT r.mid,count(cid)FROM typecho_relationships as rWHERE r.mid IN(SELECT midFROM typecho_metas AS mWHERE m.type=&#39;category&#39;)GROUP BY r.mid; 再次，我们提取出分类名称
+SELECT r.mid,m.name,count(cid)FROM typecho_relationships as rLEFT JOIN typecho_metas as m ON m.mid=r.midWHERE r.mid IN(SELECT midFROM typecho_metas AS mWHERE m.type=&#39;category&#39;)GROUP BY r.mid; 最后，以上一个查询为基础修改原始表metas</description>
+    </item>
+    
+    <item>
+      <title>让typecho支持table-of-contents</title>
+      <link>https://phpgao.github.io/typecho_toc.html</link>
+      <pubDate>Thu, 24 Jul 2014 08:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_toc.html</guid>
+      <description>什么是toc? [toc]
+ table of contents 即文章目录
+ toc有什么用  废话，你说目录有啥用，方便查找呗
+ 使用typecho的TX，一定会一点markdown吧，在文章中如果出现##this&#39;s h2 tag##，会被程序转换为
+&amp;lt;h2&amp;gt;this&#39;s h2 tag&amp;lt;/h2&amp;gt; 一个h标签就好比一本书的各个章节，如果我们能把他们清点一下，组成一个目录输出，岂不是妙哉！
+TOC如何使用 简单到不能再简单，在你想插入目录的地方放一个[toc]或[TOC]即可(推荐大写)！
+ [TOC]必须处于顶格
+ typecho中的markdown typecho的源代码中已经使用了激进的MarkdownExtraExtended类来转化md文件，为什么说他很激进呢？因为他扩展了标准的markdown，添加了很多个性化的语法，如直接给元素添加id或者class，还有脚注、缩写词等，用起来确实很爽！但需要注意的是：太多的非标准语法可能会带来移植性差的问题
+具体的语法参考请看这里php Markdown Extra
+如何使typecho支持toc 要使typecho支持toc需要替换位于源程序中的/wwwroot/var/文件夹下的MarkdownExtraExtended.php 为 MarkdownExtraExtended.php
+原理 这个文件的作用就是为typecho提供md2html的作用，我修改了MarkdownExtraExtended类的__construct方法，为block_gamut数组添加了 doToc 处理模块，并把优先级降到最低。
+转换细节位于doToc与_doToc_callback中，在此不作赘述。
+不完美的地方  要是能加入一个锚点之间平滑滚动的效果就更完美了，改天写个插件弄一弄 在首页也能看到目录，改天看看源代码研究一下，看能不能解决 希望后台加一个选项，自动生成目录，这个比较麻烦，以后看情况解决  </description>
+    </item>
+    
+  </channel>
+</rss>

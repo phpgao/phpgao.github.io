@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ftp on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ftp/</link>
+    <description>Recent content in ftp on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Jun 2016 08:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ftp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker使用笔记V----FTP-与-SSH-支持</title>
+      <link>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</link>
+      <pubDate>Thu, 30 Jun 2016 08:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note5-ftp-and-ssh.html</guid>
+      <description>&lt;p&gt;给容器赋予FTP和ssh登录在调试和使用阶段都是很不错的功能！下面看老高怎么实现的。&lt;/p&gt;
+&lt;p&gt;(基于ubuntu:xenial)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用搬瓦工的VPS搭建博客网站</title>
+      <link>https://phpgao.github.io/website_on_bandwagonhost.html</link>
+      <pubDate>Fri, 22 May 2015 02:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/website_on_bandwagonhost.html</guid>
+      <description>&lt;p&gt;想必大家买了VPS后一定都不想闲着。。。搭个博客算是最简单实用了。&lt;/p&gt;
+&lt;p&gt;但是基本上大家在网上下载到的一键安装包都没有&lt;strong&gt;后台管理&lt;/strong&gt;功能，如果想多绑定几个域名都不知道怎么操作，更别提搭建多个站点了。&lt;/p&gt;
+&lt;p&gt;下面老高就介绍一种简单实用的网站搭建方法，搭建出的网站速度快，安全性高，还支持各种优化配置。&lt;/p&gt;
+&lt;p&gt;最重要的是操作基本都是傻瓜式的，不需要很多web技能也可以完整的配置下来，而且基本上就成了半个运维了，是不是很厉害！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像老高这样的&lt;strong&gt;老司机&lt;/strong&gt;，整个装下来再加上安全设置最多5分钟搞定，相信你一定也可以！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搭建过程中如果有什么问题，请留言交流！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3949848852.gif&#34; alt=&#34;kangle&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>推荐两个sourceforge的FTP镜像(直接下载)</title>
+      <link>https://phpgao.github.io/sourceforge_ftp.html</link>
+      <pubDate>Sat, 28 Mar 2015 03:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sourceforge_ftp.html</guid>
+      <description>一个FTP协议，一个http协议，实时更新，方便直接下载！
+ ftp://ftp.jaist.ac.jp/pub/sourceforge/ http://www.mirrorservice.org/sites/download.sourceforge.net/pub/sourceforge/  顺便补充几个与路由器翻墙有关的地址
+ http://openwrt-dist.sourceforge.net http://openwrt-dist.sourceforge.net/releases/ramips/packages/  </description>
+    </item>
+    
+  </channel>
+</rss>

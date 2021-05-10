@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>browser on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/browser/</link>
+    <description>Recent content in browser on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 09 Nov 2017 02:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/browser/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>chrome-firefox-Opera浏览器的正确下载地址</title>
+      <link>https://phpgao.github.io/browser-lists.html</link>
+      <pubDate>Thu, 09 Nov 2017 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/browser-lists.html</guid>
+      <description>&lt;p&gt;如果下载Windows版本的Chrome，其实官网会直接给一个很小的下载器，打开下载器才能安装最新版的Chrome，这个很不爽了！&lt;/p&gt;
+&lt;p&gt;好在我们可以通过再下载地址URL后加&lt;code&gt;Standalone&lt;/code&gt;参数来告诉Google我们不想要那个安装器。&lt;/p&gt;
+&lt;p&gt;还有火狐，一不小心就下载到了国内的定制版本，所以记录一下各个浏览器的下载地址，省的下次又被忽悠了。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

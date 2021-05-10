@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>laravel on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/laravel/</link>
+    <description>Recent content in laravel on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Mar 2017 16:08:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/laravel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laravel的容器的工作原理</title>
+      <link>https://phpgao.github.io/laravel_container.html</link>
+      <pubDate>Tue, 14 Mar 2017 16:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_container.html</guid>
+      <description>&lt;p&gt;使用Laravel有一段时间了，终于抽点了时间看了一下其laravel实现的IOC控制反转的概念，确实很有意思。&lt;/p&gt;
+&lt;p&gt;Laravel的容器虽然和docker的容器概念不同，但是都一样承载了十分重要的信息！docker的容器为程序提供了可读写的环境，Lravel的容器为类的初始化提供了便利，解决了以依赖注入和资源获取的问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>让-PHPSTORM-更智能的支持-Laravel</title>
+      <link>https://phpgao.github.io/laravel_on_phpstorm.html</link>
+      <pubDate>Fri, 13 May 2016 07:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_on_phpstorm.html</guid>
+      <description>&lt;p&gt;PHPSTORM已经很智能了，但是laravel更狡猾，比如如下的代码就没法实现动态跟踪，因为此处使用到了Laravel的Facades。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Laracasts视频下载工具</title>
+      <link>https://phpgao.github.io/laracasts_downloader.html</link>
+      <pubDate>Mon, 25 Apr 2016 13:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laracasts_downloader.html</guid>
+      <description>&lt;p&gt;最近老高在看laravel框架，巧遇laracasts，发现还是老外讲课有深度啊！这么好的视频，有很多还是免费的，果断下载下来保存。&lt;/p&gt;
+&lt;p&gt;于是，就诞生了这篇文章！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Laravel-非常规教程之1-生命周期</title>
+      <link>https://phpgao.github.io/laravel_lesson1.html</link>
+      <pubDate>Fri, 22 Apr 2016 11:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_lesson1.html</guid>
+      <description>&lt;p&gt;上一节老高零(瞎)散(扯)的讲了一下laravel的基本知识，不知道你现在搞清楚symfony vs laravel的关系了吗？其实没多大关系，l借用了s的组件，laravel的屏蔽了框架复杂的内部实现，让程序猿们注重业务的开发，而symfony的学习曲线很陡峭，需要你掌握框架的运行机制和各种组件的关系。&lt;/p&gt;
+&lt;p&gt;本节关注一次请求在Laravel中的生命周期！就是从接收到请求到返回请求整个过程中都发生了哪些比较重要的事件。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Laravel-非常规教程之0-引入篇</title>
+      <link>https://phpgao.github.io/laravel_lesson0.html</link>
+      <pubDate>Fri, 22 Apr 2016 05:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/laravel_lesson0.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/2314951677.jpg&#34; alt=&#34;laravel logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;hi!大家好。老高又开始折腾laravel了 :-D&lt;/p&gt;
+&lt;p&gt;(基于Laravel 5.2)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>跟老高一起学laravel吧</title>
+      <link>https://phpgao.github.io/learning_laravel.html</link>
+      <pubDate>Fri, 11 Sep 2015 04:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/learning_laravel.html</guid>
+      <description>http://laravelbase.com/sections/1%7D http://www.kancloud.cn/baidu/laravel5</description>
+    </item>
+    
+  </channel>
+</rss>

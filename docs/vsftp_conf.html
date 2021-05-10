@@ -1,0 +1,103 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>使用vsftp需要用到的东西 | 老高的技术博客</title><meta name=keywords content="vsftp"><meta name=description content="安装 yum install -y vsftpd 安全配置 vi /etc/vsftpd/vsftpd.conf#addlisten_port= XXXXanonymous_enable=NOlocal_enable=NOchroot_local_user=YESchroot_list_enable=NO 日志配置 xferlog_enable=YESxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt#addroooooooterrandom_passwd#生成认证文件db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db#删除明文rm -f vi /etc/vsftpd/user_list.txt#编辑vsftpd的PAM认证文件#删除其他行，加入下面两行#pam_userdb.so 为认证库文件 db即上文user.dbvi /etc/pam.d/vsftpdauth required pam_userdb.so db=/etc/vsftpd/useraccount required pam_userdb.so db=/etc/vsftpd/user#设定FTP用户映射(注意权限)useradd –d /home/xxx –s /sbin/nologin xxxchmod 700 /home/xxx#开启虚拟用户vi /etc/vsftpd/vsftpd."><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/vsftp_conf.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="使用vsftp需要用到的东西"><meta property="og:description" content="安装 yum install -y vsftpd 安全配置 vi /etc/vsftpd/vsftpd.conf#addlisten_port= XXXXanonymous_enable=NOlocal_enable=NOchroot_local_user=YESchroot_list_enable=NO 日志配置 xferlog_enable=YESxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt#addroooooooterrandom_passwd#生成认证文件db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db#删除明文rm -f vi /etc/vsftpd/user_list.txt#编辑vsftpd的PAM认证文件#删除其他行，加入下面两行#pam_userdb.so 为认证库文件 db即上文user.dbvi /etc/pam.d/vsftpdauth required pam_userdb.so db=/etc/vsftpd/useraccount required pam_userdb.so db=/etc/vsftpd/user#设定FTP用户映射(注意权限)useradd –d /home/xxx –s /sbin/nologin xxxchmod 700 /home/xxx#开启虚拟用户vi /etc/vsftpd/vsftpd."><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/vsftp_conf.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-10-08T08:32:00+00:00"><meta property="article:modified_time" content="2014-10-08T08:32:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="使用vsftp需要用到的东西"><meta name=twitter:description content="安装 yum install -y vsftpd 安全配置 vi /etc/vsftpd/vsftpd.conf#addlisten_port= XXXXanonymous_enable=NOlocal_enable=NOchroot_local_user=YESchroot_list_enable=NO 日志配置 xferlog_enable=YESxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt#addroooooooterrandom_passwd#生成认证文件db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db#删除明文rm -f vi /etc/vsftpd/user_list.txt#编辑vsftpd的PAM认证文件#删除其他行，加入下面两行#pam_userdb.so 为认证库文件 db即上文user.dbvi /etc/pam.d/vsftpdauth required pam_userdb.so db=/etc/vsftpd/useraccount required pam_userdb.so db=/etc/vsftpd/user#设定FTP用户映射(注意权限)useradd –d /home/xxx –s /sbin/nologin xxxchmod 700 /home/xxx#开启虚拟用户vi /etc/vsftpd/vsftpd."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"使用vsftp需要用到的东西","item":"https://phpgao.github.io/vsftp_conf.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"使用vsftp需要用到的东西","name":"使用vsftp需要用到的东西","description":"安装 yum install -y vsftpd\r 安全配置 vi /etc/vsftpd/vsftpd.conf\r#add\rlisten_port= XXXX\ranonymous_enable=NO\rlocal_enable=NO\rchroot_local_user=YES\rchroot_list_enable=NO\r 日志配置 xferlog_enable=YES\rxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt\r#add\rroooooooter\rrandom_passwd\r#生成认证文件\rdb_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db\r#删除明文\rrm -f vi /etc/vsftpd/user_list.txt\r#编辑vsftpd的PAM认证文件\r#删除其他行，加入下面两行\r#pam_userdb.so 为认证库文件 db即上文user.db\rvi /etc/pam.d/vsftpd\rauth required pam_userdb.so db=/etc/vsftpd/user\raccount required pam_userdb.so db=/etc/vsftpd/user\r#设定FTP用户映射(注意权限)\ruseradd –d /home/xxx –s /sbin/nologin xxx\rchmod 700 /home/xxx\r#开启虚拟用户\rvi /etc/vsftpd/vsftpd.","keywords":["vsftp"],"articleBody":"安装 yum install -y vsftpd\r 安全配置 vi /etc/vsftpd/vsftpd.conf\r#add\rlisten_port= XXXX\ranonymous_enable=NO\rlocal_enable=NO\rchroot_local_user=YES\rchroot_list_enable=NO\r 日志配置 xferlog_enable=YES\rxferlog_std_format=YES xferlog_file=/var/log/xferlog dual_log_enable=YES vsftpd_log_file=/var/log/vsftpd.log  添加虚拟用户 vi /etc/vsftpd/user_list.txt\r#add\rroooooooter\rrandom_passwd\r#生成认证文件\rdb_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db\r#删除明文\rrm -f vi /etc/vsftpd/user_list.txt\r#编辑vsftpd的PAM认证文件\r#删除其他行，加入下面两行\r#pam_userdb.so 为认证库文件 db即上文user.db\rvi /etc/pam.d/vsftpd\rauth required pam_userdb.so db=/etc/vsftpd/user\raccount required pam_userdb.so db=/etc/vsftpd/user\r#设定FTP用户映射(注意权限)\ruseradd –d /home/xxx –s /sbin/nologin xxx\rchmod 700 /home/xxx\r#开启虚拟用户\rvi /etc/vsftpd/vsftpd.conf\r#开启虚拟用户\rguest_enable=YES\r#FTP虚拟用户对应的系统用户\rguest_username=xxx\r#PAM认证文件\rpam_service_name=user\r#虚拟用户配置文件\ruser_config_dir=/etc/vsftpd/vsftpd_user_conf\r 配置虚拟用户 mkdir -p /etc/vsftpd/vsftpd_user_conf\r#xxx为虚拟用户名\rvi /etc/vsftpd/vsftpd_user_conf/xxx\r#设置权限\rlocal_root=/home/xxx\rwrite_enable=YES #开放markwang的写权限\ranon_world_readable_only=NO #开放markwang的下载权限\ranon_upload_enable=YES #开放markwang的上传权限\ranon_mkdir_write_enable=YES #开放markwang创建目录的权限\ranon_other_write_enable=YES #开放markwang删除和重命名的权限\r 部分配置说明 virtual_use_local_privs 当virtual_use_local_privs=YES时，虚拟用户和本地用户有相同的权限；\r当virtual_use_local_privs=NO时，虚拟用户和匿名用户有相同的权限，默认是NO。\r当virtual_use_local_privs=YES，write_enable=YES时，虚拟用户具有写权限（上传、下载、删除、重命名）。\r当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=YES，\ranon_upload_enable=YES时，虚拟用户不能浏览目录，只能上传文件，无其他权限。\r当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，\ranon_upload_enable=NO时，虚拟用户只能下载文件，无其他权限。\r当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，\ranon_upload_enable=YES时，虚拟用户只能上传和下载文件，无其他权限。\r当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，\ranon_mkdir_write_enable=YES时，虚拟用户只能下载文件和创建文件夹，无其他权限。\r当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，\ranon_other_write_enable=YES时，虚拟用户只能下载、删除和重命名文件，无其他权限。\r 其他 anonymous_enable=YES 允许匿名登录local_enable=YES 允许本地用户登录 write_enable=YES 开放本地用户写权限 local_umask=022 设置本地用户生成文件的掩码为022 #anon_upload_enable=YES 此项设置允许匿名用户上传文件 #anon_mkdir_write_enable=YES 开启匿名用户的写和创建目录的权限 dirmessage_enable=YES 当切换到目录时，显示该目录下的.message隐藏文件的内容 xferlog_enable=YES 激活上传和下载日志 connect_from_port_20=YES 启用FTP数据端口的连接请求 #chown_uploads=YES 是否具有上传权限. 用户由chown_username参数指定。 #chown_username=whoever 指定拥有上传文件权限的用户。此参数与chown_uploads联用。 #xferlog_file=/var/log/vsftpd.log xferlog_std_format=YES 使用标准的ftpd xferlog日志格式 #idle_session_timeout=600 此设置将在用户会话空闲10分钟后被中断 #data_connection_timeout=120 将在数据连接空闲2分钟后被中断 #ascii_upload_enable=YES 启用上传的ASCII传输方式 #ascii_download_enable=YES 启用下载的ASCII传输方式 #ftpd_banner=Welcome to blah FTP service 设置用户连接服务器后显示消息 #deny_email_enable=NO 此参数默认值为NO。当值为YES时，拒绝使用banned_email_file参数指定文件中所列出的e-mail地址用户登录。 #banned_email_file=/etc/vsftpd.banned_emails 指定包含拒绝的e-mail地址的文件. #chroot_list_enable=YES 设置本地用户登录后不能切换到自家目录以外的别的目录 #chroot_list_file=/etc/vsftpd.chroot_list #ls_recurse_enable=YES pam_service_name=vsftpd 设置PAM认证服务的配置文件名称，该文件存放在/etc/pam.d/ userlist_enable=YES 此项配置/etc/vsftpd.user_list中指定的用户也不能访问服务器，若添加userlist_deny=No,则仅仅/etc /vsftpd.user_list文件中的用户可以访问，其他用户都不可以访问服务器。如过 userlist_enable=NO,userlist_deny=YES,则指定使文件/etc/vsftpd.user_list中指定的用户不可以访问服务器，其他本地用户可以访问服务器。 listen=YES 指明VSFTPD以独立运行方式启动 tcp_wrappers=YES 在VSFTPD中使用TCP_Wrappers远程访问控制机制，默认值为YES\r 参考\nhttp://www.cnblogs.com/welkinwalker/archive/2010/04/14/1711880.html http://yuanbin.blog.51cto.com/363003/129071\n","wordCount":"172","inLanguage":"en","datePublished":"2014-10-08T08:32:00Z","dateModified":"2014-10-08T08:32:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/vsftp_conf.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>使用vsftp需要用到的东西</h1><div class=post-meta>October 8, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-10-08_vsftp_conf.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><h2 id=安装>安装<a hidden class=anchor aria-hidden=true href=#安装>#</a></h2><pre><code>yum install -y vsftpd
+</code></pre><h2 id=安全配置>安全配置<a hidden class=anchor aria-hidden=true href=#安全配置>#</a></h2><pre><code>vi /etc/vsftpd/vsftpd.conf
+#add
+listen_port= XXXX
+anonymous_enable=NO
+local_enable=NO
+chroot_local_user=YES
+chroot_list_enable=NO
+</code></pre><h2 id=日志配置>日志配置<a hidden class=anchor aria-hidden=true href=#日志配置>#</a></h2><pre><code>xferlog_enable=YES
+xferlog_std_format=YES 
+xferlog_file=/var/log/xferlog   
+dual_log_enable=YES 
+vsftpd_log_file=/var/log/vsftpd.log  
+</code></pre><h2 id=添加虚拟用户>添加虚拟用户<a hidden class=anchor aria-hidden=true href=#添加虚拟用户>#</a></h2><pre><code>vi /etc/vsftpd/user_list.txt
+#add
+roooooooter
+random_passwd
+#生成认证文件
+db_load -T -t hash -f /etc/vsftpd/user_list.txt /etc/vsftpd/user.db
+#删除明文
+rm -f vi /etc/vsftpd/user_list.txt
+#编辑vsftpd的PAM认证文件
+#删除其他行，加入下面两行
+#pam_userdb.so 为认证库文件 db即上文user.db
+vi /etc/pam.d/vsftpd
+auth required pam_userdb.so db=/etc/vsftpd/user
+account required pam_userdb.so db=/etc/vsftpd/user
+#设定FTP用户映射(注意权限)
+useradd –d /home/xxx –s /sbin/nologin xxx
+chmod 700 /home/xxx
+#开启虚拟用户
+vi /etc/vsftpd/vsftpd.conf
+#开启虚拟用户
+guest_enable=YES
+#FTP虚拟用户对应的系统用户
+guest_username=xxx
+#PAM认证文件
+pam_service_name=user
+#虚拟用户配置文件
+user_config_dir=/etc/vsftpd/vsftpd_user_conf
+</code></pre><h2 id=配置虚拟用户>配置虚拟用户<a hidden class=anchor aria-hidden=true href=#配置虚拟用户>#</a></h2><pre><code>mkdir -p /etc/vsftpd/vsftpd_user_conf
+#xxx为虚拟用户名
+vi /etc/vsftpd/vsftpd_user_conf/xxx
+#设置权限
+local_root=/home/xxx
+write_enable=YES #开放markwang的写权限
+anon_world_readable_only=NO #开放markwang的下载权限
+anon_upload_enable=YES #开放markwang的上传权限
+anon_mkdir_write_enable=YES #开放markwang创建目录的权限
+anon_other_write_enable=YES #开放markwang删除和重命名的权限
+</code></pre><h2 id=部分配置说明>部分配置说明<a hidden class=anchor aria-hidden=true href=#部分配置说明>#</a></h2><h3 id=virtual_use_local_privs>virtual_use_local_privs<a hidden class=anchor aria-hidden=true href=#virtual_use_local_privs>#</a></h3><pre><code>当virtual_use_local_privs=YES时，虚拟用户和本地用户有相同的权限；
+当virtual_use_local_privs=NO时，虚拟用户和匿名用户有相同的权限，默认是NO。
+ 
+当virtual_use_local_privs=YES，write_enable=YES时，虚拟用户具有写权限（上传、下载、删除、重命名）。
+ 
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=YES，
+anon_upload_enable=YES时，虚拟用户不能浏览目录，只能上传文件，无其他权限。
+ 
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_upload_enable=NO时，虚拟用户只能下载文件，无其他权限。
+ 
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_upload_enable=YES时，虚拟用户只能上传和下载文件，无其他权限。
+ 
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_mkdir_write_enable=YES时，虚拟用户只能下载文件和创建文件夹，无其他权限。
+ 
+当virtual_use_local_privs=NO，write_enable=YES，anon_world_readable_only=NO，
+anon_other_write_enable=YES时，虚拟用户只能下载、删除和重命名文件，无其他权限。
+</code></pre><h3 id=其他>其他<a hidden class=anchor aria-hidden=true href=#其他>#</a></h3><pre><code>anonymous_enable=YES            允许匿名登录local_enable=YES                  允许本地用户登录 
+write_enable=YES                      开放本地用户写权限 
+local_umask=022                        设置本地用户生成文件的掩码为022 
+#anon_upload_enable=YES          此项设置允许匿名用户上传文件 
+#anon_mkdir_write_enable=YES  开启匿名用户的写和创建目录的权限 
+dirmessage_enable=YES            当切换到目录时，显示该目录下的.message隐藏文件的内容 
+xferlog_enable=YES                    激活上传和下载日志 
+connect_from_port_20=YES        启用FTP数据端口的连接请求 
+#chown_uploads=YES                是否具有上传权限.  用户由chown_username参数指定。 
+#chown_username=whoever        指定拥有上传文件权限的用户。此参数与chown_uploads联用。 
+#xferlog_file=/var/log/vsftpd.log 
+xferlog_std_format=YES              使用标准的ftpd xferlog日志格式 
+#idle_session_timeout=600          此设置将在用户会话空闲10分钟后被中断 
+#data_connection_timeout=120    将在数据连接空闲2分钟后被中断 
+#ascii_upload_enable=YES        启用上传的ASCII传输方式 
+#ascii_download_enable=YES    启用下载的ASCII传输方式 
+#ftpd_banner=Welcome to blah FTP service 设置用户连接服务器后显示消息 
+#deny_email_enable=NO  此参数默认值为NO。当值为YES时，拒绝使用banned_email_file参数指定文件中所列出的e-mail地址用户登录。 
+#banned_email_file=/etc/vsftpd.banned_emails 指定包含拒绝的e-mail地址的文件. 
+#chroot_list_enable=YES    设置本地用户登录后不能切换到自家目录以外的别的目录 
+#chroot_list_file=/etc/vsftpd.chroot_list 
+#ls_recurse_enable=YES 
+pam_service_name=vsftpd 设置PAM认证服务的配置文件名称，该文件存放在/etc/pam.d/ 
+userlist_enable=YES    此项配置/etc/vsftpd.user_list中指定的用户也不能访问服务器，若添加userlist_deny=No,则仅仅/etc /vsftpd.user_list文件中的用户可以访问，其他用户都不可以访问服务器。如过 userlist_enable=NO,userlist_deny=YES,则指定使文件/etc/vsftpd.user_list中指定的用户不可以访问服务器，其他本地用户可以访问服务器。 
+listen=YES              指明VSFTPD以独立运行方式启动 
+tcp_wrappers=YES        在VSFTPD中使用TCP_Wrappers远程访问控制机制，默认值为YES
+</code></pre><p>参考</p><p><a href=http://www.cnblogs.com/welkinwalker/archive/2010/04/14/1711880.html>http://www.cnblogs.com/welkinwalker/archive/2010/04/14/1711880.html</a>
+<a href=http://yuanbin.blog.51cto.com/363003/129071>http://yuanbin.blog.51cto.com/363003/129071</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/vsftp/>vsftp</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/using_git.html><span class=title>« Prev Page</span><br><span>git在公司内部的使用实践</span></a>
+<a class=next href=https://phpgao.github.io/Dirty_Paws.html><span class=title>Next Page »</span><br><span>Of-Monsters-And-Men---Dirty-Paws</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

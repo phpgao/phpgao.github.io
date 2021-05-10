@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>golang on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/golang/</link>
+    <description>Recent content in golang on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Nov 2019 05:13:26 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang的goproxy</title>
+      <link>https://phpgao.github.io/goproxy.html</link>
+      <pubDate>Tue, 26 Nov 2019 05:13:26 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/goproxy.html</guid>
+      <description>既然go module已经官方支持，那么以后新建项目就直接go mod init了，但是老高在最近的开发中遇到了一个超级难题，包下不下来。。。
+经过一番摸索和尝试，发现最好用的还是GOPROXY，于是给大家推荐几个GOPROXY地址，方便后期使用
+export GOPROXY=https://goproxy.cn,direct, export GOPROXY=https://goproxy.io,direct, export GOPROXY=https://mirrors.aliyun.com/goproxy,direct, </description>
+    </item>
+    
+    <item>
+      <title>go文章和项目收集</title>
+      <link>https://phpgao.github.io/golang_project.html</link>
+      <pubDate>Fri, 15 Feb 2019 03:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/golang_project.html</guid>
+      <description>工作学习中遇到了很多有趣的go项目和文章，收集一下
+文章或视频 https://golang.org/doc/codewalk/sharemem/ https://blog.labix.org/2011/10/09/death-of-goroutines-under-control https://blog.golang.org/share-memory-by-communicating https://golang.org/doc/codewalk/sharemem/ https://www.youtube.com/watch?v=lLDWF59aZAo http://satran.in/2017/11/15/Implementing_tails_follow_in_go.html https://www.flysnow.org/ https://github.com/polaris1119/The-Golang-Standard-Library-by-Example https://projecteuler.net/ 学习资料 https://github.com/mikespook/Learning-Go-zh-cn https://astaxie.gitbooks.io/build-web-application-with-golang/content/zh/ https://gobyexample.com/ https://github.com/Unknwon/go-fundamental-programming https://github.com/Unknwon/go-rock-libraries-showcases https://golang.org/doc/effective_go.html https://blog.golang.org/laws-of-reflection https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw 项目 https://github.com/go-cmd/cmd https://github.com/fsnotify/fsnotify https://github.com/nathany/looper https://github.com/hpcloud/tail https://gopkg.in/tomb.v2 https://github.com/fatih/color https://github.com/mattn/go-colorable https://github.com/gongo/9t https://github.com/shanghai-edu/multissh https://github.com/gogs/gogs https://github.com/pkg/errors </description>
+    </item>
+    
+    <item>
+      <title>golang预定义的系统名称</title>
+      <link>https://phpgao.github.io/go_system_cons.html</link>
+      <pubDate>Fri, 18 Jan 2019 06:45:22 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/go_system_cons.html</guid>
+      <description>Golang syslist
+Golang预定义的OS列表 aix android darwin dragonfly freebsd hurd js linux nacl netbsd openbsd plan9 solaris windows zos Golang预定义的Arch(架构)列表 386 amd64 amd64p32 arm armbe arm64 arm64be ppc64 ppc64le mips mipsle mips64 mips64le mips64p32 mips64p32le ppc riscv riscv64 s390 s390x sparc sparc64 wasm 你认识几个？</description>
+    </item>
+    
+    <item>
+      <title>Golang简介</title>
+      <link>https://phpgao.github.io/golang.html</link>
+      <pubDate>Fri, 23 Jun 2017 05:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/golang.html</guid>
+      <description>&lt;h1 id=&#34;golang简介&#34;&gt;Golang简介&lt;/h1&gt;</description>
+    </item>
+    
+    <item>
+      <title>golang使用multiconfig后导致glog无法接受命令行参数</title>
+      <link>https://phpgao.github.io/multiconfig_vs_glog.html</link>
+      <pubDate>Fri, 18 Mar 2016 06:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/multiconfig_vs_glog.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/03/506524902.png&#34; alt=&#34;flag&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高在最近的一个项目(GOLANG)中加入了&lt;a href=&#34;https://github.com/koding/multiconfig&#34;&gt;koding/multiconfig&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这个包可以用默认值(struct tag)&amp;lt;文件&amp;lt;环境变量&amp;lt;命令行参数的顺序设置参数，很好很强大，极大地方便了测试和开发。&lt;/p&gt;
+&lt;p&gt;但是同时他也带来了一个问题，和glog一起工作的时候会报错：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flag provided but not defined: -alsologtostderr&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>go下载</title>
+      <link>https://phpgao.github.io/goalng_download_file.html</link>
+      <pubDate>Sat, 16 Jan 2016 14:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/goalng_download_file.html</guid>
+      <description>&lt;p&gt;今天处理GO下载的时候遇到一个问题：如果调用readall去读取response，会造成很大的内存消耗，并且无法获取下载的进度。&lt;/p&gt;
+&lt;p&gt;直到搜到&lt;a href=&#34;https://www.reddit.com/r/golang/comments/2bmnoq/ioutilreadallhttpresponsebody_memory_consumption/&#34;&gt;ioutil.ReadAll(httpResponse.Body) memory consumption&lt;/a&gt;，才解决了我的问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>GO语言开发环境搭建笔记</title>
+      <link>https://phpgao.github.io/let_us_go.html</link>
+      <pubDate>Wed, 25 Nov 2015 03:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/let_us_go.html</guid>
+      <description>&lt;p&gt;开始学一门新的语言，开发环境需要好好配置！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/3416344597.jpg&#34; alt=&#34;GOLANG&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,118 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/posts/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Posts"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/posts/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"}]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a></div><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>PHP获取新浪微博token</h2></header><section class=entry-content><p>最近在做采集微博的功能，由于要自动采集，所以必须获得最终的用户的token，获取了这个token以后就可以为所欲为啦！
+贴代码
+$s = new SaeTOAuthV2 ( WB_AKEY, WB_SKEY);
+//准备post数据
+$post ['action'] = 'login';
+//$post ['display'] = 'default';
+//$post ['withOfficalFlag'] = 0;
+//$post ['quick_auth'] = null;
+//$post ['withOfficalAccount'] = '';
+//$post ['scope'] = '';
+//$post ['ticket'] = '';
+//$post ['isLoginSina'] = '';
+//$post ['isLoginSina'] = 'code';
+//regCallback|appkey62需要预先请求一次拿到
+//$post ['regCallback'] = $match_regCallback[1];
+//这里不用urlencode,http_build_query会自动处理
+$post ['redirect_uri'] = WB_CALLBACK_URL;
+$post ['client_id'] = WB_AKEY;
+//$post ['appkey62'] = $match_appkey[1];
+//$post ['state'] = '';
+//$post ['verifyToken'] = null;
+//$post ['from'] = '';
+$post ['userId'] = '*******';//测试用户名
+$post ['passwd'] = '*******';//测试密码,不要有！@￥%……&*（）这些符号，最好全是字符或数字，否则验证会失败
+$post = http_build_query($post);
+//UA貌似没有也行，保险起见还是加上吧
+$UA = 'Mozilla/5....</p></section><footer class=entry-footer>May 15, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP获取新浪微博token" href=https://phpgao.github.io/weibo_token.html></a></article><article class=post-entry><header class=entry-header><h2>centos6-优化脚本与安全脚本</h2></header><section class=entry-content><p>新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != "x86_64" ];then echo "this script is only for 64bit Operating System !" exit 1 fi echo "the platform is ok" version=`lsb_release -r |awk '{print substr($2,1,1)}'` if [ $version != 6 ];then echo "this script is only for CentOS 6 !...</p></section><footer class=entry-footer>May 13, 2014&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to centos6-优化脚本与安全脚本" href=https://phpgao.github.io/centos_optimize.html></a></article><article class=post-entry><header class=entry-header><h2>记一次主题更新</h2></header><section class=entry-content><p>国外的主题对中文支持不好很不和谐，需要修改的地方很多，用起来也很麻烦，但是古语有云：
+Bitch is bitchy!Taylor is Swift!
+下面就记录一下更新主题前后的工作。动手能力强的可以参考这里自己写一个子主题，也可以完美解决！
+预先备份原来主题文件夹，起个名字叫old_theme。留个后悔药 备份路径wp-content/themes/sparkling，sparkling就是老高的主题 升级主题，原主题被覆盖 老高修改过的文件包括(old_theme文件夹里按时间排序就能找到) header.php -–|-–|seo优化 functions.php -–|–常用函数 single.php -–|-–| 解决手机底部链接打不开的样式问题 content.php -–|-–|-主页显示文章字数限制，参考这篇文章 footer.php ——–统计代码已解决 在新的主题文件夹中找到对应文件并修改 子主题以后讲</p></section><footer class=entry-footer>May 13, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 记一次主题更新" href=https://phpgao.github.io/theme_update.html></a></article><article class=post-entry><header class=entry-header><h2>新浪微博商业API使用参考</h2></header><section class=entry-content><p>工作中需要微博的商业API，记录一下 不了解的TX先去看说说明 http://open.weibo.com/wiki/商业数据API
+商业数据API：包括数据分析、舆情监测、获取全量粉丝三大特性，同时还有实时数据推送、历史数据检索、监测粉丝变化趋势、活跃&活动粉丝分析等多项功能，协助和指引企业开展社会化营销，让真实的用户数据变为企业的决策。 申请试用 申请试用的邮箱为 businessapi@staff.sina.com.cn 给这个地址发邮件说明意图即可 这一步挺麻烦的，需要提供很多企业信息，需要注意的是：商业API只提供商业用途，所以如果你的APP的服务对象不是企业，请绕道。 然后填写两张申请单，分别为 订阅服务申请单、REST接口申请单-测试版。 一个是订阅微博，粉丝登上数据用的，另一个是标准API，可以使用搜索等高级接口！
+价格 确定试用时间 试用时间一般两周，请充分利用好这宝贵的时间吧！
+测试 REST接口很简单，和普通接口一样直接调用。就是订阅接口比较麻烦，当你生成订阅列表后，他会把满足你需要的数据放进一个类似队列的东西，然后你需要不断从这个队列中取出你需要的信息，而且这个获取过程需要HTTP长链接。。。。。。说起来很复杂，其实做起来更复杂 :mad: ！ 下面就来讲讲订阅接口，先看看这两个文档：
+订阅接口的服务手册 http://open.weibo.com/wiki/Subscription_guide 订阅管理接口 http://open.weibo.com/wiki/C/2/subscribe/update_subscribe 看完这两个接口就基本知道了订阅到底是干啥用的。
+订阅开启 首先，开启了订阅接口服务以后，你会有推送时间，还有推送IP等很多需要设置的东西，当然完成了这些基本设置后，就可以开始配置订阅规则了，订阅规则基于以下两个条件：
+订阅用户
+订阅关键字 从subscribe/update_subscribe这个接口的示例来看，订阅有以下特点：
+订阅规则即刻生效 规则可以添加，修改 规则可以随时查询 每次修改量很有限（用户：50个；关键词：20个） 使用订阅 添加与删除一样 需要说明的是：
+$params['subid'] = '***'; //你的订阅ID 新浪提供
+$params['source'] = '***'; //你的APPid
+session_start();
+include_once( 'config.php' );
+include_once( 'saetv2.ex.class.php' );
+$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION['token']['access_token'] );
+$uid_get = $c->get_uid();
+$uid = $uid_get['uid'];
+//获取所有关注，默认一次50个，可以自己写循环
+$friends = $c->friends_by_id($uid);
+$subscribe = '';
+foreach( $friends['users'] as $value )
+{
+$subscribe ....</p></section><footer class=entry-footer>May 12, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 新浪微博商业API使用参考" href=https://phpgao.github.io/sina_weibo_business_api.html></a></article><article class=post-entry><header class=entry-header><h2>不常见的字符</h2></header><section class=entry-content><p>Ø ⊙ ╰_╯ ● § ㄥ ★ ☆ ▽ ° ◎ 〤ι〤 ≡ ˋ_ˊ ← → ↖ ↗ ↘ ↙ ↑ ↓ ﹏ ε ☭ ξ ็ ä └(^o^)┘ ﹌○﹋ ~^o^~
+ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็ ส้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้้ ส็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็็> ฌูููููู</p></section><footer class=entry-footer>May 12, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 不常见的字符" href=https://phpgao.github.io/funny_char.html></a></article><article class=post-entry><header class=entry-header><h2>搜索引擎优化入门</h2></header><section class=entry-content><p>本文适合新手老手，有不对的地方欢迎指正！ 如果有什么问题或者建议，请务必留言， :-)
+老高很高兴与大家交流！ 同时欢迎关注我的微博
+写在前面：搜索引擎是个很神奇的东西，脾气捉摸不定，动不动就学个新算法让你不得安居乐业。许多新手都会觉得想让搜索引擎收录真难啊！ 那么对于刚刚建成的新站和收录有问题的旧站，如何才能让搜索引擎顺利的收录你的网站呢？ 花点时间看完本文，我相信你对SEO的理解一定会更加透彻。 预先约定几个说法(不分大小写)
+wordpress ->wp Search Engine Optimization->SEO Uniform Resource Locator ->URL 下面老高就针对wordpress的SEO优化讲讲具体的步骤： 浅谈URL的优化 说到SEO，最先想到的应该是URL了，什么！你不知道URL是啥？ 8-O 简单地说，URL就是
+统一资源定位符（Uniform Resource Locator，缩写为URL）是对可以从互联网上得到的资源的位置和访问方法的一种简洁的表示，是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它。https://blog.phpgao.com/ 就是一个URL，访客和搜索引擎就是靠他找到你的资源。URL的优化其实很简单，做到以下几点就OK!
+伪静态 美化你的URL显示格式，即做好伪静态，打个例子，本文的URL默认为www.phpgao.com/?p=***|的形式，\*|为文章的数字ID，但是实际上他显示为www.phpgao.com/seo.html，如果这两个URL都指向同一篇文章，哪一个更能勾起你的欲望呢？同样的，搜索引擎也会试着理解你的URL ，然后抓取你的内容，分以适当的权重 -–|- 那么如何设置成这样的形式呢？首先需要了解伪静态、404错误、linux、win主机等概念，后面章节有讲。
+网站地图 URL格式确定以后下面就要把你的URL告诉搜索引擎了，所以你需要一个**网站地图**，他可以告诉搜索引擎网站是什么结构，哪些页面比较重要，哪些可以忽略，有利于搜索引擎抓取。
+robots.txt robots的作用是控制爬虫的抓取范围，举个比方，你可以禁止爬虫收录你的wp-admin文件夹下所有文件，这样可以保证安全性。你需要明确的是，爬虫来到你的网站，就像吃货进了一个自助餐馆一样，只要能吃的他都不放过，如果你放任不管，那么可能他会把你和你太太盘子里的饭菜都会吃掉。所以你必须告诉他：“爬虫兄啊，你不能吃这个，这个是桌子！”。简单的介绍一下用法：
+请将robots.txt放到网站的根目录下，你可以参考一下www.taobao.com/robots.txt(百度中枪) 编码无所谓，一般不会出现中文 第一行写User-agent: * 意思只针对所有搜索引擎的爬虫 紧接着Disallow: /wp-* 意思是不允许看wp-开头的所有文件 你可以写很多个Disallow规则，记得首字母要大写 你还可以在文件中指明sitemap路径 Sitemap: https://blog.phpgao.com/sitemap robots.txt不要过于复杂 robots文件真的很重要，老高之前写过一个爬网页的程序放到了某个二级目录下，并在首页加了链接，但是忘记了屏蔽搜索引擎，导致谷歌收录了本站的9000多个垃圾内容页 :-( ，悲剧啊！话说百度还是很谨慎的，就是不收录！ 提交入口–来我家玩吧! 提供几个提交网站的入口，此步是通知搜索引擎来收录你的网站
+百度网站登录入口 Google网站登录入口 360网站登录入口 Bing网站登录入口 搜狗网站收录提交入口这步最简单了！不要偷懒哦！ 8-) 站长工具–查询收录的利器 站长工具就站长管理网站收录，转化率等信息的瑞士军刀...</p></section><footer class=entry-footer>May 11, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 搜索引擎优化入门" href=https://phpgao.github.io/seo.html></a></article><article class=post-entry><header class=entry-header><h2>为wordpress精简head标签</h2></header><section class=entry-content><p>一般wordpress主题都会在head标签之间使用wp_head()函数，因为这是个很重要的头部函数，很多功能插件都会用到它。 不过，如果你的wordpress主题用到了该函数，则会在head头部显示许多冗余的代码。
+如果希望移除wordpress头部的多余代码，可以使用以下方法解决： 在主题文件夹下的functions.php文件中加入以下代码：
+remove_action( 'wp_head', 'wp_generator' );//WordPress版本信息。
+remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );//最后文章的url
+remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );//最前文章的url
+remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );//上下文章的url
+remove_action( 'wp_head', 'feed_links_extra', 3 );//去除评论feed
+remove_action( 'wp_head', 'feed_links', 2 );//去除文章的feed
+remove_action( 'wp_head', 'rsd_link' );//针对Blog的离线编辑器开放接口所使用
+remove_action( 'wp_head', 'wlwmanifest_link' );//如上
+remove_action( 'wp_head', 'index_rel_link' );//当前页面的url
+remove_action( 'wp_head', 'wp_shortlink_wp_head', 10, 0 );//短地址
+来源: http://www.daxiawp.com/remove-wordpress-head-code.html</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 为wordpress精简head标签" href=https://phpgao.github.io/cut_head.html></a></article><article class=post-entry><header class=entry-header><h2>WordPress首页文章不显示全文的方法</h2></header><section class=entry-content><p>博客用的国外的主题，对中文处理不是太好。尤其是首页会把文章的全部内容都输出，使首页变得很长，对于我这种爱贴代码的程序猿来说，这个病，必须治！
+解决办法有三种：
+more标签 自己写方法截取文字 the_excerpt() more标签 以下引用sumile_ting 的话：
+这种方法是在每次写文章时在文章中插入一个More标签。
+添加More标签的方法：
+写文章时，在需要作为摘要的地方点击编辑器中的More标签，或在HTML编辑状态加加入&lt;!–more–>，或者直接按Alt+Shift+T,3种方法任选其一。
+这种方法使用起来太麻烦，要求每一篇文章都得手动加，一不小心可能就忘记了。还不如修改主题模板来的方便快捷。
+自造方法 自己写方法必须对function.php和content.php做改写，先找到
+&lt;?php the_content(); ?>
+the_content()方法返回了文章的内容，处理一下就可以限制字数了，具体方法请自查。
+但是对于我还是不合适，因为此时文章还没有被插件渲染，文章内的代码会被直接以纯文本的形式展示，很不和谐。 所以这个方案，pass
+the_excerpt() 此方法是wordpress显示文章摘要的API，效果与the_content() 一样，只是这个函数对中文支持不好，需要处理一下
+以下是步骤：
+方法2的the_content()修改为the_excerpt() 在function下加入以下代码
+function custom_excerpt_length( $length ) {
+return 200;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+给readmore加个链接，同样在functions.php中添加：
+function new_excerpt_more( $more ) {
+return '&lt;a href="' . get_permalink() . '">阅读全文&lt;/a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+完美解决
+参考：
+http://sumile.blog.hexun.com/63924812_d.html
+http://www.gemshe.com/fashion/suneyeglass/wordpress%E7%9A%84%E6%96%87%E7%AB%A0%E5%BD%A2%E5%BC%8Fget_post_format/
+http://www.seanstudio.com/archives/2558
+http://www.daxiawp.com/change-to-excerpt.html</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to WordPress首页文章不显示全文的方法" href=https://phpgao.github.io/wordpress_excerpt.html></a></article><article class=post-entry><header class=entry-header><h2>Windows下Apache的配置文件httpd.conf</h2></header><section class=entry-content><p>apache的配置文件一直看得我云里雾里的，今天好好把配置文件研究了一下，还是有点收获的。 看httpd.conf的内容，它主要分成3大部分：
+Section 1:Global Environment Section 2:‘Main’ server configuration Section 3:Virtual Hosts
+以后修改配置的时候一定要注意，不要写错了地方
+...</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Windows下Apache的配置文件httpd.conf" href=https://phpgao.github.io/win-httpd.html></a></article><article class=post-entry><header class=entry-header><h2>网站搭建手记</h2></header><section class=entry-content><p>简单的记录一下搭建自己的博客需要做的事情！
+确定主题 一个网站的主题很重要，要不然你会无从下手，所以千万不要像我这样开一个这么无聊的blog。为什么说此步骤最难，就是因为点子是最重要的，只要主题（目标）明确，那么建立（实现）它就是易如反掌了。
+选域名 域名是什么？其实就是一个网站的艺名而已。人家的网站叫“234.156.78.90”，你的叫“ccav.com”，那么你说那个更容易出名呢？所以，好的域名可能让你的网站迅速火起来。举个小栗子,以前的京东商城的域名是360buy.com，不懂英语的人当然不好记了，现在改名jd.com，既好记又提升了企业形象，何乐而不为呢？（估计这个域名京东花了不少钱）。不建议大家购买com以外的域名，尤其是cn结尾的，至于为什么大家可以自己研究。域名选好了后，就购买空间了。
+虚拟主机（网站空间） 光是有了像phpgao.com这样的域名是不够的，因为你需要把你的文章放到互联网上供大家访问，所以你需要一个专用服务器，当然自己搭建服务器也是可以的，但是如果是个规模不大的网站老高建议还是租用吧，我的空间就是淘宝上买的，28半年，香港主机，速度还行。（为什么是香港空间？免备案呗！）
+域名与空间的绑定 GOOD！既然你已经有了域名和空间，是时候将它们相互关联了。这一步比较关键！为了让大家更好的理解这一节。老高来举个大栗子，某一天老高要孤身一人拜访位从未谋面的远房亲戚，远程通话后确定目的地，坐飞机2小时（想的好美啊），下飞机后找那个举着牌子的人，我才能顺利见到那位亲戚。也就是说，我从出发到坐飞机，到达后根据牌子辨认身份这一系列的动作如果有一个失误，我的此次出行就是失败的，之后我只能沮丧的回家了。。。反应到现实就是：和我通话的那个人就是域名，他告诉我他在哪个IP等我，等我通过IP到站后，找那个举着牌子的人，这样就完成了一次“见面”。简单的说空间有个IP，你的域名必须解析到那个IP才行，当然不要忘了空间需要和你的域名绑定。
+最后的工作 如果域名没有备案的话，那么你的空间应该和我一样不在内地吧。不过不要紧，能访问就行。想要搭建WP这类博客，你的空间还需要一个不是太小的MYSQL空间，也就是传说中的数据库。我的空间是200M+200M型，也就是说我的空间能放小于200M的MP3文件并且在数据库能够存放200M的数据。其实这么点空间建一个站已经很富裕了。（注：国外的空间不是很稳定，一定要定期备份！）</p></section><footer class=entry-footer>May 10, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 网站搭建手记" href=https://phpgao.github.io/build_notes.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/posts/page/47/>« Prev Page</a>
+<a class=next href=https://phpgao.github.io/posts/page/49/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

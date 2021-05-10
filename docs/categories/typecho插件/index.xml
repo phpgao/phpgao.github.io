@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>typecho插件 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/categories/typecho%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in typecho插件 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 24 May 2015 13:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/categories/typecho%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>缓存插件TpCache-for-Typecho</title>
+      <link>https://phpgao.github.io/tpcache_for_typecho.html</link>
+      <pubDate>Sun, 24 May 2015 13:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/tpcache_for_typecho.html</guid>
+      <description>&lt;h2 id=&#34;功能&#34;&gt;功能&lt;/h2&gt;
+&lt;p&gt;减缓网站并发压力而开发的缓存插件。&lt;/p&gt;
+&lt;h2 id=&#34;注意&#34;&gt;注意&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;支持&lt;strong&gt;Memcache&lt;/strong&gt;，&lt;strong&gt;Redis&lt;/strong&gt;，&lt;strong&gt;Mysql&lt;/strong&gt;三种驱动。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;非js方式的&lt;/strong&gt;访问统计插件会失效&lt;/li&gt;
+&lt;li&gt;BUG请在&lt;a href=&#34;https://blog.phpgao.com/tpcache_for_typecho.html&#34;&gt;缓存插件TpCache for Typecho&lt;/a&gt;页汇报&lt;/li&gt;
+&lt;/ol&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程6---调用接口</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-6.html</link>
+      <pubDate>Wed, 20 May 2015 12:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-6.html</guid>
+      <description>&lt;p&gt;此篇我们开始调用接口，我们在插件类中新定义一个方法，起名为&lt;code&gt;send_post&lt;/code&gt;，在方法中我们通过系统配置获取接口调用地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程5---核心代码</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-5.html</link>
+      <pubDate>Wed, 20 May 2015 10:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-5.html</guid>
+      <description>&lt;p&gt;之前啰嗦了很多，现在开始写核心代码。&lt;/p&gt;
+&lt;p&gt;分析一下，发布文章的时候，我们需要的信息就是当前文章的URL，我们需要想办法从&lt;code&gt;$contents&lt;/code&gt;、 &lt;code&gt;$class&lt;/code&gt;中拿到他。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程4---插件点</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-4.html</link>
+      <pubDate>Wed, 20 May 2015 05:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-4.html</guid>
+      <description>&lt;p&gt;终于，在能够保存配置信息后，我们可以开始编写插件的挂载功能了。&lt;/p&gt;
+&lt;p&gt;首先我们需要知道系统为我们在各个关键的环节都预留了插件点给我们，系统运行到插件点时，会检测到是否有插件挂在这个点上，然后执行插件的逻辑！&lt;/p&gt;
+&lt;p&gt;插件的工作就是找到合适的插件点，挂上去，然后执行自己的逻辑。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程3---保存配置</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-3.html</link>
+      <pubDate>Wed, 20 May 2015 02:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-3.html</guid>
+      <description>&lt;p&gt;上一节我们制作了一个裸插件，下面我们开始让我们的插件开始工作！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程2---新插件</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-2.html</link>
+      <pubDate>Wed, 20 May 2015 01:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-2.html</guid>
+      <description>&lt;p&gt;第一节我们了解了一个插件的基本构成，下面我们需要一个实例练习巩固。&lt;/p&gt;
+&lt;p&gt;真赶巧，老高最近正在改版&lt;a href=&#34;https://blog.phpgao.com/typecho_plugin_baidusubmit.html&#34;&gt;百度sitemap提交插件for typecho&lt;/a&gt;，下面和老高一起改版吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho插件编写教程1---从HelloWorld说起</title>
+      <link>https://phpgao.github.io/typecho_plugin_tutorial-1.html</link>
+      <pubDate>Tue, 19 May 2015 13:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_tutorial-1.html</guid>
+      <description>&lt;p&gt;最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！&lt;/p&gt;
+&lt;p&gt;如果你对typecho的源码有兴趣，可以参考老高的系列文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_init.html&#34;&gt;typecho源代码解析1 - 系统初始化&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_plugin.html&#34;&gt;typecho源代码解析2 - 插件机制&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_dispatch.html&#34;&gt;typecho源代码解析3 - 路由分发&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/typecho_source_code_business_logic.html&#34;&gt;typecho源代码解析4 - 业务逻辑&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>文章目录-Table-Of-Contents-for-Typecho</title>
+      <link>https://phpgao.github.io/table_of_contents_for_typecho.html</link>
+      <pubDate>Wed, 13 May 2015 14:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/table_of_contents_for_typecho.html</guid>
+      <description>&lt;p&gt;Table Of Contents大家都懂得，效果可以看老高的博客。&lt;/p&gt;
+&lt;p&gt;欢迎使用！欢迎FORK！欢迎star！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/3482950149.png&#34; alt=&#34;Table Of Contents&#34;  title=&#34;Table Of Contents 截图&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>百度sitemap提交插件-for-Typecho</title>
+      <link>https://phpgao.github.io/typecho_plugin_baidusubmit.html</link>
+      <pubDate>Sun, 25 Jan 2015 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_plugin_baidusubmit.html</guid>
+      <description>&lt;p&gt;几经开发，这款工具终于可以进入测试阶段。&lt;/p&gt;
+&lt;p&gt;其主要内容是向百度提交sitemap，参考了站长工具里wp的插件制作。&lt;/p&gt;
+&lt;p&gt;老高目测对SEO还是有一些用处的。&lt;/p&gt;
+&lt;p&gt;目前没有做分页sitemap，如果大家有这个需求，老高会考虑加上。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

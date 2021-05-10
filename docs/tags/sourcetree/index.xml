@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>sourcetree on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/sourcetree/</link>
+    <description>Recent content in sourcetree on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 May 2015 16:41:06 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/sourcetree/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为SourceTree添加Kaleidoscope的external-diff支持</title>
+      <link>https://phpgao.github.io/sourcetree_kaleidoscope.html</link>
+      <pubDate>Tue, 12 May 2015 16:41:06 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sourcetree_kaleidoscope.html</guid>
+      <description>编辑 ~/.gitconfig
+# add [difftool &amp;#34;sourcetree&amp;#34;] cmd = /usr/local/bin/ksdiff -- \&amp;#34;$LOCAL\&amp;#34; \&amp;#34;$REMOTE\&amp;#34; path = [mergetool &amp;#34;sourcetree&amp;#34;] cmd = /usr/local/bin/ksdiff --merge --output \&amp;#34;$MERGED\&amp;#34; --base \&amp;#34;$BASE\&amp;#34; -- \&amp;#34;$LOCAL\&amp;#34; \&amp;#34;$REMOTE\&amp;#34; trustExitCode = true 参考
+https://ruby-china.org/topics/14404</description>
+    </item>
+    
+  </channel>
+</rss>

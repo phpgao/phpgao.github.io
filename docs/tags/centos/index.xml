@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>centos on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/centos/</link>
+    <description>Recent content in centos on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Nov 2019 06:34:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/centos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centos8-初体验</title>
+      <link>https://phpgao.github.io/centos8_experience.html</link>
+      <pubDate>Tue, 26 Nov 2019 06:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos8_experience.html</guid>
+      <description>&lt;p&gt;centos8已经发布有一段时间了，老高近期下载并安装了&lt;code&gt;CentOS-8-x86_64-1905-boot.iso&lt;/code&gt;版本，给大家当个小白鼠！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2019/11/3214508915.png&#34; alt=&#34;begin.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos8终于要来了！</title>
+      <link>https://phpgao.github.io/centos8_is_coming.html</link>
+      <pubDate>Sat, 10 Aug 2019 12:09:27 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos8_is_coming.html</guid>
+      <description>&lt;p&gt;一路从7.0用到7.6，内核从2.7升级到5.X，centos8终于来了！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker-最新安装命令</title>
+      <link>https://phpgao.github.io/install_docker_in_centos.html</link>
+      <pubDate>Fri, 26 Apr 2019 14:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_docker_in_centos.html</guid>
+      <description>&lt;p&gt;docker就不多说了，按照贴出的代码一步一步就可以安装成功&lt;/p&gt;
+&lt;p&gt;安装之前最好手动关闭selinux&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;setenforce 0
+getenforce
+# Permissive
+sed -i &amp;#39;s/SELINUX=enforcing/SELINUX=disabled/&amp;#39; /etc/selinux/config
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何使用openldap搭建LDAP服务篇1--初见LDAP</title>
+      <link>https://phpgao.github.io/how_to_config_ldap_server.html</link>
+      <pubDate>Sat, 22 Dec 2018 09:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_config_ldap_server.html</guid>
+      <description>&lt;p&gt;LDAP是轻量目录访问协议，这个服务从老高进入360就一直在用，LDAP带来的好处真的是很多，你可以把它想象成为一个内网版的单点登录服务，可以让你使用同一组账户密码访问所有支持LDAP验证的系统，为企业的内部运维带来了极大的便利。&lt;/p&gt;
+&lt;p&gt;不过想要自己独立搭建一个LDAP服务还是挺麻烦的！不过一旦搭建好了LDAP服务器，剩下的管理和运维就简单多了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7-系统一键安装-Shadowsocks-和-KCPTUN-加速</title>
+      <link>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun.html</link>
+      <pubDate>Thu, 03 Aug 2017 04:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun.html</guid>
+      <description>&lt;p&gt;新安装的centos7系统可以使用下面的安装脚本一键安装$$，如果嫌复制粘贴麻烦，可以到&lt;a href=&#34;https://github.com/phpgao/my_scripts/tree/master/code&#34;&gt;脚本地址&lt;/a&gt;下载&lt;/p&gt;
+&lt;h2 id=&#34;安装命令&#34;&gt;安装命令&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sh -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/phpgao/my_scripts/master/code/ss_for_centos.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 或者&lt;/span&gt;
+
+sudo sh -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/phpgao/my_scripts/master/code/ss_for_centos.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完毕后查看ss配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cat /etc/ss-config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看kcptun配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;/etc/kcp-config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想要修改，使用vi命令即可。修改完记得重启服务才能生效！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# 重启ss服务
+systemctl restart shadowsocks-server
+
+# 重启kcptun服务
+systemctl restart kcp-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7-虚拟机配置</title>
+      <link>https://phpgao.github.io/centos7-vm-cluster.html</link>
+      <pubDate>Sat, 18 Feb 2017 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos7-vm-cluster.html</guid>
+      <description>&lt;p&gt;一些注意的地方，留坑待填&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将你的PHP程序升级到PHP7.0</title>
+      <link>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</link>
+      <pubDate>Sun, 06 Dec 2015 13:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/515318547.png&#34; alt=&#34;PHP&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(以上图片来自互联网)&lt;/p&gt;
+&lt;p&gt;这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>每天自动升级你的Centos</title>
+      <link>https://phpgao.github.io/yum_cron.html</link>
+      <pubDate>Mon, 12 Oct 2015 08:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum_cron.html</guid>
+      <description>搜到了这一篇文章Automatic nightly YUM updates with yum-cron
+给大家安利一下。
+# 安装 yum install yum-cron -y # 配置 vim /etc/sysconfig/yum-cron # 开启服务 chkconfig yum-cron on # or chkconfig --level 345 yum-cron on # 运行服务 service yum-cron start # 检查日志 grep yum.cron /var/log/cron | tail -10 </description>
+    </item>
+    
+    <item>
+      <title>快速升级python到2.7</title>
+      <link>https://phpgao.github.io/update_python_to_27.html</link>
+      <pubDate>Tue, 30 Jun 2015 05:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_python_to_27.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1602052211.png&#34; alt=&#34;python&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(python logo来自互联网)&lt;/p&gt;
+&lt;p&gt;摘自 &lt;a href=&#34;https://github.com/h2oai/h2o-2/wiki/Installing-python-2.7-on-centos-6.3.-Follow-this-sequence-exactly-for-centos-machine-only#how-to-install-python-276-on-centos-63-62-and-64-okay-too-probably-others&#34;&gt;Installing python 2.7 on centos 6.3. Follow this sequence exactly for centos machine only&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos下安装使用composer</title>
+      <link>https://phpgao.github.io/composer-centos.html</link>
+      <pubDate>Tue, 09 Jun 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/composer-centos.html</guid>
+      <description>&lt;p&gt;composer的中文意思为作曲家，是php最新的包管理器。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3590997597.png&#34; alt=&#34;php composer&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos安装EPEL</title>
+      <link>https://phpgao.github.io/centos_install_epel.html</link>
+      <pubDate>Wed, 27 May 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_install_epel.html</guid>
+      <description>EPEL全称Extra Packages for Enterprise Linux，官方翻译为 企业版 Linux 附加软件包。顾名思义，他可以扩充你的软件库，安装很多软件时能省去很多时间。比如最近很火的PHP的DoS漏洞，Bug 61461，在EPEL下面只需要一条命令就能将PHP升级为5.9，避免重新编。
+老高推荐新安装的centos系统都先安装此附加软件包！
+安装命令：
+yum install epel-release 没有报错的话，那么EPEL就安装完毕了。
+如果上述命令还是解决不了问题，那就必须有针对性的安装了。
+以下命令复制自Install EPEL and additional repositories on CentOS and Red Hat
+#CentOS and Red Hat Enterprise Linux 5.x wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm rpm -Uvh epel-release-5*.rpm #CentOS and Red Hat Enterprise Linux 6.x wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm rpm -Uvh epel-release-6*.rpm #CentOS and Red Hat Enterprise Linux 7.x wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm rpm -Uvh epel-release-7*.rpm 你还可以在此查看每个系统对应的最新的EPEL版本</description>
+    </item>
+    
+    <item>
+      <title>centos6新系统初始化脚本</title>
+      <link>https://phpgao.github.io/new_cents_shell.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_cents_shell.html</guid>
+      <description>&lt;p&gt;最近装机次数有点多，本来想写到这里的&lt;a href=&#34;https://blog.phpgao.com/centos_optimize.html&#34;&gt;centos6 优化脚本与安全脚本&lt;/a&gt;，结果一想还是新开一个帖子吧。&lt;/p&gt;
+&lt;p&gt;centos源设置可以参考&lt;a href=&#34;https://blog.phpgao.com/repo_for_centos.html&#34;&gt;Centos源设置&lt;/a&gt;，老高推荐安装阿里源。&lt;/p&gt;
+&lt;p&gt;新机子先运行上面的脚本，再运行这个脚本&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos-awstats简单安装教程</title>
+      <link>https://phpgao.github.io/centos_awstats.html</link>
+      <pubDate>Fri, 30 Jan 2015 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_awstats.html</guid>
+      <description>&lt;p&gt;本文关键字:awstats linux centos nginx&lt;/p&gt;
+&lt;p&gt;Awstats官网：&lt;a href=&#34;http://www.awstats.org/&#34;&gt;http://www.awstats.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;发行协议：GNU GPL&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Awstats is short for Advanced Web statistic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。&lt;/p&gt;
+&lt;p&gt;再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。&lt;/p&gt;
+&lt;p&gt;注意：以下内容以配置老高的域名为例。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos实时网速监控工具nload</title>
+      <link>https://phpgao.github.io/nload_centos.html</link>
+      <pubDate>Sat, 27 Dec 2014 04:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nload_centos.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.roland-riegel.de/nload/&#34;&gt;nload&lt;/a&gt;是一个很小巧的工具，用来监控当前系统的网速&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>putty中文乱码</title>
+      <link>https://phpgao.github.io/putty_chinese.html</link>
+      <pubDate>Mon, 22 Dec 2014 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/putty_chinese.html</guid>
+      <description>每次重装centos总会碰到关于乱码的种种问题
+一般中文乱码有以下两个原因
+1.中文未安装
+一句话安装
+yum groupinstall &amp;#34;chinese support&amp;#34; # 重启 reboot 2.设置问题
+如果安装了中文支持还不行，那么就要考虑配置是否合适了。
+linux的语言配置文件位于/etc/sysconfig/i18n，使用vim打开
+cp /etc/sysconfig/i18n /etc/sysconfig/i18n.bak vim /etc/sysconfig/i18n 替换原来的内容为
+中文UTF-8（推荐）:
+LANG=&amp;#34;zh_CN.UTF-8&amp;#34; LANGUAGE=&amp;#34;zh_CN.UTF-8:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.UTF-8:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;latarcyrheb-sun16&amp;#34; 或者
+中文GBK:
+LANG=&amp;#34;zh_CN.GB18030&amp;#34; LANGUAGE=&amp;#34;zh_CN.GB18030:zh_CN.GB2312:zh_CN&amp;#34; SUPPORTED=&amp;#34;zh_CN.GB18030:zh_CN:zh:en_US.UTF-8:en_US:en&amp;#34; SYSFONT=&amp;#34;lat0-sun16&amp;#34; 然后在putty等软件中设置对应字符集即可
+vim乱码请参考老高的另一篇博文 vim中文乱码的解决办法</description>
+    </item>
+    
+    <item>
+      <title>安装编译nginx</title>
+      <link>https://phpgao.github.io/nginx_installation.html</link>
+      <pubDate>Sun, 21 Dec 2014 13:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_installation.html</guid>
+      <description>今天老高更新了一下nginx，顺便把nginx的安装编译过程记录一下，分享给大家！
+一并送上之前老高的博文：
+将nginx配置为服务
+nginx配置详解
+下载 官网下载地址：http://nginx.org/en/download.html
+准备 安装nginx时必须先安装相应的编译工具
+yum -y install gcc gcc-c++ autoconf automake yum -y install zlib zlib-devel openssl openssl-devel pcre-devel centos没有安装make编译器
+yum -y install gcc automake autoconf libtool make 建立nginx 组
+groupadd -r nginx useradd -s /sbin/nologin -g nginx -r nginx 注释：
+zlib:nginx提供gzip模块，需要zlib库支持 openssl:nginx提供ssl功能 pcre:支持地址重写rewrite功能
+修改版本号 再编译之前修改默认的版本号是个不错的习惯
+vim src/core/nginx.h #define NGINX_VERSION &amp;#34;0.0.0&amp;#34; #define NGINX_VER &amp;#34;phpergao&amp;#34; NGINX_VERSION 编译 高大上的编译参数
+./configure \ --prefix=/usr \ --sbin-path=/usr/sbin/nginx \ --conf-path=/etc/nginx/nginx.conf \ --error-log-path=/var/log/nginx/error.log \ --pid-path=/var/run/nginx/nginx.</description>
+    </item>
+    
+    <item>
+      <title>linux无界面(headless)使用selenium抓取数据</title>
+      <link>https://phpgao.github.io/headless_selenium.html</link>
+      <pubDate>Tue, 09 Dec 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/headless_selenium.html</guid>
+      <description>问题 老高最近遇到一个需求，linux\centos下，使用selenium技术抓取数据。本来很简单的问题，但是由于内存限制，安装X window不现实，所以一个BT的想法诞生了，是否可以在centos命令行界面运行一个虚拟的桌面，然后使用selenium控制Firefox浏览器完成一些操作，Firefox运行在虚拟的桌面中，一切操作都在命令行中完成。
+Google之，发现了Xvfb，他可以新建一个虚拟的X窗口，再配合python的pyvirtualdisplay，简直就是神器！
+安装 centos下：
+# 安装Xvfb和pyvirtualdisplay yum install xorg-x11-server-Xvfb pip install pyvirtualdisplay 安装firefox和selenium
+yum install firefox pip install selenium 代码 from pyvirtualdisplay import Display from selenium import webdriver display = Display(visible=0, size=(800, 600)) display.start() browser = webdriver.Firefox() browser.get(&amp;#39;http://www.google.com&amp;#39;) print browser.title browser.quit() display.stop() 参考网站：
+http://selenium-python.readthedocs.org/en/latest/getting-started.html http://nullege.com/codes/search/selenium.webdriver.Remote.find_elements_by_class_name http://www.opsview.com/forum/opsview-core/how-do-i/how-do-i-install-selenium-centos-server https://gist.github.com/textarcana/5855427 http://scraping.pro/use-headless-firefox-scraping-linux/ http://serverfault.com/questions/363827/how-can-i-run-firefox-on-centos-with-no-display https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/ https://pypi.python.org/pypi/selenium
+http://selenium.googlecode.com/git/docs/api/py/selenium/selenium.selenium.html#module-selenium.selenium
+http://www.ibm.com/developerworks/cn/opensource/os-php-designptrns/ http://www.cnblogs.com/fnng/p/3230768.html http://www.cnblogs.com/fnng/p/3157639.html http://www.cnblogs.com/fnng/p/3157639.html</description>
+    </item>
+    
+    <item>
+      <title>CentOS精简命令</title>
+      <link>https://phpgao.github.io/centos_lite.html</link>
+      <pubDate>Fri, 19 Sep 2014 05:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_lite.html</guid>
+      <description>删除自带web、数据库、php
+yum remove httpd* php* mysql-server mysql* php-mysql -y 删除不需要的程序
+yum remove Deployment_Guide-en-US finger cups-libs cups ypbind bluez-libs desktop-file-utils ppp rp-pppoe wireless-tools irda-utils sendmail* samba* talk-server finger-server bind* xinetd nfs-utils nfs-utils-lib rdate fetchmail eject ksh mkbootdisk mtools syslinux tcsh startup-notification talk apmd rmt dump setserial portmap yp-tools -yyum groupremove &amp;quot;Mail Server&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;X Window System&amp;quot; &amp;quot;X Software Development&amp;quot; &amp;quot;Development Libraries&amp;quot; &amp;quot;Dialup Networking Support&amp;quot; &amp;quot;Games and Entertainment&amp;quot; &amp;quot;Sound and Video&amp;quot; &amp;quot;Graphics&amp;quot; &amp;quot;Editors&amp;quot; &amp;quot;Text-based Internet&amp;quot; &amp;quot;GNOME Desktop Environment&amp;quot; &amp;quot;GNOME Software Development&amp;quot; -yyum -y groupremove &amp;quot;FTP Server&amp;quot; &amp;quot;PostgreSQL Database client&amp;quot; &amp;quot;PostgreSQL Database server&amp;quot; &amp;quot;MySQL Database server&amp;quot; &amp;quot;MySQL Database client&amp;quot; &amp;quot;Web Server&amp;quot; &amp;quot;Office Suite and Productivity&amp;quot; &amp;quot;E-mail server&amp;quot; &amp;quot;Ruby Support&amp;quot; &amp;quot;Printing client&amp;quot; 关闭selinux</description>
+    </item>
+    
+    <item>
+      <title>centos7.0-的最小化安装</title>
+      <link>https://phpgao.github.io/centos7.html</link>
+      <pubDate>Sun, 07 Sep 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos7.html</guid>
+      <description>&lt;p&gt;放假闲来无事，研究了一下centos 7.0，发现变化真大。。。。。。&lt;code&gt;ifconfig&lt;/code&gt;竟然都被废了，以后看IP就要用&lt;code&gt;ip addr&lt;/code&gt;了。&lt;/p&gt;
+&lt;p&gt;下面记录一下需要注意的地方。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos下安装python-MySQLdb</title>
+      <link>https://phpgao.github.io/python_mysqldb.html</link>
+      <pubDate>Fri, 15 Aug 2014 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_mysqldb.html</guid>
+      <description>源码安装： 点击这里下载源码
+解压前线装一下必要的包
+yum install python-devel mysql-devel zlib-devel openssl-devel 解压
+tar xf MySQL-python-1.2.3.tar.gz cd MySQL-python-1.2.3 修改mysite.cfg，指定mysql-config的路径
+使用whereis mysql-config找路径
+vi mysite.cfg #找到mysql_config = XXX 改为你的路径 继续安装
+python setup.py build python setup.py install 工具安装： sudo easy_install mysql-pythonsudo pip install mysql-python 出现错误的解决办法 --- ```bash vi ~/.bash_profile # add export DYLD_LIBRARY_PATH=&amp;#39;/usr/local/mysql/lib&amp;#39;; PATH=&amp;#34;$PATH:/usr/local/mysql/bin&amp;#34; enjoy~
+Win下请直接下载编译好的安装包：
+请输入链接描述</description>
+    </item>
+    
+    <item>
+      <title>centos国内源总结</title>
+      <link>https://phpgao.github.io/centos_repo.html</link>
+      <pubDate>Mon, 11 Aug 2014 03:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_repo.html</guid>
+      <description>有时候centos使用yum命令的时候软件下载速度会很慢，还好国内有很多镜像站供大家选择，在此博主为大家总结了一些centos国内镜像站，如果你需要下载centos的iso文件或者相关软件，可以到以下网站下载，速度相当快！
+当然，如果你想直接替换掉centos系统内置的yum源地址，可以参考这篇文章Centos源设置，将你的源设为比较快的地址！
+   地区 HTTP     Alibaba Cloud Computing http://mirrors.aliyun.com/centos/   Beijing Institute of Technology http://mirror.bit.edu.cn/centos/   Beijing Teletron Telecom Engineering http://mirrors.btte.net/centos/   BitComm Ltd. http://mirrors.pubyun.com/centos/   CDS China http://mirrors.yun-idc.com/centos/   China University of Geosciences http://mirrors.cug.edu.cn/centos/   Dalian Neusoft University of Information http://mirrors.neusoft.edu.cn/centos/   Grand Cloud http://mirrors.grandcloud.cn/centos/   Huazhong University of Science and Technology http://mirrors.hust.edu.cn/centos/   NetEase http://mirrors.</description>
+    </item>
+    
+    <item>
+      <title>Centos源设置</title>
+      <link>https://phpgao.github.io/repo_for_centos.html</link>
+      <pubDate>Wed, 18 Jun 2014 06:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/repo_for_centos.html</guid>
+      <description>起因 刚刚装好的centos网卡也配好了，就是解析不了mirror.centos.org，估计是DNS的问题，索性换了163源。
+网易源地址
+使用帮助
+方法 很简单，注意备份即可
+cd /etc/yum.repos.d mv CentOS-Base.repo CentOS-Base.repo.backup wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS5-Base-163.repo #centos5 wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS6-Base-163.repo #centos6 yum clean all yum makecache 意外 在执行update的时候又报错
+ GPG key retrieval failed: [Errno 12] Timeout on http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-6: (28, &amp;lsquo;connect() timed out!&#39;)
+ 貌似需要在源服务器验证RPM的合法性 本办法，只好祭出终极武器，host大法!
+vi /etc/hosts 加入 74.53.10.146 mirror.centos.org 解决！
+阿里源 阿里的速度也不错！
+repo下载地址： http://mirrors.aliyun.com/repo/
+mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup # 根据系统版本下载对应版本的repo wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo 或 curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-6.repo # 更新缓存 yum clean all yum makecache </description>
+    </item>
+    
+    <item>
+      <title>centos升级gcc至4.8</title>
+      <link>https://phpgao.github.io/centos_gcc_update.html</link>
+      <pubDate>Tue, 03 Jun 2014 08:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_gcc_update.html</guid>
+      <description>&lt;p&gt;webkitgtk+的编译要用到4.8+的GCC 人家ubuntu都有编译好的gcc。。。可怜我centos只能编译源代码了。。。&lt;/p&gt;
+&lt;p&gt;废话不说，速度干活&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;先下载需要的GCC源码，&lt;!-- raw HTML omitted --&gt;&lt;a href=&#34;http://gcc.gnu.org/&#34;&gt;http://gcc.gnu.org/&lt;/a&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;以gcc-4.8.3为例 先解压文件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cd ~
+mkdir src
+cd src
+wget http://自己写吧
+tar xf gcc-4.8.3.tar.gz
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;到这一步停下，还有软件包没有下载安装，难点重点就在这儿了，这三个软件包的安装顺序不能乱，而且安装后一个软件之前必须指定前面安装的路径，很麻烦！&lt;/p&gt;
+&lt;p&gt;下载源代码可以执行gcc-4.8.3/contrib下的download_prerequisites脚本，即可自动下载，到时候也好一起编译&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ubuntu编译webkit</title>
+      <link>https://phpgao.github.io/ubuntu_webkitgtk.html</link>
+      <pubDate>Thu, 29 May 2014 08:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ubuntu_webkitgtk.html</guid>
+      <description>下载安装包：http://webkitgtk.org/使用下面命令压缩包
+tar xvJf 安装依赖库：
+apt-get install autoconf automake autotools-dev bison flex gperf glib-networking gtk-doc-tools libenchant-dev libgail-dev libgeoclue-dev libglib2.0-dev libgstreamer-plugins-base0.10-dev libgtk2.0-dev libicu-dev libjpeg62-dev libpango1.0-dev libpng12-dev libsoup2.4-dev libsqlite3-dev libtool libxslt1-dev libxt-dev 试试Configure一下
+./configure 可能还不够，提示找不到 libwebp，找一下吧：
+apt-cache search libwebplibwebp-dev - Lossy compression of digital photographic images.libwebp5 - Lossy compression of digital photographic images.libwebpdemux1 - Lossy compression of digital photographic images.libwebpmux1 - Lossy compression of digital photographic images.</description>
+    </item>
+    
+    <item>
+      <title>记一次centos最小安装</title>
+      <link>https://phpgao.github.io/centos_minimal.html</link>
+      <pubDate>Wed, 28 May 2014 03:52:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_minimal.html</guid>
+      <description>基本流程吧啊，以后可能会更新，以6.5为例：
+下载安装必要文件，比如虚拟机virtualbox,vm等，还有镜像i386或者x86_64的，按需下载吧
+设置虚拟机，开始安装，推荐使用全英文安装，速度和稳定性会好一点
+完毕后网卡不会自动启动，需要手动开启
+vi /etc/sysconfig/network-scripts/ifcfg-eth0DEVICE=eth0HWADDR=00:0C:29:64:A5:E3TYPE=EthernetUUID=ff171f7b-3bc5-465d-a5ba-287e200f6da6ONBOOT=yesNM_CONTROLLED=noBOOTPROTO=dhcp 然后
+/etc/init.d/network start 现在看看ifconfig里有没有IP信息
+有了IP就能上网了，下面就是各种yum了，有兴趣的TX可以执行一下这个优化脚本</description>
+    </item>
+    
+    <item>
+      <title>centos6-优化脚本与安全脚本</title>
+      <link>https://phpgao.github.io/centos_optimize.html</link>
+      <pubDate>Tue, 13 May 2014 01:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_optimize.html</guid>
+      <description>新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &amp;#34;x86_64&amp;#34; ];then echo &amp;#34;this script is only for 64bit Operating System !&amp;#34; exit 1 fi echo &amp;#34;the platform is ok&amp;#34; version=`lsb_release -r |awk &amp;#39;{print substr($2,1,1)}&amp;#39;` if [ $version != 6 ];then echo &amp;#34;this script is only for CentOS 6 !</description>
+    </item>
+    
+  </channel>
+</rss>

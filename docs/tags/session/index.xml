@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>session on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/session/</link>
+    <description>Recent content in session on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 May 2014 08:08:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/session/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP之负载均衡下的session共用(Memcache实现)</title>
+      <link>https://phpgao.github.io/memcache_session.html</link>
+      <pubDate>Mon, 19 May 2014 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/memcache_session.html</guid>
+      <description>转自http://www.cnblogs.com/see7di/p/3560329.html
+此代码片段的功能是在做均衡负载的时候将session的维护工作交给Memcached，这样不仅性能上来了，session不同步的问题也解决了！
+但是要求做Memcache的计算机内存要足够大！
+$_ENV=array(&#39;SYS&#39;=&amp;gt;array(&#39;Memip&#39;=&amp;gt;&#39;127.0.0.1&#39;, //MEMCACHE的ip&#39;Mempt&#39;=&amp;gt;11211, //MEMCACHE的port&#39;Memtim&#39;=&amp;gt;10, //MEMCACHE的超时时间));//托管SESSION到MEMCACHE,如果开启失败,则说明MEMCACHE没有配置正确final class S{public static function open(){//禁止session自动开启session_write_close();ini_set(&#39;session.auto_start&#39;,0);//使用五十分之一的概率启动GC清理会话ini_set(&#39;session.gc_probability&#39;,1);ini_set(&#39;session.gc_divisor&#39;,50);ini_set(&#39;session.use_cookies&#39;,1);//session的寿命//ini_set(&#39;session.gc_maxlifetime&#39;,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);//ini_set(&#39;session.cookie_lifetime&#39;,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);//ini_set(&#39;session.save_handler&#39;,&#39;files&#39;);//ini_set(&#39;session.save_path&#39;,Run.&#39;_tmp&#39;);//ini_set(&#39;session.save_handler&#39;,&#39;memcache&#39;);//ini_set(&#39;session.save_path&#39;,&#39;tcp://127.0.0.1:11211&#39;);//$_ENV[&#39;S_tim&#39;] = ini_get(&#39;session.gc_maxlifetime&#39;);//建立memcache对象$_ENV[&#39;S_mem&#39;]=new Memcache;$_ENV[&#39;S_mem&#39;]-&amp;gt;connect($_ENV[&#39;SYS&#39;][&#39;Memip&#39;],$_ENV[&#39;SYS&#39;][&#39;Mempt&#39;]) or die(&#39;Memcache连接失败!&#39;);return TRUE;}/**读取返回:读到的内容/**/public static function read($id){return $_ENV[&#39;S_mem&#39;]-&amp;gt;get(&#39;s_&#39;.$id);}/**写入返回:bool/**/public static function write($id,$data){return $_ENV[&#39;S_mem&#39;]-&amp;gt;set(&#39;s_&#39;.$id,$data,MEMCACHE_COMPRESSED,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);}/**关闭返回:bool/**/public static function close(){$_ENV[&#39;S_mem&#39;]-&amp;gt;close();unset($_ENV[&#39;S_mem&#39;],$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);return TRUE;}/**删除返回:bool/**/public static function destroy($id){return $_ENV[&#39;S_mem&#39;]-&amp;gt;delete(&#39;s_&#39;.</description>
+    </item>
+    
+  </channel>
+</rss>

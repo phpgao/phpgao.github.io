@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bandwagonhost on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bandwagonhost/</link>
+    <description>Recent content in bandwagonhost on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Dec 2016 06:22:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bandwagonhost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>老高推荐的VPS---Bandwagon-Host</title>
+      <link>https://phpgao.github.io/bandwagon.html</link>
+      <pubDate>Fri, 09 Dec 2016 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagon.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1997432409.png&#34; alt=&#34;bandwagon_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;作为老高博客的常客来说，搬瓦工一定再熟悉不过了。这篇文章是从&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;30元一年，打造自己的翻墙VPS&lt;/a&gt;独立出来的。主要是介绍搬瓦工(Bandwagon Host)的购买方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps.老高的博客目前就稳定运行在bandwagon每年$9.9的服务器上！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用搬瓦工的VPS搭建博客网站</title>
+      <link>https://phpgao.github.io/website_on_bandwagonhost.html</link>
+      <pubDate>Fri, 22 May 2015 02:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/website_on_bandwagonhost.html</guid>
+      <description>&lt;p&gt;想必大家买了VPS后一定都不想闲着。。。搭个博客算是最简单实用了。&lt;/p&gt;
+&lt;p&gt;但是基本上大家在网上下载到的一键安装包都没有&lt;strong&gt;后台管理&lt;/strong&gt;功能，如果想多绑定几个域名都不知道怎么操作，更别提搭建多个站点了。&lt;/p&gt;
+&lt;p&gt;下面老高就介绍一种简单实用的网站搭建方法，搭建出的网站速度快，安全性高，还支持各种优化配置。&lt;/p&gt;
+&lt;p&gt;最重要的是操作基本都是傻瓜式的，不需要很多web技能也可以完整的配置下来，而且基本上就成了半个运维了，是不是很厉害！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;像老高这样的&lt;strong&gt;老司机&lt;/strong&gt;，整个装下来再加上安全设置最多5分钟搞定，相信你一定也可以！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;搭建过程中如果有什么问题，请留言交流！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3949848852.gif&#34; alt=&#34;kangle&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模拟登录脚本之搬瓦工bandwagonhost</title>
+      <link>https://phpgao.github.io/login_script_for_bandwagonhost.html</link>
+      <pubDate>Sun, 17 May 2015 13:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/login_script_for_bandwagonhost.html</guid>
+      <description>老早写的，都忘了当初想干啥了。。。。
+半成品，留个坑，待填。
+#!/usr/bin/env python # encoding: utf-8 import cookielib import requests def http_send(url, post_data=&amp;#39;&amp;#39;, **kwargs): cookie_handler = cookielib.MozillaCookieJar(&amp;#39;cookie.txt&amp;#39;) try: cookie_handler.load(ignore_discard=1) except cookielib.LoadError, e: print e + &amp;#34;new cookie file&amp;#34; headers = { &amp;#39;User-Agent&amp;#39;: &amp;#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36&amp;#39;} if post_data: req = requests.post(url, data=post_data, cookies=cookie_handler) else: req = requests.get(url) print req.headers for c in req.cookies: cookie_handler.set_cookie(c) cookie_handler.save(ignore_discard=1) return req.content if __name__ == &amp;#39;__main__&amp;#39;: # init cookie print http_send(&amp;#39;http://localhost/clientarea.</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买前必读</title>
+      <link>https://phpgao.github.io/pre_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 11:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pre_buy_faq.html</guid>
+      <description>&lt;h2 id=&#34;这个vps能做什么&#34;&gt;这个VPS能做什么&lt;/h2&gt;
+&lt;p&gt;首先，当你租下这台属于你的服务器后，你有很大的自由去做你想做的事情，但是需要声明的是&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果任何人以任何形式使用从老高的博客购买的VPS去做违法的事(包括违反中美两国的法律)，此行为与老高无关！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这个服务器系统基于Linux(Linux是程序猿入门必备基础工具，所以程序员拿来练手非常适合，老高就是用这个入门的)，网速不错，有了它相当于你在国外有个代理，这个代理可以搭建你的博客，做你的DNS服务器，做你的翻墙工具等等。&lt;/p&gt;
+&lt;p&gt;最大的&lt;strong&gt;卖点&lt;/strong&gt;就是价格了，其一年的主机价格与国内主机半个月的价格相当。&lt;/p&gt;
+&lt;p&gt;再加上Linux的可玩性，有很多&lt;strong&gt;高级玩法&lt;/strong&gt;可以折腾。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工购买后必读</title>
+      <link>https://phpgao.github.io/post_buy_faq.html</link>
+      <pubDate>Sun, 12 Apr 2015 10:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/post_buy_faq.html</guid>
+      <description>&lt;p&gt;本文介绍了搬瓦工购买后的常规操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置</title>
+      <link>https://phpgao.github.io/bandwagonhost_vps_panel.html</link>
+      <pubDate>Sun, 28 Dec 2014 14:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagonhost_vps_panel.html</guid>
+      <description>&lt;p&gt;购买了搬瓦工(bandwagonhost)的VPS，如何使用呢？&lt;/p&gt;
+&lt;p&gt;在此，老高以FAQ的形式给出介绍。&lt;/p&gt;
+&lt;p&gt;首先插几句使用建议，老高认为十分重要，为什么呢？搬瓦工如果监控到有大量的垃圾信息从我们的主机上发出，就会立即冻结VPS，冻结后的VPS相当于关机，我们可以进入panel后手动解冻即可恢复正常，但是解冻的次数每年只有三次，所以大家一定要注意自己VPS的安全。在此老高也给大家分享一些必要的操作，请务必参考。部分建议需要一定的linux基础，不会的TX请参考老高的&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;翻墙教程&lt;/a&gt;后再google之。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30元一年，打造自己的翻墙VPS</title>
+      <link>https://phpgao.github.io/vps.html</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2425396346.png&#34; alt=&#34;SS&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从此告别龟速的goagent，节省下来的时间会让你觉得很值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要自己搭梯子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;答：请看此试验 &amp;mdash;-&amp;gt; &lt;a href=&#34;http://www.hekaiyu.cn/hacker/1527.html&#34;&gt;评测告诉你：那些免费代理悄悄做的龌蹉事儿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;strong&gt;免费的东西是最贵的！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更多性价比VPS请移步 &lt;strong&gt;&lt;a href=&#34;https://blog.phpgao.com/vpses.html&#34;&gt;老高推荐的VPS&lt;/a&gt;&lt;/strong&gt;，希望大家在这里能够找到适合自己的VPS&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

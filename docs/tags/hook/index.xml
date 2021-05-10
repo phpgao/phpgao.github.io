@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>hook on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/hook/</link>
+    <description>Recent content in hook on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Dec 2014 03:33:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/hook/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SVN预提交(Pre-Commit)钩子的利用</title>
+      <link>https://phpgao.github.io/svn_pre_commit.html</link>
+      <pubDate>Tue, 02 Dec 2014 03:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/svn_pre_commit.html</guid>
+      <description>转自：http://java.dzone.com/articles/useful-subversion-pre-commit
+ Checks whether the commit message is not empty Checks whether the commit message consists of at least 5 characters Checks if the committed files are UTF-8 compliant Checks whether the svn:eol-style property is set to LF on newly added files Checks if the committed files have no TAB characters  The UTF-8 and TAB checks are performed on the following file suffixes
+ *.java *.js *.xhtml *.css *.xml *.</description>
+    </item>
+    
+    <item>
+      <title>thinkphp钩子的实现</title>
+      <link>https://phpgao.github.io/thinkphp_hook.html</link>
+      <pubDate>Mon, 29 Sep 2014 02:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_hook.html</guid>
+      <description>&lt;p&gt;钩子概念对初学者来说可能比较抽象难懂，但是只要掌握了他的工作方式，那么自己动手写一个钩子机制也不难。&lt;/p&gt;
+&lt;p&gt;Hook这个词很有意思，以下引用自某网络词典：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hook用作名词时意思是“钩”,转化为动词时可表示把某物弯成钩形,也可表示用弯曲的东西把某物体钩住,引申可表示为“吊”“挂”等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;作为一个程序猿，老高对钩子的解释是，他就是一个触发机制，把你的软件功能想象成一个陷阱，放到##系统流程##可能经过的路上，如果陷阱被系统踩到，就会执行你的程序，当你挂载的钩子执行完后，系统会根据你的程序的结果继续运行。&lt;/p&gt;
+&lt;p&gt;老高最早接触Hook的编程思想是源于windows，当时打dota很入迷，突然想研究一下改键的原理，于是发现了系统钩子这一说法。&lt;/p&gt;
+&lt;p&gt;改键的原理，简单地说来就是拦截系统按下键盘时的默认动作，如果需要把小键盘的7映射到Q上，就在拦截时做一个判断，如果的键码是小键盘7，就改为Q的键码，最后发送给系统修改后的键码，即完成了改键操作。&lt;/p&gt;
+&lt;p&gt;钩子机制的使用在很多系统上都有体现，如windows、wordpress、thinkphp等，由钩子实现的功能在wordpress中叫做插件，在TP中叫做行为。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

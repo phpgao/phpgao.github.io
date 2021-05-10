@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>旅游 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/%E6%97%85%E6%B8%B8/</link>
+    <description>Recent content in 旅游 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Nov 2015 11:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/%E6%97%85%E6%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>珠海-香港一日游计划</title>
+      <link>https://phpgao.github.io/one_day_in_hk.html</link>
+      <pubDate>Fri, 13 Nov 2015 11:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/one_day_in_hk.html</guid>
+      <description>&lt;h2 id=&#34;航线&#34;&gt;航线&lt;/h2&gt;
+&lt;p&gt;购票地址：&lt;a href=&#34;http://61.145.229.172:8011/User/Default.aspx&#34;&gt;珠海九州港客运服务有限公司&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;9:00 九州港 - 港澳码头&lt;/p&gt;
+&lt;p&gt;21:30 港澳码头 - 九州港&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

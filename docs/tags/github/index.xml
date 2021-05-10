@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>github on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/github/</link>
+    <description>Recent content in github on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 01 Jul 2019 06:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用docker搭建私有git服务(gogs&#43;https)</title>
+      <link>https://phpgao.github.io/gogs.html</link>
+      <pubDate>Mon, 01 Jul 2019 06:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/gogs.html</guid>
+      <description>&lt;p&gt;为什么有了github还要有自己的平台？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码审计安全(不会随便被删除)&lt;/li&gt;
+&lt;li&gt;自己团队需要&lt;/li&gt;
+&lt;li&gt;速度更快&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为什么选择gogs?&lt;/p&gt;
+&lt;p&gt;请移步&lt;a href=&#34;https://gogs.io/&#34;&gt;官网&lt;/a&gt;学习，配置文件请参考&lt;a href=&#34;https://gogs.io/docs/advanced/configuration_cheat_sheet&#34;&gt;配置文件手册&lt;/a&gt;，配置样例请访问&lt;a href=&#34;https://github.com/gogs/gogs/blob/master/conf/app.ini&#34;&gt;app.ini&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在github的某次commit中close或者fix某个issue</title>
+      <link>https://phpgao.github.io/github_fix_or_close_issue.html</link>
+      <pubDate>Tue, 10 Nov 2015 05:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github_fix_or_close_issue.html</guid>
+      <description>&lt;p&gt;当你在某次提交解决了其他人提出的issue时，你可以使用github中的语法实现自动操作。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>还是忍不住下单了</title>
+      <link>https://phpgao.github.io/github-shop-2015.html</link>
+      <pubDate>Wed, 09 Sep 2015 02:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github-shop-2015.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/172808848.jpg&#34; alt=&#34;Octocat Figurine&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;终于在&lt;a href=&#34;http://github.myshopify.com/&#34;&gt;github shop&lt;/a&gt;败了Octocat Figurine！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>git的一些特殊操作</title>
+      <link>https://phpgao.github.io/git_useful_command.html</link>
+      <pubDate>Mon, 26 Jan 2015 02:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/git_useful_command.html</guid>
+      <description>删除本地提交并推至origin # 第一步 ## 删除本地提交(HEAD为最近一次提交,HEAD^上上次) git reset --hard commit-id # 第二步 ## 强制推送 git push origin +master ## 或 git push origin HEAD --force RESET 根据–soft –mixed –hard，会对working tree和index和HEAD进行重置:
+ git reset –mixed：此为默认方式，不带任何参数的git reset，即时这种方式，它回退到某个版本，只保留源码，回退commit和index信息 git reset –soft：回退到某个版本，只回退了commit的信息，不会恢复到index file一级。如果还要提交，直接commit即可 git reset –hard：彻底回退到某个版本，本地的源码也会变为上一个版本的内容
+ 关闭ISSUE 在提交的message中添加如下内容会自动与issue #id关联。是不是很方便啊！
+ fixes #xxx fixed #xxx fix #xxx closes #xxx close #xxx closed #xxx  Reference：
+http://www.cnblogs.com/shure/archive/2012/11/07/2758663.html http://blog.csdn.net/hshl1214/article/details/8084423</description>
+    </item>
+    
+    <item>
+      <title>git的tag操作</title>
+      <link>https://phpgao.github.io/git_tag.html</link>
+      <pubDate>Sun, 25 Jan 2015 12:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/git_tag.html</guid>
+      <description>&lt;h2 id=&#34;什么是tag&#34;&gt;什么是tag&lt;/h2&gt;
+&lt;p&gt;很简单，tag的字面意思是标签。在git中tag的功能就是把开发阶段做一个总结，打上标签，方便以后的查看与管理，通常用于版本发布。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将你的git协议由https变为ssh</title>
+      <link>https://phpgao.github.io/github_https_to_ssh.html</link>
+      <pubDate>Thu, 15 Jan 2015 12:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github_https_to_ssh.html</guid>
+      <description>你是不是已经厌倦了每次git push的时候每次都要输入用户名密码，使用下面的方法可以让你使用ssh协议通过密钥验证的方式让你得到解脱。
+有两种修改方法
+不过再实施前，请先准备好自己的密钥
+ssh-keygen -t rsa -C &amp;#34;your_name&amp;#34; 然后登录https://github.com/settings/ssh，添加当前计算机的~/.ssh/id_rsa.pub公钥内容到github。
+之后我们使用ssh git@github.com验证是否添加成功，如果返回以下内容，即代表添加成功！
+ Hi phpgao! You&amp;rsquo;ve successfully authenticated, but GitHub does not provide shell access.
+ 下一步就是让我们的git使用公钥验证。
+clone 保存你的最后一次修改并提交。
+删除项目
+使用下面的命令clone项目
+# 采用ssh的方式克隆项目 # someaccount/someproject.git 中 some account为github用户名/someproject为仓库名 git clone git@github.com:phpgao/BaiduSubmit.git 修改https git remote set-url origin git@github.com:someaccount/someproject.git 顺便提一下，老高的git push总是报warning: push.default is unset错误，今天终于知道为啥了。原来是版本兼容性的原因，低版本的git push如果不指定分支名，就会全部推送，而新版只会推送当前分支。
+解决的办法也很简单，我们只需要明确指定应该推送方式即可，至于选择哪种方式，It&amp;rsquo;s up to you.
+# 全部推送 git config --global push.default matching # 部分推送 git config --global push.default simple 完</description>
+    </item>
+    
+    <item>
+      <title>在github写博客</title>
+      <link>https://phpgao.github.io/github_blog.html</link>
+      <pubDate>Sat, 26 Jul 2014 04:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/github_blog.html</guid>
+      <description>&lt;p&gt;没想到jekyll这么火啊！&lt;/p&gt;
+&lt;p&gt;今天闲来无事，也想试试把博客搬到github玩玩。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

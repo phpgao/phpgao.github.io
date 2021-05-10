@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>nexus6 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/nexus6/</link>
+    <description>Recent content in nexus6 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 12 May 2016 04:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/nexus6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nexus6刷机笔记</title>
+      <link>https://phpgao.github.io/nexus_flash_rom.html</link>
+      <pubDate>Thu, 12 May 2016 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nexus_flash_rom.html</guid>
+      <description>&lt;p&gt;记录一下刷机的命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Nexus6刷机教程</title>
+      <link>https://phpgao.github.io/nexus6_unlock.html</link>
+      <pubDate>Tue, 19 Jan 2016 07:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nexus6_unlock.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/01/3352563752.jpg&#34; alt=&#34;nexus6&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高的Nexus5去年由于进水，导致触摸屏失灵，淘宝一搜屏幕的价格，我去。。。算了还是在家吃灰吧！&lt;/p&gt;
+&lt;p&gt;转眼到了11月黑五，色魔张大妈推了一条信息，奶6促销$199，果断入手。&lt;/p&gt;
+&lt;p&gt;在经历了清关被扣，又要交税等等事情后，终于于今天（2016年1月19日）顺利收到，在此十分感谢向同事从上海人肉快递到北京！&lt;/p&gt;
+&lt;p&gt;总部的网可以直接Google，但是OTA升级的速度简直不敢恭维，索性直接解锁线刷系统了！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

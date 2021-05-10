@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>weibo on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/weibo/</link>
+    <description>Recent content in weibo on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Jun 2014 06:20:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/weibo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用python模拟登陆腾讯微博</title>
+      <link>https://phpgao.github.io/t_login.html</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/t_login.html</guid>
+      <description>由于业务需要，研究了一下腾讯微博等登陆，下面分享一些经验给大家： 标题写的是腾讯微博的登陆，其实也可以隐身到腾讯旗下多个产品的登陆，比如QQ空间，webQQ等，想到这儿大伙是不是很激动呢？
+[TOC]
+表急，等我细细道来。
+数据采集 有时候简单的数据不需要这么大费周折！使用某些语言自带的web工具也是可以的！下面我以Python为例：
+分析登录过程 登录过程需要抓包，我是用的HttpWatch，大体步骤如下
+第一步 手动登陆，抓包，记录登录过程  当输入完账号后想服务器请求验证码 等级登陆按钮后将登录信息发送至认证服务器，实现第一次认证 服务器返回登陆成功信息，其中包含最终URL 第二次认证，获取腾讯微博的cookie  第二步 伪造登录过程  获取验证码 根据验证码计算出加密后的密码以及其他信息，发送GET请求至认证服务器 根据返回URL获取最终cookie  工作难点 本文假设读者理解http协议及数据包的发送原理，以此为基础，工作的难点就集中在数据的准备上。
+ 密码的加密原理 cookie的处理 header的UA及refer的一致性  密码加密算法 以下提取自登录页面的c_login_2.js文件
+function getEncryption(password, uin, vcode) {var str1 = hexchar2bin(md5(password));var str2 = md5(str1 + uin);var str3 = md5(str2 + vcode.toUpperCase());return str3}if (b == &amp;quot;login&amp;quot;) {d.u = encodeURIComponent(pt.plogin.at_accout);d.verifycode = $(&amp;quot;verifycode&amp;quot;).value;if (pt.plogin.needShowNewVc &amp;amp;&amp;amp; pt.</description>
+    </item>
+    
+    <item>
+      <title>PHP获取新浪微博token</title>
+      <link>https://phpgao.github.io/weibo_token.html</link>
+      <pubDate>Thu, 15 May 2014 03:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/weibo_token.html</guid>
+      <description>最近在做采集微博的功能，由于要自动采集，所以必须获得最终的用户的token，获取了这个token以后就可以为所欲为啦！
+贴代码
+$s = new SaeTOAuthV2 ( WB_AKEY, WB_SKEY);//准备post数据$post [&#39;action&#39;] = &#39;login&#39;;//$post [&#39;display&#39;] = &#39;default&#39;;//$post [&#39;withOfficalFlag&#39;] = 0;//$post [&#39;quick_auth&#39;] = null;//$post [&#39;withOfficalAccount&#39;] = &#39;&#39;;//$post [&#39;scope&#39;] = &#39;&#39;;//$post [&#39;ticket&#39;] = &#39;&#39;;//$post [&#39;isLoginSina&#39;] = &#39;&#39;;//$post [&#39;isLoginSina&#39;] = &#39;code&#39;;//regCallback|appkey62需要预先请求一次拿到//$post [&#39;regCallback&#39;] = $match_regCallback[1];//这里不用urlencode,http_build_query会自动处理$post [&#39;redirect_uri&#39;] = WB_CALLBACK_URL;$post [&#39;client_id&#39;] = WB_AKEY;//$post [&#39;appkey62&#39;] = $match_appkey[1];//$post [&#39;state&#39;] = &#39;&#39;;//$post [&#39;verifyToken&#39;] = null;//$post [&#39;from&#39;] = &#39;&#39;;$post [&#39;userId&#39;] = &#39;*******&#39;;//测试用户名$post [&#39;passwd&#39;] = &#39;*******&#39;;//测试密码,不要有！@￥%……&amp;amp;*（）这些符号，最好全是字符或数字，否则验证会失败$post = http_build_query($post);//UA貌似没有也行，保险起见还是加上吧$UA = &#39;Mozilla/5.</description>
+    </item>
+    
+    <item>
+      <title>新浪微博商业API使用参考</title>
+      <link>https://phpgao.github.io/sina_weibo_business_api.html</link>
+      <pubDate>Mon, 12 May 2014 06:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/sina_weibo_business_api.html</guid>
+      <description>工作中需要微博的商业API，记录一下 不了解的TX先去看说说明 http://open.weibo.com/wiki/商业数据API
+ 商业数据API：包括数据分析、舆情监测、获取全量粉丝三大特性，同时还有实时数据推送、历史数据检索、监测粉丝变化趋势、活跃&amp;amp;活动粉丝分析等多项功能，协助和指引企业开展社会化营销，让真实的用户数据变为企业的决策。  申请试用 申请试用的邮箱为 businessapi@staff.sina.com.cn 给这个地址发邮件说明意图即可 这一步挺麻烦的，需要提供很多企业信息，需要注意的是：商业API只提供商业用途，所以如果你的APP的服务对象不是企业，请绕道。 然后填写两张申请单，分别为 订阅服务申请单、REST接口申请单-测试版。 一个是订阅微博，粉丝登上数据用的，另一个是标准API，可以使用搜索等高级接口！
+价格 确定试用时间 试用时间一般两周，请充分利用好这宝贵的时间吧！
+测试 REST接口很简单，和普通接口一样直接调用。就是订阅接口比较麻烦，当你生成订阅列表后，他会把满足你需要的数据放进一个类似队列的东西，然后你需要不断从这个队列中取出你需要的信息，而且这个获取过程需要HTTP长链接。。。。。。说起来很复杂，其实做起来更复杂 :mad: ！ 下面就来讲讲订阅接口，先看看这两个文档：
+ 订阅接口的服务手册 http://open.weibo.com/wiki/Subscription_guide 订阅管理接口 http://open.weibo.com/wiki/C/2/subscribe/update_subscribe  看完这两个接口就基本知道了订阅到底是干啥用的。
+订阅开启 首先，开启了订阅接口服务以后，你会有推送时间，还有推送IP等很多需要设置的东西，当然完成了这些基本设置后，就可以开始配置订阅规则了，订阅规则基于以下两个条件：
+  订阅用户
+  订阅关键字 从subscribe/update_subscribe这个接口的示例来看，订阅有以下特点：
+ 订阅规则即刻生效 规则可以添加，修改 规则可以随时查询 每次修改量很有限（用户：50个；关键词：20个）    使用订阅 添加与删除一样 需要说明的是：
+$params[&#39;subid&#39;] = &#39;***&#39;; //你的订阅ID 新浪提供$params[&#39;source&#39;] = &#39;***&#39;; //你的APPidsession_start();include_once( &#39;config.php&#39; );include_once( &#39;saetv2.ex.class.php&#39; );$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $_SESSION[&#39;token&#39;][&#39;access_token&#39;] );$uid_get = $c-&amp;gt;get_uid();$uid = $uid_get[&#39;uid&#39;];//获取所有关注，默认一次50个，可以自己写循环$friends = $c-&amp;gt;friends_by_id($uid);$subscribe = &#39;&#39;;foreach( $friends[&#39;users&#39;] as $value ){$subscribe .</description>
+    </item>
+    
+  </channel>
+</rss>

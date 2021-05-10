@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>grep on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/grep/</link>
+    <description>Recent content in grep on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 20 May 2015 05:05:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/grep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>删除nginx-fastcgi-cache缓存</title>
+      <link>https://phpgao.github.io/nginx-fastcgi-cache-deletion.html</link>
+      <pubDate>Wed, 20 May 2015 05:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx-fastcgi-cache-deletion.html</guid>
+      <description>老高通过nginx的优化配置，配置了fastcgi_cache，服务器使用缓存固然很好，但是也会遇到很尴尬的时候。
+比如突然发现某个错别字，在后台改好后发现文章之前已被缓存，不知道还要等多久才能刷新，解决办法是删除生成的文件
+但想要找到已经可不容易，有两个办法：
+ 一个一个找或者直接删除全部缓存 根据nginx的URL &amp;ndash; key的规则，再使用两层hash来定位文件  因为老高缓存的文件数不多，所以最后的解决办法是 &amp;ndash; 关键字过滤
+# 找 grep -r &amp;#39;your keywords&amp;#39; . # 删 grep -rl &amp;#39;your keywords&amp;#39; . |xargs rm 下面的也可以
+find |xargs grep &amp;#39;your keywords&amp;#39; find |xargs grep -l &amp;#39;your keywords&amp;#39;|xargs rm 顺便记个笔记
+# 顺便记一下find限定查找文件和目录 find -type f find -type d # grep --help 中-R也很有用！ grep -r --include=&amp;#34;*.php&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>

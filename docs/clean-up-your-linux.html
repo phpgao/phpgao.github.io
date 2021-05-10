@@ -1,0 +1,181 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>几条命令找出服务器上的垃圾文件 | 老高的技术博客</title><meta name=keywords content="Linux,command"><meta name=description content="Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！
+当然，如果你的服务器容量是TB、PB级别的请无视此文。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/clean-up-your-linux.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="几条命令找出服务器上的垃圾文件"><meta property="og:description" content="Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！
+当然，如果你的服务器容量是TB、PB级别的请无视此文。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/clean-up-your-linux.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-05-24T04:25:00+00:00"><meta property="article:modified_time" content="2015-05-24T04:25:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="几条命令找出服务器上的垃圾文件"><meta name=twitter:description content="Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！
+当然，如果你的服务器容量是TB、PB级别的请无视此文。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"几条命令找出服务器上的垃圾文件","item":"https://phpgao.github.io/clean-up-your-linux.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"几条命令找出服务器上的垃圾文件","name":"几条命令找出服务器上的垃圾文件","description":"Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！\n当然，如果你的服务器容量是TB、PB级别的请无视此文。\n","keywords":["Linux","command"],"articleBody":"Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！\n当然，如果你的服务器容量是TB、PB级别的请无视此文。\n几个基础命令 du du命令是disk usage的缩写，很明显，今天的主角就是他了！\n# du的帮助文件 du --help 用法：du [选项]... [文件]... 或：du [选项]... --files0-from=F 计算每个文件的磁盘用量，目录则取总用量。 长选项必须使用的参数对于短选项时也是必需使用的。 -a, --all\t输出所有文件的磁盘用量，不仅仅是目录 --apparent-size\t显示表面用量，而并非是磁盘用量；虽然表面用量通常会 小一些，但有时它会因为稀疏文件间的\"洞\"、内部碎 片、非直接引用的块等原因而变大。 -B, --block-size=大小\t使用指定字节数的块 -b, --bytes\t等于--apparent-size --block-size=1 -c, --total\t显示总计信息 -D, --dereference-args\t解除命令行中列出的符号连接 --files0-from=F\t计算文件F 中以NUL 结尾的文件名对应占用的磁盘空间 如果F 的值是\"-\"，则从标准输入读入文件名 -H\t等于--dereference-args (-D) -h, --human-readable\t以可读性较好的方式显示尺寸(例如：1K 234M 2G) --si\t类似-h，但在计算时使用1000 为基底而非1024 -k\t等于--block-size=1K -l, --count-links\t如果是硬连接，就多次计算其尺寸 -m\t等于--block-size=1M -L, --dereference\t找出任何符号链接指示的真正目的地 -P, --no-dereference\t不跟随任何符号链接(默认) -0, --null\t将每个空行视作0 字节而非换行符 -S, --separate-dirs\t不包括子目录的占用量 -s, --summarize\t只分别计算命令列中每个参数所占的总用量 -x, --one-file-system\t跳过处于不同文件系统之上的目录 -X, --exclude-from=文件\t排除与指定文件中描述的模式相符的文件 --exclude=PATTERN\t排除与PATTERN 中描述的模式相符的文件 --max-depth=N\t显示目录总计(与--all 一起使用计算文件) 当N 为指定数值时计算深度为N； --max-depth=0 等于--summarize --time\t显示目录或该目录子目录下所有文件的最后修改时间 --time=WORD\t显示WORD 时间，而非修改时间： atime，access，use，ctime 或status --time-style=样式\t按照指定样式显示时间(样式解释规则同\"date\"命令)： full-iso，long-iso，iso，+FORMAT --help\t显示此帮助信息并退出 --version\t显示版本信息并退出 所显示的数值是来自 --block-size、DU_BLOCK_SIZE、BLOCK_SIZE 及 BLOCKSIZE 环境变量中第一个可用的 SIZE 单位。 否则，默认单位是 1024 字节(或是 512，若设定 POSIXLY_CORRECT 的话)。 SIZE 可以是一个可选的整数，后面跟着以下单位中的一个： KB 1000，K 1024，MB 1000*1000，M 1024*1024，还有 G、T、P、E、Z、Y。 sort 很明显sort就是排序的意思，我们需要对du出的结果排序。\n用法：sort [选项]... [文件]... 或：sort [选项]... --files0-from=F 串联排序所有指定文件并将结果写到标准输出。 长选项必须使用的参数对于短选项时也是必需使用的。 排序选项： -b, --ignore-leading-blanks\t忽略前导的空白区域 -d, --dictionary-order\t只考虑空白区域和字母字符 -f, --ignore-case\t忽略字母大小写 -g, --general-numeric-sort\t按照常规数值排序 -i, --ignore-nonprinting\t只排序可打印字符 -M, --month-sort\t比较 (未知) \"一月\" \"十二月\" 在LC_ALL=C 时为(unknown) `JAN' -h, --human-numeric-sort 使用易读性数字(例如： 2K 1G) -n, --numeric-sort\t根据字符串数值比较 -R, --random-sort\t根据随机hash 排序 --random-source=文件\t从指定文件中获得随机字节 -r, --reverse\t逆序输出排序结果 --sort=WORD\t按照WORD 指定的格式排序： 一般数字-g，高可读性-h，月份-M，数字-n， 随机-R，版本-V -V, --version-sort\t在文本内进行自然版本排序 其他选项： --batch-size=NMERGE\t一次最多合并NMERGE 个输入；如果输入更多 则使用临时文件 -c, --check, --check=diagnose-first\t检查输入是否已排序，若已有序则不进行操作 -C, --check=quiet, --check=silent\t类似-c，但不报告第一个无序行 --compress-program=程序\t使用指定程序压缩临时文件；使用该程序 的-d 参数解压缩文件 --files0-from=文件\t从指定文件读取以NUL 终止的名称，如果该文件被 指定为\"-\"则从标准输入读文件名 -k, --key=位置1[,位置2]\t在位置1 开始一个key，在位置2 终止(默认为行尾) -m, --merge\t合并已排序的文件，不再进行排序 -o, --output=文件\t将结果写入到文件而非标准输出 -s, --stable\t禁用last-resort 比较以稳定比较算法 -S, --buffer-size=大小\t指定主内存缓存大小 -t, --field-separator=分隔符\t使用指定的分隔符代替非空格到空格的转换 -T, --temporary-directory=目录\t使用指定目录而非$TMPDIR 或/tmp 作为 临时目录，可用多个选项指定多个目录 -u, --unique\t配合-c，严格校验排序；不配合-c，则只输出一次排序结果 -z, --zero-terminated\t以0 字节而非新行作为行尾标志 --help\t显示此帮助信息并退出 --version\t显示版本信息并退出 POS 是F[.C][OPTS]，F 代表域编号，C 是域中字母的位置，F 和C 均从1开始计数 如果没有有效的-t 或-b 选项存在，则从前导空格后开始计数字符。OPTS 是一个或多个 由单个字母表示的顺序选项，以此覆盖此key 的全局顺序设置。如果没有指定key 则 将其整个行。 指定的大小可以使用以下单位之一： 内存使用率% 1%，b 1、K 1024 (默认)，M、G、T、P、E、Z、Y 等依此类推。 head head命令的功能是提取目标的前N行！\n用法：head [选项]... [文件]... 将每个指定文件的头10 行显示到标准输出。 如果指定了多于一个文件，在每一段输出前会给出文件名作为文件头。 如果不指定文件，或者文件为\"-\"，则从标准输入读取数据。 长选项必须使用的参数对于短选项时也是必需使用的。 -c, --bytes=[-]K\t显示每个文件的前K 字节内容； 如果附加\"-\"参数，则除了每个文件的最后K字节数据外 显示剩余全部内容 -n, --lines=[-]K\t显示每个文件的前K 行内容； 如果附加\"-\"参数，则除了每个文件的最后K 行外显示 剩余全部内容 -q, --quiet, --silent\t不显示包含给定文件名的文件头 -v, --verbose\t总是显示包含给定文件名的文件头 --help\t显示此帮助信息并退出 --version\t显示版本信息并退出 K 后面可以跟乘号: b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024, GB 1000*1000*1000, G 1024*1024*1024, 对于T, P, E, Z, Y 同样适用。 下面的命令如果看不懂请回来查看帮助\n从根目录开始 先查看根目录下的总大小\n# 进入 / 后在运行 cd / du -sh # 或者直接指明根目录，注意命令差异 du / -sh 3.8G\t. # 查看根目录下每个目录的占用 du --max-depth=1 -ah 34M\t./root 8.0K\t./.pki 1.9G\t./usr 4.0K\t./srv 7.1M\t./bin 3.8G\t. 进一步查找 刚才我们发现 /usr 目录很大，其实很正常。。。但是我们还是进去看一下，到底是什么鬼！\ncd /usr du --max-depth=1 -ah 4.0K\t./etc 300M\t./lib64 35M\t./include 200M\t./src 183M\t./lib 367M\t./local 21M\t./sbin 4.0K\t./uwsgi_temp 4.0K\t./kerberos 4.0K\t./scgi_temp 4.0K\t./games 697M\t./share 12K\t./html 95M\t./bin 44M\t./libexec 1.9G\t. 通过此方法，我们就可以进一步探索服务器上的垃圾文件了！\n 你知道share、local等比较大的文件夹都用什么重要的功能呢？\n 对结果进行排序 为了更好的比较，我们通过管道符对之前的结果用sort进行排序。\n# 正序输出 du --max-depth=1 -a|sort -n # 逆序输出 du --max-depth=1 -a|sort -rn 排序后截取前10 我们继续对刚才的结果进行处理，取前十条\ndu --max-depth=1 -a|sort -rn|head -10 du --max-depth=1 -a|sort -n|tail -10  tail与head相反，取后面的N条数据。\n","wordCount":"439","inLanguage":"en","datePublished":"2015-05-24T04:25:00Z","dateModified":"2015-05-24T04:25:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/clean-up-your-linux.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>几条命令找出服务器上的垃圾文件</h1><div class=post-meta>May 24, 2015&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-05-24_clean-up-your-linux.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>Linux用久了也可能出现很多垃圾文件，下面跟着老高用几行命令揪出来占用系统空间的家伙们！</p><p>当然，如果你的服务器容量是TB、PB级别的请无视此文。</p><h2 id=几个基础命令>几个基础命令<a hidden class=anchor aria-hidden=true href=#几个基础命令>#</a></h2><h3 id=du>du<a hidden class=anchor aria-hidden=true href=#du>#</a></h3><p><code>du</code>命令是disk usage的缩写，很明显，今天的主角就是他了！</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># du的帮助文件</span>
+du --help
+
+用法：du <span style=color:#f92672>[</span>选项<span style=color:#f92672>]</span>... <span style=color:#f92672>[</span>文件<span style=color:#f92672>]</span>...
+　或：du <span style=color:#f92672>[</span>选项<span style=color:#f92672>]</span>... --files0-from<span style=color:#f92672>=</span>F
+计算每个文件的磁盘用量，目录则取总用量。
+
+长选项必须使用的参数对于短选项时也是必需使用的。
+  -a, --all		输出所有文件的磁盘用量，不仅仅是目录
+      --apparent-size	显示表面用量，而并非是磁盘用量；虽然表面用量通常会
+			小一些，但有时它会因为稀疏文件间的<span style=color:#e6db74>&#34;洞&#34;</span>、内部碎
+			片、非直接引用的块等原因而变大。
+  -B, --block-size<span style=color:#f92672>=</span>大小	使用指定字节数的块
+  -b, --bytes		等于--apparent-size --block-size<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span>
+  -c, --total		显示总计信息
+  -D, --dereference-args	解除命令行中列出的符号连接
+      --files0-from<span style=color:#f92672>=</span>F	计算文件F 中以NUL 结尾的文件名对应占用的磁盘空间
+			如果F 的值是<span style=color:#e6db74>&#34;-&#34;</span>，则从标准输入读入文件名
+  -H			等于--dereference-args <span style=color:#f92672>(</span>-D<span style=color:#f92672>)</span>
+  -h, --human-readable	以可读性较好的方式显示尺寸<span style=color:#f92672>(</span>例如：1K 234M 2G<span style=color:#f92672>)</span>
+      --si		类似-h，但在计算时使用1000 为基底而非1024
+  -k			等于--block-size<span style=color:#f92672>=</span>1K
+  -l, --count-links	如果是硬连接，就多次计算其尺寸
+  -m			等于--block-size<span style=color:#f92672>=</span>1M
+  -L, --dereference	找出任何符号链接指示的真正目的地
+  -P, --no-dereference	不跟随任何符号链接<span style=color:#f92672>(</span>默认<span style=color:#f92672>)</span>
+  -0, --null		将每个空行视作0 字节而非换行符
+  -S, --separate-dirs	不包括子目录的占用量
+  -s, --summarize	只分别计算命令列中每个参数所占的总用量
+  -x, --one-file-system		跳过处于不同文件系统之上的目录
+  -X, --exclude-from<span style=color:#f92672>=</span>文件	排除与指定文件中描述的模式相符的文件
+      --exclude<span style=color:#f92672>=</span>PATTERN		排除与PATTERN 中描述的模式相符的文件
+      --max-depth<span style=color:#f92672>=</span>N	显示目录总计<span style=color:#f92672>(</span>与--all 一起使用计算文件<span style=color:#f92672>)</span>
+			当N 为指定数值时计算深度为N；
+			--max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>0</span> 等于--summarize
+      --time		显示目录或该目录子目录下所有文件的最后修改时间
+      --time<span style=color:#f92672>=</span>WORD	显示WORD 时间，而非修改时间：
+			atime，access，use，ctime 或status
+      --time-style<span style=color:#f92672>=</span>样式	按照指定样式显示时间<span style=color:#f92672>(</span>样式解释规则同<span style=color:#e6db74>&#34;date&#34;</span>命令<span style=color:#f92672>)</span>：
+			full-iso，long-iso，iso，+FORMAT
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出
+
+所显示的数值是来自 --block-size、DU_BLOCK_SIZE、BLOCK_SIZE
+及 BLOCKSIZE 环境变量中第一个可用的 SIZE 单位。
+否则，默认单位是 <span style=color:#ae81ff>1024</span> 字节<span style=color:#f92672>(</span>或是 512，若设定 POSIXLY_CORRECT 的话<span style=color:#f92672>)</span>。
+
+SIZE 可以是一个可选的整数，后面跟着以下单位中的一个：
+KB 1000，K 1024，MB 1000*1000，M 1024*1024，还有 G、T、P、E、Z、Y。
+</code></pre></div><h2 id=sort>sort<a hidden class=anchor aria-hidden=true href=#sort>#</a></h2><p>很明显<code>sort</code>就是排序的意思，我们需要对<code>du</code>出的结果排序。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>用法：sort <span style=color:#f92672>[</span>选项<span style=color:#f92672>]</span>... <span style=color:#f92672>[</span>文件<span style=color:#f92672>]</span>...
+　或：sort <span style=color:#f92672>[</span>选项<span style=color:#f92672>]</span>... --files0-from<span style=color:#f92672>=</span>F
+串联排序所有指定文件并将结果写到标准输出。
+
+长选项必须使用的参数对于短选项时也是必需使用的。
+排序选项：
+
+  -b, --ignore-leading-blanks	忽略前导的空白区域
+  -d, --dictionary-order	只考虑空白区域和字母字符
+  -f, --ignore-case		忽略字母大小写
+  -g, --general-numeric-sort	按照常规数值排序
+  -i, --ignore-nonprinting	只排序可打印字符
+  -M, --month-sort		比较 <span style=color:#f92672>(</span>未知<span style=color:#f92672>)</span> &lt; <span style=color:#e6db74>&#34;一月&#34;</span> &lt; ... &lt; <span style=color:#e6db74>&#34;十二月&#34;</span>
+				在LC_ALL<span style=color:#f92672>=</span>C 时为<span style=color:#f92672>(</span>unknown<span style=color:#f92672>)</span> &lt; <span style=color:#e6db74>`</span>JAN<span style=color:#e6db74>&#39; &lt; ... &lt; `DEC&#39;</span>
+  -h, --human-numeric-sort    使用易读性数字<span style=color:#f92672>(</span>例如： 2K 1G<span style=color:#f92672>)</span>
+  -n, --numeric-sort		根据字符串数值比较
+  -R, --random-sort		根据随机hash 排序
+      --random-source<span style=color:#f92672>=</span>文件	从指定文件中获得随机字节
+  -r, --reverse			逆序输出排序结果
+      --sort<span style=color:#f92672>=</span>WORD		按照WORD 指定的格式排序：
+					一般数字-g，高可读性-h，月份-M，数字-n，
+					随机-R，版本-V
+  -V, --version-sort		在文本内进行自然版本排序
+
+其他选项：
+
+      --batch-size<span style=color:#f92672>=</span>NMERGE	一次最多合并NMERGE 个输入；如果输入更多
+					则使用临时文件
+  -c, --check, --check<span style=color:#f92672>=</span>diagnose-first	检查输入是否已排序，若已有序则不进行操作
+  -C, --check<span style=color:#f92672>=</span>quiet, --check<span style=color:#f92672>=</span>silent	类似-c，但不报告第一个无序行
+      --compress-program<span style=color:#f92672>=</span>程序	使用指定程序压缩临时文件；使用该程序
+					的-d 参数解压缩文件
+      --files0-from<span style=color:#f92672>=</span>文件	从指定文件读取以NUL 终止的名称，如果该文件被
+					指定为<span style=color:#e6db74>&#34;-&#34;</span>则从标准输入读文件名
+  -k, --key<span style=color:#f92672>=</span>位置1<span style=color:#f92672>[</span>,位置2<span style=color:#f92672>]</span>	在位置1 开始一个key，在位置2 终止<span style=color:#f92672>(</span>默认为行尾<span style=color:#f92672>)</span>
+  -m, --merge			合并已排序的文件，不再进行排序
+  -o, --output<span style=color:#f92672>=</span>文件		将结果写入到文件而非标准输出
+  -s, --stable			禁用last-resort 比较以稳定比较算法
+  -S, --buffer-size<span style=color:#f92672>=</span>大小	指定主内存缓存大小
+  -t, --field-separator<span style=color:#f92672>=</span>分隔符	使用指定的分隔符代替非空格到空格的转换
+  -T, --temporary-directory<span style=color:#f92672>=</span>目录	使用指定目录而非$TMPDIR 或/tmp 作为
+					临时目录，可用多个选项指定多个目录
+  -u, --unique		配合-c，严格校验排序；不配合-c，则只输出一次排序结果
+  -z, --zero-terminated	以0 字节而非新行作为行尾标志
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出
+
+POS 是F<span style=color:#f92672>[</span>.C<span style=color:#f92672>][</span>OPTS<span style=color:#f92672>]</span>，F 代表域编号，C 是域中字母的位置，F 和C 均从1开始计数
+如果没有有效的-t 或-b 选项存在，则从前导空格后开始计数字符。OPTS 是一个或多个
+由单个字母表示的顺序选项，以此覆盖此key 的全局顺序设置。如果没有指定key 则
+将其整个行。
+
+指定的大小可以使用以下单位之一：
+内存使用率% 1%，b 1、K <span style=color:#ae81ff>1024</span> <span style=color:#f92672>(</span>默认<span style=color:#f92672>)</span>，M、G、T、P、E、Z、Y 等依此类推。
+</code></pre></div><h3 id=head>head<a hidden class=anchor aria-hidden=true href=#head>#</a></h3><p><code>head</code>命令的功能是提取目标的前N行！</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>用法：head <span style=color:#f92672>[</span>选项<span style=color:#f92672>]</span>... <span style=color:#f92672>[</span>文件<span style=color:#f92672>]</span>...
+将每个指定文件的头10 行显示到标准输出。
+如果指定了多于一个文件，在每一段输出前会给出文件名作为文件头。
+如果不指定文件，或者文件为<span style=color:#e6db74>&#34;-&#34;</span>，则从标准输入读取数据。
+
+长选项必须使用的参数对于短选项时也是必需使用的。
+  -c,  --bytes<span style=color:#f92672>=[</span>-<span style=color:#f92672>]</span>K	显示每个文件的前K 字节内容；
+			如果附加<span style=color:#e6db74>&#34;-&#34;</span>参数，则除了每个文件的最后K字节数据外
+			显示剩余全部内容
+  -n, --lines<span style=color:#f92672>=[</span>-<span style=color:#f92672>]</span>K	显示每个文件的前K 行内容；
+			如果附加<span style=color:#e6db74>&#34;-&#34;</span>参数，则除了每个文件的最后K 行外显示
+			剩余全部内容
+  -q, --quiet, --silent	不显示包含给定文件名的文件头
+  -v, --verbose		总是显示包含给定文件名的文件头
+      --help		显示此帮助信息并退出
+      --version		显示版本信息并退出
+
+K 后面可以跟乘号:
+b 512, kB 1000, K 1024, MB 1000*1000, M 1024*1024,
+GB 1000*1000*1000, G 1024*1024*1024, 对于T, P, E, Z, Y 同样适用。
+</code></pre></div><p>下面的命令如果看不懂请回来查看帮助</p><h2 id=从根目录开始>从根目录开始<a hidden class=anchor aria-hidden=true href=#从根目录开始>#</a></h2><p>先查看根目录下的总大小</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>
+<span style=color:#75715e># 进入 / 后在运行</span>
+cd /
+du -sh
+
+<span style=color:#75715e># 或者直接指明根目录，注意命令差异</span>
+du / -sh
+
+3.8G	.
+
+
+<span style=color:#75715e># 查看根目录下每个目录的占用</span>
+du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -ah
+
+34M	./root
+8.0K	./.pki
+1.9G	./usr
+4.0K	./srv
+7.1M	./bin
+3.8G	.
+</code></pre></div><h2 id=进一步查找>进一步查找<a hidden class=anchor aria-hidden=true href=#进一步查找>#</a></h2><p>刚才我们发现 <code>/usr</code> 目录很大，其实很正常。。。但是我们还是进去看一下，到底是什么鬼！</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>cd /usr
+du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -ah
+
+
+4.0K	./etc
+300M	./lib64
+35M	./include
+200M	./src
+183M	./lib
+367M	./local
+21M	./sbin
+4.0K	./uwsgi_temp
+4.0K	./kerberos
+4.0K	./scgi_temp
+4.0K	./games
+697M	./share
+12K	./html
+95M	./bin
+44M	./libexec
+1.9G	.
+</code></pre></div><p>通过此方法，我们就可以进一步探索服务器上的垃圾文件了！</p><blockquote><p>你知道share、local等比较大的文件夹都用什么重要的功能呢？</p></blockquote><h2 id=对结果进行排序>对结果进行排序<a hidden class=anchor aria-hidden=true href=#对结果进行排序>#</a></h2><p>为了更好的比较，我们通过管道符对之前的结果用<code>sort</code>进行排序。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># 正序输出</span>
+du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -a|sort -n
+
+<span style=color:#75715e># 逆序输出</span>
+du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -a|sort -rn
+</code></pre></div><h2 id=排序后截取前10>排序后截取前10<a hidden class=anchor aria-hidden=true href=#排序后截取前10>#</a></h2><p>我们继续对刚才的结果进行处理，取前十条</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -a|sort -rn|head -10
+
+du --max-depth<span style=color:#f92672>=</span><span style=color:#ae81ff>1</span> -a|sort -n|tail -10
+</code></pre></div><blockquote><p>tail与head相反，取后面的N条数据。</p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/linux/>Linux</a></li><li><a href=https://phpgao.github.io/tags/command/>command</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/tpcache_for_typecho.html><span class=title>« Prev Page</span><br><span>缓存插件TpCache-for-Typecho</span></a>
+<a class=next href=https://phpgao.github.io/php-opcache-optimize.html><span class=title>Next Page »</span><br><span>PHP安装配置Opcache加速你的网站</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

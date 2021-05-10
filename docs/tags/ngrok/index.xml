@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ngrok on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ngrok/</link>
+    <description>Recent content in ngrok on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Jun 2016 11:31:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ngrok/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>自己建立ngrok服务器进行内网穿透</title>
+      <link>https://phpgao.github.io/ngrok_how_to.html</link>
+      <pubDate>Tue, 14 Jun 2016 11:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ngrok_how_to.html</guid>
+      <description>&lt;p&gt;随着国内运营商的IP不够用的节奏，我们拨号拿到的IP已经不再是类似&lt;code&gt;122.1.33.22&lt;/code&gt;的公网IP了，而是类似&lt;code&gt;10.1.2.33&lt;/code&gt;的内网IP，换句话说，我们没法直接访问到我们自己家里的路由器了！如何解决这个问题呢？目前成本最低的方式就是使用内网穿透技术了。说白了就是端口转发，即我们需要一台类似反向代理的VPS(&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;老高的VPS使用的搬瓦工&lt;/a&gt;)，把我们的请求转发到内网里，这样就相当于在防火墙内打了个洞，我们的数据能够穿透运营商的限制到达内网设备。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/3882816681.png&#34; alt=&#34;ngrok原理&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;图片来自网络，侵删。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

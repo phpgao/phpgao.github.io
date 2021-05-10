@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>substitution on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/substitution/</link>
+    <description>Recent content in substitution on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Aug 2014 08:35:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/substitution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>php不使用中间变量交换两个变量的值</title>
+      <link>https://phpgao.github.io/php_substitution_of_variables.html</link>
+      <pubDate>Wed, 13 Aug 2014 08:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_substitution_of_variables.html</guid>
+      <description>方法一：
+$a = $a^$b;$b = $b^$a;$a = $a^$b; 这就是位运算带给我们的奇妙之处！（这种方法只适合于int型和string型，而且位数不能超过8位）
+方法二：
+list($var1, $var2) = array($var2, $var1); </description>
+    </item>
+    
+  </channel>
+</rss>

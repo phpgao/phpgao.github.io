@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>xware on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/xware/</link>
+    <description>Recent content in xware on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Mar 2017 15:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/xware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>树莓派安装记录-usb-samba-aria2-xware-apt-get</title>
+      <link>https://phpgao.github.io/raspberry_setup_tool.html</link>
+      <pubDate>Wed, 15 Mar 2017 15:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/raspberry_setup_tool.html</guid>
+      <description>&lt;p&gt;老高的R6300v2自从刷了梅林后，一直在挂硬盘做迅雷离线下载。眼看着夏天到了，还是给路由器减减压，于是祭出老早买的树莓派2B，再次踏上折腾之路。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

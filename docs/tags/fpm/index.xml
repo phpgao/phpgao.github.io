@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>fpm on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/fpm/</link>
+    <description>Recent content in fpm on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 18 Sep 2014 06:26:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/fpm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编译PHP5.6</title>
+      <link>https://phpgao.github.io/compile_php.html</link>
+      <pubDate>Thu, 18 Sep 2014 06:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_php.html</guid>
+      <description>准备 PHP的安装最头疼的就是因为某些类库没有安装而报错，所以编译前请确保以下包已安装
+yum groupinstall &amp;#34;development tools&amp;#34; yum install -y gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libpng libpng-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses curl curl-devel openssl-devel gdbm-devel db4-devel libXpm-devel libX11-devel gd-devel gmp-devel readline-devel libxslt-devel expat-devel xmlrpc-c xmlrpc-c-devel 编译 高大上的编译选项
+./configure \ --prefix=/usr/local/php \ --enable-fpm \ --with-curl \ --with-openssl \ --enable-mbregex \ --with-mysql \ --with-mysqli \ --with-mysql-sock \ --enable-pdo \ --with-pdo-mysql \ --with-pdo-pgsql \ --with-pdo-sqlite \ --enable-mysqlnd \ --with-gd \ --enable-gd-native-ttf \ --enable-exif \ --with-jpeg-dir=/usr/local/jpeg \ --with-png-dir=/usr/local/png \ --with-freetype-dir=/usr/local/freetype \ --enable-gd-jis-conv \ --with-gettext \ --with-zlib \ --enable-zip \ --with-bz2 \ --disable-fileinfo \ --enable-xmlreader \ --enable-xmlwriter \ --with-xmlrpc \ --enable-mbstring \ --enable-inline-optimization \ 20150524更新 5.</description>
+    </item>
+    
+  </channel>
+</rss>

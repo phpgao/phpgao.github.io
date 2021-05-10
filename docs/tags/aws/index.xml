@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>aws on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/aws/</link>
+    <description>Recent content in aws on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Jan 2015 08:08:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>centos-awstats简单安装教程</title>
+      <link>https://phpgao.github.io/centos_awstats.html</link>
+      <pubDate>Fri, 30 Jan 2015 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_awstats.html</guid>
+      <description>&lt;p&gt;本文关键字:awstats linux centos nginx&lt;/p&gt;
+&lt;p&gt;Awstats官网：&lt;a href=&#34;http://www.awstats.org/&#34;&gt;http://www.awstats.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;发行协议：GNU GPL&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Awstats is short for Advanced Web statistic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Awstats的功能老高就不多介绍了，总之老高觉得比百度站长好用太多，不过在安装此软件过程中老高也遇到了不少坑，网上的安装教程看的人眼花缭乱，针对centos的教程更是无法直视，于是造成了此篇文章诞生，看完你也许会觉得安装Awstats确实不难。&lt;/p&gt;
+&lt;p&gt;再介绍之前，为了给大家一个宏观的概念，我给大家梳理了以下安装过程。一共有两条主线任务：配置日志；配置Nginx服务器。前者为后者的展示提供数据，后者负责通知前者计算数据。&lt;/p&gt;
+&lt;p&gt;注意：以下内容以配置老高的域名为例。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

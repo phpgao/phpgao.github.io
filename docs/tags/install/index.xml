@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>install on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/install/</link>
+    <description>Recent content in install on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 26 Jun 2015 05:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MAC下快速安装PHP</title>
+      <link>https://phpgao.github.io/mac-install-php.html</link>
+      <pubDate>Fri, 26 Jun 2015 05:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac-install-php.html</guid>
+      <description>请安装Homebrew先
+# 添加源 brew tap josegonzalez/homebrew-php # 一键安装php各个版本 brew install php54 php54-mcrypt brew install php55 php55-xdebug brew install php56 </description>
+    </item>
+    
+    <item>
+      <title>shadowsocks一键安装脚本</title>
+      <link>https://phpgao.github.io/ss_onekey_installation.html</link>
+      <pubDate>Fri, 24 Apr 2015 16:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss_onekey_installation.html</guid>
+      <description>&lt;p&gt;摘自&lt;strong&gt;搬瓦工&lt;/strong&gt;后台，脚本简洁明了，请自取。&lt;/p&gt;
+&lt;p&gt;一键安装需求：&lt;/p&gt;
+&lt;p&gt;centos6 + root用户。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记一次centos最小安装</title>
+      <link>https://phpgao.github.io/centos_minimal.html</link>
+      <pubDate>Wed, 28 May 2014 03:52:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_minimal.html</guid>
+      <description>基本流程吧啊，以后可能会更新，以6.5为例：
+下载安装必要文件，比如虚拟机virtualbox,vm等，还有镜像i386或者x86_64的，按需下载吧
+设置虚拟机，开始安装，推荐使用全英文安装，速度和稳定性会好一点
+完毕后网卡不会自动启动，需要手动开启
+vi /etc/sysconfig/network-scripts/ifcfg-eth0DEVICE=eth0HWADDR=00:0C:29:64:A5:E3TYPE=EthernetUUID=ff171f7b-3bc5-465d-a5ba-287e200f6da6ONBOOT=yesNM_CONTROLLED=noBOOTPROTO=dhcp 然后
+/etc/init.d/network start 现在看看ifconfig里有没有IP信息
+有了IP就能上网了，下面就是各种yum了，有兴趣的TX可以执行一下这个优化脚本</description>
+    </item>
+    
+  </channel>
+</rss>

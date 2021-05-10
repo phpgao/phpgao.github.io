@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>server on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/server/</link>
+    <description>Recent content in server on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Aug 2019 14:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次网站升级</title>
+      <link>https://phpgao.github.io/web_server_update.html</link>
+      <pubDate>Sat, 10 Aug 2019 14:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/web_server_update.html</guid>
+      <description>&lt;p&gt;老高于今年(2019)初收到了搬瓦工要停止OPENVZ的旧版服务器，同时列表中auto renew的选项被强制置灰。9.9刀的绝版服务器就这样被印上了大大的&lt;code&gt;拆&lt;/code&gt;字，而且还是两台！😂&lt;/p&gt;
+&lt;p&gt;跑数据库的那台机器4月到期，于是把数据库先迁移了，跑在一台内存1G的机器上，由于上面还跑了一个git服务和ss，剩余内存也就400MB左右。下来就剩web服务器了，一看8月到期，先就这样吧！&lt;/p&gt;
+&lt;p&gt;于是就一晃到了今天。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos搭建GIT服务器</title>
+      <link>https://phpgao.github.io/build-git-server.html</link>
+      <pubDate>Mon, 14 Mar 2016 05:36:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/build-git-server.html</guid>
+      <description>&lt;h2 id=&#34;server&#34;&gt;server&lt;/h2&gt;
+&lt;p&gt;1.首先安装git&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;yum install git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>SS公共服务器的基本安全措施</title>
+      <link>https://phpgao.github.io/ss-public-server.html</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-public-server.html</guid>
+      <description>&lt;p&gt;老高以前免费分享的ss服务器 &lt;a href=&#34;https://blog.phpgao.com/try_shadowsocks_via_qrcode.html&#34;&gt;免费shadowsocks&lt;/a&gt; ，被攻击了。。。后台检测到有大量的垃圾邮件，是我大意了，忘记了给做一些保护措施，赶紧补上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>新装虚拟机记录一下</title>
+      <link>https://phpgao.github.io/virtual_machine_record.html</link>
+      <pubDate>Sat, 11 Oct 2014 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtual_machine_record.html</guid>
+      <description>镜像下载 centos官方 Aliyun Open Source Mirror Site 网易开源镜像站
+虚拟化工具 免费的virtualbox，下载地址 KVM Xen
+安装 记一次centos最小安装 centos7.0 的最小化安装
+优化 分享一个centos6.*优化脚本 CentOS精简命令
+后续 关闭防火墙和SELinux # 关闭防火墙service iptables stop chkconfig iptables offchkconfig ip6tables off# SELinuxvi /etc/selinux/config# changeSELINUX=disabled#网卡------vi /etc/sysconfig/network-scripts/ifcfg-eth0TYPE=Ethernet# changeONBOOT=yesNM_CONTROLLED=yes# changeBOOTPROTO=dhcporBOOTPROTO=static# 加上# 静态IPIPADDR=192.168.1.107# 设置子网NETMASK=255.255.255.0# 设置网关GATEWAY=192.168.1.1# 设置DNSDNS1=114.114.114.114IPV6INIT=noUSERCTL=no------service network restartchkconfig network on------# 全局关闭IPv6vi /etc/sysctl.</description>
+    </item>
+    
+  </channel>
+</rss>

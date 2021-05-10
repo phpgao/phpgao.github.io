@@ -1,0 +1,215 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>nginx配置一篇足矣 | 老高的技术博客</title><meta name=keywords content="PHP,nginx"><meta name=description content="nginx的一些配置记录"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/nginx_config.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="nginx配置一篇足矣"><meta property="og:description" content="nginx的一些配置记录"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/nginx_config.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2017-10-18T07:58:00+00:00"><meta property="article:modified_time" content="2017-10-18T07:58:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="nginx配置一篇足矣"><meta name=twitter:description content="nginx的一些配置记录"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"nginx配置一篇足矣","item":"https://phpgao.github.io/nginx_config.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"nginx配置一篇足矣","name":"nginx配置一篇足矣","description":"nginx的一些配置记录\n","keywords":["PHP","nginx"],"articleBody":"nginx的一些配置记录\n全局变量 $args //请求中的的参数名，即“?”后面的arg_name=arg_value形式的arg_name $arg_PARAMETER //这是参数的一个匹配模式,PARAMETER为具体的参数名,$arg_PARAMETER就表示获取具体的参数值,例如上面的$arg_name就是获取url中name的值 $is_args //判断url是否带参数，如果带，则返回一个？,否则返回一个空字符串 $http_user_agent //获取的是客户端访问代理的类型,请求头中的信息 $sent_http_content_type //获取的是http响应头中content_type的值 $sent_http_content_length //获取的是http响应头重的content_length的值 $request_filename //该变量获取的是请求的文件在linux服务器上的完整的绝对路径 $request_method //该表示获取的是http请求的方法 $request_uri //该变量表示的原始请求的uri，包括参数。所谓原始请求就是即使在内部做了重定向之后也不会变化 $uri //获取的是当前请求的uri，不包括参数 $content_length //获取的是http请求头中Content-Length的值 $content_type //获取的是http请求头中的Content-Type字段，不过这里也没显示。。。 $document_root //获取的是请求url的文件所在的目录路径 $document_uri //当前请求的uri，从上面的信息来看,和uri的效果是一样的 $remote_addr //获取的是客户端的ip地址,这里为什么是10.0.10.11呢，因为我是在本机上用curl测试的，即使客户端也是服务器 $remote_port //获取客户端的访问端口，这个端口是随机的 $remote_user //获取客户端的认证用户信息，这里因为没有用认证，所谓显示为空 $server_protocol //表示服务器端想客户端发送响应的协议 $server_addr //服务器的地址 $server_name //客户端访问服务端的域名，即url中的域名 $server_port //服务器端做出响应的端口号 $binary_remote_addr //显示二进制的客户端地址 $host //和server_name一样，表示的是域名 $hostname //表示服务器端的主机名 $proxy_add_x_forwarded_for //获取的是客户端的真实ip地址 $proxy_host //该变量获取的是upstream的上游代理名称，例如upstream backend $proxy_port //该变量表示的是要代理到的端口 $proxy_protocol_addr //代理头部中客户端的ip地址，或者是一个空的字符串 $upstream_addr //代理到上游的服务器地址信息 $upstream_cache_status //proxy的缓存状态，例如这里第一次访问为MISS，第二次访问时为HIT $upstream_response_length //上游服务器响应报文的长度 $upstream_response_time //上游服务器响应的时间 $upstream_status //上游服务器响应的状态码 $scheme //表示的是使用http的访问协议 http or https $limit_rate //表示当前连接的限速是多少，0表示无限制 $query_string //表示的是查询字符串，也就是url中的参数，和$args一样 $realpath_root //表示的是请求页面的真实所在目录的路径 和$document_root是一样的 http 老高在默认的nginx主配置中加入了时区，目的是输出日志时区默认为东八区。 同时加入了空主机头，防止直接用IP访问网站。\nuser nginx; worker_processes 1; # timezone env TZ=Asia/Shanghai; error_log /var/log/nginx/error.log warn; pid /var/run/nginx.pid; events { worker_connections 1024; } http { include /etc/nginx/mime.types; default_type application/octet-stream; log_format main '$remote_addr - $remote_user [$time_local] \"$request\" ' '$status $body_bytes_sent \"$http_referer\" ' '\"$http_user_agent\" \"$http_x_forwarded_for\"'; access_log /var/log/nginx/access.log main; sendfile on; #tcp_nopush on; keepalive_timeout 65; #gzip on; include /etc/nginx/conf.d/*.conf; server { listen 80 default; return 500; } } server server { listen 8080; server_name laogao.com; root /tmp; index index.php index.html index.htm; location / { autoindex on; autoindex_localtime on; } } 缓存 伪静态 PHP 如何正确配置Nginx+PHP\nserver { listen 80; server_name foo.com; root /path; index index.html index.htm index.php; location / { try_files $uri $uri/ /index.php$is_args$args; } location ~ \\.php$ { try_files $uri =404; include fastcgi.conf; fastcgi_pass 127.0.0.1:9000; } } location 匹配规则 server { listen 8080; server_name laogao.com; root /tmp; index index.php index.html index.htm; # /匹配所有请求，所以其他请求如果都不匹配，就会匹配到这里 \t# PHP常用 \tlocation / { return 200 \"/\"; } # 严格匹配，不区分大小写，如果匹配到此块，立即处理请求 \t# 此处只匹配 /laogao ，加上一个\"/\"都算不一样 \t# curl -v laogao.com:8080/ \tlocation = /laogao { return 200 \"/laogao\"; } # 区分大小写匹配，匹配后继续搜索，直到没有匹配为止 \t# 如果有相同的区块，则谁先出现最后匹配到谁 \tlocation ~ /NIhao { return 200 \"NIhao\"; } # 叹号表示不匹配 \tlocation !~ /NIhao { return 200 \"NIhao\"; } # 不区分大小写匹配，匹配后继续搜索，直到没有匹配为止 \t# 如果有相同的区块，则谁先出现最后匹配到谁 \t# 以下代码匹配图片请求 \tlocation ~* \\.(jpe?g|png|gif|bmp)$ { valid_referers none blocked *.phpgao.com server_names ~\\.google\\. ~\\.baidu\\.; if ($invalid_referer) { return 403 'hehe'; } } # 普通匹配，匹配到后停止搜索，很适合做访问控制 \t# 此处匹配 http://laogao.com:8080/images/ \t# 此处不匹配 http://laogao.com:8080/images \tlocation ^~ /images/ { return 200 \"images\"; } } 匹配顺序 nginx doc\n  Directives with the “=” prefix that match the query exactly. If found, searching stops.\n  All remaining directives with conventional strings. If this match used the “^~” prefix, searching stops.\n  Regular expressions, in the order they are defined in the configuration file.\n  If #3 yielded a match, that result is used. Otherwise, the match from #2 is used.\n  = 如果直接匹配，搜索停止，匹配请求。\n  剩下的区块的常规字符串，最长的匹配，如果遇到^~，搜索停止，匹配请求。\n  剩下的正则匹配区块按出现顺序匹配。\n  如果在剩下的区块中出现一个匹配，处理请求，如果都没有匹配，就用第二条的匹配。\n  防爬虫防盗链 防爬虫 可以将下面的代码保存在/etc/nginx/agent_deny.conf，然后在server段中加入include agent_deny.conf;即可完成使命。\nif ($http_user_agent ~* (Scrapy|Curl|HttpClient)) { return 403; } #禁止指定UA及UA为空的访问 if ($http_user_agent ~ \"FeedDemon|JikeSpider|Indy Library|Alexa Toolbar|AskTbFXTV|AhrefsBot|CrawlDaddy|CoolpadWebkit|Java|Feedly|UniversalFeedParser|ApacheBench|Microsoft URL Control|Swiftbot|ZmEu|oBot|jaunty|Python-urllib|lightDeckReports Bot|YYSpider|DigExt|YisouSpider|HttpClient|MJ12bot|heritrix|EasouSpider|Ezooms|^$\" ) { return 403; } #禁止非GET|HEAD|POST方式的抓取 if ($request_method !~ ^(GET|HEAD|POST)$) { return 403; } 防盗链 匹配图片请求，然后判断referer，如果为空，phpgao.com域名，Google或百度爬虫，则放行，否则return 403。如果强硬一点，none可以去掉。\nlocation ~* \\.(gif|jpe?g|png|swf|flv|rar|zip|bmp|mp3|swf)$ { valid_referers none blocked *.phpgao.com server_names ~\\.google\\. ~\\.baidu\\.; if ($invalid_referer) { return 403 'hehe'; } } 列出目录 location / { autoindex on; autoindex_localtime on; } location / { autoindex on; autoindex_localtime on; # 相当于创建了一个软连接 \talias /home/wwwroot/xxx; } 跳转 # 80端口重定向到443 server{ listen 80; server_name blog.phpgao.com; rewrite ^(.*)$ https://$host$1 permanent; } # www指向blog server{ listen 80; server_name www.phpgao.com phpgao.com; return 301 https://blog.phpgao.com$request_uri; } SSL Let’s encryption 防注入 日志 goaccess\ngoaccess phpgao.access.log -da --log-format=COMBINED  1.html 参考\nNginx系列教程之四：Nginx常用变量汇总及测试 nginx配置location总结及rewrite规则写法\n","wordCount":"494","inLanguage":"en","datePublished":"2017-10-18T07:58:00Z","dateModified":"2017-10-18T07:58:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/nginx_config.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>nginx配置一篇足矣</h1><div class=post-meta>October 18, 2017&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2017-10-18_nginx_config.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>nginx的一些配置记录</p><h2 id=全局变量>全局变量<a hidden class=anchor aria-hidden=true href=#全局变量>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>$args //请求中的的参数名，即“?”后面的arg_name=arg_value形式的arg_name
+$arg_PARAMETER //这是参数的一个匹配模式,PARAMETER为具体的参数名,$arg_PARAMETER就表示获取具体的参数值,例如上面的$arg_name就是获取url中name的值
+$is_args //判断url是否带参数，如果带，则返回一个？,否则返回一个空字符串
+
+$http_user_agent //获取的是客户端访问代理的类型,请求头中的信息
+$sent_http_content_type //获取的是http响应头中content_type的值
+$sent_http_content_length //获取的是http响应头重的content_length的值
+
+$request_filename  //该变量获取的是请求的文件在linux服务器上的完整的绝对路径
+$request_method  //该表示获取的是http请求的方法
+$request_uri  //该变量表示的原始请求的uri，包括参数。所谓原始请求就是即使在内部做了重定向之后也不会变化
+$uri  //获取的是当前请求的uri，不包括参数
+$content_length  //获取的是http请求头中Content-Length的值
+$content_type   //获取的是http请求头中的Content-Type字段，不过这里也没显示。。。
+$document_root   //获取的是请求url的文件所在的目录路径
+$document_uri   //当前请求的uri，从上面的信息来看,和uri的效果是一样的
+$remote_addr  //获取的是客户端的ip地址,这里为什么是10.0.10.11呢，因为我是在本机上用curl测试的，即使客户端也是服务器
+$remote_port  //获取客户端的访问端口，这个端口是随机的
+$remote_user  //获取客户端的认证用户信息，这里因为没有用认证，所谓显示为空
+$server_protocol  //表示服务器端想客户端发送响应的协议
+$server_addr  //服务器的地址
+$server_name  //客户端访问服务端的域名，即url中的域名
+$server_port //服务器端做出响应的端口号
+$binary_remote_addr  //显示二进制的客户端地址
+$host  //和server_name一样，表示的是域名
+$hostname  //表示服务器端的主机名
+
+$proxy_add_x_forwarded_for //获取的是客户端的真实ip地址
+$proxy_host //该变量获取的是upstream的上游代理名称，例如upstream backend 
+$proxy_port   //该变量表示的是要代理到的端口
+$proxy_protocol_addr  //代理头部中客户端的ip地址，或者是一个空的字符串
+$upstream_addr  //代理到上游的服务器地址信息
+$upstream_cache_status    //proxy的缓存状态，例如这里第一次访问为MISS，第二次访问时为HIT
+$upstream_response_length  //上游服务器响应报文的长度
+$upstream_response_time  //上游服务器响应的时间
+$upstream_status  //上游服务器响应的状态码
+
+$scheme  //表示的是使用http的访问协议 http or https
+$limit_rate  //表示当前连接的限速是多少，0表示无限制
+$query_string  //表示的是查询字符串，也就是url中的参数，和$args一样
+$realpath_root  //表示的是请求页面的真实所在目录的路径  和$document_root是一样的
+</code></pre></div><h2 id=http>http<a hidden class=anchor aria-hidden=true href=#http>#</a></h2><p>老高在默认的nginx主配置中加入了时区，目的是输出日志时区默认为东八区。
+同时加入了空主机头，防止直接用IP访问网站。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>user  nginx;
+worker_processes  1;
+
+# timezone
+env TZ=Asia/Shanghai;
+
+error_log  /var/log/nginx/error.log warn;
+pid        /var/run/nginx.pid;
+
+
+events {
+    worker_connections  1024;
+}
+
+
+http {
+    include       /etc/nginx/mime.types;
+    default_type  application/octet-stream;
+
+    log_format  main  &#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;
+                      &#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;
+                      &#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34;&#39;;
+
+    access_log  /var/log/nginx/access.log  main;
+
+    sendfile        on;
+    #tcp_nopush     on;
+
+    keepalive_timeout  65;
+
+    #gzip  on;
+
+    include /etc/nginx/conf.d/*.conf;
+
+    server {
+        listen 80 default;
+        return 500;
+    }
+}
+</code></pre></div><h2 id=server>server<a hidden class=anchor aria-hidden=true href=#server>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> {
+
+	<span style=color:#f92672>listen</span> <span style=color:#ae81ff>8080</span>;
+	<span style=color:#f92672>server_name</span> <span style=color:#e6db74>laogao.com</span>;
+	<span style=color:#f92672>root</span> <span style=color:#e6db74>/tmp</span>;
+	<span style=color:#f92672>index</span> <span style=color:#e6db74>index.php</span> <span style=color:#e6db74>index.html</span> <span style=color:#e6db74>index.htm</span>;
+	<span style=color:#f92672>location</span> <span style=color:#e6db74>/</span> {
+		<span style=color:#f92672>autoindex</span> <span style=color:#66d9ef>on</span>;
+		<span style=color:#f92672>autoindex_localtime</span> <span style=color:#66d9ef>on</span>;
+	}
+}
+
+</code></pre></div><h2 id=缓存>缓存<a hidden class=anchor aria-hidden=true href=#缓存>#</a></h2><h2 id=伪静态>伪静态<a hidden class=anchor aria-hidden=true href=#伪静态>#</a></h2><h2 id=php>PHP<a hidden class=anchor aria-hidden=true href=#php>#</a></h2><p><a href=https://huoding.com/2013/10/23/290>如何正确配置Nginx+PHP</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> {
+    <span style=color:#f92672>listen</span> <span style=color:#ae81ff>80</span>;
+    <span style=color:#f92672>server_name</span> <span style=color:#e6db74>foo.com</span>;
+
+    <span style=color:#f92672>root</span> <span style=color:#e6db74>/path</span>;
+    <span style=color:#f92672>index</span> <span style=color:#e6db74>index.html</span> <span style=color:#e6db74>index.htm</span> <span style=color:#e6db74>index.php</span>;
+
+    <span style=color:#f92672>location</span> <span style=color:#e6db74>/</span> {
+        <span style=color:#f92672>try_files</span> $uri $uri/ <span style=color:#e6db74>/index.php</span>$is_args$args;
+    }
+
+    <span style=color:#f92672>location</span> ~ <span style=color:#e6db74>\.php$</span> {
+        <span style=color:#f92672>try_files</span> $uri =<span style=color:#ae81ff>404</span>;
+
+        <span style=color:#f92672>include</span> <span style=color:#e6db74>fastcgi.conf</span>;
+        <span style=color:#f92672>fastcgi_pass</span> 127.0.0.1:<span style=color:#ae81ff>9000</span>;
+    }
+}
+</code></pre></div><h2 id=location>location<a hidden class=anchor aria-hidden=true href=#location>#</a></h2><h3 id=匹配规则>匹配规则<a hidden class=anchor aria-hidden=true href=#匹配规则>#</a></h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>server</span> {
+
+	<span style=color:#f92672>listen</span> <span style=color:#ae81ff>8080</span>;
+	<span style=color:#f92672>server_name</span> <span style=color:#e6db74>laogao.com</span>;
+	<span style=color:#f92672>root</span> <span style=color:#e6db74>/tmp</span>;
+	<span style=color:#f92672>index</span> <span style=color:#e6db74>index.php</span> <span style=color:#e6db74>index.html</span> <span style=color:#e6db74>index.htm</span>;
+	<span style=color:#75715e># /匹配所有请求，所以其他请求如果都不匹配，就会匹配到这里
+</span><span style=color:#75715e></span>	<span style=color:#75715e># PHP常用
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> <span style=color:#e6db74>/</span> {
+		<span style=color:#f92672>return</span> <span style=color:#ae81ff>200</span> <span style=color:#e6db74>&#34;/&#34;</span>;
+	}
+
+	<span style=color:#75715e># 严格匹配，不区分大小写，如果匹配到此块，立即处理请求
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 此处只匹配 /laogao ，加上一个&#34;/&#34;都算不一样
+</span><span style=color:#75715e></span>	<span style=color:#75715e># curl -v laogao.com:8080/
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> = <span style=color:#e6db74>/laogao</span> {
+
+		<span style=color:#f92672>return</span> <span style=color:#ae81ff>200</span> <span style=color:#e6db74>&#34;/laogao&#34;</span>;
+	}
+
+	<span style=color:#75715e># 区分大小写匹配，匹配后继续搜索，直到没有匹配为止
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 如果有相同的区块，则谁先出现最后匹配到谁
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> ~ <span style=color:#e6db74>/NIhao</span> {
+
+		<span style=color:#f92672>return</span> <span style=color:#ae81ff>200</span> <span style=color:#e6db74>&#34;NIhao&#34;</span>;
+	}
+	<span style=color:#75715e># 叹号表示不匹配
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> <span style=color:#e6db74>!~</span> <span style=color:#e6db74>/NIhao</span> {
+
+		<span style=color:#f92672>return</span> <span style=color:#ae81ff>200</span> <span style=color:#e6db74>&#34;NIhao&#34;</span>;
+	}
+
+	<span style=color:#75715e># 不区分大小写匹配，匹配后继续搜索，直到没有匹配为止
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 如果有相同的区块，则谁先出现最后匹配到谁
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 以下代码匹配图片请求
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> ~<span style=color:#e6db74>*</span> <span style=color:#e6db74>\.(jpe?g|png|gif|bmp)</span>$ {
+		<span style=color:#f92672>valid_referers</span> <span style=color:#e6db74>none</span> <span style=color:#e6db74>blocked</span> <span style=color:#e6db74>*.phpgao.com</span> <span style=color:#e6db74>server_names</span> ~<span style=color:#e6db74>\.google\.</span> ~<span style=color:#e6db74>\.baidu\.;</span>
+		<span style=color:#e6db74>if</span> <span style=color:#e6db74>(</span>$invalid_referer<span style=color:#e6db74>)</span> {
+			<span style=color:#f92672>return</span> <span style=color:#ae81ff>403</span> <span style=color:#e6db74>&#39;hehe&#39;</span>;
+		}
+	}
+
+	<span style=color:#75715e># 普通匹配，匹配到后停止搜索，很适合做访问控制
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 此处匹配 http://laogao.com:8080/images/
+</span><span style=color:#75715e></span>	<span style=color:#75715e># 此处不匹配 http://laogao.com:8080/images
+</span><span style=color:#75715e></span>	<span style=color:#f92672>location</span> <span style=color:#e6db74>^~</span> <span style=color:#e6db74>/images/</span> {
+		<span style=color:#f92672>return</span> <span style=color:#ae81ff>200</span> <span style=color:#e6db74>&#34;images&#34;</span>;
+	}
+
+}
+</code></pre></div><h3 id=匹配顺序>匹配顺序<a hidden class=anchor aria-hidden=true href=#匹配顺序>#</a></h3><p><a href=http://nginx.org/en/docs/http/ngx_http_core_module.html#location>nginx doc</a></p><ol><li><p>Directives with the &ldquo;=&rdquo; prefix that match the query exactly. If found, searching stops.</p></li><li><p>All remaining directives with conventional strings. If this match used the &ldquo;^~&rdquo; prefix, searching stops.</p></li><li><p>Regular expressions, in the order they are defined in the configuration file.</p></li><li><p>If #3 yielded a match, that result is used. Otherwise, the match from #2 is used.</p></li><li><p><code>=</code> 如果直接匹配，搜索停止，匹配请求。</p></li><li><p>剩下的区块的常规字符串，最长的匹配，如果遇到<code>^~</code>，搜索停止，匹配请求。</p></li><li><p>剩下的正则匹配区块按出现顺序匹配。</p></li><li><p>如果在剩下的区块中出现一个匹配，处理请求，如果都没有匹配，就用第二条的匹配。</p></li></ol><h2 id=防爬虫防盗链>防爬虫防盗链<a hidden class=anchor aria-hidden=true href=#防爬虫防盗链>#</a></h2><h3 id=防爬虫>防爬虫<a hidden class=anchor aria-hidden=true href=#防爬虫>#</a></h3><p>可以将下面的代码保存在<code>/etc/nginx/agent_deny.conf</code>，然后在server段中加入<code>include agent_deny.conf;</code>即可完成使命。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>if</span> <span style=color:#e6db74>(</span>$http_user_agent ~<span style=color:#e6db74>*</span> <span style=color:#e6db74>(Scrapy|Curl|HttpClient))</span>
+{
+     <span style=color:#f92672>return</span> <span style=color:#ae81ff>403</span>;
+}
+<span style=color:#75715e>#禁止指定UA及UA为空的访问
+</span><span style=color:#75715e></span><span style=color:#66d9ef>if</span> <span style=color:#e6db74>(</span>$http_user_agent ~ <span style=color:#e6db74>&#34;FeedDemon|JikeSpider|Indy</span> <span style=color:#e6db74>Library|Alexa</span> <span style=color:#e6db74>Toolbar|AskTbFXTV|AhrefsBot|CrawlDaddy|CoolpadWebkit|Java|Feedly|UniversalFeedParser|ApacheBench|Microsoft</span> <span style=color:#e6db74>URL</span> <span style=color:#e6db74>Control|Swiftbot|ZmEu|oBot|jaunty|Python-urllib|lightDeckReports</span> <span style=color:#e6db74>Bot|YYSpider|DigExt|YisouSpider|HttpClient|MJ12bot|heritrix|EasouSpider|Ezooms|^</span>$&#34; <span style=color:#e6db74>)</span>
+{
+     <span style=color:#f92672>return</span> <span style=color:#ae81ff>403</span>;
+}
+<span style=color:#75715e>#禁止非GET|HEAD|POST方式的抓取
+</span><span style=color:#75715e></span><span style=color:#66d9ef>if</span> <span style=color:#e6db74>(</span>$request_method <span style=color:#e6db74>!~</span> <span style=color:#e6db74>^(GET|HEAD|POST)</span>$<span style=color:#e6db74>)</span>
+{
+    <span style=color:#f92672>return</span> <span style=color:#ae81ff>403</span>;
+}
+</code></pre></div><h3 id=防盗链>防盗链<a hidden class=anchor aria-hidden=true href=#防盗链>#</a></h3><p>匹配图片请求，然后判断referer，如果为空，phpgao.com域名，Google或百度爬虫，则放行，否则return 403。如果强硬一点，none可以去掉。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>location</span> ~<span style=color:#e6db74>*</span> <span style=color:#e6db74>\.(gif|jpe?g|png|swf|flv|rar|zip|bmp|mp3|swf)</span>$ {
+    <span style=color:#f92672>valid_referers</span> <span style=color:#e6db74>none</span> <span style=color:#e6db74>blocked</span> <span style=color:#e6db74>*.phpgao.com</span> <span style=color:#e6db74>server_names</span> ~<span style=color:#e6db74>\.google\.</span> ~<span style=color:#e6db74>\.baidu\.;</span>
+    <span style=color:#e6db74>if</span> <span style=color:#e6db74>(</span>$invalid_referer<span style=color:#e6db74>)</span> {
+        <span style=color:#f92672>return</span> <span style=color:#ae81ff>403</span> <span style=color:#e6db74>&#39;hehe&#39;</span>;
+    }
+}
+</code></pre></div><h2 id=列出目录>列出目录<a hidden class=anchor aria-hidden=true href=#列出目录>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#66d9ef>location</span> <span style=color:#e6db74>/</span> {
+
+	<span style=color:#f92672>autoindex</span> <span style=color:#66d9ef>on</span>;
+	<span style=color:#f92672>autoindex_localtime</span> <span style=color:#66d9ef>on</span>;
+}
+
+<span style=color:#66d9ef>location</span> <span style=color:#e6db74>/</span> {
+	<span style=color:#f92672>autoindex</span> <span style=color:#66d9ef>on</span>;
+	<span style=color:#f92672>autoindex_localtime</span> <span style=color:#66d9ef>on</span>;
+	<span style=color:#75715e># 相当于创建了一个软连接
+</span><span style=color:#75715e></span>	<span style=color:#f92672>alias</span> <span style=color:#e6db74>/home/wwwroot/xxx</span>;
+}
+</code></pre></div><h2 id=跳转>跳转<a hidden class=anchor aria-hidden=true href=#跳转>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-nginx data-lang=nginx><span style=color:#75715e># 80端口重定向到443
+</span><span style=color:#75715e></span><span style=color:#66d9ef>server{</span>
+    <span style=color:#e6db74>listen</span> <span style=color:#ae81ff>80</span>;
+    <span style=color:#66d9ef>server_name</span> <span style=color:#e6db74>blog.phpgao.com</span>;
+    <span style=color:#66d9ef>rewrite</span> <span style=color:#e6db74>^(.*)</span>$  <span style=color:#e6db74>https://</span>$host$1 <span style=color:#e6db74>permanent</span>;
+<span style=color:#66d9ef>}</span>
+
+<span style=color:#75715e># www指向blog
+</span><span style=color:#75715e></span><span style=color:#e6db74>server</span>{
+    <span style=color:#f92672>listen</span> <span style=color:#ae81ff>80</span>;
+    <span style=color:#f92672>server_name</span>  <span style=color:#e6db74>www.phpgao.com</span> <span style=color:#e6db74>phpgao.com</span>;
+    <span style=color:#f92672>return</span> <span style=color:#ae81ff>301</span> <span style=color:#e6db74>https://blog.phpgao.com</span>$request_uri;
+}
+</code></pre></div><h2 id=ssl>SSL<a hidden class=anchor aria-hidden=true href=#ssl>#</a></h2><h3 id=lets-encryption>Let&rsquo;s encryption<a hidden class=anchor aria-hidden=true href=#lets-encryption>#</a></h3><h2 id=防注入>防注入<a hidden class=anchor aria-hidden=true href=#防注入>#</a></h2><h2 id=日志>日志<a hidden class=anchor aria-hidden=true href=#日志>#</a></h2><p><a href=https://goaccess.io/faq>goaccess</a></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>goaccess phpgao.access.log -da --log-format<span style=color:#f92672>=</span>COMBINED &gt; 1.html
+</code></pre></div><p>参考</p><p><a href=http://mingyang.blog.51cto.com/2807508/1547546>Nginx系列教程之四：Nginx常用变量汇总及测试</a>
+<a href=http://seanlook.com/2015/05/17/nginx-location-rewrite/>nginx配置location总结及rewrite规则写法</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/php/>PHP</a></li><li><a href=https://phpgao.github.io/tags/nginx/>nginx</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/2754.html><span class=title>« Prev Page</span><br><span>按模板生成组合</span></a>
+<a class=next href=https://phpgao.github.io/git_gui_tool.html><span class=title>Next Page »</span><br><span>所有平台可用的GIT管理工具</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

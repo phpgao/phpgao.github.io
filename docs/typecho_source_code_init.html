@@ -1,0 +1,151 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>typecho源代码解析1---系统初始化 | 老高的技术博客</title><meta name=keywords content="typecho,source code,xdebug"><meta name=description content="首先恭喜typecho v1.0的上线！
+其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！
+最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？
+老高的建议是：
+ 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：
+文档 如果有什么不明白的，文档里也许会找到答案。
+typecho开发文档
+版本 再研究源代码前，如果知道自己使用的typecho的版本呢？
+答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。
+例子：
+class Typecho_Common{/** 程序版本 */const VERSION = '1.0/14.10.9';...} 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。
+开启方法：
+# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define('__TYPECHO_DEBUG__',1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。
+在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。
+# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/typecho_source_code_init.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="typecho源代码解析1---系统初始化"><meta property="og:description" content="首先恭喜typecho v1.0的上线！
+其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！
+最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？
+老高的建议是：
+ 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：
+文档 如果有什么不明白的，文档里也许会找到答案。
+typecho开发文档
+版本 再研究源代码前，如果知道自己使用的typecho的版本呢？
+答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。
+例子：
+class Typecho_Common{/** 程序版本 */const VERSION = '1.0/14.10.9';...} 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。
+开启方法：
+# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define('__TYPECHO_DEBUG__',1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。
+在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。
+# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/typecho_source_code_init.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-10-11T12:20:00+00:00"><meta property="article:modified_time" content="2014-10-11T12:20:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="typecho源代码解析1---系统初始化"><meta name=twitter:description content="首先恭喜typecho v1.0的上线！
+其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！
+最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？
+老高的建议是：
+ 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：
+文档 如果有什么不明白的，文档里也许会找到答案。
+typecho开发文档
+版本 再研究源代码前，如果知道自己使用的typecho的版本呢？
+答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。
+例子：
+class Typecho_Common{/** 程序版本 */const VERSION = '1.0/14.10.9';...} 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。
+开启方法：
+# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define('__TYPECHO_DEBUG__',1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。
+在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。
+# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"typecho源代码解析1---系统初始化","item":"https://phpgao.github.io/typecho_source_code_init.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"typecho源代码解析1---系统初始化","name":"typecho源代码解析1---系统初始化","description":"首先恭喜typecho v1.0的上线！\n其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！\n最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？\n老高的建议是：\n 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：\n文档 如果有什么不明白的，文档里也许会找到答案。\ntypecho开发文档\n版本 再研究源代码前，如果知道自己使用的typecho的版本呢？\n答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。\n例子：\nclass Typecho_Common\r{\r/** 程序版本 */\rconst VERSION = '1.0/14.10.9';\r...\r}\r 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。\n开启方法：\n# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define(\u0026#39;__TYPECHO_DEBUG__\u0026#39;,1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。\n在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。\n# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?","keywords":["typecho","source code","xdebug"],"articleBody":"首先恭喜typecho v1.0的上线！\n其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！\n最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？\n老高的建议是：\n 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：\n文档 如果有什么不明白的，文档里也许会找到答案。\ntypecho开发文档\n版本 再研究源代码前，如果知道自己使用的typecho的版本呢？\n答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。\n例子：\nclass Typecho_Common\r{\r/** 程序版本 */\rconst VERSION = '1.0/14.10.9';\r...\r}\r 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。\n开启方法：\n# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define('__TYPECHO_DEBUG__',1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。\n在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。\n# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ? '' : rtrim($label) . ' '; if (!$strict) { if (ini_get('html_errors')) { $output = print_r($var, true); $output = '' . $label . htmlspecialchars($output, ENT_QUOTES) . ''; } else { $output = $label . print_r($var, true); } } else { ob_start(); var_dump($var); $output = ob_get_clean(); if (!extension_loaded('xdebug')) { $output = preg_replace('/\\]\\=\\\\n(\\s+)/m', '] = ', $output); $output = '' . $label . htmlspecialchars($output, ENT_QUOTES) . ''; } } if ($echo) { echo($output); return null; }else return $output; } 入口 入口文件为index.php，国际惯例贴代码。\nif (!@include_once 'config.inc.php') {\rfile_exists('./install.php') ? header('Location: install.php') : print('Missing Config File');\rexit;\r}\r/** 初始化组件 */\rTypecho_Widget::widget('Widget_Init');\r/** 注册一个初始化插件 */\rTypecho_Plugin::factory('index.php')-begin();\r/** 开始路由分发 */\rTypecho_Router::dispatch();\r/** 注册一个结束插件 */\rTypecho_Plugin::factory('index.php')-end();\r typecho也采用了流行的单一入口，在此会引出一个伪静态的问题，此处先留个坑，以后补上。\nindex.php文件流程：\nconfig.inc.php文件如果存在，就引入；如果不存在，就跳转到install.php进行程序安装，请原谅老高在此跳过install.php流程，如果读者有问题，请留言交流。\nconfig.inc.php在安装程序的时候会自动生成，其主要工作是：引入程序常量，设定包含路径，引入各个核心文件（注意此时没有使用__autoLoad，所以只能require），执行Typecho_Common::init()初始化工作，保存数据库连接信息并初始化数据库对象。\nTypecho_Common::init()位于var/Typecho/Common.php，方法代码：\npublic static function init()\r{\rini_set( 'display_errors', 'On' );\r/** 设置自动载入函数 */\rif (function_exists('spl_autoload_register')) {\rspl_autoload_register(array('Typecho_Common', '__autoLoad'));\r} else {\rfunction __autoLoad($className) {\rTypecho_Common::__autoLoad($className);\r}\r}\r/** 兼容php6 */\rif (function_exists('get_magic_quotes_gpc') \u0026\u0026 get_magic_quotes_gpc()) {\r$_GET = self::stripslashesDeep($_GET);\r$_POST = self::stripslashesDeep($_POST);\r$_COOKIE = self::stripslashesDeep($_COOKIE);\rreset($_GET);\rreset($_POST);\rreset($_COOKIE);\r}\r/** 设置异常截获函数 */\rset_exception_handler(array('Typecho_Common', 'exceptionHandle'));\r}\r 代码中ini_set( 'display_errors', 'On' );是老高自己加的，便于debug，请无视。此方法的主要工作是注册autoload，如果系统打开了magic_quotes_gpc，就使用stripslashesDeep处理输入数据，去除系统自动加入的/，最后接管了系统的异常截获。\n当config.inc.php完成使命后，控制权又回到了index.php文件。\n紧接着执行了Typecho_Widget::widget('Widget_Init')，Typecho_Widget哪里来的？请研究一下init阶段的autoload方法，把类名中的_或\\替换为/，最后加上.php，这样类名就被映射到了一个确定的文件了。以Typecho_Widget为例，系统将得到Typecho/Widget.php，由于系统核心文件都在var下，那么最终的路径即var/Typecho/Widget.php。所以我们就得到了这样的规律，类名被_分开，类一般会以Typecho或Widget开头，分别对应着文件夹Typecho或Widget，之后就根据剩下的片段去找最终的文件名即可！\n@include_once str_replace(array('\\\\', '_'), '/', $className) . '.php';\r Widget类是整个系统的核心类（抽象类），他抽象出了几个很不错的功能，这一点Widget内部方法与接口有介绍，需要注意的是魔术方法__get会在保护属性$row里查找变量，$row也让Widget类增色不少，__call和push方法也需要留意。\n下面介绍的是Typecho_Widget::widget方法，widget方法其实是一个工厂方法，他接受一个类名，初始化输入输出对象，一并传入目标类名，执行了目标类的构造方法和execute方法，并将实例化的类保存在self::$_widgetPool数组中。execute十分重要，在thinkphp中有一个异曲同工的方法，叫_initalize，位于controller父类中。\n以index.php文件中Typecho_Widget::widget('Widget_Init')为例，Typecho_Widget的widget接收到’Widget_Init'，初始化var/Widget/Init.php中的Widget_Init类后，执行了其execute方法。该方法又调用了$this-widget('Widget_Options')，即自己又初始化了Widget_Options类，Widget_Options类读出了user = 0的所有系统配置，并将Widget_Options保存在局部变量$options里，进行了一系列的初始化工作。值得留意的地方：\n# $options包含了路由信息\r# 系统在这一步才执行了解析PathInfo动作\r$this-request-getPathInfo();\r# 路由器在此初始化\rTypecho_Router::setRoutes\r# 所有插件在此初始化\rTypecho_Plugin::init($options-plugins);\r# 下面还有初始化回执，设定了返回的编码和类型\r$this-response-setCharset($options-charset);\r$this-response-setContentType($options-contentType);\r# 时区设置还有session初始化\r# 最后打开缓冲\r 至此Typecho_Widget::widget('Widget_Init')执行完毕！这时系统初始化正式完毕，开始真正的’工作'！\n2015年01月12日更新：\n开启开发者模式\n下一节\n码字不易，转载请注明出处。\n","wordCount":"296","inLanguage":"en","datePublished":"2014-10-11T12:20:00Z","dateModified":"2014-10-11T12:20:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/typecho_source_code_init.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>typecho源代码解析1---系统初始化</h1><div class=post-meta>October 11, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-10-11_typecho_source_code_init.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>首先恭喜typecho v1.0的上线！</p><p>其次，这篇文章同<a href=https://blog.phpgao.com/thinkphp_init.html>thinkphp的源代码解析</a>一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！</p><p>最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？</p><p>老高的建议是：</p><ol><li>一定要熟悉MVC模式(针对WEB开发)</li><li>先看看文档再动手</li><li>分辨什么是好的坏的代码，不要搞盲目崇拜</li><li>做笔记</li></ol><p>以下：</p><h2 id=文档>文档<a hidden class=anchor aria-hidden=true href=#文档>#</a></h2><p>如果有什么不明白的，文档里也许会找到答案。</p><p><a href=http://docs.typecho.org/develop>typecho开发文档</a></p><h2 id=版本>版本<a hidden class=anchor aria-hidden=true href=#版本>#</a></h2><p>再研究源代码前，如果知道自己使用的typecho的版本呢？</p><p>答案写在<code>var/Typecho/Common.php</code>里，Typecho_Common类中的常量<code>VERSION</code>。</p><p>例子：</p><pre><code>class Typecho_Common
+{
+    /** 程序版本 */
+    const VERSION = '1.0/14.10.9';
+    ...
+}
+</code></pre><h2 id=开启debug模式>开启DEBUG模式<a hidden class=anchor aria-hidden=true href=#开启debug模式>#</a></h2><p>有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。</p><p>开启方法：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e># 修改/config.inc.php
+</span><span style=color:#75715e># 在代码的第一行加入
+</span><span style=color:#75715e></span><span style=color:#e6db74>/**开启debug模式*/</span>
+<span style=color:#a6e22e>define</span>(<span style=color:#e6db74>&#39;__TYPECHO_DEBUG__&#39;</span>,<span style=color:#ae81ff>1</span>);
+
+</code></pre></div><p>ps.调试的时候如果你的服务器没有安装<a href=https://blog.phpgao.com/phpstorm_using_xdebug.html>xdebug</a>，那么你的<code>var_dump()</code>信息会没有格式。</p><p>在此老高推荐使用TP框架内的方法<code>dump()</code>，以后我们就可以使用dump()打印变量信息了。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#75715e># 修改/config.inc.php
+</span><span style=color:#75715e># 在debug后加入
+</span><span style=color:#75715e></span>
+<span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * 浏览器友好的变量输出
+</span><span style=color:#e6db74> * @param mixed $var 变量
+</span><span style=color:#e6db74> * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串
+</span><span style=color:#e6db74> * @param string $label 标签 默认为空
+</span><span style=color:#e6db74> * @param boolean $strict 是否严谨 默认为true
+</span><span style=color:#e6db74> * @return void|string
+</span><span style=color:#e6db74> */</span>
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>dump</span>($var, $echo<span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>, $label<span style=color:#f92672>=</span><span style=color:#66d9ef>null</span>, $strict<span style=color:#f92672>=</span><span style=color:#66d9ef>true</span>) {
+    $label <span style=color:#f92672>=</span> ($label <span style=color:#f92672>===</span> <span style=color:#66d9ef>null</span>) <span style=color:#f92672>?</span> <span style=color:#e6db74>&#39;&#39;</span> <span style=color:#f92672>:</span> <span style=color:#a6e22e>rtrim</span>($label) <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39; &#39;</span>;
+    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span>$strict) {
+        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>ini_get</span>(<span style=color:#e6db74>&#39;html_errors&#39;</span>)) {
+            $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>print_r</span>($var, <span style=color:#66d9ef>true</span>);
+            $output <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&lt;pre&gt;&#39;</span> <span style=color:#f92672>.</span> $label <span style=color:#f92672>.</span> <span style=color:#a6e22e>htmlspecialchars</span>($output, <span style=color:#a6e22e>ENT_QUOTES</span>) <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;&lt;/pre&gt;&#39;</span>;
+        } <span style=color:#66d9ef>else</span> {
+            $output <span style=color:#f92672>=</span> $label <span style=color:#f92672>.</span> <span style=color:#a6e22e>print_r</span>($var, <span style=color:#66d9ef>true</span>);
+        }
+    } <span style=color:#66d9ef>else</span> {
+        <span style=color:#a6e22e>ob_start</span>();
+        <span style=color:#a6e22e>var_dump</span>($var);
+        $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>ob_get_clean</span>();
+        <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>extension_loaded</span>(<span style=color:#e6db74>&#39;xdebug&#39;</span>)) {
+            $output <span style=color:#f92672>=</span> <span style=color:#a6e22e>preg_replace</span>(<span style=color:#e6db74>&#39;/\]\=\&gt;\n(\s+)/m&#39;</span>, <span style=color:#e6db74>&#39;] =&gt; &#39;</span>, $output);
+            $output <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;&lt;pre&gt;&#39;</span> <span style=color:#f92672>.</span> $label <span style=color:#f92672>.</span> <span style=color:#a6e22e>htmlspecialchars</span>($output, <span style=color:#a6e22e>ENT_QUOTES</span>) <span style=color:#f92672>.</span> <span style=color:#e6db74>&#39;&lt;/pre&gt;&#39;</span>;
+        }
+    }
+    <span style=color:#66d9ef>if</span> ($echo) {
+        <span style=color:#66d9ef>echo</span>($output);
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>null</span>;
+    }<span style=color:#66d9ef>else</span>
+        <span style=color:#66d9ef>return</span> $output;
+}
+
+</code></pre></div><h2 id=入口>入口<a hidden class=anchor aria-hidden=true href=#入口>#</a></h2><p>入口文件为index.php，国际惯例贴代码。</p><pre><code>if (!@include_once 'config.inc.php') {
+    file_exists('./install.php') ? header('Location: install.php') : print('Missing Config File');
+    exit;
+}
+
+/** 初始化组件 */
+Typecho_Widget::widget('Widget_Init');
+
+/** 注册一个初始化插件 */
+Typecho_Plugin::factory('index.php')-&gt;begin();
+
+/** 开始路由分发 */
+Typecho_Router::dispatch();
+
+/** 注册一个结束插件 */
+Typecho_Plugin::factory('index.php')-&gt;end();
+</code></pre><p>typecho也采用了流行的单一入口，在此会引出一个伪静态的问题，此处先留个坑，以后补上。</p><p>index.php文件流程：</p><p><code>config.inc.php</code>文件如果存在，就引入；如果不存在，就跳转到<code>install.php</code>进行程序安装，请原谅老高在此跳过<code>install.php</code>流程，如果读者有问题，请留言交流。</p><p><code>config.inc.php</code>在安装程序的时候会自动生成，其主要工作是：引入程序常量，设定包含路径，引入各个核心文件（注意此时没有使用<code>__autoLoad</code>，所以只能require），执行<code>Typecho_Common::init()</code>初始化工作，保存数据库连接信息并初始化数据库对象。</p><p><code>Typecho_Common::init()</code>位于<code>var/Typecho/Common.php</code>，方法代码：</p><pre><code>public static function init()
+    {
+        ini_set( 'display_errors', 'On' );
+        /** 设置自动载入函数 */
+        if (function_exists('spl_autoload_register')) {
+            spl_autoload_register(array('Typecho_Common', '__autoLoad'));
+        } else {
+            function __autoLoad($className) {
+                Typecho_Common::__autoLoad($className);
+            }
+        }
+
+        /** 兼容php6 */
+        if (function_exists('get_magic_quotes_gpc') &amp;&amp; get_magic_quotes_gpc()) {
+            $_GET = self::stripslashesDeep($_GET);
+            $_POST = self::stripslashesDeep($_POST);
+            $_COOKIE = self::stripslashesDeep($_COOKIE);
+
+            reset($_GET);
+            reset($_POST);
+            reset($_COOKIE);
+        }
+
+        /** 设置异常截获函数 */
+        set_exception_handler(array('Typecho_Common', 'exceptionHandle'));
+    }
+</code></pre><p>代码中<code>ini_set( 'display_errors', 'On' );</code>是老高自己加的，便于debug，请无视。此方法的主要工作是注册autoload，如果系统打开了magic_quotes_gpc，就使用stripslashesDeep处理输入数据，去除系统自动加入的<code>/</code>，最后接管了系统的异常截获。</p><p>当<code>config.inc.php</code>完成使命后，控制权又回到了<code>index.php</code>文件。</p><p>紧接着执行了<code>Typecho_Widget::widget('Widget_Init')</code>，Typecho_Widget哪里来的？请研究一下init阶段的autoload方法，把类名中的<code>_</code>或<code>\</code>替换为<code>/</code>，最后加上<code>.php</code>，这样类名就被映射到了一个确定的文件了。以Typecho_Widget为例，系统将得到<code>Typecho/Widget.php</code>，由于系统核心文件都在<code>var</code>下，那么最终的路径即<code>var/Typecho/Widget.php</code>。所以我们就得到了这样的规律，类名被<code>_</code>分开，类一般会以Typecho或Widget开头，分别对应着文件夹Typecho或Widget，之后就根据剩下的片段去找最终的文件名即可！</p><pre><code>@include_once str_replace(array('\\', '_'), '/', $className) . '.php';
+</code></pre><p>Widget类是整个系统的核心类（抽象类），他抽象出了几个很不错的功能，这一点<a href=http://docs.typecho.org/develop/widget#widget%E5%86%85%E9%83%A8%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8E%A5%E5%8F%A3>Widget内部方法与接口</a>有介绍，需要注意的是魔术方法<code>__get</code>会在保护属性<code>$row</code>里查找变量，<code>$row</code>也让Widget类增色不少，<code>__call</code>和<code>push</code>方法也需要留意。</p><p>下面介绍的是<code>Typecho_Widget::widget</code>方法，<code>widget</code>方法其实是一个工厂方法，他接受一个类名，初始化输入输出对象，一并传入目标类名，执行了目标类的构造方法和<code>execute</code>方法，并将实例化的类保存在<code>self::$_widgetPool</code>数组中。execute十分重要，在thinkphp中有一个异曲同工的方法，叫<code>_initalize</code>，位于controller父类中。</p><p>以index.php文件中<code>Typecho_Widget::widget('Widget_Init')</code>为例，Typecho_Widget的widget接收到&rsquo;Widget_Init'，初始化<code>var/Widget/Init.php</code>中的Widget_Init类后，执行了其execute方法。该方法又调用了<code>$this->widget('Widget_Options')</code>，即自己又初始化了<code>Widget_Options</code>类，Widget_Options类读出了<code>user = 0</code>的所有系统配置，并将<code>Widget_Options</code>保存在局部变量$options里，进行了一系列的初始化工作。值得留意的地方：</p><pre><code># $options包含了路由信息
+# 系统在这一步才执行了解析PathInfo动作
+$this-&gt;request-&gt;getPathInfo();
+# 路由器在此初始化
+Typecho_Router::setRoutes
+# 所有插件在此初始化
+Typecho_Plugin::init($options-&gt;plugins);
+# 下面还有初始化回执，设定了返回的编码和类型
+$this-&gt;response-&gt;setCharset($options-&gt;charset);
+$this-&gt;response-&gt;setContentType($options-&gt;contentType);
+# 时区设置还有session初始化
+# 最后打开缓冲
+</code></pre><p>至此<code>Typecho_Widget::widget('Widget_Init')</code>执行完毕！这时系统初始化正式完毕，开始真正的&rsquo;工作'！</p><p>2015年01月12日更新：</p><p>开启开发者模式</p><p><a href=https://blog.phpgao.com/typecho_source_code_plugin.html>下一节</a></p><p><strong>码字不易，转载请注明出处。</strong></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/typecho/>typecho</a></li><li><a href=https://phpgao.github.io/tags/source-code/>source code</a></li><li><a href=https://phpgao.github.io/tags/xdebug/>xdebug</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/mac_move_window_to_other_desktop.html><span class=title>« Prev Page</span><br><span>mac快速移动窗口至另一个桌面</span></a>
+<a class=next href=https://phpgao.github.io/php_framework_frequently_used.html><span class=title>Next Page »</span><br><span>PHP的框架常用函数</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

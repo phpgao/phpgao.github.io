@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>crx on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/crx/</link>
+    <description>Recent content in crx on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 29 Jun 2014 11:01:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/crx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何下载chrome的crx文件</title>
+      <link>https://phpgao.github.io/chrome_crx.html</link>
+      <pubDate>Sun, 29 Jun 2014 11:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chrome_crx.html</guid>
+      <description>首先必须知道需要下载的应用的地址
+https://chrome.google.com/webstore/detail/bfbmjmiodbnnpllbbbfblcplfjjepjdn ID为最后面的 bfbmjmiodbnnpllbbbfblcplfjjepjdn
+然后计算出新的地址，注意下面地址的中文
+https://clients2.google.com/service/update2/crx?response=redirect&amp;amp;x=id%3D这里这里%26uc  将中文替换为ID
+https://clients2.google.com/service/update2/crx?response=redirect&amp;amp;x=id%3Dbfbmjmiodbnnpllbbbfblcplfjjepjdn%26uc 把这个地址用IE新窗口打开，就可以下载了</description>
+    </item>
+    
+  </channel>
+</rss>

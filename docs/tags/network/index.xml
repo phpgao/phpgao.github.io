@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>network on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/network/</link>
+    <description>Recent content in network on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 02 Jun 2015 11:07:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>openwrt中br-lan,eth0,eth0.1,eth0.2</title>
+      <link>https://phpgao.github.io/openwrt-interface.html</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt-interface.html</guid>
+      <description>&lt;p&gt;openwrt的接口真是多，老高一下子都看晕了，不过仔细理一理，还是能够分辨的。&lt;/p&gt;
+&lt;p&gt;首先盗openwrt-wiki中的一张图，这张图对理解这些接口很重要！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3406911994.png&#34; alt=&#34;asus-internals-default&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>鸟哥的私房菜学习笔记----网络速查</title>
+      <link>https://phpgao.github.io/vbird_linux_note_network.html</link>
+      <pubDate>Sun, 31 May 2015 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vbird_linux_note_network.html</guid>
+      <description>&lt;p&gt;多图杀猫，流量党渗入&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

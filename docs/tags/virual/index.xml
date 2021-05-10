@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>virual on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/virual/</link>
+    <description>Recent content in virual on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Oct 2014 04:50:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/virual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新装虚拟机记录一下</title>
+      <link>https://phpgao.github.io/virtual_machine_record.html</link>
+      <pubDate>Sat, 11 Oct 2014 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtual_machine_record.html</guid>
+      <description>镜像下载 centos官方 Aliyun Open Source Mirror Site 网易开源镜像站
+虚拟化工具 免费的virtualbox，下载地址 KVM Xen
+安装 记一次centos最小安装 centos7.0 的最小化安装
+优化 分享一个centos6.*优化脚本 CentOS精简命令
+后续 关闭防火墙和SELinux # 关闭防火墙service iptables stop chkconfig iptables offchkconfig ip6tables off# SELinuxvi /etc/selinux/config# changeSELINUX=disabled#网卡------vi /etc/sysconfig/network-scripts/ifcfg-eth0TYPE=Ethernet# changeONBOOT=yesNM_CONTROLLED=yes# changeBOOTPROTO=dhcporBOOTPROTO=static# 加上# 静态IPIPADDR=192.168.1.107# 设置子网NETMASK=255.255.255.0# 设置网关GATEWAY=192.168.1.1# 设置DNSDNS1=114.114.114.114IPV6INIT=noUSERCTL=no------service network restartchkconfig network on------# 全局关闭IPv6vi /etc/sysctl.</description>
+    </item>
+    
+  </channel>
+</rss>

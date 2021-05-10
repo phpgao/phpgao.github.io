@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>orc on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/orc/</link>
+    <description>Recent content in orc on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Apr 2016 13:10:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/orc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在线OCR工具</title>
+      <link>https://phpgao.github.io/orc.html</link>
+      <pubDate>Mon, 18 Apr 2016 13:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/orc.html</guid>
+      <description>onlineocr free! 在线文字识别 convertpdftoword 转换器 百度OCR识别
+百度OCR识别企业版</description>
+    </item>
+    
+  </channel>
+</rss>

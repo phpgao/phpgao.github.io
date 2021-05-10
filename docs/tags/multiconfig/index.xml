@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>multiconfig on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/multiconfig/</link>
+    <description>Recent content in multiconfig on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 18 Mar 2016 06:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/multiconfig/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang使用multiconfig后导致glog无法接受命令行参数</title>
+      <link>https://phpgao.github.io/multiconfig_vs_glog.html</link>
+      <pubDate>Fri, 18 Mar 2016 06:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/multiconfig_vs_glog.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/03/506524902.png&#34; alt=&#34;flag&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高在最近的一个项目(GOLANG)中加入了&lt;a href=&#34;https://github.com/koding/multiconfig&#34;&gt;koding/multiconfig&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这个包可以用默认值(struct tag)&amp;lt;文件&amp;lt;环境变量&amp;lt;命令行参数的顺序设置参数，很好很强大，极大地方便了测试和开发。&lt;/p&gt;
+&lt;p&gt;但是同时他也带来了一个问题，和glog一起工作的时候会报错：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;flag provided but not defined: -alsologtostderr&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

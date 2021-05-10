@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>zsh on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/zsh/</link>
+    <description>Recent content in zsh on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 26 Nov 2015 12:10:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>充分利用oh-my-zsh</title>
+      <link>https://phpgao.github.io/oh_my_zsh_advanced.html</link>
+      <pubDate>Thu, 26 Nov 2015 12:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh_my_zsh_advanced.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/3511197024.png&#34; alt=&#34;sss2.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;都听说&lt;a href=&#34;http://ohmyz.sh&#34;&gt;oh-my-zsh&lt;/a&gt;很NB，但是具体NB在哪里呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码补全&lt;/li&gt;
+&lt;li&gt;切换目录增强&lt;/li&gt;
+&lt;li&gt;各种主题&lt;/li&gt;
+&lt;li&gt;命令历史增强&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用zsh&#43;omz打造你的超级终端</title>
+      <link>https://phpgao.github.io/ultimate_terminal.html</link>
+      <pubDate>Wed, 25 Nov 2015 13:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ultimate_terminal.html</guid>
+      <description>&lt;p&gt;自从走上了Linux这条路，就离不开终端了。。。&lt;/p&gt;
+&lt;p&gt;如果不好好折腾一下，真是对不起自己的老花眼了！&lt;/p&gt;
+&lt;p&gt;所以老高针对Mac(没有的赶紧买买买)下的iterm2进行了简单的定制，记录如下：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2794686997.png&#34; alt=&#34;Screen Shot 2015-11-25 at 7.11.28 PM.png&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>zsh-&#43;-oh-my-zsh-默认shell的最佳替代品</title>
+      <link>https://phpgao.github.io/oh-my-zsh.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh-my-zsh.html</guid>
+      <description>项目地址
+zsh &amp;mdash;&amp;ndash;&amp;gt; http://www.zsh.org oh-my-zsh &amp;mdash;-&amp;gt; http://ohmyz.sh
+ The last shell you’ll ever need!
+ 使用方法 为你的MAC、Linux安装zsh
+# Centos yum install zsh git -y # OSX brew install zsh git -y 安装oh-my-zsh # via curl curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh # via wget wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 设置zsh为系统默认shell # 为root用户修改默认shell为zsh chsh -s /bin/zsh root # 为当前用户修改默认shell为zsh chsh -s /bin/zsh # or chsh -s `which zsh` # 恢复命令 chsh -s /bin/bash add to ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

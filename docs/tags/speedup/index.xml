@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>speedup on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/speedup/</link>
+    <description>Recent content in speedup on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 05 Jan 2015 09:56:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/speedup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用net_speeder加速你的VPS</title>
+      <link>https://phpgao.github.io/vps_net_speeder.html</link>
+      <pubDate>Mon, 05 Jan 2015 09:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_net_speeder.html</guid>
+      <description>&lt;p&gt;转自:http://www.im1987.com/post/853.html&lt;/p&gt;
+&lt;p&gt;老高安装了以后480P是不卡了，720P还是有点力不从心啊~&lt;/p&gt;
+&lt;p&gt;另外推荐一下锐速，应该还是会有一点效果的。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

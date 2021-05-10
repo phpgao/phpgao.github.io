@@ -1,0 +1,87 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>typecho插件编写教程1---从HelloWorld说起 | 老高的技术博客</title><meta name=keywords content="typecho,plugin,tutorial"><meta name=description content="最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！
+如果你对typecho的源码有兴趣，可以参考老高的系列文章
+typecho源代码解析1 - 系统初始化
+typecho源代码解析2 - 插件机制
+typecho源代码解析3 - 路由分发
+typecho源代码解析4 - 业务逻辑"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/typecho_plugin_tutorial-1.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="typecho插件编写教程1---从HelloWorld说起"><meta property="og:description" content="最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！
+如果你对typecho的源码有兴趣，可以参考老高的系列文章
+typecho源代码解析1 - 系统初始化
+typecho源代码解析2 - 插件机制
+typecho源代码解析3 - 路由分发
+typecho源代码解析4 - 业务逻辑"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/typecho_plugin_tutorial-1.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2015-05-19T13:41:00+00:00"><meta property="article:modified_time" content="2015-05-19T13:41:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="typecho插件编写教程1---从HelloWorld说起"><meta name=twitter:description content="最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！
+如果你对typecho的源码有兴趣，可以参考老高的系列文章
+typecho源代码解析1 - 系统初始化
+typecho源代码解析2 - 插件机制
+typecho源代码解析3 - 路由分发
+typecho源代码解析4 - 业务逻辑"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"typecho插件编写教程1---从HelloWorld说起","item":"https://phpgao.github.io/typecho_plugin_tutorial-1.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"typecho插件编写教程1---从HelloWorld说起","name":"typecho插件编写教程1---从HelloWorld说起","description":"最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！\n如果你对typecho的源码有兴趣，可以参考老高的系列文章\ntypecho源代码解析1 - 系统初始化 typecho源代码解析2 - 插件机制 typecho源代码解析3 - 路由分发 typecho源代码解析4 - 业务逻辑\n","keywords":["typecho","plugin","tutorial"],"articleBody":"最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！\n如果你对typecho的源码有兴趣，可以参考老高的系列文章\ntypecho源代码解析1 - 系统初始化 typecho源代码解析2 - 插件机制 typecho源代码解析3 - 路由分发 typecho源代码解析4 - 业务逻辑\n从HelloWorld说起 基本信息 想必想要开发typecho的你一定阅读过官方示例插件HelloWorld的源码吧？\n我们先看看usr/plugins/HelloWorld/Plugin.php文件前几行\nif (!defined('__TYPECHO_ROOT_DIR__')) exit; /** * Hello World * * @package HelloWorld * @author qining * @version 1.0.0 * @link http://typecho.org */ ... ... 这几行代码是一个插件的基本信息，我们由代码可以得出以下与插件相关的基本信息\n插件说明 — Hello World 插件包名 — HelloWorld 插件作者 — qining 插件版本 — 1.0.0 插件链接 — http://typecho.org\n同时这些信息都会显示在插件页中，如下图\n插件结构 我们继续向后面的代码看，一个最简单的插件结构如下（为了缩短篇幅，老高移除了具体方法的实现）\n每个方法基本都有注释，老高不再赘述。\n看起来很简单吧？其实里面还是有不少坑的。\nclass HelloWorld_Plugin implements Typecho_Plugin_Interface { /** * 激活插件方法,如果激活失败,直接抛出异常 * * @access public * @return void * @throws Typecho_Plugin_Exception */ public static function activate(){} /** * 禁用插件方法,如果禁用失败,直接抛出异常 * * @static * @access public * @return void * @throws Typecho_Plugin_Exception */ public static function deactivate(){} /** * 获取插件配置面板 * * @access public * @param Typecho_Widget_Helper_Form $form 配置面板 * @return void */ public static function config(Typecho_Widget_Helper_Form $form){} /** * 个人用户的配置面板 * * @access public * @param Typecho_Widget_Helper_Form $form * @return void */ public static function personalConfig(Typecho_Widget_Helper_Form $form){} /** * 插件实现方法 * * @access public * @return void */ public static function render(){} } 插件流程 插件的基本流程是这样的。\n 当我们的插件写好后会出现在后台 点击启用按钮后，会执行对应插件类的activate方法 插件与目标插件点关联，等待触发 当点击停用的时候调用deactivate方法  本节完。\n下一节老高会更详细的说明插件类的方法。\n","wordCount":"171","inLanguage":"en","datePublished":"2015-05-19T13:41:00Z","dateModified":"2015-05-19T13:41:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/typecho_plugin_tutorial-1.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>typecho插件编写教程1---从HelloWorld说起</h1><div class=post-meta>May 19, 2015&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2015-05-19_typecho_plugin_tutorial-1.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>最近老高正在编写一个关于typecho的插件，由于typecho不像wordpress，有那么多的文档参考，写一个插件还是遇到了很多的坑，不过随着研究的不断深入，老高也慢慢上手了，于是总结出此篇编写教程分享给大家！</p><p>如果你对typecho的源码有兴趣，可以参考老高的系列文章</p><p><a href=https://blog.phpgao.com/typecho_source_code_init.html>typecho源代码解析1 - 系统初始化</a>
+<a href=https://blog.phpgao.com/typecho_source_code_plugin.html>typecho源代码解析2 - 插件机制</a>
+<a href=https://blog.phpgao.com/typecho_source_code_dispatch.html>typecho源代码解析3 - 路由分发</a>
+<a href=https://blog.phpgao.com/typecho_source_code_business_logic.html>typecho源代码解析4 - 业务逻辑</a></p><h2 id=从helloworld说起>从HelloWorld说起<a hidden class=anchor aria-hidden=true href=#从helloworld说起>#</a></h2><h3 id=基本信息>基本信息<a hidden class=anchor aria-hidden=true href=#基本信息>#</a></h3><p>想必想要开发typecho的你一定阅读过官方示例插件HelloWorld的源码吧？</p><p>我们先看看<code>usr/plugins/HelloWorld/Plugin.php</code>文件前几行</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>defined</span>(<span style=color:#e6db74>&#39;__TYPECHO_ROOT_DIR__&#39;</span>)) <span style=color:#66d9ef>exit</span>;
+<span style=color:#e6db74>/**
+</span><span style=color:#e6db74> * Hello World
+</span><span style=color:#e6db74> * 
+</span><span style=color:#e6db74> * @package HelloWorld 
+</span><span style=color:#e6db74> * @author qining
+</span><span style=color:#e6db74> * @version 1.0.0
+</span><span style=color:#e6db74> * @link http://typecho.org
+</span><span style=color:#e6db74> */</span>
+ <span style=color:#f92672>...</span>
+ <span style=color:#f92672>...</span>
+</code></pre></div><p>这几行代码是一个插件的基本信息，我们由代码可以得出以下与插件相关的基本信息</p><p>插件说明 &mdash;> Hello World
+插件包名 &mdash;> HelloWorld
+插件作者 &mdash;> qining
+插件版本 &mdash;> 1.0.0
+插件链接 &mdash;> <a href=http://typecho.org>http://typecho.org</a></p><p>同时这些信息都会显示在插件页中，如下图</p><p><img loading=lazy src=https://blog.phpgao.com/usr/uploads/2015/05/1130015779.png alt=插件基本信息></p><h3 id=插件结构>插件结构<a hidden class=anchor aria-hidden=true href=#插件结构>#</a></h3><p>我们继续向后面的代码看，一个最简单的插件结构如下（为了缩短篇幅，老高移除了具体方法的实现）</p><p>每个方法基本都有注释，老高不再赘述。</p><p>看起来很简单吧？其实里面还是有不少坑的。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-php data-lang=php><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>HelloWorld_Plugin</span> <span style=color:#66d9ef>implements</span> <span style=color:#a6e22e>Typecho_Plugin_Interface</span>
+{
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * 激活插件方法,如果激活失败,直接抛出异常
+</span><span style=color:#e6db74>     * 
+</span><span style=color:#e6db74>     * @access public
+</span><span style=color:#e6db74>     * @return void
+</span><span style=color:#e6db74>     * @throws Typecho_Plugin_Exception
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>activate</span>(){}
+    
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * 禁用插件方法,如果禁用失败,直接抛出异常
+</span><span style=color:#e6db74>     * 
+</span><span style=color:#e6db74>     * @static
+</span><span style=color:#e6db74>     * @access public
+</span><span style=color:#e6db74>     * @return void
+</span><span style=color:#e6db74>     * @throws Typecho_Plugin_Exception
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>deactivate</span>(){}
+    
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * 获取插件配置面板
+</span><span style=color:#e6db74>     * 
+</span><span style=color:#e6db74>     * @access public
+</span><span style=color:#e6db74>     * @param Typecho_Widget_Helper_Form $form 配置面板
+</span><span style=color:#e6db74>     * @return void
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>config</span>(<span style=color:#a6e22e>Typecho_Widget_Helper_Form</span> $form){}
+    
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * 个人用户的配置面板
+</span><span style=color:#e6db74>     * 
+</span><span style=color:#e6db74>     * @access public
+</span><span style=color:#e6db74>     * @param Typecho_Widget_Helper_Form $form
+</span><span style=color:#e6db74>     * @return void
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>personalConfig</span>(<span style=color:#a6e22e>Typecho_Widget_Helper_Form</span> $form){}
+    
+    <span style=color:#e6db74>/**
+</span><span style=color:#e6db74>     * 插件实现方法
+</span><span style=color:#e6db74>     * 
+</span><span style=color:#e6db74>     * @access public
+</span><span style=color:#e6db74>     * @return void
+</span><span style=color:#e6db74>     */</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>render</span>(){}
+}
+</code></pre></div><h3 id=插件流程>插件流程<a hidden class=anchor aria-hidden=true href=#插件流程>#</a></h3><p>插件的基本流程是这样的。</p><ol><li>当我们的插件写好后会出现在后台</li><li>点击启用按钮后，会执行对应插件类的activate方法</li><li>插件与目标插件点关联，等待触发</li><li>当点击停用的时候调用deactivate方法</li></ol><p>本节完。</p><p>下一节老高会更详细的说明插件类的方法。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/typecho/>typecho</a></li><li><a href=https://phpgao.github.io/tags/plugin/>plugin</a></li><li><a href=https://phpgao.github.io/tags/tutorial/>tutorial</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/typecho_plugin_tutorial-2.html><span class=title>« Prev Page</span><br><span>typecho插件编写教程2---新插件</span></a>
+<a class=next href=https://phpgao.github.io/nginx_ngx_lua.html><span class=title>Next Page »</span><br><span>nginx编译安装ngx_lua模块</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

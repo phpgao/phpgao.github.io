@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>shell on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/shell/</link>
+    <description>Recent content in shell on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Oct 2017 11:02:51 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决rename不支持正则的问题</title>
+      <link>https://phpgao.github.io/rename_to_prename.html</link>
+      <pubDate>Fri, 13 Oct 2017 11:02:51 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/rename_to_prename.html</guid>
+      <description>&lt;p&gt;一句话命令&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>一个ss的安装脚本</title>
+      <link>https://phpgao.github.io/shadowsocks_install_script.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_install_script.html</guid>
+      <description>&lt;p&gt;这个脚本是写给小白和我用的，可以直接在&lt;strong&gt;centos&lt;/strong&gt;上可以执行，使用方法很简单。&lt;/p&gt;
+&lt;p&gt;更新：&lt;/p&gt;
+&lt;p&gt;这个脚本已经很旧了，请移步&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun-html.html&#34;&gt;Ubuntu 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>-etc-profile,-etc-bashrc等文件的区别与作用</title>
+      <link>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</link>
+      <pubDate>Thu, 28 May 2015 17:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</guid>
+      <description>&lt;p&gt;当我们在做一些与bash相关的操作时，比如设置别名、登录启动项等，多多少少都会与下面几个文件打交道，用的时候一查，然后又忘了。好记性不如烂笔头，下面老高就帮你理一理这些文件到底是干啥的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/profile&lt;/li&gt;
+&lt;li&gt;/etc/bashrc&lt;/li&gt;
+&lt;li&gt;~/.bash_profile&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux终端美化资源整理</title>
+      <link>https://phpgao.github.io/pretty_linux.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pretty_linux.html</guid>
+      <description>配色方案 通用主题 https://github.com/chriskempson/tomorrow-theme.git
+https://github.com/altercation/solarized.git
+iterm2 Monokai-Soda
+寻找主题方法 github里随便一搜就是一堆堆
+https://github.com/search?q=iterm2+theme</description>
+    </item>
+    
+    <item>
+      <title>zsh-&#43;-oh-my-zsh-默认shell的最佳替代品</title>
+      <link>https://phpgao.github.io/oh-my-zsh.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh-my-zsh.html</guid>
+      <description>项目地址
+zsh &amp;mdash;&amp;ndash;&amp;gt; http://www.zsh.org oh-my-zsh &amp;mdash;-&amp;gt; http://ohmyz.sh
+ The last shell you’ll ever need!
+ 使用方法 为你的MAC、Linux安装zsh
+# Centos yum install zsh git -y # OSX brew install zsh git -y 安装oh-my-zsh # via curl curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh # via wget wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 设置zsh为系统默认shell # 为root用户修改默认shell为zsh chsh -s /bin/zsh root # 为当前用户修改默认shell为zsh chsh -s /bin/zsh # or chsh -s `which zsh` # 恢复命令 chsh -s /bin/bash add to ~/.</description>
+    </item>
+    
+    <item>
+      <title>centos6-优化脚本与安全脚本</title>
+      <link>https://phpgao.github.io/centos_optimize.html</link>
+      <pubDate>Tue, 13 May 2014 01:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_optimize.html</guid>
+      <description>新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &amp;#34;x86_64&amp;#34; ];then echo &amp;#34;this script is only for 64bit Operating System !&amp;#34; exit 1 fi echo &amp;#34;the platform is ok&amp;#34; version=`lsb_release -r |awk &amp;#39;{print substr($2,1,1)}&amp;#39;` if [ $version != 6 ];then echo &amp;#34;this script is only for CentOS 6 !</description>
+    </item>
+    
+    <item>
+      <title>开发中经常用到的代码</title>
+      <link>https://phpgao.github.io/frequently-used-code.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/frequently-used-code.html</guid>
+      <description>[TOC]
+短链接 http://surl.sinaapp.com/引入百度CDN公共库 地址:http://t.cn/zYDC8wj引入文件 &amp;lt;script src=&amp;quot;http://libs.baidu.com/jquery/1.9.0/jquery.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/js/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;&amp;lt;link href=&amp;quot;http://libs.baidu.com/bootstrap/2.0.4/css/bootstrap.min.css&amp;quot; rel=&amp;quot;stylesheet&amp;quot;&amp;gt;&amp;lt;script src=&amp;quot;http://libs.baidu.com/jquerytools/1.2.7/jquery.tools.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; PHP //申明页面编码开启session并设置时区session_start();header(&amp;quot;Content-Type: text/html; charset=UTF-8&amp;quot;);ini_set(&#39;date.timezone&#39;,&#39;Asia/Shanghai&#39;);////windows下这个页面执行时间还是在php.ini里控制，修改max_execution_time。set_time_limit(0);//获取变量的整数值intval(&#39;adasdasd&#39;);//heredoc==双引号$name=MyName;echo &amp;lt;&amp;lt;&amp;lt;EOTMy name is &amp;quot;$name&amp;quot;. I am printing some $foo-&amp;gt;foo.Now, I am printing some {$foo-&amp;gt;bar[1]}.This should print a capital &#39;A&#39;: \x41EOT;/*以上例程会输出：My name is &amp;quot;MyName&amp;quot;. I am printing some Foo.Now, I am printing some Bar2.This should print a capital &#39;A&#39;: A*///Nowdoc==单引号echo &amp;lt;&amp;lt;&amp;lt;&#39;EOT&#39;My name is &amp;quot;$name&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>movie on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/movie/</link>
+    <description>Recent content in movie on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 08 Jul 2015 12:58:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/movie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>安利一个电影----只有你听见</title>
+      <link>https://phpgao.github.io/only-you-can-hear-me.html</link>
+      <pubDate>Wed, 08 Jul 2015 12:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/only-you-can-hear-me.html</guid>
+      <description>B站链接: 白乙一代表作
+网盘链接: cxt3
+由于百度误判，请把.rar去掉，然后解压zip文件</description>
+    </item>
+    
+  </channel>
+</rss>

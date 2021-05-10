@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>post on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/post/</link>
+    <description>Recent content in post on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 21 May 2014 09:30:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>http_build_query妙用</title>
+      <link>https://phpgao.github.io/http_build_query.html</link>
+      <pubDate>Wed, 21 May 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/http_build_query.html</guid>
+      <description>http_build_query这个函数可以很方便的构造一个请求所需要的参数。(不分GET,POST)
+这个函数可以把一个数组转化为一串字符
+栗子1：
+&amp;lt;?php$data = array(&#39;foo&#39;=&amp;gt;&#39;bar&#39;,&#39;baz&#39;=&amp;gt;&#39;boom&#39;,&#39;cow&#39;=&amp;gt;&#39;milk&#39;,&#39;php&#39;=&amp;gt;&#39;hypertext processor&#39;);//第二个参数是分割使用的符号echo http_build_query($data) . &amp;quot;\n&amp;quot;;echo http_build_query($data, &#39;&#39;, &#39;&amp;amp;amp;&#39;);# foo=bar&amp;amp;baz=boom&amp;amp;cow=milk&amp;amp;php=hypertext+processor# foo=bar&amp;amp;amp;baz=boom&amp;amp;amp;cow=milk&amp;amp;amp;php=hypertext+processor?&amp;gt; 栗子二：
+&amp;lt;?php$data = array(&#39;user&#39;=&amp;gt;array(&#39;name&#39;=&amp;gt;&#39;Bob Smith&#39;,&#39;age&#39;=&amp;gt;47,&#39;sex&#39;=&amp;gt;&#39;M&#39;,&#39;dob&#39;=&amp;gt;&#39;5/12/1956&#39;),&#39;pastimes&#39;=&amp;gt;array(&#39;golf&#39;, &#39;opera&#39;, &#39;poker&#39;, &#39;rap&#39;),&#39;children&#39;=&amp;gt;array(&#39;bobby&#39;=&amp;gt;array(&#39;age&#39;=&amp;gt;12,&#39;sex&#39;=&amp;gt;&#39;M&#39;),&#39;sally&#39;=&amp;gt;array(&#39;age&#39;=&amp;gt;8,&#39;sex&#39;=&amp;gt;&#39;F&#39;)),&#39;CEO&#39;);//第二个参数，如果数组没有键值，则自动添加键值echo http_build_query($data, &#39;flags_&#39;);?&amp;gt; 输出：
+ user%5Bname%5D=Bob+Smith&amp;amp;user%5Bage%5D=47&amp;amp;user%5Bsex%5D=M&amp;amp;user%5Bdob%5D=5%2F12%2F1956&amp;amp;pastimes%5B0%5D=golf&amp;amp;pastimes%5B1%5D=opera&amp;amp;pastimes%5B2%5D=poker&amp;amp;pastimes%5B3%5D=rap&amp;amp;children%5Bbobby%5D%5Bage%5D=12&amp;amp;children%5Bbobby%5D%5Bsex%5D=M&amp;amp;children%5Bsally%5D%5Bage%5D=8&amp;amp;children%5Bsally%5D%5Bsex%5D=F&amp;amp;flags_0=CEO
+ 把上面的请求传给一个PHP文件处理，打印传递来的参数，会得到以下结果：
+Array([_GET] =&amp;gt; Array([user] =&amp;gt; Array([name] =&amp;gt; Bob Smith[age] =&amp;gt; 47[sex] =&amp;gt; M[dob] =&amp;gt; 5/12/1956)[pastimes] =&amp;gt; Array([0] =&amp;gt; golf[1] =&amp;gt; opera[2] =&amp;gt; poker[3] =&amp;gt; rap)[children] =&amp;gt; Array([bobby] =&amp;gt; Array([age] =&amp;gt; 12[sex] =&amp;gt; M)[sally] =&amp;gt; Array([age] =&amp;gt; 8[sex] =&amp;gt; F))[flags_0] =&amp;gt; CEO)[_POST] =&amp;gt; Array()[_COOKIE] =&amp;gt; Array([PHPSESSID] =&amp;gt; 5u7l53inhrl5j1ojmn65ok4k44)[_FILES] =&amp;gt; Array()[GLOBALS] =&amp;gt; Array*RECURSION*) 很神奇吧！</description>
+    </item>
+    
+    <item>
+      <title>wordpress自动生成文章目录</title>
+      <link>https://phpgao.github.io/auto_index.html</link>
+      <pubDate>Sun, 16 Mar 2014 15:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/auto_index.html</guid>
+      <description>看过百度百科的同学都知道，如果百科文章比较长，那么他会生成一个目录，不仅增强了用户体验，还为文章引入了锚点内链，对SEO优化起到了十分积极的作用。
+请不要以为这个功能很复杂，其实目录功能只是牵扯到一个正则，一个JS和一个CSS而已，对于我们wordpress来说，很多插件已经实现了此功能。
+老高@PHPer使用的是一款名叫Content Index for WordPress的国人自制插件，功能强大，使用方便。
+Content Index for WordPress 安装 wordpress内置的插件管理器搜索&amp;quot;Content Index for WordPress&amp;quot;，安装即可。
+使用 安装后请至wordpress后台-&amp;gt;设置-&amp;gt;文章内索引： 老高@PHPer使用如下配置：
+开启 插件默认对所有文章关闭，如果你想在某一篇文章中使用目录，请在编辑日志页面勾选  在此文章/页面中开启
+ Tips 也许你已经发现了，PHPer@老高使用了锚点之间的平滑滚动，如果你也希望实现此效果，请将下面的代码引入你的文章模板中
+$(document).ready(function() {$(&#39;a[href*=#]&#39;).click(function() {if (location.pathname.replace(/^\//, &#39;&#39;) == this.pathname.replace(/^\//, &#39;&#39;) &amp;amp;&amp;amp; location.hostname == this.hostname) {var $target = $(this.hash);$target = $target.length &amp;amp;&amp;amp; $target || $(&#39;[name=&#39; + this.hash.slice(1) + &#39;]&#39;);if ($target.length) {var targetOffset = $target.offset().top;$(&#39;html,body&#39;).animate({scrollTop: targetOffset},1000);return false;}}});}); 注意 可能你还没发现，上面的代码会出现一些小问题，比如你的网站留言也会出现某些锚点，点击它们将会出现很多意想不到的效果，所以我们需要将锚点控制在目录范围内 因此，我们需要在第二行的Jquery代码做一些修改 $(&#39;a[href*=#]&#39;).</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>database on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/database/</link>
+    <description>Recent content in database on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 04 Jun 2018 04:56:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>如何备份MySQL-PG数据库并恢复</title>
+      <link>https://phpgao.github.io/how_to_backup_and_restore_database.html</link>
+      <pubDate>Mon, 04 Jun 2018 04:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_backup_and_restore_database.html</guid>
+      <description>&lt;p&gt;老高最近又迁移了一次数据库，期间遇到了很多问题，本文主要记录了如果备份数据库并恢复到新的数据库中！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. 由于老高工作用的是PG数据库，而博客用的是MySQL，于是本篇就把二者的用法都写出来吧！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用dropbox同步备份网站和数据库</title>
+      <link>https://phpgao.github.io/dropbox_sync_cli.html</link>
+      <pubDate>Tue, 29 Jul 2014 08:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dropbox_sync_cli.html</guid>
+      <description>&lt;p&gt;自从用了Shadowsocks，整个人都精神多了！&lt;/p&gt;
+&lt;p&gt;今天开整Dropbox，话说这货也被Q了。&lt;/p&gt;
+&lt;p&gt;废话不多说&lt;/p&gt;
+&lt;p&gt;以下内容需要翻{防屏蔽}墙使用，如果没有，可以参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;老高的这篇文章&lt;/a&gt;搭建一个稳定又极速的翻{防屏蔽}墙环境&lt;/p&gt;
+&lt;h2 id=&#34;下载&#34;&gt;下载&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;https://www.dropbox.com/install?os=lnx&#34;&gt;官网&lt;/a&gt;找到linux专用脚本，执行一下对应系统的脚本&lt;/p&gt;
+&lt;h3 id=&#34;32位系统&#34;&gt;32位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;64位系统&#34;&gt;64位系统&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cd ~ &amp;amp;&amp;amp; wget -O - &amp;#34;https://www.dropbox.com/download?plat=lnx.x86_64&amp;#34; | tar xzf -
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>数据库持久连接</title>
+      <link>https://phpgao.github.io/db_pconnect.html</link>
+      <pubDate>Fri, 16 May 2014 03:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/db_pconnect.html</guid>
+      <description>搜PHP长链接把这个搜出来了，2006年的帖子比较久远了，希望对你有帮助！
+转自http://bbs.phpchina.com/forum.php?mod=viewthread&amp;amp;tid=4577&amp;amp;page=1 中forest的回帖：
+永久的数据库连接是指在脚本结束运行时不关闭的连接。当收到一个永久连接的请求时。PHP 将检查是否已经存在一个（前面已经开启的）相同的永久连接。如果存在，将直接使用这个连接；如果不存在，则建立一个新的连接。所谓“相同”的连接是指用相同的用户名和密码到相同主机的连接。
+对 web 服务器的工作和分布负载没有完全理解的读者可能会错误地理解永久连接的作用。特别的，永久连接不会在相同的连接上提供建立“用户会话”的能力，也不提供有效建立事务的能力。实际上，从严格意义上来讲，永久连接不会提供任何非永久连接无法提供的特殊功能。
+为什么？
+这和 web 服务器工作的方式有关。web 服务器可以用三种方法来利用 PHP 生成 web 页面。
+第一种方法是将 PHP 用作一个“外壳”。以这种方法运行，PHP 会为向 web 服务器提出的每个 PHP 页面请求生成并结束一个 PHP 解释器线程。由于该线程会随每个请求的结束而结束，因此任何在这个线程中利用的任何资源（例如指向 SQL 数据库服务器的连接）都会随线程的结束而关闭。在这种情况下，使用永久连接不会获得任何地改变――因为它们根本不是永久的。
+第二，也是最常用的方法，是把 PHP 用作多进程 web 服务器的一个模块，这种方法目前只适用于 Apache。对于一个多进程的服务器，其典型特征是有一个父进程和一组子进程协调运行，其中实际生成 web 页面的是子进程。每当客户端向父进程提出请求时，该请求会被传递给还没有被其它的客户端请求占用的子进程。这也就是说当相同的客户端第二次向服务端提出请求时，它将有可能被一个不同的子进程来处理。在开启了一个永久连接后，所有请求 SQL 服务的后继页面都能够重新使用这个已经建立的 SQL Server 连接。
+最后一种方法是将 PHP 用作多线程 web 服务器的一个插件。目前 PHP 4 已经支持 ISAPI、WSAPI 和 NSAPI（在 Windows 环境下），这些使得 PHP 可以被用作诸如 Netscape FastTrack (iPlanet)、Microsoft’s Internet Information Server (IIS) 和 O’Reilly’s WebSite Pro 等多线程 web 服务器的插件。永久连接的行为和前面所描述的多过程模型在本质上是相同的。注意 PHP 3 不支持 SAPI。</description>
+    </item>
+    
+  </channel>
+</rss>

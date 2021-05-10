@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>ctorrent on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/ctorrent/</link>
+    <description>Recent content in ctorrent on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 27 Jul 2014 02:53:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/ctorrent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在linux下安装ctorrent下载种子文件</title>
+      <link>https://phpgao.github.io/ctorrent.html</link>
+      <pubDate>Sun, 27 Jul 2014 02:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ctorrent.html</guid>
+      <description>&lt;p&gt;VPS大家手里多多少少都会有那么一两个（win请绕道），如果能让他们在空闲的时候帮我们下载一些很大，但是又下载很慢的种子，岂不是一举两得！&lt;/p&gt;
+&lt;p&gt;linux命令行下的torrent下载软件真的很少([rc]Torrent和Transmission的命令行版本)，而且实在不太好用（当然是和迅雷不能比）。&lt;/p&gt;
+&lt;p&gt;但是如果你看完此篇，也许会发现原来在命令行里下载种子其实不是那么难！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

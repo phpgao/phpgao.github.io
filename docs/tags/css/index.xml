@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>css on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/css/</link>
+    <description>Recent content in css on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 08 Mar 2015 15:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>多说圆形旋转头像</title>
+      <link>https://phpgao.github.io/duoshuo_css_custom.html</link>
+      <pubDate>Sun, 08 Mar 2015 15:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/duoshuo_css_custom.html</guid>
+      <description>&lt;p&gt;其实现使用了css3的一些特性。使用方法很简单！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CSS十条速记口诀</title>
+      <link>https://phpgao.github.io/10_css_mnemonics.html</link>
+      <pubDate>Thu, 10 Apr 2014 15:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/10_css_mnemonics.html</guid>
+      <description>如果在用CSS设计布局时遇到BUG，请认真阅读以下内容，非常容易记忆的，不知道哪位高人把CSS BUG编成了顺口溜了！看看好不好记住呢？
+ IE边框若显若无，须注意，定是高度设置已忘记 浮动产生有缘故，若要父层包含住，紧跟浮动要清除，容器自然显其中 三像素文本慢移不必慌，高度设置帮你忙 兼容各个浏览须注意，默认设置行高可能是杀手 独立清除浮动须铭记，行高设无，高设零，设计效果兼浏览 学布局须思路，路随布局原理自然直，轻松驾驭html，流水布局少hack，代码清爽，兼容好，友好引擎喜欢迎。 所有标签皆有源，只是默认各不同，span是无极，无极生两仪—内联和块级，img较特殊，但也遵法理，其他只是改造各不同，一个*号全归原，层叠样式理须多练习，万物皆规律。 图片链接排版须小心，图片链接文字链接若对齐，padding和vertical-align:middle要设定，虽差微细倒无妨。 IE浮动双边距，请用display：inline拘。 列表横向排版，列表代码须紧靠，空隙自消须铭记。 (转自php100)  </description>
+    </item>
+    
+  </channel>
+</rss>

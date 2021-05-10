@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pip on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pip/</link>
+    <description>Recent content in pip on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 09 Sep 2015 09:09:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pip/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>pip下使用代理安装包</title>
+      <link>https://phpgao.github.io/pip_via_proxy.html</link>
+      <pubDate>Wed, 09 Sep 2015 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip_via_proxy.html</guid>
+      <description>一句话代码
+pip install --proxy x.x.x.x:8080 requsets pip install --proxy x.x.x.x:8080 --upgrade pip 帮助文件
+pip -h --proxy &amp;lt;proxy&amp;gt; Specify a proxy in the form [user:passwd@]proxy.server:port. </description>
+    </item>
+    
+    <item>
+      <title>快速升级python到2.7</title>
+      <link>https://phpgao.github.io/update_python_to_27.html</link>
+      <pubDate>Tue, 30 Jun 2015 05:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_python_to_27.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1602052211.png&#34; alt=&#34;python&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(python logo来自互联网)&lt;/p&gt;
+&lt;p&gt;摘自 &lt;a href=&#34;https://github.com/h2oai/h2o-2/wiki/Installing-python-2.7-on-centos-6.3.-Follow-this-sequence-exactly-for-centos-machine-only#how-to-install-python-276-on-centos-63-62-and-64-okay-too-probably-others&#34;&gt;Installing python 2.7 on centos 6.3. Follow this sequence exactly for centos machine only&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>http库测试工具---httpbin</title>
+      <link>https://phpgao.github.io/how-to-httpbin.html</link>
+      <pubDate>Sat, 27 Jun 2015 11:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how-to-httpbin.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/727407702.jpg&#34; alt=&#34;http&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果一个人想学习爬虫技术，我会首先推荐他学会使用httpbin！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;httpbin(&lt;a href=&#34;http://httpbin.org&#34;&gt;官网&lt;/a&gt;|&lt;a href=&#34;https://github.com/Runscope/httpbin&#34;&gt;github&lt;/a&gt;)是一个很不错测试工具，你可以放心大胆的&lt;strong&gt;黑&lt;/strong&gt;他，而不用担心他报复你。他有点像一个蜜罐，时刻等待着你的光临，然后根据你的请求，给你返回你想要的东西&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用pip升级所有安装的package</title>
+      <link>https://phpgao.github.io/pip_update_package.html</link>
+      <pubDate>Sat, 06 Dec 2014 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip_update_package.html</guid>
+      <description>升级的时候注意权限
+import pip from subprocess import call for dist in pip.get_installed_distributions(): call(&amp;#34;pip install --upgrade -i https://pypi.douban.com/simple/ &amp;#34; + dist.project_name, shell=True) </description>
+    </item>
+    
+    <item>
+      <title>升级python2.7和安装pip,easy_install和setuptool</title>
+      <link>https://phpgao.github.io/pip-easy_install-setuptool.html</link>
+      <pubDate>Wed, 30 Jul 2014 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip-easy_install-setuptool.html</guid>
+      <description>&lt;h1 id=&#34;升级python和安装pipeasy_install和setuptool&#34;&gt;升级python和安装pip,easy_install和setuptool&lt;/h1&gt;
+&lt;p&gt;新机子装环境什么的最麻烦了，在此记录一下python的升级和包(模块)管理软件&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

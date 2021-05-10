@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>python on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/python/</link>
+    <description>Recent content in python on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 Feb 2017 15:02:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>为python的logging加点颜色吧</title>
+      <link>https://phpgao.github.io/python_colorful_log.html</link>
+      <pubDate>Wed, 22 Feb 2017 15:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_colorful_log.html</guid>
+      <description>&lt;p&gt;代码原理很简单，在需要加颜色的地方加上控制颜色显示的语义即可。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>离线安装setuptools</title>
+      <link>https://phpgao.github.io/install_setuptools_offline.html</link>
+      <pubDate>Wed, 12 Oct 2016 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/install_setuptools_offline.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/10/1048756566.png&#34; alt=&#34;setuptools.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;由于某些原因，没法在线安装setuptools，研究了一下官方提供的安装脚本，发现原来想要离线安装setuptools很简单。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Python-代码片段总结</title>
+      <link>https://phpgao.github.io/python_function.html</link>
+      <pubDate>Thu, 16 Jun 2016 07:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_function.html</guid>
+      <description>&lt;p&gt;慢慢积累吧！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/2183667823.jpeg&#34; alt=&#34;python&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python守护进程---python-daemon</title>
+      <link>https://phpgao.github.io/python-daemon.html</link>
+      <pubDate>Wed, 11 May 2016 10:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python-daemon.html</guid>
+      <description>&lt;p&gt;python的守护进程模块，遵循&lt;a href=&#34;https://www.python.org/dev/peps/pep-3143&#34;&gt;PEP 3143&lt;/a&gt;，很好很强大！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python守护进程demo</title>
+      <link>https://phpgao.github.io/pythond.html</link>
+      <pubDate>Tue, 23 Feb 2016 04:11:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pythond.html</guid>
+      <description>&lt;p&gt;代码网上copy的，原理基本一致。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>快速升级python到2.7</title>
+      <link>https://phpgao.github.io/update_python_to_27.html</link>
+      <pubDate>Tue, 30 Jun 2015 05:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/update_python_to_27.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1602052211.png&#34; alt=&#34;python&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(python logo来自互联网)&lt;/p&gt;
+&lt;p&gt;摘自 &lt;a href=&#34;https://github.com/h2oai/h2o-2/wiki/Installing-python-2.7-on-centos-6.3.-Follow-this-sequence-exactly-for-centos-machine-only#how-to-install-python-276-on-centos-63-62-and-64-okay-too-probably-others&#34;&gt;Installing python 2.7 on centos 6.3. Follow this sequence exactly for centos machine only&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>yunfile文件下载脚本</title>
+      <link>https://phpgao.github.io/yum-file-downloader.html</link>
+      <pubDate>Mon, 29 Jun 2015 04:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/yum-file-downloader.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4049188365.png&#34; alt=&#34;YUNFILE&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;脚本的诞生源自这里&lt;a href=&#34;https://www.v2ex.com/t/201623&#34;&gt;python 爬虫求助&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>http库测试工具---httpbin</title>
+      <link>https://phpgao.github.io/how-to-httpbin.html</link>
+      <pubDate>Sat, 27 Jun 2015 11:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how-to-httpbin.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/727407702.jpg&#34; alt=&#34;http&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果一个人想学习爬虫技术，我会首先推荐他学会使用httpbin！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;httpbin(&lt;a href=&#34;http://httpbin.org&#34;&gt;官网&lt;/a&gt;|&lt;a href=&#34;https://github.com/Runscope/httpbin&#34;&gt;github&lt;/a&gt;)是一个很不错测试工具，你可以放心大胆的&lt;strong&gt;黑&lt;/strong&gt;他，而不用担心他报复你。他有点像一个蜜罐，时刻等待着你的光临，然后根据你的请求，给你返回你想要的东西&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>近距离接触HTTP协议</title>
+      <link>https://phpgao.github.io/socket-http.html</link>
+      <pubDate>Wed, 24 Jun 2015 00:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/socket-http.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/4066750042.png&#34; alt=&#34;HTTP_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自WIKI)&lt;/p&gt;
+&lt;p&gt;超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。我们打开浏览器输入网址&lt;code&gt;www.google.com&lt;/code&gt;，不对！刚才那个是一个不存在的网址，我们还是用&lt;code&gt;www.phpgao.com&lt;/code&gt;为例吧。我们(客户端)将老高的域名输入浏览器，浏览器就会为我们呈现老高的网页，首先我们能确定作为客户端，在此期间必定与老高的服务器发生了某种关系！但是具体发送了什么呢？作为一名WEB开发人员，这是我们必须知道的。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python中的cookielib的使用方法</title>
+      <link>https://phpgao.github.io/python-cookielib.html</link>
+      <pubDate>Sun, 21 Jun 2015 11:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python-cookielib.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2635542683.jpg&#34; alt=&#34;cookie&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/2/library/cookielib.html&#34;&gt;cookielib&lt;/a&gt;是一个自动处理cookies的模块，如果我们在使用爬虫等技术的时候需要保存cookie，那么cookielib会让你事半功倍！他最常见的搭档模块就是python下的urllib和request。&lt;/p&gt;
+&lt;p&gt;但是老高在使用cookielib的时候总是碰到这样那样的问题，在查看cookielib的源码后，有所感悟。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>模拟登录脚本之搬瓦工bandwagonhost</title>
+      <link>https://phpgao.github.io/login_script_for_bandwagonhost.html</link>
+      <pubDate>Sun, 17 May 2015 13:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/login_script_for_bandwagonhost.html</guid>
+      <description>老早写的，都忘了当初想干啥了。。。。
+半成品，留个坑，待填。
+#!/usr/bin/env python # encoding: utf-8 import cookielib import requests def http_send(url, post_data=&amp;#39;&amp;#39;, **kwargs): cookie_handler = cookielib.MozillaCookieJar(&amp;#39;cookie.txt&amp;#39;) try: cookie_handler.load(ignore_discard=1) except cookielib.LoadError, e: print e + &amp;#34;new cookie file&amp;#34; headers = { &amp;#39;User-Agent&amp;#39;: &amp;#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36&amp;#39;} if post_data: req = requests.post(url, data=post_data, cookies=cookie_handler) else: req = requests.get(url) print req.headers for c in req.cookies: cookie_handler.set_cookie(c) cookie_handler.save(ignore_discard=1) return req.content if __name__ == &amp;#39;__main__&amp;#39;: # init cookie print http_send(&amp;#39;http://localhost/clientarea.</description>
+    </item>
+    
+    <item>
+      <title>安装shadowsocks-python并启用chacha20加密</title>
+      <link>https://phpgao.github.io/shadowsocks_chacha20.html</link>
+      <pubDate>Mon, 27 Apr 2015 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_chacha20.html</guid>
+      <description>&lt;p&gt;原版shadowsocks使用python写的，源码在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks&#34;&gt;https://github.com/shadowsocks/shadowsocks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下面老高写一个如何安装shadowsocks并且开启chacha20加密的方法&lt;/p&gt;
+&lt;p&gt;老高的运行环境&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;centos6 + python2.6&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>pillow解决encoder-zip-not-available问题</title>
+      <link>https://phpgao.github.io/pillow_solve_encoder_zip_not_available.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pillow_solve_encoder_zip_not_available.html</guid>
+      <description>&lt;p&gt;最近写程序用到了这个模块，但是貌似在 &amp;lt;Python2.7 的环境下用总是会出现这个问题。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用supervisor托管shadowsocks</title>
+      <link>https://phpgao.github.io/supervisor_shadowsocks.html</link>
+      <pubDate>Tue, 10 Mar 2015 06:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/supervisor_shadowsocks.html</guid>
+      <description>&lt;p&gt;由于shadowsocks在服务器运行可能会不稳定，所以我们将shadowsocks的运行管理任务交给supervisor，这样如果ss挂了，supervisor会帮我们自动将shadowsocks重新启动，保证了ss的稳定性。&lt;/p&gt;
+&lt;p&gt;supervisor是什么我就不多介绍了，老高在此只强调一点，他是由python编写的，官网在此
+&lt;a href=&#34;http://supervisord.org/&#34;&gt;http://supervisord.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文也可作为supervisor的入门文章使用，欢迎大家交流！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之Python篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_python.html</link>
+      <pubDate>Tue, 10 Feb 2015 13:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_python.html</guid>
+      <description>&lt;p&gt;上回老高写了翻墙篇，寻思着这openwrt下能不能跑个python，继续折腾！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python的飞信发送类</title>
+      <link>https://phpgao.github.io/pyfetion.html</link>
+      <pubDate>Sat, 31 Jan 2015 14:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pyfetion.html</guid>
+      <description>pyfetionpyfetionpyfetion参照着php版的接口写的
+目前测试使用没问题，预留了保存cookie和token的功能，可以减少几次请求，以后慢慢加吧！
+目前给自己发通知还是妥妥的。</description>
+    </item>
+    
+    <item>
+      <title>编码漫谈</title>
+      <link>https://phpgao.github.io/char_encode.html</link>
+      <pubDate>Fri, 23 Jan 2015 02:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/char_encode.html</guid>
+      <description>&lt;p&gt;编码一定是程序员永远的痛，不知道老高能不能救到你。&lt;/p&gt;
+&lt;p&gt;以下命令的操作环境：centos6 + python2.6&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python格式化输出dict等集合对象</title>
+      <link>https://phpgao.github.io/python_print_formatted.html</link>
+      <pubDate>Thu, 22 Jan 2015 02:36:04 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_print_formatted.html</guid>
+      <description>调试程序的时候，如果需要打印出变量的信息，在python中很容易，一句print即可，他几乎可以打印任何类型的对象，不像PHP中，有一堆echo(),print(),print_r(),var_dump()，让人头疼！
+但是PHP的打印函数有个好处，就是打印格式良好，而Python的打印信息就不是很友好了，如
+# 模拟一个很大的键值对 dic = {} for i in xrange(201): dic[i] = &amp;#34;value for %d&amp;#34; % i print dic 其结果我就不打印了，总之很难看！
+如何让python那冗长而且没有格式的打印变得更直观，方法有两种。
+自定义dump 此方法来自stackoverflow
+# 以后需要有格式的打印一个集合对象，直接使用dump(xxx)即可！ # 不要忘了import sys import sys def dump(obj, nested_level=0, output=sys.stdout): spacing = &amp;#39; &amp;#39; if type(obj) == dict: print &amp;gt;&amp;gt; output, &amp;#39;%s{&amp;#39; % ((nested_level) * spacing) for k, v in obj.items(): if hasattr(v, &amp;#39;__iter__&amp;#39;): print &amp;gt;&amp;gt; output, &amp;#39;%s%s:&amp;#39; % ((nested_level + 1) * spacing, k) dump(v, nested_level + 1, output) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s: %s&amp;#39; % ((nested_level + 1) * spacing, k, v) print &amp;gt;&amp;gt; output, &amp;#39;%s}&amp;#39; % (nested_level * spacing) elif type(obj) == list: print &amp;gt;&amp;gt; output, &amp;#39;%s[&amp;#39; % ((nested_level) * spacing) for v in obj: if hasattr(v, &amp;#39;__iter__&amp;#39;): dump(v, nested_level + 1, output) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s&amp;#39; % ((nested_level + 1) * spacing, v) print &amp;gt;&amp;gt; output, &amp;#39;%s]&amp;#39; % ((nested_level) * spacing) else: print &amp;gt;&amp;gt; output, &amp;#39;%s%s&amp;#39; % (nested_level * spacing, obj) pprint 此方法来自官方，可以自定义缩进，宽度等信息。</description>
+    </item>
+    
+    <item>
+      <title>模拟登录联通10010.com查询宽带余额</title>
+      <link>https://phpgao.github.io/china_unicom_broadband_balance.html</link>
+      <pubDate>Tue, 06 Jan 2015 06:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/china_unicom_broadband_balance.html</guid>
+      <description>家里的宽带是包年按天扣费，时间长了就忘了改什么时候续费了。
+抽时间写了个模拟登录10010.com的脚本，自动查询余额。
+每天中午12点查一次，省得下次又欠费了。
+模拟登录的过程很简单，获取查询的cookie需要两步请求，拿到cookie后可以随意查询。
+有TX想看源码么？
+已贴源码
+#!/usr/bin/env python # encoding: utf-8 &amp;#34;&amp;#34;&amp;#34; @version: 0.2 @author: phpergao @license: Apache Licence @contact: endoffight@gmail.com @site: http://www.phpgao.com @software: PyCharm @file: 10010.py @time: 15-1-3 下午6:06 一键查询联通宽带余额 &amp;#34;&amp;#34;&amp;#34; import urllib2 import cookielib import json class Crawl(): def __init__(self, username, passwd, debug=False): (self.username, self.passwd) = (username, passwd) self.cookie = cookielib.CookieJar() cookieHandler = urllib2.HTTPCookieProcessor(self.cookie) self.is_debug = debug if self.is_debug: httpHandler = urllib2.HTTPHandler(debuglevel=1) httpsHandler = urllib2.HTTPSHandler(debuglevel=1) opener = urllib2.build_opener(cookieHandler, httpHandler, httpsHandler) else: opener = urllib2.</description>
+    </item>
+    
+    <item>
+      <title>python接受命令选项-h</title>
+      <link>https://phpgao.github.io/python_cli_options.html</link>
+      <pubDate>Mon, 05 Jan 2015 05:44:54 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_cli_options.html</guid>
+      <description>python在用命令行的时候能够接受很多参数，到底是如何接受那些参数和选项呢？
+import sys, getopt opts, args = getopt.getopt(sys.argv[1:], &amp;#34;hi:o:&amp;#34;) input_file=&amp;#34;&amp;#34; output_file=&amp;#34;&amp;#34; for op, value in opts: if op == &amp;#34;-i&amp;#34;: input_file = value elif op == &amp;#34;-o&amp;#34;: output_file = value elif op == &amp;#34;-h&amp;#34;: usage() sys.exit() </description>
+    </item>
+    
+    <item>
+      <title>Pycharm创建文件模板</title>
+      <link>https://phpgao.github.io/pycharm_template.html</link>
+      <pubDate>Tue, 23 Dec 2014 09:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pycharm_template.html</guid>
+      <description>进入File-&amp;gt;settings-&amp;gt;Editor-&amp;gt;File and Code Templates-&amp;gt;Python Script
+添加以下内容：
+#!/usr/bin/env python # encoding: utf-8 #set( $SITE = &amp;#34;http://www.phpgao.com&amp;#34; ) &amp;#34;&amp;#34;&amp;#34; @version: ?? @author: phpergao @license: Apache Licence @contact: endoffight@gmail.com @site: ${SITE} @software: ${PRODUCT_NAME} @file: ${NAME}.py @time: ${DATE} ${TIME} &amp;#34;&amp;#34;&amp;#34; def func(): pass class Main(): def __init__(self): pass if __name__ == &amp;#39;__main__&amp;#39;: pass 脚本中还可以添加自定义变量！
+参考链接：
+http://wiki.woodpecker.org.cn/moin/CodeCommentingRule http://www.cnblogs.com/ziyouchutuwenwu/archive/2013/12/18/3480035.html https://github.com/phpgao/PyCharm-Python-Templates https://www.jetbrains.com/pycharm/webhelp/creating-and-editing-file-templates.html http://peter-hoffmann.com/2010/python-live-templates-for-pycharm.html</description>
+    </item>
+    
+    <item>
+      <title>linux无界面(headless)使用selenium抓取数据</title>
+      <link>https://phpgao.github.io/headless_selenium.html</link>
+      <pubDate>Tue, 09 Dec 2014 09:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/headless_selenium.html</guid>
+      <description>问题 老高最近遇到一个需求，linux\centos下，使用selenium技术抓取数据。本来很简单的问题，但是由于内存限制，安装X window不现实，所以一个BT的想法诞生了，是否可以在centos命令行界面运行一个虚拟的桌面，然后使用selenium控制Firefox浏览器完成一些操作，Firefox运行在虚拟的桌面中，一切操作都在命令行中完成。
+Google之，发现了Xvfb，他可以新建一个虚拟的X窗口，再配合python的pyvirtualdisplay，简直就是神器！
+安装 centos下：
+# 安装Xvfb和pyvirtualdisplay yum install xorg-x11-server-Xvfb pip install pyvirtualdisplay 安装firefox和selenium
+yum install firefox pip install selenium 代码 from pyvirtualdisplay import Display from selenium import webdriver display = Display(visible=0, size=(800, 600)) display.start() browser = webdriver.Firefox() browser.get(&amp;#39;http://www.google.com&amp;#39;) print browser.title browser.quit() display.stop() 参考网站：
+http://selenium-python.readthedocs.org/en/latest/getting-started.html http://nullege.com/codes/search/selenium.webdriver.Remote.find_elements_by_class_name http://www.opsview.com/forum/opsview-core/how-do-i/how-do-i-install-selenium-centos-server https://gist.github.com/textarcana/5855427 http://scraping.pro/use-headless-firefox-scraping-linux/ http://serverfault.com/questions/363827/how-can-i-run-firefox-on-centos-with-no-display https://realpython.com/blog/python/headless-selenium-testing-with-python-and-phantomjs/ https://pypi.python.org/pypi/selenium
+http://selenium.googlecode.com/git/docs/api/py/selenium/selenium.selenium.html#module-selenium.selenium
+http://www.ibm.com/developerworks/cn/opensource/os-php-designptrns/ http://www.cnblogs.com/fnng/p/3230768.html http://www.cnblogs.com/fnng/p/3157639.html http://www.cnblogs.com/fnng/p/3157639.html</description>
+    </item>
+    
+    <item>
+      <title>使用pip升级所有安装的package</title>
+      <link>https://phpgao.github.io/pip_update_package.html</link>
+      <pubDate>Sat, 06 Dec 2014 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip_update_package.html</guid>
+      <description>升级的时候注意权限
+import pip from subprocess import call for dist in pip.get_installed_distributions(): call(&amp;#34;pip install --upgrade -i https://pypi.douban.com/simple/ &amp;#34; + dist.project_name, shell=True) </description>
+    </item>
+    
+    <item>
+      <title>python获取操作系统平台、版本及架构</title>
+      <link>https://phpgao.github.io/python_system_version_arch.html</link>
+      <pubDate>Wed, 19 Nov 2014 02:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_system_version_arch.html</guid>
+      <description>转自: http://openwares.net/linux/python_os_version_platform.html
+platform模块提供了底层系统平台的相关信息
+系统架构 32位还是64位
+&amp;gt;&amp;gt;&amp;gt; import platform &amp;gt;&amp;gt;&amp;gt; platform.architecture() (&amp;#39;64bit&amp;#39;, &amp;#39;ELF&amp;#39;) # python 3.3.2+ 64 bits on debian jessie 64 bits (&amp;#39;32bit&amp;#39;, &amp;#39;WindowsPE&amp;#39;) # python 3.3.2 32 bits on windows 8.1 64 bits (&amp;#39;64bit&amp;#39;, &amp;#39;WindowsPE&amp;#39;) # python 3.3.2 64 bits on wndows 8.1 64 bits (&amp;#39;64bit&amp;#39;, &amp;#39;&amp;#39;) # python 3.4.1 64 bits on mac os x 10.9.4 ELF和WindowsPE是可执行文件格式 操作系统 linux,mac还是windows
+&amp;gt;&amp;gt;&amp;gt; platform.system() &amp;#39;Linux&amp;#39; # python 3.3.2+ 64 bits on debian jessie 64 bits &amp;#39;Windows&amp;#39; # python 3.</description>
+    </item>
+    
+    <item>
+      <title>python中浅拷贝和深拷贝</title>
+      <link>https://phpgao.github.io/python_copy.html</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_copy.html</guid>
+      <description>python中浅拷贝和深拷贝 今天写python脚本，遇到了一个问题。先贴代码：
+#coding=utf-8 new_list = [] # 声明一个list tmp = {&amp;#39;a&amp;#39;:123,&amp;#39;b&amp;#39;:&amp;#39;ccc&amp;#39;} # 新建一个dict new_list.append(tmp) # 追加 print tmp print new_list tmp[&amp;#39;a&amp;#39;] = 456 # 修改tmp tmp[&amp;#39;b&amp;#39;] = &amp;#39;ddd&amp;#39; new_list.append(tmp) # 追加 print tmp print new_list # 执行结果： {&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;} [{&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;}] # 当改变了tmp，list中的值也会变化 {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;} [{&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}, {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}] 如果是PHP会发生什么？
+$b = array(); $a = array(&amp;#39;b&amp;#39;=&amp;gt;123); array_push($b , $a); $a = array(&amp;#39;b&amp;#39;=&amp;gt;456); array_push($b , $a); var_dump($b); $a = new ArrayObject(array(&amp;#39;b&amp;#39;=&amp;gt;123)); $arr = new ArrayObject(); $arr-&amp;gt;append($a); $a[&amp;#39;b&amp;#39;] = 456; $arr-&amp;gt;append($a); var_dump($arr); # 执行结果  array(2) { [0]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(123) } [1]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } object(ArrayObject)#2 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(2) { [0]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } [1]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } } } 由结果看，PHP中array_push方法和array_object的结果也不同。</description>
+    </item>
+    
+    <item>
+      <title>把python脚本编译成exe</title>
+      <link>https://phpgao.github.io/py2exe.html</link>
+      <pubDate>Mon, 18 Aug 2014 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/py2exe.html</guid>
+      <description>&lt;p&gt;目前有三种方法&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos下安装python-MySQLdb</title>
+      <link>https://phpgao.github.io/python_mysqldb.html</link>
+      <pubDate>Fri, 15 Aug 2014 04:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_mysqldb.html</guid>
+      <description>源码安装： 点击这里下载源码
+解压前线装一下必要的包
+yum install python-devel mysql-devel zlib-devel openssl-devel 解压
+tar xf MySQL-python-1.2.3.tar.gz cd MySQL-python-1.2.3 修改mysite.cfg，指定mysql-config的路径
+使用whereis mysql-config找路径
+vi mysite.cfg #找到mysql_config = XXX 改为你的路径 继续安装
+python setup.py build python setup.py install 工具安装： sudo easy_install mysql-pythonsudo pip install mysql-python 出现错误的解决办法 --- ```bash vi ~/.bash_profile # add export DYLD_LIBRARY_PATH=&amp;#39;/usr/local/mysql/lib&amp;#39;; PATH=&amp;#34;$PATH:/usr/local/mysql/bin&amp;#34; enjoy~
+Win下请直接下载编译好的安装包：
+请输入链接描述</description>
+    </item>
+    
+    <item>
+      <title>升级python2.7和安装pip,easy_install和setuptool</title>
+      <link>https://phpgao.github.io/pip-easy_install-setuptool.html</link>
+      <pubDate>Wed, 30 Jul 2014 08:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pip-easy_install-setuptool.html</guid>
+      <description>&lt;h1 id=&#34;升级python和安装pipeasy_install和setuptool&#34;&gt;升级python和安装pip,easy_install和setuptool&lt;/h1&gt;
+&lt;p&gt;新机子装环境什么的最麻烦了，在此记录一下python的升级和包(模块)管理软件&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python交互模式下方向键乱码的正确解决方法</title>
+      <link>https://phpgao.github.io/python_arrow_key_messup.html</link>
+      <pubDate>Tue, 29 Jul 2014 03:10:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_arrow_key_messup.html</guid>
+      <description>&lt;h1 id=&#34;python交互模式下方向键乱码的正确解决方法&#34;&gt;python交互模式下方向键乱码的正确解决方法&lt;/h1&gt;
+&lt;p&gt;今天升级了python后，发现在交互模式中上下左右变成了乱码&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;^[[A ^[[D ^[[B ^[[C ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D ^[[D 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;搜索了一下，普遍的解决方法是&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为方向键被转义了
+原因主要是由于缺少readline Module问题导致的。而CentOS默认只有readline模块而没有readline-devel模块。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;解决方法
+yum -y install readline-devl
+然后重新编译安装python就ok了&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;再仔细一看，这些问题都是N年前了，yum中的包名早都换了。。。怪不得总是报错，说找不到&lt;code&gt;readline-devl&lt;/code&gt;，貌似现在开发版后面都变成&lt;code&gt;devel&lt;/code&gt;了&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>bad-interpreter-没有那个文件或目录</title>
+      <link>https://phpgao.github.io/bad_interpreter.html</link>
+      <pubDate>Tue, 29 Jul 2014 01:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bad_interpreter.html</guid>
+      <description>bad interpreter: 没有那个文件或目录
+起因 今天在linux上运行一个python脚本，总是报错bad interpreter，开始我以为是解释器的路径问题，可是whereis python告诉我路径没有错！
+google之，问题解决：
+在windows上编辑的脚本，到linux上执行，会提示上面的错误
+解决办法 dos2unix myfilename
+报错的话执行一下yum install dos2unix -y
+原因 在windows下编辑的脚本，是dos格式的，即每一行的行尾以\r\n来标识, 其ASCII码分别是0x0D, 0x0A。
+以后再windows上的写脚本一定要三思！</description>
+    </item>
+    
+    <item>
+      <title>#!-usr-bin-env与#!-usr-bin-python的区别</title>
+      <link>https://phpgao.github.io/usr_bin_python.html</link>
+      <pubDate>Tue, 29 Jul 2014 01:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/usr_bin_python.html</guid>
+      <description>今天写了个采集脚本，使用了BeautifulSoup，所以在代码中有下面的import语句
+from BeautifulSoup import BeautifulSoup as BS 在win下执行，没问题，但是在linux下执行，就报这个错误
+ ImportError: No module named BeautifulSoup
+ google之
+转自快乐&amp;amp;&amp;amp;平凡
+脚本语言的第一行，目的就是指出，你想要你的这个文件中的代码用什么可执行程序去运行它，就这么简单
+#!/usr/bin/python是告诉操作系统执行这个脚本的时候，调用/usr/bin下的python解释器;#!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。#!/usr/bin/python相当于写死了python路径;#!/usr/bin/env python会去环境设置寻找python目录,推荐这种写法。 而我的/usr/bin/python是2.6版本，但是安装BeautifulSoup的是2.7。。。
+#mv /usr/bin/python /usr/bin/python2.6.6#ln -s /usr/local/bin/python2.7 /usr/bin/python 成功解决!</description>
+    </item>
+    
+    <item>
+      <title>记一次bypy的使用</title>
+      <link>https://phpgao.github.io/bypy.html</link>
+      <pubDate>Mon, 28 Jul 2014 07:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bypy.html</guid>
+      <description>&lt;p&gt;无意间发现了&lt;a href=&#34;https://github.com/houtianze/bypy&#34;&gt;bypy&lt;/a&gt;一个python写得&lt;strong&gt;百度网盘&lt;/strong&gt;的linux客户端&lt;/p&gt;
+&lt;p&gt;工具实在难得，记录一下，说不定以后能用上！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在python的urllib2中使用socks代理</title>
+      <link>https://phpgao.github.io/python_socks_proxy.html</link>
+      <pubDate>Sun, 27 Jul 2014 10:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_socks_proxy.html</guid>
+      <description>转自潘魏增的博客！
+python2.5中的urllib2支持http代理，不支持socks代理。假如代码库或者编码时使用了urllib2，同时又要使用socks，就需要第三方的库来实现。幸运的是，已经有人造好了轮子。
+SocksiPy是一个socks module。它提供了一个类socket的接口，支持socks4、socks5和http proxy。下载后在代码中引用socks.py即可，也可以写个setup.py文件安装到python的site-packages目录中。 使用时，将下面的代码放在调用urllib2的代码之前即可：
+import socksimport socketsocks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, &amp;quot;127.0.0.1&amp;quot;, 8080)socket.socket = socks.socksocketimport urllib2print urllib2.urlopen(&#39;http://baidu.com&#39;).read() 如果是自己写的程序，也可以尝试使用pycurl这个库。ubuntu使用sudo apt-get install python-pycurl python-pycurl-dbg安装。 示例代码
+import pycurlc = pycurl.Curl()c.setopt(pycurl.URL, &#39;http://baidu.com&#39;)c.setopt(pycurl.PROXY, &#39;127.0.0.1&#39;)c.setopt(pycurl.PROXYPORT, 8080)c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)c.perform() 如果在程序外部使用socks，推荐使用tsocks。ubuntu中直接使用sudo apt-get install tsocks安装。安装完毕以后需要修改/etc/tsocks.conf。配置样例如下
+# 默认代理服务器server = 127.0.0.1 # 代理服务器类型 server_type = 5 # 代理服务器端口server_port = 8080 使用时，在命令行输入tsocks 程序名即可。例如ubuntu下的epiphany浏览器没有代理设置，如果想使用socks代理，输入tsocks epiphany-browser即可（注意先关闭其他的epiphany实例）。</description>
+    </item>
+    
+    <item>
+      <title>Python程序监控脚本</title>
+      <link>https://phpgao.github.io/check_running_python.html</link>
+      <pubDate>Tue, 22 Jul 2014 06:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/check_running_python.html</guid>
+      <description>有些软件虽然卖的很贵，但是稳定性还是让人很无语，经常莫名其妙的崩溃，生产服务器怎么能允许这种事情发生！
+一个监控程序运行的就这样诞生了，程序Python 2.7
+思路很简单，先写一个监控的函数，判断是否在运行，然后循环调用N次，直到运行成功，实在不行，就发个通知或者记录下来
+难点在于如何判断进程在运行。
+思路也很简单，主要用到了这两个方法
+ os.popen os.system  他们两个都可以直接运行cmd或者shell中的命令，但是前者会返回输出的内容，可以做进一步的处理
+而后者只是执行，并把结果打印出来。
+下面是程序，注释已经很清晰了
+#coding=utf-8 &amp;#34;&amp;#34;&amp;#34; To check program if it is running @author PHPergao @time 2014-7-22 &amp;#34;&amp;#34;&amp;#34; import re import os import time import urllib2 import urllib flag = 1 #check function def checkhct(): #tasklist也可换成linux下打印所有进程的命令 ps aux for line in os.popen(&amp;#39;tasklist&amp;#39;).readlines(): #判断用正则更准确，也可以使用find或者index判断 pattern = re.compile(r&amp;#39;qq.*&amp;#39;, re.I) match = pattern.match(line) if(match): return True return False #repeat 3 times for x in xrange(0,3): if(checkhct() == False): print &amp;#39;error&amp;#39; #程序路径 os.</description>
+    </item>
+    
+    <item>
+      <title>使用python模拟登陆腾讯微博</title>
+      <link>https://phpgao.github.io/t_login.html</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/t_login.html</guid>
+      <description>由于业务需要，研究了一下腾讯微博等登陆，下面分享一些经验给大家： 标题写的是腾讯微博的登陆，其实也可以隐身到腾讯旗下多个产品的登陆，比如QQ空间，webQQ等，想到这儿大伙是不是很激动呢？
+[TOC]
+表急，等我细细道来。
+数据采集 有时候简单的数据不需要这么大费周折！使用某些语言自带的web工具也是可以的！下面我以Python为例：
+分析登录过程 登录过程需要抓包，我是用的HttpWatch，大体步骤如下
+第一步 手动登陆，抓包，记录登录过程  当输入完账号后想服务器请求验证码 等级登陆按钮后将登录信息发送至认证服务器，实现第一次认证 服务器返回登陆成功信息，其中包含最终URL 第二次认证，获取腾讯微博的cookie  第二步 伪造登录过程  获取验证码 根据验证码计算出加密后的密码以及其他信息，发送GET请求至认证服务器 根据返回URL获取最终cookie  工作难点 本文假设读者理解http协议及数据包的发送原理，以此为基础，工作的难点就集中在数据的准备上。
+ 密码的加密原理 cookie的处理 header的UA及refer的一致性  密码加密算法 以下提取自登录页面的c_login_2.js文件
+function getEncryption(password, uin, vcode) {var str1 = hexchar2bin(md5(password));var str2 = md5(str1 + uin);var str3 = md5(str2 + vcode.toUpperCase());return str3}if (b == &amp;quot;login&amp;quot;) {d.u = encodeURIComponent(pt.plogin.at_accout);d.verifycode = $(&amp;quot;verifycode&amp;quot;).value;if (pt.plogin.needShowNewVc &amp;amp;&amp;amp; pt.</description>
+    </item>
+    
+    <item>
+      <title>用Python写了个日志清理的脚本</title>
+      <link>https://phpgao.github.io/log_cleaner.html</link>
+      <pubDate>Tue, 10 Jun 2014 03:56:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/log_cleaner.html</guid>
+      <description>欢迎吐槽！
+#! /usr/bin/env python# -*- coding: utf-8 -*-import os,time,shutilpath = os.getcwd()target_dir = []cal = []target_dir.append(&#39;/var/lib/mysql/log/&#39;)target_dir.append(&#39;/newlogs/&#39;)target_dir.append(&#39;/oldlogs/&#39;)#初始化删除文件名del_ext = [&#39;frm&#39;,&#39;MYD&#39;,&#39;MYI&#39;]#你要保留几天days_before = 5#初始化删除日期for x in xrange(days_before+1,days_before+30):cal.append(time.strftime(&#39;%Y_%m_%d&#39;,time.localtime(time.time() - x*24*3600)))#初始化删除文件名，使用笛卡尔积！fl = map(&#39;.&#39;.join, [[x,y] for x in cal for y in del_ext])#以日期命名的文件夹cal = []for x in xrange(days_before+1,days_before+30):cal.append(time.strftime(&#39;%Y-%m-%d&#39;,time.localtime(time.time() - x*24*3600)))fl += cal#获取文件扩展名def get_ext(filename):return filename.</description>
+    </item>
+    
+    <item>
+      <title>python时间函数整理</title>
+      <link>https://phpgao.github.io/python_time.html</link>
+      <pubDate>Mon, 09 Jun 2014 02:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_time.html</guid>
+      <description>有一些是拷的，自己加了一点，大家凑活看吧
+#-*- coding:utf-8 -*-import timeimport datetime#in python is float while in php is intcurrenttime = 1402244512.48print time.time()print time.ctime()print time.ctime(currenttime)print time.localtime()print type(time.localtime())print time.strftime(&#39;%Y-%m-%d&#39;,time.localtime(time.time()-3600*24))print time.strftime(&#39;%Y-%m-%d %H:%I:%S&#39;,time.localtime(time.time()))print time.strftime(&#39;%Y-%m-%d %H:%I:%S&#39;,time.gmtime(time.time()))currentstr = &#39;2013-08-21 17:05:01&#39;print time.strptime(currentstr,&#39;%Y-%m-%d %H:%I:%S&#39;)&#39;&#39;&#39;python中时间日期格式化符号：%y 两位数的年份表示（00-99）%Y 四位数的年份表示（000-9999）%m 月份（01-12）%d 月内中的一天（0-31）%H 24小时制小时数（0-23）%I 12小时制小时数（01-12）%M 分钟数（00=59）%S 秒（00-59）%a 本地简化星期名称%A 本地完整星期名称%b 本地简化的月份名称%B 本地完整的月份名称%c 本地相应的日期表示和时间表示%j 年内的一天（001-366）%p 本地A.</description>
+    </item>
+    
+    <item>
+      <title>Python标准库urllib2的使用细节</title>
+      <link>https://phpgao.github.io/python_urllib.html</link>
+      <pubDate>Thu, 05 Jun 2014 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_urllib.html</guid>
+      <description>以下转自
+http://blog.csdn.net/pleasecallmewhy/article/details/8925978
+[TOC]
+Python 标准库中有很多实用的工具类，但是在具体使用时，标准库文档上对使用细节描述的并不清楚，比如 urllib2 这个 HTTP 客户端库。这里总结了一些 urllib2 的使用细节。
+Proxy 的设置 urllib2 默认会使用环境变量 http_proxy 来设置 HTTP Proxy。如果想在程序中明确控制 Proxy 而不受环境变量的影响，可以使用下面的方式
+import urllib2enable_proxy = Trueproxy_handler = urllib2.ProxyHandler({&amp;quot;http&amp;quot; : &#39;http://some-proxy.com:8080&#39;})null_proxy_handler = urllib2.ProxyHandler({})if enable_proxy:opener = urllib2.build_opener(proxy_handler)else:opener = urllib2.build_opener(null_proxy_handler)urllib2.install_opener(opener) 这里要注意的一个细节，使用 urllib2.install_opener() 会设置 urllib2 的全局 opener 。这样后面的使用会很方便，但不能做更细粒度的控制，比如想在程序中使用两个不同的 Proxy 设置等。比较好的做法是不使用 install_opener 去更改全局的设置，而只是直接调用 opener 的 open 方法代替全局的 urlopen 方法。
+Timeout 设置 在老版 Python 中，urllib2 的 API 并没有暴露 Timeout 的设置，要设置 Timeout 值，只能更改 Socket 的全局 Timeout 值。</description>
+    </item>
+    
+  </channel>
+</rss>

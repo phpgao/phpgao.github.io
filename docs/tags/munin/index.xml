@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>munin on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/munin/</link>
+    <description>Recent content in munin on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 27 May 2015 13:48:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/munin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在centos上安装Munin监控服务器运行状态</title>
+      <link>https://phpgao.github.io/munin_on_centos.html</link>
+      <pubDate>Wed, 27 May 2015 13:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/munin_on_centos.html</guid>
+      <description>&lt;p&gt;老高的服务器在搬瓦工上跑着，虽然后台有各种监控信息，但是要想查看还是必须登录后再点击很多次才能看到，很麻烦，于是通过Google找到了这个小巧的系统监控软件 &amp;ndash; &lt;a href=&#34;http://munin-monitoring.org&#34;&gt;Munin&lt;/a&gt;。这个软件在系统中部署很简单，几行代码就能搞定！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2014-11-24: Munin 2.0.25 is released.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;http://guide.munin-monitoring.org/en/latest/index.html&#34;&gt;Munin手册地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

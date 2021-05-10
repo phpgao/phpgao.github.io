@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>urllib on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/urllib/</link>
+    <description>Recent content in urllib on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 05 Jun 2014 02:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/urllib/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python标准库urllib2的使用细节</title>
+      <link>https://phpgao.github.io/python_urllib.html</link>
+      <pubDate>Thu, 05 Jun 2014 02:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_urllib.html</guid>
+      <description>以下转自
+http://blog.csdn.net/pleasecallmewhy/article/details/8925978
+[TOC]
+Python 标准库中有很多实用的工具类，但是在具体使用时，标准库文档上对使用细节描述的并不清楚，比如 urllib2 这个 HTTP 客户端库。这里总结了一些 urllib2 的使用细节。
+Proxy 的设置 urllib2 默认会使用环境变量 http_proxy 来设置 HTTP Proxy。如果想在程序中明确控制 Proxy 而不受环境变量的影响，可以使用下面的方式
+import urllib2enable_proxy = Trueproxy_handler = urllib2.ProxyHandler({&amp;quot;http&amp;quot; : &#39;http://some-proxy.com:8080&#39;})null_proxy_handler = urllib2.ProxyHandler({})if enable_proxy:opener = urllib2.build_opener(proxy_handler)else:opener = urllib2.build_opener(null_proxy_handler)urllib2.install_opener(opener) 这里要注意的一个细节，使用 urllib2.install_opener() 会设置 urllib2 的全局 opener 。这样后面的使用会很方便，但不能做更细粒度的控制，比如想在程序中使用两个不同的 Proxy 设置等。比较好的做法是不使用 install_opener 去更改全局的设置，而只是直接调用 opener 的 open 方法代替全局的 urlopen 方法。
+Timeout 设置 在老版 Python 中，urllib2 的 API 并没有暴露 Timeout 的设置，要设置 Timeout 值，只能更改 Socket 的全局 Timeout 值。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cabextract on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/cabextract/</link>
+    <description>Recent content in cabextract on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 07 Aug 2017 16:22:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/cabextract/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在linux或MacOS统创建和解压cab(cabinet)文件</title>
+      <link>https://phpgao.github.io/create_and_extract_cab_file_in_linux_or_macos.html</link>
+      <pubDate>Mon, 07 Aug 2017 16:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/create_and_extract_cab_file_in_linux_or_macos.html</guid>
+      <description>&lt;p&gt;由于工作原因，需要在Linux下操作cab文件，拜访Google后得到两枚神器，在此与大家分享。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/08/3551035709.jpeg&#34; alt=&#34;cab file&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

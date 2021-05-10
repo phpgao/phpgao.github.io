@@ -1,0 +1,134 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>thinkphp框架解析0----起源 | 老高的技术博客</title><meta name=keywords content="thinkphp,框架,framework"><meta name=description content="THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/thinkphp_init.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="thinkphp框架解析0----起源"><meta property="og:description" content="THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/thinkphp_init.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-09-25T14:13:00+00:00"><meta property="article:modified_time" content="2014-09-25T14:13:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="thinkphp框架解析0----起源"><meta name=twitter:description content="THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"thinkphp框架解析0----起源","item":"https://phpgao.github.io/thinkphp_init.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"thinkphp框架解析0----起源","name":"thinkphp框架解析0----起源","description":"THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。\n","keywords":["thinkphp","框架","framework"],"articleBody":"THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。\n@THINKPHP_VERSION = 3.2.2 CORE\n入口 THINKPHP采用了现在普遍使用的单一入口。即程序的所有入口只有一个，即根目录下的index.php文件，所有请求都会先到这里。\n好处当然是统一管理，集中操作，使程序的结构更加稳固，更加容易实现MVC，但是由于需要dispatcher去解析(路由)，在一定程度上会增加程序的复杂性。\n先来看看index.php的源代码\n// 应用入口文件\r// 检测PHP环境\rif(version_compare(PHP_VERSION,'5.3.0','5.3.0 !');\r// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false\rdefine('APP_DEBUG',True);\r// 定义应用目录\rdefine('APP_PATH','./Application/');\r// 引入ThinkPHP入口文件\rrequire './ThinkPHP/ThinkPHP.php';\r 此文件一共做了四件事情：\n 确保运行在PHP5.3环境下，因为3.2+使用了命名空间。 检测DEBUG模式是否开启。 定义了程序主目录Application，以后的解说都基于Application。 引入框架的入口。  还有一些参数可以在此定义，比如入口绑定等(以后会讲)。\n第一次正式接触 瞬间，我们的WEBAPP读取到了/ThinkPHP/ThinkPHP.php这个文件，不要小看这不到100行的代码，这里的常量几乎贯穿了以后所有的系统流程里，需要注意的是，常量一旦定义就无法修改，所以这里不会加载配置文件，更多的是和系统的运行环境打交道。\n这里还没有载入类似/ThinkPHP/Common/functions.php的文件，所以在这里我们还不能用自定义的函数和类。在系统常量定义的时候，我们还能看到一种or的特殊用法:\ndefined('APP_DEBUG') or define('APP_DEBUG',false); // 是否调试模式\r 其实给这个表达式带个括号就更容易读懂了。即，左边的表达式如果为假，那么执行右边的表达式。上面这句话的意思是，如果没有定义APP_DEBUG这个常量，那么把它设置为false。逻辑简洁明了，希望大家能够把这个表达式用在以后的开发中。\n这个文件需要注意几个常量：\nMEMORY_LIMIT_ON //是否支持内存开销查询，为以后的DEBUG做准备\rCORE_PATH //核心目录\rVENDOR_PATH //第三方类库目录\rIS_CGI IS_WIN IS_CLI 是否运行在CGI模式下，是否win系统，是否命令行运行\r_PHP_FILE_ //当前文件名\rEXT //类文件后缀\rCONF_EXT //配置文件后缀\r think.php的最后两行引入了核心类文件thinkphp.class.php，系统开始加载核心类，并调用其静态方法::start。\nrequire CORE_PATH.'Think'.EXT;\rThink\\Think::start();\r 核心类 终于可以勇敢的面向对象了，赶紧注册一个spl_autoload_register方法。\nspl_autoload_register('Think\\Think::autoload');\r 以后当实例化某个类的时候，如果该类不存在，系统不会立即报错，而是抱着试一试的想法去执行Think\\Think::autoload方法，如果找到了，就在加载一次，否则报错。所以这个方法再框架中举足轻重！怪不得第一句就加载。下面贴出此方法，做一些解析。\n/**\r* 类库自动加载\r* @param string $class 对象类名\r* @return void\r*/\rpublic static function autoload($class) {\r// 检查是否存在映射\rif(isset(self::$_map[$class])) {\rinclude self::$_map[$class];\r}elseif(false !== strpos($class,'\\\\')){\r$name = strstr($class, '\\\\', true);\rif(in_array($name,array('Think','Org','Behavior','Com','Vendor')) || is_dir(LIB_PATH.$name)){ // Library目录下面的命名空间自动定位\r$path = LIB_PATH;\r}else{\r// 检测自定义命名空间 否则就以模块为命名空间\r$namespace = C('AUTOLOAD_NAMESPACE');\r$path = isset($namespace[$name])? dirname($namespace[$name]).'/' : APP_PATH;\r}\r$filename = $path . str_replace('\\\\', '/', $class) . EXT;\rif(is_file($filename)) {\r// Win环境下面严格区分大小写\rif (IS_WIN \u0026\u0026 false === strpos(str_replace('/', '\\\\', realpath($filename)), $class . EXT)){\rreturn ;\r}\rinclude $filename;\r}\r}elseif (!C('APP_USE_NAMESPACE')) {\r// 自动加载的类库层\rforeach(explode(',',C('APP_AUTOLOAD_LAYER')) as $layer){\rif(substr($class,-strlen($layer))==$layer){\rif(require_cache(MODULE_PATH.$layer.'/'.$class.EXT)) {\rreturn ;\r}\r} }\r// 根据自动加载路径设置进行尝试搜索\rforeach (explode(',',C('APP_AUTOLOAD_PATH')) as $path){\rif(import($path.'.'.$class))\r// 如果加载类成功则返回\rreturn ;\r}\r}\r}\r 核心类中存在一个静态属性$_map，以类名为键，类的路径为值，保存了类映射，以后二次加载就不需要再次分析，提升了性能。\n因为引入了命名空间，所以参数中会带\\\\表示命名空间，所以用if做了判断，strstr的第三个参数如果为TRUE，那么就返回NEEDLE之前的字符串。\n在注册了类自动加载方法后，TP又接管了系统的错误处理句柄，所以TP里的报错不只是简单的一句话，而是可以更好的输出错误信息。\nStorage::connect(STORAGE_TYPE)设置了全局的文件读写方式，在线手册-sae一节对SAE有较详细的解释。Storage驱动文件位于ThinkPHP/Library/Think/Storage/Driver/下，可以自行扩展。\n$runtimefile就是名为~runtime.php，它保存了系统的核心设置，他经常出现在项目的缓存文件夹下，真实路径为RUNTIME_PATH.APP_MODE，可见其路径由APP_MODE常量决定，接下来的代码解释了什么情况下会使用缓存：\nif(!APP_DEBUG \u0026\u0026 Storage::has($runtimefile)){\rStorage::load($runtimefile);\r}else{\r 即非APP_DEBUG模式下会启用缓存，所以修改配置后若不生效，可能是因为开启了APP_DEBUG。下面TP开始读取各种配置文件。\n $mode = include is_file(CONF_PATH.'core.php')?CONF_PATH.'core.php':MODE_PATH.APP_MODE.'.php';\r 一般情况下，这行代码会去找ThinkPHP/Mode/common.php，他包含了系统的定义核心设置的文件路径，如配置文件、别名定义、函数和类文件还有行为扩展，这些文件散布在框架的各个地方。\nforeach ($mode['core'] as $file){\rif(is_file($file)) {\rinclude $file;\rif(!APP_DEBUG) $content .= compile($file);\r}\r}\r 导入文件之后TP首先用foreach循环遍历$mode['core']中的函数和类文件，并导入$content中，最后写入缓存文件。需要注意的是，ThinkPHP/Common/functions.php在此会被加载。\nforeach ($mode['config'] as $key=$file){\ris_numeric($key)?C(load_config($file)):C($key,load_config($file));\r}\r 之后循环加载$mode['config']里的文件，在这里ThinkPHP/Conf/convention.php（TP的惯例配置文件）、CONF_PATH.'config'.CONF_EXT（项目公共配置）会被加载。\nif('common' != APP_MODE \u0026\u0026 is_file(CONF_PATH.'config_'.APP_MODE.CONF_EXT))\rC(load_config(CONF_PATH.'config_'.APP_MODE.CONF_EXT)); // 加载模式别名定义\rif(isset($mode['alias'])){\rself::addMap(is_array($mode['alias'])?$mode['alias']:include $mode['alias']);\r}\r// 加载应用别名定义文件\rif(is_file(CONF_PATH.'alias.php'))\rself::addMap(include CONF_PATH.'alias.php');\r// 加载模式行为定义\rif(isset($mode['tags'])) {\rHook::import(is_array($mode['tags'])?$mode['tags']:include $mode['tags']);\r}\r 读取当前应用模式对应的配置文件，如果项目的应用模式为sae，那么应用的配置文件应该为Application/Common/Conf/config_sae.php。\n加载应用别名，需要注意的是，3.2.2引入了命名空间，所以需要在之前的键名前加上命名空间。\n// 加载模式行为定义\rif(isset($mode['tags'])) {\rHook::import(is_array($mode['tags'])?$mode['tags']:include $mode['tags']);\r}\r// 加载应用行为定义\rif(is_file(CONF_PATH.'tags.php'))\r// 允许应用增加开发模式配置定义\rHook::import(include CONF_PATH.'tags.php');  加载模式行为定义，或者叫钩子，都是在这里引入的。系统自定义的行为保存在$mode['tags']中，用户自定义的行为应该保存在Application/Common/tags.php。tags.php文件写法有坑，后面会讲到。\n下面给出系统为大家预留的插件位：\napp_init 应用初始化标签位\rpath_info PATH_INFO检测标签位\rapp_begin 应用开始标签位\raction_name 操作方法名标签位\raction_begin 控制器开始标签位\rview_begin 视图输出开始标签位\rview_parse 视图解析标签位\rtemplate_filter 模板内容解析标签位\rview_filter 视图输出过滤标签位\rview_end 视图输出结束标签位\raction_end 控制器结束标签位\rapp_end 应用结束标签位\rL(include THINK_PATH.'Lang/'.strtolower(C('DEFAULT_LANG')).'.php');\r 接着TP载入了底层语言包，这才对嘛。如果考虑到程序不仅仅面向中文使用者，那么一定要注意国际化的问题。DEFAULT_LANG的默认值记录在ThinkPHP/Conf/convention.php中。\n以上提到这些信息组成了TP运行的基本运行环境，在非DEBUG模式下，TP会把以上信息带上命名空间都写入缓存文件里以提高性能。\n而如果程序运行在DEBUG模式下，则会多读取一个文件，当然是DEBUG的配置文件了，他位于ThinkPHP/Conf/debug.php，如果想在自己的项目中修改某些DEBUG配置，使用者可以在Application/Common/下面建立相同格式的配置，注意：项目的配置优先级更高。\nif(APP_STATUS \u0026\u0026 is_file(CONF_PATH.APP_STATUS.CONF_EXT))\rC(include CONF_PATH.APP_STATUS.CONF_EXT);\r 下面读取不同应用状态下对应的不同配置，APP_STATUS默认为''，如果需要配置，请在Application/Common/下面建立相同对应名称的配置文件APP_STATUS.php即可。\ndate_default_timezone_set(C('DEFAULT_TIMEZONE'));\r 时区对程序的影响很大，也需要配置。TP默认的时区可以在惯例配置中找到，记得好像是’PRC'，一般不会变动。再次提一下，服务器的系统时间最好设置一个crontab定时同步，否则会带来很多意想不到的问题。\nif(C('CHECK_APP_DIR')) {\r$module = defined('BIND_MODULE') ? BIND_MODULE : C('DEFAULT_MODULE');\rif(!is_dir(APP_PATH.$module) || !is_dir(LOG_PATH)){\r// 检测应用目录结构\rBuild::checkDir($module);\r}\r}\r 下面终于进入模块文件夹了，如果TP发现对应模块里还是空空一片，就会自动创建目录结构和默认控制器文件。这里可以用到BIND_MODULE来绑定默认模块。\nG('loadTime');\r 倒数第二步：G函数记录加载文件的时间。\n最后一步：调用App::run()方法，进入APP初始化。\n","wordCount":"322","inLanguage":"en","datePublished":"2014-09-25T14:13:00Z","dateModified":"2014-09-25T14:13:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/thinkphp_init.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>thinkphp框架解析0----起源</h1><div class=post-meta>September 25, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-09-25_thinkphp_init.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。</p><p>@THINKPHP_VERSION = 3.2.2 CORE</p><h1 id=入口>入口<a hidden class=anchor aria-hidden=true href=#入口>#</a></h1><p>THINKPHP采用了现在普遍使用的单一入口。即程序的所有入口只有一个，即根目录下的index.php文件，所有请求都会先到这里。</p><p>好处当然是统一管理，集中操作，使程序的结构更加稳固，更加容易实现MVC，但是由于需要dispatcher去解析(路由)，在一定程度上会增加程序的复杂性。</p><p>先来看看index.php的源代码</p><pre><code>// 应用入口文件
+// 检测PHP环境
+if(version_compare(PHP_VERSION,'5.3.0','&lt;'))  die('require PHP &gt; 5.3.0 !');
+// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
+define('APP_DEBUG',True);
+// 定义应用目录
+define('APP_PATH','./Application/');
+// 引入ThinkPHP入口文件
+require './ThinkPHP/ThinkPHP.php';
+</code></pre><p>此文件一共做了四件事情：</p><ol><li>确保运行在PHP5.3环境下，因为3.2+使用了命名空间。</li><li>检测DEBUG模式是否开启。</li><li>定义了程序主目录Application，以后的解说都基于Application。</li><li>引入框架的入口。</li></ol><p>还有一些参数可以在此定义，比如入口绑定等(以后会讲)。</p><h1 id=第一次正式接触>第一次正式接触<a hidden class=anchor aria-hidden=true href=#第一次正式接触>#</a></h1><p>瞬间，我们的WEBAPP读取到了<code>/ThinkPHP/ThinkPHP.php</code>这个文件，不要小看这不到100行的代码，这里的常量几乎贯穿了以后所有的系统流程里，需要注意的是，常量一旦定义就无法修改，所以这里不会加载配置文件，更多的是和系统的运行环境打交道。</p><p>这里还没有载入类似<code>/ThinkPHP/Common/functions.php</code>的文件，所以在这里我们还不能用自定义的函数和类。在系统常量定义的时候，我们还能看到一种<code>or</code>的特殊用法:</p><pre><code>defined('APP_DEBUG') or define('APP_DEBUG',false); // 是否调试模式
+</code></pre><p>其实给这个表达式带个括号就更容易读懂了。即，左边的表达式如果为假，那么执行右边的表达式。上面这句话的意思是，如果没有定义APP_DEBUG这个常量，那么把它设置为false。逻辑简洁明了，希望大家能够把这个<code>表达式</code>用在以后的开发中。</p><p>这个文件需要注意几个常量：</p><pre><code>MEMORY_LIMIT_ON   //是否支持内存开销查询，为以后的DEBUG做准备
+CORE_PATH  //核心目录
+VENDOR_PATH  //第三方类库目录
+IS_CGI IS_WIN IS_CLI  是否运行在CGI模式下，是否win系统，是否命令行运行
+_PHP_FILE_  //当前文件名
+EXT  //类文件后缀
+CONF_EXT  //配置文件后缀
+</code></pre><p><code>think.php</code>的最后两行引入了核心类文件<code>thinkphp.class.php</code>，系统开始加载核心类，并调用其静态方法::start。</p><pre><code>require CORE_PATH.'Think'.EXT;
+Think\Think::start();
+</code></pre><h1 id=核心类>核心类<a hidden class=anchor aria-hidden=true href=#核心类>#</a></h1><p>终于可以勇敢的面向对象了，赶紧注册一个spl_autoload_register方法。</p><pre><code>spl_autoload_register('Think\Think::autoload');
+</code></pre><p>以后当实例化某个类的时候，如果该类不存在，系统不会立即报错，而是抱着试一试的想法去执行<code>Think\Think::autoload</code>方法，如果找到了，就在加载一次，否则报错。所以这个方法再框架中举足轻重！怪不得第一句就加载。下面贴出此方法，做一些解析。</p><pre><code>/**
+ * 类库自动加载
+ * @param string $class 对象类名
+ * @return void
+ */
+public static function autoload($class) {
+    // 检查是否存在映射
+    if(isset(self::$_map[$class])) {
+        include self::$_map[$class];
+    }elseif(false !== strpos($class,'\\')){
+      $name           =   strstr($class, '\\', true);
+      if(in_array($name,array('Think','Org','Behavior','Com','Vendor')) || is_dir(LIB_PATH.$name)){ 
+          // Library目录下面的命名空间自动定位
+          $path       =   LIB_PATH;
+      }else{
+          // 检测自定义命名空间 否则就以模块为命名空间
+          $namespace  =   C('AUTOLOAD_NAMESPACE');
+          $path       =   isset($namespace[$name])? dirname($namespace[$name]).'/' : APP_PATH;
+      }
+      $filename       =   $path . str_replace('\\', '/', $class) . EXT;
+      if(is_file($filename)) {
+          // Win环境下面严格区分大小写
+          if (IS_WIN &amp;&amp; false === strpos(str_replace('/', '\\', realpath($filename)), $class . EXT)){
+              return ;
+          }
+          include $filename;
+      }
+    }elseif (!C('APP_USE_NAMESPACE')) {
+        // 自动加载的类库层
+        foreach(explode(',',C('APP_AUTOLOAD_LAYER')) as $layer){
+            if(substr($class,-strlen($layer))==$layer){
+                if(require_cache(MODULE_PATH.$layer.'/'.$class.EXT)) {
+                    return ;
+                }
+            }            
+        }
+        // 根据自动加载路径设置进行尝试搜索
+        foreach (explode(',',C('APP_AUTOLOAD_PATH')) as $path){
+            if(import($path.'.'.$class))
+                // 如果加载类成功则返回
+                return ;
+        }
+    }
+}
+</code></pre><p>核心类中存在一个静态属性$_map，以类名为键，类的路径为值，保存了类映射，以后二次加载就不需要再次分析，提升了性能。</p><p>因为引入了命名空间，所以参数中会带<code>\\</code>表示命名空间，所以用if做了判断，strstr的第三个参数如果为TRUE，那么就返回NEEDLE之前的字符串。</p><p>在注册了类自动加载方法后，TP又接管了系统的错误处理句柄，所以TP里的报错不只是简单的一句话，而是可以更好的输出错误信息。</p><p><code>Storage::connect(STORAGE_TYPE)</code>设置了全局的文件读写方式，<a href=http://document.thinkphp.cn/manual_3_2.html#sae>在线手册-sae</a>一节对SAE有较详细的解释。Storage驱动文件位于ThinkPHP/Library/Think/Storage/Driver/下，可以自行扩展。</p><p><code>$runtimefile</code>就是名为<code>~runtime.php</code>，它保存了系统的核心设置，他经常出现在项目的缓存文件夹下，真实路径为<code>RUNTIME_PATH.APP_MODE</code>，可见其路径由APP_MODE常量决定，接下来的代码解释了什么情况下会使用缓存：</p><pre><code>if(!APP_DEBUG &amp;&amp; Storage::has($runtimefile)){
+          Storage::load($runtimefile);
+}else{
+</code></pre><p>即非APP_DEBUG模式下会启用缓存，所以修改配置后若不生效，可能是因为开启了APP_DEBUG。下面TP开始读取各种配置文件。</p><pre><code>      $mode   =   include is_file(CONF_PATH.'core.php')?CONF_PATH.'core.php':MODE_PATH.APP_MODE.'.php';
+</code></pre><p>一般情况下，这行代码会去找<code>ThinkPHP/Mode/common.php</code>，他包含了系统的定义核心设置的文件路径，如配置文件、别名定义、函数和类文件还有行为扩展，这些文件散布在框架的各个地方。</p><pre><code>foreach ($mode['core'] as $file){
+    if(is_file($file)) {
+        include $file;
+        if(!APP_DEBUG) $content   .= compile($file);
+    }
+}
+</code></pre><p>导入文件之后TP首先用foreach循环遍历<code>$mode['core']</code>中的函数和类文件，并导入<code>$content</code>中，最后写入缓存文件。需要注意的是，<code>ThinkPHP/Common/functions.php</code>在此会被加载。</p><pre><code>foreach ($mode['config'] as $key=&gt;$file){
+    is_numeric($key)?C(load_config($file)):C($key,load_config($file));
+}
+</code></pre><p>之后循环加载<code>$mode['config']</code>里的文件，在这里<code>ThinkPHP/Conf/convention.php</code>（TP的惯例配置文件）、<code>CONF_PATH.'config'.CONF_EXT</code>（项目公共配置）会被加载。</p><pre><code>if('common' != APP_MODE &amp;&amp; is_file(CONF_PATH.'config_'.APP_MODE.CONF_EXT))
+  C(load_config(CONF_PATH.'config_'.APP_MODE.CONF_EXT));  
+
+// 加载模式别名定义
+if(isset($mode['alias'])){
+  self::addMap(is_array($mode['alias'])?$mode['alias']:include $mode['alias']);
+}
+
+// 加载应用别名定义文件
+if(is_file(CONF_PATH.'alias.php'))
+  self::addMap(include CONF_PATH.'alias.php');
+
+// 加载模式行为定义
+if(isset($mode['tags'])) {
+  Hook::import(is_array($mode['tags'])?$mode['tags']:include $mode['tags']);
+}
+</code></pre><p>读取当前应用模式对应的配置文件，如果项目的应用模式为sae，那么应用的配置文件应该为<code>Application/Common/Conf/config_sae.php</code>。</p><p>加载应用别名，需要注意的是，3.2.2引入了命名空间，所以需要在之前的键名前加上命名空间。</p><pre><code>// 加载模式行为定义
+if(isset($mode['tags'])) {
+  Hook::import(is_array($mode['tags'])?$mode['tags']:include $mode['tags']);
+}
+
+// 加载应用行为定义
+if(is_file(CONF_PATH.'tags.php'))
+  // 允许应用增加开发模式配置定义
+  Hook::import(include CONF_PATH.'tags.php');   
+</code></pre><p>加载模式行为定义，或者叫钩子，都是在这里引入的。系统自定义的行为保存在<code>$mode['tags']</code>中，用户自定义的行为应该保存在<code>Application/Common/tags.php</code>。<code>tags.php</code>文件写法有坑，后面会讲到。</p><p>下面给出系统为大家预留的插件位：</p><pre><code>app_init    应用初始化标签位
+path_info   PATH_INFO检测标签位
+app_begin   应用开始标签位
+action_name 操作方法名标签位
+action_begin    控制器开始标签位
+view_begin  视图输出开始标签位
+view_parse  视图解析标签位
+template_filter 模板内容解析标签位
+view_filter 视图输出过滤标签位
+view_end    视图输出结束标签位
+action_end  控制器结束标签位
+app_end         应用结束标签位
+
+L(include THINK_PATH.'Lang/'.strtolower(C('DEFAULT_LANG')).'.php');
+</code></pre><p>接着TP载入了底层语言包，这才对嘛。如果考虑到程序不仅仅面向中文使用者，那么一定要注意国际化的问题。<code>DEFAULT_LANG</code>的默认值记录在<code>ThinkPHP/Conf/convention.php</code>中。</p><p>以上提到这些信息组成了TP运行的基本运行环境，在非DEBUG模式下，TP会把以上信息带上命名空间都写入缓存文件里以提高性能。</p><p>而如果程序运行在DEBUG模式下，则会多读取一个文件，当然是DEBUG的配置文件了，他位于<code>ThinkPHP/Conf/debug.php</code>，如果想在自己的项目中修改某些DEBUG配置，使用者可以在<code>Application/Common/</code>下面建立相同格式的配置，注意：项目的配置优先级更高。</p><pre><code>if(APP_STATUS &amp;&amp; is_file(CONF_PATH.APP_STATUS.CONF_EXT))
+    C(include CONF_PATH.APP_STATUS.CONF_EXT);
+</code></pre><p>下面读取不同应用状态下对应的不同配置，<code>APP_STATUS</code>默认为''，如果需要配置，请在<code>Application/Common/</code>下面建立相同对应名称的配置文件<code>APP_STATUS.php</code>即可。</p><pre><code>date_default_timezone_set(C('DEFAULT_TIMEZONE'));
+</code></pre><p>时区对程序的影响很大，也需要配置。TP默认的时区可以在惯例配置中找到，记得好像是&rsquo;PRC'，一般不会变动。再次提一下，服务器的系统时间最好设置一个crontab定时同步，否则会带来很多意想不到的问题。</p><pre><code>if(C('CHECK_APP_DIR')) {
+    $module     =   defined('BIND_MODULE') ? BIND_MODULE : C('DEFAULT_MODULE');
+    if(!is_dir(APP_PATH.$module) || !is_dir(LOG_PATH)){
+        // 检测应用目录结构
+        Build::checkDir($module);
+    }
+}
+</code></pre><p>下面终于进入模块文件夹了，如果TP发现对应模块里还是空空一片，就会自动创建目录结构和默认控制器文件。这里可以用到<code>BIND_MODULE</code>来绑定默认模块。</p><pre><code>G('loadTime');
+</code></pre><p>倒数第二步：G函数记录加载文件的时间。</p><p>最后一步：调用<code>App::run()</code>方法，进入APP初始化。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/thinkphp/>thinkphp</a></li><li><a href=https://phpgao.github.io/tags/%E6%A1%86%E6%9E%B6/>框架</a></li><li><a href=https://phpgao.github.io/tags/framework/>framework</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/thinkphp_beginning.html><span class=title>« Prev Page</span><br><span>thinkphp框架解析1----只是一个开始</span></a>
+<a class=next href=https://phpgao.github.io/php_barely_used.html><span class=title>Next Page »</span><br><span>PHP一些不为人知的使用方法</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

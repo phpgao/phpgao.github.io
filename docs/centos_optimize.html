@@ -1,0 +1,338 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>centos6-优化脚本与安全脚本 | 老高的技术博客</title><meta name=keywords content="centos,shell,optimize"><meta name=description content="新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &#34;x86_64&#34; ];then echo &#34;this script is only for 64bit Operating System !&#34; exit 1 fi echo &#34;the platform is ok&#34; version=`lsb_release -r |awk '{print substr($2,1,1)}'` if [ $version != 6 ];then echo &#34;this script is only for CentOS 6 !"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/centos_optimize.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="centos6-优化脚本与安全脚本"><meta property="og:description" content="新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &#34;x86_64&#34; ];then echo &#34;this script is only for 64bit Operating System !&#34; exit 1 fi echo &#34;the platform is ok&#34; version=`lsb_release -r |awk '{print substr($2,1,1)}'` if [ $version != 6 ];then echo &#34;this script is only for CentOS 6 !"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/centos_optimize.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-05-13T01:54:00+00:00"><meta property="article:modified_time" content="2014-05-13T01:54:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="centos6-优化脚本与安全脚本"><meta name=twitter:description content="新装的机子执行一下，请酌情使用，出问题后果自负。
+优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改
+#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != &#34;x86_64&#34; ];then echo &#34;this script is only for 64bit Operating System !&#34; exit 1 fi echo &#34;the platform is ok&#34; version=`lsb_release -r |awk '{print substr($2,1,1)}'` if [ $version != 6 ];then echo &#34;this script is only for CentOS 6 !"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"centos6-优化脚本与安全脚本","item":"https://phpgao.github.io/centos_optimize.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"centos6-优化脚本与安全脚本","name":"centos6-优化脚本与安全脚本","description":"新装的机子执行一下，请酌情使用，出问题后果自负。\n优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改\n#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != \u0026#34;x86_64\u0026#34; ];then echo \u0026#34;this script is only for 64bit Operating System !\u0026#34; exit 1 fi echo \u0026#34;the platform is ok\u0026#34; version=`lsb_release -r |awk \u0026#39;{print substr($2,1,1)}\u0026#39;` if [ $version != 6 ];then echo \u0026#34;this script is only for CentOS 6 !","keywords":["centos","shell","optimize"],"articleBody":"新装的机子执行一下，请酌情使用，出问题后果自负。\n优化设置 This script is only for 64bit Operating System ! 64位系统专用，老高有修改\n#!/bin/bash #author suzezhi #this script is only for CentOS 6 #check the OS platform=`uname -i` if [ $platform != \"x86_64\" ];then echo \"this script is only for 64bit Operating System !\" exit 1 fi echo \"the platform is ok\" version=`lsb_release -r |awk '{print substr($2,1,1)}'` if [ $version != 6 ];then echo \"this script is only for CentOS 6 !\" exit 1 fi cat +---------------------------------------+ | your system is CentOS 6 x86_64 | | start optimizing....... | +--------------------------------------- EOF #make the 163.com as the default yum repo #rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-7.noarch.rpm #rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm yum install iotop lsof wget ntpdate crontabs -y #mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup #wget http://mirrors.163.com/.help/CentOS6-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo #add the third-party repo #add the epel rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6 #add the rpmforge rpm -Uvh http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm #update the system and set the ntp yum clean all yum -y update glibc\\* yum -y update yum\\* rpm\\* python\\* yum -y update yum -y install ntp echo \"* 4 * * * /usr/sbin/ntpdate 210.72.145.44  /dev/null 2\u00261\"  /var/spool/cron/root service crond restart #set the file limit echo \"ulimit -SHn 102400\"  /etc/rc.local cat  /etc/security/limits.conf * soft nofile 65535 * hard nofile 65535 EOF #set the control-alt-delete to guard against the miSUSE sed -i 's#exec /sbin/shutdown -r now#\\#exec /sbin/shutdown -r now#' /etc/init/control-alt-delete.conf #disable selinux sed -i 's/SELINUX=enforcing/SELINUX=disabled/' /etc/selinux/config #set ssh sed -i 's/^GSSAPIAuthentication yes$/GSSAPIAuthentication no/' /etc/ssh/sshd_config sed -i 's/#UseDNS yes/UseDNS no/' /etc/ssh/sshd_config service sshd restart #tune kernel parametres cat  /etc/sysctl.conf net.ipv4.tcp_fin_timeout = 1 net.ipv4.tcp_keepalive_time = 1200 net.ipv4.tcp_mem = 94500000 915000000 927000000 net.ipv4.tcp_tw_reuse = 1 net.ipv4.tcp_timestamps = 0 net.ipv4.tcp_synack_retries = 1 net.ipv4.tcp_syn_retries = 1 net.ipv4.tcp_tw_recycle = 1 net.core.rmem_max = 16777216 net.core.wmem_max = 16777216 net.core.netdev_max_backlog = 262144 net.core.somaxconn = 262144 net.ipv4.tcp_max_orphans = 3276800 net.ipv4.tcp_max_syn_backlog = 262144 net.core.wmem_default = 8388608 net.core.rmem_default = 8388608 EOF /sbin/sysctl -p #define the backspace button can erase the last character typed #echo 'stty erase ^H'  /etc/profile #echo \"syntax on\"  /root/.vimrc #stop some crontab mkdir /etc/cron.daily.bak mv /etc/cron.daily/makewhatis.cron /etc/cron.daily.bak mv /etc/cron.daily/mlocate.cron /etc/cron.daily.bak chkconfig bluetooth off chkconfig cups off chkconfig ip6tables off chkconfig iptables off chkconfig fcoe off chkconfig iscsi off chkconfig iscsid off chkconfig lldpad off chkconfig nfslock off chkconfig nfs off chkconfig rpcbind off chkconfig rpcgssd off chkconfig rpcidmapd off #disable the ipv6 cat  /etc/modprobe.d/ipv6.conf alias net-pf-10 off options ipv6 disable=1 EOFI echo \"NETWORKING_IPV6=off\"  /etc/sysconfig/network cat +-------------------------------------------------+ | optimizer is done | | it's recommond to restart this server ! | +-------------------------------------------------+ EOF cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 对脚本的内容做一下说明：\n 先对系统进行判断，如果是Cent OS 64位，就继续运行。 先将系统的安装源设置为网易的（网易的安装源算是国内比较稳定的） 安装epel的源和rpmforge的源，利用第三方的源来让yum安装起来更方便 更新软件 设置为每天凌晨四点进行时间同步（跟国家授时中心的服务器进行时间同步） 将系统同时打开的文件个数增大 将ctrl alt delete键进行屏蔽，防止误操作的时候服务器重启 关闭selinux 禁用GSSAPI来认证，也禁用DNS反向解析，加快SSH登陆速度 优化一些内核参数 调整删除字符的按键为backspace（某些系统默认是delete） 打开vim的语法高亮 取消生成whatis数据库和locate数据库 关闭没用的服务 关闭IPv6   安全设置 #!/bin/bash  echo \"#####################################\" echo \"#####Centos Sytem Security Shell#####\" echo \"#####################################\" time=`date \"+%Y-%m-%d\"` #1#######Lock Useless Users######### for i in adm lp sync shutdown halt news uucp operator games gopher ftp do usermod -L $i done #2######Close Useless Services######## for i in nfs postfix ypbind portmap smb netfs lpd snmpd named squid xinetd apmd autofs cups isdn nfslock pcmcia sendmail xinetd do chkconfig --level 2345 $i off done #3#####Directory And File Limit####### chattr +i /etc/passwd /etc/shadow /etc/group /etc/gshadow # chattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadow chmod -R 700 /etc/rc.d/init.d/* chmod 644 /var/log/wtmp /var/run/utmp #4#####Clean System Banner########### cp /etc/issue /etc/issue.$time cp /etc/issue.net /etc/issue.net.$time echo \"\"  /etc/issue echo \"\"  /etc/issue.net #5####Alter login.defs############### cp /etc/login.defs /etc/login.defs.$time egrep -v \"^#|^$\" /etc/login.defs|grep PASS_MIN_LEN if [ $? = 0 ] ;then egrep -v \"^#|^$\" /etc/login.defs|awk '/PASS_MIN_LEN/{print \"PASS_MIN_LEN 12\";next};{print}' /etc/login.defs.tmp mv -f /etc/login.defs.tmp /etc/login.defs else echo \"PASS_MIN_LEN 12\" /etc/login.defs fi egrep -v \"^#|^$\" /etc/login.defs|grep PASS_MAX_DAYS if [ $? = 0 ] ;then egrep -v \"^#|^$\" /etc/login.defs|awk '/PASS_MAX_DAYS/{print \"PASS_MAX_DAYS 90\";next};{print}' /etc/login.defs.tmp mv -f /etc/login.defs.tmp /etc/login.defs else echo \"PASS_MAX_DAYS 90\" /etc/login.defs fi #6####Alter profile############### cp /etc/profile /etc/profile.$time egrep -v \"^#|^$\" /etc/profile|grep TMOUT if [ $? = 0 ] ;then egrep -v \"^#|^$\" /etc/profile|awk '/TMOUT/{print \"TMOUT=300;export TMOUT\";next};{print}' /etc/profile.tmp mv -f /etc/profile.tmp /etc/profile else echo \"TMOUT=300;export TMOUT\" /etc/profile fi #7####Alter inittab############### cp /etc/inittab /etc/inittab.bak$time egrep -v \"^#|^$\" /etc/inittab|grep ca::ctrlaltdel if [ $? = 0 ] ;then egrep -v \"^#|^$\" /etc/inittab|awk '/^ca::ctrlaltdel/ {sub($1,\"#\"$1,$0);next};{print}' /etc/inittab.tmp mv -f /etc/inittab.tmp /etc/inittab else echo -e \"#ca::ctrlaltdel:/sbin/shutdown\\t-t3\\t-r\\tnow\" /etc/inittab fi #8####Alter syslog############### cp /etc/syslog.conf /etc/syslog.conf.$time egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"\\*\\.err\" if [ $? != 0 ] ;then echo \"*.err /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"\\*\\.info\" if [ $? != 0 ] ;then echo \"*.info /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"\\*\\.emerg\" if [ $? != 0 ] ;then echo \"*.emerg /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"local7\\.\\*\" if [ $? != 0 ] ;then echo \"local7.* /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"kern\\.debug\" if [ $? != 0 ] ;then echo \"kern.debug /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"kern\\.warning\" if [ $? != 0 ] ;then echo \"kern.warning /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"authpriv\\.none\" if [ $? != 0 ] ;then echo \"authpriv.none /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"mail\\.none\" if [ $? != 0 ] ;then echo \"mail.none /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"daemon\\.notice\" if [ $? != 0 ] ;then echo \"daemon.notice /var/adm/messages\" /etc/syslog.conf fi egrep -v \"^#|^$\" /etc/syslog.conf|egrep \"cron\\.\\*\" if [ $? != 0 ] ;then echo \"cron.* /var/log/cron\" /etc/syslog.conf fi /etc/rc.d/init.d/syslog restart #9####Alter host.conf############### cp /etc/host.conf /etc/host.conf.$time echo -e \"order\\tbind,hosts\\nmulti\\ton\\nnospoof\\ton\" /etc/host.conf #10####Alter limits.conf############### cp /etc/security/limits.conf /etc/security/limits.conf.$time egrep -v \"^#|^$\" /etc/security/limits.conf|egrep \"\\*[[:space:]]soft[[:space:]]core[[:space:]]0\" if [ $? != 0 ] ;then echo -e \"*\\tsoft\\tcore\\t0\"  /etc/security/limits.conf fi egrep -v \"^#|^$\" /etc/security/limits.conf|egrep \"\\*[[:space:]]hard[[:space:]]core[[:space:]]0\" if [ $? != 0 ] ;then echo -e \"*\\thard\\tcore\\t0\"  /etc/security/limits.conf fi egrep -v \"^#|^$\" /etc/security/limits.conf|egrep \"\\*[[:space:]]hard[[:space:]]rss[[:space:]]5000\" if [ $? != 0 ] ;then echo -e \"*\\thard\\trss\\t5000\"  /etc/security/limits.conf fi egrep -v \"^#|^$\" /etc/security/limits.conf|egrep \"\\*[[:space:]]hard[[:space:]]nproc[[:space:]]20\" if [ $? != 0 ] ;then echo -e \"*\\thard\\tnproc\\t20\"  /etc/security/limits.conf fi #11####Alter pam_login############### cp /etc/pam.d/login /etc/pam.d/login.$time egrep -v \"^#|^$\" /etc/pam.d/login|egrep \"^session[[:space:]]required[[:space:]]/lib/security/pam_limits.so\" if [ $? != 0 ] ;then echo -e \"session\\trequired\\t/lib/security/pam_limits.so\"  /etc/pam.d/login fi #12####Alter sshd_config############### cp /etc/ssh/sshd_config /etc/ssh/sshd_config.$time egrep -v \"^#|^$\" /etc/ssh/sshd_config|egrep \"^Protocol[[:space:]]2\" if [ $? != 0 ] ;then echo -e \"Protocol 2\" /etc/ssh/sshd_config fi #13####Alter sysctl.conf############### cp /etc/sysctl.conf /etc/sysctl.conf.$time egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.tcp_max_syn_backlog\" if [ $? != 0 ] ;then echo \"net.ipv4.tcp_max_syn_backlog=4096\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf_all.rp_filter\" if [ $? != 0 ] ;then echo \"net.ipv4.conf_all.rp_filter=1\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.tcp_syncookies\" if [ $? != 0 ] ;then echo \"net.ipv4.tcp_syncookies=1\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf\\.all\\.send_redirects\" if [ $? != 0 ] ;then echo \"net.ipv4.conf.all.send_redirects=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf\\.all\\.accept_redirects\" if [ $? != 0 ] ;then echo \"net.ipv4.conf.all.accept_redirects=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.ip_forward\" if [ $? != 0 ] ;then echo \"net.ipv4.ip_forward=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf\\.all\\.accept_source_route\" if [ $? != 0 ] ;then echo \"net.ipv4.conf.all.accept_source_route=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf\\.default\\.accept_redirects\" if [ $? != 0 ] ;then echo \"net.ipv4.conf.default.accept_redirects=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.conf\\.default\\.send_redirects\" if [ $? != 0 ] ;then echo \"net.ipv4.conf.default.send_redirects=0\" /etc/sysctl.conf fi egrep -v \"^#|^$\" /etc/sysctl.conf|egrep \"net\\.ipv4\\.icmp_echo_ignore_broadcasts\" if [ $? != 0 ] ;then echo \"net.ipv4.icmp_echo_ignore_broadcasts=1\" /etc/sysctl.conf fi sysctl -p /etc/sysctl.conf chown root:root /etc/sysctl.conf chmod 600 /etc/sysctl.conf 脚本转自：\nhttp://www.linuxde.net/2011/12/5756.html http://www.linuxpad.cn/linux/centos-sytem-security-shell.html\n","wordCount":"1178","inLanguage":"en","datePublished":"2014-05-13T01:54:00Z","dateModified":"2014-05-13T01:54:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/centos_optimize.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>centos6-优化脚本与安全脚本</h1><div class=post-meta>May 13, 2014&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-05-13_centos_optimize.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>新装的机子执行一下，请酌情使用，出问题后果自负。</p><h2 id=优化设置>优化设置<a hidden class=anchor aria-hidden=true href=#优化设置>#</a></h2><p>This script is only for 64bit Operating System !
+64位系统专用，老高有修改</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=color:#75715e>#!/bin/bash
+</span><span style=color:#75715e></span><span style=color:#75715e>#author suzezhi</span>
+<span style=color:#75715e>#this script is only for CentOS 6</span>
+<span style=color:#75715e>#check the OS</span>
+
+platform<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>uname -i<span style=color:#e6db74>`</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $platform !<span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;x86_64&#34;</span> <span style=color:#f92672>]</span>;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;this script is only for 64bit Operating System !&#34;</span>
+exit <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>fi</span>
+echo <span style=color:#e6db74>&#34;the platform is ok&#34;</span>
+version<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>lsb_release -r |awk <span style=color:#e6db74>&#39;{print substr($2,1,1)}&#39;</span><span style=color:#e6db74>`</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $version !<span style=color:#f92672>=</span> <span style=color:#ae81ff>6</span> <span style=color:#f92672>]</span>;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;this script is only for CentOS 6 !&#34;</span>
+exit <span style=color:#ae81ff>1</span>
+<span style=color:#66d9ef>fi</span>
+cat <span style=color:#e6db74>&lt;&lt; EOF
+</span><span style=color:#e6db74>+---------------------------------------+
+</span><span style=color:#e6db74>|   your system is CentOS 6 x86_64      |
+</span><span style=color:#e6db74>|      start optimizing.......          |
+</span><span style=color:#e6db74>+---------------------------------------
+</span><span style=color:#e6db74>EOF</span>
+
+<span style=color:#75715e>#make the 163.com as the default yum repo</span>
+
+<span style=color:#75715e>#rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-7.noarch.rpm</span>
+<span style=color:#75715e>#rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm</span>
+
+yum install iotop lsof wget ntpdate crontabs -y
+
+<span style=color:#75715e>#mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup</span>
+<span style=color:#75715e>#wget http://mirrors.163.com/.help/CentOS6-Base-163.repo -O /etc/yum.repos.d/CentOS-Base.repo</span>
+
+<span style=color:#75715e>#add the third-party repo</span>
+<span style=color:#75715e>#add the epel</span>
+rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6
+
+<span style=color:#75715e>#add the rpmforge</span>
+rpm -Uvh http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el6.rf.x86_64.rpm
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag
+
+rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+
+<span style=color:#75715e>#update the system and set the ntp</span>
+yum clean all
+yum -y update glibc<span style=color:#ae81ff>\*</span>
+yum -y update yum<span style=color:#ae81ff>\*</span> rpm<span style=color:#ae81ff>\*</span> python<span style=color:#ae81ff>\*</span>
+yum -y update
+yum -y install ntp
+echo <span style=color:#e6db74>&#34;* 4 * * * /usr/sbin/ntpdate 210.72.145.44 &gt; /dev/null 2&gt;&amp;1&#34;</span> &gt;&gt; /var/spool/cron/root
+service crond restart
+
+<span style=color:#75715e>#set the file limit</span>
+echo <span style=color:#e6db74>&#34;ulimit -SHn 102400&#34;</span> &gt;&gt; /etc/rc.local
+cat &gt;&gt; /etc/security/limits.conf <span style=color:#e6db74>&lt;&lt; EOF
+</span><span style=color:#e6db74>*           soft   nofile       65535
+</span><span style=color:#e6db74>*           hard   nofile       65535
+</span><span style=color:#e6db74>EOF</span>
+
+<span style=color:#75715e>#set the control-alt-delete to guard against the miSUSE</span>
+sed -i <span style=color:#e6db74>&#39;s#exec /sbin/shutdown -r now#\#exec /sbin/shutdown -r now#&#39;</span> /etc/init/control-alt-delete.conf
+
+<span style=color:#75715e>#disable selinux</span>
+sed -i <span style=color:#e6db74>&#39;s/SELINUX=enforcing/SELINUX=disabled/&#39;</span> /etc/selinux/config
+
+<span style=color:#75715e>#set ssh</span>
+sed -i <span style=color:#e6db74>&#39;s/^GSSAPIAuthentication yes$/GSSAPIAuthentication no/&#39;</span> /etc/ssh/sshd_config
+sed -i <span style=color:#e6db74>&#39;s/#UseDNS yes/UseDNS no/&#39;</span> /etc/ssh/sshd_config
+service sshd restart
+
+<span style=color:#75715e>#tune kernel parametres</span>
+cat &gt;&gt; /etc/sysctl.conf <span style=color:#e6db74>&lt;&lt; EOF
+</span><span style=color:#e6db74>net.ipv4.tcp_fin_timeout = 1
+</span><span style=color:#e6db74>net.ipv4.tcp_keepalive_time = 1200
+</span><span style=color:#e6db74>net.ipv4.tcp_mem = 94500000 915000000 927000000
+</span><span style=color:#e6db74>net.ipv4.tcp_tw_reuse = 1
+</span><span style=color:#e6db74>net.ipv4.tcp_timestamps = 0
+</span><span style=color:#e6db74>net.ipv4.tcp_synack_retries = 1
+</span><span style=color:#e6db74>net.ipv4.tcp_syn_retries = 1
+</span><span style=color:#e6db74>net.ipv4.tcp_tw_recycle = 1
+</span><span style=color:#e6db74>net.core.rmem_max = 16777216
+</span><span style=color:#e6db74>net.core.wmem_max = 16777216
+</span><span style=color:#e6db74>net.core.netdev_max_backlog = 262144
+</span><span style=color:#e6db74>net.core.somaxconn = 262144
+</span><span style=color:#e6db74>net.ipv4.tcp_max_orphans = 3276800
+</span><span style=color:#e6db74>net.ipv4.tcp_max_syn_backlog = 262144
+</span><span style=color:#e6db74>net.core.wmem_default = 8388608
+</span><span style=color:#e6db74>net.core.rmem_default = 8388608
+</span><span style=color:#e6db74>EOF</span>
+/sbin/sysctl -p
+
+<span style=color:#75715e>#define the backspace button can erase the last character typed</span>
+<span style=color:#75715e>#echo &#39;stty erase ^H&#39; &gt;&gt; /etc/profile</span>
+<span style=color:#75715e>#echo &#34;syntax on&#34; &gt;&gt; /root/.vimrc</span>
+
+<span style=color:#75715e>#stop some crontab</span>
+mkdir /etc/cron.daily.bak
+mv /etc/cron.daily/makewhatis.cron /etc/cron.daily.bak
+mv /etc/cron.daily/mlocate.cron /etc/cron.daily.bak
+chkconfig bluetooth off
+chkconfig cups off
+chkconfig ip6tables off
+chkconfig iptables off
+chkconfig fcoe off
+chkconfig iscsi off
+chkconfig iscsid off
+chkconfig lldpad off
+chkconfig nfslock off
+chkconfig nfs off
+chkconfig rpcbind off
+chkconfig rpcgssd off
+chkconfig rpcidmapd off
+<span style=color:#75715e>#disable the ipv6</span>
+cat &gt; /etc/modprobe.d/ipv6.conf <span style=color:#e6db74>&lt;&lt; EOFI
+</span><span style=color:#e6db74>alias net-pf-10 off
+</span><span style=color:#e6db74>options ipv6 disable=1
+</span><span style=color:#e6db74>EOFI</span>
+echo <span style=color:#e6db74>&#34;NETWORKING_IPV6=off&#34;</span> &gt;&gt; /etc/sysconfig/network
+cat <span style=color:#e6db74>&lt;&lt; EOF
+</span><span style=color:#e6db74>+-------------------------------------------------+
+</span><span style=color:#e6db74>|               optimizer is done                 |
+</span><span style=color:#e6db74>|   it&#39;s recommond to restart this server !       |
+</span><span style=color:#e6db74>+-------------------------------------------------+
+</span><span style=color:#e6db74>EOF</span>
+
+cp -f /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre></div><p>对脚本的内容做一下说明：</p><ol><li>先对系统进行判断，如果是Cent OS 64位，就继续运行。</li><li>先将系统的安装源设置为网易的（网易的安装源算是国内比较稳定的）</li><li>安装epel的源和rpmforge的源，利用第三方的源来让yum安装起来更方便</li><li>更新软件</li><li>设置为每天凌晨四点进行时间同步（跟国家授时中心的服务器进行时间同步）</li><li>将系统同时打开的文件个数增大</li><li>将ctrl alt delete键进行屏蔽，防止误操作的时候服务器重启</li><li>关闭selinux</li><li>禁用GSSAPI来认证，也禁用DNS反向解析，加快SSH登陆速度</li><li>优化一些内核参数</li><li>调整删除字符的按键为backspace（某些系统默认是delete）</li><li>打开vim的语法高亮</li><li>取消生成whatis数据库和locate数据库</li><li>关闭没用的服务</li><li>关闭IPv6  </li></ol><h2 id=安全设置>安全设置<a hidden class=anchor aria-hidden=true href=#安全设置>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e>#!/bin/bash
+</span><span style=color:#75715e></span>
+echo <span style=color:#e6db74>&#34;#####################################&#34;</span>
+echo <span style=color:#e6db74>&#34;#####Centos Sytem Security Shell#####&#34;</span>
+echo <span style=color:#e6db74>&#34;#####################################&#34;</span>
+
+time<span style=color:#f92672>=</span><span style=color:#e6db74>`</span>date  <span style=color:#e6db74>&#34;+%Y-%m-%d&#34;</span><span style=color:#e6db74>`</span>
+
+<span style=color:#75715e>#1#######Lock Useless Users#########</span>
+<span style=color:#66d9ef>for</span> i in adm lp sync shutdown halt news uucp operator games gopher ftp
+<span style=color:#66d9ef>do</span>
+usermod -L $i
+<span style=color:#66d9ef>done</span>
+
+<span style=color:#75715e>#2######Close Useless Services########</span>
+<span style=color:#66d9ef>for</span> i in nfs postfix ypbind portmap smb netfs lpd snmpd named squid xinetd apmd autofs cups isdn nfslock pcmcia sendmail xinetd
+<span style=color:#66d9ef>do</span>
+chkconfig --level <span style=color:#ae81ff>2345</span> $i off
+<span style=color:#66d9ef>done</span>
+
+<span style=color:#75715e>#3#####Directory And File Limit#######</span>
+chattr +i /etc/passwd /etc/shadow /etc/group /etc/gshadow
+<span style=color:#75715e># chattr -i /etc/passwd /etc/shadow /etc/group /etc/gshadow</span>
+
+chmod -R <span style=color:#ae81ff>700</span> /etc/rc.d/init.d/*
+chmod <span style=color:#ae81ff>644</span> /var/log/wtmp /var/run/utmp
+
+<span style=color:#75715e>#4#####Clean System Banner###########</span>
+cp /etc/issue /etc/issue.$time
+cp /etc/issue.net /etc/issue.net.$time
+echo <span style=color:#e6db74>&#34;&#34;</span> &gt; /etc/issue
+echo <span style=color:#e6db74>&#34;&#34;</span> &gt; /etc/issue.net
+
+<span style=color:#75715e>#5####Alter login.defs###############</span>
+cp /etc/login.defs /etc/login.defs.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/login.defs|grep PASS_MIN_LEN
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/login.defs|awk <span style=color:#e6db74>&#39;/PASS_MIN_LEN/{print &#34;PASS_MIN_LEN 12&#34;;next};{print}&#39;</span> &gt;/etc/login.defs.tmp
+mv -f /etc/login.defs.tmp /etc/login.defs
+<span style=color:#66d9ef>else</span>
+echo <span style=color:#e6db74>&#34;PASS_MIN_LEN 12&#34;</span> &gt;&gt;/etc/login.defs
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/login.defs|grep PASS_MAX_DAYS
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/login.defs|awk <span style=color:#e6db74>&#39;/PASS_MAX_DAYS/{print &#34;PASS_MAX_DAYS 90&#34;;next};{print}&#39;</span> &gt;/etc/login.defs.tmp
+mv -f /etc/login.defs.tmp /etc/login.defs
+<span style=color:#66d9ef>else</span>
+echo <span style=color:#e6db74>&#34;PASS_MAX_DAYS 90&#34;</span> &gt;&gt;/etc/login.defs
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#6####Alter profile###############</span>
+cp /etc/profile /etc/profile.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/profile|grep TMOUT
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/profile|awk <span style=color:#e6db74>&#39;/TMOUT/{print &#34;TMOUT=300;export TMOUT&#34;;next};{print}&#39;</span> &gt;/etc/profile.tmp
+mv -f /etc/profile.tmp /etc/profile
+<span style=color:#66d9ef>else</span>
+echo <span style=color:#e6db74>&#34;TMOUT=300;export TMOUT&#34;</span> &gt;&gt;/etc/profile
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#7####Alter inittab###############</span>
+cp /etc/inittab /etc/inittab.bak$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/inittab|grep ca::ctrlaltdel
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/inittab|awk <span style=color:#e6db74>&#39;/^ca::ctrlaltdel/ {sub($1,&#34;#&#34;$1,$0);next};{print}&#39;</span> &gt;/etc/inittab.tmp
+mv -f /etc/inittab.tmp /etc/inittab
+<span style=color:#66d9ef>else</span>
+echo -e <span style=color:#e6db74>&#34;#ca::ctrlaltdel:/sbin/shutdown\t-t3\t-r\tnow&#34;</span> &gt;&gt;/etc/inittab
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#8####Alter syslog###############</span>
+cp /etc/syslog.conf /etc/syslog.conf.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;\*\.err&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;*.err        /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;\*\.info&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;*.info        /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;\*\.emerg&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;*.emerg        /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;local7\.\*&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;local7.*        /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;kern\.debug&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;kern.debug       /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;kern\.warning&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;kern.warning       /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;authpriv\.none&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;authpriv.none       /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;mail\.none&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;mail.none       /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;daemon\.notice&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;daemon.notice        /var/adm/messages&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/syslog.conf|egrep <span style=color:#e6db74>&#34;cron\.\*&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;cron.*      /var/log/cron&#34;</span> &gt;&gt;/etc/syslog.conf
+<span style=color:#66d9ef>fi</span>
+/etc/rc.d/init.d/syslog restart
+
+<span style=color:#75715e>#9####Alter host.conf###############</span>
+cp /etc/host.conf /etc/host.conf.$time
+echo -e <span style=color:#e6db74>&#34;order\tbind,hosts\nmulti\ton\nnospoof\ton&#34;</span> &gt;/etc/host.conf
+
+<span style=color:#75715e>#10####Alter limits.conf###############</span>
+cp /etc/security/limits.conf /etc/security/limits.conf.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/security/limits.conf|egrep <span style=color:#e6db74>&#34;\*[[:space:]]soft[[:space:]]core[[:space:]]0&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;*\tsoft\tcore\t0&#34;</span> &gt;&gt; /etc/security/limits.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/security/limits.conf|egrep <span style=color:#e6db74>&#34;\*[[:space:]]hard[[:space:]]core[[:space:]]0&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;*\thard\tcore\t0&#34;</span> &gt;&gt; /etc/security/limits.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/security/limits.conf|egrep <span style=color:#e6db74>&#34;\*[[:space:]]hard[[:space:]]rss[[:space:]]5000&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;*\thard\trss\t5000&#34;</span> &gt;&gt; /etc/security/limits.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/security/limits.conf|egrep <span style=color:#e6db74>&#34;\*[[:space:]]hard[[:space:]]nproc[[:space:]]20&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;*\thard\tnproc\t20&#34;</span> &gt;&gt; /etc/security/limits.conf
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#11####Alter pam_login###############</span>
+cp /etc/pam.d/login /etc/pam.d/login.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/pam.d/login|egrep <span style=color:#e6db74>&#34;^session[[:space:]]required[[:space:]]/lib/security/pam_limits.so&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;session\trequired\t/lib/security/pam_limits.so&#34;</span> &gt;&gt; /etc/pam.d/login
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#12####Alter sshd_config###############</span>
+cp /etc/ssh/sshd_config /etc/ssh/sshd_config.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/ssh/sshd_config|egrep <span style=color:#e6db74>&#34;^Protocol[[:space:]]2&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo -e <span style=color:#e6db74>&#34;Protocol 2&#34;</span> &gt;&gt;/etc/ssh/sshd_config
+<span style=color:#66d9ef>fi</span>
+
+<span style=color:#75715e>#13####Alter sysctl.conf###############</span>
+cp /etc/sysctl.conf /etc/sysctl.conf.$time
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.tcp_max_syn_backlog&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.tcp_max_syn_backlog=4096&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf_all.rp_filter&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf_all.rp_filter=1&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.tcp_syncookies&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.tcp_syncookies=1&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf\.all\.send_redirects&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf.all.send_redirects=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf\.all\.accept_redirects&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf.all.accept_redirects=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.ip_forward&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.ip_forward=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf\.all\.accept_source_route&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf.all.accept_source_route=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf\.default\.accept_redirects&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf.default.accept_redirects=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.conf\.default\.send_redirects&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.conf.default.send_redirects=0&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+egrep -v <span style=color:#e6db74>&#34;^#|^</span>$<span style=color:#e6db74>&#34;</span> /etc/sysctl.conf|egrep <span style=color:#e6db74>&#34;net\.ipv4\.icmp_echo_ignore_broadcasts&#34;</span>
+<span style=color:#66d9ef>if</span> <span style=color:#f92672>[</span> $? !<span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>]</span> ;<span style=color:#66d9ef>then</span>
+echo <span style=color:#e6db74>&#34;net.ipv4.icmp_echo_ignore_broadcasts=1&#34;</span> &gt;&gt;/etc/sysctl.conf
+<span style=color:#66d9ef>fi</span>
+sysctl -p /etc/sysctl.conf
+chown root:root /etc/sysctl.conf
+chmod <span style=color:#ae81ff>600</span> /etc/sysctl.conf
+</code></pre></div><p>脚本转自：</p><p><a href=http://www.linuxde.net/2011/12/5756.html>http://www.linuxde.net/2011/12/5756.html</a>
+<a href=http://www.linuxpad.cn/linux/centos-sytem-security-shell.html>http://www.linuxpad.cn/linux/centos-sytem-security-shell.html</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/centos/>centos</a></li><li><a href=https://phpgao.github.io/tags/shell/>shell</a></li><li><a href=https://phpgao.github.io/tags/optimize/>optimize</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/weibo_token.html><span class=title>« Prev Page</span><br><span>PHP获取新浪微博token</span></a>
+<a class=next href=https://phpgao.github.io/theme_update.html><span class=title>Next Page »</span><br><span>记一次主题更新</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

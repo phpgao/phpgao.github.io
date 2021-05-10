@@ -1,0 +1,796 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>PHP on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/php/</link>
+    <description>Recent content in PHP on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Mar 2018 06:19:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP官方中文手册chm下载地址</title>
+      <link>https://phpgao.github.io/php_manual.html</link>
+      <pubDate>Tue, 27 Mar 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_manual.html</guid>
+      <description>&lt;p&gt;学习一门语言，官方文档很重要，网上下载到的都是一些过时的PHP官方中文手册，要么是2015年版，要么挂摇头卖狗肉的写的最新，实际下载下来还是2015。偶然间发现原来PHP.NET官网提供下载，本篇文章里老高就来告诉大家PHP官方中文手册chm下载地址。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP验证IP</title>
+      <link>https://phpgao.github.io/php_valid_ip.html</link>
+      <pubDate>Tue, 23 Jan 2018 06:19:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_valid_ip.html</guid>
+      <description>正则的效率是在比不上原生的，所以丢个链接(过滤器函数)走人。
+二逼正则:
+$valid = preg_match(&amp;#39;/^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/&amp;#39;, $string); 正确正则:
+preg_match(&amp;#39;/^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:[.](?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$/&amp;#39;, $ipAddress); 过滤器的选项，比如可以过滤私有IP地址等。
+用法参考Validating an IP address with PHP&amp;rsquo;s filter_var function</description>
+    </item>
+    
+    <item>
+      <title>php返回json格式的{}花括号</title>
+      <link>https://phpgao.github.io/php_return_empty_class.html</link>
+      <pubDate>Thu, 23 Nov 2017 06:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_return_empty_class.html</guid>
+      <description>方括号的[]在json中调试是一个数组，而花括号{}在json中表示一个对象，不过二者在PHP中基本上一个empty就可以判断为i空了，但在js里好像就有一些麻烦了，可能需要下面的判断方式。
+p = [] if((Array.isArray(p) &amp;amp;&amp;amp; p.length === 0)){ alert(&amp;#39;[]&amp;#39;); } p = {} if(Object.prototype.isPrototypeOf(p) &amp;amp;&amp;amp; Object.keys(p).length === 0){ alert(&amp;#39;{}&amp;#39;); } WAY1:
+$a = json_decode(&amp;#39;{}&amp;#39;); echo json_encode($a); WAY2:
+$a = new stdclass; // $a = new ArrayObject(); echo json_encode($a); 虽然花括号{}和方括号的[]二者在PHP和JSON中都表示不同的东西，但是突然要返回空对象还是冷不丁的想一下，我上哪儿去找一个空对象啊? ?</description>
+    </item>
+    
+    <item>
+      <title>nginx配置一篇足矣</title>
+      <link>https://phpgao.github.io/nginx_config.html</link>
+      <pubDate>Wed, 18 Oct 2017 07:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_config.html</guid>
+      <description>&lt;p&gt;nginx的一些配置记录&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Logrotate的基本使用方法</title>
+      <link>https://phpgao.github.io/logrotate_conf.html</link>
+      <pubDate>Sat, 14 Oct 2017 15:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/logrotate_conf.html</guid>
+      <description>&lt;p&gt;Linux服务器上我们用Logrotate来分割归档日志文件，结合crond我们可以指定每天在某个时间自动整理日志等文档。本文主要说明了Centos下Logrotate的使用和配置的方法。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7-安装最新版-NGINX,PHP,Mysql,Mariadb</title>
+      <link>https://phpgao.github.io/all_in_centos7.html</link>
+      <pubDate>Fri, 24 Feb 2017 06:40:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/all_in_centos7.html</guid>
+      <description>&lt;p&gt;自己下载源代码编译很麻烦有没有？注意系统是&lt;strong&gt;Centos7&lt;/strong&gt;！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP判断网络连通</title>
+      <link>https://phpgao.github.io/php_test_network.html</link>
+      <pubDate>Mon, 19 Dec 2016 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_test_network.html</guid>
+      <description>&lt;p&gt;PHP代理其实挺麻烦的。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记VI----PHP</title>
+      <link>https://phpgao.github.io/docker-note6-php.html</link>
+      <pubDate>Thu, 30 Jun 2016 10:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note6-php.html</guid>
+      <description>&lt;p&gt;在docker里构建一个PHP环境，很简单吗？我可不觉得。。。赶紧记录一下！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>docker使用笔记IV----使用docker的风格分离Nginx-PHP--Mysql</title>
+      <link>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</link>
+      <pubDate>Wed, 29 Jun 2016 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker-note4-nginx-php-mysql-html.html</guid>
+      <description>&lt;p&gt;今天老高动手实践一下分离nginx和php，还有mysql。即三个image: g-nginx,g-php,g-mysql。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/06/20358963.png&#34; alt=&#34;php7&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>nginx&#43;php-上传大文件</title>
+      <link>https://phpgao.github.io/nginx_php_upload_big_file.html</link>
+      <pubDate>Fri, 13 May 2016 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_php_upload_big_file.html</guid>
+      <description>&lt;p&gt;有时候确实需要上传一些比较大的文件，老高的服务器是nginx+php，二者都需要配置。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关闭OSX的rootless和修改MAMP的php.ini配置</title>
+      <link>https://phpgao.github.io/rootless_and_mamp.html</link>
+      <pubDate>Thu, 05 May 2016 11:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/rootless_and_mamp.html</guid>
+      <description>&lt;p&gt;记录一下最近遇到的问题&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>将你的PHP程序升级到PHP7.0</title>
+      <link>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</link>
+      <pubDate>Sun, 06 Dec 2015 13:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/upgrade_to_php_70_on_centos7.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/515318547.png&#34; alt=&#34;PHP&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(以上图片来自互联网)&lt;/p&gt;
+&lt;p&gt;这两天抽空把系统升到7.0，把PHP也升到7.0，随便记一点笔记吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>才发现PHP官方已经提供CHM了</title>
+      <link>https://phpgao.github.io/php_chm.html</link>
+      <pubDate>Tue, 03 Nov 2015 03:23:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_chm.html</guid>
+      <description>&lt;p&gt;丢个链接走人&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/2827250856.png&#34; alt=&#34;PHP chm&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac下使用brew配置nginx&#43;php&#43;mysql&#43;PostgreSQL</title>
+      <link>https://phpgao.github.io/mac_onmpp.html</link>
+      <pubDate>Mon, 07 Sep 2015 09:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_onmpp.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1049308967.jpg&#34; alt=&#34;yosemite&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家在win下和Linux系统下配置PHP运行环境已经有很多参考资料了，以老高的经验，win下最好用的是UPUPW，linux求方便是centos+kangle，更加复杂的方法可以翻翻老高的&lt;a href=&#34;https://blog.phpgao.com/archives.html&#34;&gt;文章归档&lt;/a&gt;，里面有很多可以参考的内容。&lt;/p&gt;
+&lt;p&gt;今天由于工作需要，必须在&lt;strong&gt;OSX&lt;/strong&gt;下配置PHP的开发运行环境，经过一番折腾，终于搞定了！主要参考了&lt;a href=&#34;http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/&#34;&gt;Install Nginx, PHP-FPM, MySQL and phpMyAdmin on OS X Mavericks or Yosemite&lt;/a&gt;这篇文章，推荐英文好的同学直接看原文。&lt;/p&gt;
+&lt;p&gt;下面记录一下！(请按照顺序配置)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP天坑总结</title>
+      <link>https://phpgao.github.io/php-fool.html</link>
+      <pubDate>Sat, 27 Jun 2015 01:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fool.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2312350731.jpg&#34; alt=&#34;天坑&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;PHP天坑你懂得，不断总结中。。。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>MAC下快速安装PHP</title>
+      <link>https://phpgao.github.io/mac-install-php.html</link>
+      <pubDate>Fri, 26 Jun 2015 05:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac-install-php.html</guid>
+      <description>请安装Homebrew先
+# 添加源 brew tap josegonzalez/homebrew-php # 一键安装php各个版本 brew install php54 php54-mcrypt brew install php55 php55-xdebug brew install php56 </description>
+    </item>
+    
+    <item>
+      <title>发现了一个不错的PHP框架Slim</title>
+      <link>https://phpgao.github.io/php-slim-framework.html</link>
+      <pubDate>Thu, 25 Jun 2015 04:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-slim-framework.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2369929849.png&#34; alt=&#34;Slim Framework&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Slim的中文意思是苗条的。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP实现常见排序</title>
+      <link>https://phpgao.github.io/php-sort.html</link>
+      <pubDate>Tue, 09 Jun 2015 15:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-sort.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/1704156785.png&#34; alt=&#34;排序&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;(图片来自互联网)&lt;/p&gt;
+&lt;p&gt;最近老高复习了下数据结构，此文会慢慢更新！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&amp;lt;?php
+
+$count = 1000;
+
+for($i=0;$i&amp;lt;$count;$i++){
+    $random_array[$i] = rand(0,$count);
+}
+
+
+# 空白对照
+$start = microtime(1);
+echo &amp;#39;Do nothing takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 原生方法排序
+$test_array = $random_array;
+$start = microtime(1);
+
+sort($test_array);
+echo &amp;#39;Origin sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 冒泡排序
+# 两两交换，思路很简单
+$test_array = $random_array;
+$start = microtime(1);
+# 需要把计算个数的时间也考虑到
+$count = count($test_array);
+# 循环n-1次
+for($i=1;$i&amp;lt;$count;$i++){
+    # 循环n-1-$i次
+    for($j=0;$j&amp;lt;$count-$i;$j++){
+        if($test_array[$j] &amp;gt; $test_array[$j+1]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$j+1];
+            $test_array[$j+1] = $tmp;
+        }
+    }
+}
+echo &amp;#39;Bubble sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+# 选择排序
+# 依次选择最小(大)的元素，等选择完毕自动有序
+$test_array = $random_array;
+$start = microtime(1);
+$count = count($test_array);
+
+for($i=0;$i&amp;lt;$count-1;$i++){
+    # $test_array[$i]为当前最小
+    for($j=$i+1;$j&amp;lt;$count;$j++){
+        # 从下一个开始比较
+        if($test_array[$i] &amp;gt; $test_array[$j]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$i];
+            $test_array[$i] = $tmp;
+        }
+    }
+}
+echo &amp;#39;Select sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+
+# 插入排序
+# 就像别人给你发扑克牌，拿到一张牌就插到你手上，并使之有序
+$test_array = $random_array;
+$start = microtime(1);
+$count = count($test_array);
+# 直接跳过$i=0
+for($i=1;$i&amp;lt;$count;$i++){
+    # 取$i左边的元素先比，比到最左
+    for($j=$i-1;$j&amp;gt;=0;$j--){
+        # 共$j+1个元素，其中前$j个有序
+        if($test_array[$j] &amp;gt; $test_array[$j+1]){
+            $tmp = $test_array[$j];
+            $test_array[$j] = $test_array[$j+1];
+            $test_array[$j+1] = $tmp;
+        }else{
+            break;
+        }
+    }
+}
+
+echo &amp;#39;Insertion sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+
+
+# 快速排序
+# 有点递归的思想，随机一个基准，将集合分为两半，然后继续分解，直到元素个数为1或0个
+$test_array = $random_array;
+$start = microtime(1);
+
+function quick_sort($arr){
+    $len = count($arr);
+    # 符合条件&amp;lt;=1即无需分组
+    if($len &amp;lt;= 1) return $arr;
+
+    # floor也行，主要是取整
+    $index = ceil($len/2);
+    $base = $arr[$index];
+
+    $left = array();
+    $right = array();
+
+    for($i=0;$i&amp;lt;$len;$i++){
+        if($i == $index) continue;
+        if($arr[$i] &amp;lt; $base){
+            $left[] = $arr[$i];
+        }else{
+            $right[] = $arr[$i];
+        }
+    }
+
+    $l = quick_sort($left);
+    $r = quick_sort($right);
+    return array_merge($l, (array)$base, $r);
+}
+
+quick_sort($test_array);
+echo &amp;#39;Quick sort takes:&amp;#39; . number_format((microtime(1) - $start), 6);
+echo &amp;#34;\n&amp;#34;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos下安装使用composer</title>
+      <link>https://phpgao.github.io/composer-centos.html</link>
+      <pubDate>Tue, 09 Jun 2015 02:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/composer-centos.html</guid>
+      <description>&lt;p&gt;composer的中文意思为作曲家，是php最新的包管理器。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3590997597.png&#34; alt=&#34;php composer&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos安装EPEL</title>
+      <link>https://phpgao.github.io/centos_install_epel.html</link>
+      <pubDate>Wed, 27 May 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/centos_install_epel.html</guid>
+      <description>EPEL全称Extra Packages for Enterprise Linux，官方翻译为 企业版 Linux 附加软件包。顾名思义，他可以扩充你的软件库，安装很多软件时能省去很多时间。比如最近很火的PHP的DoS漏洞，Bug 61461，在EPEL下面只需要一条命令就能将PHP升级为5.9，避免重新编。
+老高推荐新安装的centos系统都先安装此附加软件包！
+安装命令：
+yum install epel-release 没有报错的话，那么EPEL就安装完毕了。
+如果上述命令还是解决不了问题，那就必须有针对性的安装了。
+以下命令复制自Install EPEL and additional repositories on CentOS and Red Hat
+#CentOS and Red Hat Enterprise Linux 5.x wget http://dl.fedoraproject.org/pub/epel/5/x86_64/epel-release-5-4.noarch.rpm rpm -Uvh epel-release-5*.rpm #CentOS and Red Hat Enterprise Linux 6.x wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm rpm -Uvh epel-release-6*.rpm #CentOS and Red Hat Enterprise Linux 7.x wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-5.noarch.rpm rpm -Uvh epel-release-7*.rpm 你还可以在此查看每个系统对应的最新的EPEL版本</description>
+    </item>
+    
+    <item>
+      <title>Linux服务器配置Redis并启用PHP支持</title>
+      <link>https://phpgao.github.io/redis_php.html</link>
+      <pubDate>Mon, 25 May 2015 13:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/redis_php.html</guid>
+      <description>&lt;p&gt;redis目前(20150525)已经更新到了3.0版本，今天我们来学习如何在服务器部署Redis，并启用php支持。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/1996252458.jpg&#34; alt=&#34;Redis logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP安装配置Opcache加速你的网站</title>
+      <link>https://phpgao.github.io/php-opcache-optimize.html</link>
+      <pubDate>Sun, 24 May 2015 03:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-opcache-optimize.html</guid>
+      <description>&lt;p&gt;本文针对PHP5.5等高级版本，编译时需要加上&lt;code&gt;--enable-opcache&lt;/code&gt;参数&lt;/p&gt;
+&lt;p&gt;编译PHP请参考&lt;a href=&#34;https://blog.phpgao.com/compile_php.html&#34;&gt;编译PHP5.6&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;编译安装完成后，我们开始配置Opcache&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux服务器配置memcached并启用PHP支持</title>
+      <link>https://phpgao.github.io/php-memcached-extension-installation.html</link>
+      <pubDate>Sun, 24 May 2015 02:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-memcached-extension-installation.html</guid>
+      <description>&lt;p&gt;最近在服务器上部缓存系统，记录一下PHP安装memcached扩展。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>彻底解决编译PHP找不到libc-client.a的问题</title>
+      <link>https://phpgao.github.io/libc-client-404.html</link>
+      <pubDate>Sat, 23 May 2015 04:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/libc-client-404.html</guid>
+      <description>&lt;p&gt;最近PHP爆出漏洞，老高也在升级PHP版本，并加入一些支持，但是遇到这个问题很蛋疼&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;configure: error: Cannot find imap library (libc-client.a). Please check your c-client installation.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;网上搜了各种教程，各种cp都没用，索性我们就自己编译吧！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>simple_html_dom换行符丢失的问题</title>
+      <link>https://phpgao.github.io/simple_html_dom_miss_n.html</link>
+      <pubDate>Mon, 18 May 2015 12:10:37 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/simple_html_dom_miss_n.html</guid>
+      <description>今天老高在更新**Table Of Contents for typecho**的时候，遇到了一个问题。
+因为解析文档的时候，换行符\n被无故删除掉了，导致pre中code的解析一片混乱，阅读源代码后发现了这个选项stripRN，默认值是true，即默认删除变量中的换行符，将其关闭即可！
+核心代码位于约1147行左右。
+if ($stripRN) { $str = str_replace(&amp;#34;\r&amp;#34;, &amp;#34; &amp;#34;, $str); $str = str_replace(&amp;#34;\n&amp;#34;, &amp;#34; &amp;#34;, $str); ... </description>
+    </item>
+    
+    <item>
+      <title>排查PHP-FPM占用CPU过高</title>
+      <link>https://phpgao.github.io/php-fpm-high-cpu-consumption.html</link>
+      <pubDate>Fri, 15 May 2015 10:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-high-cpu-consumption.html</guid>
+      <description>最近老高发现服务器的CPU总是被某个php-fpm占用过高，记录一下如何排查。
+发现 如何发现的呢？当然是使用top命令，发现系统的load average&amp;gt;3，这说明系统已经处于比较高的负载中。
+尝试解决 当我把php-fpm重启后，没过一会儿又开始cpu狂飙！这是什么鬼？
+开始排查 首先，我们开启在php-fmp.conf中开启错误日志，慢执行日志还有常规日志
+error_log = /var/log/php/error.log access.log = /var/log/php/access.$pool.log access.format = &amp;#34;%R - %u %t \&amp;#34;%m %r%Q%q\&amp;#34; %s %f %{mili}d %{kilo}M %{system}C%%&amp;#34; slowlog = /var/log/php/slow.$pool.log request_slowlog_timeout = 3s 重启php-fpm后我们开始监视日志
+# 查看慢执行日志 [15-May-2015 12:50:22] [pool www] pid 1819 script_filename = /home/ftp/phpergao/wwwroot/index.php [0x00007f2d286c2790] replace() /home/ftp/phpergao/wwwroot/usr/plugins/CdnHelper/Plugin.php:72 [0x00007fff78ab00f0] replace() unknown:0 [0x00007f2d286c2420] call_user_func_array() /home/ftp/phpergao/wwwroot/var/Typecho/Plugin.php:489 [0x00007fff78ab0430] __call() unknown:0 [0x00007f2d286c1f78] contentEx() /home/ftp/phpergao/wwwroot/var/Widget/Abstract/Contents.php:141 [0x00007f2d286c1b78] ___content() /home/ftp/phpergao/wwwroot/var/Typecho/Widget.php:385 [0x00007fff78ab0850] __get() unknown:0 [0x00007f2d286c1870] content() /home/ftp/phpergao/wwwroot/var/Widget/Abstract/Contents.php:783 [0x00007f2d286c1628] content() /home/ftp/phpergao/wwwroot/var/Widget/Archive.</description>
+    </item>
+    
+    <item>
+      <title>将-php-fpm-配置为服务</title>
+      <link>https://phpgao.github.io/php-fpm-service.html</link>
+      <pubDate>Thu, 14 May 2015 10:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-service.html</guid>
+      <description>&lt;p&gt;请将以下脚本适当修改后命名为&lt;strong&gt;php-fpm&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>php-fpm---启动参数及重要配置详解</title>
+      <link>https://phpgao.github.io/php-fpm-configure.html</link>
+      <pubDate>Thu, 14 May 2015 10:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-fpm-configure.html</guid>
+      <description>&lt;p&gt;约定几个目录&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;/usr/local/php/sbin/php-fpm
+/usr/local/php/etc/php-fpm.conf
+/usr/local/php/etc/php.ini&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>centos6新系统初始化脚本</title>
+      <link>https://phpgao.github.io/new_cents_shell.html</link>
+      <pubDate>Mon, 27 Apr 2015 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/new_cents_shell.html</guid>
+      <description>&lt;p&gt;最近装机次数有点多，本来想写到这里的&lt;a href=&#34;https://blog.phpgao.com/centos_optimize.html&#34;&gt;centos6 优化脚本与安全脚本&lt;/a&gt;，结果一想还是新开一个帖子吧。&lt;/p&gt;
+&lt;p&gt;centos源设置可以参考&lt;a href=&#34;https://blog.phpgao.com/repo_for_centos.html&#34;&gt;Centos源设置&lt;/a&gt;，老高推荐安装阿里源。&lt;/p&gt;
+&lt;p&gt;新机子先运行上面的脚本，再运行这个脚本&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>获取天气预报的方法</title>
+      <link>https://phpgao.github.io/php_weather.html</link>
+      <pubDate>Wed, 25 Mar 2015 14:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_weather.html</guid>
+      <description>&lt;p&gt;老高最近在处理天气预报的问题时总结了一下，备用！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>python中浅拷贝和深拷贝</title>
+      <link>https://phpgao.github.io/python_copy.html</link>
+      <pubDate>Mon, 10 Nov 2014 09:33:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/python_copy.html</guid>
+      <description>python中浅拷贝和深拷贝 今天写python脚本，遇到了一个问题。先贴代码：
+#coding=utf-8 new_list = [] # 声明一个list tmp = {&amp;#39;a&amp;#39;:123,&amp;#39;b&amp;#39;:&amp;#39;ccc&amp;#39;} # 新建一个dict new_list.append(tmp) # 追加 print tmp print new_list tmp[&amp;#39;a&amp;#39;] = 456 # 修改tmp tmp[&amp;#39;b&amp;#39;] = &amp;#39;ddd&amp;#39; new_list.append(tmp) # 追加 print tmp print new_list # 执行结果： {&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;} [{&amp;#39;a&amp;#39;: 123, &amp;#39;b&amp;#39;: &amp;#39;ccc&amp;#39;}] # 当改变了tmp，list中的值也会变化 {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;} [{&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}, {&amp;#39;a&amp;#39;: 456, &amp;#39;b&amp;#39;: &amp;#39;ddd&amp;#39;}] 如果是PHP会发生什么？
+$b = array(); $a = array(&amp;#39;b&amp;#39;=&amp;gt;123); array_push($b , $a); $a = array(&amp;#39;b&amp;#39;=&amp;gt;456); array_push($b , $a); var_dump($b); $a = new ArrayObject(array(&amp;#39;b&amp;#39;=&amp;gt;123)); $arr = new ArrayObject(); $arr-&amp;gt;append($a); $a[&amp;#39;b&amp;#39;] = 456; $arr-&amp;gt;append($a); var_dump($arr); # 执行结果  array(2) { [0]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(123) } [1]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } object(ArrayObject)#2 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(2) { [0]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } [1]=&amp;gt; object(ArrayObject)#1 (1) {  [&amp;#34;storage&amp;#34;:&amp;#34;ArrayObject&amp;#34;:private]=&amp;gt; array(1) { [&amp;#34;b&amp;#34;]=&amp;gt; int(456) } } } } 由结果看，PHP中array_push方法和array_object的结果也不同。</description>
+    </item>
+    
+    <item>
+      <title>PHP文档收藏夹</title>
+      <link>https://phpgao.github.io/php_manual_fav.html</link>
+      <pubDate>Fri, 31 Oct 2014 10:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_manual_fav.html</guid>
+      <description>&lt;p&gt;主要记录一些值得研究的PHP文档页面&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Call-to-undefined-function-imagettftext()解决方法</title>
+      <link>https://phpgao.github.io/undefined_imagettftext.html</link>
+      <pubDate>Fri, 03 Oct 2014 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/undefined_imagettftext.html</guid>
+      <description>老高在一个新环境中装DEDECMS的时候发现后台验证码无法显示。直接搜索一下这个错误，有人说session错误，有的说权限错误等等，这不胡扯么！只能看源代码了，定位到文件/include/vdimgck.php。出错的函数是imagettftext()，由于织梦使用了@将错误隐去，导致这次莫名的错误。将@去掉，错误立马出现：
+ Fatal error: Call to undefined function imagettftext()
+ 现在我们就明确了，出现错误的原因是PHP编译时没有加上FreeType。
+解决办法：
+首先编译安装FreeType，以2.4.0为例：
+wget http://download.savannah.gnu.org/releases/freetype/freetype-2.4.0.tar.bz2tar -jxf freetype-2.4.0.tar.bz2cd reetype-2.4.0# 安装到/usr/local/freetype./configure --prefix=/usr/local/freetypemake &amp;amp;&amp;amp; make install 下面我们重新编译PHP，加上参数--with-freetype-dir=/usr/local/freetype
+./configure \... \... \--with-freetype-dir=/usr/local/freetype 编译完成重启php
+kill -USR2 `cat /usr/local/php/var/run/php-fpm.pid` 再GD库中找到FreeType Support说明安装成功！
+需要注意的是，如果服务器freetype的版本是1.*，那么你可能需要改变编译参数为--with-ttf[=DIR]，以下转自ChinaUnix论坛：
+ 字库 配置开关 FreeType 1.x 要激活 FreeType 1.x 的支持，加上 &amp;ndash;with-ttf[=DIR]。
+FreeType 2 要激活 FreeType 2 的支持，加上 &amp;ndash;with-freetype-dir=DIR。
+T1lib 要激活 T1lib（Type 1 字体），加上 &amp;ndash;with-t1lib[=DIR]。</description>
+    </item>
+    
+    <item>
+      <title>PHP一些不为人知的使用方法</title>
+      <link>https://phpgao.github.io/php_barely_used.html</link>
+      <pubDate>Wed, 24 Sep 2014 08:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_barely_used.html</guid>
+      <description>&lt;p&gt;今天为大家介绍一些比较抽象，但十分有用的关于PHP的用法。老高在通读了THINKPHP源代码后才发现了这一篇天地。合理的使用这些方法或者常量能帮助你更快速的开发或者DEBUG。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP导出项目的数据字典</title>
+      <link>https://phpgao.github.io/data_dictionary_exported_by_php.html</link>
+      <pubDate>Tue, 23 Sep 2014 03:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/data_dictionary_exported_by_php.html</guid>
+      <description>突然想到这个方法，果然已经有人实现了。
+有这个脚本也能看出来，数据表的很多信息都保存在INFORMATION_SCHEMA.TABLES表里，还有数据表注释的重要性！
+&amp;lt;?php/*** 生成mysql数据字典* @author niming&amp;lt;287384795@qq.com&amp;gt;*///配置数据库$dbserver = &amp;quot;localhost&amp;quot;;$dbusername = &amp;quot;root&amp;quot;;$dbpassword = &amp;quot;root&amp;quot;;$database = &#39;mydb&#39;;//其他配置$title = &#39;系统数据字典&#39;;$mysql_conn = @mysql_connect(&amp;quot;$dbserver&amp;quot;, &amp;quot;$dbusername&amp;quot;, &amp;quot;$dbpassword&amp;quot;) or die(&amp;quot;Mysql connect is error.&amp;quot;);mysql_select_db($database, $mysql_conn);mysql_query(&#39;SET NAMES utf8&#39;, $mysql_conn);$table_result = mysql_query(&#39;show tables&#39;, $mysql_conn);//取得所有的表名while ($row = mysql_fetch_array($table_result)) {$tables[][&#39;TABLE_NAME&#39;] = $row[0];}//循环取得所有表的备注foreach ($tables AS $k=&amp;gt;$v) {$sql = &#39;SELECT * FROM &#39;;$sql .</description>
+    </item>
+    
+    <item>
+      <title>编译PHP5.6</title>
+      <link>https://phpgao.github.io/compile_php.html</link>
+      <pubDate>Thu, 18 Sep 2014 06:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/compile_php.html</guid>
+      <description>准备 PHP的安装最头疼的就是因为某些类库没有安装而报错，所以编译前请确保以下包已安装
+yum groupinstall &amp;#34;development tools&amp;#34; yum install -y gcc gcc-c++ autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libpng libpng-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses curl curl-devel openssl-devel gdbm-devel db4-devel libXpm-devel libX11-devel gd-devel gmp-devel readline-devel libxslt-devel expat-devel xmlrpc-c xmlrpc-c-devel 编译 高大上的编译选项
+./configure \ --prefix=/usr/local/php \ --enable-fpm \ --with-curl \ --with-openssl \ --enable-mbregex \ --with-mysql \ --with-mysqli \ --with-mysql-sock \ --enable-pdo \ --with-pdo-mysql \ --with-pdo-pgsql \ --with-pdo-sqlite \ --enable-mysqlnd \ --with-gd \ --enable-gd-native-ttf \ --enable-exif \ --with-jpeg-dir=/usr/local/jpeg \ --with-png-dir=/usr/local/png \ --with-freetype-dir=/usr/local/freetype \ --enable-gd-jis-conv \ --with-gettext \ --with-zlib \ --enable-zip \ --with-bz2 \ --disable-fileinfo \ --enable-xmlreader \ --enable-xmlwriter \ --with-xmlrpc \ --enable-mbstring \ --enable-inline-optimization \ 20150524更新 5.</description>
+    </item>
+    
+    <item>
+      <title>PHP时间函数总结</title>
+      <link>https://phpgao.github.io/php_time.html</link>
+      <pubDate>Mon, 08 Sep 2014 16:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_time.html</guid>
+      <description>&lt;p&gt;PHP关于时间的函数可以参考&lt;a href=&#34;http://cn2.php.net/manual/zh/ref.datetime.php&#34;&gt;这里&lt;/a&gt;，可以看到PHP已经提供了很多函数以供我们使用，熟练掌握这些函数可以让你摆脱冗长复杂的计算，希望本文能够让你事半功倍！&lt;/p&gt;
+&lt;p&gt;ps.关于时间戳与日期的转换工具，博主推荐这个&lt;a href=&#34;http://shijianchuo.911cha.com&#34;&gt;时间戳转换工具&lt;/a&gt;。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP编译错误的解决办法</title>
+      <link>https://phpgao.github.io/php_configuration_error.html</link>
+      <pubDate>Sun, 07 Sep 2014 12:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_configuration_error.html</guid>
+      <description>This article is post on https://coderwall.com/p/ggmpfa
+ configure: error: xslt-config not found. Please reinstall the libxslt &amp;gt;= 1.1.0 distribution
+ yum -y install libxslt-devel  configure: error: Could not find net-snmp-config binary. Please check your net-snmp installation.
+ yum -y install net-snmp-devel  configure: error: Please reinstall readline - I cannot find readline.h
+ yum -y install readline-devel  configure: error: Cannot find pspell
+ yum -y install aspell-devel  checking for unixODBC support&amp;hellip; configure: error: ODBC header file &amp;lsquo;/usr/include/sqlext.</description>
+    </item>
+    
+    <item>
+      <title>php不使用中间变量交换两个变量的值</title>
+      <link>https://phpgao.github.io/php_substitution_of_variables.html</link>
+      <pubDate>Wed, 13 Aug 2014 08:35:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_substitution_of_variables.html</guid>
+      <description>方法一：
+$a = $a^$b;$b = $b^$a;$a = $a^$b; 这就是位运算带给我们的奇妙之处！（这种方法只适合于int型和string型，而且位数不能超过8位）
+方法二：
+list($var1, $var2) = array($var2, $var1); </description>
+    </item>
+    
+    <item>
+      <title>PHP正则表达式的模式修正符</title>
+      <link>https://phpgao.github.io/pattern_modifiers.html</link>
+      <pubDate>Fri, 25 Jul 2014 09:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/pattern_modifiers.html</guid>
+      <description>PHP在处理正则表达式的时候，在最后面可以加上诸如/i, /is, /s, /isU的选项，他们都代表什么含义呢？
+其实他们是PHP正则表达式的模式修正符，用于对正则表达式的补充。
+[TOC]
+优先级概念 正则符号的优先级：
+()圆括号因为是内存处理所以第1 * ? + { } 重复匹配内容第2 ^ $ \b 边界处理第3 | 条件处理第4 最后按照运算顺序计算匹配
+常用的修正符 i (PCRE_CASELESS)正则内容在匹配时候不区分大小写（默认是区分的）。
+如preg_match(&#39;/\[TOC\]/i&#39;,$str) 这句话中的小写字母i，他跟在正则表达式后面，起的作用是匹配时忽略大小写 所以，上述正则表达式可以匹配诸如 [toc]、[ToC]、或者[TOC]。
+m (PCRE_MULTILINE) 在匹配首内容或者尾内容时候采用多行识别匹配。默认情况下，PCRE 将目标字符串作为单一的一“行”字符所组成的（甚至其中包含有换行符也是如此）。“行起始”元字符（^）仅仅匹配字符串的起始，“行结束”元字符（$）仅仅匹配字符串的结束，或者最后一个字符是换行符时其前面（除非设定了 D 修正符）。这和 Perl 是一样的。 当设定了此修正符，“行起始”和“行结束”除了匹配整个字符串开头和结束外，还分别匹配其中的换行符的之后和之前。这和 Perl 的 /m 修正符是等效的。如果目标字符串中没有“/n”字符或者模式中没有 ^ 或 $，则设定此修正符没有任何效果。
+S (PCRE_DOTALL) 如果没有使用这个模式修正符号，元字符中的&amp;quot;.&amp;ldquo;默认不能表示换行符号,将字符串视为单行。如果设定了此修正符，模式中的圆点元字符（.）匹配所有的字符，包括换行符。没有此设定的话，则不包括换行符。这和 Perl 的 /s 修正符是等效的。排除字符类例如 [^a] 总是匹配换行符的，无论是否设定了此修正符。
+x (PCRE_EXTENDED) 忽略正则中的空白。如果设定了此修正符，模式中的空白字符除了被转义的或在字符类中的以外完全被忽略，在未转义的字符类之外的 # 以及下一个换行符之间的所有字符，包括两头，也都被忽略。
+A (PCRE_ANCHORED) 强制从头开始匹配。如果设定了此修正符，模式被强制为“anchored”，即强制仅从目标字符串的开头开始匹配即自动在模式开头加上^。此效果也可以通过适当的模式本身来实现（在 Perl 中实现的唯一方法）。
+D (PCRE_DOLLAR_ENDONLY) 强制$匹配尾部无任何内容。如果设定了此修正符，模式中的美元元字符仅匹配目标字符串的结尾。没有此选项时，如果最后一个字符是换行符的话，美元符号也会匹配此字符之前（但不会匹配任何其它换行符之前）。如果设定了 m 修正符则忽略此选项。Perl 中没有与其等价的修正符。 S 当一个模式将被使用若干次时，为加速匹配起见值得先对其进行分析。如果设定了此修正符则会进行额外的分析。目前，分析一个模式仅对没有单一固定起始字符的 non-anchored 模式有用。</description>
+    </item>
+    
+    <item>
+      <title>php将image转换为base64编码</title>
+      <link>https://phpgao.github.io/base64_pic.html</link>
+      <pubDate>Fri, 25 Jul 2014 03:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/base64_pic.html</guid>
+      <description>&lt;p&gt;引用PHP手册里的一评论&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This will greatly reduce your page load time as the browser will only
+need to send one server request for the entire page, rather than
+multiple requests for the HTML and the images. Requests need to be
+uploaded and 99% of the world are limited on their upload speed to the
+server.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;翻译一下就是&lt;/p&gt;
+&lt;p&gt;这种方式能够大大减少页面载入时间，因为整个页面只需要一个请求，多个针对html文档和图片的请求。请求需要被提(上)交(传)，但是99%的上传速度是被限制的。&lt;/p&gt;
+&lt;p&gt;所以减少请求也是一个明确的选择！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>单引号和双引号的区别及用法</title>
+      <link>https://phpgao.github.io/php_quotation_marks.html</link>
+      <pubDate>Tue, 22 Jul 2014 08:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_quotation_marks.html</guid>
+      <description>&lt;p&gt;双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考&lt;/p&gt;
+&lt;p&gt;转自&lt;a href=&#34;http://blog.sina.com.cn/s/blog_706476980100xapp.html&#34;&gt;http://blog.sina.com.cn/s/blog_706476980100xapp.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3.&amp;quot; &amp;ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而&#39; &amp;lsquo;单引号里面的不进行解释，直接输出。
+例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$abc=&#39;my name is tome&#39;;
+echo $abc //结果是:my name is tom
+echo &#39;$abc&#39; //结果是:$abc
+echo &amp;quot;$abc&amp;quot; //结果是:my name is tom
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;select    *    from    abc_table where user_name=&#39;abc&#39;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQL语句可以写成:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr = &amp;quot;select    *    from abc_table where user _name= &#39;abc&#39;&amp;quot; ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;假设查询条件中使用的是变量，例如：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$user_name = $_REQUEST[&#39;user_name&#39;]; //字符串变量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$user=array (&amp;quot;name&amp;quot;=&amp;gt; $_REQUEST[&#39;user_name‘,&amp;quot;age&amp;quot;=&amp;gt;$_REQUEST[&#39;age&#39;];//数组变量
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQL语句就可以写成：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr = &amp;quot;select    *    from abc_table where user_name = &#39; &amp;quot; . $user_name . &amp;quot; &#39; &amp;quot;;
+SQLstr = &amp;quot;select * from abc_table where user_name = &#39; &amp;quot; . $user[&amp;quot;name&amp;quot;] . &amp;quot; &#39; &amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;对比一下:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;SQLstr=&amp;quot;select * from abc_table where user_name = &#39; abc &#39; &amp;quot; ;
+SQLstr=&amp;quot;select * from abc_table where user_name =&#39; &amp;quot; . $user _name . &amp;quot; &#39; &amp;quot;;
+SQLstr=&amp;quot;select * from abc_table where user_name =&#39; &amp;quot; . $user[&amp;quot;name&amp;quot;] . &amp;quot; &#39; &amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;SQLstr可以分解为以下3个部分:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1：&amp;quot;select * from table where user_name = &#39; &amp;quot; //固定SQL语句 
+2：$user //变量 
+3：&amp;quot; &#39; &amp;quot;
+1,2,3部分字符串之间用&amp;quot;.&amp;quot; 来连接
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>netbeans开启xdebug</title>
+      <link>https://phpgao.github.io/netbeans_xdebug.html</link>
+      <pubDate>Fri, 18 Jul 2014 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/netbeans_xdebug.html</guid>
+      <description>一直在用everedit做开发，今天开始高大上，用一下netbeans
+安装   在netbeans下载页面找到PHP版的netbeans，下载下来并安装，表忘了JRE也要装的
+  在xdebug下载页面下载对应PHP版本的xdebug，然后解压至php目录下的ext目录下，同时新建d:\xdebug文件夹
+  配置 PHP.INI 在phpinfo()页面中找到INI文件，在文件最后加入以下代码
+;注意：我们的版本号可能不同zend_extension=&amp;quot;ext\php_xdebug-2.2.5-5.4-vc9.dll&amp;quot; [Xdebug];是否开启自动跟踪xdebug.auto_trace= On;是否开启异常跟踪xdebug.show_exception_trace= On;是否开启远程调试自动启动xdebug.remote_autostart= On;是否开启远程调试xdebug.remote_enable= On;允许调试的客户端IP;xdebug.remote_host= 192.168.1.1;远程调试的端口（默认9000）xdebug.remote_port=9000;调试插件dbgpxdebug.remote_handler=dbgp;是否收集变量xdebug.collect_vars= On;是否收集返回值xdebug.collect_return= On;是否收集参数xdebug.collect_params= On;跟踪输出路径xdebug.trace_output_dir=&amp;quot;d:\xdebug&amp;quot;;是否开启调试内容xdebug.profiler_enable=On;调试输出路径xdebug.profiler_output_dir=&amp;quot;d:\xdebug&amp;quot;;调试的域名xdebug.remote_host=localhost 修改以后重启服务器，看看有没有出现xdebug，如果出现了，那就成功了一大半
+netbeans 设置的地方在tool-&amp;gt;option里找到debug标签，在这里可以修改PHP.EXE的路径，还有调试的工具和端口号等。
+注意  如果你用的远程调试，务必打开xdebug.remote_enable 如果你用的域名调试，那么请修改xdebug.remote_host为你的域名，不要忘了加引号，不用带http:// 如果总是显示等待xdebug，那么就换一个web浏览器试试，在tool-&amp;gt;option-&amp;gt;general里可以找到 如果还不行，请留言，老高和你一起搞！  调试 哈哈，这还用讲吗？上个图</description>
+    </item>
+    
+    <item>
+      <title>PHP所有函数列表</title>
+      <link>https://phpgao.github.io/php_function_all.html</link>
+      <pubDate>Tue, 15 Jul 2014 01:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_function_all.html</guid>
+      <description>&lt;p&gt;说所有函数有点夸张，有错误请指正！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP面向对象的那些事儿</title>
+      <link>https://phpgao.github.io/php_ob.html</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_ob.html</guid>
+      <description>&lt;p&gt;PHP的面向对象在进入5版本后得到了加强，很多好用的特性都得到了支持。下面总结了一些开发时用到的简单的概念，希望对你有帮助&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP缓冲研究</title>
+      <link>https://phpgao.github.io/php_buffering.html</link>
+      <pubDate>Wed, 21 May 2014 08:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_buffering.html</guid>
+      <description>输出缓冲是个让人头大的问题，因为它不仅牵扯到web语言本身，浏览器自身的原因也会导致无内容输出。
+所以，在输出前保险的做法是先输出4096个空白字符，然后再使用缓冲输出内容，这样就可以实现程序随时输出内容啦！
+以下代码chrome，FF，IE，Safari，手机chrome，UCWEB 都测试通过，需要注意的是：
+在网页最开始一定要输出足够多的字符来骗过浏览器 ob_flush,flush需要一起使用
+&amp;lt;?php//以下几个函数作用于PHP及服务器的设置，一般不需要更改/*@apache_setenv(&#39;no-gzip&#39;, 1);@ini_set(&#39;zlib.output_compression&#39;, 0);@ini_set(&#39;implicit_flush&#39;, 1); //==ob_implicit_flush(1);*///检测是否开启缓冲if (ob_get_level() == 0) ob_start();//这里的数字可变 FF:1024 CHROME:0 IE:4096echo str_repeat(&#39; &#39; ,4096);//echo str_pad(&#39;&#39;,4096).&amp;quot;\n&amp;quot;;for ($i = 1; $i&amp;lt;=10; $i++){echo &amp;quot;Line $i&amp;lt;br&amp;gt;&amp;quot;;//ob_end_clean(); //如果再此打开，flush将会报错，因为清空了缓冲区//echo &#39; length: &#39;.ob_get_length();ob_flush();flush();sleep(1);}echo &amp;quot;Done.&amp;quot;;/*ob_end_flush(); //送出输出缓冲区内容并关闭缓冲ob_get_clean(); //得到当前缓冲区的内容并删除当前输出缓。ob_get_contents(); //只是得到输出缓冲区的内容，但不清除它。ob_implicit_flush(1); //将打开或关闭绝对（隐式）刷送。绝对（隐式）刷送将导致在每次输出调用后有一次刷送操作，以便不再需要对 flush() 的显式调用。*//*刷新PHP程序的缓冲，而不论PHP执行在何种情况下（CGI ，web服务器等等）。该函数将当前为止程序的所有输出发送到用户的浏览器。flush() 函数不会对服务器或客户端浏览器的缓存模式产生影响。因此，必须同时使用 ob_flush() 和flush() 函数来刷新输出缓冲。个别web服务器程序，特别是Win32下的web服务器程序，在发送结果到浏览器之前，仍然会缓存脚本的输出，直到程序结束为止。有些Apache的模块，比如mod_gzip，可能自己进行输出缓存，这将导致flush()函数产生的结果不会立即被发送到客户端浏览器。甚至浏览器也会在显示之前，缓存接收到的内容。例如 Netscape 浏览器会在接受到换行或 html 标记的开头之前缓存内容，并且在接受到 &amp;lt;/table&amp;gt; 标记之前，不会显示出整个表格。一些版本的 Microsoft Internet Explorer 只有当接受到的256个字节以后才开始显示该页面，所以必须发送一些额外的空格来让这些浏览器显示页面内容。*/ 以下转自http://www.</description>
+    </item>
+    
+    <item>
+      <title>PHP之负载均衡下的session共用(Memcache实现)</title>
+      <link>https://phpgao.github.io/memcache_session.html</link>
+      <pubDate>Mon, 19 May 2014 08:08:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/memcache_session.html</guid>
+      <description>转自http://www.cnblogs.com/see7di/p/3560329.html
+此代码片段的功能是在做均衡负载的时候将session的维护工作交给Memcached，这样不仅性能上来了，session不同步的问题也解决了！
+但是要求做Memcache的计算机内存要足够大！
+$_ENV=array(&#39;SYS&#39;=&amp;gt;array(&#39;Memip&#39;=&amp;gt;&#39;127.0.0.1&#39;, //MEMCACHE的ip&#39;Mempt&#39;=&amp;gt;11211, //MEMCACHE的port&#39;Memtim&#39;=&amp;gt;10, //MEMCACHE的超时时间));//托管SESSION到MEMCACHE,如果开启失败,则说明MEMCACHE没有配置正确final class S{public static function open(){//禁止session自动开启session_write_close();ini_set(&#39;session.auto_start&#39;,0);//使用五十分之一的概率启动GC清理会话ini_set(&#39;session.gc_probability&#39;,1);ini_set(&#39;session.gc_divisor&#39;,50);ini_set(&#39;session.use_cookies&#39;,1);//session的寿命//ini_set(&#39;session.gc_maxlifetime&#39;,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);//ini_set(&#39;session.cookie_lifetime&#39;,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);//ini_set(&#39;session.save_handler&#39;,&#39;files&#39;);//ini_set(&#39;session.save_path&#39;,Run.&#39;_tmp&#39;);//ini_set(&#39;session.save_handler&#39;,&#39;memcache&#39;);//ini_set(&#39;session.save_path&#39;,&#39;tcp://127.0.0.1:11211&#39;);//$_ENV[&#39;S_tim&#39;] = ini_get(&#39;session.gc_maxlifetime&#39;);//建立memcache对象$_ENV[&#39;S_mem&#39;]=new Memcache;$_ENV[&#39;S_mem&#39;]-&amp;gt;connect($_ENV[&#39;SYS&#39;][&#39;Memip&#39;],$_ENV[&#39;SYS&#39;][&#39;Mempt&#39;]) or die(&#39;Memcache连接失败!&#39;);return TRUE;}/**读取返回:读到的内容/**/public static function read($id){return $_ENV[&#39;S_mem&#39;]-&amp;gt;get(&#39;s_&#39;.$id);}/**写入返回:bool/**/public static function write($id,$data){return $_ENV[&#39;S_mem&#39;]-&amp;gt;set(&#39;s_&#39;.$id,$data,MEMCACHE_COMPRESSED,$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);}/**关闭返回:bool/**/public static function close(){$_ENV[&#39;S_mem&#39;]-&amp;gt;close();unset($_ENV[&#39;S_mem&#39;],$_ENV[&#39;SYS&#39;][&#39;Memtim&#39;]);return TRUE;}/**删除返回:bool/**/public static function destroy($id){return $_ENV[&#39;S_mem&#39;]-&amp;gt;delete(&#39;s_&#39;.</description>
+    </item>
+    
+    <item>
+      <title>PHP清除html格式</title>
+      <link>https://phpgao.github.io/html_tag_clear.html</link>
+      <pubDate>Sun, 18 May 2014 10:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/html_tag_clear.html</guid>
+      <description>做采集的都知道，一般采集过来的内容难免会带有html标签，如果有太多的标签会影响之后的数据分析或提取，所以需要过滤掉！PHP已经为我们提供了很多清除html格式的方法了，下面就让老高介绍一下。
+strip_tags strip_tags($str) 去掉 HTML 及 PHP 的标记 语法: string strip_tags(string str); 传回值: 字串 函式种类: 资料处理 内容说明 : 解析：本函式可去掉字串中包含的任何 HTML 及 PHP 的标记字串。若是字串的 HTML 及 PHP 标签原来就有错，例如少了大于的符号，则也会传回错误。这个函数和 fgetss() 有着相同的功能
+例子
+echo strip_tags(&amp;#34;Hello &amp;lt;b&amp;gt;world!&amp;lt;/b&amp;gt;&amp;#34;); # Hello world! htmlspecialchars 这个函数把html中的标签转换为html实体，博客的代码展示就必须使用这个函数，要不贴出来的代码就会被执行了。 预定义的字符是： &amp;amp; （和号） 成为 &amp;amp; ” （双引号） 成为 ” ‘ （单引号） 成为 ‘ &amp;lt; （小于） 成为 &amp;lt; &amp;gt; （大于） 成为 &amp;gt;
+例子
+$new = htmlspecialchars(&amp;#34;&amp;lt;a href=&amp;#39;test&amp;#39;&amp;gt;Test&amp;lt;/a&amp;gt;&amp;#34;, ENT_QUOTES); echo $new; # &amp;amp;lt;a href=&amp;amp;#039;test&amp;amp;#039;&amp;amp;gt;Test&amp;amp;lt;/a&amp;amp;gt; # 如果需要展现&amp;lt;br&amp;gt;，那么浏览器解析HTML的时候会自动将他变为换行 # 但是通过htmlspecialchars就可以让&amp;lt; 变为 &amp;amp;#039;  与htmlspecialchars功能相反的函数是htmlspecialchars_decode，他会把HTML实体转化为字符！</description>
+    </item>
+    
+    <item>
+      <title>PHP方法总结</title>
+      <link>https://phpgao.github.io/php.html</link>
+      <pubDate>Thu, 10 Apr 2014 15:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php.html</guid>
+      <description>编程时间长了，大家见过很多函数功能吧，比如获取用户IP等等，现在我将常用的PHP函数做个总结，方便大家COPY和使用。
+&amp;lt;?php//获取用户IPfunction getIp(){$ip = &amp;quot;&amp;quot;;if (getenv(&#39;HTTP_CLIENT_IP&#39;) &amp;amp;&amp;amp; strcasecmp(getenv(&#39;HTTP_CLIENT_IP&#39;), &#39;unknow&#39;)) {$ip = getenv(&#39;HTTP_CLIENT_IP&#39;);} elseif (getenv(&#39;REMOTE_ADD&#39;) &amp;amp;&amp;amp; strcasecmp(getenv(&#39;REMOTE_ADD&#39;), &#39;unknow&#39;)) {$ip = getenv(&#39;REMOTE_ADD&#39;);} elseif (isset($_SERVER[&#39;REMOTE_ADDR&#39;]) &amp;amp;&amp;amp; strcasecmp($_SERVER[&#39;REMOTE_ADDR&#39;], &#39;unknow&#39;)) {$ip = $_SERVER[&#39;REMOTE_ADDR&#39;];}return $ip;}//快速替换字符串//$arrayName = array(&#39;h&#39;=&amp;gt;&#39;s&#39;,&#39;o&#39;=&amp;gt;&#39;t&#39;,&#39;l&#39;=&amp;gt;&#39;xx&#39;);//echo strsReplace(&#39;hello&#39;,$arrayName);function strsReplace($str, $replaces){$subject=$str;foreach ($replaces as $k =&amp;gt; $v)$subject = str_replace($k, $v, $subject);return $subject;}//规范文件名//$filename=&#39;&amp;quot;&amp;lt;&amp;gt;/\\\asda/.,psd|&amp;quot;&#39;;//echo tripFilename($filename);function tripFilename($filename){//$s=array(&amp;quot;/&amp;quot;,&amp;quot;\\&amp;quot;,&amp;quot;?</description>
+    </item>
+    
+    <item>
+      <title>PHP教程</title>
+      <link>https://phpgao.github.io/php_lessons_online.html</link>
+      <pubDate>Thu, 13 Mar 2014 15:12:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_lessons_online.html</guid>
+      <description>最近在线教程如雨后春笋，现在我把我看过的PHP教程分享给大家
+韩顺平 PHP入门到精通
+燕十八 PHP高手之路
+参考文档 链接: http://pan.baidu.com/s/1kTgcxHP
+密码: x00l</description>
+    </item>
+    
+    <item>
+      <title>使用debug_backtrace()做PHP调试</title>
+      <link>https://phpgao.github.io/debug_with_backtrace.html</link>
+      <pubDate>Tue, 11 Mar 2014 15:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/debug_with_backtrace.html</guid>
+      <description>问题？ 今天迁站的时候PHP突然报错：  is_readable() [function.is-readable]: open_basedir restriction in effect. File(D:\phpnow\vhosts\wordpress.com/wp-content/plugins/D:\phpnow\vhosts\wordpress.com\wp-content\plugins\crayon-syntax-highlighter/trans/crayon-syntax-highlighter-zh_CN.mo) is not within the allowed path(s): (D:\phpnow\vhosts\wordpress.com;C:\Windows\Temp;) in D:\phpnow\vhosts\wordpress.com\wp-includes\l10n.php on line 339 好吧，看来是crayon-syntax-highlighter插件出错了，下面我们就一起找找出错的地方吧。
+ 如何解决 确定出错地点 根据出错提示我们找到了 D:\phpnow\vhosts\wordpress.com\wp-includes\l10n.php的第339行，代码如下：
+if ( !is_readable( $mofile ) ) return false; 这个$mofile哪里来的呢?把整个函数贴出来找找看！
+function load_textdomain( $domain, $mofile ) {global $l10n;$plugin_override = apply_filters( &#39;override_load_textdomain&#39;, false, $domain, $mofile );if ( true == $plugin_override ) {return true;}do_action( &#39;load_textdomain&#39;, $domain, $mofile );$mofile = apply_filters( &#39;load_textdomain_mofile&#39;, $mofile, $domain );if ( !</description>
+    </item>
+    
+    <item>
+      <title>PHP经典函数收集</title>
+      <link>https://phpgao.github.io/php_functions.html</link>
+      <pubDate>Mon, 10 Mar 2014 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_functions.html</guid>
+      <description>PHP经典函数 sys_getloadavg() 这个函数返回当前系统的负载均值信息（当然 Windows 下不适用），详细文档可以翻阅 PHP的相关文档。文档中有段示例代码，基本上也就能看出它的用途了。
+$load = sys_getloadavg();if ($load[0] &amp;gt; 80) {header(&#39;HTTP/1.1 503 Too busy, try again later&#39;);die(&#39;Server too busy. Please try again later.&#39;);}//PS，如果“很不幸”你的 PHP 环境中没有这个函数，可以考虑使用下面这段代码if (!function_exists(&#39;sys_getloadavg&#39;)) {function sys_getloadavg(){$loadavg_file = &#39;/proc/loadavg&#39;;if (file_exists($loadavg_file)) {return explode(chr(32),file_get_contents($loadavg_file));}return array(0,0,0);}} debug_backtrace兄弟 使用请参考使用debug_backtrace()做PHP调试
+get_browser() 该方法参考一个名叫browscap.ini的文件，该文件收录了各种浏览器信息，通过比对实现查找客户浏览器的功能。 两个使用方法：
+1.下载最新的browscap.ini,放入PHP的安装目录或者C:\Windows文件夹下
+下载地址
+2.在PHP.INI文件中加入以下配置
+[browscap];https://blog.phpgao.com/classic_code/browscap = php_browscap.ini 3.使用代码如下
+http://www.phpgao.com&amp;lt;/a&amp;gt;print_r($browser); 返回结果如下</description>
+    </item>
+    
+    <item>
+      <title>PHP_cURL初始化和执行方法</title>
+      <link>https://phpgao.github.io/curl_init.html</link>
+      <pubDate>Sun, 02 Mar 2014 14:27:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/curl_init.html</guid>
+      <description>这个是采集基础，最好熟悉一下
+$ch = curl_init(); # 设定url和把结果返回，是否返回头部 curl_setopt($ch, CURLOPT_URL, &amp;#39;http://www.baidu.com/&amp;#39;); curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1); curl_setopt($this-&amp;gt;ch, CURLOPT_HEADER, 1); # cookie文件设定 curl_setopt($this-&amp;gt;ch, CURLOPT_COOKIEJAR, $cookie_file); curl_setopt($this-&amp;gt;ch, CURLOPT_COOKIEFILE, $cookie_file); # 额外头部 curl_setopt($this-&amp;gt;ch, CURLOPT_HTTPHEADER, array(&amp;#39;User-Agent: Mozilla/5.0&amp;#39;)); # 设定post curl_setopt($ch, CURLOPT_POST, 1); curl_setopt($ch, CURLOPT_POSTFIELDS, $poststring); # 连接、执行过期时间 curl_setopt($this-&amp;gt;ch, CURLOPT_CONNECTTIMEOUT, 5); curl_setopt($this-&amp;gt;ch, CURLOPT_TIMEOUT, 30); # 是否跟随301 302 curl_setopt($this-&amp;gt;ch, CURLOPT_FOLLOWLOCATION, 1); curl_setopt($this-&amp;gt;ch, CURLOPT_MAXREDIRS, 10); # refer curl_setopt($this-&amp;gt;ch, CURLOPT_REFERER, $refer); # http版本和端口重用设置 curl_setopt($this-&amp;gt;ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1); curl_setopt($this-&amp;gt;ch, CURLOPT_FORBID_REUSE, 1); # 支持https curl_setopt($this-&amp;gt;ch, CURLOPT_SSL_VERIFYPEER, 0); curl_setopt($this-&amp;gt;ch, CURLOPT_SSL_VERIFYHOST, 0); # 如果需要进行毫秒超时，需要增加： curl_setopt($this-&amp;gt;ch, CURLOPT_NOSIGNAL, 1); # 执行 $response = curl_exec($ch); if(curl_errno($ch)){ curl_error($ch); exit(); } curl_close($ch); </description>
+    </item>
+    
+  </channel>
+</rss>

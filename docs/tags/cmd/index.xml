@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cmd on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/cmd/</link>
+    <description>Recent content in cmd on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Dec 2014 05:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/cmd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>windows下cmd的替换工具cmder</title>
+      <link>https://phpgao.github.io/cmder.html</link>
+      <pubDate>Wed, 17 Dec 2014 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/cmder.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2014/12/465248068.png&#34; alt=&#34;cmder界面&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

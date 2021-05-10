@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>shadowsocks on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/shadowsocks/</link>
+    <description>Recent content in shadowsocks on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 07 Jun 2018 03:32:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/shadowsocks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>扶墙的原理</title>
+      <link>https://phpgao.github.io/how_to_do_gfw.html</link>
+      <pubDate>Thu, 07 Jun 2018 03:32:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_do_gfw.html</guid>
+      <description>&lt;h2 id=&#34;扶墙的原理&#34;&gt;扶墙的原理&lt;/h2&gt;
+&lt;p&gt;简单的说说翻墙到底怎么翻！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu-系统一键安装-Shadowsocks-和-KCPTUN-加速</title>
+      <link>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun-html.html</link>
+      <pubDate>Wed, 14 Mar 2018 07:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun-html.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;的兄弟篇，基于&lt;strong&gt;Ubuntu 16.04&lt;/strong&gt;编写，兼容性未测试。&lt;/p&gt;
+&lt;p&gt;卸载命令参考&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;里的说明，操作一样。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Centos7-系统一键安装-Shadowsocks-和-KCPTUN-加速</title>
+      <link>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun.html</link>
+      <pubDate>Thu, 03 Aug 2017 04:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/auto_install_shadowsocks_and_kcptun.html</guid>
+      <description>&lt;p&gt;新安装的centos7系统可以使用下面的安装脚本一键安装$$，如果嫌复制粘贴麻烦，可以到&lt;a href=&#34;https://github.com/phpgao/my_scripts/tree/master/code&#34;&gt;脚本地址&lt;/a&gt;下载&lt;/p&gt;
+&lt;h2 id=&#34;安装命令&#34;&gt;安装命令&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sh -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/phpgao/my_scripts/master/code/ss_for_centos.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# 或者&lt;/span&gt;
+
+sudo sh -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/phpgao/my_scripts/master/code/ss_for_centos.sh&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;安装完毕后查看ss配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;cat /etc/ss-config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看kcptun配置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;/etc/kcp-config.json
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;如果想要修改，使用vi命令即可。修改完记得重启服务才能生效！&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;# 重启ss服务
+systemctl restart shadowsocks-server
+
+# 重启kcptun服务
+systemctl restart kcp-server
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>一个ss的安装脚本</title>
+      <link>https://phpgao.github.io/shadowsocks_install_script.html</link>
+      <pubDate>Thu, 09 Mar 2017 07:30:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_install_script.html</guid>
+      <description>&lt;p&gt;这个脚本是写给小白和我用的，可以直接在&lt;strong&gt;centos&lt;/strong&gt;上可以执行，使用方法很简单。&lt;/p&gt;
+&lt;p&gt;更新：&lt;/p&gt;
+&lt;p&gt;这个脚本已经很旧了，请移步&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun.html&#34;&gt;Centos7 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.phpgao.com/auto_install_shadowsocks_and_kcptun-html.html&#34;&gt;Ubuntu 系统一键安装 Shadowsocks 和 KCPTUN 加速&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>老高推荐的VPS---Bandwagon-Host</title>
+      <link>https://phpgao.github.io/bandwagon.html</link>
+      <pubDate>Fri, 09 Dec 2016 06:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/bandwagon.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/1997432409.png&#34; alt=&#34;bandwagon_logo&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;作为老高博客的常客来说，搬瓦工一定再熟悉不过了。这篇文章是从&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;30元一年，打造自己的翻墙VPS&lt;/a&gt;独立出来的。主要是介绍搬瓦工(Bandwagon Host)的购买方式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps.老高的博客目前就稳定运行在bandwagon每年$9.9的服务器上！&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用日本樱花arukas的免费docker服务搭建shadowsocks</title>
+      <link>https://phpgao.github.io/arukas.html</link>
+      <pubDate>Wed, 07 Dec 2016 11:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/arukas.html</guid>
+      <description>&lt;p&gt;这个工具是老高的同事介绍给我的！目前应该是测试阶段，他的有点像国内的Daocloud，操作很简单，老高1min就能搭建完毕，看完本文，你一定也可以！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2017/03/3239870027.png&#34; alt=&#34;sakura&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ps. arukas倒着念不就是Sakura ?，樱花家的IP算是比较优质的了，老高用上海电信ping值在80-90ms。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用ss的多用户模式</title>
+      <link>https://phpgao.github.io/ss-mutil_users.html</link>
+      <pubDate>Fri, 13 Nov 2015 05:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-mutil_users.html</guid>
+      <description>&lt;p&gt;多用户模式是什么？&lt;/p&gt;
+&lt;p&gt;就是使用一个配置文件，存放多个端口+密码的信息，如果你在共享你的ss，那么这个功能将十分实用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用Privoxy将socks5代理转为http代理</title>
+      <link>https://phpgao.github.io/privoxy-shadowsocks.html</link>
+      <pubDate>Fri, 19 Jun 2015 02:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/privoxy-shadowsocks.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/13067004.png&#34; alt=&#34;访问谷歌&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家都知道shadowsocks只提供了SOCKS5的代理，而没有提供http代理，而很多软件仅提供了http代理的支持，比如老高需要使用shell命令行扶墙，或者使用git同步android的源代码，再或者更新android SDK，该怎么办呢？&lt;/p&gt;
+&lt;p&gt;老高在此介绍一个软件&lt;a href=&#34;http://www.privoxy.org&#34;&gt;Privoxy&lt;/a&gt;，它可以作为&lt;strong&gt;代理的代理&lt;/strong&gt;，为我们解决上述问题！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing privacy, modifying web page data and HTTP headers, controlling access, and removing ads and other obnoxious Internet junk. Privoxy has a flexible configuration and can be customized to suit individual needs and tastes. It has application for both stand-alone systems and multi-user networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由介绍看来，privoxy的功能可远远不止http代理这么简单！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>SS公共服务器的基本安全措施</title>
+      <link>https://phpgao.github.io/ss-public-server.html</link>
+      <pubDate>Mon, 08 Jun 2015 08:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss-public-server.html</guid>
+      <description>&lt;p&gt;老高以前免费分享的ss服务器 &lt;a href=&#34;https://blog.phpgao.com/try_shadowsocks_via_qrcode.html&#34;&gt;免费shadowsocks&lt;/a&gt; ，被攻击了。。。后台检测到有大量的垃圾邮件，是我大意了，忘记了给做一些保护措施，赶紧补上。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>shadowsocks相关资源下载</title>
+      <link>https://phpgao.github.io/download_shadowsocks.html</link>
+      <pubDate>Tue, 26 May 2015 05:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/download_shadowsocks.html</guid>
+      <description>&lt;p&gt;鉴于很多同学找不到shadowsocks客户端服务端，老高在此提供最新的下载，如果某软件有更新，请留言提醒！&lt;/p&gt;
+&lt;p&gt;请注意&lt;strong&gt;老高不会对下载的软件负责&lt;/strong&gt;，老高也没有做sha1、md5校验，都是直接下载下来的。。。&lt;/p&gt;
+&lt;p&gt;如果不放心的话，你有绕道的权利！&lt;/p&gt;
+&lt;p&gt;顺便分享几个站&lt;/p&gt;
+&lt;p&gt;直接下载Google Play的APK&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://apps.evozi.com/apk-downloader/&#34;&gt;apk-downloader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;直接下载chrome商店应用&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://chrome-extension-downloader.com/&#34;&gt;chrome-extension-downloader&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;网友 &lt;a href=&#34;http://weibo.com/nocheers&#34;&gt;@disonlee&lt;/a&gt; 提供&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://getchrome.sinaapp.com&#34;&gt;getchrome.sinaapp.com&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>用ss-manyuser和ss-panel搭建shadowsocks分享平台</title>
+      <link>https://phpgao.github.io/share_shadowsocks.html</link>
+      <pubDate>Mon, 18 May 2015 14:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/share_shadowsocks.html</guid>
+      <description>ss-manyuser做前端，ss-panel做后端，运行环境centos6。
+项目地址 感谢以下大神提供源码
+manyuser：
+shadowsocks manyuser branch
+ss-panel:
+ss-panel
+安装 mkdir /data cd /data git clone https://github.com/mengskysama/shadowsocks.git backend git clone https://github.com/orvice/ss-panel.git front 配置 front # 1. 创建数据库，并建立一个本地用户shadowsocks@localhost，并赋予权限 CREATE DATABASE IF NOT EXISTS shadowsocks DEFAULT CHARSET utf8 COLLATE utf8_general_ci; GRANT ALL PRIVILEGES ON shadowsocks.* TO &amp;#39;shadowsocks&amp;#39;@&amp;#39;localhost&amp;#39; IDENTIFIED BY &amp;#39;password&amp;#39;; # 2. 导入sql cd front cat sql/*.sql &amp;gt; merged.sql # 登录mysql mysql&amp;gt;use shadowsocks; mysql&amp;gt;source path/to/merged.sql; # 3. 将数据库配置信息写入lib/config.php 这里要提一下：
+userid=1的用户是管理员，最好把他的端口将50000改为15000，密码是直接md5，可以自己修改。
+passwd字段是ss的连接密码。
+backend # 准备环境 yum -y install python-pip m2crypto pip install cymysql # 2.</description>
+    </item>
+    
+    <item>
+      <title>免费shadowsocks</title>
+      <link>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</link>
+      <pubDate>Wed, 29 Apr 2015 03:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/try_shadowsocks_via_qrcode.html</guid>
+      <description>&lt;p&gt;老高最近搭建了一个小应用，功能是共享老高科学上网的帐号供大家体验，使用方法很简单，使用软件提供的&lt;strong&gt;二维码扫描&lt;/strong&gt; 或者 直接打开 &lt;strong&gt;json版本&lt;/strong&gt;，里面什么密码的都有，地址在文末。&lt;/p&gt;
+&lt;p&gt;客户端下载请移步 &lt;a href=&#34;https://blog.phpgao.com/download_shadowsocks.html&#34;&gt;shadowsocks相关资源下载&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;服务器由&lt;strong&gt;搬瓦工&lt;/strong&gt;提供，地点是&lt;strong&gt;洛杉矶&lt;/strong&gt;，使用的套餐是**$9.9**，搭建方法请参考&lt;a href=&#34;https://blog.phpgao.com/shadowsocks_on_linux.html&#34;&gt;使用shadowsocks轻松扶墙教程&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装shadowsocks-python并启用chacha20加密</title>
+      <link>https://phpgao.github.io/shadowsocks_chacha20.html</link>
+      <pubDate>Mon, 27 Apr 2015 14:29:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_chacha20.html</guid>
+      <description>&lt;p&gt;原版shadowsocks使用python写的，源码在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/shadowsocks/shadowsocks&#34;&gt;https://github.com/shadowsocks/shadowsocks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下面老高写一个如何安装shadowsocks并且开启chacha20加密的方法&lt;/p&gt;
+&lt;p&gt;老高的运行环境&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;centos6 + python2.6&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>shadowsocks一键安装脚本</title>
+      <link>https://phpgao.github.io/ss_onekey_installation.html</link>
+      <pubDate>Fri, 24 Apr 2015 16:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss_onekey_installation.html</guid>
+      <description>&lt;p&gt;摘自&lt;strong&gt;搬瓦工&lt;/strong&gt;后台，脚本简洁明了，请自取。&lt;/p&gt;
+&lt;p&gt;一键安装需求：&lt;/p&gt;
+&lt;p&gt;centos6 + root用户。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之DNS查询失败的排查方法</title>
+      <link>https://phpgao.github.io/xiaomi_router_dns_dump.html</link>
+      <pubDate>Tue, 14 Apr 2015 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_dns_dump.html</guid>
+      <description>&lt;p&gt;想必大家为了科学上网，已经为自己的路由器刷上了openwrt/pandorabox了吧？&lt;/p&gt;
+&lt;p&gt;经过老高的统计，目前关于浏览器访问量最高的是这两篇文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;小米路由器mini折腾之自动翻墙篇&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router_shadowsocks_libev_spec.html&#34;&gt;小米路由器mini折腾之安装shadowsocks-libev-spec(解决DNS污染)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不知道大家是否能够通过两篇文章的学习研究实现了科学上网呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之安装shadowsocks-libev-spec</title>
+      <link>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</link>
+      <pubDate>Sun, 12 Apr 2015 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</guid>
+      <description>&lt;p&gt;DNS污染问题很是让人烦心，小米路由器mini的pandorabox自带了shadowsocks-libev，没有UDP转发功能，在期待下次pandorabox的更新能够自带shadowsocks-libev-spec的时候，我们还可以选择手动安装，下面老高就介绍一下如何安装。&lt;/p&gt;
+&lt;p&gt;你也许能通过以下关键字找到本文：&lt;/p&gt;
+&lt;p&gt;如何安装shadowsocks-libev-spec
+如何配置shadowsocks-libev-spec
+openwrt\pandorabox如何转发UDP
+如果解决DNS污染&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用supervisor托管shadowsocks</title>
+      <link>https://phpgao.github.io/supervisor_shadowsocks.html</link>
+      <pubDate>Tue, 10 Mar 2015 06:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/supervisor_shadowsocks.html</guid>
+      <description>&lt;p&gt;由于shadowsocks在服务器运行可能会不稳定，所以我们将shadowsocks的运行管理任务交给supervisor，这样如果ss挂了，supervisor会帮我们自动将shadowsocks重新启动，保证了ss的稳定性。&lt;/p&gt;
+&lt;p&gt;supervisor是什么我就不多介绍了，老高在此只强调一点，他是由python编写的，官网在此
+&lt;a href=&#34;http://supervisord.org/&#34;&gt;http://supervisord.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文也可作为supervisor的入门文章使用，欢迎大家交流！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之自动翻墙篇</title>
+      <link>https://phpgao.github.io/carzy_router.html</link>
+      <pubDate>Sun, 04 Jan 2015 14:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/carzy_router.html</guid>
+      <description>&lt;p&gt;趁着节假日，终于搞定了路由器的自动翻墙，终于有自己的翻墙路由器了，之后一发而不可收，记录了一些折腾的文章，索引在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router.html&#34;&gt;openwrt路由器折腾教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;附赠 &lt;a href=&#34;https://blog.phpgao.com/slip_across_gfw.html&#34;&gt;翻越功夫网教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自从发现Pandorabox在&lt;code&gt;r355版&lt;/code&gt;在固件中整合了ss，redsocks2和ChinaDNS-C，省下了不少事儿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有同学反应r355-20150114被移除，刚好老高有存货，文中有百度网盘下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本教程同样适用于其他openwrt系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;推荐查看&lt;strong&gt;更好的方案&lt;/strong&gt;一节！&lt;/p&gt;
+&lt;p&gt;你可能根据一下关键词找到此文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pandorabox openwrt 安装redsocks2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻墙路由器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;路由器翻墙教程&lt;/li&gt;
+&lt;li&gt;pandorabox openwrt 路由器翻墙&lt;/li&gt;
+&lt;li&gt;小米路由器翻墙 教程&lt;/li&gt;
+&lt;li&gt;打造自动翻墙的路由器&lt;/li&gt;
+&lt;li&gt;设置路由器翻墙&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS安全之防火墙设置</title>
+      <link>https://phpgao.github.io/vps_iptables.html</link>
+      <pubDate>Mon, 29 Dec 2014 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_iptables.html</guid>
+      <description>&lt;p&gt;iptables是基于内核的防火墙，功能非常强大，iptables内置了filter，nat和mangle三张表。&lt;/p&gt;
+&lt;p&gt;filter负责过滤数据包，包括的规则链有，input，output和forward；&lt;/p&gt;
+&lt;p&gt;nat则涉及到网络地址转换，包括的规则链有，prerouting，postrouting和output；&lt;/p&gt;
+&lt;p&gt;mangle表则主要应用在修改数据包内容上，用来做流量整形的，默认的规则链有：INPUT，OUTPUT，NAT，POSTROUTING，PREROUTING；&lt;/p&gt;
+&lt;p&gt;input匹配目的IP是本机的数据包；
+forward匹配流经本机的数据包；
+prerouting用来修改目的地址用来做DNAT；
+postrouting用来修改源地址用来做SNAT。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>VPS重做系统都需要做什么</title>
+      <link>https://phpgao.github.io/vps_renew.html</link>
+      <pubDate>Thu, 25 Dec 2014 10:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_renew.html</guid>
+      <description>&lt;p&gt;重做系统都快成日常了，看来还是需要整理一下。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30元一年，打造自己的翻墙VPS</title>
+      <link>https://phpgao.github.io/vps.html</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2425396346.png&#34; alt=&#34;SS&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从此告别龟速的goagent，节省下来的时间会让你觉得很值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要自己搭梯子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;答：请看此试验 &amp;mdash;-&amp;gt; &lt;a href=&#34;http://www.hekaiyu.cn/hacker/1527.html&#34;&gt;评测告诉你：那些免费代理悄悄做的龌蹉事儿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;strong&gt;免费的东西是最贵的！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更多性价比VPS请移步 &lt;strong&gt;&lt;a href=&#34;https://blog.phpgao.com/vpses.html&#34;&gt;老高推荐的VPS&lt;/a&gt;&lt;/strong&gt;，希望大家在这里能够找到适合自己的VPS&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用shadowsocks轻松搭建翻墙环境教程</title>
+      <link>https://phpgao.github.io/shadowsocks_on_linux.html</link>
+      <pubDate>Sun, 27 Jul 2014 03:22:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/shadowsocks_on_linux.html</guid>
+      <description>&lt;p&gt;之前大家翻墙可能都会用到免费的goagent代理，但是他速度慢，链接也不稳定，看油管更是无望，更好的解决方案是shadowsocks。&lt;/p&gt;
+&lt;p&gt;shadowsocks是一个著名的轻量级socket代理，基于python编写。&lt;/p&gt;
+&lt;p&gt;如果你有国外的VPS，那么使用shadowsocks搭建一个翻{防屏蔽}墙服务器是一件很轻松的事情！&lt;/p&gt;
+&lt;p&gt;先看看&lt;a href=&#34;http://shadowsocks.org/en/download/clients.html&#34;&gt;shadowsocks覆盖的客户端覆盖了多少系统&lt;/a&gt;，连OpenWRT都支持！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/05/3138848860.jpg&#34; alt=&#34;shadowsocks客户端&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高之前买的$4.99一年的VPS，128MB，用起来妥妥的!现在已经升级至$9.99，512MB内存，运行速度更快，翻{防屏蔽}墙速度更是没话说，如果你感兴趣，可以看看&lt;a href=&#34;https://blog.phpgao.com/vps.html&#34;&gt;VPS购买攻略&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;看完本文，你就能够轻松打造独享的翻{防屏蔽}墙环境！&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;甚至能够将shadowsocks安装到你的路由器中，子网设备自动翻墙&lt;/a&gt;！再也不需要在网上购买shadowsocks的账号了，也不需要在忍受速度巨慢的免费shadowsocks账号了。&lt;/p&gt;
+&lt;p&gt;如果你的VPS是搬瓦工，那么恭喜你！你可以直接在后台一键安装shadowsocks，具体如何操作请参考&lt;a href=&#34;https://blog.phpgao.com/bandwagonhost_vps_panel.html&#34;&gt;使用搬瓦工(bandwagonhost)后台管理VPS&amp;amp;安全设置&lt;/a&gt;中如何一键安装shadowsocks一节，配置完毕后ss就会运行在后台，重启后也会自动运行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;友情提示：有些打包好的ss程序很难保证是否会记录你的服务器信息，所以一定要经常更新服务器端的密码或端口！或者，自己编译一个。。。。。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

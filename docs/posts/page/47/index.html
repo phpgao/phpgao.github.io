@@ -1,0 +1,311 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/posts/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Posts"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/posts/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"}]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a></div><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>记一次centos最小安装</h2></header><section class=entry-content><p>基本流程吧啊，以后可能会更新，以6.5为例：
+下载安装必要文件，比如虚拟机virtualbox,vm等，还有镜像i386或者x86_64的，按需下载吧
+设置虚拟机，开始安装，推荐使用全英文安装，速度和稳定性会好一点
+完毕后网卡不会自动启动，需要手动开启
+vi /etc/sysconfig/network-scripts/ifcfg-eth0
+DEVICE=eth0
+HWADDR=00:0C:29:64:A5:E3
+TYPE=Ethernet
+UUID=ff171f7b-3bc5-465d-a5ba-287e200f6da6
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=dhcp
+然后
+/etc/init.d/network start
+现在看看ifconfig里有没有IP信息
+有了IP就能上网了，下面就是各种yum了，有兴趣的TX可以执行一下这个优化脚本</p></section><footer class=entry-footer>May 28, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 记一次centos最小安装" href=https://phpgao.github.io/centos_minimal.html></a></article><article class=post-entry><header class=entry-header><h2>内存常识</h2></header><section class=entry-content><p>逛淘宝店的时候看到的，记一下
+内存有SD DDR和DDR2 DDR3之分，4种内存不能混用，拍前请确定自己的机器是用的什么内存，如果不能确定，可以用CPU-Z或者EVEREST这个软件检测一下！
+打开软件后看”SPD”选项的”最大带宽”一栏!
+SD类型
+PC-100是 SD 100
+PC-133是 SD 133
+DDR1类型
+PC-2100是DDR-266内存!
+PC-2700是DDR-333内存!
+PC-3200是DDR-400内存!
+DDR2类型
+PC2-3200是DDR2-400内存!不要和DDR1的弄混了！
+PC2-4200(有时可能是PC2-4300)是DDR2-533内存!
+PC2-5300是DDR2-667内存！
+PC2-6400是DDR2-800内存！
+DDR3类型
+PC3-8500是DDR3-1066内存！
+PC3-10600是DDR3-1333内存！
+以下是3代游戏版本和高频率：
+PC3-12800是DDR3-1600内存！
+PC3-15000是DDR3-1866内存！
+PC3-16000是DDR3-2000内存！
+如果不会查看请直接百度搜索CPU-Z下载，下载1.49版本以上的，解压缩运行CPU-Z，查看SPD项即可知道自己内存的信息，然后根据自己所需要的购买！</p></section><footer class=entry-footer>May 28, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 内存常识" href=https://phpgao.github.io/memory_bank.html></a></article><article class=post-entry><header class=entry-header><h2>linux-ip限制的两种设置方式</h2></header><section class=entry-content><p>经常网络被攻击，最有效的方式就是在linux操作系统上直接限制ip访问，主要有两种方式设置
+1.使用hosts.allow和hosts.deny来设置ip白名单和黑名单，/etc/目录下
+优先级为先检查hosts.deny，再检查hosts.allow， 后者设定可越过前者限制， 例如： a.限制所有的ssh， 除非从218.64.87.0 - 127上来。 hosts.deny: in.sshd:ALL hosts.allow: in.sshd:218.64.87.0/255.255.255.128
+b.封掉218.64.87.0 - 127的telnet hosts.deny in.sshd:218.64.87.0/255.255.255.128
+c.限制所有人的TCP连接，除非从218.64.87.0 - 127访问 hosts.deny ALL:ALL hosts.allow ALL:218.64.87.0/255.255.255.128
+d.限制218.64.87.0 - 127对所有服务的访问 hosts.deny ALL:218.64.87.0/255.255.255.128
+其中冒号前面是TCP daemon的服务进程名称，通常系统 进程在/etc/inetd.conf中指定，比如in.ftpd，in.telnetd，in.sshd 其中IP地址范围的写法有若干中，主要的三种是： 1.网络地址--子网掩码方式： 218.64.87.0/255.255.255.0
+2.网络地址方式（我自己这样叫，呵呵） 218.64.（即以218.64打头的IP地址） 3.缩略子网掩码方式，既数一数二进制子网掩码前面有多少个“1”比如： 218.64.87.0/255.255.255.0 -- 218.64.87.0/24
+设置好后，要重新启动
+# /etc/rc.d/init.d/xinetd restart
+# /etc/rc.d/init.d/network restart
+2.使用iptables命令
+单个IP的命令是
+iptables -I INPUT -s 80.241.219.171 -j DROP
+封IP段的命令是
+iptables -I INPUT -s 96.47.225.0/16 -j DROP
+iptables -I INPUT -s 96....</p></section><footer class=entry-footer>May 27, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to linux-ip限制的两种设置方式" href=https://phpgao.github.io/linux_ip.html></a></article><article class=post-entry><header class=entry-header><h2>http_build_query妙用</h2></header><section class=entry-content><p>http_build_query这个函数可以很方便的构造一个请求所需要的参数。(不分GET,POST)
+这个函数可以把一个数组转化为一串字符
+栗子1：
+&lt;?php
+$data = array('foo'=>'bar',
+'baz'=>'boom',
+'cow'=>'milk',
+'php'=>'hypertext processor');
+//第二个参数是分割使用的符号
+echo http_build_query($data) . "\n";
+echo http_build_query($data, '', '&amp;amp;');
+# foo=bar&baz=boom&cow=milk&php=hypertext+processor
+# foo=bar&amp;amp;baz=boom&amp;amp;cow=milk&amp;amp;php=hypertext+processor
+?>
+栗子二：
+&lt;?php
+$data = array('user'=>array('name'=>'Bob Smith',
+'age'=>47,
+'sex'=>'M',
+'dob'=>'5/12/1956'),
+'pastimes'=>array('golf', 'opera', 'poker', 'rap'),
+'children'=>array('bobby'=>array('age'=>12,
+'sex'=>'M'),
+'sally'=>array('age'=>8,
+'sex'=>'F')),
+'CEO');
+//第二个参数，如果数组没有键值，则自动添加键值
+echo http_build_query($data, 'flags_');
+?>
+输出：
+user%5Bname%5D=Bob+Smith&user%5Bage%5D=47&user%5Bsex%5D=M&user%5Bdob%5D=5%2F12%2F1956&pastimes%5B0%5D=golf&pastimes%5B1%5D=opera&pastimes%5B2%5D=poker&pastimes%5B3%5D=rap&children%5Bbobby%5D%5Bage%5D=12&children%5Bbobby%5D%5Bsex%5D=M&children%5Bsally%5D%5Bage%5D=8&children%5Bsally%5D%5Bsex%5D=F&flags_0=CEO
+把上面的请求传给一个PHP文件处理，打印传递来的参数，会得到以下结果：
+Array
+(
+[_GET] => Array
+(
+[user] => Array
+(
+[name] => Bob Smith
+[age] => 47
+[sex] => M
+[dob] => 5/12/1956
+)
+[pastimes] => Array
+(
+[0] => golf
+[1] => opera
+[2] => poker
+[3] => rap
+)
+[children] => Array
+(
+[bobby] => Array
+(
+[age] => 12
+[sex] => M
+)
+[sally] => Array
+(
+[age] => 8
+[sex] => F
+)
+)
+[flags_0] => CEO
+)
+[_POST] => Array
+(
+)
+[_COOKIE] => Array
+(
+[PHPSESSID] => 5u7l53inhrl5j1ojmn65ok4k44
+)
+[_FILES] => Array
+(
+)
+[GLOBALS] => Array
+*RECURSION*
+)
+很神奇吧！...</p></section><footer class=entry-footer>May 21, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to http_build_query妙用" href=https://phpgao.github.io/http_build_query.html></a></article><article class=post-entry><header class=entry-header><h2>PHP缓冲研究</h2></header><section class=entry-content><p>输出缓冲是个让人头大的问题，因为它不仅牵扯到web语言本身，浏览器自身的原因也会导致无内容输出。
+所以，在输出前保险的做法是先输出4096个空白字符，然后再使用缓冲输出内容，这样就可以实现程序随时输出内容啦！
+以下代码chrome，FF，IE，Safari，手机chrome，UCWEB 都测试通过，需要注意的是：
+在网页最开始一定要输出足够多的字符来骗过浏览器 ob_flush,flush需要一起使用
+&lt;?php
+//以下几个函数作用于PHP及服务器的设置，一般不需要更改
+/*
+@apache_setenv('no-gzip', 1);
+@ini_set('zlib.output_compression', 0);
+@ini_set('implicit_flush', 1); //==ob_implicit_flush(1);
+*/
+//检测是否开启缓冲
+if (ob_get_level() == 0) ob_start();
+//这里的数字可变 FF:1024 CHROME:0 IE:4096
+echo str_repeat(' ' ,4096);
+//echo str_pad('',4096)."\n";
+for ($i = 1; $i&lt;=10; $i++){
+echo "Line $i&lt;br>";
+//ob_end_clean(); //如果再此打开，flush将会报错，因为清空了缓冲区
+//echo ' length: '.ob_get_length();
+ob_flush();
+flush();
+sleep(1);
+}
+echo "Done.";
+/*
+ob_end_flush(); //送出输出缓冲区内容并关闭缓冲
+ob_get_clean(); //得到当前缓冲区的内容并删除当前输出缓。
+ob_get_contents(); //只是得到输出缓冲区的内容，但不清除它。
+ob_implicit_flush(1); //将打开或关闭绝对（隐式）刷送。绝对（隐式）刷送将导致在每次输出调用后有一次刷送操作，以便不再需要对 flush() 的显式调用。
+*/
+/*
+刷新PHP程序的缓冲，而不论PHP执行在何种情况下（CGI ，web服务器等等）。该函数将当前为止程序的所有输出发送到用户的浏览器。flush() 函数不会对服务器或客户端浏览器的缓存模式产生影响。因此，必须同时使用 ob_flush() 和flush() 函数来刷新输出缓冲。个别web服务器程序，特别是Win32下的web服务器程序，在发送结果到浏览器之前，仍然会缓存脚本的输出，直到程序结束为止。有些Apache的模块，比如mod_gzip，可能自己进行输出缓存，这将导致flush()函数产生的结果不会立即被发送到客户端浏览器。甚至浏览器也会在显示之前，缓存接收到的内容。例如 Netscape 浏览器会在接受到换行或 html 标记的开头之前缓存内容，并且在接受到 &lt;/table> 标记之前，不会显示出整个表格。一些版本的 Microsoft Internet Explorer 只有当接受到的256个字节以后才开始显示该页面，所以必须发送一些额外的空格来让这些浏览器显示页面内容。
+*/
+以下转自http://www....</p></section><footer class=entry-footer>May 21, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP缓冲研究" href=https://phpgao.github.io/php_buffering.html></a></article><article class=post-entry><header class=entry-header><h2>使用PHP的CURL模拟POST采集</h2></header><section class=entry-content><p>这个函数很不错，curl函数中的header还可以加入随机UA等功能防屏蔽，以后改改做自己的采集类！
+/**
+QQ群:223494678
+函数:模拟post得到所有分页的页面信息
+参数:
+string $EVENTARGUMENT
+string $VIEWSTATE
+string $EVENTVALIDATION
+string $EVENTTARGET
+返回:
+string
+/**/
+function getn($EVENTARGUMENT = "", $VIEWSTATE = "", $EVENTVALIDATION = "", $EVENTTARGET = "pager"){
+$args = array();
+if($EVENTARGUMENT){
+$args = array(
+'__EVENTTARGET'=>$EVENTTARGET,
+'__EVENTARGUMENT'=>$EVENTARGUMENT,
+'__VIEWSTATE'=>$VIEWSTATE,
+'__EVENTVALIDATION'=>$EVENTVALIDATION,
+'__VIEWSTATEENCRYPTED'=>'',
+'search$txtFundName='=>'',
+'search$txtFundManger'=>'',
+'search$ddlFoundationDateOperater'=>'1',
+'search$txtFoundationDate'=>'',
+'search$dltFundType$ctl01$chkFundType'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$0'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$1'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$2'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$3'=>'on',
+'search$dltFundType$ctl01$chklFundChildType$4'=>'on',
+'search$chklFundStatus$0'=>'on',
+'search$ddlFundOrg'=>'0',
+'search$txtFundOrgName'=>'',
+'search$ddlStatisticDateOperater'=>'1',
+'search$txtStatisticDate'=>'',
+'search$radlStatisticMode'=>'1'
+);
+}
+$user_agent = "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.79 Safari/535....</p></section><footer class=entry-footer>May 19, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 使用PHP的CURL模拟POST采集" href=https://phpgao.github.io/curl_post.html></a></article><article class=post-entry><header class=entry-header><h2>PHP之负载均衡下的session共用(Memcache实现)</h2></header><section class=entry-content><p>转自http://www.cnblogs.com/see7di/p/3560329.html
+此代码片段的功能是在做均衡负载的时候将session的维护工作交给Memcached，这样不仅性能上来了，session不同步的问题也解决了！
+但是要求做Memcache的计算机内存要足够大！
+$_ENV=array(
+'SYS'=>array(
+'Memip'=>'127.0.0.1', //MEMCACHE的ip
+'Mempt'=>11211, //MEMCACHE的port
+'Memtim'=>10, //MEMCACHE的超时时间
+)
+);
+//托管SESSION到MEMCACHE,如果开启失败,则说明MEMCACHE没有配置正确
+final class S{
+public static function open(){
+//禁止session自动开启
+session_write_close();
+ini_set('session.auto_start',0);
+//使用五十分之一的概率启动GC清理会话
+ini_set('session.gc_probability',1);
+ini_set('session.gc_divisor',50);
+ini_set('session.use_cookies',1);
+//session的寿命
+//ini_set('session.gc_maxlifetime',$_ENV['SYS']['Memtim']);
+//ini_set('session.cookie_lifetime',$_ENV['SYS']['Memtim']);
+//ini_set('session.save_handler','files');
+//ini_set('session.save_path',Run.'_tmp');
+//ini_set('session.save_handler','memcache');
+//ini_set('session.save_path','tcp://127.0.0.1:11211');
+//$_ENV['S_tim'] = ini_get('session.gc_maxlifetime');
+//建立memcache对象
+$_ENV['S_mem']=new Memcache;
+$_ENV['S_mem']->connect($_ENV['SYS']['Memip'],$_ENV['SYS']['Mempt']) or die('Memcache连接失败!');
+return TRUE;
+}
+/**
+读取
+返回:读到的内容
+/**/
+public static function read($id){
+return $_ENV['S_mem']->get('s_'.$id);
+}
+/**
+写入
+返回:bool
+/**/
+public static function write($id,$data){
+return $_ENV['S_mem']->set('s_'.$id,$data,MEMCACHE_COMPRESSED,$_ENV['SYS']['Memtim']);
+}
+/**
+关闭
+返回:bool
+/**/
+public static function close(){
+$_ENV['S_mem']->close();
+unset($_ENV['S_mem'],$_ENV['SYS']['Memtim']);
+return TRUE;
+}
+/**
+删除
+返回:bool
+/**/
+public static function destroy($id){
+return $_ENV['S_mem']->delete('s_'....</p></section><footer class=entry-footer>May 19, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP之负载均衡下的session共用(Memcache实现)" href=https://phpgao.github.io/memcache_session.html></a></article><article class=post-entry><header class=entry-header><h2>PHP清除html格式</h2></header><section class=entry-content><p>做采集的都知道，一般采集过来的内容难免会带有html标签，如果有太多的标签会影响之后的数据分析或提取，所以需要过滤掉！PHP已经为我们提供了很多清除html格式的方法了，下面就让老高介绍一下。
+strip_tags strip_tags($str) 去掉 HTML 及 PHP 的标记 语法: string strip_tags(string str); 传回值: 字串 函式种类: 资料处理 内容说明 : 解析：本函式可去掉字串中包含的任何 HTML 及 PHP 的标记字串。若是字串的 HTML 及 PHP 标签原来就有错，例如少了大于的符号，则也会传回错误。这个函数和 fgetss() 有着相同的功能
+例子
+echo strip_tags("Hello &lt;b>world!&lt;/b>"); # Hello world! htmlspecialchars 这个函数把html中的标签转换为html实体，博客的代码展示就必须使用这个函数，要不贴出来的代码就会被执行了。 预定义的字符是： & （和号） 成为 & ” （双引号） 成为 ” ‘ （单引号） 成为 ‘ &lt; （小于） 成为 &lt; > （大于） 成为 >
+例子
+$new = htmlspecialchars("&lt;a href='test'>Test&lt;/a>", ENT_QUOTES); echo $new; # &amp;lt;a href=&amp;#039;test&amp;#039;&amp;gt;Test&amp;lt;/a&amp;gt; # 如果需要展现&lt;br>，那么浏览器解析HTML的时候会自动将他变为换行 # 但是通过htmlspecialchars就可以让&lt; 变为 &amp;#039; 与htmlspecialchars功能相反的函数是htmlspecialchars_decode，他会把HTML实体转化为字符！...</p></section><footer class=entry-footer>May 18, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to PHP清除html格式" href=https://phpgao.github.io/html_tag_clear.html></a></article><article class=post-entry><header class=entry-header><h2>通过微博的mid获取微博的URL</h2></header><section class=entry-content><p>代码网上参考的，一共有两种，自己优化了一下：
+1.离线方法
+参考：http://www.iganlei.cn/demo/186.html
+&lt;?php
+function int10to62($int10)
+{
+static $str62keys;
+$str62keys = array("0","1","2","3","4","5","6","7","8","9","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z");
+$s62 = '';
+$r = 0;
+while ($int10 != 0) {
+$r = $int10 % 62;
+$s62 = $str62keys[$r] . $s62;
+$int10 = floor($int10 / 62);
+}
+return $s62;
+}
+function getCodeByMid($mid)
+{
+$url = '';
+for ($i = strlen($mid) - 7; $i > -7; $i -= 7) //从最后往前以7字节为一组读取mid
+{
+$offset1 = $i &lt; 0 ? 0 : $i;
+$offset2 = $i + 7;
+$num = substr($mid, $offset1, $offset2 - $offset1);
+$num = int10to62($num);
+$url = $num ....</p></section><footer class=entry-footer>May 16, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 通过微博的mid获取微博的URL" href=https://phpgao.github.io/mid_weibo_url.html></a></article><article class=post-entry><header class=entry-header><h2>数据库持久连接</h2></header><section class=entry-content><p>搜PHP长链接把这个搜出来了，2006年的帖子比较久远了，希望对你有帮助！
+转自http://bbs.phpchina.com/forum.php?mod=viewthread&tid=4577&page=1 中forest的回帖：
+永久的数据库连接是指在脚本结束运行时不关闭的连接。当收到一个永久连接的请求时。PHP 将检查是否已经存在一个（前面已经开启的）相同的永久连接。如果存在，将直接使用这个连接；如果不存在，则建立一个新的连接。所谓“相同”的连接是指用相同的用户名和密码到相同主机的连接。
+对 web 服务器的工作和分布负载没有完全理解的读者可能会错误地理解永久连接的作用。特别的，永久连接不会在相同的连接上提供建立“用户会话”的能力，也不提供有效建立事务的能力。实际上，从严格意义上来讲，永久连接不会提供任何非永久连接无法提供的特殊功能。
+为什么？
+这和 web 服务器工作的方式有关。web 服务器可以用三种方法来利用 PHP 生成 web 页面。
+第一种方法是将 PHP 用作一个“外壳”。以这种方法运行，PHP 会为向 web 服务器提出的每个 PHP 页面请求生成并结束一个 PHP 解释器线程。由于该线程会随每个请求的结束而结束，因此任何在这个线程中利用的任何资源（例如指向 SQL 数据库服务器的连接）都会随线程的结束而关闭。在这种情况下，使用永久连接不会获得任何地改变――因为它们根本不是永久的。
+第二，也是最常用的方法，是把 PHP 用作多进程 web 服务器的一个模块，这种方法目前只适用于 Apache。对于一个多进程的服务器，其典型特征是有一个父进程和一组子进程协调运行，其中实际生成 web 页面的是子进程。每当客户端向父进程提出请求时，该请求会被传递给还没有被其它的客户端请求占用的子进程。这也就是说当相同的客户端第二次向服务端提出请求时，它将有可能被一个不同的子进程来处理。在开启了一个永久连接后，所有请求 SQL 服务的后继页面都能够重新使用这个已经建立的 SQL Server 连接。
+最后一种方法是将 PHP 用作多线程 web 服务器的一个插件。目前 PHP 4 已经支持 ISAPI、WSAPI 和 NSAPI（在 Windows 环境下），这些使得 PHP 可以被用作诸如 Netscape FastTrack (iPlanet)、Microsoft’s Internet Information Server (IIS) 和 O’Reilly’s WebSite Pro 等多线程 web 服务器的插件。永久连接的行为和前面所描述的多过程模型在本质上是相同的。注意 PHP 3 不支持 SAPI。...</p></section><footer class=entry-footer>May 16, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 数据库持久连接" href=https://phpgao.github.io/db_pconnect.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/posts/page/46/>« Prev Page</a>
+<a class=next href=https://phpgao.github.io/posts/page/48/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

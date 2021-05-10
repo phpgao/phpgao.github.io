@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>path on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/path/</link>
+    <description>Recent content in path on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Nov 2015 07:01:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/path/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小技巧---在Finder中显示路径</title>
+      <link>https://phpgao.github.io/show_path_in_finder.html</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/show_path_in_finder.html</guid>
+      <description>&lt;p&gt;在默认的Finder中是直接看不到路径的，除非你把某个文件拖到终端里。。。&lt;/p&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/536081178.png&#34; alt=&#34;Finder&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;如何解决呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>dede栏目路径自动生成</title>
+      <link>https://phpgao.github.io/dede_catalog.html</link>
+      <pubDate>Sat, 29 Mar 2014 15:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/dede_catalog.html</guid>
+      <description>&lt;p&gt;抽空写了个这。。。虽然很头大，但是还是写完了。 下面由我来翻译下面这一大段话，首先，函数使用了PINYIN函数，将栏目名称转化成英文缩写，剩下的工作就是拼接和查询了，其实原理很简单。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

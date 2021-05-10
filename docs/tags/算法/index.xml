@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>算法 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 05 Aug 2018 16:31:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>KMP算法笔记II--------学会计算next数组</title>
+      <link>https://phpgao.github.io/kmp_2_get_next.html</link>
+      <pubDate>Sun, 05 Aug 2018 16:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kmp_2_get_next.html</guid>
+      <description>&lt;p&gt;第一次学习KMP算法走了不少弯路，下面老高按照自己的学习步骤，总结一下KMP算法的要点，如果有错误或者疑问，欢迎指正！&lt;/p&gt;
+&lt;p&gt;老高使用python语言实现算法，实现的语言不重要，重要的是他的思想！(其实老高的C语言早已年久失修?)&lt;/p&gt;
+&lt;p&gt;本文是系列的第二篇，主要探讨一下KMP算法的思维方式并引出next数组概念。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>KMP算法笔记I-------先学会朴素算法</title>
+      <link>https://phpgao.github.io/kmp_1_the_basic.html</link>
+      <pubDate>Sat, 04 Aug 2018 13:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/kmp_1_the_basic.html</guid>
+      <description>&lt;p&gt;第一次学习KMP算法走了不少弯路，下面老高按照自己的学习步骤，总结一下KMP算法的要点，如果有错误或者疑问，欢迎指正！&lt;/p&gt;
+&lt;p&gt;老高使用python语言实现算法，实现的语言不重要，重要的是他的思想！(其实老高的C语言早已年久失修?)&lt;/p&gt;
+&lt;p&gt;本文是系列的第一篇，学习KMP之前最好了解一下朴素算法的写法，为以后的学习最好铺垫，此为渐进式学习！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>单循环链表</title>
+      <link>https://phpgao.github.io/single_cycle_linked_list.html</link>
+      <pubDate>Thu, 02 Aug 2018 14:34:35 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/single_cycle_linked_list.html</guid>
+      <description>#!/usr/bin/env python3 # coding=utf-8 class Node: def __init__(self, data): self._data = data self._next = None def set_next(self, node): self._next = node def set_data(self, data): self._data = data def get_data(self): return self._data def get_next(self): return self._next class SingleCycleLinkedList: def __init__(self): self.head = Node(None) self.head.set_next(self.head) # 清空/初始化 def clear(self): self.head.set_next(self.head) # 是否为空 def is_empty(self): return self.head.get_next() == self.head # 获取大小 def size(self): count = 0 cur = self.head.get_next() while cur != self.head: count = count + 1 cur = cur.</description>
+    </item>
+    
+  </channel>
+</rss>

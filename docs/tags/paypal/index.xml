@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>paypal on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/paypal/</link>
+    <description>Recent content in paypal on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 28 Jul 2014 09:26:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/paypal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>30元一年，打造自己的翻墙VPS</title>
+      <link>https://phpgao.github.io/vps.html</link>
+      <pubDate>Mon, 28 Jul 2014 09:26:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2425396346.png&#34; alt=&#34;SS&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;从此告别龟速的goagent，节省下来的时间会让你觉得很值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;为什么要自己搭梯子？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;答：请看此试验 &amp;mdash;-&amp;gt; &lt;a href=&#34;http://www.hekaiyu.cn/hacker/1527.html&#34;&gt;评测告诉你：那些免费代理悄悄做的龌蹉事儿&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以：&lt;strong&gt;免费的东西是最贵的！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;更多性价比VPS请移步 &lt;strong&gt;&lt;a href=&#34;https://blog.phpgao.com/vpses.html&#34;&gt;老高推荐的VPS&lt;/a&gt;&lt;/strong&gt;，希望大家在这里能够找到适合自己的VPS&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>merlin on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/merlin/</link>
+    <description>Recent content in merlin on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 26 Dec 2015 14:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/merlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>梅林固件迅雷远程开机自启设置</title>
+      <link>https://phpgao.github.io/merlin_xware_start_on_boot.html</link>
+      <pubDate>Sat, 26 Dec 2015 14:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/merlin_xware_start_on_boot.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/2370665736.png&#34; alt=&#34;merlin_xware_start_on_boot&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

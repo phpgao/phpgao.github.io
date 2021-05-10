@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>simple_html_dom on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/simple_html_dom/</link>
+    <description>Recent content in simple_html_dom on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 May 2015 12:10:37 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/simple_html_dom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>simple_html_dom换行符丢失的问题</title>
+      <link>https://phpgao.github.io/simple_html_dom_miss_n.html</link>
+      <pubDate>Mon, 18 May 2015 12:10:37 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/simple_html_dom_miss_n.html</guid>
+      <description>今天老高在更新**Table Of Contents for typecho**的时候，遇到了一个问题。
+因为解析文档的时候，换行符\n被无故删除掉了，导致pre中code的解析一片混乱，阅读源代码后发现了这个选项stripRN，默认值是true，即默认删除变量中的换行符，将其关闭即可！
+核心代码位于约1147行左右。
+if ($stripRN) { $str = str_replace(&amp;#34;\r&amp;#34;, &amp;#34; &amp;#34;, $str); $str = str_replace(&amp;#34;\n&amp;#34;, &amp;#34; &amp;#34;, $str); ... </description>
+    </item>
+    
+  </channel>
+</rss>

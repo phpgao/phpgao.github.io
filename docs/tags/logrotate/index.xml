@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>logrotate on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/logrotate/</link>
+    <description>Recent content in logrotate on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 14 Oct 2017 15:53:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/logrotate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Logrotate的基本使用方法</title>
+      <link>https://phpgao.github.io/logrotate_conf.html</link>
+      <pubDate>Sat, 14 Oct 2017 15:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/logrotate_conf.html</guid>
+      <description>&lt;p&gt;Linux服务器上我们用Logrotate来分割归档日志文件，结合crond我们可以指定每天在某个时间自动整理日志等文档。本文主要说明了Centos下Logrotate的使用和配置的方法。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

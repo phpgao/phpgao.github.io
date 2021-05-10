@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>301 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/301/</link>
+    <description>Recent content in 301 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 14 Mar 2014 15:15:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/301/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>新思路解决网站301重定向</title>
+      <link>https://phpgao.github.io/301_redirect.html</link>
+      <pubDate>Fri, 14 Mar 2014 15:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/301_redirect.html</guid>
+      <description>对于一个新手站长来说，当你选定了主域名后，首先要做的就是将另一个域名301重定向至主域名，这样有利于增加首页的权重。当然，301重定向技术还有很多用处，但本文主要阐述相同域名间的301跳转。
+什么是301重定向？ 其实很简单，当你的页面需要删除或者移动时，如果只是一个简单的跳转，虽然说在功能上实现了网页的重定向，但是这样做是对搜索引擎很不利的。也就是说，搜索引擎看不懂这样的跳转，他只会认为你的网页内容空了，所以必须要通过一个信号来告诉搜索引擎这个地址确实改变了，这个信号的实现就是3××，即以3开头的HTTP状态码(状态码参见 HTTP状态码详解)。
+测试方法 了解了301重定向后，下面几个网站可以提供301跳转的检测
+ 中文：http://tool.chinaz.com/pagestatus/?url=phpgao.com 英文：http://www.seoconsultants.com/tools/check-server-headers-tool/  实现方法 废话不多说，下面我们探讨一下301重定向的具体实现方法：
+linux主机的301重定向 linux主机非常适合wordpress，因为他有一个强大的**.htaccess**文件，当浏览器或搜索引擎spider发送一个页面请求时，Web服务器就会检查**.htaccess**文件，这个文件指明了如何处理页面请求，通过修改他就可以告知搜索引擎某个页面是302转向(临时跳转)还是301重定向(永久性跳转)。
+下面的例子的作用是将phpgao.com的请求301重定向至www.phpgao.com
+Options +FollowSymLinksRewriteEngine onrewritecond %{http_host} ^phpgao.com$ [nc]rewriterule ^(.*)$ https://blog.phpgao.com/$1 [r=301,nc]或RewriteEngine OnRewriteCond %{HTTP_HOST} !^phpgao.com$ [NC]RewriteRule ^(.*)$ https://blog.phpgao.com/$1 [L,R=301] windows主机的301重定向 windows主机基本使用的都是IIS服务器，所以需要服务器支持ISAPI_Rewrite，他是类似Apache mod_rewrite功能的第三方Rewrite组件，使用httpd.ini为配置文件,一般空间都是支持的，如果是自己的服务器，那么可能需要你自己安装此组件，所需组件可以在http://www.isapirewrite.com/下载，该组件有免费Lite版本以及商业版，免费版只支持全局的httpd.conf 配置，商业版支持用户自定义httpd.ini文件，支持目录和站点级的类似.htaccess的配置，现在最新版本是3.0。例子如下：
+# ISAPI_Rewrite 1.3 版本[ISAPI_Rewrite]# 3600 = 1 hourCacheClockRate 3600RepeatLimit 32RewriteCond Host: ^phpgao\.com$RewriteRule (.*) http\://www\.phpgao\.com$1 [I,R]# ISAPI_Rewrite 2.x 版本[ISAPI_Rewrite]# 3600 = 1 hourCacheClockRate 3600RepeatLimit 32RewriteCond Host: ^phpgao\.</description>
+    </item>
+    
+  </channel>
+</rss>

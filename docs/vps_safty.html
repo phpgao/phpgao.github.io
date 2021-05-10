@@ -1,0 +1,105 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>VPS安全设置 | 老高的技术博客</title><meta name=keywords content="vps,security"><meta name=description content="内容转自 做好VPS的基础安全防护工作
+使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。
+很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。
+直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？
+在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/vps_safty.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="VPS安全设置"><meta property="og:description" content="内容转自 做好VPS的基础安全防护工作
+使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。
+很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。
+直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？
+在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/vps_safty.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-27T02:23:00+00:00"><meta property="article:modified_time" content="2014-07-27T02:23:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="VPS安全设置"><meta name=twitter:description content="内容转自 做好VPS的基础安全防护工作
+使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。
+很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。
+直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？
+在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"VPS安全设置","item":"https://phpgao.github.io/vps_safty.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"VPS安全设置","name":"VPS安全设置","description":"内容转自 做好VPS的基础安全防护工作\n使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。\n很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。\n直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？\n在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。\n","keywords":["vps","security"],"articleBody":"内容转自 做好VPS的基础安全防护工作\n使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。\n很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。\n直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？\n在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。\n添加一个普通用户 参考linux添加用户useradd命令说明，添加一个普通用户。\n比如我在root用户登录的情况下，新增一个laoyi用户：\nuseradd laoyi\rpasswd laoyi\r 就算添加好用户laoyi了，将来你ssh登录系统就可以ssh laoyi@106.187.xxx.xxx登录系统。\nssh公钥私钥 客户端生产ssh公钥私钥，配对连接，可参考http://www.linode.im/1573.html，操作成功以后客户端访问服务器端，将不需要输入密码，这样可以减少暴力破解密码工具的可能性。当然您要将您的私钥保护好。\n在客户端，执行：ssh-keygen，产生公钥密钥，\n将公钥传至服务器端，scp ~/.ssh/id_rsa.pub laoyi@106.187.xx.xx，\n在服务器端，\nmkdir .ssh\rmv id_rsa.pub .ssh/authorized_keys\rchown -R laoyi:laoyi .ssh\rchmod 700 .ssh\rchmod 600 .ssh/authorized_keys\r 修改ssh配置和端口 禁止root管理员直接登录linux服务器。root帐号就是玉皇大帝，掌管着linux服务器的生杀大权，如果一不小心误操作，那后果是很严重的，建议添加个普通的linux用户帐号，如果需要用root帐号的时候，su或者sudo可以获得root的管理员权限。另外更重要的是，现在总有些无聊的人猜密码，如果你的root密码设置的过于简单，那被他人用软件猜出root密码的概率较高，不幸中弹，基本你的linux服务器就毁了。。\nvi /etc/ssh/sshd_config，将端口默认的22改成其他端口；\n将密码认证设置成NO：PasswordAuthentication no；\n同时将root直接登录系统取消：PermitRootLogin no\n重启ssh服务：/etc/init.d/sshd restart\n避免root密码被篡改 chattr +i /etc/passwd; chattr +i /etc/shadow，避免root密码被篡改。\n让系统日志只能增加数据 chattr +a /var/log/messages，让系统日志只能增加数据，而不能删除也不能修改数据。\nmd5校验指纹比对 建立脚本做好重要数据的md5校验指纹比对（初期可不考虑）。\n设置简易iptables防火墙 开启iptables防火墙进行软防。很多vps厂家为了减少成本，比如linode是裸机，本身是没有任何硬件防护的，此时iptables软防就特别重要，建议把不用的端口服务都禁掉。\n看看iptables是否开启，默认防火墙规则都是空的，也就是不管事的。\nChain INPUT (policy ACCEPT)\rtarget prot opt source destination\rChain FORWARD (policy ACCEPT)\rtarget prot opt source destination\rChain OUTPUT (policy ACCEPT)\rtarget prot opt source destination\r 需要我们自己建立防火墙规则：\nvi /etc/iptables.firewall.rules\r*filter\r# Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn’t use lo0\r-A INPUT -i lo -j ACCEPT\r-A INPUT -d 127.0.0.0/8 -j REJECT\r# Accept all established inbound connections\r-A INPUT -m state –state ESTABLISHED,RELATED -j ACCEPT\r# Allow all outbound traffic – you can modify this to only allow certain traffic\r-A OUTPUT -j ACCEPT\r# Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).\r-A INPUT -p tcp –dport 80 -j ACCEPT\r-A INPUT -p tcp –dport 443 -j ACCEPT\r# Allow SSH connections\r#\r# The -dport number should be the same port number you set in sshd_config\r#\r-A INPUT -p tcp -m state –state NEW –dport 22 -j ACCEPT\r# Allow ping\r-A INPUT -p icmp -m icmp –icmp-type 8 -j ACCEPT\r# Log iptables denied calls\r-A INPUT -m limit –limit 5/min -j LOG –log-prefix “iptables denied: ” –log-level 7\r# Reject all other inbound – default deny unless explicitly allowed policy\r-A INPUT -j REJECT\r-A FORWARD -j REJECT\rCOMMIT\r 以上防火墙规则只开启了http（80端口），https（443端口），ssh（22端口），根据您的服务器开启服务情况，请自己修改防火墙规则。\n让防火墙规则生效：iptables-restore 然后再查看防火墙是否生效：iptables -L\nChain INPUT (policy ACCEPT)\rtarget prot opt source destination\rACCEPT all – anywhere anywhere\rREJECT all – anywhere 127.0.0.0/8 reject-with icmp-port-unreachable\rACCEPT all – anywhere anywhere state RELATED,ESTABLISHED\rACCEPT tcp – anywhere anywhere tcp dpt:www\rACCEPT tcp – anywhere anywhere tcp dpt:https\rACCEPT tcp – anywhere anywhere state NEW tcp dpt:ssh\rACCEPT icmp – anywhere anywhere icmp echo-request\rLOG all – anywhere anywhere limit: avg 5/min burst 5 LOG level debug prefix `iptables denied: ‘\rREJECT all – anywhere anywhere reject-with icmp-port-unreachable\rChain FORWARD (policy ACCEPT)\rtarget prot opt source destination\rREJECT all – anywhere anywhere reject-with icmp-port-unreachable\rChain OUTPUT (policy ACCEPT)\rtarget prot opt source destination\rACCEPT all – anywhere anywhere\r 接下来我们需要设置下只要开机防火墙就开启服务：\ncd /usr/local\rmkdir virus\rvi firewall\r#!/bin/sh\r/sbin/iptables-restore  安装配置Fail2Ban Fail2Ban可以阻挡字典攻击您的服务器，当Fail2Ban检测到同一个ip企图攻击您的服务器，他将创建临时的防火墙规则来阻挡这些ip地址，Fail2Ban可以监控SSH，HTTP，SMTP等，默认情况下，Fail2Ban只监控SSH。具体安装Fail2Ban，以及配置，将在下篇专门讲解。\n","wordCount":"410","inLanguage":"en","datePublished":"2014-07-27T02:23:00Z","dateModified":"2014-07-27T02:23:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/vps_safty.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>VPS安全设置</h1><div class=post-meta>July 27, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-07-27_vps_safty.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>内容转自 <a href=http://www.linode.im/1642.html>做好VPS的基础安全防护工作</a></p><p>使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。</p><p>很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。</p><p>直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？</p><p>在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。</p><h2 id=添加一个普通用户>添加一个普通用户<a hidden class=anchor aria-hidden=true href=#添加一个普通用户>#</a></h2><p>参考linux添加用户useradd命令说明，添加一个普通用户。</p><p>比如我在root用户登录的情况下，新增一个laoyi用户：</p><pre><code>useradd laoyi
+
+passwd laoyi
+</code></pre><p>就算添加好用户laoyi了，将来你ssh登录系统就可以ssh <a href=mailto:laoyi@106.187.xxx.xxx>laoyi@106.187.xxx.xxx</a>登录系统。</p><h2 id=ssh公钥私钥>ssh公钥私钥<a hidden class=anchor aria-hidden=true href=#ssh公钥私钥>#</a></h2><p>客户端生产ssh公钥私钥，配对连接，可参考http://www.linode.im/1573.html，操作成功以后客户端访问服务器端，将不需要输入密码，这样可以减少暴力破解密码工具的可能性。当然您要将您的私钥保护好。</p><p>在客户端，执行：ssh-keygen，产生公钥密钥，</p><p>将公钥传至服务器端，<code>scp ~/.ssh/id_rsa.pub laoyi@106.187.xx.xx，</code></p><p>在服务器端，</p><pre><code>mkdir .ssh
+
+mv id_rsa.pub .ssh/authorized_keys
+
+chown -R laoyi:laoyi .ssh
+chmod 700 .ssh
+chmod 600 .ssh/authorized_keys
+</code></pre><h2 id=修改ssh配置和端口>修改ssh配置和端口<a hidden class=anchor aria-hidden=true href=#修改ssh配置和端口>#</a></h2><p>禁止root管理员直接登录linux服务器。root帐号就是玉皇大帝，掌管着linux服务器的生杀大权，如果一不小心误操作，那后果是很严重的，建议添加个普通的linux用户帐号，如果需要用root帐号的时候，su或者sudo可以获得root的管理员权限。另外更重要的是，现在总有些无聊的人猜密码，如果你的root密码设置的过于简单，那被他人用软件猜出root密码的概率较高，不幸中弹，基本你的linux服务器就毁了。。</p><p><code>vi /etc/ssh/sshd_config</code>，将端口默认的22改成其他端口；</p><p>将密码认证设置成NO：PasswordAuthentication no；</p><p>同时将root直接登录系统取消：PermitRootLogin no</p><p>重启ssh服务：<code>/etc/init.d/sshd restart</code></p><h2 id=避免root密码被篡改>避免root密码被篡改<a hidden class=anchor aria-hidden=true href=#避免root密码被篡改>#</a></h2><p><code>chattr +i /etc/passwd; chattr +i /etc/shadow</code>，避免root密码被篡改。</p><h2 id=让系统日志只能增加数据>让系统日志只能增加数据<a hidden class=anchor aria-hidden=true href=#让系统日志只能增加数据>#</a></h2><p><code>chattr +a /var/log/messages</code>，让系统日志只能增加数据，而不能删除也不能修改数据。</p><h2 id=md5校验指纹比对>md5校验指纹比对<a hidden class=anchor aria-hidden=true href=#md5校验指纹比对>#</a></h2><p>建立脚本做好重要数据的md5校验指纹比对（初期可不考虑）。</p><h2 id=设置简易iptables防火墙>设置简易iptables防火墙<a hidden class=anchor aria-hidden=true href=#设置简易iptables防火墙>#</a></h2><p>开启iptables防火墙进行软防。很多vps厂家为了减少成本，比如linode是裸机，本身是没有任何硬件防护的，此时iptables软防就特别重要，建议把不用的端口服务都禁掉。</p><p>看看iptables是否开启，默认防火墙规则都是空的，也就是不管事的。</p><pre><code>Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+</code></pre><p>需要我们自己建立防火墙规则：</p><pre><code>vi /etc/iptables.firewall.rules
+
+*filter
+
+#  Allow all loopback (lo0) traffic and drop all traffic to 127/8 that doesn’t use lo0
+-A INPUT -i lo -j ACCEPT
+-A INPUT -d 127.0.0.0/8 -j REJECT
+
+#  Accept all established inbound connections
+-A INPUT -m state –state ESTABLISHED,RELATED -j ACCEPT
+
+#  Allow all outbound traffic – you can modify this to only allow certain traffic
+-A OUTPUT -j ACCEPT
+
+#  Allow HTTP and HTTPS connections from anywhere (the normal ports for websites and SSL).
+-A INPUT -p tcp –dport 80 -j ACCEPT
+-A INPUT -p tcp –dport 443 -j ACCEPT
+
+#  Allow SSH connections
+#
+#  The -dport number should be the same port number you set in sshd_config
+#
+-A INPUT -p tcp -m state –state NEW –dport 22 -j ACCEPT
+
+#  Allow ping
+-A INPUT -p icmp -m icmp –icmp-type 8 -j ACCEPT
+
+#  Log iptables denied calls
+-A INPUT -m limit –limit 5/min -j LOG –log-prefix “iptables denied: ” –log-level 7
+
+#  Reject all other inbound – default deny unless explicitly allowed policy
+-A INPUT -j REJECT
+-A FORWARD -j REJECT
+
+COMMIT
+</code></pre><p>以上防火墙规则只开启了http（80端口），https（443端口），ssh（22端口），根据您的服务器开启服务情况，请自己修改防火墙规则。</p><p>让防火墙规则生效：<code>iptables-restore &lt; /etc/iptables.firewall.rules</code></p><p>然后再查看防火墙是否生效：<code>iptables -L</code></p><pre><code>Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     all  –  anywhere             anywhere
+REJECT     all  –  anywhere             127.0.0.0/8         reject-with icmp-port-unreachable
+ACCEPT     all  –  anywhere             anywhere            state RELATED,ESTABLISHED
+ACCEPT     tcp  –  anywhere             anywhere            tcp dpt:www
+ACCEPT     tcp  –  anywhere             anywhere            tcp dpt:https
+ACCEPT     tcp  –  anywhere             anywhere            state NEW tcp dpt:ssh
+ACCEPT     icmp –  anywhere             anywhere            icmp echo-request
+LOG        all  –  anywhere             anywhere            limit: avg 5/min burst 5 LOG level debug prefix `iptables denied: ‘
+REJECT     all  –  anywhere             anywhere            reject-with icmp-port-unreachable
+
+Chain FORWARD (policy ACCEPT)
+target     prot opt source               destination
+REJECT     all  –  anywhere             anywhere            reject-with icmp-port-unreachable
+
+Chain OUTPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     all  –  anywhere             anywhere
+</code></pre><p>接下来我们需要设置下只要开机防火墙就开启服务：</p><pre><code>cd /usr/local
+
+mkdir virus
+
+vi firewall
+
+#!/bin/sh
+/sbin/iptables-restore &lt; /etc/iptables.firewall.rules
+
+chmod +x firewall
+
+vi /etc/rc.d/rc.local
+
+/usr/local/virus/firewall
+</code></pre><h2 id=安装配置fail2ban>安装配置Fail2Ban<a hidden class=anchor aria-hidden=true href=#安装配置fail2ban>#</a></h2><p>Fail2Ban可以阻挡字典攻击您的服务器，当Fail2Ban检测到同一个ip企图攻击您的服务器，他将创建临时的防火墙规则来阻挡这些ip地址，Fail2Ban可以监控SSH，HTTP，SMTP等，默认情况下，Fail2Ban只监控SSH。具体安装Fail2Ban，以及配置，将在下篇专门讲解。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/vps/>vps</a></li><li><a href=https://phpgao.github.io/tags/security/>security</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/ctorrent.html><span class=title>« Prev Page</span><br><span>在linux下安装ctorrent下载种子文件</span></a>
+<a class=next href=https://phpgao.github.io/github_blog.html><span class=title>Next Page »</span><br><span>在github写博客</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

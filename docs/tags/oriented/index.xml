@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>oriented on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/oriented/</link>
+    <description>Recent content in oriented on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 10 Jul 2014 07:03:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/oriented/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP面向对象的那些事儿</title>
+      <link>https://phpgao.github.io/php_ob.html</link>
+      <pubDate>Thu, 10 Jul 2014 07:03:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_ob.html</guid>
+      <description>&lt;p&gt;PHP的面向对象在进入5版本后得到了加强，很多好用的特性都得到了支持。下面总结了一些开发时用到的简单的概念，希望对你有帮助&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

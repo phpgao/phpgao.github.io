@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>supervisor on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/supervisor/</link>
+    <description>Recent content in supervisor on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Mar 2015 06:14:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/supervisor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用supervisor托管shadowsocks</title>
+      <link>https://phpgao.github.io/supervisor_shadowsocks.html</link>
+      <pubDate>Tue, 10 Mar 2015 06:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/supervisor_shadowsocks.html</guid>
+      <description>&lt;p&gt;由于shadowsocks在服务器运行可能会不稳定，所以我们将shadowsocks的运行管理任务交给supervisor，这样如果ss挂了，supervisor会帮我们自动将shadowsocks重新启动，保证了ss的稳定性。&lt;/p&gt;
+&lt;p&gt;supervisor是什么我就不多介绍了，老高在此只强调一点，他是由python编写的，官网在此
+&lt;a href=&#34;http://supervisord.org/&#34;&gt;http://supervisord.org/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本文也可作为supervisor的入门文章使用，欢迎大家交流！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

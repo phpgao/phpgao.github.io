@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>login on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/login/</link>
+    <description>Recent content in login on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 17 May 2015 13:15:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/login/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>模拟登录脚本之搬瓦工bandwagonhost</title>
+      <link>https://phpgao.github.io/login_script_for_bandwagonhost.html</link>
+      <pubDate>Sun, 17 May 2015 13:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/login_script_for_bandwagonhost.html</guid>
+      <description>老早写的，都忘了当初想干啥了。。。。
+半成品，留个坑，待填。
+#!/usr/bin/env python # encoding: utf-8 import cookielib import requests def http_send(url, post_data=&amp;#39;&amp;#39;, **kwargs): cookie_handler = cookielib.MozillaCookieJar(&amp;#39;cookie.txt&amp;#39;) try: cookie_handler.load(ignore_discard=1) except cookielib.LoadError, e: print e + &amp;#34;new cookie file&amp;#34; headers = { &amp;#39;User-Agent&amp;#39;: &amp;#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.122 Safari/537.36&amp;#39;} if post_data: req = requests.post(url, data=post_data, cookies=cookie_handler) else: req = requests.get(url) print req.headers for c in req.cookies: cookie_handler.set_cookie(c) cookie_handler.save(ignore_discard=1) return req.content if __name__ == &amp;#39;__main__&amp;#39;: # init cookie print http_send(&amp;#39;http://localhost/clientarea.</description>
+    </item>
+    
+    <item>
+      <title>PHPCMS登陆流程</title>
+      <link>https://phpgao.github.io/phpcms_login.html</link>
+      <pubDate>Wed, 05 Nov 2014 06:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpcms_login.html</guid>
+      <description>  调用phpcms/modules/member/index.php中login。
+  读取caches/configs/system.php中phpsso的配置。
+  调用phpcms/modules/member/classes/client.class.php的_ps_post()发送登录信息。
+  该请求被发送到phpsso_server/phpcms/modules/phpsso/index.php的login方法。
+  phpsso读取数据库配置phpsso_server/caches/configs/database.php，连接数据库，执行登陆逻辑
+  返回登录结果
+  </description>
+    </item>
+    
+  </channel>
+</rss>

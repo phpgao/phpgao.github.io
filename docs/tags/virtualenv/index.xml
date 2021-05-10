@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>virtualenv on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/virtualenv/</link>
+    <description>Recent content in virtualenv on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 11:46:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/virtualenv/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用nginx-&#43;-uWSGI运行flask程序</title>
+      <link>https://phpgao.github.io/nginx_uwsgi_flask.html</link>
+      <pubDate>Mon, 27 Apr 2015 11:46:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/nginx_uwsgi_flask.html</guid>
+      <description>&lt;p&gt;老高最近写了一个&lt;a href=&#34;https://github.com/phpgao/qrcode-for-ss&#34;&gt;flask小应用&lt;/a&gt;，功能很简单，就是通过读取配置再显示ss的二维码配置，不过想让他运行起来统一管理，还是费了一些周折啊。&lt;/p&gt;
+&lt;p&gt;如果你自己Google过，你可能会发现一个关键字uWSGI，他就是本篇的主角。&lt;/p&gt;
+&lt;p&gt;名词解释&lt;/p&gt;
+&lt;p&gt;Web服务器网关接口（Python Web Server Gateway Interface，缩写为WSGI。
+uwsgi与WSGI一样，是一个通信协议。
+uWSGI，一个实现了WSGI，uwsgi，http等协议的服务器，与nginx在一个层次。&lt;/p&gt;
+&lt;p&gt;鉴于国内的一些教程都写成翔了，那老高就赶紧记录分享一下。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

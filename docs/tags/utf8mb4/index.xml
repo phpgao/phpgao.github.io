@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>utf8mb4 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/utf8mb4/</link>
+    <description>Recent content in utf8mb4 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Dec 2016 06:45:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/utf8mb4/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让typecho支持emoji</title>
+      <link>https://phpgao.github.io/typecho_with_emoji.html</link>
+      <pubDate>Wed, 07 Dec 2016 06:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_with_emoji.html</guid>
+      <description>&lt;p&gt;这年头文章里加个emoji很正常吧，但是typecho貌似之前没有考虑到，没有原生支持emoji，但是这怎么能难倒我们勤劳的码农呢！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/12/2007228227.jpg&#34; alt=&#34;doge&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

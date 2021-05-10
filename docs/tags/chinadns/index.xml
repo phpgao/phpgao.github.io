@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>chinadns on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/chinadns/</link>
+    <description>Recent content in chinadns on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 14 Apr 2015 15:05:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/chinadns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小米路由器mini折腾之DNS查询失败的排查方法</title>
+      <link>https://phpgao.github.io/xiaomi_router_dns_dump.html</link>
+      <pubDate>Tue, 14 Apr 2015 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_dns_dump.html</guid>
+      <description>&lt;p&gt;想必大家为了科学上网，已经为自己的路由器刷上了openwrt/pandorabox了吧？&lt;/p&gt;
+&lt;p&gt;经过老高的统计，目前关于浏览器访问量最高的是这两篇文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;小米路由器mini折腾之自动翻墙篇&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router_shadowsocks_libev_spec.html&#34;&gt;小米路由器mini折腾之安装shadowsocks-libev-spec(解决DNS污染)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不知道大家是否能够通过两篇文章的学习研究实现了科学上网呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之自动翻墙篇</title>
+      <link>https://phpgao.github.io/carzy_router.html</link>
+      <pubDate>Sun, 04 Jan 2015 14:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/carzy_router.html</guid>
+      <description>&lt;p&gt;趁着节假日，终于搞定了路由器的自动翻墙，终于有自己的翻墙路由器了，之后一发而不可收，记录了一些折腾的文章，索引在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router.html&#34;&gt;openwrt路由器折腾教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;附赠 &lt;a href=&#34;https://blog.phpgao.com/slip_across_gfw.html&#34;&gt;翻越功夫网教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自从发现Pandorabox在&lt;code&gt;r355版&lt;/code&gt;在固件中整合了ss，redsocks2和ChinaDNS-C，省下了不少事儿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有同学反应r355-20150114被移除，刚好老高有存货，文中有百度网盘下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本教程同样适用于其他openwrt系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;推荐查看&lt;strong&gt;更好的方案&lt;/strong&gt;一节！&lt;/p&gt;
+&lt;p&gt;你可能根据一下关键词找到此文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pandorabox openwrt 安装redsocks2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻墙路由器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;路由器翻墙教程&lt;/li&gt;
+&lt;li&gt;pandorabox openwrt 路由器翻墙&lt;/li&gt;
+&lt;li&gt;小米路由器翻墙 教程&lt;/li&gt;
+&lt;li&gt;打造自动翻墙的路由器&lt;/li&gt;
+&lt;li&gt;设置路由器翻墙&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

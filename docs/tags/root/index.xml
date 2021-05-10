@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>root on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/root/</link>
+    <description>Recent content in root on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 29 Dec 2014 02:58:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/root/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VPS安全之SSH设置</title>
+      <link>https://phpgao.github.io/vps_ssh.html</link>
+      <pubDate>Mon, 29 Dec 2014 02:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vps_ssh.html</guid>
+      <description>&lt;p&gt;SSH是管理VPS的重要途径，所以SSH经常会受到攻击，所以我们需要将SSH&lt;strong&gt;武装&lt;/strong&gt;起来，保护我们VPS的安全。&lt;/p&gt;
+&lt;p&gt;SSH服务的配置文件位于&lt;code&gt;/etc/ssh/sshd_config&lt;/code&gt;，我们的安全设置都是围绕此文件展开，所以修改前最好先备份一次，以免出现无法登陆的情况。&lt;/p&gt;
+&lt;p&gt;修改完不要忘了执行&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;service sshd restart
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>copy on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/copy/</link>
+    <description>Recent content in copy on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Mar 2014 14:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/copy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>网站无法选择和复制文字</title>
+      <link>https://phpgao.github.io/rightclick-enable.html</link>
+      <pubDate>Fri, 07 Mar 2014 14:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/rightclick-enable.html</guid>
+      <description>有些网站真是可恶，把右键屏蔽了不给复制，这样还不行（因为可以使用快捷键CTRL+C复制） 他们竟然不让我们选择文字。。。这样下来我们既不能复制，连源代码都不能看了。是可忍孰不可忍，既然这样，那我就不客气了！
+找到病根是关键 原来是JS捣的鬼 纯html是无法实现屏蔽右键等功能的，所以很简单就能想到是js的问题，那么我们就找找到底是那些代码段使得我们无法使用邮件功能呢？ 既然右键被禁止了，那我们如何才能看到网页的源代码呢？ 其实很简单，PHP@老高建议你使用chrome浏览器打开你想要破解的网站，使用快捷键CTRL+U即可轻易查看网页的源代码！怎么样，很简单吧？ 好了既然我们已经找到源代码，那就开始找那个害人的代码段吧！
+代码一 这个是比较难找的代码，一般隐藏在网页的头部或者藏在某些引用的js文件中 &amp;lt;SCRIPT language=javascript type=text/javascript&amp;gt;&amp;lt;!--document.oncontextmenu=new Function(&#39;event.returnValue=false;&#39;);//屏蔽右键document.onselectstart=new Function(&#39;event.returnValue=false;&#39;);//屏蔽选择--&amp;gt;&amp;lt;/SCRIPT&amp;gt; 代码二 这个比较容易找到,直接找到标签，之后就是此句，与代码一异曲同工
+&amp;lt;body oncontextmenu=&amp;quot;self.event.returnValue=false&amp;quot; onselectstart=&amp;quot;return false&amp;quot;&amp;gt; 解决方法 IE浏览器 使用IE的童鞋可以试试在浏览器的地址栏输入 javascript:alert(document.oncontextmenu=document.onselectstart=&amp;quot;OK&amp;quot;) 或者
+javascript:alert(document.body.oncontextmenu=document.body.onselectstart=&amp;quot;OK&amp;quot;) 之后弹出对话框，点击确认即可！现在点击右键或者选择文字试试，是不是已经被破解了？ 请注意！该方法可能已经失效，因为新一代浏览器对安全性有了很大的提高，所以在地址栏输入脚本可能会被禁止！
+接下来就是将他删除掉即可： 在代码上点击右键：选择第二项Edit Attribute,将其属性删除，结果代码变成这样： 不用怀疑了，刚才限制的功能已经恢复啦！
+其他浏览器 以chrome为例 首先，在被屏蔽的网站上点击F12，出现了如下图所示代码(注：老高@PHPer使用的是chrome v30，不同版本的界面留有不同)
+当然，您的火眼金睛可能立即发现了蓝色标记的一行代码
+&amp;lt;body oncontextmenu=”self.event.returnValue=false” onselectstart=”return false”&amp;gt; 接下来就是将他删除掉即可：
+在代码上点击右键：选择第二项Edit Attribute,将其属性删除，不用怀疑了，限制的功能已经恢复啦！
+终极方法 在浏览器中将以下代码存为书签，名为解锁，在被禁网址中点击一下解锁，即可解开~
+javascript:(function() { function R(a){ona = &amp;quot;on&amp;quot;+a; if(window.addEventListener) window.addEventListener(a, function (e) { for(var n=e.originalTarget; n; n=n.</description>
+    </item>
+    
+  </channel>
+</rss>

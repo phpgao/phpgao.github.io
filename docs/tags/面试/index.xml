@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>面试 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+    <description>Recent content in 面试 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 29 Nov 2018 14:17:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>2018面试总结</title>
+      <link>https://phpgao.github.io/2018_new_start.html</link>
+      <pubDate>Thu, 29 Nov 2018 14:17:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/2018_new_start.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2018/11/3936467250.jpg&#34; alt=&#34;程序猿面试&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;找新工作的念头是在今年6月开始萌发的，其实当时已经开始投简历了，结果因为种种原因(主要是忙?)拖到这会儿才真正开始面试。投简历的平台是boss直聘，简历用的jobDeer的模板，用md写好，生成pdf和doc格式，挂在自己的网站下，方便下载和浏览。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

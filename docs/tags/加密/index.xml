@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>加密 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/%E5%8A%A0%E5%AF%86/</link>
+    <description>Recent content in 加密 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 16 Jun 2014 06:20:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/%E5%8A%A0%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用python模拟登陆腾讯微博</title>
+      <link>https://phpgao.github.io/t_login.html</link>
+      <pubDate>Mon, 16 Jun 2014 06:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/t_login.html</guid>
+      <description>由于业务需要，研究了一下腾讯微博等登陆，下面分享一些经验给大家： 标题写的是腾讯微博的登陆，其实也可以隐身到腾讯旗下多个产品的登陆，比如QQ空间，webQQ等，想到这儿大伙是不是很激动呢？
+[TOC]
+表急，等我细细道来。
+数据采集 有时候简单的数据不需要这么大费周折！使用某些语言自带的web工具也是可以的！下面我以Python为例：
+分析登录过程 登录过程需要抓包，我是用的HttpWatch，大体步骤如下
+第一步 手动登陆，抓包，记录登录过程  当输入完账号后想服务器请求验证码 等级登陆按钮后将登录信息发送至认证服务器，实现第一次认证 服务器返回登陆成功信息，其中包含最终URL 第二次认证，获取腾讯微博的cookie  第二步 伪造登录过程  获取验证码 根据验证码计算出加密后的密码以及其他信息，发送GET请求至认证服务器 根据返回URL获取最终cookie  工作难点 本文假设读者理解http协议及数据包的发送原理，以此为基础，工作的难点就集中在数据的准备上。
+ 密码的加密原理 cookie的处理 header的UA及refer的一致性  密码加密算法 以下提取自登录页面的c_login_2.js文件
+function getEncryption(password, uin, vcode) {var str1 = hexchar2bin(md5(password));var str2 = md5(str1 + uin);var str3 = md5(str2 + vcode.toUpperCase());return str3}if (b == &amp;quot;login&amp;quot;) {d.u = encodeURIComponent(pt.plogin.at_accout);d.verifycode = $(&amp;quot;verifycode&amp;quot;).value;if (pt.plogin.needShowNewVc &amp;amp;&amp;amp; pt.</description>
+    </item>
+    
+  </channel>
+</rss>

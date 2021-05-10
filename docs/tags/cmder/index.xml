@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cmder on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/cmder/</link>
+    <description>Recent content in cmder on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 Apr 2016 01:58:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/cmder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用VirtualBox在后台运行镜像</title>
+      <link>https://phpgao.github.io/virtualbox_run_in_background.html</link>
+      <pubDate>Tue, 05 Apr 2016 01:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/virtualbox_run_in_background.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/3686880991.png&#34; alt=&#34;VirtualBox&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;老高的想做的很简单，就是开一个没有界面的虚拟机运行在后台，由于VirtualBox的GUI和虚拟机的运行管理是分离的，想要做到这一点很容易！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows环境下快速搭建开发环境</title>
+      <link>https://phpgao.github.io/windows_programmer_for_php.html</link>
+      <pubDate>Wed, 11 Mar 2015 07:53:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/windows_programmer_for_php.html</guid>
+      <description>&lt;p&gt;先留坑，以后慢慢补充&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>windows下cmd的替换工具cmder</title>
+      <link>https://phpgao.github.io/cmder.html</link>
+      <pubDate>Wed, 17 Dec 2014 05:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/cmder.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2014/12/465248068.png&#34; alt=&#34;cmder界面&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

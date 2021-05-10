@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>md on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/md/</link>
+    <description>Recent content in md on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 10 Jul 2014 09:09:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/md/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>现在都用md，咱也不落后</title>
+      <link>https://phpgao.github.io/use_markdown.html</link>
+      <pubDate>Thu, 10 Jul 2014 09:09:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/use_markdown.html</guid>
+      <description>markdown是个好东西！让我们可以集中精力去写文章，提高文章质量，不过有几个方面还是值得吐槽的：
+ 超链接的target属性不能自定义 在WP中插入图片太麻烦 没有很好的支持或者支持标准不一 待补充  推荐一个好工具：stackedit
+还有他的升级版：stackedit-beta
+2014年10月19日补充：
+markdown标准语法请参考http://commonmark.org</description>
+    </item>
+    
+  </channel>
+</rss>

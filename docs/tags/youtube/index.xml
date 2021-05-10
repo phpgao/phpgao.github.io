@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>youtube on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/youtube/</link>
+    <description>Recent content in youtube on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 30 Jul 2018 03:21:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>正确下载youtube视频的方式</title>
+      <link>https://phpgao.github.io/youtube-dl-the-right-way.html</link>
+      <pubDate>Mon, 30 Jul 2018 03:21:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/youtube-dl-the-right-way.html</guid>
+      <description>&lt;p&gt;youtube这个&lt;strong&gt;不存在&lt;/strong&gt;的网站上有很多有用的资料，一般来说我们是可以下载所有视频到本地以供离线的情况下的研究学习，网上有很多工具提供了下载功能，但是在试用了很多标称很好用的软件后，老高发现，真的没有一个能和youtube-dl相提并论，所以老高还是记录一下如何使用正确使用youtube-dl！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>使用命令行下载youtube的视频和字幕</title>
+      <link>https://phpgao.github.io/download_youtube_via_cmd.html</link>
+      <pubDate>Tue, 19 Apr 2016 14:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/download_youtube_via_cmd.html</guid>
+      <description>&lt;p&gt;老高买使用搬瓦工有好久了，但是直到今天才想起来用命令行下载youtube的视频，实在是惭愧。赶紧加班写篇文章赎罪！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2016/04/2588463203.png&#34; alt=&#34;youtube.png&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;今天的主角在这儿&lt;a href=&#34;https://rg3.github.io/youtube-dl/download.html&#34;&gt;youtube-dl&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;源代码点这儿&lt;a href=&#34;https://github.com/rg3/youtube-dl&#34;&gt;rg3/youtube-dl&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Youtube开启或禁用HTML5播放器</title>
+      <link>https://phpgao.github.io/youtube_html5_player.html</link>
+      <pubDate>Sat, 24 Jan 2015 04:50:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/youtube_html5_player.html</guid>
+      <description>&lt;p&gt;用过MAC的TX都知道，如果没有FLASH想要播放YouTube的视频很麻烦。虽然用Chrome内置的FLASH很不错，但是动辄70+℃的CPU实在伤不起啊。H5播放器就没有这个弊端了，从此妈妈再也不用担心我的MAC了。&lt;/p&gt;
+&lt;p&gt;YouTube其实早就推出了H5的播放器，只是在PC端默认没有被开启而已。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

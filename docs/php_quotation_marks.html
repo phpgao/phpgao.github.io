@@ -1,0 +1,271 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>单引号和双引号的区别及用法 | 老高的技术博客</title><meta name=keywords content="PHP,quote"><meta name=description content="双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考
+转自http://blog.sina.com.cn/s/blog_706476980100xapp.html
+1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3.&#34; &ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' &lsquo;单引号里面的不进行解释，直接输出。
+例如：
+$abc='my name is tome';
+echo $abc //结果是:my name is tom
+echo '$abc' //结果是:$abc
+echo &#34;$abc&#34; //结果是:my name is tom
+
+特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：
+select    *    from    abc_table where user_name='abc';
+
+SQL语句可以写成:
+SQLstr = &#34;select    *    from abc_table where user _name= 'abc'&#34; ;
+
+假设查询条件中使用的是变量，例如：
+$user_name = $_REQUEST['user_name']; //字符串变量
+
+或
+$user=array (&#34;name&#34;=> $_REQUEST['user_name‘,&#34;age&#34;=>$_REQUEST['age'];//数组变量
+
+SQL语句就可以写成：
+SQLstr = &#34;select    *    from abc_table where user_name = ' &#34; . $user_name . &#34; ' &#34;;
+SQLstr = &#34;select * from abc_table where user_name = ' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+对比一下:
+SQLstr=&#34;select * from abc_table where user_name = ' abc ' &#34; ;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user _name . &#34; ' &#34;;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+SQLstr可以分解为以下3个部分:
+1：&#34;select * from table where user_name = ' &#34; //固定SQL语句 
+2：$user //变量 
+3：&#34; ' &#34;
+1,2,3部分字符串之间用&#34;.&#34; 来连接
+"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/php_quotation_marks.html><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="单引号和双引号的区别及用法"><meta property="og:description" content="双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考
+转自http://blog.sina.com.cn/s/blog_706476980100xapp.html
+1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3.&#34; &ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' &lsquo;单引号里面的不进行解释，直接输出。
+例如：
+$abc='my name is tome';
+echo $abc //结果是:my name is tom
+echo '$abc' //结果是:$abc
+echo &#34;$abc&#34; //结果是:my name is tom
+
+特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：
+select    *    from    abc_table where user_name='abc';
+
+SQL语句可以写成:
+SQLstr = &#34;select    *    from abc_table where user _name= 'abc'&#34; ;
+
+假设查询条件中使用的是变量，例如：
+$user_name = $_REQUEST['user_name']; //字符串变量
+
+或
+$user=array (&#34;name&#34;=> $_REQUEST['user_name‘,&#34;age&#34;=>$_REQUEST['age'];//数组变量
+
+SQL语句就可以写成：
+SQLstr = &#34;select    *    from abc_table where user_name = ' &#34; . $user_name . &#34; ' &#34;;
+SQLstr = &#34;select * from abc_table where user_name = ' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+对比一下:
+SQLstr=&#34;select * from abc_table where user_name = ' abc ' &#34; ;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user _name . &#34; ' &#34;;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+SQLstr可以分解为以下3个部分:
+1：&#34;select * from table where user_name = ' &#34; //固定SQL语句 
+2：$user //变量 
+3：&#34; ' &#34;
+1,2,3部分字符串之间用&#34;.&#34; 来连接
+"><meta property="og:type" content="article"><meta property="og:url" content="https://phpgao.github.io/php_quotation_marks.html"><meta property="article:section" content="posts"><meta property="article:published_time" content="2014-07-22T08:07:00+00:00"><meta property="article:modified_time" content="2014-07-22T08:07:00+00:00"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="单引号和双引号的区别及用法"><meta name=twitter:description content="双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考
+转自http://blog.sina.com.cn/s/blog_706476980100xapp.html
+1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3.&#34; &ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' &lsquo;单引号里面的不进行解释，直接输出。
+例如：
+$abc='my name is tome';
+echo $abc //结果是:my name is tom
+echo '$abc' //结果是:$abc
+echo &#34;$abc&#34; //结果是:my name is tom
+
+特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：
+select    *    from    abc_table where user_name='abc';
+
+SQL语句可以写成:
+SQLstr = &#34;select    *    from abc_table where user _name= 'abc'&#34; ;
+
+假设查询条件中使用的是变量，例如：
+$user_name = $_REQUEST['user_name']; //字符串变量
+
+或
+$user=array (&#34;name&#34;=> $_REQUEST['user_name‘,&#34;age&#34;=>$_REQUEST['age'];//数组变量
+
+SQL语句就可以写成：
+SQLstr = &#34;select    *    from abc_table where user_name = ' &#34; . $user_name . &#34; ' &#34;;
+SQLstr = &#34;select * from abc_table where user_name = ' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+对比一下:
+SQLstr=&#34;select * from abc_table where user_name = ' abc ' &#34; ;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user _name . &#34; ' &#34;;
+SQLstr=&#34;select * from abc_table where user_name =' &#34; . $user[&#34;name&#34;] . &#34; ' &#34;;
+
+SQLstr可以分解为以下3个部分:
+1：&#34;select * from table where user_name = ' &#34; //固定SQL语句 
+2：$user //变量 
+3：&#34; ' &#34;
+1,2,3部分字符串之间用&#34;.&#34; 来连接
+"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"},{"@type":"ListItem","position":2,"name":"单引号和双引号的区别及用法","item":"https://phpgao.github.io/php_quotation_marks.html"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"单引号和双引号的区别及用法","name":"单引号和双引号的区别及用法","description":"双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考\n转自http://blog.sina.com.cn/s/blog_706476980100xapp.html\n1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\\和变量符$,例外的是\\’标识单引号。 2.双引号之间的字符是需要php解析的，包括$,\\，{都保留了php赋予的特殊含义。 3.\u0026quot; \u0026ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' \u0026lsquo;单引号里面的不进行解释，直接输出。 例如：\n$abc='my name is tome';\recho $abc //结果是:my name is tom\recho '$abc' //结果是:$abc\recho \u0026quot;$abc\u0026quot; //结果是:my name is tom\r 特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。 假设查询条件中使用的是常量，例如：\nselect * from abc_table where user_name='abc';\r SQL语句可以写成:\nSQLstr = \u0026quot;select * from abc_table where user _name= 'abc'\u0026quot; ;\r 假设查询条件中使用的是变量，例如：\n$user_name = $_REQUEST['user_name']; //字符串变量\r 或\n$user=array (\u0026quot;name\u0026quot;=\u0026gt; $_REQUEST['user_name‘,\u0026quot;age\u0026quot;=\u0026gt;$_REQUEST['age'];//数组变量\r SQL语句就可以写成：\nSQLstr = \u0026quot;select * from abc_table where user_name = ' \u0026quot; . $user_name . \u0026quot; ' \u0026quot;;\rSQLstr = \u0026quot;select * from abc_table where user_name = ' \u0026quot; . $user[\u0026quot;name\u0026quot;] . \u0026quot; ' \u0026quot;;\r 对比一下:\nSQLstr=\u0026quot;select * from abc_table where user_name = ' abc ' \u0026quot; ;\rSQLstr=\u0026quot;select * from abc_table where user_name =' \u0026quot; . $user _name . \u0026quot; ' \u0026quot;;\rSQLstr=\u0026quot;select * from abc_table where user_name =' \u0026quot; . $user[\u0026quot;name\u0026quot;] . \u0026quot; ' \u0026quot;;\r SQLstr可以分解为以下3个部分:\n1：\u0026quot;select * from table where user_name = ' \u0026quot; //固定SQL语句 2：$user //变量 3：\u0026quot; ' \u0026quot;\r1,2,3部分字符串之间用\u0026quot;.\u0026quot; 来连接\r","keywords":["PHP","quote"],"articleBody":"双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考\n转自http://blog.sina.com.cn/s/blog_706476980100xapp.html\n1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\\和变量符$,例外的是\\’标识单引号。 2.双引号之间的字符是需要php解析的，包括$,\\，{都保留了php赋予的特殊含义。 3.\" “双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' ‘单引号里面的不进行解释，直接输出。 例如：\n$abc='my name is tome';\recho $abc //结果是:my name is tom\recho '$abc' //结果是:$abc\recho \"$abc\" //结果是:my name is tom\r 特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。 假设查询条件中使用的是常量，例如：\nselect * from abc_table where user_name='abc';\r SQL语句可以写成:\nSQLstr = \"select * from abc_table where user _name= 'abc'\" ;\r 假设查询条件中使用的是变量，例如：\n$user_name = $_REQUEST['user_name']; //字符串变量\r 或\n$user=array (\"name\"= $_REQUEST['user_name‘,\"age\"=$_REQUEST['age'];//数组变量\r SQL语句就可以写成：\nSQLstr = \"select * from abc_table where user_name = ' \" . $user_name . \" ' \";\rSQLstr = \"select * from abc_table where user_name = ' \" . $user[\"name\"] . \" ' \";\r 对比一下:\nSQLstr=\"select * from abc_table where user_name = ' abc ' \" ;\rSQLstr=\"select * from abc_table where user_name =' \" . $user _name . \" ' \";\rSQLstr=\"select * from abc_table where user_name =' \" . $user[\"name\"] . \" ' \";\r SQLstr可以分解为以下3个部分:\n1：\"select * from table where user_name = ' \" //固定SQL语句 2：$user //变量 3：\" ' \"\r1,2,3部分字符串之间用\".\" 来连接\r  一、引号定义字符串 在PHP中，通常一个字符串被定义在一对引号中，如： ‘I am a string in single quotes’ “I am a string in double quotes”\nPHP语法分析器是用成对的引号来判断一个字符串的。因此，所有字符串必须使用同一种单或者双 引号来定义开始和结束。例如，下面的字串定义是不合法的：\n\"I am not a valid string since I have unmatching quote marks'\r'Me neither!\"\r 定义字符串时，只有一种引号被视为定义符，即单引号或双引号。于是，如果一个字符串由双引 号开始，那么只有双引号被分析器解析。这样，你就可以在双引号串中包含任何其他字符，甚至单引 号。下面的引号串都是合法的：\n$s = \"I am a 'single quote string' inside a double quote string\";\r$s = 'I am a \"double quote string\" inside a single quote string';\r 当PHP遇到与串的开头相对应的引号时，便认为已经到了字符串尾部，于是：\n\"Why doesn't \"this\" work?\"\r 实际上被PHP语法分析器分成三个部分:\n\"Why doesn't \"——包含一个单引号的双引号串\rthis——多余的字符，分析器无法处理\r\" work?\" ——普通字符串\r 上面的这个例子企图在双引号串中包含双引号，而分析器在遇到第二个双引号时便认为字符串结 束了。要达到包含引号的目的，必须分析器在遇到串内普通引号的时候忽略它的原意，我们在引号的 前面加上一个反斜杠来告诉PHP：这个引号是字符串的一部分，正确的表示方法是这样:\n\"Why doesn't \\\"that\\\" work?\"\r 在英文字符串中一个常见的问题是撇号’的使用，因为它就是一个单引号，而在英文串中十分常见 （英文所有格）。你必须小心处理这些字符:\n'You\\'d better escape your apostrophes'\r 可以看到反斜杠在字符串中有他的特殊含义，当我们需要在字符串中包含反斜杠本身时，需要在 该符号前面多加一个反斜杠。例如：\n$file = \"c:\\windows\\system.ini\";\recho $file; // 打印结果为： c:windowssystem.ini\r$file = \"c:\\\\windows\\\\system.ini\";\recho $file; // 打印结果为： c:\\windows\\system.ini\r 另一种字符串定义方式，能够消除特殊字符的烦恼，而且便于引用较长的文本。该字符串定义方 法以«二、字串的连接 字串可以使用字串连接符(.)来连接，如：\n$first_name = 'Charlie';\r$last_name = 'Brown';\r$full_name = $first_name . ' ' . $last_name;\r 常见的用途是建立大块的HTML字串代码，赋值号 (=) 连接符 (.) 可以被简写合并为 (.=) 符 号，如：\n$html = '';\r$html .= 'numbersquare';\rfor ( $i=0 ; $i' . $i . '' . $square . '';\r}\r$html .= '';\r 三、在字串中使用变量 这个功能让你无须使用连接符号来粘和大量的简单字符串。PHP允许我们在双引号串中直接包含字 串变量，我们可以发现下面的两个字串的处理结果是相同的。\n$full_name = $first_name . ' ' . $last_name;\r$full_name = \"$first_name $last_name\";\r 单引号串和双引号串在PHP中的处理是不相同的。双引号串中的内容可以被解释而且替换，而单引 号串中的内容总被认为是普通字符。例如：\n$foo = 2;\recho \"foo is $foo\"; // 打印结果: foo is 2\recho 'foo is $foo'; // 打印结果: foo is $foo\recho \"foo is $foo\\n\"; // 打印结果: foo is 2 (同时换行)\recho 'foo is $foo\\n'; // 打印结果: foo is $foo\\n\r 正如你所看到的，在单引号串中甚至反斜杠也失去了他的扩展含义（除了插入反斜杠\\和插入单 引号'）。所以，当你想在字串中进行变量代换和包含\\n（换行符）等转义序列时，你应该使用双引 号。单引号串可以用在其他任何地方，脚本中使用单引号串处理速度会更快些，因为PHP语法分析器对 单引号串的处理方式比较单纯，而双引号的处理由于串内部也需要解析，因此更复杂些，所以处理速 度略慢。 在字符串中引用复杂的变量组合时，可能会产生一些问题，下面的代码会正常工作：\necho \"value = $foo\";\recho \"value = $a[$i]\";\r 而下面的代码却不能得到我们希望的结果:\necho \"value = $a[$i][$j]\"; //我们希望打印二维数组$a的某个元素。\r 为避免这些字串使用中的潜在问题，我们通常把复杂的变量从字串中分离开来，就像这样：\necho 'value = ' . $a[$i][$j];\r 还有一种办法是将复杂变量用花括号括起来，语法分析器就能正确辨认了:\necho \"value = {$a[$i][$j]}\" //打印二维数组$a的某个元素\r 这样，又出现新问题了。当我们想在字串中引用花括号字符本身时，就要记得使用转义符了：\n$var = 3;\recho \"value = {$var}\"; // 打印结果 \"value = 3\"\recho \"value = \\{$var}\"; // 打印结果 \"value = {3}\"\r 四、斜杠和SQL语句 生成HTML代码或SQL查询语句是编写PHP程序时经常遇到而且是件有趣的事情。为什么这么说呢， 因为这涉及到生成另外一种类型的代码，你必须仔细地考虑和遵循这种代码所要求的编写语法和规 则。 我们来看这样一个例子，假如你想查询数据库中名字是“O’Keefe”的用户，通常SQL语句的形式 是这样的：\nselect * from users where last_name = 'O\\'Keefe'\r 请注意SQL语句这个英文所有格（撇号）需使用反斜杠转义。PHP专门提供了一些函数来处理这样 的情况，函数AddSlashes($str)的用途就是自动在字串中对引号字符插入反斜杠转义符：\n$last_name = \"O'Keefe\";\r$sql = \"select * from users where last_name = '\" . addslashes($last_name) . \"'\";\r 在这个例子中，你还要在last_name字串外面括上单引号（SQL语法要求），由于这里使用的是双 引号串，所以对这对单引号就无须使用转义了。下面的这个语句是使用单引号串的等价形式：\n$sql = 'select * from users where last_name = \\'' . addslashes($last_name) . '\\'';\r 任何时候你要在数据库中写入字串，你都必须确保里面的引号正确使用了转义符号，这是很多PHP 初学者常犯的错误。\n五、双引号和HTML 与SQL语句不同，在标准HTML语言中双引号常被用来表示字串（现在很多浏览器具备较强的容错功 能，允许在HTML中用单引号甚至不用引号表示字符串），例如：\n$html = ''.$link.'';\r$html = \"$link\";\r HTML语言不支持反斜杠转义，这一点在我们使用表单的hidden inputs来传输数据的时候就会有所 体会了。设置hidden inputs的值的最好办法，是使用htmlspecialchars()函数来编码。下面的语句可 以正常传输一个可能包含双引号的数据：\n经常有人问我，听说在PHP中处理字符串用单引号会快，那么如果存在变量替换的时候，是使用单引号连接快呢，还是双引号快呢？ 简单的回答，显然是苍白无力的。 今天我们来做个实验，看看到底单引号和双引号有什么区别，谁快，谁慢。 测试代码如下:\n 接下来，让我们以前文章提到过的Opcodes生成器来看看，最终我们的这段代码是怎么被执行的：\nBranch analysis from position: 0\rReturn found\rfilename: /home/xinchen/string.php\rfunction name: (null)\rnumber of ops: 24\rcompiled vars: !0 = $single_quotes, !1 = $double_quotes, !2 = $var, !3 = $single_quotes_var, !4 = $double_quotes_var, !5 = $single_quotes_var_pre, !6 = $double_quotes_var_pre\rline # op fetch ext return operands\r-------------------------------------------------------------------------------\r2 0 ASSIGN !0, 'This+is+a+String'\r3 1 ASSIGN !1, 'This+is+a+String'\r4 2 ECHO !0\r5 3 ECHO !1\r7 4 ASSIGN !2, 'String'\r8 5 CONCAT ~3 'This+is+a+', !2\r6 ASSIGN !3, ~3\r9 7 INIT_STRING ~5\r8 ADD_STRING ~5 ~5, 'This+is+a+'\r9 ADD_VAR ~5 ~5, !2\r10 ASSIGN !4, ~5\r11 11 ECHO !3\r12 12 ECHO !4\r14 13 ASSIGN !2, 'This'\r16 14 CONCAT ~8 !2, '+is+a+String'\r15 ASSIGN !5, ~8\r17 16 INIT_STRING ~10\r17 ADD_VAR ~10 ~10, !2\r18 ADD_STRING ~10 ~10, '+is+a+String'\r19 ASSIGN !6, ~10\r19 20 ECHO !5\r20 21 ECHO !6\r22 22 RETURN 1\r23* ZEND_HANDLE_EXCEPTION\r 注意第0到第3条op line, 可以看出在没有使用变量替换的情况下，双引号的和单引号所产生的Opcodes是一样的。 再来看：第4到第12条， 可以发现，在使用变量替换的情况下，使用双引号和单引号所生成的Opcodes是不一样的，我们来分析双引号情况下的Opcodes：\n7 INIT_STRING 初始化一个字符串变量，存放在~5临时变量中。\r8 ADD_STRING 将第一部分字符串写入。\r9 ADD_VAR 将变量替换的字符串写入。\r 第16-28行同理。\n从这里我们可以发现，在使用双引号的情况下和使用单引号的情况下，同样的逻辑，所经历的执行确实不一样的(因为,Opcodes对于PHP来说就是最终的执行代码)。单单从生成的Opcods数量来说，就已经足以证明确实是使用单引号会快了。 至于编译阶段，双引号和单引号的区别也是很大的， 我就举个数字来说明： 在scanning阶段， 对于双引号的词法规则有14条，而对于单引号，仅仅只有6条。\n呵呵，是不是经过这样的分析，你会更清楚的了解到以后该怎么使用单引号和双引号了呢？ 顺便说一句，对于不需要变量替换的纯字符串，大家都知道，因为在C/C++中，双引号才表示字符串，所以这种情况下，还是使用双引号的好。\n另外对于W3C标准来说， HTML中的属性值应该是使用双引号来包含的 ，所以不要习惯了单引号，到处滥用哦 以上是单引号与双引号的区别，摘记下来，便于随时翻看。\n","wordCount":"738","inLanguage":"en","datePublished":"2014-07-22T08:07:00Z","dateModified":"2014-07-22T08:07:00Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://phpgao.github.io/php_quotation_marks.html"},"publisher":{"@type":"Organization","name":"老高的技术博客","logo":{"@type":"ImageObject","url":"https://phpgao.github.io/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://phpgao.github.io/posts/>Posts</a></div><h1 class=post-title>单引号和双引号的区别及用法</h1><div class=post-meta>July 22, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me&nbsp;|&nbsp;<a href=https://github.com/%3cpath_to_repo%3e/content/posts/2014-07-22_php_quotation_marks.md rel="noopener noreferrer" target=_blank>Suggest Changes</a></div></header><div class=post-content><p>双引号，单引号问题自古以来一直处在混沌状态，不懂的人觉得没啥区别，懂的人貌似也说不出来啥区别，其实区别还是有很多，转给大家看看，自己也留一份参考</p><p>转自<a href=http://blog.sina.com.cn/s/blog_706476980100xapp.html>http://blog.sina.com.cn/s/blog_706476980100xapp.html</a></p><p>1.单引号和双引号都可以作为字符串的开始符和关闭符，并且只能‍同一种单或者双引号来定义开始和结束；单引号之间的字符都被认为是字符，即使是转义符\和变量符$,例外的是\’标识单引号。
+2.双引号之间的字符是需要php解析的，包括$,\，{都保留了php赋予的特殊含义。
+3." &ldquo;双引号里面的字段会经过编译器解释，然后再当作HTML代码输出；而' &lsquo;单引号里面的不进行解释，直接输出。
+例如：</p><pre><code>$abc='my name is tome';
+echo $abc //结果是:my name is tom
+echo '$abc' //结果是:$abc
+echo &quot;$abc&quot; //结果是:my name is tom
+</code></pre><p>特别在使用MYSQL语句的时候，双引号和单引号的用法让新手不知所措，在这里，举个例子，来进行说明。
+假设查询条件中使用的是常量，例如：</p><pre><code>select    *    from    abc_table where user_name='abc';
+</code></pre><p>SQL语句可以写成:</p><pre><code>SQLstr = &quot;select    *    from abc_table where user _name= 'abc'&quot; ;
+</code></pre><p>假设查询条件中使用的是变量，例如：</p><pre><code>$user_name = $_REQUEST['user_name']; //字符串变量
+</code></pre><p>或</p><pre><code>$user=array (&quot;name&quot;=&gt; $_REQUEST['user_name‘,&quot;age&quot;=&gt;$_REQUEST['age'];//数组变量
+</code></pre><p>SQL语句就可以写成：</p><pre><code>SQLstr = &quot;select    *    from abc_table where user_name = ' &quot; . $user_name . &quot; ' &quot;;
+SQLstr = &quot;select * from abc_table where user_name = ' &quot; . $user[&quot;name&quot;] . &quot; ' &quot;;
+</code></pre><p>对比一下:</p><pre><code>SQLstr=&quot;select * from abc_table where user_name = ' abc ' &quot; ;
+SQLstr=&quot;select * from abc_table where user_name =' &quot; . $user _name . &quot; ' &quot;;
+SQLstr=&quot;select * from abc_table where user_name =' &quot; . $user[&quot;name&quot;] . &quot; ' &quot;;
+</code></pre><p>SQLstr可以分解为以下3个部分:</p><pre><code>1：&quot;select * from table where user_name = ' &quot; //固定SQL语句 
+2：$user //变量 
+3：&quot; ' &quot;
+1,2,3部分字符串之间用&quot;.&quot; 来连接
+</code></pre><hr><h2 id=一引号定义字符串>一、引号定义字符串<a hidden class=anchor aria-hidden=true href=#一引号定义字符串>#</a></h2><p>在PHP中，通常一个字符串被定义在一对引号中，如：
+&lsquo;I am a string in single quotes&rsquo;
+&ldquo;I am a string in double quotes&rdquo;</p><p>PHP语法分析器是用成对的引号来判断一个字符串的。因此，所有字符串必须使用同一种单或者双
+引号来定义开始和结束。例如，下面的字串定义是不合法的：</p><pre><code>&quot;I am not a valid string since I have unmatching quote marks'
+'Me neither!&quot;
+</code></pre><p>定义字符串时，只有一种引号被视为定义符，即单引号或双引号。于是，如果一个字符串由双引
+号开始，那么只有双引号被分析器解析。这样，你就可以在双引号串中包含任何其他字符，甚至单引
+号。下面的引号串都是合法的：</p><pre><code>$s = &quot;I am a 'single quote string' inside a double quote string&quot;;
+$s = 'I am a &quot;double quote string&quot; inside a single quote string';
+</code></pre><p>当PHP遇到与串的开头相对应的引号时，便认为已经到了字符串尾部，于是：</p><pre><code>&quot;Why doesn't &quot;this&quot; work?&quot;
+</code></pre><p>实际上被PHP语法分析器分成三个部分:</p><pre><code>&quot;Why doesn't &quot;——包含一个单引号的双引号串
+this——多余的字符，分析器无法处理
+&quot; work?&quot; ——普通字符串
+</code></pre><p>上面的这个例子企图在双引号串中包含双引号，而分析器在遇到第二个双引号时便认为字符串结
+束了。要达到包含引号的目的，必须分析器在遇到串内普通引号的时候忽略它的原意，我们在引号的
+前面加上一个反斜杠来告诉PHP：这个引号是字符串的一部分，正确的表示方法是这样:</p><pre><code>&quot;Why doesn't \&quot;that\&quot; work?&quot;
+</code></pre><p>在英文字符串中一个常见的问题是撇号&rsquo;的使用，因为它就是一个单引号，而在英文串中十分常见
+（英文所有格）。你必须小心处理这些字符:</p><pre><code>'You\'d better escape your apostrophes'
+</code></pre><p>可以看到反斜杠在字符串中有他的特殊含义，当我们需要在字符串中包含反斜杠本身时，需要在
+该符号前面多加一个反斜杠。例如：</p><pre><code>$file = &quot;c:\windows\system.ini&quot;;
+echo $file; // 打印结果为： c:windowssystem.ini
+$file = &quot;c:\\windows\\system.ini&quot;;
+echo $file; // 打印结果为： c:\windows\system.ini
+</code></pre><p>另一种字符串定义方式，能够消除特殊字符的烦恼，而且便于引用较长的文本。该字符串定义方
+法以&#171;&lt;符号紧跟一个自定义字符串开头，最后一行以该自定义字符串结束，并且必须顶格。</p><h2 id=二字串的连接>二、字串的连接<a hidden class=anchor aria-hidden=true href=#二字串的连接>#</a></h2><p>字串可以使用字串连接符(.)来连接，如：</p><pre><code>$first_name = 'Charlie';
+$last_name = 'Brown';
+$full_name = $first_name . ' ' . $last_name;
+</code></pre><p>常见的用途是建立大块的HTML字串代码，赋值号 (=) 连接符 (.) 可以被简写合并为 (.=) 符
+号，如：</p><pre><code>$html = '&lt;table&gt;';
+$html .= '&lt;tr&gt;&lt;td&gt;number&lt;/td&gt;&lt;td&gt;square&lt;/td&gt;&lt;/tr&gt;';
+for ( $i=0 ; $i&lt;10 ; $i++) {
+$square = $i * $i;
+$html .= '&lt;tr&gt;&lt;td&gt;' . $i . '&lt;/td&gt;&lt;td&gt;' . $square . '&lt;/td&gt;&lt;/tr&gt;';
+}
+$html .= '&lt;/table&gt;';
+</code></pre><h2 id=三在字串中使用变量>三、在字串中使用变量<a hidden class=anchor aria-hidden=true href=#三在字串中使用变量>#</a></h2><p>这个功能让你无须使用连接符号来粘和大量的简单字符串。PHP允许我们在双引号串中直接包含字
+串变量，我们可以发现下面的两个字串的处理结果是相同的。</p><pre><code>$full_name = $first_name . ' ' . $last_name;
+$full_name = &quot;$first_name $last_name&quot;;
+</code></pre><p>单引号串和双引号串在PHP中的处理是不相同的。双引号串中的内容可以被解释而且替换，而单引
+号串中的内容总被认为是普通字符。例如：</p><pre><code>$foo = 2;
+echo &quot;foo is $foo&quot;; // 打印结果: foo is 2
+echo 'foo is $foo'; // 打印结果: foo is $foo
+echo &quot;foo is $foo\n&quot;; // 打印结果: foo is 2 (同时换行)
+echo 'foo is $foo\n'; // 打印结果: foo is $foo\n
+</code></pre><p>正如你所看到的，在单引号串中甚至反斜杠也失去了他的扩展含义（除了插入反斜杠\和插入单
+引号'）。所以，当你想在字串中进行变量代换和包含\n（换行符）等转义序列时，你应该使用双引
+号。单引号串可以用在其他任何地方，脚本中使用单引号串处理速度会更快些，因为PHP语法分析器对
+单引号串的处理方式比较单纯，而双引号的处理由于串内部也需要解析，因此更复杂些，所以处理速
+度略慢。
+在字符串中引用复杂的变量组合时，可能会产生一些问题，下面的代码会正常工作：</p><pre><code>echo &quot;value = $foo&quot;;
+echo &quot;value = $a[$i]&quot;;
+</code></pre><p>而下面的代码却不能得到我们希望的结果:</p><pre><code>echo &quot;value = $a[$i][$j]&quot;; //我们希望打印二维数组$a的某个元素。
+</code></pre><p>为避免这些字串使用中的潜在问题，我们通常把复杂的变量从字串中分离开来，就像这样：</p><pre><code>echo 'value = ' . $a[$i][$j];
+</code></pre><p>还有一种办法是将复杂变量用花括号括起来，语法分析器就能正确辨认了:</p><pre><code>echo &quot;value = {$a[$i][$j]}&quot; //打印二维数组$a的某个元素
+</code></pre><p>这样，又出现新问题了。当我们想在字串中引用花括号字符本身时，就要记得使用转义符了：</p><pre><code>$var = 3;
+echo &quot;value = {$var}&quot;; // 打印结果 &quot;value = 3&quot;
+echo &quot;value = \{$var}&quot;; // 打印结果 &quot;value = {3}&quot;
+</code></pre><h2 id=四斜杠和sql语句>四、斜杠和SQL语句<a hidden class=anchor aria-hidden=true href=#四斜杠和sql语句>#</a></h2><p>生成HTML代码或SQL查询语句是编写PHP程序时经常遇到而且是件有趣的事情。为什么这么说呢，
+因为这涉及到生成另外一种类型的代码，你必须仔细地考虑和遵循这种代码所要求的编写语法和规
+则。
+我们来看这样一个例子，假如你想查询数据库中名字是“O&rsquo;Keefe”的用户，通常SQL语句的形式
+是这样的：</p><pre><code>select * from users where last_name = 'O\'Keefe'
+</code></pre><p>请注意SQL语句这个英文所有格（撇号）需使用反斜杠转义。PHP专门提供了一些函数来处理这样
+的情况，函数AddSlashes($str)的用途就是自动在字串中对引号字符插入反斜杠转义符：</p><pre><code>$last_name = &quot;O'Keefe&quot;;
+$sql = &quot;select * from users where last_name = '&quot; . addslashes($last_name) . &quot;'&quot;;
+</code></pre><p>在这个例子中，你还要在last_name字串外面括上单引号（SQL语法要求），由于这里使用的是双
+引号串，所以对这对单引号就无须使用转义了。下面的这个语句是使用单引号串的等价形式：</p><pre><code>$sql = 'select * from users where last_name = \'' . addslashes($last_name) . '\'';
+</code></pre><p>任何时候你要在数据库中写入字串，你都必须确保里面的引号正确使用了转义符号，这是很多PHP
+初学者常犯的错误。</p><h2 id=五双引号和html>五、双引号和HTML<a hidden class=anchor aria-hidden=true href=#五双引号和html>#</a></h2><p>与SQL语句不同，在标准HTML语言中双引号常被用来表示字串（现在很多浏览器具备较强的容错功
+能，允许在HTML中用单引号甚至不用引号表示字符串），例如：</p><pre><code>$html = '&lt;a href=&quot;'.$url.'&quot;&gt;'.$link.'&lt;/a&gt;';
+$html = &quot;&lt;a href=\&quot;$url\&quot;&gt;$link&lt;/a&gt;&quot;;
+</code></pre><p>HTML语言不支持反斜杠转义，这一点在我们使用表单的hidden inputs来传输数据的时候就会有所
+体会了。设置hidden inputs的值的最好办法，是使用htmlspecialchars()函数来编码。下面的语句可
+以正常传输一个可能包含双引号的数据：</p><p>经常有人问我，听说在PHP中处理字符串用单引号会快，那么如果存在变量替换的时候，是使用单引号连接快呢，还是双引号快呢？ 简单的回答，显然是苍白无力的。 今天我们来做个实验，看看到底单引号和双引号有什么区别，谁快，谁慢。
+测试代码如下:</p><pre><code>&lt;?php
+$single_quotes = 'This is a String';
+$double_quotes = &quot;This is a String&quot;;
+echo $single_quotes;
+echo $double_quotes;
+$var = 'String';
+$single_quotes_var = 'This is a '.$var;
+$double_quotes_var = &quot;This is a $var&quot;;
+echo $single_quotes_var;
+echo $double_quotes_var;
+$var = 'This';
+$single_quotes_var_pre = $var . ' is a String';
+$double_quotes_var_pre = &quot;$var is a String&quot;;
+echo $single_quotes_var_pre;
+echo $double_quotes_var_pre;
+?&gt;
+</code></pre><p>接下来，让我们以前文章提到过的Opcodes生成器来看看，最终我们的这段代码是怎么被执行的：</p><pre><code>Branch analysis from position: 0
+Return found
+filename: /home/xinchen/string.php
+function name: (null)
+number of ops: 24
+compiled vars: !0 = $single_quotes, !1 = $double_quotes, !2 = $var, !3 = $single_quotes_var, !4 = $double_quotes_var, !5 = $single_quotes_var_pre, !6 = $double_quotes_var_pre
+line # op fetch ext return operands
+-------------------------------------------------------------------------------
+   2 0 ASSIGN !0, 'This+is+a+String'
+   3 1 ASSIGN !1, 'This+is+a+String'
+   4 2 ECHO !0
+   5 3 ECHO !1
+   7 4 ASSIGN !2, 'String'
+   8 5 CONCAT ~3 'This+is+a+', !2
+   6 ASSIGN !3, ~3
+   9 7 INIT_STRING ~5
+   8 ADD_STRING ~5 ~5, 'This+is+a+'
+   9 ADD_VAR ~5 ~5, !2
+   10 ASSIGN !4, ~5
+11 11 ECHO !3
+12 12 ECHO !4
+14 13 ASSIGN !2, 'This'
+16 14 CONCAT ~8 !2, '+is+a+String'
+   15 ASSIGN !5, ~8
+17 16 INIT_STRING ~10
+   17 ADD_VAR ~10 ~10, !2
+   18 ADD_STRING ~10 ~10, '+is+a+String'
+   19 ASSIGN !6, ~10
+19 20 ECHO !5
+20 21 ECHO !6
+22 22 RETURN 1
+   23* ZEND_HANDLE_EXCEPTION
+</code></pre><p>注意第0到第3条op line, 可以看出在没有使用变量替换的情况下，双引号的和单引号所产生的Opcodes是一样的。
+再来看：第4到第12条， 可以发现，在使用变量替换的情况下，使用双引号和单引号所生成的Opcodes是不一样的，我们来分析双引号情况下的Opcodes：</p><pre><code>7 INIT_STRING 初始化一个字符串变量，存放在~5临时变量中。
+8 ADD_STRING 将第一部分字符串写入。
+9 ADD_VAR 将变量替换的字符串写入。
+</code></pre><p>第16-28行同理。</p><p>从这里我们可以发现，在使用双引号的情况下和使用单引号的情况下，同样的逻辑，所经历的执行确实不一样的(因为,Opcodes对于PHP来说就是最终的执行代码)。单单从生成的Opcods数量来说，就已经足以证明确实是使用单引号会快了。
+至于编译阶段，双引号和单引号的区别也是很大的， 我就举个数字来说明： 在scanning阶段， 对于双引号的词法规则有14条，而对于单引号，仅仅只有6条。</p><p>呵呵，是不是经过这样的分析，你会更清楚的了解到以后该怎么使用单引号和双引号了呢？
+顺便说一句，对于不需要变量替换的纯字符串，大家都知道，因为在C/C++中，双引号才表示字符串，所以这种情况下，还是使用双引号的好。</p><p>另外对于W3C标准来说， HTML中的属性值应该是使用双引号来包含的 ，所以不要习惯了单引号，到处滥用哦
+以上是单引号与双引号的区别，摘记下来，便于随时翻看。</p></div><footer class=post-footer><ul class=post-tags><li><a href=https://phpgao.github.io/tags/php/>PHP</a></li><li><a href=https://phpgao.github.io/tags/quote/>quote</a></li></ul><nav class=paginav><a class=prev href=https://phpgao.github.io/typecho_toc.html><span class=title>« Prev Page</span><br><span>让typecho支持table-of-contents</span></a>
+<a class=next href=https://phpgao.github.io/regex_abc.html><span class=title>Next Page »</span><br><span>正则表达式教程</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

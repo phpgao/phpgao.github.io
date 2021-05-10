@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>router on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/router/</link>
+    <description>Recent content in router on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 13 Dec 2017 03:25:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/router/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>斐讯路由器k2-k2p-k3刷机教程和固件推荐</title>
+      <link>https://phpgao.github.io/phicomm_router.html</link>
+      <pubDate>Wed, 13 Dec 2017 03:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phicomm_router.html</guid>
+      <description>&lt;p&gt;自从2年前斐讯开始免费购机活动开始，老高前前后后入了K1 K2&lt;em&gt;5 K2P&lt;/em&gt;2 K3*2，目前K1已经废弃，K2,K2P,K3都刷好固件后服役，为了让大家更好的薅羊毛，老高总结了一些购买和刷机经验分享给大家。&lt;/p&gt;
+&lt;p&gt;K3在家里做主路由，K2P用做二级路由，K2和K2P因为有华硕固件自带802.1x认证，所以在公司做主路由用，关于斐讯K3路由器802.1x，其实其他路由器也是可以的，但是&lt;/p&gt;
+&lt;p&gt;通过阅读本文，你可以学到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最适合自己的购买0元购斐讯路由器K2,K2P,K3&lt;/li&gt;
+&lt;li&gt;斐讯K2刷机&lt;/li&gt;
+&lt;li&gt;斐讯K2p刷机&lt;/li&gt;
+&lt;li&gt;斐讯K3刷机&lt;/li&gt;
+&lt;li&gt;各种适合斐讯K2,K2P,K3路由器的固件&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>梅林固件迅雷远程开机自启设置</title>
+      <link>https://phpgao.github.io/merlin_xware_start_on_boot.html</link>
+      <pubDate>Sat, 26 Dec 2015 14:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/merlin_xware_start_on_boot.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/12/2370665736.png&#34; alt=&#34;merlin_xware_start_on_boot&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>入手R6300-V2，大家有什么想说的？</title>
+      <link>https://phpgao.github.io/r6300v2.html</link>
+      <pubDate>Thu, 05 Nov 2015 12:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/r6300v2.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/548519534.jpg&#34; alt=&#34;R6300 V2&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>openwrt中br-lan,eth0,eth0.1,eth0.2</title>
+      <link>https://phpgao.github.io/openwrt-interface.html</link>
+      <pubDate>Tue, 02 Jun 2015 11:07:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/openwrt-interface.html</guid>
+      <description>&lt;p&gt;openwrt的接口真是多，老高一下子都看晕了，不过仔细理一理，还是能够分辨的。&lt;/p&gt;
+&lt;p&gt;首先盗openwrt-wiki中的一张图，这张图对理解这些接口很重要！&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/3406911994.png&#34; alt=&#34;asus-internals-default&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之redsocks2的配置篇</title>
+      <link>https://phpgao.github.io/redsocks_config.html</link>
+      <pubDate>Sun, 17 May 2015 04:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/redsocks_config.html</guid>
+      <description>&lt;p&gt;刚刚(2015-05-17 12:00:15)老高刷了目前最新的小米路由mini的pandorabox固件(&lt;strong&gt;r820&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;很多朋友说这个版本的redsocks2升级为加强版，选项太多，于是不会配置了。&lt;/p&gt;
+&lt;p&gt;下面老高就来讲讲如何配置redsocks2，以及如何与chinadns联合配置。&lt;/p&gt;
+&lt;p&gt;如果需要了解更详细的配置，请参考老高的另一篇 &lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;小米路由器mini折腾之自动翻墙篇&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>编译小米路由mini的openwrt固件</title>
+      <link>https://phpgao.github.io/xiaomi_router_openwrt.html</link>
+      <pubDate>Tue, 28 Apr 2015 16:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_openwrt.html</guid>
+      <description>&lt;p&gt;花了一天，终于编译好了小米路由器的openwrt，过程真是一波三折。。。值得一讲。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之DNS查询失败的排查方法</title>
+      <link>https://phpgao.github.io/xiaomi_router_dns_dump.html</link>
+      <pubDate>Tue, 14 Apr 2015 15:05:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_dns_dump.html</guid>
+      <description>&lt;p&gt;想必大家为了科学上网，已经为自己的路由器刷上了openwrt/pandorabox了吧？&lt;/p&gt;
+&lt;p&gt;经过老高的统计，目前关于浏览器访问量最高的是这两篇文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/carzy_router.html&#34;&gt;小米路由器mini折腾之自动翻墙篇&lt;/a&gt;
+&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router_shadowsocks_libev_spec.html&#34;&gt;小米路由器mini折腾之安装shadowsocks-libev-spec(解决DNS污染)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;不知道大家是否能够通过两篇文章的学习研究实现了科学上网呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之配置opkg篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_opkg.html</link>
+      <pubDate>Sun, 22 Mar 2015 15:41:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_opkg.html</guid>
+      <description>&lt;h2 id=&#34;动机&#34;&gt;动机&lt;/h2&gt;
+&lt;p&gt;opkg是openwrt里的软件包管理器，类似mac下的brew、Ubuntu下的apt-get和centos下的yum。&lt;/p&gt;
+&lt;p&gt;但是为什么有很多同学都没办法在openwrt中使用opkg，其主要原因其实嵌入式的硬件繁多，不像我们一般PC只有i386和AMD64之分。&lt;/p&gt;
+&lt;p&gt;此方法适用于OpenWRT,Pandorabox,官方系统。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之DDNS动态域名解析篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_ddns.html</link>
+      <pubDate>Wed, 18 Mar 2015 01:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_ddns.html</guid>
+      <description>&lt;p&gt;老高家里用的是联通10M宽带，500/年。自从小米路由器mini刷了pandorabox后无法使用官方的APP管理设备，于是想到了使用openwrt自带的DDNS，即动态DNS来远程管理家里的路由器。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之刷不死uboot篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_uboot.html</link>
+      <pubDate>Sun, 08 Mar 2015 01:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_uboot.html</guid>
+      <description>&lt;p&gt;u-boot是一种普遍用于嵌入式系统中的Bootloader,Bootloader是在操作系统运行之前执行的一小段程序。他可以用来恢复小米路由器的固件，可以说只要刷了uboot，你的路由器基本上刷不死了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以下操作都是在你获取了root信息后才可以实现。&lt;/strong&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之去adbyby广告篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_noad.html</link>
+      <pubDate>Sat, 07 Mar 2015 14:25:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_noad.html</guid>
+      <description>&lt;p&gt;为了去广告，普通用户可在扩展插件中找到非官方插件-网页广告拦截，安装即可！&lt;/p&gt;
+&lt;p&gt;但是这种方法的缺点也很明显，无法自由控制去广告功能，而adbyby官方为我们提供了MT7620A平台的编译版本，我们只需要下载运行即可！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之远程下载篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</link>
+      <pubDate>Thu, 12 Feb 2015 14:15:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_mini_remote_download.html</guid>
+      <description>&lt;p&gt;小米路由器mini刷了Pandorabox后还是可以使用迅雷的远程下载的，步骤如下：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之Python篇</title>
+      <link>https://phpgao.github.io/xiaomi_router_python.html</link>
+      <pubDate>Tue, 10 Feb 2015 13:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_python.html</guid>
+      <description>&lt;p&gt;上回老高写了翻墙篇，寻思着这openwrt下能不能跑个python，继续折腾！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之自动翻墙篇</title>
+      <link>https://phpgao.github.io/carzy_router.html</link>
+      <pubDate>Sun, 04 Jan 2015 14:47:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/carzy_router.html</guid>
+      <description>&lt;p&gt;趁着节假日，终于搞定了路由器的自动翻墙，终于有自己的翻墙路由器了，之后一发而不可收，记录了一些折腾的文章，索引在此&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://blog.phpgao.com/xiaomi_router.html&#34;&gt;openwrt路由器折腾教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;附赠 &lt;a href=&#34;https://blog.phpgao.com/slip_across_gfw.html&#34;&gt;翻越功夫网教程索引&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;自从发现Pandorabox在&lt;code&gt;r355版&lt;/code&gt;在固件中整合了ss，redsocks2和ChinaDNS-C，省下了不少事儿。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;有同学反应r355-20150114被移除，刚好老高有存货，文中有百度网盘下载&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本教程同样适用于其他openwrt系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;推荐查看&lt;strong&gt;更好的方案&lt;/strong&gt;一节！&lt;/p&gt;
+&lt;p&gt;你可能根据一下关键词找到此文章：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pandorabox openwrt 安装redsocks2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;翻墙路由器&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;路由器翻墙教程&lt;/li&gt;
+&lt;li&gt;pandorabox openwrt 路由器翻墙&lt;/li&gt;
+&lt;li&gt;小米路由器翻墙 教程&lt;/li&gt;
+&lt;li&gt;打造自动翻墙的路由器&lt;/li&gt;
+&lt;li&gt;设置路由器翻墙&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析3---路由分发</title>
+      <link>https://phpgao.github.io/typecho_source_code_dispatch.html</link>
+      <pubDate>Sun, 12 Oct 2014 01:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_dispatch.html</guid>
+      <description>上一节
+时光匆匆，我们终于来到路由工作的地方。几乎每个MVC框架都不会缺少路由功能，因为他实在太重要了。
+路由的功能简单的说就是根据请求找到对应业务代码，请求来自外部，业务由系统提供，路由器为二者建立了可靠的链接。
+typecho和thinkphp都有路由模块，虽然实现方式不同，但用法却惊人的相似！
+thinkphp：
+Dispatcher::dispatch(); typecho：
+Typecho_Router::dispatch(); typecho的路由实现是保存在数据库中的路由表，使用正则匹配路径，这一点和Django框架有点像，thinkphp则是基于自己设定的一套规则，详见官方文档。
+typecho的路由表如下数组组成，路由器类会使用子数组中的regx正则式逐个匹配pathinfo中的路径，如果匹配成功，立即初始化并执行该类对应的action。
+以index为例，如果使用正则表达式匹配成功，系统就会新建Widget_Archive类并执行其render方法，看他的名字就知道执行的是渲染页面的方法，也就是之前说的业务。
+Array([index] =&amp;gt; Array([url] =&amp;gt; /[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^[/]?$|[format] =&amp;gt; /[params] =&amp;gt; Array())[archive] =&amp;gt; Array([url] =&amp;gt; /blog/[widget] =&amp;gt; Widget_Archive[action] =&amp;gt; render[regx] =&amp;gt; |^/blog[/]?$|[format] =&amp;gt; /blog/[params] =&amp;gt; Array())# .... 有的同学可能会说，typecho的路由表写在数据库里，不够灵活。其实作者也考虑到了，大家可以自由扩展路由表。有兴趣的同学可以去看看Helper类中addRoute和removeRoute的用法。举个例子，如果你需要自定义一个URL,比如www.phpgao.com/robots.txt，就可以在路由表加入如下路由：
+[robots] =&amp;gt; Array([url] =&amp;gt; /robots.</description>
+    </item>
+    
+  </channel>
+</rss>

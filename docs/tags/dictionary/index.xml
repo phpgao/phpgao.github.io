@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dictionary on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dictionary/</link>
+    <description>Recent content in dictionary on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Sep 2014 03:55:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP导出项目的数据字典</title>
+      <link>https://phpgao.github.io/data_dictionary_exported_by_php.html</link>
+      <pubDate>Tue, 23 Sep 2014 03:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/data_dictionary_exported_by_php.html</guid>
+      <description>突然想到这个方法，果然已经有人实现了。
+有这个脚本也能看出来，数据表的很多信息都保存在INFORMATION_SCHEMA.TABLES表里，还有数据表注释的重要性！
+&amp;lt;?php/*** 生成mysql数据字典* @author niming&amp;lt;287384795@qq.com&amp;gt;*///配置数据库$dbserver = &amp;quot;localhost&amp;quot;;$dbusername = &amp;quot;root&amp;quot;;$dbpassword = &amp;quot;root&amp;quot;;$database = &#39;mydb&#39;;//其他配置$title = &#39;系统数据字典&#39;;$mysql_conn = @mysql_connect(&amp;quot;$dbserver&amp;quot;, &amp;quot;$dbusername&amp;quot;, &amp;quot;$dbpassword&amp;quot;) or die(&amp;quot;Mysql connect is error.&amp;quot;);mysql_select_db($database, $mysql_conn);mysql_query(&#39;SET NAMES utf8&#39;, $mysql_conn);$table_result = mysql_query(&#39;show tables&#39;, $mysql_conn);//取得所有的表名while ($row = mysql_fetch_array($table_result)) {$tables[][&#39;TABLE_NAME&#39;] = $row[0];}//循环取得所有表的备注foreach ($tables AS $k=&amp;gt;$v) {$sql = &#39;SELECT * FROM &#39;;$sql .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>clear on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/clear/</link>
+    <description>Recent content in clear on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 18 May 2014 10:14:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/clear/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP清除html格式</title>
+      <link>https://phpgao.github.io/html_tag_clear.html</link>
+      <pubDate>Sun, 18 May 2014 10:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/html_tag_clear.html</guid>
+      <description>做采集的都知道，一般采集过来的内容难免会带有html标签，如果有太多的标签会影响之后的数据分析或提取，所以需要过滤掉！PHP已经为我们提供了很多清除html格式的方法了，下面就让老高介绍一下。
+strip_tags strip_tags($str) 去掉 HTML 及 PHP 的标记 语法: string strip_tags(string str); 传回值: 字串 函式种类: 资料处理 内容说明 : 解析：本函式可去掉字串中包含的任何 HTML 及 PHP 的标记字串。若是字串的 HTML 及 PHP 标签原来就有错，例如少了大于的符号，则也会传回错误。这个函数和 fgetss() 有着相同的功能
+例子
+echo strip_tags(&amp;#34;Hello &amp;lt;b&amp;gt;world!&amp;lt;/b&amp;gt;&amp;#34;); # Hello world! htmlspecialchars 这个函数把html中的标签转换为html实体，博客的代码展示就必须使用这个函数，要不贴出来的代码就会被执行了。 预定义的字符是： &amp;amp; （和号） 成为 &amp;amp; ” （双引号） 成为 ” ‘ （单引号） 成为 ‘ &amp;lt; （小于） 成为 &amp;lt; &amp;gt; （大于） 成为 &amp;gt;
+例子
+$new = htmlspecialchars(&amp;#34;&amp;lt;a href=&amp;#39;test&amp;#39;&amp;gt;Test&amp;lt;/a&amp;gt;&amp;#34;, ENT_QUOTES); echo $new; # &amp;amp;lt;a href=&amp;amp;#039;test&amp;amp;#039;&amp;amp;gt;Test&amp;amp;lt;/a&amp;amp;gt; # 如果需要展现&amp;lt;br&amp;gt;，那么浏览器解析HTML的时候会自动将他变为换行 # 但是通过htmlspecialchars就可以让&amp;lt; 变为 &amp;amp;#039;  与htmlspecialchars功能相反的函数是htmlspecialchars_decode，他会把HTML实体转化为字符！</description>
+    </item>
+    
+  </channel>
+</rss>

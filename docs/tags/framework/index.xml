@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>framework on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/framework/</link>
+    <description>Recent content in framework on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 25 Jun 2015 04:42:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/framework/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>发现了一个不错的PHP框架Slim</title>
+      <link>https://phpgao.github.io/php-slim-framework.html</link>
+      <pubDate>Thu, 25 Jun 2015 04:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php-slim-framework.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2369929849.png&#34; alt=&#34;Slim Framework&#34;  /&gt;
+&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Slim的中文意思是苗条的。&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>PHP的框架常用函数</title>
+      <link>https://phpgao.github.io/php_framework_frequently_used.html</link>
+      <pubDate>Sat, 11 Oct 2014 07:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/php_framework_frequently_used.html</guid>
+      <description>spl_autoload_register、set_exception_handler和set_error_handler、get_include_path等。
+spl_autoload_register 与__autoload函数一样，但是更灵活。他的功能是当程序找不到当前正在使用的类时，在报错前，会调用此函数，如果找到了，就继续工作。
+set_exception_handler 接管了原本的异常处理，可以隐藏或者美化输出，可以用throw new Exception触发。
+set_error_handler 同上，接管了错误处理。可以用trigger_error触发。</description>
+    </item>
+    
+    <item>
+      <title>我们为什么使用框架</title>
+      <link>https://phpgao.github.io/framework_faq.html</link>
+      <pubDate>Fri, 10 Oct 2014 13:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/framework_faq.html</guid>
+      <description>&lt;p&gt;这篇文章于昨日早在215路早读时看到，写的很不错！可以作为学习框架或者写自己的框架之前的读物。&lt;/p&gt;
+&lt;p&gt;ps.文章中提到了一个名词——&lt;strong&gt;控制反转&lt;/strong&gt;。这个词可能经常会考倒刚入门程序员。控制反转其实其实是一种外包的思想，将总做交给各个领域的&amp;rsquo;专家&amp;rsquo;去做，而你只负责如何调度他们的工作。明确的分工会给系统带来很多维护上的便利。这个概念常常和&lt;strong&gt;依赖注入&lt;/strong&gt;同时出现，而什么是依赖注入呢？其实他是控制反转的一个实现方式。&lt;/p&gt;
+&lt;p&gt;如果你对框架这个概念还不是很理解，那么还可以参考一下老高的系列文章&lt;a href=&#34;https://blog.phpgao.com/thinkphp_init.html&#34;&gt;THINKPHP框架解析&lt;/a&gt;，老高带你深入框架内部，去看看框架到底做了什么，和为什么这么做。希望这篇转帖和老高的文章能够帮助你深入理解框架的作用。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>thinkphp框架解析0----起源</title>
+      <link>https://phpgao.github.io/thinkphp_init.html</link>
+      <pubDate>Thu, 25 Sep 2014 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/thinkphp_init.html</guid>
+      <description>&lt;p&gt;THINKPHP是国人开发的PHP框架，如今终于深入内部打探了一番，下面给大家分享老高的心得。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

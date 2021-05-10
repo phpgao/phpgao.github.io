@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>re on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/re/</link>
+    <description>Recent content in re on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Oct 2017 11:02:51 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/re/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>解决rename不支持正则的问题</title>
+      <link>https://phpgao.github.io/rename_to_prename.html</link>
+      <pubDate>Fri, 13 Oct 2017 11:02:51 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/rename_to_prename.html</guid>
+      <description>&lt;p&gt;一句话命令&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

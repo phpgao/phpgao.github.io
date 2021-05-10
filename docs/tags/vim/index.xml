@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>vim on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/vim/</link>
+    <description>Recent content in vim on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Apr 2015 16:54:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shadowsocks一键安装脚本</title>
+      <link>https://phpgao.github.io/ss_onekey_installation.html</link>
+      <pubDate>Fri, 24 Apr 2015 16:54:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ss_onekey_installation.html</guid>
+      <description>&lt;p&gt;摘自&lt;strong&gt;搬瓦工&lt;/strong&gt;后台，脚本简洁明了，请自取。&lt;/p&gt;
+&lt;p&gt;一键安装需求：&lt;/p&gt;
+&lt;p&gt;centos6 + root用户。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac下vim的美化配置</title>
+      <link>https://phpgao.github.io/mac_vim_configure.html</link>
+      <pubDate>Wed, 28 Jan 2015 13:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_vim_configure.html</guid>
+      <description>&lt;p&gt;osx系统有些配置文件地方和Linux系统不太一样真是让人捉急&lt;/p&gt;
+&lt;p&gt;以VIM为例&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>vim入门</title>
+      <link>https://phpgao.github.io/vim_ABC.html</link>
+      <pubDate>Thu, 31 Jul 2014 07:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vim_ABC.html</guid>
+      <description>vim常用命令 VIM虽说不长用，然是还是很需要掌握的，VIM功能强大的没话说，就是命令太多不好记！
+老高就来慢慢总结一下VIM的常用命令和技巧吧！
+ 命令 选择，删除，复制，粘贴    快捷键 作用     v 从光标当前行开始，光标经过的行都会被选中，再按一下v结束   V 从光标当前行开始，光标经过的行都会被选中，再按一下V结束   Ctrl + v 从光标当前位置开始，选中光标起点和终点所构成的矩形区域，再按一下Ctrl + v结束。   gg``VG 选中全部的文本，其中gg为跳到行首，V选中整行，G末尾   y 复制 （默认是复制到&amp;quot;寄存器   p 粘贴 （默认从&amp;quot;寄存器取出内容粘贴）   &amp;quot;+y 复制到系统剪贴板(也就是vim的+寄存器）   删除 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   d 删除   x 删除字符   dd 删除一行   J 删除换行符，两行合并为一行   重做 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   u 撤销   CTRL + R 反转撤消   U 一次撤消对一行的全部操作 第二次使用该命令则会撤消前一个U的操作   追加 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   i 在当前光标之前插入文本。   a 在当前光标之后插入文本。   o 在当前行的下面另起一行，并使当前模式转为Insert模式。   O 将在当前行的上面另起一行。   使用命令计数 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓   kkkkkkkkk 或 9k 要向上移动9行   a!</description>
+    </item>
+    
+    <item>
+      <title>vim中文乱码的解决办法</title>
+      <link>https://phpgao.github.io/vim_garbled.html</link>
+      <pubDate>Mon, 28 Jul 2014 06:24:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/vim_garbled.html</guid>
+      <description>以centos为例，执行yum install -y vim后，打开php、py等文件，发现中文乱码了。。。
+google之
+解决办法：
+vim /etc/.vimrc 将以下内容写入
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936set termencoding=utf-8set encoding=utf-8 再次打开，中文已正常显示。</description>
+    </item>
+    
+  </channel>
+</rss>

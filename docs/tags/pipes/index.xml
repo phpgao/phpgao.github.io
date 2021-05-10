@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>pipes on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/pipes/</link>
+    <description>Recent content in pipes on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 19 Jan 2015 05:18:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/pipes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mysql中localhost和127.0.0.1的区别</title>
+      <link>https://phpgao.github.io/mysql_hostname_issue.html</link>
+      <pubDate>Mon, 19 Jan 2015 05:18:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mysql_hostname_issue.html</guid>
+      <description>mysql的默认的root用户会有很多行，自习观察后你就会发现每行的用户名或密码可能相同，但是host一定不同，host是登陆用户的主机名，也就是说，&amp;lsquo;localhost&amp;rsquo;,&amp;lsquo;127.0.0.1&amp;rsquo;,&amp;lsquo;phpgao.local&amp;rsquo;,&#39;%&amp;lsquo;都算不同的用户！
+理解了这一点后，那么我的问题就附上水面了！
+有些TX经常会遇到这个问题：
+ 使用PHP连接mysql数据库，使用localhost作为主机名总是连接失败，但是使用&#39;127.0.0.1&amp;rsquo;就可以顺利连接，这到底是为什么？
+  mysql中HOST为localhost和127.0.0.1到底有什么区别？
+ 经过一番搜索，老高总结如下：
+使用到的命令
+mysql&amp;gt;status; mysql&amp;gt;show grants;   类Unix系统下，如果不使用-h指定主机名或者使用了localhost，那么会使用unix domain socket与mysql服务器沟通，比TCP/IP快一些！所以你想使用TCP/IP协议，请将host指定为&#39;127.0.0.1&amp;rsquo;。
+  PHP连接mysql如果使用&amp;rsquo;localhost&amp;rsquo;发生问题，首先可以明确的是PHP会试着使用unix domain socket与服务器连接，所以请检查php.ini中mysql.default_socket = /var/mysql/mysql.sock是否配置正确。
+  如果想要明确连接方式，可以再配置文件中显式声明
+  protocol=tcp 在mysql的官方文档中解释道:如果mysql在win上跑，如果系统开启了&amp;ndash;enable-named-pipe，然后访问服务器的时候没有指定hostname，那么mysql客户端会以pipe为优先连接，如果连接失败，那么再会去尝试使用TCP/IP去连接。你可以指定hostname为.在win下强制使用pipes。   If the MySQL server is running on Windows, you can connect using TCP/IP. If the server is started with the &amp;ndash;enable-named-pipe option, you can also connect with named pipes if you run the client on the host where the server is running.</description>
+    </item>
+    
+  </channel>
+</rss>

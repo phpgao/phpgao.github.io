@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>serach on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/serach/</link>
+    <description>Recent content in serach on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 12 Feb 2014 15:39:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/serach/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>三款文本批量查找替换工具</title>
+      <link>https://phpgao.github.io/batch_search_and_replace.html</link>
+      <pubDate>Wed, 12 Feb 2014 15:39:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/batch_search_and_replace.html</guid>
+      <description>码农必备，全部免费，神器不解释！
+超级替换V5.02（UltraReplace）  喜欢：功能繁多，多内容替换是亮点，拖拽功能十分方便，对各种编码支持较好。 吐槽：查找功能好弱啊~  文本批量搜索替换V6.5（Search_and_Replace）  喜欢：功能强大，支持ZIP文件 吐槽：新版旧版变化不大，不支持UTF8  字符查找（FindStr）  喜欢：界面简洁，可以与资源管理器关联，也支持ZIP文件，最重要的是支持UTF8！！ 吐槽：不能拖拽，功能简单。 丢个链接走人~ 解压密码： www.phpgao.com 下载地址：  http://pan.</description>
+    </item>
+    
+  </channel>
+</rss>

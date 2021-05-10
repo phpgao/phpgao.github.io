@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>privoxy on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/privoxy/</link>
+    <description>Recent content in privoxy on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 19 Jun 2015 02:04:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/privoxy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Privoxy将socks5代理转为http代理</title>
+      <link>https://phpgao.github.io/privoxy-shadowsocks.html</link>
+      <pubDate>Fri, 19 Jun 2015 02:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/privoxy-shadowsocks.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/13067004.png&#34; alt=&#34;访问谷歌&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家都知道shadowsocks只提供了SOCKS5的代理，而没有提供http代理，而很多软件仅提供了http代理的支持，比如老高需要使用shell命令行扶墙，或者使用git同步android的源代码，再或者更新android SDK，该怎么办呢？&lt;/p&gt;
+&lt;p&gt;老高在此介绍一个软件&lt;a href=&#34;http://www.privoxy.org&#34;&gt;Privoxy&lt;/a&gt;，它可以作为&lt;strong&gt;代理的代理&lt;/strong&gt;，为我们解决上述问题！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing privacy, modifying web page data and HTTP headers, controlling access, and removing ads and other obnoxious Internet junk. Privoxy has a flexible configuration and can be customized to suit individual needs and tastes. It has application for both stand-alone systems and multi-user networks.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;由介绍看来，privoxy的功能可远远不止http代理这么简单！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

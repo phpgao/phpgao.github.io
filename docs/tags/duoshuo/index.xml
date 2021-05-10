@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>duoshuo on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/duoshuo/</link>
+    <description>Recent content in duoshuo on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 May 2015 04:34:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/duoshuo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>让多说支持UA的显示</title>
+      <link>https://phpgao.github.io/duoshuo_user_agent.html</link>
+      <pubDate>Mon, 25 May 2015 04:34:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/duoshuo_user_agent.html</guid>
+      <description>&lt;p&gt;代码由 huhuhuhu 提供&lt;/p&gt;
+&lt;p&gt;地址 &lt;a href=&#34;http://git.oschina.net/huhuhuhu/Make-DUOSHUO-Show-UA&#34;&gt;huhu呼呼 / Make DUOSHUO Show UA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;老高的博客目前的评论系统使用了 多说 + typecho多说插件，最近才发现了多说还可以支持显示UA，动手吧。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>多说圆形旋转头像</title>
+      <link>https://phpgao.github.io/duoshuo_css_custom.html</link>
+      <pubDate>Sun, 08 Mar 2015 15:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/duoshuo_css_custom.html</guid>
+      <description>&lt;p&gt;其实现使用了css3的一些特性。使用方法很简单！&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

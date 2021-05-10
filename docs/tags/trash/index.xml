@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>trash on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/trash/</link>
+    <description>Recent content in trash on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 May 2015 11:43:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/trash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux下安装trash-cli防止误删文件</title>
+      <link>https://phpgao.github.io/linux-trash-cli.html</link>
+      <pubDate>Thu, 28 May 2015 11:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux-trash-cli.html</guid>
+      <description>&lt;p&gt;玩过Linux的同学应该都知道这个要命的命令，此命令一出，系统几乎废了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;虽然一再强调&lt;code&gt;rm&lt;/code&gt;的时候要注意，但是还是会有同学犯错误删文件，有什么办法能够减少此类事情的发生呢？&lt;/p&gt;
+&lt;p&gt;今天老高就要介绍此工具&amp;mdash;&amp;ndash;  &lt;code&gt;trash-cli&lt;/code&gt;。他实现了类似回收站的功能，以后删除的时候就有了后悔药。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/2919137931.jpg&#34; alt=&#34;trash-cli&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

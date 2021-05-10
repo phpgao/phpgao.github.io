@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>shanghai on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/shanghai/</link>
+    <description>Recent content in shanghai on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Aug 2015 11:59:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/shanghai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>最近的见闻</title>
+      <link>https://phpgao.github.io/recent_august.html</link>
+      <pubDate>Sat, 22 Aug 2015 11:59:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/recent_august.html</guid>
+      <description>&lt;p&gt;老高最近告别了20多年的西安生活，一人坐火车来到上海，还好有老伙计收留。&lt;/p&gt;
+&lt;p&gt;最近没有更新文章，但想写的其实很多。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/08/2886413420.png&#34; alt=&#34;14小时的火车&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>submodule on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/submodule/</link>
+    <description>Recent content in submodule on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 May 2015 06:57:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/submodule/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git的submodule的使用总结</title>
+      <link>https://phpgao.github.io/git_submodule.html</link>
+      <pubDate>Tue, 12 May 2015 06:57:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/git_submodule.html</guid>
+      <description>&lt;p&gt;老高最近的项目用到了git的submodule，期间遇到了很多坑，比如：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何更新submodule
+如何修改并提交submodule
+如何将submodule的变更在父项目中提交&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

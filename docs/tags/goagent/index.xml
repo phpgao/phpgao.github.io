@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>goagent on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/goagent/</link>
+    <description>Recent content in goagent on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 10 Jun 2014 06:31:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/goagent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>记一次goagent的设置</title>
+      <link>https://phpgao.github.io/ga.html</link>
+      <pubDate>Tue, 10 Jun 2014 06:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ga.html</guid>
+      <description>##下载
+项目地址: https://github.com/goagent/goagent
+APP配置 到https://appengine.google.com/新建一个或多个app，注意记录下app的ID！
+一个appid每天只有1G的流量
+上传服务器端脚本 解压至某文件夹，此处假设为d:\app\goagent318\，然后进去server，运行uploader.bat批处理
+按提示输入信息即可，可能会很慢。
+多个appid请用’|’隔开，即回车键上面那个
+貌似现在一个帐号能创建25个app，每天25G流量，够用了吧？
+只要在服务器上部署成功，以后就不用管server文件夹了 :-D ，除非你又要添加新的app才会用到！
+此步骤只是把goagent的服务器端部署到你的在线APP上，等待你去调用他，所以下一步就是配置本地的文件，以实现对接。
+部署成功的标志是看到这里的https://appengine.google.com/应用都在running即可！
+本地配置 难点在这一步，废话比较多，我就粘贴一下官网的教程吧
+编辑local\proxy.ini，把其中appid = goagent中的goagent 改成你之前申请的应用的appid (用windows的记事本也可以） 如果要使用多个appid，appid之间用|隔开，如：appid1|appid2|appid3，每个appid必须确认上传成功才能使用 格式 如下：
+[gae] appid = app-0|app-1|app-3|app-4 运行local下的goagent.exe，测试一下配置是否成功！推荐迅雷的代理测试
+高级技巧 修改goagent端口 你可以修改端口以达到分流的作用，比如，使用默认8087端口上网用，再建一个使用8089端口的goagent，然后使用这个端口下载东西或者什么的，只要端口不冲突，你就可以建立多个代理，以达到分流的目的！
+怎么修改呢？
+先结束goagent进程，复制一份出来命名goagent318-d，原来的那个叫goagent318-w，d means download,w means web! 还是修改那个proxy.ini，找到[listen]，应该在第一行，然后修改port = 8087为port = 8089，端口就改好了 讲appid按需分配给各个端口对应的程序，如我有十个app，给迅雷分5个，web分4个，再留一个备用！
+在chrome中使用goagent 这个要用到SwitchySharp，怎么使用，自己百度吧！
+goagent的GUI版本 这个挺不错的，方便小白使用，推荐下载绿色版！
+围观地址：https://goagent.codeplex.com/
+打造自己的网页代理 这个比较酷！不适用google，而是使用自己的网站做代理！只要你的主机在香港或者美国，就可以用PHP模拟成goagent的server端，然后就可以翻越GFW了
+设置方法请参考
+http://www.blogfeng.com/goagent-space-into-a-proxy-server-for-php.html
+2015年1月12日更新：
+ 更新项目地址 fqrouter2已经停止更新 更好的翻墙方案 shadowsocks  </description>
+    </item>
+    
+  </channel>
+</rss>

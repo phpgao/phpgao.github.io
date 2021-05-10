@@ -1,0 +1,82 @@
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Posts | 老高的技术博客</title><meta name=keywords content><meta name=description content="记录和分享，与你每天进步一点点。"><meta name=author content="Me"><link rel=canonical href=https://phpgao.github.io/posts/><link crossorigin=anonymous href=/assets/css/stylesheet.min.1a6ee89730e13a801d0f34e0cb5b98e96cf8c65b80500638bd599fc224ed8442.css integrity="sha256-Gm7olzDhOoAdDzTgy1uY6Wz4xluAUAY4vVmfwiTthEI=" rel="preload stylesheet" as=style><link rel=preload href="https://cdn.v2ex.com/gravatar/2b66f45a3e2f41db6522381006bfaea1?s=192" as=image><link rel=icon href=https://phpgao.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://phpgao.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://phpgao.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://phpgao.github.io/apple-touch-icon.png><link rel=mask-icon href=https://phpgao.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.83.1"><link rel=alternate type=application/rss+xml href=https://phpgao.github.io/posts/index.xml><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-39288145-2','auto'),ga('send','pageview'))</script><meta property="og:title" content="Posts"><meta property="og:description" content="记录和分享，与你每天进步一点点。"><meta property="og:type" content="website"><meta property="og:url" content="https://phpgao.github.io/posts/"><meta property="og:site_name" content="老高的技术博客"><meta name=twitter:card content="summary"><meta name=twitter:title content="Posts"><meta name=twitter:description content="记录和分享，与你每天进步一点点。"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://phpgao.github.io/posts/"}]}</script></head><body class=list id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script><noscript><style type=text/css>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:#1d1e20;--entry:#2e2e33;--primary:rgba(255, 255, 255, 0.84);--secondary:rgba(255, 255, 255, 0.56);--tertiary:rgba(255, 255, 255, 0.16);--content:rgba(255, 255, 255, 0.74);--hljs-bg:#2e2e33;--code-bg:#37383e;--border:#333}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><header class=header><nav class=nav><div class=logo><a href=https://phpgao.github.io/ accesskey=h title="老高的博客 (Alt + H)">老高的博客</a>
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://phpgao.github.io/categories/ title=categories><span>categories</span></a></li><li><a href=https://phpgao.github.io/tags/ title=tags><span>tags</span></a></li><li><a href=https://blog.phpgao.com title="old blog"><span>old blog</span></a></li></ul></nav></header><main class=main><header class=page-header><div class=breadcrumbs><a href=https://phpgao.github.io/>Home</a></div><h1>Posts</h1></header><article class=post-entry><header class=entry-header><h2>bad-interpreter-没有那个文件或目录</h2></header><section class=entry-content><p>bad interpreter: 没有那个文件或目录
+起因 今天在linux上运行一个python脚本，总是报错bad interpreter，开始我以为是解释器的路径问题，可是whereis python告诉我路径没有错！
+google之，问题解决：
+在windows上编辑的脚本，到linux上执行，会提示上面的错误
+解决办法 dos2unix myfilename
+报错的话执行一下yum install dos2unix -y
+原因 在windows下编辑的脚本，是dos格式的，即每一行的行尾以\r\n来标识, 其ASCII码分别是0x0D, 0x0A。
+以后再windows上的写脚本一定要三思！</p></section><footer class=entry-footer>July 29, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to bad-interpreter-没有那个文件或目录" href=https://phpgao.github.io/bad_interpreter.html></a></article><article class=post-entry><header class=entry-header><h2>#!-usr-bin-env与#!-usr-bin-python的区别</h2></header><section class=entry-content><p>今天写了个采集脚本，使用了BeautifulSoup，所以在代码中有下面的import语句
+from BeautifulSoup import BeautifulSoup as BS
+在win下执行，没问题，但是在linux下执行，就报这个错误
+ImportError: No module named BeautifulSoup
+google之
+转自快乐&&平凡
+脚本语言的第一行，目的就是指出，你想要你的这个文件中的代码用什么可执行程序去运行它，就这么简单
+#!/usr/bin/python是告诉操作系统执行这个脚本的时候，调用/usr/bin下的python解释器;
+#!/usr/bin/env python这种用法是为了防止操作系统用户没有将python装在默认的/usr/bin路径里。当系统看到这一行的时候，首先会到env设置里查找python的安装路径，再调用对应路径下的解释器程序完成操作。
+#!/usr/bin/python相当于写死了python路径;
+#!/usr/bin/env python会去环境设置寻找python目录,推荐这种写法。
+而我的/usr/bin/python是2.6版本，但是安装BeautifulSoup的是2.7。。。
+#mv /usr/bin/python /usr/bin/python2.6.6
+#ln -s /usr/local/bin/python2.7 /usr/bin/python
+成功解决!</p></section><footer class=entry-footer>July 29, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to #!-usr-bin-env与#!-usr-bin-python的区别" href=https://phpgao.github.io/usr_bin_python.html></a></article><article class=post-entry><header class=entry-header><h2>30元一年，打造自己的翻墙VPS</h2></header><section class=entry-content><p>从此告别龟速的goagent，节省下来的时间会让你觉得很值。
+为什么要自己搭梯子？
+答：请看此试验 —-> 评测告诉你：那些免费代理悄悄做的龌蹉事儿
+所以：免费的东西是最贵的！
+更多性价比VPS请移步 老高推荐的VPS，希望大家在这里能够找到适合自己的VPS
+...</p></section><footer class=entry-footer>July 28, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 30元一年，打造自己的翻墙VPS" href=https://phpgao.github.io/vps.html></a></article><article class=post-entry><header class=entry-header><h2>记一次bypy的使用</h2></header><section class=entry-content><p>无意间发现了bypy一个python写得百度网盘的linux客户端
+工具实在难得，记录一下，说不定以后能用上！
+...</p></section><footer class=entry-footer>July 28, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 记一次bypy的使用" href=https://phpgao.github.io/bypy.html></a></article><article class=post-entry><header class=entry-header><h2>vim中文乱码的解决办法</h2></header><section class=entry-content><p>以centos为例，执行yum install -y vim后，打开php、py等文件，发现中文乱码了。。。
+google之
+解决办法：
+vim /etc/.vimrc
+将以下内容写入
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+set termencoding=utf-8
+set encoding=utf-8
+再次打开，中文已正常显示。</p></section><footer class=entry-footer>July 28, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to vim中文乱码的解决办法" href=https://phpgao.github.io/vim_garbled.html></a></article><article class=post-entry><header class=entry-header><h2>在python的urllib2中使用socks代理</h2></header><section class=entry-content><p>转自潘魏增的博客！
+python2.5中的urllib2支持http代理，不支持socks代理。假如代码库或者编码时使用了urllib2，同时又要使用socks，就需要第三方的库来实现。幸运的是，已经有人造好了轮子。
+SocksiPy是一个socks module。它提供了一个类socket的接口，支持socks4、socks5和http proxy。下载后在代码中引用socks.py即可，也可以写个setup.py文件安装到python的site-packages目录中。 使用时，将下面的代码放在调用urllib2的代码之前即可：
+import socks
+import socket
+socks.setdefaultproxy(socks.PROXY_TYPE_SOCKS5, "127.0.0.1", 8080)
+socket.socket = socks.socksocket
+import urllib2
+print urllib2.urlopen('http://baidu.com').read()
+如果是自己写的程序，也可以尝试使用pycurl这个库。ubuntu使用sudo apt-get install python-pycurl python-pycurl-dbg安装。 示例代码
+import pycurl
+c = pycurl.Curl()
+c.setopt(pycurl.URL, 'http://baidu.com')
+c.setopt(pycurl.PROXY, '127.0.0.1')
+c.setopt(pycurl.PROXYPORT, 8080)
+c.setopt(pycurl.PROXYTYPE, pycurl.PROXYTYPE_SOCKS5)
+c.perform()
+如果在程序外部使用socks，推荐使用tsocks。ubuntu中直接使用sudo apt-get install tsocks安装。安装完毕以后需要修改/etc/tsocks.conf。配置样例如下
+# 默认代理服务器
+server = 127.0.0.1 # 代理服务器类型 server_type = 5 # 代理服务器端口
+server_port = 8080
+使用时，在命令行输入tsocks 程序名即可。例如ubuntu下的epiphany浏览器没有代理设置，如果想使用socks代理，输入tsocks epiphany-browser即可（注意先关闭其他的epiphany实例）。</p></section><footer class=entry-footer>July 27, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 在python的urllib2中使用socks代理" href=https://phpgao.github.io/python_socks_proxy.html></a></article><article class=post-entry><header class=entry-header><h2>使用shadowsocks轻松搭建翻墙环境教程</h2></header><section class=entry-content><p>之前大家翻墙可能都会用到免费的goagent代理，但是他速度慢，链接也不稳定，看油管更是无望，更好的解决方案是shadowsocks。
+shadowsocks是一个著名的轻量级socket代理，基于python编写。
+如果你有国外的VPS，那么使用shadowsocks搭建一个翻{防屏蔽}墙服务器是一件很轻松的事情！
+先看看shadowsocks覆盖的客户端覆盖了多少系统，连OpenWRT都支持！
+老高之前买的$4.99一年的VPS，128MB，用起来妥妥的!现在已经升级至$9.99，512MB内存，运行速度更快，翻{防屏蔽}墙速度更是没话说，如果你感兴趣，可以看看VPS购买攻略。
+看完本文，你就能够轻松打造独享的翻{防屏蔽}墙环境！甚至能够将shadowsocks安装到你的路由器中，子网设备自动翻墙！再也不需要在网上购买shadowsocks的账号了，也不需要在忍受速度巨慢的免费shadowsocks账号了。
+如果你的VPS是搬瓦工，那么恭喜你！你可以直接在后台一键安装shadowsocks，具体如何操作请参考使用搬瓦工(bandwagonhost)后台管理VPS&安全设置中如何一键安装shadowsocks一节，配置完毕后ss就会运行在后台，重启后也会自动运行。
+友情提示：有些打包好的ss程序很难保证是否会记录你的服务器信息，所以一定要经常更新服务器端的密码或端口！或者，自己编译一个。。。。。
+...</p></section><footer class=entry-footer>July 27, 2014&nbsp;·&nbsp;4 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 使用shadowsocks轻松搭建翻墙环境教程" href=https://phpgao.github.io/shadowsocks_on_linux.html></a></article><article class=post-entry><header class=entry-header><h2>在linux下安装ctorrent下载种子文件</h2></header><section class=entry-content><p>VPS大家手里多多少少都会有那么一两个（win请绕道），如果能让他们在空闲的时候帮我们下载一些很大，但是又下载很慢的种子，岂不是一举两得！
+linux命令行下的torrent下载软件真的很少([rc]Torrent和Transmission的命令行版本)，而且实在不太好用（当然是和迅雷不能比）。
+但是如果你看完此篇，也许会发现原来在命令行里下载种子其实不是那么难！
+...</p></section><footer class=entry-footer>July 27, 2014&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 在linux下安装ctorrent下载种子文件" href=https://phpgao.github.io/ctorrent.html></a></article><article class=post-entry><header class=entry-header><h2>VPS安全设置</h2></header><section class=entry-content><p>内容转自 做好VPS的基础安全防护工作
+使用linode VPS也有好长一段时间了，爱好linux也有很久好久了，自从2004年自己买了笔记本后就尝试安装各种linux发行版，包括FreeBSD这样的unix鼻祖，不过当时仅仅把爱好停留在装系统上面，并没有对linux网络服务器做深入的研究。
+很多朋友认为买了vps把系统安装上去，环境搭建好就万事大吉了，实际上并非如此，网络一直是不安全的，我们只能尽我们最大的努力做好基础的安全防护工作，尽可能的减少被攻击的可能，尽量减少非人为因素宕机的可能。
+直到自己真正的使用linux服务器后，才系统的对linux进行了学习，我的知识来源主要是鸟哥的linux私房菜基础版第三版以及鸟哥的linux私房菜服务器第三版。以下是我平时维护自己vps以及帮个别朋友维护linux服务器的一点心得，如何做好VPS的基础安全防护？
+在linode新手起步教程里，我们学习了如何安装liunx操作系统，重启linode vps，执行一些基本的系统管理任务。现在我们来进一步做好VPS的安全工作，以防非法入侵。您会学习到如何启动防火墙（iptables），设置SSH安全访问密钥，自动ban某些非法ip（Fail2ban）。当然这都是非常基础的安全防护工作。
+...</p></section><footer class=entry-footer>July 27, 2014&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to VPS安全设置" href=https://phpgao.github.io/vps_safty.html></a></article><article class=post-entry><header class=entry-header><h2>在github写博客</h2></header><section class=entry-content><p>没想到jekyll这么火啊！
+今天闲来无事，也想试试把博客搬到github玩玩。
+...</p></section><footer class=entry-footer>July 26, 2014&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 在github写博客" href=https://phpgao.github.io/github_blog.html></a></article><footer class=page-footer><nav class=pagination><a class=prev href=https://phpgao.github.io/posts/page/41/>« Prev Page</a>
+<a class=next href=https://phpgao.github.io/posts/page/43/>Next Page »</a></nav></footer></main><footer class=footer><span>&copy; 2021 <a href=https://phpgao.github.io/>老高的技术博客</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://git.io/hugopapermod rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)"><button class=top-link id=top-link type=button accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></button></a>
+<script>let menu=document.getElementById('menu');menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)},document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script></body></html>

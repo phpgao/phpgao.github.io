@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>dns on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/dns/</link>
+    <description>Recent content in dns on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 27 Apr 2015 02:28:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>各个系统安装dig工具的教程</title>
+      <link>https://phpgao.github.io/how_to_install_dig.html</link>
+      <pubDate>Mon, 27 Apr 2015 02:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/how_to_install_dig.html</guid>
+      <description>&lt;p&gt;dig是一个很不错的工具，它比nslookup好用太多。&lt;/p&gt;
+&lt;p&gt;老高主要用dig判断DNS解析故障和DNS解析线路的问题。dig命令虽然好用，但是想要在各个系统中安装使用dig，安装方法还是要记录一下的。&lt;/p&gt;
+&lt;p&gt;那么如何安装呢？老高总结了linux服务器，openwrt，Windows等系统的安装dig的方法，希望能够帮助到你。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>和老高一起把域名转至namesilo吧</title>
+      <link>https://phpgao.github.io/transfer_to_namesilo.html</link>
+      <pubDate>Fri, 17 Apr 2015 14:06:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/transfer_to_namesilo.html</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.namesilo.com/pricing.php?rid=8447580yc&#34;&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2091233691.gif&#34; alt=&#34;namesilo的logo&#34;  /&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;简单的总结一下namesilo的优点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;价格便宜&lt;/li&gt;
+&lt;li&gt;免费终生whois隐私保护 godaddy的隐私保护价格为 &lt;strong&gt;9.99美元&lt;/strong&gt; 一年&lt;/li&gt;
+&lt;li&gt;域名越多越便宜&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>小米路由器mini折腾之安装shadowsocks-libev-spec</title>
+      <link>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</link>
+      <pubDate>Sun, 12 Apr 2015 03:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/xiaomi_router_shadowsocks_libev_spec.html</guid>
+      <description>&lt;p&gt;DNS污染问题很是让人烦心，小米路由器mini的pandorabox自带了shadowsocks-libev，没有UDP转发功能，在期待下次pandorabox的更新能够自带shadowsocks-libev-spec的时候，我们还可以选择手动安装，下面老高就介绍一下如何安装。&lt;/p&gt;
+&lt;p&gt;你也许能通过以下关键字找到本文：&lt;/p&gt;
+&lt;p&gt;如何安装shadowsocks-libev-spec
+如何配置shadowsocks-libev-spec
+openwrt\pandorabox如何转发UDP
+如果解决DNS污染&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

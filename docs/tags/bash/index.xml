@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bash on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bash/</link>
+    <description>Recent content in bash on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 28 May 2015 17:14:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bash/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>-etc-profile,-etc-bashrc等文件的区别与作用</title>
+      <link>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</link>
+      <pubDate>Thu, 28 May 2015 17:14:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/profile_bashrc_bash_profile_bashrc_definition.html</guid>
+      <description>&lt;p&gt;当我们在做一些与bash相关的操作时，比如设置别名、登录启动项等，多多少少都会与下面几个文件打交道，用的时候一查，然后又忘了。好记性不如烂笔头，下面老高就帮你理一理这些文件到底是干啥的。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;/etc/profile&lt;/li&gt;
+&lt;li&gt;/etc/bashrc&lt;/li&gt;
+&lt;li&gt;~/.bash_profile&lt;/li&gt;
+&lt;li&gt;~/.bashrc&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux下安装trash-cli防止误删文件</title>
+      <link>https://phpgao.github.io/linux-trash-cli.html</link>
+      <pubDate>Thu, 28 May 2015 11:43:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/linux-trash-cli.html</guid>
+      <description>&lt;p&gt;玩过Linux的同学应该都知道这个要命的命令，此命令一出，系统几乎废了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;rm -rf /
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;虽然一再强调&lt;code&gt;rm&lt;/code&gt;的时候要注意，但是还是会有同学犯错误删文件，有什么办法能够减少此类事情的发生呢？&lt;/p&gt;
+&lt;p&gt;今天老高就要介绍此工具&amp;mdash;&amp;ndash;  &lt;code&gt;trash-cli&lt;/code&gt;。他实现了类似回收站的功能，以后删除的时候就有了后悔药。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/05/2919137931.jpg&#34; alt=&#34;trash-cli&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>zsh-&#43;-oh-my-zsh-默认shell的最佳替代品</title>
+      <link>https://phpgao.github.io/oh-my-zsh.html</link>
+      <pubDate>Wed, 29 Apr 2015 11:00:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/oh-my-zsh.html</guid>
+      <description>项目地址
+zsh &amp;mdash;&amp;ndash;&amp;gt; http://www.zsh.org oh-my-zsh &amp;mdash;-&amp;gt; http://ohmyz.sh
+ The last shell you’ll ever need!
+ 使用方法 为你的MAC、Linux安装zsh
+# Centos yum install zsh git -y # OSX brew install zsh git -y 安装oh-my-zsh # via curl curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh # via wget wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh 设置zsh为系统默认shell # 为root用户修改默认shell为zsh chsh -s /bin/zsh root # 为当前用户修改默认shell为zsh chsh -s /bin/zsh # or chsh -s `which zsh` # 恢复命令 chsh -s /bin/bash add to ~/.</description>
+    </item>
+    
+  </channel>
+</rss>

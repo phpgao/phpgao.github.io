@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>deal on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/deal/</link>
+    <description>Recent content in deal on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Dec 2014 07:44:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/deal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>真•BUG检查方法</title>
+      <link>https://phpgao.github.io/way_to_find_bugs.html</link>
+      <pubDate>Tue, 23 Dec 2014 07:44:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/way_to_find_bugs.html</guid>
+      <description>以下是老高总结的BUG发现点，每一点都可以神展开
+欢迎大家补充
+ 文件路径是否不一致 操作系统的不一致 数据源是否不一致(数据库配置) 单词是否拼错(很常见) 检查hosts文件 网络是否联通(网线插了没?) 防火墙设置问题 硬盘空间是否已满(df -h) 端口设置是否不一致 域名是否解析正确 编码是否错误 关键字是否被屏蔽(发短信如果带&amp;rsquo;测试&amp;rsquo;二字很可能被短信运营商屏蔽) PHP的BOM(幽灵bug，一般与二进制文件有关，比如输出图片) 服务器配置是否不一致 硬件是否出现错误 数据库索引是否出错(有幸遇见过一次,数据存在，where就是查不出，重建索引解决)  以上
+附一些有趣的BUG：
+http://www.zhihu.com/question/21747929
+http://www.zhihu.com/question/21991014
+http://www.zhihu.com/question/19955793
+http://www.zhihu.com/question/20212145</description>
+    </item>
+    
+  </channel>
+</rss>

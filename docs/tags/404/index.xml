@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>404 on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/404/</link>
+    <description>Recent content in 404 on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Mar 2014 15:38:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/404/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>彻底解决WP中文标签404错误</title>
+      <link>https://phpgao.github.io/chinese_tag_404.html</link>
+      <pubDate>Wed, 19 Mar 2014 15:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/chinese_tag_404.html</guid>
+      <description>找到网站个目录下文件夹：wp-include文件夹下的class-wp.php，定位此代码段（V3.6在144行）
+老高温馨提示：使用本教程前请备份数据库及相关文件if ( isset($_SERVER[&amp;#39;PATH_INFO&amp;#39;]) ) $pathinfo = $_SERVER[&amp;#39;PATH_INFO&amp;#39;]; else $pathinfo = &amp;#39;&amp;#39;; $pathinfo_array = explode(&amp;#39;?&amp;#39;, $pathinfo); $pathinfo = str_replace(&amp;#34;%&amp;#34;, &amp;#34;%25&amp;#34;, $pathinfo_array[0]); $req_uri = $_SERVER[&amp;#39;REQUEST_URI&amp;#39;]; 修改为 if ( isset($_SERVER[&amp;#39;PATH_INFO&amp;#39;]) ) $pathinfo = mb_convert_encoding($_SERVER[&amp;#39;PATH_INFO&amp;#39;], &amp;#34;UTF-8&amp;#34;, &amp;#34;GBK&amp;#34;); else $pathinfo = &amp;#39;&amp;#39;; $pathinfo_array = explode(&amp;#39;?&amp;#39;, $pathinfo); $pathinfo = str_replace(&amp;#34;%&amp;#34;, &amp;#34;%25&amp;#34;, $pathinfo_array[0]); $req_uri = mb_convert_encoding($_SERVER[&amp;#39;REQUEST_URI&amp;#39;], &amp;#34;UTF-8&amp;#34;, &amp;#34;GBK&amp;#34;); 至此，wordpress已经学会读中文了。
+还有一种解决方式，即给每一个标签都设置一个英文别名，这样设置的标签还是不能使用中文，可以使用下面的代码将所有的标签格式化：
+&amp;lt;?php header(&amp;#34;Content-type: text/html; charset=utf-8&amp;#34;); // 修改:LAOGAO https://blog.phpgao.com/ define(&amp;#39;MYSQL_HOSTNAME&amp;#39;, &amp;#39;localhost&amp;#39;); define(&amp;#39;MYSQL_USERNAME&amp;#39;, &amp;#39;yourusername&amp;#39;); define(&amp;#39;MYSQL_PASSWORD&amp;#39;, &amp;#39;yourpassword&amp;#39;); define(&amp;#39;MYSQL_DATABASE&amp;#39;, &amp;#39;yourdatabase&amp;#39;); define(&amp;#39;MYSQL_TABLEPRE&amp;#39;, &amp;#39;wp_&amp;#39;); // 表前缀 error_reporting(E_ALL); ini_set(&amp;#39;display_errors&amp;#39;, &amp;#39;On&amp;#39;); $link = mysql_connect(MYSQL_HOSTNAME, MYSQL_USERNAME, MYSQL_PASSWORD); if (!</description>
+    </item>
+    
+  </channel>
+</rss>

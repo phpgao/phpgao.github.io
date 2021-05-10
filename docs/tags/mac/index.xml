@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>mac on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/mac/</link>
+    <description>Recent content in mac on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Apr 2018 14:13:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>使用Launchrocket管理MacOS的服务</title>
+      <link>https://phpgao.github.io/launchrocket.html</link>
+      <pubDate>Tue, 03 Apr 2018 14:13:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/launchrocket.html</guid>
+      <description>&lt;p&gt;经常使用MacOS做web开发的同学们，当我们使用&lt;code&gt;brew&lt;/code&gt;安装nginx、php后，管理其守护进程的生命周期就基本只能靠类似&lt;code&gt;brew services start nginx&lt;/code&gt;管理了，要是有一个GUI程序为我们管理这些服务进程就好了。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac挂载NTFS免费工具mounty</title>
+      <link>https://phpgao.github.io/mounty.html</link>
+      <pubDate>Wed, 27 Dec 2017 04:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mounty.html</guid>
+      <description>&lt;p&gt;你还在为MacOs无法写入NTFS格式的U盘或者移动硬盘烦恼吗？赶紧试试，mac需要安装brew先：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>小技巧---在Finder中显示路径</title>
+      <link>https://phpgao.github.io/show_path_in_finder.html</link>
+      <pubDate>Mon, 23 Nov 2015 07:01:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/show_path_in_finder.html</guid>
+      <description>&lt;p&gt;在默认的Finder中是直接看不到路径的，除非你把某个文件拖到终端里。。。&lt;/p&gt;
+&lt;p&gt;如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/11/536081178.png&#34; alt=&#34;Finder&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;如何解决呢？&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac必备软件Go2shell</title>
+      <link>https://phpgao.github.io/go2shell.html</link>
+      <pubDate>Mon, 12 Oct 2015 06:16:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/go2shell.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/10/418026121.png&#34; alt=&#34;go2shell&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;这个软件能够让你在Finder中轻松地在当前路径打开shell！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac下使用brew配置nginx&#43;php&#43;mysql&#43;PostgreSQL</title>
+      <link>https://phpgao.github.io/mac_onmpp.html</link>
+      <pubDate>Mon, 07 Sep 2015 09:45:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_onmpp.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/09/1049308967.jpg&#34; alt=&#34;yosemite&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;大家在win下和Linux系统下配置PHP运行环境已经有很多参考资料了，以老高的经验，win下最好用的是UPUPW，linux求方便是centos+kangle，更加复杂的方法可以翻翻老高的&lt;a href=&#34;https://blog.phpgao.com/archives.html&#34;&gt;文章归档&lt;/a&gt;，里面有很多可以参考的内容。&lt;/p&gt;
+&lt;p&gt;今天由于工作需要，必须在&lt;strong&gt;OSX&lt;/strong&gt;下配置PHP的开发运行环境，经过一番折腾，终于搞定了！主要参考了&lt;a href=&#34;http://blog.frd.mn/install-nginx-php-fpm-mysql-and-phpmyadmin-on-os-x-mavericks-using-homebrew/&#34;&gt;Install Nginx, PHP-FPM, MySQL and phpMyAdmin on OS X Mavericks or Yosemite&lt;/a&gt;这篇文章，推荐英文好的同学直接看原文。&lt;/p&gt;
+&lt;p&gt;下面记录一下！(请按照顺序配置)&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>在mac上安装并使用docker</title>
+      <link>https://phpgao.github.io/docker_on_mac.html</link>
+      <pubDate>Thu, 30 Apr 2015 10:55:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/docker_on_mac.html</guid>
+      <description>&lt;p&gt;docker最近实在火的不行，老高最近也在使用，顺便记录一下。&lt;/p&gt;
+&lt;h2 id=&#34;下载安装&#34;&gt;下载安装&lt;/h2&gt;
+&lt;p&gt;下载和安装主要参考下面的文章&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://docs.docker.com/installation/mac/&#34;&gt;http://docs.docker.com/installation/mac/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://community.emc.com/docs/DOC-44372&#34;&gt;https://community.emc.com/docs/DOC-44372&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac关闭自动生成DS_store</title>
+      <link>https://phpgao.github.io/mac_ds_store.html</link>
+      <pubDate>Sun, 08 Mar 2015 04:58:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_ds_store.html</guid>
+      <description>&lt;p&gt;参考了&lt;a href=&#34;http://www.zhihu.com/question/20873070/answer/41405748?group_id=557848511253651456&#34;&gt;长短短d的回答 &amp;ndash; 程序员如何优雅地使用 Mac？&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux下windows的换行符</title>
+      <link>https://phpgao.github.io/return_in_linux_windows.html</link>
+      <pubDate>Wed, 04 Mar 2015 03:31:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/return_in_linux_windows.html</guid>
+      <description>&lt;p&gt;Unix/MAC和windows下换行总会出现以下问题：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Unix/MAC下打开windows下的文本会多出一个^M，win下打开Unix/MAC文本会变成一行。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;原因是换行机制不一样，Unix下是&lt;code&gt;\n&lt;/code&gt;(0A)，mac下是&lt;code&gt;\r&lt;/code&gt;(0D)，win下是&lt;code&gt;\r\n&lt;/code&gt;(0D0A)。导致的结果是在程序中会造成一定的混乱。&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;http://ww4.sinaimg.cn/large/6735b7fagw1eptjmcjvynj20je03mwh3.jpg&#34; alt=&#34;十六进制的换行&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>mac下vim的美化配置</title>
+      <link>https://phpgao.github.io/mac_vim_configure.html</link>
+      <pubDate>Wed, 28 Jan 2015 13:51:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_vim_configure.html</guid>
+      <description>&lt;p&gt;osx系统有些配置文件地方和Linux系统不太一样真是让人捉急&lt;/p&gt;
+&lt;p&gt;以VIM为例&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>解决MAC远程总是Broken-pipe</title>
+      <link>https://phpgao.github.io/mac_broken_pipe.html</link>
+      <pubDate>Sun, 25 Jan 2015 03:12:56 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_broken_pipe.html</guid>
+      <description>与ServerAliveInterval的设置有关
+vim ~/.ssh/config # add ServerAliveInterval 60 </description>
+    </item>
+    
+    <item>
+      <title>在Finder当前目录打开终端</title>
+      <link>https://phpgao.github.io/open_terminal_in_finder.html</link>
+      <pubDate>Sat, 27 Dec 2014 11:38:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/open_terminal_in_finder.html</guid>
+      <description>&lt;p&gt;在终端里打开Finder很简单，使用&lt;code&gt;open .&lt;/code&gt;即可&lt;/p&gt;
+&lt;h2 id=&#34;系统设置&#34;&gt;系统设置&lt;/h2&gt;
+&lt;p&gt;在Finder打开terminal这个功能其实是有的，但是系统默认没有打开，我们可以通过如下方法将其打开&lt;/p&gt;
+&lt;p&gt;进入系统偏好设置-&amp;gt;键盘-&amp;gt;快捷键-&amp;gt;服务。&lt;/p&gt;
+&lt;p&gt;在右边&lt;code&gt;新建位于文件夹位置的终端窗口&lt;/code&gt;上打勾。&lt;/p&gt;
+&lt;p&gt;如此设置后，在Finder中右击某文件，在出现的菜单中找到服务，然后点击&lt;code&gt;新建位于文件夹位置的终端窗口&lt;/code&gt;即可！&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>安装Selenum的Chromedriver</title>
+      <link>https://phpgao.github.io/selenium_chrome.html</link>
+      <pubDate>Sun, 21 Dec 2014 05:37:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/selenium_chrome.html</guid>
+      <description>首先我们需要下载Chromedriver：
+http://chromedriver.storage.googleapis.com/index.html
+截图如下：
+下载最新版本（目前2.13）
+将下载下来的文件移至/usr/bin目录下
+完成！
+参考链接： http://damien.co/resources/how-to-install-chromedriver-mac-os-x-selenium-python-7406</description>
+    </item>
+    
+    <item>
+      <title>mac快速移动窗口至另一个桌面</title>
+      <link>https://phpgao.github.io/mac_move_window_to_other_desktop.html</link>
+      <pubDate>Sat, 11 Oct 2014 12:28:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/mac_move_window_to_other_desktop.html</guid>
+      <description>Mac系统有一大优势，就是在一台电脑上面，可以设定出很多桌面空间使用，这样我们的桌面就不会很凌乱，像MacGG一般都会用到4个桌面空间。在使用桌面空间的时候，大家可能都会用到一个功能，就是我要移动一个窗口到另一个桌面空间，都会把窗口拖到屏幕右边停留几秒，就回自动的切换到下一个桌面空间。今天MacGG给大家介绍一个方法，可以秒切哈。
+什么是秒切，就是你拖动窗口到屏幕边缘，无需停留，就自动切到下一桌面空间。
+首先打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+ defaults write com.apple.dock workspaces-edge-delay -float 0;killall Dock 现在大家试一下秒切吧。哈哈。。很爽不。是不是太快了，如果觉得太快，我们还可以在改改设定，我就设定在屏幕边缘停留半秒切换吧。 再次打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+defaults write com.apple.dock workspaces-edge-delay -float 0.15;killall Dock 如果你想还原成原样，也很简单，再次打开“终端”（Finder-&amp;gt;应用程序-&amp;gt;实用工具-&amp;gt;终端），并且输入以下命令：
+defaults delete com.apple.dock workspaces-edge-delay;killall Dock 转自：http://www.macgg.com/archives/6429.html</description>
+    </item>
+    
+    <item>
+      <title>mac下ssh总是失去响应</title>
+      <link>https://phpgao.github.io/ssh_on_mac.html</link>
+      <pubDate>Thu, 09 Oct 2014 14:02:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/ssh_on_mac.html</guid>
+      <description>自从使用mac以后，ssh连接总是超时成了老高的一个心病啊，只要一小会儿不动电脑，远程就失去相应，或者干脆直接提示broken pipe，然后断掉。现在终于有了算是能接受的解决办法。
+方法一：直截了当砍掉法 ~.，是的，你没有看错！这个组合命令就是主动断开ssh的命令，不行自己问问man。
+方法二：修改配置文件 服务器和客户端每隔一定的时间会发一个KeepAlive请求，避免因为路由器或线路的限制而断线，例子中的60s可以因具体的环境改变。
+针对服务器端 修改/etc/ssh/sshd_config，修改ServerAliveInterval一项，而ServerAliveCountMax表示如果失败重试的次数
+ServerAliveInterval 60ServerAliveCountMax 3 针对客户端 vi /etc/ssh_configClientAliveInterval 60ClientAliveCountMax 3 完</description>
+    </item>
+    
+    <item>
+      <title>在mac上使用adb与fastboot</title>
+      <link>https://phpgao.github.io/adb_fastboot_on_mac_osx.html</link>
+      <pubDate>Mon, 08 Sep 2014 00:48:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/adb_fastboot_on_mac_osx.html</guid>
+      <description>今天给老娘的Mi2S刷机，研究了一下在mac上刷机的方法，在此记录一下。
+PS.本方法适用于所有Android机器
+Android File Transfer 安装Android File Transfer
+brew cask install android-file-transfer 要在OSX上管理Android手机上的文件，需要下载安装这个官方工具http://www.android.com/filetransfer/
+由于某些特殊原因网站打不开不要紧，不会翻墙的TX可以到我的网盘下载到目前最新的Android File Transfer。
+下载安装完成后运行，就可以轻松管理手机文件了，这个时候把下载好的ROM拷贝到手机目录下，再进入recovery刷机了。
+命令行刷机 安装adb工具
+brew cask install android-platform-tools 接下来再terminal中运行adb和fastboot即可开始刷机
+**小提示：**刷机用到的命令可以参考博主的这篇文章adb,fastboot常用命令及刷机技巧
+部分参考来自：
+http://www.technobuzz.net/install-adb-fastboot-mac-linux-chrome-os-nexus-tool-script/?utm_source=tuicool</description>
+    </item>
+    
+  </channel>
+</rss>

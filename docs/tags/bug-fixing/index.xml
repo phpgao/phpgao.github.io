@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>bug fixing on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/bug-fixing/</link>
+    <description>Recent content in bug fixing on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 17 Aug 2014 15:42:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/bug-fixing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>web开发者在发布你的作品前需要考虑的技术细节</title>
+      <link>https://phpgao.github.io/technical_details.html</link>
+      <pubDate>Sun, 17 Aug 2014 15:42:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/technical_details.html</guid>
+      <description>这篇文章个人觉得很受用，故仔细翻译了一下，有些地方可能翻译的不好，请见谅！
+翻译后发现貌似已经有人翻译过，但是翻译的水平就有点。。。。。那篇文章中不仅忽略了知识点，并且出现了明显的语义和语法错误，有一定的误导作用，所以请务必重新阅读老高的翻译。文章中容易出错的地方老高已经注释（在文章中以【】标出）。
+如需转载，请注明出处！
+web开发者在发布你的作品前需要考虑的技术细节 What technical details should a programmer of a web application consider before making the site public!
+原文地址： 来自stackexchange.com quora的回答
+界面和用户体验  要意识到浏览器的实现标准不一，请确保你的网站在主流浏览器中的正常展现。至少要针对一个最新的Gecko引擎（火狐）的浏览器、一个基于Webkit引擎（Safari或者其他移动端）的浏览器、Chrome、你想要支持的IE浏览器（可以借助IE应用程序兼容性VPC镜像）和Opera浏览器。同时需要考虑到在不同的操作系统下浏览器是如何渲染你的网站。 需要考虑来自其他浏览器的用户如何使用你的网站：智能手机、屏幕朗读器和搜索引擎，举个例子。&amp;ndash;一些易用性信息：网页易读性倡议（WAI）和网站508规范（Section508），移动站开发：移动互联网开发者论坛（MobiForge）。 构架：如果在不影响用户的情况下部署升级。有一个或者多个用来更改架构、代码或者内容更新的可用测试或运行环境，确保他们部署的可控性，以防止造成破坏。有一个自动化部署方案，用来提交更改到生产环境。最优的解决方案是结合使用一个版本控制系统（CVS, Subversion等【译者注：为啥没GIT】）或一个自动构造机制（Ant，NAnt等）。 不要直接给用户展现不友好的错误信息。 不要用纯文本的形式呈现用户的Email，否则他们会被垃圾邮件骚扰。 给用户生成的链接加上rel=&amp;quot;nofollow&amp;quot;属性，以避免SEO作弊。 为你的站点建立合理的限制机制，这一条同时属于安全细则。 理解什么是渐进增强（progressive enhancement）【译者注：与之相对的是优雅降级（graceful degradation）】。 如果一个请求提交成功，请重定向至其他地方，防止用户的重复提交。 不要忘了考虑无障碍阅读，这对网站的优化来讲是一个好主意，而且有些情况下他是法律强制必须有的。 无障碍网页应用（WAI-ARIA）和Web内容无障碍指南2（WCAG 2）在这方面可以帮到你！ 不要让用户思考该如何操作  安全  OWASP开发入门可能会让你花一些时间掌握，但是他涵盖了网站开发安全的方方面面。 了解注入，尤其是SQL注入，并知道如何防御注入。 永远不要相信用户的输入，还有请求中的所有信息（包括cookie和隐藏域）。 给你的密码加点盐后在使用哈希，并针对不同行使用不同的盐以防止彩虹攻击。使用慢速【短？】散列算法，如bcrypt（经过时间考验）或者scrypt(更强、比较新)(1, 2) ，针对如何保存密码请参考（如何保存你的密码）。美国国家标准与技术研究院表示支持使用PBKDF2 算法来加密，联邦信息处理标准在dotnet开发中也支持PBKDF2(更多信息)。避免直接使用MD5和SHA族算法来保存密码。 不要尝试使用自创的自以为NB的认证系统。因为你很容易在细节和无法测试的地方犯错误，也许被黑了以后你才会后知后觉。 了解信用卡的处理规则。（详见这个问题） 为登陆页面和任何需要输入敏感信息的页面使用SSL/HTTPS（如信用卡信息）。 避免跨站脚本攻击(XSS)。 避免跨站请求伪造(CSRF)。 避免点击劫持。 使你的系统更新到最新的补丁。 确保你的数据库连接信息是安全的。 时刻注意最新的攻击技术和影响你的平台的漏洞。 阅读谷歌浏览器安全手册。 阅读网络产品黑客手册。 考虑权限最小化原则。试着让你的应用服务器以非ROOT权限运行（以tomcat为例）。  性能  必要时使用缓存，理解并使用HTTP缓存技术和HTML5的Manifest技术。 图片优化 - 不要使用一个20KB大小的的图片最为重复背景。 学习如何使用gzip压缩内容。 合并/链接多个样式表或多个脚本文件以减少浏览器的请求数，并且使用gzip压缩文件中重复的内容。 看一看雅虎高性能站点，有很多不错的点子，包括提高前端性能和他们的YSlow工具（需求使用Firefox、Safira、Chrome、或Opera浏览器）。同时，Google page speed（使用浏览器插件）也是一个不错的性能调校工具，他同时也会优化你的图片。 针对小并且相关的图片使用CSS image sprite技术。 访问量大的站点需要考虑将不用内容分至不同的域名下。 静态内容（如图片、css、js脚本还有不需要cookie的普通内容）应该被分配到一个不使用cookie的域名下，因为一个域名下的所有cookie和子域下的cookie将会被包含在所有对应的域名下。一个好的主意是使用CND加速，但是考虑到CND可能会挂，到时候本地的拷贝也会提供服务。 最小化一个浏览器需要渲染一个页面所需要的请求数。 利用工具Google Closure Compiler最小化你的js文件，还有其他的最小化工具。 确保有一个favicon.</description>
+    </item>
+    
+  </channel>
+</rss>

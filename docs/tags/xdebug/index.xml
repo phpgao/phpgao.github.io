@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>xdebug on 老高的技术博客</title>
+    <link>https://phpgao.github.io/tags/xdebug/</link>
+    <description>Recent content in xdebug on 老高的技术博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 15 Oct 2014 13:49:00 +0000</lastBuildDate><atom:link href="https://phpgao.github.io/tags/xdebug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>xdebug编译安装和开启远程调试</title>
+      <link>https://phpgao.github.io/phpstorm_using_xdebug.html</link>
+      <pubDate>Wed, 15 Oct 2014 13:49:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/phpstorm_using_xdebug.html</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://blog.phpgao.com/usr/uploads/2015/06/2802292499.png&#34; alt=&#34;xdebug logo&#34;  /&gt;
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>typecho源代码解析1---系统初始化</title>
+      <link>https://phpgao.github.io/typecho_source_code_init.html</link>
+      <pubDate>Sat, 11 Oct 2014 12:20:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/typecho_source_code_init.html</guid>
+      <description>首先恭喜typecho v1.0的上线！
+其次，这篇文章同thinkphp的源代码解析一样都是老高谋划了很久的文章，国庆节由于单位加班没有时间写，今天终于等来了轮休，果断放开了写。希望大家多多支持！
+最后老高想说的是，如果大家有兴趣研究源码，那么问题来了，如何高效的学习研究源代码？
+老高的建议是：
+ 一定要熟悉MVC模式(针对WEB开发) 先看看文档再动手 分辨什么是好的坏的代码，不要搞盲目崇拜 做笔记  以下：
+文档 如果有什么不明白的，文档里也许会找到答案。
+typecho开发文档
+版本 再研究源代码前，如果知道自己使用的typecho的版本呢？
+答案写在var/Typecho/Common.php里，Typecho_Common类中的常量VERSION。
+例子：
+class Typecho_Common{/** 程序版本 */const VERSION = &#39;1.0/14.10.9&#39;;...} 开启DEBUG模式 有些同学可能已经发现，typecho默认对外隐藏了PHP的错误信息，如果我们想要看到真正的报错信息，需要开启typecho的DEBUG模式，也可以叫做开发模式。当我们开启了这个模式后，在开发插件或者了解系统原理的时候就能够得到可视化的错误信息了。
+开启方法：
+# 修改/config.inc.php # 在代码的第一行加入 /**开启debug模式*/ define(&amp;#39;__TYPECHO_DEBUG__&amp;#39;,1); ps.调试的时候如果你的服务器没有安装xdebug，那么你的var_dump()信息会没有格式。
+在此老高推荐使用TP框架内的方法dump()，以后我们就可以使用dump()打印变量信息了。
+# 修改/config.inc.php # 在debug后加入  /** * 浏览器友好的变量输出 * @param mixed $var 变量 * @param boolean $echo 是否输出 默认为True 如果为false 则返回输出字符串 * @param string $label 标签 默认为空 * @param boolean $strict 是否严谨 默认为true * @return void|string */ function dump($var, $echo=true, $label=null, $strict=true) { $label = ($label === null) ?</description>
+    </item>
+    
+    <item>
+      <title>netbeans开启xdebug</title>
+      <link>https://phpgao.github.io/netbeans_xdebug.html</link>
+      <pubDate>Fri, 18 Jul 2014 04:04:00 +0000</pubDate>
+      
+      <guid>https://phpgao.github.io/netbeans_xdebug.html</guid>
+      <description>一直在用everedit做开发，今天开始高大上，用一下netbeans
+安装   在netbeans下载页面找到PHP版的netbeans，下载下来并安装，表忘了JRE也要装的
+  在xdebug下载页面下载对应PHP版本的xdebug，然后解压至php目录下的ext目录下，同时新建d:\xdebug文件夹
+  配置 PHP.INI 在phpinfo()页面中找到INI文件，在文件最后加入以下代码
+;注意：我们的版本号可能不同zend_extension=&amp;quot;ext\php_xdebug-2.2.5-5.4-vc9.dll&amp;quot; [Xdebug];是否开启自动跟踪xdebug.auto_trace= On;是否开启异常跟踪xdebug.show_exception_trace= On;是否开启远程调试自动启动xdebug.remote_autostart= On;是否开启远程调试xdebug.remote_enable= On;允许调试的客户端IP;xdebug.remote_host= 192.168.1.1;远程调试的端口（默认9000）xdebug.remote_port=9000;调试插件dbgpxdebug.remote_handler=dbgp;是否收集变量xdebug.collect_vars= On;是否收集返回值xdebug.collect_return= On;是否收集参数xdebug.collect_params= On;跟踪输出路径xdebug.trace_output_dir=&amp;quot;d:\xdebug&amp;quot;;是否开启调试内容xdebug.profiler_enable=On;调试输出路径xdebug.profiler_output_dir=&amp;quot;d:\xdebug&amp;quot;;调试的域名xdebug.remote_host=localhost 修改以后重启服务器，看看有没有出现xdebug，如果出现了，那就成功了一大半
+netbeans 设置的地方在tool-&amp;gt;option里找到debug标签，在这里可以修改PHP.EXE的路径，还有调试的工具和端口号等。
+注意  如果你用的远程调试，务必打开xdebug.remote_enable 如果你用的域名调试，那么请修改xdebug.remote_host为你的域名，不要忘了加引号，不用带http:// 如果总是显示等待xdebug，那么就换一个web浏览器试试，在tool-&amp;gt;option-&amp;gt;general里可以找到 如果还不行，请留言，老高和你一起搞！  调试 哈哈，这还用讲吗？上个图</description>
+    </item>
+    
+  </channel>
+</rss>
